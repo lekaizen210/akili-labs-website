@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  akili-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: akili-labs-website
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    labels:
+      - "com.akililabs.service=website"
+      - "com.akililabs.version=1.0.0"

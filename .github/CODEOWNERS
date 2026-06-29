@@ -1,0 +1,20 @@
+# CODEOWNERS — AKILI Labs Website
+# Chaque PR doit être approuvée par le propriétaire du code modifié.
+# Format : <pattern> <@github-username>
+
+# Propriétaire par défaut pour tout le code non couvert
+* @akililabs
+
+# Infrastructure et CI/CD
+/.github/             @akililabs
+/Dockerfile           @akililabs
+/docker-compose*.yml  @akililabs
+/nginx/               @akililabs
+
+# Architecture applicative
+/src/app/layout.tsx   @akililabs
+/src/app/globals.css  @akililabs
+
+# Documents d'architecture
+/ARCHITECTURE.md      @akililabs
+/REPO_STRATEGY.md     @akililabs

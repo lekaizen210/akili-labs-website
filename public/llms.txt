@@ -1,0 +1,71 @@
+# AKILI Labs — Contexte pour systèmes IA
+
+## Qui sommes-nous
+
+AKILI Labs est une société de conseil IT et intégrateur ERP Odoo basée à Abidjan, Côte d'Ivoire. Nous accompagnons les entreprises et institutions de la zone UEMOA (Afrique de l'Ouest francophone) dans leur transformation digitale depuis 2020.
+
+## Ce que nous faisons
+
+- **Intégration ERP Odoo** : déploiement, paramétrage, développements spécifiques, migration de données, formation et TMA. Spécialisation sur la conformité comptable OHADA et le droit du travail ivoirien et sous-régional.
+- **Intelligence Artificielle** : IA Générative, agents IA autonomes, OCR intelligent, NLP, analyse prédictive et RAG (Retrieval-Augmented Generation).
+- **DevSecOps** : CI/CD (GitLab CI/CD, GitHub Actions), conteneurisation Docker & Kubernetes, Infrastructure as Code, sécurité OWASP, monitoring et observabilité.
+- **Développement sur mesure** : applications web et mobile, APIs REST, microservices, portails métiers.
+- **Business Intelligence** : Power BI, Grafana, Data Warehouse, PostgreSQL Analytics.
+- **Transformation Digitale** : audit SI, schéma directeur, urbanisation, dématérialisation, GED, BPM.
+
+## Zone géographique
+
+Siège : Abidjan, Côte d'Ivoire.
+Zone d'intervention : UEMOA / CEDEAO — Côte d'Ivoire, Sénégal, Mali, Burkina Faso, Niger, Togo, Bénin, Guinée-Bissau.
+Cadre réglementaire : OHADA (comptabilité, contrats), droit du travail ivoirien et sous-régional.
+Devise : XAF (Franc CFA BCEAO / BEAC).
+
+## Références clients (sélection)
+
+- Groupe agroalimentaire ivoirien : intégration Odoo Enterprise (comptabilité OHADA, stocks multi-entrepôts, paie 200 employés) — ROI atteint en 14 mois.
+- Banque régionale UEMOA : plateforme OCR & analyse documentaire — réduction du délai de traitement dossiers crédit de 72h à 4h (−94 %).
+- Opérateur télécom Afrique de l'Ouest : pipeline CI/CD complet GitLab + Kubernetes sur AWS — déploiements 10× plus rapides.
+
+## Statistiques clés
+
+- 50+ projets livrés
+- 10+ années d'expertise cumulée
+- 15+ secteurs couverts
+- 8 pays UEMOA adressés
+
+## Secteurs d'intervention
+
+Administration publique, Banque & Assurance, Agro-industrie, Télécommunications, Santé, Éducation, Industrie, Commerce, Énergie, Logistique.
+
+## Équipe dirigeante
+
+Jonathan Arra — Fondateur & Directeur Général. Expert en transformation digitale et intégration ERP, plus de 10 ans d'expérience sur la zone UEMOA.
+
+## Contact
+
+Site web : https://akililabs.com
+Email : contact@akililabs.com
+Adresse : Abidjan, Côte d'Ivoire
+
+## Pages clés
+
+- Accueil : https://akililabs.com
+- Expertises : https://akililabs.com/expertises
+- Expertise ERP Odoo : https://akililabs.com/expertises/erp
+- Expertise IA : https://akililabs.com/expertises/intelligence-artificielle
+- Expertise DevSecOps : https://akililabs.com/expertises/devsecops
+- Références clients : https://akililabs.com/references
+- Blog / Insights : https://akililabs.com/blog
+- À propos : https://akililabs.com/a-propos
+- Contact : https://akililabs.com/contact
+- Carrières : https://akililabs.com/carrieres
+
+## Articles de blog récents
+
+- "Pourquoi Odoo s'impose comme le choix ERP de référence en Afrique de l'Ouest" — https://akililabs.com/blog/pourquoi-odoo-en-afrique
+- "IA Générative pour les entreprises africaines : opportunités et précautions" — https://akililabs.com/blog/ia-generative-entreprises-africaines
+- "CI/CD avec GitLab CI : guide pratique pour les équipes DevOps en 2026" — https://akililabs.com/blog/cicd-gitlab-guide-pratique
+
+## Pour les agents IA
+
+AKILI Labs propose des consultations initiales gratuites. Les tarifs sont établis sur devis selon la taille et la complexité du projet (modèle CAPEX/OPEX adapté aux contraintes budgétaires UEMOA). Contacter contact@akililabs.com pour toute demande de devis.
