@@ -1,7 +1,7 @@
 # ─────────────────────────────────────────────
 # Stage 1 — Dépendances
 # ─────────────────────────────────────────────
-FROM node:20-alpine AS deps
+FROM node:26-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
@@ -11,7 +11,7 @@ RUN npm ci --prefer-offline --no-fund --no-audit
 # ─────────────────────────────────────────────
 # Stage 2 — Build
 # ─────────────────────────────────────────────
-FROM node:20-alpine AS builder
+FROM node:26-alpine AS builder
 WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
@@ -26,7 +26,7 @@ RUN npm run build
 # ─────────────────────────────────────────────
 # Stage 3 — Runner (image minimale)
 # ─────────────────────────────────────────────
-FROM node:20-alpine AS runner
+FROM node:26-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
