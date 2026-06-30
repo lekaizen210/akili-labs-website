@@ -94,6 +94,7 @@ jobs:
           script: |
             set -e
             cd /opt/akili-preprod
+
             echo "${{ secrets.GITHUB_TOKEN }}" | \
               docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
@@ -101,17 +102,33 @@ jobs:
             export DOMAIN=preprod.akililabs.com
             export GHCR_OWNER=${{ github.repository_owner }}
 
+            # Utiliser la config nginx HTTP-only (sans TLS) tant que le domaine n'est pas configuré
+            cp nginx/nginx.preprod.conf nginx/nginx.conf
+
             docker pull ghcr.io/${{ env.IMAGE_NAME }}:${VERSION}
             docker compose -f docker-compose.prod.yml pull --ignore-pull-failures nginx
             docker compose -f docker-compose.prod.yml up -d --no-build --pull missing
             docker image prune -f
             echo "✅ Preprod déployée : ${VERSION}"
 
-      - name: Healthcheck preprod
-        run: |
-          sleep 20
-          HTTP=$(curl -s -o /dev/null -w "%{http_code}" \
-            https://preprod.akililabs.com/ --max-time 15 --insecure || echo "000")
-          echo "HTTP: $HTTP"
-          [ "$HTTP" = "200" ] || (echo "❌ Healthcheck échoué" && exit 1)
-          echo "✅ Preprod opérationnelle."
+      - name: Healthcheck preprod (via conteneur Docker)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.PREPROD_HOST }}
+          username: ${{ secrets.PREPROD_USER }}
+          key: ${{ secrets.PREPROD_SSH_KEY }}
+          script: |
+            sleep 30
+            # Vérifier que Next.js est healthy
+            WEB_STATUS=$(docker inspect akili-labs-website \
+              --format "{{.State.Health.Status}}" 2>/dev/null || echo "absent")
+            echo "Next.js : $WEB_STATUS"
+            [ "$WEB_STATUS" = "healthy" ] || (echo "❌ Next.js unhealthy" && exit 1)
+
+            # Vérifier que nginx répond sur /healthz
+            NGINX_HTTP=$(docker exec akili-nginx \
+              wget -qO- http://localhost/healthz 2>/dev/null || echo "")
+            echo "Nginx /healthz : '$NGINX_HTTP'"
+            echo "$NGINX_HTTP" | grep -q "preprod-ok" || (echo "❌ Nginx KO" && exit 1)
+
+            echo "✅ Preprod opérationnelle (Next.js: $WEB_STATUS, Nginx: OK)"
