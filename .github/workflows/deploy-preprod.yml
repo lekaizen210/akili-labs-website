@@ -102,7 +102,8 @@ jobs:
             export GHCR_OWNER=${{ github.repository_owner }}
 
             docker pull ghcr.io/${{ env.IMAGE_NAME }}:${VERSION}
-            docker compose -f docker-compose.prod.yml up -d --no-build --pull never
+            docker compose -f docker-compose.prod.yml pull --ignore-pull-failures nginx
+            docker compose -f docker-compose.prod.yml up -d --no-build --pull missing
             docker image prune -f
             echo "✅ Preprod déployée : ${VERSION}"
 
