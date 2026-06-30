@@ -14,7 +14,7 @@ services:
         condition: service_healthy
     restart: unless-stopped
     cap_drop: [ALL]
-    cap_add: [NET_BIND_SERVICE]
+    cap_add: [NET_BIND_SERVICE, CHOWN, SETUID, SETGID, DAC_OVERRIDE]
     security_opt: [no-new-privileges:true]
     networks:
       - public
