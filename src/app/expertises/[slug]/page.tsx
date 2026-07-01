@@ -104,20 +104,20 @@ export default async function ExpertisePage({ params }: PageProps) {
         />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-white/50 mb-8" aria-label="Fil d'Ariane">
+          <nav className="flex items-center gap-2 text-sm text-white/75 mb-8" aria-label="Fil d'Ariane">
             <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
-            <ChevronRight size={14} />
+            <ChevronRight size={14} className="text-white/40" />
             <Link href="/#expertises" className="hover:text-white transition-colors">Expertises</Link>
-            <ChevronRight size={14} />
-            <span className="text-white/80">{exp.title}</span>
+            <ChevronRight size={14} className="text-white/40" />
+            <span className="text-white">{exp.title}</span>
           </nav>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-[#FF5500] text-sm font-medium rounded-full mb-5">
-            ■ {exp.subtitle}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white text-sm font-medium rounded-full mb-5 border border-white/15">
+            <span className="text-[#FF5500]">■</span> {exp.subtitle}
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6">
             {exp.title}
           </h1>
-          <p className="text-xl text-white/70 max-w-3xl leading-relaxed">
+          <p className="text-xl text-white/85 max-w-3xl leading-relaxed">
             {exp.description}
           </p>
         </div>
