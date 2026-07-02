@@ -18,6 +18,7 @@ const expertisesMenu = [
 ];
 
 const navLinks = [
+  { label: "Accueil", href: "/" },
   { label: "Expertises", href: "/expertises", hasDropdown: true },
   { label: "Secteurs", href: "/#secteurs" },
   { label: "Références", href: "/references" },
@@ -27,7 +28,8 @@ const navLinks = [
 ];
 
 function isActive(href: string, pathname: string): boolean {
-  if (href === "/#secteurs") return pathname === "/";
+  if (href === "/") return pathname === "/";
+  if (href === "/#secteurs") return false;
   if (href === "/expertises") return pathname.startsWith("/expertises");
   return pathname.startsWith(href);
 }
@@ -225,6 +227,29 @@ export default function Navbar() {
               transition={{ duration: 0.2 }}
               className="px-4 py-4 space-y-1"
             >
+              {/* Accueil */}
+              {(() => {
+                const home = navLinks[0];
+                const active = isActive(home.href, pathname);
+                return (
+                  <Link
+                    href={home.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={cn(
+                      "block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors",
+                      active
+                        ? "text-[#c94200] font-semibold bg-[#E8F0FE]"
+                        : "text-[#374151] hover:text-[#1A2B3C] hover:bg-[#E8F0FE]"
+                    )}
+                  >
+                    {home.label}
+                  </Link>
+                );
+              })()}
+              {/* Expertises (sous-menu développé) */}
+              <p className="px-4 pt-2 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                Expertises
+              </p>
               {expertisesMenu.map((item) => (
                 <Link
                   key={item.href}
@@ -241,7 +266,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="border-t border-gray-100 my-2 pt-2">
-                {navLinks.slice(1).map((link) => {
+                {navLinks.slice(2).map((link) => {
                   const active = isActive(link.href, pathname);
                   return (
                     <Link

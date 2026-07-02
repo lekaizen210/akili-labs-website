@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin, Facebook } from "lucide-react";
 
 const footerLinks = {
   expertises: [
@@ -65,9 +65,27 @@ export default function Footer() {
                 <span>+225 07 00 00 00 00</span>
               </div>
             </div>
-            <p className="mt-5 text-xs text-gray-500">
-              Suivez nos actualités via le blog et nos communications officielles.
-            </p>
+            {/* Réseaux sociaux */}
+            <div className="mt-6 flex items-center gap-3">
+              <a
+                href="https://www.linkedin.com/company/akili-labs"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="AKILI Labs sur LinkedIn"
+                className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/10 text-gray-400 hover:bg-[#0A66C2] hover:text-white transition-all duration-200"
+              >
+                <Linkedin size={17} />
+              </a>
+              <a
+                href="https://www.facebook.com/akililabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="AKILI Labs sur Facebook"
+                className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/10 text-gray-400 hover:bg-[#1877F2] hover:text-white transition-all duration-200"
+              >
+                <Facebook size={17} />
+              </a>
+            </div>
           </div>
 
           {/* Expertises */}
