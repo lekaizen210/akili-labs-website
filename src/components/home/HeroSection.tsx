@@ -127,7 +127,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 48, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.45, delay: 0.15, ease }}
-            className="block text-sm font-semibold text-white/60 uppercase tracking-[0.22em] mb-5"
+            className="block text-sm font-semibold text-white/80 uppercase tracking-[0.18em] mb-5"
           >
             Votre partenaire de
           </motion.span>
@@ -165,7 +165,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 48, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.45, delay: 0.39, ease }}
-            className="block text-sm font-semibold text-white/60 uppercase tracking-[0.22em] mt-5"
+            className="block text-sm font-semibold text-white/80 uppercase tracking-[0.18em] mt-5"
           >
             en Afrique
           </motion.span>
@@ -176,7 +176,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 32, scale: 0.97 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.50, delay: 0.50, ease }}
-          className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           ERP · Intelligence Artificielle · DevSecOps · Développement sur mesure
           <br />
@@ -260,7 +260,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.90 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/40"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/65"
       >
         <span className="text-xs tracking-widest uppercase">Découvrir</span>
         <motion.div
