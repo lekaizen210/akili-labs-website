@@ -96,42 +96,28 @@ export default async function ExpertisePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-white border-b border-[#D9E2EC] relative overflow-hidden">
-        {/* Bande colorée gauche */}
-        <div
-          className="absolute left-0 top-0 bottom-0 w-1.5"
-          style={{ backgroundColor: exp.color ?? "#FF5500" }}
-          aria-hidden="true"
-        />
-        {/* Accent de fond discret */}
+      <section className="pt-32 pb-20 bg-[#1A2B3C] relative overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 60% 80% at 95% 50%, rgba(232,240,254,0.7) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(ellipse at 80% 50%, rgba(255,85,0,0.10) 0%, transparent 60%)" }}
           aria-hidden="true"
         />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-[#374151] mb-8" aria-label="Fil d'Ariane">
-            <Link href="/" className="hover:text-[#1A2B3C] transition-colors">Accueil</Link>
-            <ChevronRight size={14} className="text-[#D9E2EC]" />
-            <Link href="/#expertises" className="hover:text-[#1A2B3C] transition-colors">Expertises</Link>
-            <ChevronRight size={14} className="text-[#D9E2EC]" />
-            <span className="text-[#1A2B3C] font-medium">{exp.title}</span>
+          <nav className="flex items-center gap-2 text-sm text-white/75 mb-8" aria-label="Fil d'Ariane">
+            <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
+            <ChevronRight size={14} className="text-white/40" />
+            <Link href="/#expertises" className="hover:text-white transition-colors">Expertises</Link>
+            <ChevronRight size={14} className="text-white/40" />
+            <span className="text-white font-medium">{exp.title}</span>
           </nav>
-          <div
-            className="inline-flex items-center gap-2 px-4 py-1.5 text-sm font-semibold rounded-full mb-5 border"
-            style={{
-              backgroundColor: `${exp.color ?? "#FF5500"}18`,
-              color: exp.color ?? "#FF5500",
-              borderColor: `${exp.color ?? "#FF5500"}40`,
-            }}
-          >
-            ■ {exp.subtitle}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white text-sm font-semibold rounded-full mb-5 border border-white/20">
+            <span className="text-[#FF5500]">■</span> {exp.subtitle}
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1A2B3C] mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6">
             {exp.title}
           </h1>
-          <p className="text-xl text-[#374151] max-w-3xl leading-relaxed">
+          <p className="text-xl text-white/90 max-w-3xl leading-relaxed">
             {exp.description}
           </p>
         </div>

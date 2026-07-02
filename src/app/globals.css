@@ -26,10 +26,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* R12 — Manrope pour les titres (charte AKILI Labs, via next/font) */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), sans-serif;
-  color: #1A2B3C;
+/* R12 — Manrope pour les titres (charte AKILI Labs, via next/font)
+   Dans @layer base pour que les utilitaires Tailwind (text-white, etc.) puissent l'écraser */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), sans-serif;
+    color: #1A2B3C;
+  }
 }
 
 /* Scrollbar */
