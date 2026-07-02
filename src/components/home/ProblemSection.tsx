@@ -41,7 +41,7 @@ export default function ProblemSection() {
           <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">
             Les défis qui freinent votre transformation
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto text-lg">
+          <p className="text-white/80 max-w-2xl mx-auto text-lg">
             En Afrique de l&apos;Ouest, la transformation digitale se heurte à des obstacles
             spécifiques que les solutions génériques ne résolvent pas.
           </p>
@@ -69,7 +69,7 @@ export default function ProblemSection() {
                   </div>
                   <div>
                     <h3 className="font-bold text-white mb-2 leading-snug">{p.title}</h3>
-                    <p className="text-sm text-white/60 leading-relaxed">{p.desc}</p>
+                    <p className="text-sm text-white/80 leading-relaxed">{p.desc}</p>
                   </div>
                 </motion.div>
               </StaggerItem>
@@ -78,7 +78,7 @@ export default function ProblemSection() {
         </StaggerContainer>
 
         <FadeUp className="mt-14 text-center">
-          <p className="text-white/50 text-sm">
+          <p className="text-white/70 text-sm">
             Chez AKILI Labs, nous transformons ces obstacles en leviers de croissance —
             avec des solutions calibrées pour le contexte africain.
           </p>

@@ -5,6 +5,7 @@ import { ArrowRight, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { references } from "@/lib/data";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
+import { getTechColor } from "@/lib/tech-colors";
 
 const tagColors: Record<string, string> = {
   ERP: "bg-blue-50 text-blue-700",
@@ -74,11 +75,14 @@ export default function ReferencesSection() {
                       <span className="text-sm font-bold text-[#1A2B3C]">{ref.result}</span>
                     </div>
                     <div className="flex flex-wrap gap-1.5 mt-4">
-                      {ref.technologies.map((t) => (
-                        <span key={t} className="px-2 py-0.5 text-xs bg-gray-50 text-gray-500 border border-gray-200 rounded-md">
-                          {t}
-                        </span>
-                      ))}
+                      {ref.technologies.map((t) => {
+                        const { bg, text } = getTechColor(t);
+                        return (
+                          <span key={t} className="px-2 py-0.5 text-xs font-semibold rounded-md" style={{ backgroundColor: bg, color: text }}>
+                            {t}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                 </Link>

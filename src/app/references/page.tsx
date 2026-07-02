@@ -3,6 +3,7 @@ import { TrendingUp, ArrowRight } from "lucide-react";
 import { references } from "@/lib/data";
 import type { Metadata } from "next";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
+import { getTechColor } from "@/lib/tech-colors";
 
 export const metadata: Metadata = {
   title: "Références — AKILI Labs",
@@ -53,11 +54,14 @@ export default function ReferencesPage() {
                     <span className="text-sm font-bold text-[#1A2B3C]">{ref.result}</span>
                   </div>
                   <div className="flex flex-wrap gap-1.5">
-                    {ref.technologies.map((t) => (
-                      <span key={t} className="px-2 py-0.5 text-xs bg-gray-50 text-gray-500 border border-gray-200 rounded-md">
-                        {t}
-                      </span>
-                    ))}
+                    {ref.technologies.map((t) => {
+                      const { bg, text } = getTechColor(t);
+                      return (
+                        <span key={t} className="px-2 py-0.5 text-xs font-semibold rounded-md" style={{ backgroundColor: bg, color: text }}>
+                          {t}
+                        </span>
+                      );
+                    })}
                   </div>
                   <div className="flex items-center gap-1 text-sm font-semibold text-[#1A2B3C] group-hover:text-[#FF5500] transition-colors mt-5">
                     Voir le détail <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />

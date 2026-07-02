@@ -6,6 +6,7 @@ import { values, team } from "@/lib/data";
 import Link from "next/link";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
+import { getTechColor } from "@/lib/tech-colors";
 
 const iconMap: Record<string, React.ElementType> = {
   Star, Lightbulb, Shield, Users, Target, Lock, Award, TrendingUp,
@@ -229,16 +230,20 @@ export default function AboutPage() {
             stagger={0.07}
             delay={0.1}
           >
-            {partners.map((p) => (
-              <StaggerItem key={p}>
-                <motion.div
-                  whileHover={{ scale: 1.06, transition: { duration: 0.18 } }}
-                  className="px-6 py-3 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-semibold rounded-xl border border-[#D9E2EC] cursor-default"
-                >
-                  {p}
-                </motion.div>
-              </StaggerItem>
-            ))}
+            {partners.map((p) => {
+              const { bg, text } = getTechColor(p);
+              return (
+                <StaggerItem key={p}>
+                  <motion.div
+                    whileHover={{ scale: 1.06, transition: { duration: 0.18 } }}
+                    className="px-6 py-3 text-sm font-semibold rounded-xl cursor-default"
+                    style={{ backgroundColor: bg, color: text }}
+                  >
+                    {p}
+                  </motion.div>
+                </StaggerItem>
+              );
+            })}
           </StaggerContainer>
         </div>
       </section>

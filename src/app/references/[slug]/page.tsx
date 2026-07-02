@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ChevronRight, TrendingUp, CheckCircle } from "lucide-react";
 import { references } from "@/lib/data";
+import { getTechColor } from "@/lib/tech-colors";
 import type { Metadata } from "next";
 
 interface PageProps {
@@ -77,9 +78,12 @@ export default async function ReferencePage({ params }: PageProps) {
             <div className="bg-[#E8F0FE] rounded-2xl p-6">
               <h3 className="font-bold text-[#1A2B3C] mb-3 text-sm uppercase tracking-wider">Technologies</h3>
               <div className="flex flex-wrap gap-2">
-                {ref.technologies.map((t) => (
-                  <span key={t} className="px-3 py-1 bg-white text-[#1A2B3C] text-xs font-semibold rounded-lg border border-[#D9E2EC]">{t}</span>
-                ))}
+                {ref.technologies.map((t) => {
+                  const { bg, text } = getTechColor(t);
+                  return (
+                    <span key={t} className="px-3 py-1 text-xs font-semibold rounded-lg" style={{ backgroundColor: bg, color: text }}>{t}</span>
+                  );
+                })}
               </div>
             </div>
             <div className="bg-[#1A2B3C] rounded-2xl p-6 text-white">
