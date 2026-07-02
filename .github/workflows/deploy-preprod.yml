@@ -7,6 +7,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository_owner }}/akili-labs-website
+  PREPROD_DOMAIN: test.akililabs.io
 
 jobs:
   lint-typecheck:
@@ -71,7 +72,7 @@ jobs:
     needs: build
     environment:
       name: preprod
-      url: https://preprod.akililabs.com
+      url: https://test.akililabs.io
 
     steps:
       - uses: actions/checkout@v4
@@ -99,19 +100,19 @@ jobs:
               docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
             export VERSION=preprod-${{ github.sha }}
-            export DOMAIN=preprod.akililabs.com
+            export DOMAIN=${{ env.PREPROD_DOMAIN }}
             export GHCR_OWNER=${{ github.repository_owner }}
 
-            # Utiliser la config nginx HTTP-only (sans TLS) tant que le domaine n'est pas configuré
+            # Copier la config preprod (HTTPS + test.akililabs.io)
             cp nginx/nginx.preprod.conf nginx/nginx.conf
 
             docker pull ghcr.io/${{ env.IMAGE_NAME }}:${VERSION}
             docker compose -f docker-compose.prod.yml pull --ignore-pull-failures nginx
             docker compose -f docker-compose.prod.yml up -d --no-build --pull missing
             docker image prune -f
-            echo "✅ Preprod déployée : ${VERSION}"
+            echo "✅ Preprod déployée : ${VERSION} sur https://${{ env.PREPROD_DOMAIN }}"
 
-      - name: Healthcheck preprod (via conteneur Docker)
+      - name: Healthcheck preprod
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.PREPROD_HOST }}
@@ -119,16 +120,18 @@ jobs:
           key: ${{ secrets.PREPROD_SSH_KEY }}
           script: |
             sleep 30
+
             # Vérifier que Next.js est healthy
             WEB_STATUS=$(docker inspect akili-labs-website \
               --format "{{.State.Health.Status}}" 2>/dev/null || echo "absent")
             echo "Next.js : $WEB_STATUS"
             [ "$WEB_STATUS" = "healthy" ] || (echo "❌ Next.js unhealthy" && exit 1)
 
-            # Vérifier que nginx répond sur /healthz
-            NGINX_HTTP=$(docker exec akili-nginx \
-              wget -qO- http://localhost/healthz 2>/dev/null || echo "")
-            echo "Nginx /healthz : '$NGINX_HTTP'"
-            echo "$NGINX_HTTP" | grep -q "preprod-ok" || (echo "❌ Nginx KO" && exit 1)
+            # Vérifier que nginx répond en HTTPS sur /healthz
+            NGINX_HTTPS=$(docker exec akili-nginx \
+              wget -qO- https://localhost/healthz --no-check-certificate 2>/dev/null || echo "")
+            echo "Nginx HTTPS /healthz : '$NGINX_HTTPS'"
+            echo "$NGINX_HTTPS" | grep -q "preprod-ok" || (echo "❌ Nginx KO" && exit 1)
 
-            echo "✅ Preprod opérationnelle (Next.js: $WEB_STATUS, Nginx: OK)"
+            echo "✅ Preprod opérationnelle (Next.js: $WEB_STATUS, Nginx HTTPS: OK)"
+            echo "🌐 https://${{ env.PREPROD_DOMAIN }}"
