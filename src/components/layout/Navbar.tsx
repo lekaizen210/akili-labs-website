@@ -63,7 +63,7 @@ export default function Navbar() {
               <Image
                 src="/logo-akili-transparent.png"
                 alt="AKILI Labs"
-                width={180}
+                width={104}
                 height={58}
                 priority
                 className={cn(
