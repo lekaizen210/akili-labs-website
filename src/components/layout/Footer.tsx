@@ -168,8 +168,8 @@ export default function Footer() {
             </span>
             <span>RGPD</span>
             <span>OHADA</span>
-            <a href="#" className="hover:text-gray-300 transition-colors">Mentions légales</a>
-            <a href="#" className="hover:text-gray-300 transition-colors">Confidentialité</a>
+            <Link href="/mentions-legales" className="hover:text-gray-300 transition-colors">Mentions légales</Link>
+            <Link href="/confidentialite" className="hover:text-gray-300 transition-colors">Confidentialité</Link>
           </div>
         </div>
       </div>

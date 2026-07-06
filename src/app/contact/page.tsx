@@ -31,10 +31,13 @@ export default function ContactPage() {
         form.message,
       ].join("\n")
     );
-    window.location.href = `mailto:contact@akililabs.io?subject=${subject}&body=${body}`;
     await new Promise((r) => setTimeout(r, 600));
     setLoading(false);
     setSent(true);
+    // Ouvre le client mail après avoir affiché la confirmation : si l'environnement
+    // n'a pas de gestionnaire mailto: configuré, l'utilisateur voit quand même le
+    // message de confirmation avec l'adresse à contacter manuellement.
+    window.location.href = `mailto:contact@akililabs.io?subject=${subject}&body=${body}`;
   };
 
   return (
