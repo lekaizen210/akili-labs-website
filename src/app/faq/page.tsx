@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "FAQ AKILI Labs — ERP OHADA, IA & DevSecOps en Afrique de l'Ouest",
     description:
       "Toutes nos réponses sur l'ERP Odoo, la conformité OHADA, l'IA générative, le DevSecOps et la transformation digitale en zone UEMOA.",
-    images: [{ url: "/logo-akili.png", width: 2040, height: 660, alt: "FAQ AKILI Labs" }],
+    images: [{ url: "/logo-akili.png", width: 1600, height: 893, alt: "FAQ AKILI Labs" }],
   },
 };
 

@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url,
       title: `${exp.title} — AKILI Labs Côte d'Ivoire`,
       description: exp.description,
-      images: [{ url: "/logo-akili.png", width: 2040, height: 660, alt: `AKILI Labs — ${exp.title}` }],
+      images: [{ url: "/logo-akili.png", width: 1600, height: 893, alt: `AKILI Labs — ${exp.title}` }],
     },
     twitter: {
       card: "summary_large_image",

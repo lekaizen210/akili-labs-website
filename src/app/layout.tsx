@@ -68,8 +68,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/logo-akili.png",
-        width: 2040,
-        height: 660,
+        width: 1600,
+        height: 893,
         alt: "AKILI Labs — ERP • AI • DevSecOps en Afrique de l'Ouest",
       },
     ],
@@ -99,8 +99,8 @@ const organizationJsonLd = {
   logo: {
     "@type": "ImageObject",
     url: `${BASE_URL}/logo-akili.png`,
-    width: 2040,
-    height: 660,
+    width: 1600,
+    height: 893,
   },
   description:
     "AKILI Labs est une société de conseil IT et intégrateur Odoo ERP basée à Abidjan, Côte d'Ivoire. Nous accompagnons les organisations de la zone UEMOA dans leur transformation digitale : ERP, Intelligence Artificielle, DevSecOps et développement sur mesure.",

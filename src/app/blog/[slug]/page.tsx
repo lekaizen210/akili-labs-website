@@ -97,7 +97,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       publishedTime: post.date,
       authors: ["AKILI Labs"],
       tags: [post.category, "AKILI Labs", "Afrique de l'Ouest", "UEMOA"],
-      images: [{ url: "/logo-akili.png", width: 2040, height: 660, alt: post.title }],
+      images: [{ url: "/logo-akili.png", width: 1600, height: 893, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
