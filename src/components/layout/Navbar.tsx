@@ -59,7 +59,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="relative h-14 lg:h-16 flex items-center">
+            <div className="relative h-16 lg:h-20 flex items-center">
               <Image
                 src="/logo-akili-transparent.png"
                 alt="AKILI Labs"
@@ -67,7 +67,7 @@ export default function Navbar() {
                 height={58}
                 priority
                 className={cn(
-                  "h-12 lg:h-14 w-auto object-contain absolute transition-opacity duration-300",
+                  "h-14 lg:h-16 w-auto object-contain absolute transition-opacity duration-300",
                   scrolled ? "opacity-100" : "opacity-0"
                 )}
               />
@@ -78,7 +78,7 @@ export default function Navbar() {
                 height={58}
                 priority
                 className={cn(
-                  "h-12 lg:h-14 w-auto object-contain transition-opacity duration-300",
+                  "h-14 lg:h-16 w-auto object-contain transition-opacity duration-300",
                   scrolled ? "opacity-0" : "opacity-100"
                 )}
               />
