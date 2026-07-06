@@ -56,8 +56,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-[#FF5500] shrink-0" />
-                <a href="mailto:contact@akililabs.com" className="hover:text-white transition-colors">
-                  contact@akililabs.com
+                <a href="mailto:contact@akililabs.io" className="hover:text-white transition-colors">
+                  contact@akililabs.io
                 </a>
               </div>
               <div className="flex items-center gap-2">

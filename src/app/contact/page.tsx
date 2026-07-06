@@ -31,7 +31,7 @@ export default function ContactPage() {
         form.message,
       ].join("\n")
     );
-    window.location.href = `mailto:contact@akililabs.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:contact@akililabs.io?subject=${subject}&body=${body}`;
     await new Promise((r) => setTimeout(r, 600));
     setLoading(false);
     setSent(true);
@@ -69,8 +69,8 @@ export default function ContactPage() {
                   <Mail size={16} className="text-[#FF5500] mt-0.5 shrink-0" />
                   <div>
                     <div className="font-semibold text-[#1A2B3C]">Email</div>
-                    <a href="mailto:contact@akililabs.com" className="text-[#c94200] hover:underline">
-                      contact@akililabs.com
+                    <a href="mailto:contact@akililabs.io" className="text-[#c94200] hover:underline">
+                      contact@akililabs.io
                     </a>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-[#1A2B3C]">Email préparé</h2>
                 <p className="text-[#374151] max-w-sm">
                   Votre messagerie s&apos;ouvre avec un message prérempli. Vérifiez-le puis envoyez-le
-                  à contact@akililabs.com.
+                  à contact@akililabs.io.
                 </p>
                 <button
                   onClick={() => { setSent(false); setForm({ name: "", company: "", email: "", phone: "", subject: "", message: "" }); }}

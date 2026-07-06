@@ -114,7 +114,7 @@ const organizationJsonLd = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    email: "contact@akililabs.com",
+    email: "contact@akililabs.io",
     contactType: "customer service",
     availableLanguage: ["French"],
     areaServed: "UEMOA",

@@ -53,7 +53,7 @@ Avant publication, vérifier que les références, coordonnées, liens sociaux e
 
 Les formulaires Contact et Carrières ouvrent actuellement un email prérempli :
 
-- `contact@akililabs.com`
+- `contact@akililabs.io`
 - `rh@akililabs.com`
 
 Pour une mise en production plus robuste, ajouter une API route ou connecter un service d'email/CRM, puis remplacer le flux `mailto:`.
