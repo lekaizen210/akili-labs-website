@@ -40,7 +40,7 @@ export default function Footer() {
               <Image
                 src="/logo-akili-white.png"
                 alt="AKILI Labs"
-                width={160}
+                width={93}
                 height={52}
                 className="h-10 w-auto object-contain"
               />
