@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!exp) return {};
   const url = `${BASE_URL}/expertises/${slug}`;
   return {
-    title: `${exp.title} en Afrique de l'Ouest — AKILI Labs`,
+    title: `${exp.title} en Afrique de l'Ouest`,
     description: `${exp.description} Expertise OHADA/UEMOA. Consultation initiale gratuite.`,
     alternates: { canonical: url },
     openGraph: {

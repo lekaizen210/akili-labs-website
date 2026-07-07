@@ -51,7 +51,8 @@ Adresse : Abidjan, Côte d'Ivoire
 
 - Accueil : https://akililabs.com
 - Expertises : https://akililabs.com/expertises
-- Expertise ERP Odoo : https://akililabs.com/expertises/erp
+- Expertise ERP Odoo (vue d'ensemble) : https://akililabs.com/expertises/erp
+- Expertise Odoo ERP (détaillée : modules, méthodologie, hébergement, support, FAQ) : https://akililabs.com/expertises/odoo
 - Expertise IA : https://akililabs.com/expertises/intelligence-artificielle
 - Expertise DevSecOps : https://akililabs.com/expertises/devsecops
 - Références clients : https://akililabs.com/references

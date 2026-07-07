@@ -26,7 +26,7 @@ export default function OdooHero() {
           href="/contact"
           className="group inline-flex items-center gap-2 px-7 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-colors shadow-lg shadow-orange-900/20"
         >
-          Demander une démo gratuite
+          Demander une consultation gratuite
           <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
         </Link>
         <a

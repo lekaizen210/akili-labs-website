@@ -18,7 +18,7 @@ const BASE_URL = "https://akililabs.com";
 const url = `${BASE_URL}/expertises/odoo`;
 
 export const metadata: Metadata = {
-  title: "Expertise Odoo ERP en Afrique de l'Ouest — AKILI Labs",
+  title: "Expertise Odoo ERP en Afrique de l'Ouest",
   description:
     "Implémentation, personnalisation et optimisation de l'ERP Odoo pour les entreprises d'Afrique de l'Ouest. Conformité OHADA/SYSCOHADA. Consultation initiale gratuite.",
   alternates: { canonical: url },
