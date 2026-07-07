@@ -154,6 +154,20 @@ export default async function ExpertisePage({ params }: PageProps) {
                 <div className="flex items-center gap-2"><span className="text-[#FF5500] font-bold">→</span> Méthodologie éprouvée sur 50+ projets</div>
               </div>
             </div>
+            {exp.slug === "erp" && (
+              <div className="bg-white border border-[#D9E2EC] rounded-2xl p-7 text-center">
+                <h3 className="font-bold text-[#1A2B3C] mb-2">Vous utilisez ou envisagez Odoo ?</h3>
+                <p className="text-sm text-[#374151] mb-5">
+                  Découvrez notre expertise Odoo en détail : modules, méthodologie, hébergement et support.
+                </p>
+                <Link
+                  href="/expertises/odoo"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-[#1A2B3C] text-[#1A2B3C] font-semibold rounded-xl hover:bg-[#1A2B3C] hover:text-white transition-colors"
+                >
+                  Explorer l&apos;expertise Odoo <ArrowRight size={15} />
+                </Link>
+              </div>
+            )}
             {/* CTA */}
             <div className="bg-[#1A2B3C] rounded-2xl p-7 text-center">
               <h3 className="font-bold text-white mb-2">Discutons de votre besoin</h3>
