@@ -58,13 +58,31 @@ export default function OdooHostingSupport() {
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-5">
               {odooSupportTiers.map((s, i) => {
                 const emphasis = supportEmphasis[i];
+                const isPremium = i === 2;
                 return (
                   <motion.div
                     key={s.level}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20, boxShadow: "0 0 0px rgba(255,85,0,0)" }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      boxShadow: isPremium
+                        ? [
+                            "0 0 0px rgba(255,85,0,0)",
+                            "0 0 0px rgba(255,85,0,0)",
+                            "0 0 28px rgba(255,85,0,0.4)",
+                            "0 0 10px rgba(255,85,0,0.15)",
+                          ]
+                        : "0 0 0px rgba(255,85,0,0)",
+                    }}
                     viewport={viewportOnce}
-                    transition={{ duration: 0.5, delay: i * 0.1, ease }}
+                    transition={{
+                      opacity: { duration: 0.5, delay: i * 0.1, ease },
+                      y: { duration: 0.5, delay: i * 0.1, ease },
+                      boxShadow: isPremium
+                        ? { duration: 1.4, delay: i * 0.1 + 0.3, times: [0, 0.3, 0.7, 1] }
+                        : { duration: 0.3 },
+                    }}
                     className={`rounded-2xl border p-6 bg-white transition-transform hover:-translate-y-0.5 ${emphasis.card}`}
                   >
                     <div className="flex items-center gap-2 mb-3">

@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import {
   ShoppingBag,
   HardHat,
@@ -11,7 +12,7 @@ import {
   Wheat,
   HandHeart,
 } from "lucide-react";
-import { StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
+import { StaggerContainer, StaggerItem, viewportOnce } from "@/components/ui/motion-primitives";
 import { odooSectorUseCases } from "@/lib/odoo-data";
 
 const sectorIcons = [
@@ -51,9 +52,15 @@ export default function OdooSectors() {
                   <h3 className="text-sm font-bold text-[#1A2B3C]">{s.sector}</h3>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  {s.useCases.map((u) => (
+                  {s.useCases.map((u, ui) => (
                     <div key={u.label} className="flex flex-col items-center gap-1 w-16 text-center">
-                      <div className="w-9 h-9 bg-white rounded-lg border border-[#D9E2EC] flex items-center justify-center shrink-0 transition-colors group-hover:border-[#FF5500]/40">
+                      <motion.div
+                        className="w-9 h-9 bg-white rounded-lg border border-[#D9E2EC] flex items-center justify-center shrink-0 transition-colors group-hover:border-[#FF5500]/40"
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={viewportOnce}
+                        transition={{ type: "spring", stiffness: 350, damping: 12, delay: ui * 0.05 }}
+                      >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={`/odoo-icons/${u.icon}.png`}
@@ -62,7 +69,7 @@ export default function OdooSectors() {
                           height={22}
                           loading="lazy"
                         />
-                      </div>
+                      </motion.div>
                       <span className="text-[10px] leading-tight text-[#374151] font-medium">{u.label}</span>
                     </div>
                   ))}

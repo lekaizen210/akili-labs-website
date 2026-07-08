@@ -1,6 +1,7 @@
 "use client";
 
-import { StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
+import { motion } from "framer-motion";
+import { StaggerContainer, StaggerItem, viewportOnce } from "@/components/ui/motion-primitives";
 import { odooModuleCategories } from "@/lib/odoo-data";
 
 export default function OdooModules() {
@@ -20,12 +21,18 @@ export default function OdooModules() {
             <StaggerItem key={cat.category} className="bg-[#E8F0FE] rounded-2xl p-6 border border-[#D9E2EC]">
               <h3 className="font-bold text-[#1A2B3C] mb-4">{cat.category}</h3>
               <div className="flex flex-wrap gap-2.5">
-                {cat.modules.map((m) => (
+                {cat.modules.map((m, i) => (
                   <div key={m.label} title={m.label} className="flex flex-col items-center gap-1 w-16 text-center">
-                    <div className="w-12 h-12 bg-white rounded-lg border border-[#D9E2EC] flex items-center justify-center shrink-0">
+                    <motion.div
+                      className="w-12 h-12 bg-white rounded-lg border border-[#D9E2EC] flex items-center justify-center shrink-0"
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={viewportOnce}
+                      transition={{ type: "spring", stiffness: 350, damping: 12, delay: i * 0.05 }}
+                    >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={`/odoo-icons/${m.icon}.png`} alt={m.label} width={30} height={30} loading="lazy" />
-                    </div>
+                    </motion.div>
                     <span className="text-[10px] leading-tight text-[#374151] font-medium">{m.label}</span>
                   </div>
                 ))}

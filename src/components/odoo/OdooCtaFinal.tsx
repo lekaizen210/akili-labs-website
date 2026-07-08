@@ -17,9 +17,11 @@ const benefits = [
 export default function OdooCtaFinal() {
   return (
     <section className="py-20 bg-[#1A2B3C] relative overflow-hidden">
-      <div
+      <motion.div
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse at 70% 50%, rgba(255,85,0,0.12) 0%, transparent 60%)" }}
+        animate={{ opacity: [0.7, 1, 0.7] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         aria-hidden="true"
       />
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

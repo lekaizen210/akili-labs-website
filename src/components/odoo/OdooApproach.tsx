@@ -1,6 +1,7 @@
 "use client";
 
 import { StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
+import ParticleCanvas from "@/components/ui/ParticleCanvas";
 
 const principles = [
   {
@@ -22,8 +23,9 @@ const principles = [
 
 export default function OdooApproach() {
   return (
-    <section className="py-20 bg-[#1A2B3C]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-[#1A2B3C] relative overflow-hidden">
+      <ParticleCanvas count={22} />
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white text-sm font-medium rounded-full mb-6 border border-white/20">
             <span className="text-[#FF5500]">■</span> Notre méthodologie
