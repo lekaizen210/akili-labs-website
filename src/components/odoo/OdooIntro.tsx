@@ -30,7 +30,7 @@ export default function OdooIntro() {
           <div className="bg-[#E8F0FE] border-l-4 border-[#1A2B3C] rounded-r-xl p-6 mb-6">
             <p className="text-[#1A2B3C] font-bold text-lg mb-1">Odoo change la donne.</p>
             <p className="text-[#374151] leading-relaxed">
-              Avec plus de <strong>12 millions d&apos;utilisateurs dans 180 pays</strong>, Odoo est
+              Avec plus de <strong>28 millions d&apos;utilisateurs dans 180 pays</strong>, Odoo est
               aujourd&apos;hui la suite ERP open source la plus adoptée au monde. Elle réunit dans une
               seule plateforme tous les processus de votre entreprise : ventes, achats, stocks,
               comptabilité, RH, production et bien plus encore.

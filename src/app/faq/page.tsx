@@ -33,7 +33,7 @@ const faqs: FaqItem[] = [
     category: "ERP & OHADA",
     question: "Pourquoi choisir Odoo pour une entreprise en Afrique de l'Ouest ?",
     answer:
-      "Odoo est l'ERP le plus adopté en zone UEMOA grâce à sa modularité, son coût total de possession compétitif et sa capacité d'adaptation aux spécificités locales (OHADA, droit du travail ivoirien, TVA UEMOA). Avec plus de 12 millions d'utilisateurs dans le monde, son écosystème de partenaires locaux certifiés garantit un support durable.",
+      "Odoo est l'ERP le plus adopté en zone UEMOA grâce à sa modularité, son coût total de possession compétitif et sa capacité d'adaptation aux spécificités locales (OHADA, droit du travail ivoirien, TVA UEMOA). Avec plus de 28 millions d'utilisateurs dans le monde, son écosystème de partenaires locaux certifiés garantit un support durable.",
   },
   {
     category: "ERP & OHADA",

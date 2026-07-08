@@ -39,10 +39,12 @@ export default function OdooHostingSupport() {
                     key={h.mode}
                     className="group bg-white rounded-2xl border border-[#D9E2EC] p-6 transition-all hover:-translate-y-0.5 hover:border-[#FF5500] hover:shadow-md"
                   >
-                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#E8F0FE] mb-4 transition-colors group-hover:bg-[#1A2B3C]">
-                      <Icon size={20} className="text-[#1A2B3C] transition-colors group-hover:text-white" aria-hidden="true" />
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#E8F0FE] shrink-0 transition-colors group-hover:bg-[#1A2B3C]">
+                        <Icon size={20} className="text-[#1A2B3C] transition-colors group-hover:text-white" aria-hidden="true" />
+                      </div>
+                      <h4 className="font-bold text-[#1A2B3C]">{h.mode}</h4>
                     </div>
-                    <h4 className="font-bold text-[#1A2B3C] mb-2">{h.mode}</h4>
                     <p className="text-sm text-[#374151] mb-4 leading-relaxed">{h.description}</p>
                     <div className="text-xs font-semibold text-[#1A2B3C]">
                       Idéal pour : <span className="font-normal text-[#374151]">{h.fit}</span>
