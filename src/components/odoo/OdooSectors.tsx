@@ -48,21 +48,20 @@ export default function OdooSectors() {
                   <Icon size={18} className="text-[#1A2B3C] transition-colors group-hover:text-[#FF5500] shrink-0" aria-hidden="true" />
                   <h3 className="text-sm font-bold text-[#1A2B3C]">{s.sector}</h3>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {s.useCases.map((u) => (
-                    <div
-                      key={u.label}
-                      title={u.label}
-                      className="w-9 h-9 bg-white rounded-lg border border-[#D9E2EC] flex items-center justify-center shrink-0 transition-colors group-hover:border-[#FF5500]/40"
-                    >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={`/odoo-icons/${u.icon}.png`}
-                        alt={u.label}
-                        width={22}
-                        height={22}
-                        loading="lazy"
-                      />
+                    <div key={u.label} className="flex flex-col items-center gap-1 w-16 text-center">
+                      <div className="w-9 h-9 bg-white rounded-lg border border-[#D9E2EC] flex items-center justify-center shrink-0 transition-colors group-hover:border-[#FF5500]/40">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={`/odoo-icons/${u.icon}.png`}
+                          alt={u.label}
+                          width={22}
+                          height={22}
+                          loading="lazy"
+                        />
+                      </div>
+                      <span className="text-[10px] leading-tight text-[#374151] font-medium">{u.label}</span>
                     </div>
                   ))}
                 </div>
