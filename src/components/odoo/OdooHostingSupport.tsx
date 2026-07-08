@@ -70,9 +70,14 @@ export default function OdooHostingSupport() {
                       <h4 className="font-bold text-[#1A2B3C]">{s.level}</h4>
                     </div>
                     <p className="text-sm text-[#374151] mb-5 leading-relaxed">{s.content}</p>
-                    <span className={`inline-flex px-3 py-1.5 rounded-lg text-xs font-bold ${emphasis.badge}`}>
-                      Délai : {s.delay}
-                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      <span className={`inline-flex px-3 py-1.5 rounded-lg text-xs font-bold ${emphasis.badge}`}>
+                        Bloquant : {s.slaBlocking}
+                      </span>
+                      <span className="inline-flex px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#E8F0FE] text-[#1A2B3C]">
+                        {s.slaSecondaryLabel} : {s.slaSecondary}
+                      </span>
+                    </div>
                   </motion.div>
                 );
               })}

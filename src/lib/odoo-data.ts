@@ -59,9 +59,30 @@ export const odooHostingModes = [
 ];
 
 export const odooSupportTiers = [
-  { level: "Support Standard", content: "Assistance par tickets, documentation, correctifs", delay: "48h ouvrées" },
-  { level: "Support Prioritaire", content: "Hotline dédiée, intervention sous 4h, mises à jour régulières", delay: "4h ouvrées" },
-  { level: "Support Full-Service", content: "MCO complète, évolutions, formations incluses, bilan mensuel", delay: "1h ouvrée" },
+  {
+    level: "Essentiel",
+    content:
+      "Corrections des anomalies bloquantes, mises à jour réglementaires de paie pour les 5 pays, support par email, 4h/mois de TMA applicative.",
+    slaBlocking: "24h",
+    slaSecondaryLabel: "Mineur",
+    slaSecondary: "5 jours ouvrés",
+  },
+  {
+    level: "Standard",
+    content:
+      "Inclus Essentiel + corrections des anomalies majeures, 8h/mois de TMA applicative, rapport trimestriel de suivi et mise à disposition de ressource sur site (1 jour/mois).",
+    slaBlocking: "4h",
+    slaSecondaryLabel: "Majeur",
+    slaSecondary: "24h",
+  },
+  {
+    level: "Premium",
+    content:
+      "Inclus Standard + évolutions mineures, 16h/mois de TMA applicative, revue de sécurité semestrielle, support prioritaire et mise à disposition de ressource sur site (4 jours/mois).",
+    slaBlocking: "2h",
+    slaSecondaryLabel: "Majeur",
+    slaSecondary: "8h",
+  },
 ];
 
 export const odooSectorUseCases = [
