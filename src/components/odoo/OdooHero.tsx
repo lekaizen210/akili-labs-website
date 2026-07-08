@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
+import OdooHubDiagram from "@/components/odoo/OdooHubDiagram";
 
 export default function OdooHero() {
   return (
@@ -35,6 +36,9 @@ export default function OdooHero() {
         >
           Voir nos ressources Odoo
         </a>
+      </div>
+      <div className="mt-14 hidden sm:block">
+        <OdooHubDiagram />
       </div>
     </PageHero>
   );

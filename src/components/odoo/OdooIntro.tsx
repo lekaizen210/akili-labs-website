@@ -1,6 +1,7 @@
 "use client";
 
 import { FadeUp } from "@/components/ui/motion-primitives";
+import OdooNetworkDiagram from "@/components/odoo/OdooNetworkDiagram";
 
 export default function OdooIntro() {
   return (
@@ -36,6 +37,9 @@ export default function OdooIntro() {
             </p>
           </div>
         </FadeUp>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 grid grid-cols-1 sm:grid-cols-[1fr_220px] gap-8 items-center">
         <FadeUp delay={0.26}>
           <p className="text-[#374151] leading-relaxed">
             Chez AKILI Labs, nous ne nous contentons pas d&apos;installer Odoo. Nous le configurons,
@@ -43,6 +47,12 @@ export default function OdooIntro() {
             contextes OHADA/SYSCOHADA, spécificités fiscales locales, multilinguisme, et contraintes de
             connectivité.
           </p>
+        </FadeUp>
+        <FadeUp delay={0.32}>
+          <div>
+            <OdooNetworkDiagram />
+            <p className="text-center text-xs text-gray-400 mt-1">8 pays UEMOA/CEDEAO</p>
+          </div>
         </FadeUp>
       </div>
     </section>
