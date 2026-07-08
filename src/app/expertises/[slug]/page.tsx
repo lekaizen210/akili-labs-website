@@ -168,6 +168,20 @@ export default async function ExpertisePage({ params }: PageProps) {
                 </Link>
               </div>
             )}
+            {exp.slug === "intelligence-artificielle" && (
+              <div className="bg-white border border-[#D9E2EC] rounded-2xl p-7 text-center">
+                <h3 className="font-bold text-[#1A2B3C] mb-2">Un projet d&apos;IA en tête ?</h3>
+                <p className="text-sm text-[#374151] mb-5">
+                  Découvrez notre expertise IA en détail : domaines, cas d&apos;usage par secteur et méthodologie.
+                </p>
+                <Link
+                  href="/expertises/intelligence-artificielle"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-[#1A2B3C] text-[#1A2B3C] font-semibold rounded-xl hover:bg-[#1A2B3C] hover:text-white transition-colors"
+                >
+                  Explorer l&apos;expertise IA <ArrowRight size={15} />
+                </Link>
+              </div>
+            )}
             {/* CTA */}
             <div className="bg-[#1A2B3C] rounded-2xl p-7 text-center">
               <h3 className="font-bold text-white mb-2">Discutons de votre besoin</h3>
