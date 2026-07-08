@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import {
   ShoppingBag,
   HardHat,
@@ -56,7 +55,14 @@ export default function OdooSectors() {
                       title={u.label}
                       className="w-9 h-9 bg-white rounded-lg border border-[#D9E2EC] flex items-center justify-center shrink-0 transition-colors group-hover:border-[#FF5500]/40"
                     >
-                      <Image src={`/odoo-icons/${u.icon}.png`} alt={u.label} width={22} height={22} />
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={`/odoo-icons/${u.icon}.png`}
+                        alt={u.label}
+                        width={22}
+                        height={22}
+                        loading="lazy"
+                      />
                     </div>
                   ))}
                 </div>
