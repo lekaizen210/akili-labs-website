@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   ShoppingBag,
   HardHat,
@@ -48,11 +49,15 @@ export default function OdooSectors() {
                   <Icon size={18} className="text-[#1A2B3C] transition-colors group-hover:text-[#FF5500] shrink-0" aria-hidden="true" />
                   <h3 className="text-sm font-bold text-[#1A2B3C]">{s.sector}</h3>
                 </div>
-                <div className="flex flex-wrap gap-1.5">
-                  {s.useCases.split(", ").map((tag) => (
-                    <span key={tag} className="px-2 py-0.5 bg-white text-[11px] font-medium text-[#374151] rounded-md border border-[#D9E2EC]">
-                      {tag}
-                    </span>
+                <div className="flex flex-wrap gap-2">
+                  {s.useCases.map((u) => (
+                    <div
+                      key={u.label}
+                      title={u.label}
+                      className="w-9 h-9 bg-white rounded-lg border border-[#D9E2EC] flex items-center justify-center shrink-0 transition-colors group-hover:border-[#FF5500]/40"
+                    >
+                      <Image src={`/odoo-icons/${u.icon}.png`} alt={u.label} width={22} height={22} />
+                    </div>
                   ))}
                 </div>
               </StaggerItem>

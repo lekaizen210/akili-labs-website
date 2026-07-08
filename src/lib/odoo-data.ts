@@ -86,15 +86,87 @@ export const odooSupportTiers = [
 ];
 
 export const odooSectorUseCases = [
-  { sector: "Commerce & Distribution", useCases: "CRM, Ventes, Achats, Stock multi-entrepôts, PoS" },
-  { sector: "BTP & Immobilier", useCases: "Projets, Maintenance, Achats, Facturation à l'avancement" },
-  { sector: "Industrie & Fabrication", useCases: "Production (MRP), Maintenance (GMAO), Stock, Qualité" },
-  { sector: "Services & Consulting", useCases: "Projets, Feuilles de temps, Facturation, CRM" },
-  { sector: "Finance & Microfinance", useCases: "Comptabilité OHADA, Trésorerie, Reporting réglementaire" },
-  { sector: "Santé & Pharmacie", useCases: "Stocks médicaux, Traçabilité, Facturation patients" },
-  { sector: "Enseignement & Formation", useCases: "eLearning, Inscriptions, Facturation, RH" },
-  { sector: "Agro-alimentaire", useCases: "Traçabilité (FEFO), Production, Qualité, Achats" },
-  { sector: "ONG & Secteur Public", useCases: "Projets, Budgets, Achats, RH, Reporting bailleurs" },
+  {
+    sector: "Commerce & Distribution",
+    useCases: [
+      { label: "CRM", icon: "crm" },
+      { label: "Ventes", icon: "sale" },
+      { label: "Achats", icon: "purchase" },
+      { label: "Stock multi-entrepôts", icon: "stock" },
+      { label: "PoS", icon: "point_of_sale" },
+    ],
+  },
+  {
+    sector: "BTP & Immobilier",
+    useCases: [
+      { label: "Projets", icon: "project" },
+      { label: "Maintenance", icon: "maintenance" },
+      { label: "Achats", icon: "purchase" },
+      { label: "Facturation à l'avancement", icon: "account" },
+    ],
+  },
+  {
+    sector: "Industrie & Fabrication",
+    useCases: [
+      { label: "Production (MRP)", icon: "mrp" },
+      { label: "Maintenance (GMAO)", icon: "mrp_maintenance" },
+      { label: "Stock", icon: "stock" },
+      { label: "Qualité", icon: "quality_control" },
+    ],
+  },
+  {
+    sector: "Services & Consulting",
+    useCases: [
+      { label: "Projets", icon: "project" },
+      { label: "Feuilles de temps", icon: "hr_timesheet" },
+      { label: "Facturation", icon: "account" },
+      { label: "CRM", icon: "crm" },
+    ],
+  },
+  {
+    sector: "Finance & Microfinance",
+    useCases: [
+      { label: "Comptabilité OHADA", icon: "account_accountant" },
+      { label: "Trésorerie", icon: "account_batch_payment" },
+      { label: "Reporting réglementaire", icon: "spreadsheet_dashboard" },
+    ],
+  },
+  {
+    sector: "Santé & Pharmacie",
+    useCases: [
+      { label: "Stocks médicaux", icon: "stock" },
+      { label: "Traçabilité", icon: "product_expiry" },
+      { label: "Facturation patients", icon: "account" },
+    ],
+  },
+  {
+    sector: "Enseignement & Formation",
+    useCases: [
+      { label: "eLearning", icon: "website_slides" },
+      { label: "Inscriptions", icon: "event" },
+      { label: "Facturation", icon: "account" },
+      { label: "RH", icon: "hr" },
+    ],
+  },
+  {
+    sector: "Agro-alimentaire",
+    useCases: [
+      { label: "Traçabilité (FEFO)", icon: "product_expiry" },
+      { label: "Production", icon: "mrp" },
+      { label: "Qualité", icon: "quality_control" },
+      { label: "Achats", icon: "purchase" },
+    ],
+  },
+  {
+    sector: "ONG & Secteur Public",
+    useCases: [
+      { label: "Projets", icon: "project" },
+      { label: "Budgets", icon: "account" },
+      { label: "Achats", icon: "purchase" },
+      { label: "RH", icon: "hr" },
+      { label: "Reporting bailleurs", icon: "spreadsheet_dashboard" },
+    ],
+  },
 ];
 
 export const odooWhyUs = [
