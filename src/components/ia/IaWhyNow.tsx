@@ -1,6 +1,7 @@
 "use client";
 
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
+import AkiliNetworkDiagram from "@/components/ui/AkiliNetworkDiagram";
 import { iaValueProps } from "@/lib/ia-data";
 
 export default function IaWhyNow() {
@@ -19,14 +20,22 @@ export default function IaWhyNow() {
             </h2>
           </FadeUp>
         </div>
-        <FadeUp delay={0.14}>
-          <p className="text-[#374151] leading-relaxed mb-6">
-            L&apos;Afrique est la prochaine grande frontière de l&apos;Intelligence Artificielle. Avec plus
-            de <strong>1,4 milliard d&apos;habitants</strong>, une population jeune hyper-connectée, une
-            pénétration du Mobile Money sans équivalent dans le monde et des marchés en construction
-            rapide, le continent offre un terrain unique pour l&apos;IA.
-          </p>
-        </FadeUp>
+        <div className="grid grid-cols-1 sm:grid-cols-[1fr_220px] gap-8 items-center mb-6">
+          <FadeUp delay={0.14}>
+            <p className="text-[#374151] leading-relaxed">
+              L&apos;Afrique est la prochaine grande frontière de l&apos;Intelligence Artificielle. Avec plus
+              de <strong>1,4 milliard d&apos;habitants</strong>, une population jeune hyper-connectée, une
+              pénétration du Mobile Money sans équivalent dans le monde et des marchés en construction
+              rapide, le continent offre un terrain unique pour l&apos;IA.
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.2}>
+            <div>
+              <AkiliNetworkDiagram />
+              <p className="text-center text-xs text-gray-400 mt-1">8 pays UEMOA/CEDEAO</p>
+            </div>
+          </FadeUp>
+        </div>
         <FadeUp delay={0.2}>
           <div className="bg-[#E8F0FE] border-l-4 border-[#1A2B3C] rounded-r-xl p-6 mb-12">
             <p className="text-[#1A2B3C] font-bold text-lg mb-1">

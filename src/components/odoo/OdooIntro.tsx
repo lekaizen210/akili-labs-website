@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeUp } from "@/components/ui/motion-primitives";
-import OdooNetworkDiagram from "@/components/odoo/OdooNetworkDiagram";
+import AkiliNetworkDiagram from "@/components/ui/AkiliNetworkDiagram";
 
 export default function OdooIntro() {
   return (
@@ -50,7 +50,7 @@ export default function OdooIntro() {
         </FadeUp>
         <FadeUp delay={0.32}>
           <div>
-            <OdooNetworkDiagram />
+            <AkiliNetworkDiagram />
             <p className="text-center text-xs text-gray-400 mt-1">8 pays UEMOA/CEDEAO</p>
           </div>
         </FadeUp>

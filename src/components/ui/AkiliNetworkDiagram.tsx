@@ -27,7 +27,7 @@ const nodes = countries.map(({ name, code }, i) => {
   };
 });
 
-export default function OdooNetworkDiagram() {
+export default function AkiliNetworkDiagram() {
   return (
     <svg
       viewBox="0 0 320 320"
