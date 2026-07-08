@@ -10,12 +10,14 @@ export default function OdooServices() {
   return (
     <section className="py-20 bg-[#E8F0FE]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
-          ■ Au-delà du standard
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+            ■ Au-delà du standard
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C] max-w-2xl mx-auto">
+            Développements spécifiques, migration & formation
+          </h2>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C] mb-10">
-          Développements spécifiques, migration & formation
-        </h2>
         <StaggerContainer className="grid grid-cols-1 lg:grid-cols-3 gap-6" stagger={0.1}>
           {odooServiceBlocks.map((block) => {
             const Icon = icons[block.icon as keyof typeof icons];

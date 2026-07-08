@@ -6,16 +6,18 @@ export default function OdooIntro() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <FadeUp>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
-            ■ Pourquoi Odoo
-          </div>
-        </FadeUp>
-        <FadeUp delay={0.08}>
-          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C] mb-6">
-            Pourquoi les entreprises africaines choisissent Odoo
-          </h2>
-        </FadeUp>
+        <div className="text-center mb-6">
+          <FadeUp>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+              ■ Pourquoi Odoo
+            </div>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C]">
+              Pourquoi les entreprises africaines choisissent Odoo
+            </h2>
+          </FadeUp>
+        </div>
         <FadeUp delay={0.14}>
           <p className="text-[#374151] leading-relaxed mb-6">
             Gérer une entreprise en croissance avec des outils dispersés — tableaux Excel, logiciels de

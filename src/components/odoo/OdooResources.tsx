@@ -7,12 +7,14 @@ export default function OdooResources() {
   return (
     <section id="ressources" className="py-20 bg-[#E8F0FE] scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
-          ■ Ressources & Contenus
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+            ■ Ressources & Contenus
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C]">
+            Approfondissez votre connaissance d&apos;Odoo
+          </h2>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C] mb-10">
-          Approfondissez votre connaissance d&apos;Odoo
-        </h2>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-5" stagger={0.08}>
           {odooResources.map((r) => (
             <StaggerItem

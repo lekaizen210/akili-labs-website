@@ -14,12 +14,14 @@ export default function OdooFaq() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
-          ■ FAQ
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+            ■ FAQ
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C]">
+            Questions fréquentes sur Odoo
+          </h2>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C] mb-10">
-          Questions fréquentes sur Odoo
-        </h2>
         <div className="space-y-3">
           {odooFaqs.map((item, i) => {
             const open = openIndex === i;

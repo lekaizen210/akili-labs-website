@@ -30,12 +30,14 @@ export default function OdooSectors() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
-          ■ Secteurs d&apos;intervention
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+            ■ Secteurs d&apos;intervention
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C]">
+            Odoo pour tous les secteurs
+          </h2>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C] mb-10">
-          Odoo pour tous les secteurs
-        </h2>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" stagger={0.05}>
           {odooSectorUseCases.map((s, i) => {
             const Icon = sectorIcons[i];

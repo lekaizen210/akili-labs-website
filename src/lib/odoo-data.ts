@@ -7,13 +7,66 @@ export const odooPhases = [
 ];
 
 export const odooModuleCategories = [
-  { category: "Gestion commerciale", modules: ["CRM", "Ventes", "Point de Vente (PoS)", "eCommerce"] },
-  { category: "Gestion financière & comptable", modules: ["Comptabilité OHADA/SYSCOHADA", "Facturation", "Trésorerie", "Fiscalité locale"] },
-  { category: "Achats & Logistique", modules: ["Achats", "Stocks & Inventaire", "Logistique"] },
-  { category: "Ressources Humaines", modules: ["Employés", "Paie (CNPS, CGRAE)", "Congés & Absences", "Recrutement", "Évaluations"] },
-  { category: "Gestion de projet & Services", modules: ["Projets", "Feuilles de temps", "Helpdesk"] },
-  { category: "Production & Maintenance", modules: ["Fabrication (MRP)", "Maintenance (GMAO)", "PLM"] },
-  { category: "Marketing & Communication", modules: ["Email Marketing", "Automatisation marketing", "Enquêtes"] },
+  {
+    category: "Gestion commerciale",
+    modules: [
+      { label: "CRM", icon: "crm" },
+      { label: "Ventes", icon: "sale" },
+      { label: "Point de Vente (PoS)", icon: "point_of_sale" },
+      { label: "eCommerce", icon: "website_sale" },
+    ],
+  },
+  {
+    category: "Gestion financière & comptable",
+    modules: [
+      { label: "Comptabilité OHADA/SYSCOHADA", icon: "account_accountant" },
+      { label: "Facturation", icon: "account" },
+      { label: "Trésorerie", icon: "account_batch_payment" },
+      { label: "Fiscalité locale", icon: "l10n" },
+    ],
+  },
+  {
+    category: "Achats & Logistique",
+    modules: [
+      { label: "Achats", icon: "purchase" },
+      { label: "Stocks & Inventaire", icon: "stock" },
+      { label: "Logistique", icon: "stock_barcode" },
+    ],
+  },
+  {
+    category: "Ressources Humaines",
+    modules: [
+      { label: "Employés", icon: "hr" },
+      { label: "Paie (CNPS, CGRAE)", icon: "hr_payroll" },
+      { label: "Congés & Absences", icon: "hr_holidays" },
+      { label: "Recrutement", icon: "hr_recruitment" },
+      { label: "Évaluations", icon: "hr_appraisal" },
+    ],
+  },
+  {
+    category: "Gestion de projet & Services",
+    modules: [
+      { label: "Projets", icon: "project" },
+      { label: "Feuilles de temps", icon: "hr_timesheet" },
+      { label: "Helpdesk", icon: "helpdesk" },
+    ],
+  },
+  {
+    category: "Production & Maintenance",
+    modules: [
+      { label: "Fabrication (MRP)", icon: "mrp" },
+      { label: "Maintenance (GMAO)", icon: "mrp_maintenance" },
+      { label: "PLM", icon: "mrp_plm" },
+    ],
+  },
+  {
+    category: "Marketing & Communication",
+    modules: [
+      { label: "Email Marketing", icon: "mass_mailing" },
+      { label: "Automatisation marketing", icon: "marketing_automation" },
+      { label: "Enquêtes", icon: "survey" },
+    ],
+  },
 ];
 
 export const odooServiceBlocks = [

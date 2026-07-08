@@ -20,13 +20,15 @@ export default function OdooImplementation() {
   return (
     <section className="py-20 bg-[#E8F0FE]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
-          ■ Conseil & Implémentation
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+            ■ Conseil & Implémentation
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C] mb-4">Conseil & Cadrage</h2>
+          <p className="text-[#374151] max-w-2xl mx-auto">
+            Avant d&apos;écrire la moindre ligne de configuration, nous comprenons votre métier.
+          </p>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C] mb-4">Conseil & Cadrage</h2>
-        <p className="text-[#374151] mb-8 max-w-2xl">
-          Avant d&apos;écrire la moindre ligne de configuration, nous comprenons votre métier.
-        </p>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16" stagger={0.06}>
           {cadrageItems.map((item) => (
             <StaggerItem key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-[#D9E2EC]">
@@ -36,13 +38,15 @@ export default function OdooImplementation() {
           ))}
         </StaggerContainer>
 
-        <h3 className="text-xl sm:text-2xl font-black text-[#1A2B3C] mb-2">
-          Notre approche en 5 phases
-        </h3>
-        <p className="text-[#374151] mb-10 max-w-2xl">
-          Nous déployons Odoo selon une méthodologie structurée et éprouvée, inspirée des meilleures
-          pratiques internationales.
-        </p>
+        <div className="text-center mb-10">
+          <h3 className="text-xl sm:text-2xl font-black text-[#1A2B3C] mb-2">
+            Notre approche en 5 phases
+          </h3>
+          <p className="text-[#374151] max-w-2xl mx-auto">
+            Nous déployons Odoo selon une méthodologie structurée et éprouvée, inspirée des meilleures
+            pratiques internationales.
+          </p>
+        </div>
 
         <div className="relative">
           {/* Ligne : alignée à gauche sur mobile, centrée à partir de sm */}
