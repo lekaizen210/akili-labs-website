@@ -2,7 +2,7 @@
 
 import { StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import { iaStack } from "@/lib/ia-data";
-import { techIcons } from "@/lib/tech-icons";
+import { techIcons, techColors } from "@/lib/tech-icons";
 
 export default function IaStack() {
   return (
@@ -26,7 +26,10 @@ export default function IaStack() {
                   return (
                     <div key={t} className="group flex flex-col items-center gap-2 text-center">
                       {Icon && (
-                        <Icon className="w-7 h-7 text-[#1A2B3C] transition-colors group-hover:text-[#FF5500]" />
+                        <Icon
+                          className="w-7 h-7 transition-transform group-hover:scale-110"
+                          style={{ color: techColors[t] }}
+                        />
                       )}
                       <span className="text-[10px] font-medium text-[#374151] leading-tight">{t}</span>
                     </div>
