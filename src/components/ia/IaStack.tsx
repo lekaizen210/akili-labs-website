@@ -2,6 +2,7 @@
 
 import { StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import { iaStack } from "@/lib/ia-data";
+import { techIcons } from "@/lib/tech-icons";
 
 export default function IaStack() {
   return (
@@ -18,16 +19,19 @@ export default function IaStack() {
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4" stagger={0.06}>
           {iaStack.map((s) => (
             <StaggerItem key={s.category} className="bg-white rounded-xl p-5 border border-[#D9E2EC]">
-              <h3 className="text-sm font-bold text-[#1A2B3C] mb-3">{s.category}</h3>
-              <div className="flex flex-wrap gap-1.5">
-                {s.items.map((t) => (
-                  <span
-                    key={t}
-                    className="px-2.5 py-1 text-[11px] font-medium bg-[#E8F0FE] text-[#1A2B3C] rounded-md"
-                  >
-                    {t}
-                  </span>
-                ))}
+              <h3 className="text-sm font-bold text-[#1A2B3C] mb-4">{s.category}</h3>
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+                {s.items.map((t) => {
+                  const Icon = techIcons[t];
+                  return (
+                    <div key={t} className="group flex flex-col items-center gap-2 text-center">
+                      {Icon && (
+                        <Icon className="w-7 h-7 text-[#1A2B3C] transition-colors group-hover:text-[#FF5500]" />
+                      )}
+                      <span className="text-[10px] font-medium text-[#374151] leading-tight">{t}</span>
+                    </div>
+                  );
+                })}
               </div>
             </StaggerItem>
           ))}
