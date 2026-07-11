@@ -15,7 +15,7 @@ export interface FaqItem {
 
 const CATEGORIES = ["Tous", "ERP & OHADA", "Transformation Digitale", "Intelligence Artificielle", "DevSecOps", "AKILI Labs"] as const;
 
-const categoryColors: Record<string, string> = {
+export const categoryColors: Record<string, string> = {
   "ERP & OHADA":              "bg-blue-50 text-blue-700 border-blue-200",
   "Transformation Digitale":  "bg-purple-50 text-purple-700 border-purple-200",
   "Intelligence Artificielle":"bg-emerald-50 text-emerald-700 border-emerald-200",

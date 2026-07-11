@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, MessageCircle, BookOpen, Cpu, Shield, Building2 } from "lucide-react";
-import FaqAccordion, { type FaqItem } from "@/components/faq/FaqAccordion";
+import FaqAccordion, { type FaqItem, categoryColors } from "@/components/faq/FaqAccordion";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
+import { cn } from "@/lib/utils";
 
 const BASE_URL = "https://akililabs.com";
 
@@ -288,9 +289,12 @@ export default function FaqPage() {
                     : label === "Transformation Digitale" ? "transformation-digitale"
                     : "erp"
                   }`}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium text-ink bg-blue-light rounded-lg border border-line hover:border-navy hover:text-navy transition-colors"
+                  className={cn(
+                    "inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium rounded-lg border transition-opacity hover:opacity-75",
+                    categoryColors[label] ?? "bg-blue-light text-ink border-line"
+                  )}
                 >
-                  <span className="text-orange-dark" aria-hidden="true">{icon}</span>
+                  <span aria-hidden="true">{icon}</span>
                   {label}
                 </Link>
               ))}
