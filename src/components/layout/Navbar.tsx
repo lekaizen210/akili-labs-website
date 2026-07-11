@@ -49,7 +49,7 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-[background-color,box-shadow,border-color] duration-300",
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
           : "bg-transparent"
@@ -95,10 +95,14 @@ export default function Navbar() {
                   className="relative"
                   onMouseEnter={() => setExpertisesOpen(true)}
                   onMouseLeave={() => setExpertisesOpen(false)}
+                  onFocus={() => setExpertisesOpen(true)}
+                  onBlur={(e) => {
+                    if (!e.currentTarget.contains(e.relatedTarget)) setExpertisesOpen(false);
+                  }}
                 >
                   <button
                     className={cn(
-                      "flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
+                      "flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-[color,background-color] duration-200",
                       scrolled
                         ? active
                           ? "text-[#c94200] font-semibold bg-[#E8F0FE]"
@@ -121,6 +125,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -8, scale: 0.97 }}
                         transition={{ duration: 0.18, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        style={{ transformOrigin: "top left" }}
                         className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50"
                       >
                         {expertisesMenu.map((item) => (
@@ -146,7 +151,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   className={cn(
-                    "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
+                    "px-4 py-2 rounded-lg text-sm font-medium transition-[color,background-color] duration-200",
                     scrolled
                       ? active
                         ? "text-[#c94200] font-semibold bg-[#E8F0FE]"
@@ -166,7 +171,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/contact"
-              className="px-5 py-2.5 bg-[#FF5500] text-white text-sm font-semibold rounded-lg hover:bg-[#e04d00] transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-px"
+              className="px-5 py-2.5 bg-[#FF5500] text-white text-sm font-semibold rounded-lg hover:bg-[#e04d00] transition-[background-color,box-shadow,transform] duration-200 ease-out shadow-md hover:shadow-lg hover:-translate-y-px active:scale-[0.97] active:translate-y-0"
             >
               Discutons de votre projet →
             </Link>
@@ -289,7 +294,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="block w-full text-center px-5 py-3 bg-[#FF5500] text-white text-sm font-semibold rounded-lg"
+                  className="block w-full text-center px-5 py-3 bg-[#FF5500] text-white text-sm font-semibold rounded-lg transition-transform duration-150 ease-out active:scale-[0.97]"
                 >
                   Discutons de votre projet →
                 </Link>

@@ -46,7 +46,7 @@ export default function ExpertisesSection() {
                 >
                   <Link
                     href={`/expertises/${exp.slug}`}
-                    className="group relative flex flex-col h-full bg-white border border-[#D9E2EC] rounded-2xl p-8 hover:border-[#FF5500] hover:shadow-xl transition-all duration-300"
+                    className="group relative flex flex-col h-full bg-white border border-[#D9E2EC] rounded-2xl p-8 hover:border-[#FF5500] hover:shadow-xl transition-[box-shadow,border-color] duration-300"
                   >
                     {exp.featured && (
                       <span className="absolute top-4 right-4 px-2 py-0.5 bg-[#FF5500] text-white text-[10px] font-bold rounded-full uppercase tracking-wider">

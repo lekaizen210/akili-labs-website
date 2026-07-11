@@ -190,7 +190,7 @@ export default async function ExpertisePage({ params }: PageProps) {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
               >
                 Prendre contact <ArrowRight size={15} />
               </Link>
@@ -208,7 +208,7 @@ export default async function ExpertisePage({ params }: PageProps) {
               <Link
                 key={e.slug}
                 href={`/expertises/${e.slug}`}
-                className="group bg-white rounded-xl p-5 border border-[#D9E2EC] hover:border-[#FF5500] hover:shadow-md transition-all"
+                className="group bg-white rounded-xl p-5 border border-[#D9E2EC] hover:border-[#FF5500] hover:shadow-md transition-[box-shadow,border-color]"
               >
                 <h3 className="font-bold text-[#1A2B3C] group-hover:text-[#FF5500] transition-colors mb-1">
                   {e.title}

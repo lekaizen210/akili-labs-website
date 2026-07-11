@@ -123,7 +123,7 @@ export default function ContactPage() {
                 </p>
                 <button
                   onClick={() => { setSent(false); setForm({ name: "", company: "", email: "", phone: "", subject: "", message: "" }); }}
-                  className="px-5 py-2.5 bg-[#FF5500] text-white rounded-lg font-medium hover:bg-[#e04d00] transition-colors"
+                  className="px-5 py-2.5 bg-[#FF5500] text-white rounded-lg font-medium hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
                 >
                   Préparer un autre message
                 </button>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                         inputMode={f.inputMode}
                         value={form[f.name as keyof typeof form]}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-[#D9E2EC] rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-all bg-white"
+                        className="w-full px-4 py-3 border border-[#D9E2EC] rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-[box-shadow,border-color] bg-white"
                       />
                     </div>
                   ))}
@@ -162,7 +162,7 @@ export default function ContactPage() {
                     required
                     value={form.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-[#D9E2EC] rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-all bg-white"
+                    className="w-full px-4 py-3 border border-[#D9E2EC] rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-[box-shadow,border-color] bg-white"
                   >
                     <option value="">Sélectionnez un objet</option>
                     <option>Projet ERP / Odoo</option>
@@ -185,14 +185,14 @@ export default function ContactPage() {
                     value={form.message}
                     onChange={handleChange}
                     placeholder="Décrivez brièvement votre besoin, votre secteur d'activité et vos enjeux..."
-                    className="w-full px-4 py-3 border border-[#D9E2EC] rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-all resize-none bg-white"
+                    className="w-full px-4 py-3 border border-[#D9E2EC] rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-[box-shadow,border-color] resize-none bg-white"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="flex items-center gap-2 px-7 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] disabled:opacity-60 transition-all duration-200 shadow-md hover:shadow-lg"
+                  className="flex items-center gap-2 px-7 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] disabled:opacity-60 transition-[background-color,box-shadow,transform] duration-200 ease-out shadow-md hover:shadow-lg active:scale-[0.97] disabled:active:scale-100"
                 >
                   {loading ? (
                     <>

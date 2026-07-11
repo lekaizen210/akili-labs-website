@@ -52,7 +52,7 @@ export default function BlogSection() {
               >
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-[#D9E2EC] hover:shadow-xl hover:border-[#FF5500] transition-all duration-300"
+                  className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-[#D9E2EC] hover:shadow-xl hover:border-[#FF5500] transition-[box-shadow,border-color] duration-300"
                 >
                   <div className="h-1 bg-gradient-to-r from-[#FF5500] to-[#1A2B3C]" />
                   <div className="h-44 bg-gradient-to-br from-[#1A2B3C] to-[#243548] flex items-center justify-center overflow-hidden">

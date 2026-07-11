@@ -37,7 +37,7 @@ export default function BlogPage() {
           {blogPosts[0] && (
             <Link
               href={`/blog/${blogPosts[0].slug}`}
-              className="group block bg-[#E8F0FE] rounded-2xl overflow-hidden border border-[#D9E2EC] hover:shadow-xl hover:border-[#FF5500] transition-all duration-300 mb-10"
+              className="group block bg-[#E8F0FE] rounded-2xl overflow-hidden border border-[#D9E2EC] hover:shadow-xl hover:border-[#FF5500] transition-[box-shadow,border-color] duration-300 mb-10"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="h-48 lg:h-auto bg-gradient-to-br from-[#1A2B3C] to-[#243548] flex items-center justify-center">
@@ -76,7 +76,7 @@ export default function BlogPage() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group bg-white rounded-2xl overflow-hidden border border-[#D9E2EC] hover:shadow-xl hover:border-[#FF5500] transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white rounded-2xl overflow-hidden border border-[#D9E2EC] hover:shadow-xl hover:border-[#FF5500] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1"
               >
                 <div className="h-36 bg-gradient-to-br from-[#1A2B3C] to-[#243548] flex items-center justify-center">
                   <span className="text-[#FF5500] font-black text-4xl opacity-20">{post.tag}</span>
@@ -114,7 +114,7 @@ export default function BlogPage() {
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-colors whitespace-nowrap text-sm"
+                className="px-6 py-3 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] whitespace-nowrap text-sm"
               >
                 S&apos;abonner →
               </button>

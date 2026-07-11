@@ -53,7 +53,7 @@ export default function ReferencesSection() {
               >
                 <Link
                   href={`/references/${ref.slug}`}
-                  className="group flex flex-col h-full bg-white border border-[#D9E2EC] rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#FF5500] transition-all duration-300"
+                  className="group flex flex-col h-full bg-white border border-[#D9E2EC] rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#FF5500] transition-[box-shadow,border-color] duration-300"
                 >
                   <div className="h-1.5 bg-gradient-to-r from-[#1A2B3C] to-[#FF5500]" />
                   <div className="p-7 flex flex-col flex-1">

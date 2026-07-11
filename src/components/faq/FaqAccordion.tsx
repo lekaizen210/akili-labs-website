@@ -122,9 +122,9 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
         <AnimatePresence>
           {query && (
             <motion.button
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
+              exit={{ opacity: 0, scale: 0.92 }}
               transition={{ duration: 0.15 }}
               type="button"
               onClick={() => setQuery("")}
@@ -150,7 +150,7 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
             whileTap={{ scale: 0.96 }}
             transition={{ duration: 0.15 }}
             className={cn(
-              "px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5500]",
+              "px-4 py-2 rounded-xl text-sm font-medium transition-[color,background-color,border-color] duration-200 border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5500]",
               activeCategory === cat
                 ? "bg-[#1A2B3C] text-white border-[#1A2B3C] shadow-md"
                 : "bg-white text-[#374151] border-[#D9E2EC] hover:border-[#1A2B3C] hover:text-[#1A2B3C]"

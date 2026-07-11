@@ -224,7 +224,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 placeholder="votre@email.com"
                 className="flex-1 px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/40 border border-white/20 focus:outline-none focus:border-[#FF5500] text-sm"
               />
-              <button type="submit" className="px-5 py-3 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-colors text-sm">
+              <button type="submit" className="px-5 py-3 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] text-sm">
                 S&apos;abonner
               </button>
             </form>

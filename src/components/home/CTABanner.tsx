@@ -67,7 +67,7 @@ export default function CTABanner() {
           >
             <a
               href="/akili-labs-presentation.pdf"
-              className="flex items-center gap-2 px-8 py-4 text-white/80 hover:text-white border border-white/20 rounded-xl font-medium transition-all duration-200 hover:border-white/40"
+              className="flex items-center gap-2 px-8 py-4 text-white/80 hover:text-white border border-white/20 rounded-xl font-medium transition-[color,border-color] duration-200 hover:border-white/40"
             >
               <Download size={16} />
               Télécharger notre présentation

@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+/* R13 — hover: et group-hover: uniquement sur pointeurs fins avec survol réel
+   (souris/trackpad). Sans ça, un tap mobile déclenche le survol et le laisse
+   "collé" jusqu'au prochain tap ailleurs. */
+@custom-variant hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @slot;
+    }
+  }
+}
+
+@custom-variant group-hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:is(:where(.group):hover *) {
+      @slot;
+    }
+  }
+}
+
 :root {
   --navy: #1A2B3C;
   --orange: #FF5500;

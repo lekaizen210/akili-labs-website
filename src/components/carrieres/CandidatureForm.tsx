@@ -46,8 +46,8 @@ function ProgressBar({ step }: { step: 1 | 2 }) {
       </div>
       <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
         <div
-          className="h-full bg-[#FF5500] rounded-full transition-all duration-500"
-          style={{ width: step === 1 ? "50%" : "100%" }}
+          className="h-full w-full origin-left bg-[#FF5500] rounded-full transition-transform duration-500 ease-out"
+          style={{ transform: step === 1 ? "scaleX(0.5)" : "scaleX(1)" }}
         />
       </div>
       <div className="flex justify-between mt-2">
@@ -87,7 +87,7 @@ function Field({ label, required, error, children }: {
 }
 
 const inputCls = (error?: string) => cn(
-  "w-full px-4 py-3 border rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:border-transparent transition-all bg-white",
+  "w-full px-4 py-3 border rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:border-transparent transition-[box-shadow,border-color] bg-white",
   error ? "border-red-400 focus:ring-red-400" : "border-[#D9E2EC] focus:ring-[#FF5500]"
 );
 
@@ -209,7 +209,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
         </p>
         <button
           onClick={() => { setSent(false); setStep(1); setForm({ nom:"",email:"",telephone:"",linkedin:"",ville:"",disponibilite:"",poste:posteInitial??"",contrat:"",experience:"",motivation:"",cv:null,portfolio:"",salaire:"",source:"" }); }}
-          className="px-5 py-2.5 bg-[#FF5500] text-white rounded-xl font-medium hover:bg-[#e04d00] transition-colors"
+          className="px-5 py-2.5 bg-[#FF5500] text-white rounded-xl font-medium hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
         >
           Préparer une autre candidature
         </button>
@@ -283,7 +283,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
 
           <button
             type="button" onClick={handleNext}
-            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-colors shadow-md"
+            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] shadow-md"
           >
             Continuer <ArrowRight size={16} />
           </button>
@@ -435,13 +435,13 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           <div className="flex gap-3">
             <button
               type="button" onClick={() => { setStep(1); setErrors({}); }}
-              className="flex items-center gap-2 px-5 py-3.5 border border-[#D9E2EC] text-[#374151] font-medium rounded-xl hover:border-[#1A2B3C] hover:text-[#1A2B3C] transition-colors"
+              className="flex items-center gap-2 px-5 py-3.5 border border-[#D9E2EC] text-[#374151] font-medium rounded-xl hover:border-[#1A2B3C] hover:text-[#1A2B3C] transition-[color,border-color,transform] duration-150 ease-out active:scale-[0.97]"
             >
               <ArrowLeft size={15} /> Retour
             </button>
             <button
               type="submit" disabled={loading}
-              className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] disabled:opacity-60 transition-colors shadow-md"
+              className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] disabled:opacity-60 transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] disabled:active:scale-100 shadow-md"
             >
               {loading ? (
                 <><span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Envoi en cours…</>

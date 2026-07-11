@@ -63,7 +63,7 @@ export default function IaMethodology() {
 
               const card = (
                 <motion.div
-                  className="bg-white rounded-xl border border-[#D9E2EC] p-5 transition-all group-hover:-translate-y-0.5 group-hover:border-[#FF5500] group-hover:shadow-md"
+                  className="bg-white rounded-xl border border-[#D9E2EC] p-5 transition-[transform,box-shadow,border-color] group-hover:-translate-y-0.5 group-hover:border-[#FF5500] group-hover:shadow-md"
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewportOnce}

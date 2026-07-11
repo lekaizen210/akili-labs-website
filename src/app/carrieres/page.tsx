@@ -84,7 +84,7 @@ export default function CarrieresPage() {
                 <a
                   key={o.titre}
                   href="#formulaire"
-                  className="group flex items-center justify-between gap-4 bg-white rounded-xl p-5 border border-[#D9E2EC] hover:border-[#FF5500] hover:shadow-md transition-all"
+                  className="group flex items-center justify-between gap-4 bg-white rounded-xl p-5 border border-[#D9E2EC] hover:border-[#FF5500] hover:shadow-md transition-[box-shadow,border-color]"
                 >
                   <div className="flex items-start gap-3">
                     <div className="w-9 h-9 rounded-lg bg-[#E8F0FE] flex items-center justify-center shrink-0 mt-0.5">

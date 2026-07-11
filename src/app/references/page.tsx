@@ -32,7 +32,7 @@ export default function ReferencesPage() {
               <Link
                 key={ref.slug}
                 href={`/references/${ref.slug}`}
-                className="group bg-white border border-[#D9E2EC] rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#FF5500] transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white border border-[#D9E2EC] rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#FF5500] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1"
               >
                 <div className="h-1.5 bg-gradient-to-r from-[#1A2B3C] to-[#FF5500]" />
                 <div className="p-7">
@@ -80,7 +80,7 @@ export default function ReferencesPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-colors shadow-md"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] shadow-md"
             >
               Démarrer un projet avec nous →
             </Link>

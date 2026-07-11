@@ -37,7 +37,7 @@ export default function OdooHostingSupport() {
                 return (
                   <StaggerItem
                     key={h.mode}
-                    className="group bg-white rounded-2xl border border-[#D9E2EC] p-6 transition-all hover:-translate-y-0.5 hover:border-[#FF5500] hover:shadow-md"
+                    className="group bg-white rounded-2xl border border-[#D9E2EC] p-6 transition-[transform,box-shadow,border-color] hover:-translate-y-0.5 hover:border-[#FF5500] hover:shadow-md"
                   >
                     <div className="flex items-center gap-3 mb-3">
                       <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#E8F0FE] shrink-0 transition-colors group-hover:bg-[#1A2B3C]">

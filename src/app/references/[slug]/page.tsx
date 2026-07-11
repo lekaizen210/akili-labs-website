@@ -89,7 +89,7 @@ export default async function ReferencePage({ params }: PageProps) {
             <div className="bg-[#1A2B3C] rounded-2xl p-6 text-white">
               <h3 className="font-bold mb-2 text-sm">Un projet similaire ?</h3>
               <p className="text-white/60 text-xs mb-4">Nos experts sont disponibles pour vous accompagner.</p>
-              <Link href="/contact" className="block text-center px-4 py-2.5 bg-[#FF5500] text-white text-sm font-semibold rounded-xl hover:bg-[#e04d00] transition-colors">
+              <Link href="/contact" className="block text-center px-4 py-2.5 bg-[#FF5500] text-white text-sm font-semibold rounded-xl hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]">
                 Nous contacter →
               </Link>
             </div>
@@ -103,7 +103,7 @@ export default async function ReferencePage({ params }: PageProps) {
           <h2 className="text-lg font-bold text-[#1A2B3C] mb-6">Autres réalisations</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {references.filter((r) => r.slug !== slug).slice(0, 2).map((r) => (
-              <Link key={r.slug} href={`/references/${r.slug}`} className="group bg-white rounded-xl p-5 border border-[#D9E2EC] hover:border-[#FF5500] hover:shadow-md transition-all">
+              <Link key={r.slug} href={`/references/${r.slug}`} className="group bg-white rounded-xl p-5 border border-[#D9E2EC] hover:border-[#FF5500] hover:shadow-md transition-[box-shadow,border-color]">
                 <div className="text-xs font-semibold text-[#c94200] mb-1">{r.expertise}</div>
                 <div className="font-bold text-[#1A2B3C] text-sm group-hover:text-[#FF5500] transition-colors">{r.title}</div>
               </Link>
