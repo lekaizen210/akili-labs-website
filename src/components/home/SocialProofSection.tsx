@@ -7,12 +7,9 @@ import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-pr
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 const logos = [
-  { name: "BCEAO", abbr: "BCE" },
-  { name: "Orange CI", abbr: "ORA" },
-  { name: "COOPEC", abbr: "COO" },
-  { name: "SOTRA", abbr: "SOT" },
-  { name: "CNPS", abbr: "CNP" },
-  { name: "SIB", abbr: "SIB" },
+  { name: "3R Technologie" },
+  { name: "NDIST" },
+  { name: "Groupe 4R" },
 ];
 
 const testimonials = [
@@ -67,10 +64,9 @@ export default function SocialProofSection() {
               <StaggerItem key={logo.name}>
                 <motion.div
                   whileHover={{ scale: 1.06, transition: { duration: 0.18, ease } }}
-                  className="flex items-center gap-2 px-5 py-3 bg-[#E8F0FE] border border-[#D9E2EC] rounded-xl cursor-default"
+                  className="flex items-center px-6 py-3 bg-[#E8F0FE] border border-[#D9E2EC] rounded-xl cursor-default"
                 >
-                  <span className="text-xs font-black text-[#1A2B3C] tracking-wide">{logo.abbr}</span>
-                  <span className="text-xs font-medium text-[#374151]">{logo.name}</span>
+                  <span className="text-sm font-bold text-[#1A2B3C] tracking-wide">{logo.name}</span>
                 </motion.div>
               </StaggerItem>
             ))}
