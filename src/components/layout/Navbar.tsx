@@ -105,10 +105,10 @@ export default function Navbar() {
                       "flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-[color,background-color] duration-200",
                       scrolled
                         ? active
-                          ? "text-[#c94200] font-semibold bg-[#E8F0FE]"
-                          : "text-[#374151] hover:text-[#1A2B3C] hover:bg-[#E8F0FE]"
+                          ? "text-orange-dark font-semibold bg-blue-light"
+                          : "text-ink hover:text-navy hover:bg-blue-light"
                         : active
-                          ? "text-[#FF5500] font-semibold bg-white/10"
+                          ? "text-orange font-semibold bg-white/10"
                           : "text-white/90 hover:text-white hover:bg-white/10"
                     )}
                   >
@@ -135,8 +135,8 @@ export default function Navbar() {
                             className={cn(
                               "block px-4 py-2.5 text-sm transition-colors",
                               pathname === item.href
-                                ? "text-[#c94200] font-semibold bg-[#E8F0FE]"
-                                : "text-[#374151] hover:text-[#1A2B3C] hover:bg-[#E8F0FE]"
+                                ? "text-orange-dark font-semibold bg-blue-light"
+                                : "text-ink hover:text-navy hover:bg-blue-light"
                             )}
                           >
                             {item.label}
@@ -154,10 +154,10 @@ export default function Navbar() {
                     "px-4 py-2 rounded-lg text-sm font-medium transition-[color,background-color] duration-200",
                     scrolled
                       ? active
-                        ? "text-[#c94200] font-semibold bg-[#E8F0FE]"
-                        : "text-[#374151] hover:text-[#1A2B3C] hover:bg-[#E8F0FE]"
+                        ? "text-orange-dark font-semibold bg-blue-light"
+                        : "text-ink hover:text-navy hover:bg-blue-light"
                       : active
-                        ? "text-[#FF5500] font-semibold bg-white/10"
+                        ? "text-orange font-semibold bg-white/10"
                         : "text-white/90 hover:text-white hover:bg-white/10"
                   )}
                 >
@@ -171,7 +171,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/contact"
-              className="px-5 py-2.5 bg-[#FF5500] text-white text-sm font-semibold rounded-lg hover:bg-[#e04d00] transition-[background-color,box-shadow,transform] duration-200 ease-out shadow-md hover:shadow-lg hover:-translate-y-px active:scale-[0.97] active:translate-y-0"
+              className="px-5 py-2.5 bg-orange text-white text-sm font-semibold rounded-lg hover:bg-orange-hover transition-[background-color,box-shadow,transform] duration-200 ease-out shadow-md hover:shadow-lg hover:-translate-y-px active:scale-[0.97] active:translate-y-0"
             >
               Discutons de votre projet →
             </Link>
@@ -182,7 +182,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             className={cn(
               "lg:hidden p-2 rounded-lg transition-colors",
-              scrolled ? "text-[#1A2B3C]" : "text-white"
+              scrolled ? "text-navy" : "text-white"
             )}
             aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={mobileOpen}
@@ -243,8 +243,8 @@ export default function Navbar() {
                     className={cn(
                       "block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors",
                       active
-                        ? "text-[#c94200] font-semibold bg-[#E8F0FE]"
-                        : "text-[#374151] hover:text-[#1A2B3C] hover:bg-[#E8F0FE]"
+                        ? "text-orange-dark font-semibold bg-blue-light"
+                        : "text-ink hover:text-navy hover:bg-blue-light"
                     )}
                   >
                     {home.label}
@@ -263,8 +263,8 @@ export default function Navbar() {
                   className={cn(
                     "block px-4 py-2.5 text-sm rounded-lg transition-colors",
                     pathname === item.href
-                      ? "text-[#c94200] font-semibold bg-[#E8F0FE]"
-                      : "text-[#374151] hover:text-[#1A2B3C] hover:bg-[#E8F0FE]"
+                      ? "text-orange-dark font-semibold bg-blue-light"
+                      : "text-ink hover:text-navy hover:bg-blue-light"
                   )}
                 >
                   {item.label}
@@ -281,8 +281,8 @@ export default function Navbar() {
                       className={cn(
                         "block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors",
                         active
-                          ? "text-[#c94200] font-semibold bg-[#E8F0FE]"
-                          : "text-[#374151] hover:text-[#1A2B3C] hover:bg-[#E8F0FE]"
+                          ? "text-orange-dark font-semibold bg-blue-light"
+                          : "text-ink hover:text-navy hover:bg-blue-light"
                       )}
                     >
                       {link.label}
@@ -294,7 +294,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="block w-full text-center px-5 py-3 bg-[#FF5500] text-white text-sm font-semibold rounded-lg transition-transform duration-150 ease-out active:scale-[0.97]"
+                  className="block w-full text-center px-5 py-3 bg-orange text-white text-sm font-semibold rounded-lg transition-transform duration-150 ease-out active:scale-[0.97]"
                 >
                   Discutons de votre projet →
                 </Link>

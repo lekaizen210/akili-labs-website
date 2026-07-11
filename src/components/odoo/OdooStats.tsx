@@ -52,20 +52,20 @@ function KpiItem({ value, label }: { value: string; label: string }) {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.45, ease }}
-        className="text-4xl lg:text-5xl font-black text-[#FF5500] mb-1 tabular-nums"
+        className="text-4xl lg:text-5xl font-black text-orange mb-1 tabular-nums"
       >
         {inView ? animated : "0"}
       </motion.div>
-      <div className="text-sm font-medium text-[#374151]">{label}</div>
+      <div className="text-sm font-medium text-ink">{label}</div>
     </div>
   );
 }
 
 export default function OdooStats() {
   return (
-    <section className="py-16 bg-white border-y border-[#D9E2EC]">
+    <section className="py-16 bg-white border-y border-line">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-2xl sm:text-3xl font-black text-[#1A2B3C] mb-12">
+        <h2 className="text-center text-2xl sm:text-3xl font-black text-navy mb-12">
           AKILI Labs en chiffres
         </h2>
         <StaggerContainer className="grid grid-cols-2 lg:grid-cols-5 gap-8" stagger={0.12} delay={0.05}>

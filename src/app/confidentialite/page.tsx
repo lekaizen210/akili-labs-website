@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mb-10">
-      <h2 className="flex items-center gap-3 text-lg font-bold text-[#1A2B3C] mb-3">
-        <span className="w-2.5 h-2.5 bg-[#FF5500] shrink-0" aria-hidden="true" />
+      <h2 className="flex items-center gap-3 text-lg font-bold text-navy mb-3">
+        <span className="w-2.5 h-2.5 bg-orange shrink-0" aria-hidden="true" />
         {title}
       </h2>
-      <div className="text-sm text-[#374151] leading-relaxed space-y-3">{children}</div>
+      <div className="text-sm text-ink leading-relaxed space-y-3">{children}</div>
     </div>
   );
 }
@@ -33,8 +33,8 @@ export default function ConfidentialitePage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#FFF4E5] border-l-4 border-[#FF5500] rounded-r-xl p-5 mb-12 text-sm text-[#374151]">
-            <strong className="text-[#1A2B3C]">Document provisoire.</strong> Cette politique décrit les
+          <div className="bg-[#FFF4E5] border-l-4 border-orange rounded-r-xl p-5 mb-12 text-sm text-ink">
+            <strong className="text-navy">Document provisoire.</strong> Cette politique décrit les
             traitements réellement mis en œuvre par le site à ce jour. Elle doit être relue par un juriste
             pour confirmer sa conformité à la loi ivoirienne n° 2013-450 relative à la protection des
             données à caractère personnel et, le cas échéant, au RGPD, avant publication définitive.
@@ -44,7 +44,7 @@ export default function ConfidentialitePage() {
             <p>
               AKILI Labs, Abidjan, Côte d&apos;Ivoire (Zone UEMOA), est responsable du traitement des données
               collectées sur ce site. Contact :{" "}
-              <a href="mailto:contact@akililabs.io" className="text-[#c94200] hover:underline">
+              <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
                 contact@akililabs.io
               </a>
             </p>
@@ -53,7 +53,7 @@ export default function ConfidentialitePage() {
           <Section title="Données collectées">
             <p>
               Le formulaire de la page{" "}
-              <a href="/contact" className="text-[#c94200] hover:underline">Contact</a> collecte : nom
+              <a href="/contact" className="text-orange-dark hover:underline">Contact</a> collecte : nom
               complet, adresse email professionnelle, société (facultatif), téléphone (facultatif), objet et
               message. Aucune autre donnée personnelle n&apos;est collectée activement sur le reste du site.
             </p>
@@ -79,7 +79,7 @@ export default function ConfidentialitePage() {
               Conformément à la réglementation applicable, vous disposez d&apos;un droit d&apos;accès, de
               rectification, d&apos;opposition et de suppression de vos données personnelles. Pour exercer
               ces droits, contactez-nous à{" "}
-              <a href="mailto:contact@akililabs.io" className="text-[#c94200] hover:underline">
+              <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
                 contact@akililabs.io
               </a>
               .

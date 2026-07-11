@@ -9,13 +9,13 @@ const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function IaMethodology() {
   return (
-    <section className="py-20 bg-[#E8F0FE]">
+    <section className="py-20 bg-blue-light">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-6">
             ■ Notre Méthodologie IA
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C] mb-4">
+          <h2 className="text-2xl sm:text-3xl font-black text-navy mb-4">
             Une méthodologie éprouvée, du cadrage au monitoring
           </h2>
         </div>
@@ -29,14 +29,14 @@ export default function IaMethodology() {
               height={864}
               loading="lazy"
               sizes="(max-width: 1024px) 100vw, 1024px"
-              className="w-full h-auto rounded-2xl border border-[#D9E2EC] shadow-md"
+              className="w-full h-auto rounded-2xl border border-line shadow-md"
             />
           </div>
         </FadeUp>
 
         <div className="relative">
           <motion.div
-            className="absolute left-5 sm:left-1/2 top-6 bottom-6 w-0.5 bg-[#FF5500]/30 origin-top sm:-translate-x-1/2"
+            className="absolute left-5 sm:left-1/2 top-6 bottom-6 w-0.5 bg-orange/30 origin-top sm:-translate-x-1/2"
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
             viewport={viewportOnce}
@@ -52,7 +52,7 @@ export default function IaMethodology() {
 
               const circle = (
                 <motion.div
-                  className="relative z-10 shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#1A2B3C] text-white flex items-center justify-center font-black text-sm sm:text-base transition-colors group-hover:bg-[#FF5500]"
+                  className="relative z-10 shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-navy text-white flex items-center justify-center font-black text-sm sm:text-base transition-colors group-hover:bg-orange"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={viewportOnce}
@@ -64,19 +64,19 @@ export default function IaMethodology() {
 
               const card = (
                 <motion.div
-                  className="bg-white rounded-xl border border-[#D9E2EC] p-5 transition-[transform,box-shadow,border-color] group-hover:-translate-y-0.5 group-hover:border-[#FF5500] group-hover:shadow-md"
+                  className="bg-white rounded-xl border border-line p-5 transition-[transform,box-shadow,border-color] group-hover:-translate-y-0.5 group-hover:border-orange group-hover:shadow-md"
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewportOnce}
                   transition={{ duration: 0.5, delay: i * 0.12 + 0.05, ease }}
                 >
                   <div className="flex items-baseline justify-between gap-2 mb-1">
-                    <div className="font-bold text-[#1A2B3C]">{label}</div>
-                    <div className="text-xs font-semibold text-[#374151]/70 shrink-0">{p.duration}</div>
+                    <div className="font-bold text-navy">{label}</div>
+                    <div className="text-xs font-semibold text-ink/70 shrink-0">{p.duration}</div>
                   </div>
-                  <div className="text-sm text-[#374151] mb-3">{p.content}</div>
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#E8F0FE] text-xs font-semibold text-[#1A2B3C]">
-                    <span className="text-[#FF5500]">▸</span> Livrable : {p.livrable}
+                  <div className="text-sm text-ink mb-3">{p.content}</div>
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-light text-xs font-semibold text-navy">
+                    <span className="text-orange">▸</span> Livrable : {p.livrable}
                   </div>
                 </motion.div>
               );

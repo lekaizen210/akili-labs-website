@@ -20,7 +20,7 @@ const categoryColors: Record<string, string> = {
   "Transformation Digitale":  "bg-purple-50 text-purple-700 border-purple-200",
   "Intelligence Artificielle":"bg-emerald-50 text-emerald-700 border-emerald-200",
   "DevSecOps":                "bg-orange-50 text-orange-700 border-orange-200",
-  "AKILI Labs":               "bg-[#E8F0FE] text-[#1A2B3C] border-[#D9E2EC]",
+  "AKILI Labs":               "bg-blue-light text-navy border-line",
 };
 
 function AccordionItem({ item, index }: { item: FaqItem; index: number }) {
@@ -32,7 +32,7 @@ function AccordionItem({ item, index }: { item: FaqItem; index: number }) {
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, delay: index * 0.045, ease }}
-      className="border border-[#D9E2EC] rounded-2xl overflow-hidden bg-white"
+      className="border border-line rounded-2xl overflow-hidden bg-white"
     >
       <button
         type="button"
@@ -40,7 +40,7 @@ function AccordionItem({ item, index }: { item: FaqItem; index: number }) {
         aria-expanded={open}
         className={cn(
           "w-full flex items-start gap-4 px-6 py-5 text-left transition-colors duration-200",
-          open ? "bg-[#1A2B3C]" : "bg-white hover:bg-[#F7F9FF]"
+          open ? "bg-navy" : "bg-white hover:bg-[#F7F9FF]"
         )}
       >
         {/* Catégorie pill */}
@@ -56,7 +56,7 @@ function AccordionItem({ item, index }: { item: FaqItem; index: number }) {
         </span>
 
         {/* Question */}
-        <span className={cn("flex-1 text-sm sm:text-base font-semibold leading-snug pr-2", open ? "text-white" : "text-[#1A2B3C]")}>
+        <span className={cn("flex-1 text-sm sm:text-base font-semibold leading-snug pr-2", open ? "text-white" : "text-navy")}>
           {item.question}
         </span>
 
@@ -64,7 +64,7 @@ function AccordionItem({ item, index }: { item: FaqItem; index: number }) {
         <motion.span
           animate={{ rotate: open ? 180 : 0 }}
           transition={{ duration: 0.22, ease }}
-          className={cn("shrink-0 mt-0.5", open ? "text-white/70" : "text-[#374151]")}
+          className={cn("shrink-0 mt-0.5", open ? "text-white/70" : "text-ink")}
         >
           <ChevronDown size={18} aria-hidden="true" />
         </motion.span>
@@ -83,8 +83,8 @@ function AccordionItem({ item, index }: { item: FaqItem; index: number }) {
             }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-6 pt-4 border-t border-[#D9E2EC]">
-              <p className="text-[#374151] text-sm leading-relaxed">{item.answer}</p>
+            <div className="px-6 pb-6 pt-4 border-t border-line">
+              <p className="text-ink text-sm leading-relaxed">{item.answer}</p>
             </div>
           </motion.div>
         )}
@@ -117,7 +117,7 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Rechercher une question…"
           aria-label="Rechercher dans la FAQ"
-          className="w-full pl-11 pr-10 py-3.5 rounded-xl border border-[#D9E2EC] bg-white text-sm text-[#374151] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-shadow"
+          className="w-full pl-11 pr-10 py-3.5 rounded-xl border border-line bg-white text-sm text-ink placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange focus:border-transparent transition-shadow"
         />
         <AnimatePresence>
           {query && (
@@ -129,7 +129,7 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
               type="button"
               onClick={() => setQuery("")}
               aria-label="Effacer la recherche"
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 p-2 text-gray-500 hover:text-[#1A2B3C] transition-colors rounded-lg"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 p-2 text-gray-500 hover:text-navy transition-colors rounded-lg"
             >
               <X size={15} />
             </motion.button>
@@ -150,10 +150,10 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
             whileTap={{ scale: 0.96 }}
             transition={{ duration: 0.15 }}
             className={cn(
-              "px-4 py-2 rounded-xl text-sm font-medium transition-[color,background-color,border-color] duration-200 border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5500]",
+              "px-4 py-2 rounded-xl text-sm font-medium transition-[color,background-color,border-color] duration-200 border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange",
               activeCategory === cat
-                ? "bg-[#1A2B3C] text-white border-[#1A2B3C] shadow-md"
-                : "bg-white text-[#374151] border-[#D9E2EC] hover:border-[#1A2B3C] hover:text-[#1A2B3C]"
+                ? "bg-navy text-white border-navy shadow-md"
+                : "bg-white text-ink border-line hover:border-navy hover:text-navy"
             )}
           >
             {cat}
@@ -188,12 +188,12 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="text-center py-16 text-[#374151]"
+              className="text-center py-16 text-ink"
             >
               <p className="text-4xl mb-4" aria-hidden="true">🔍</p>
-              <p className="font-semibold text-[#1A2B3C] mb-1">Aucune question ne correspond</p>
+              <p className="font-semibold text-navy mb-1">Aucune question ne correspond</p>
               <p className="text-sm text-gray-500">Essayez un autre terme ou consultez nos{" "}
-                <a href="/contact" className="text-[#c94200] hover:underline">experts directement</a>.
+                <a href="/contact" className="text-orange-dark hover:underline">experts directement</a>.
               </p>
             </motion.div>
           ) : (

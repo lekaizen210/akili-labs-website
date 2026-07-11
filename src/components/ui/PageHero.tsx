@@ -16,7 +16,7 @@ interface PageHeroProps {
 
 export function HeroHighlight({ children }: { children: React.ReactNode }) {
   return (
-    <span className="relative inline-block text-[#FF5500]">
+    <span className="relative inline-block text-orange">
       {children}
       <svg
         className="absolute -bottom-1.5 left-0 w-full"
@@ -28,7 +28,7 @@ export function HeroHighlight({ children }: { children: React.ReactNode }) {
         <path
           d="M0 4 Q25 0 50 3.5 Q75 7 100 2.5"
           fill="none"
-          stroke="#FF5500"
+          stroke="var(--color-orange)"
           strokeWidth="2"
           opacity="0.5"
         />
@@ -49,7 +49,7 @@ export default function PageHero({
   const mx = align === "left" ? "" : "mx-auto";
 
   return (
-    <section className="pt-32 pb-20 bg-[#1A2B3C] relative overflow-hidden">
+    <section className="pt-32 pb-20 bg-navy relative overflow-hidden">
       <ParticleCanvas />
       <div
         className="absolute inset-0 pointer-events-none"
@@ -74,7 +74,7 @@ export default function PageHero({
           className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white/70 text-sm font-medium rounded-full mb-6 border border-white/10"
         >
           <motion.span
-            className="w-1.5 h-1.5 rounded-full bg-[#FF5500] inline-block"
+            className="w-1.5 h-1.5 rounded-full bg-orange inline-block"
             animate={{ scale: [1, 1.35, 1] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", repeatDelay: 0.5 }}
             aria-hidden="true"

@@ -17,7 +17,7 @@ const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function SectorsSection() {
   return (
-    <section className="py-24 bg-[#1A2B3C]" id="secteurs">
+    <section className="py-24 bg-navy" id="secteurs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -54,7 +54,7 @@ export default function SectorsSection() {
                 >
                   <motion.div
                     className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center"
-                    whileHover={{ backgroundColor: "#FF5500", transition: { duration: 0.2 } }}
+                    whileHover={{ backgroundColor: "var(--color-orange)", transition: { duration: 0.2 } }}
                   >
                     <Icon size={20} className="text-white" />
                   </motion.div>

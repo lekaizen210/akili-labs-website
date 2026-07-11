@@ -44,12 +44,12 @@ function ProgressBar({ step }: { step: 1 | 2 }) {
   return (
     <div className="mb-8">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-xs font-semibold text-[#374151]">Étape {step} sur 2</span>
+        <span className="text-xs font-semibold text-ink">Étape {step} sur 2</span>
         <span className="text-xs text-gray-500">{step === 1 ? "Informations personnelles" : "Votre candidature"}</span>
       </div>
       <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
         <div
-          className="h-full w-full origin-left bg-[#FF5500] rounded-full transition-transform duration-500 ease-out"
+          className="h-full w-full origin-left bg-orange rounded-full transition-transform duration-500 ease-out"
           style={{ transform: step === 1 ? "scaleX(0.5)" : "scaleX(1)" }}
         />
       </div>
@@ -61,11 +61,11 @@ function ProgressBar({ step }: { step: 1 | 2 }) {
           <div key={n} className="flex items-center gap-1.5">
             <div className={cn(
               "w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-colors",
-              step >= n ? "bg-[#FF5500] text-white" : "bg-gray-200 text-gray-600"
+              step >= n ? "bg-orange text-white" : "bg-gray-200 text-gray-600"
             )}>
               {step > n ? <CheckCircle size={12} /> : n}
             </div>
-            <span className={cn("text-xs font-medium", step >= n ? "text-[#1A2B3C]" : "text-gray-500")}>
+            <span className={cn("text-xs font-medium", step >= n ? "text-navy" : "text-gray-500")}>
               {label}
             </span>
           </div>
@@ -81,8 +81,8 @@ function Field({ id, label, required, error, children }: {
   const errorId = `${id}-error`;
   return (
     <div>
-      <label htmlFor={id} className="block text-sm font-medium text-[#374151] mb-1.5">
-        {label} {required && <span className="text-[#c94200]">*</span>}
+      <label htmlFor={id} className="block text-sm font-medium text-ink mb-1.5">
+        {label} {required && <span className="text-orange-dark">*</span>}
       </label>
       {children}
       {error && (
@@ -95,8 +95,8 @@ function Field({ id, label, required, error, children }: {
 }
 
 const inputCls = (error?: string) => cn(
-  "w-full px-4 py-3 border rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:border-transparent transition-[box-shadow,border-color] bg-white",
-  error ? "border-red-400 focus:ring-red-400" : "border-[#D9E2EC] focus:ring-[#FF5500]"
+  "w-full px-4 py-3 border rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:border-transparent transition-[box-shadow,border-color] bg-white",
+  error ? "border-red-400 focus:ring-red-400" : "border-line focus:ring-orange"
 );
 
 export default function CandidatureForm({ posteInitial }: { posteInitial?: string }) {
@@ -222,14 +222,14 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           >
             <CheckCircle size={32} className="text-green-500" />
           </motion.div>
-          <h2 className="text-2xl font-bold text-[#1A2B3C]">Email de candidature préparé</h2>
-          <p className="text-[#374151] max-w-sm">
+          <h2 className="text-2xl font-bold text-navy">Email de candidature préparé</h2>
+          <p className="text-ink max-w-sm">
             Merci <strong>{form.nom.split(" ")[0]}</strong>. Votre messagerie s&apos;ouvre avec les
             informations préremplies. Joignez votre CV PDF, puis envoyez l&apos;email.
           </p>
           <button
             onClick={() => { setSent(false); setStep(1); setForm({ nom:"",email:"",telephone:"",linkedin:"",ville:"",disponibilite:"",poste:posteInitial??"",contrat:"",experience:"",motivation:"",cv:null,portfolio:"",salaire:"",source:"" }); }}
-            className="px-5 py-2.5 bg-[#FF5500] text-white rounded-xl font-medium hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
+            className="px-5 py-2.5 bg-orange text-white rounded-xl font-medium hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
           >
             Préparer une autre candidature
           </button>
@@ -257,7 +257,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           transition={{ duration: 0.25, ease }}
           className="space-y-5"
         >
-          <h2 className="text-lg font-bold text-[#1A2B3C] mb-1">Vos informations personnelles</h2>
+          <h2 className="text-lg font-bold text-navy mb-1">Vos informations personnelles</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <Field id="nom" label="Nom complet" required error={errors.nom}>
               <input
@@ -330,7 +330,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
 
           <button
             type="button" onClick={handleNext}
-            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] shadow-md"
+            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] shadow-md"
           >
             Continuer <ArrowRight size={16} />
           </button>
@@ -347,7 +347,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           transition={{ duration: 0.25, ease }}
           className="space-y-5"
         >
-          <h2 className="text-lg font-bold text-[#1A2B3C] mb-1">Votre candidature</h2>
+          <h2 className="text-lg font-bold text-navy mb-1">Votre candidature</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <Field id="poste" label="Poste visé" required error={errors.poste}>
@@ -437,10 +437,10 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
                 "flex items-center gap-3 px-4 py-3 border-2 border-dashed rounded-xl cursor-pointer transition-colors",
                 errors.cv ? "border-red-400 bg-red-50" :
                 form.cv ? "border-green-400 bg-green-50" :
-                "border-[#D9E2EC] hover:border-[#FF5500] hover:bg-[#E8F0FE]"
+                "border-line hover:border-orange hover:bg-blue-light"
               )}
             >
-              <Upload size={18} className={form.cv ? "text-green-600" : "text-[#c94200]"} />
+              <Upload size={18} className={form.cv ? "text-green-600" : "text-orange-dark"} />
               <span className={cn("text-sm flex-1 truncate", form.cv ? "text-green-700 font-medium" : "text-gray-500")}>
                 {form.cv ? form.cv.name : "Sélectionnez votre CV pour reporter son nom dans l'email"}
               </span>
@@ -492,15 +492,15 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           </div>
 
           {/* Résumé de l'étape 1 */}
-          <div className="bg-[#E8F0FE] rounded-xl px-5 py-4 text-sm text-[#374151]">
+          <div className="bg-blue-light rounded-xl px-5 py-4 text-sm text-ink">
             <div className="flex items-center justify-between">
-              <span className="font-semibold text-[#1A2B3C]">Vos informations</span>
-              <button type="button" onClick={() => setStep(1)} className="text-xs text-[#c94200] hover:underline font-medium">
+              <span className="font-semibold text-navy">Vos informations</span>
+              <button type="button" onClick={() => setStep(1)} className="text-xs text-orange-dark hover:underline font-medium">
                 Modifier
               </button>
             </div>
             <div className="mt-1.5 text-xs text-gray-500 space-y-0.5">
-              <div className="font-medium text-[#1A2B3C]">{form.nom}</div>
+              <div className="font-medium text-navy">{form.nom}</div>
               <div>{form.email} · {form.telephone}</div>
               <div>{form.ville} · Disponible : {form.disponibilite}</div>
             </div>
@@ -510,13 +510,13 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           <div className="flex gap-3">
             <button
               type="button" onClick={() => { setStep(1); setErrors({}); }}
-              className="flex items-center gap-2 px-5 py-3.5 border border-[#D9E2EC] text-[#374151] font-medium rounded-xl hover:border-[#1A2B3C] hover:text-[#1A2B3C] transition-[color,border-color,transform] duration-150 ease-out active:scale-[0.97]"
+              className="flex items-center gap-2 px-5 py-3.5 border border-line text-ink font-medium rounded-xl hover:border-navy hover:text-navy transition-[color,border-color,transform] duration-150 ease-out active:scale-[0.97]"
             >
               <ArrowLeft size={15} /> Retour
             </button>
             <button
               type="submit" disabled={loading}
-              className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] disabled:opacity-60 transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] disabled:active:scale-100 shadow-md"
+              className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover disabled:opacity-60 transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] disabled:active:scale-100 shadow-md"
             >
               {loading ? (
                 <><span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Envoi en cours…</>

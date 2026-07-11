@@ -61,46 +61,46 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Sidebar */}
           <div className="lg:col-span-1 space-y-6">
-            <div className="bg-[#E8F0FE] rounded-2xl p-7">
-              <h2 className="text-lg font-bold text-[#1A2B3C] mb-5">Nos coordonnées</h2>
-              <div className="space-y-4 text-sm text-[#374151]">
+            <div className="bg-blue-light rounded-2xl p-7">
+              <h2 className="text-lg font-bold text-navy mb-5">Nos coordonnées</h2>
+              <div className="space-y-4 text-sm text-ink">
                 <div className="flex items-start gap-3">
-                  <MapPin size={16} className="text-[#FF5500] mt-0.5 shrink-0" />
+                  <MapPin size={16} className="text-orange mt-0.5 shrink-0" />
                   <div>
-                    <div className="font-semibold text-[#1A2B3C]">Siège social</div>
+                    <div className="font-semibold text-navy">Siège social</div>
                     <div>Abidjan, Côte d&apos;Ivoire<br />Zone UEMOA</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail size={16} className="text-[#FF5500] mt-0.5 shrink-0" />
+                  <Mail size={16} className="text-orange mt-0.5 shrink-0" />
                   <div>
-                    <div className="font-semibold text-[#1A2B3C]">Email</div>
-                    <a href="mailto:contact@akililabs.io" className="text-[#c94200] hover:underline">
+                    <div className="font-semibold text-navy">Email</div>
+                    <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
                       contact@akililabs.io
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Phone size={16} className="text-[#FF5500] mt-0.5 shrink-0" />
+                  <Phone size={16} className="text-orange mt-0.5 shrink-0" />
                   <div>
-                    <div className="font-semibold text-[#1A2B3C]">Téléphone</div>
+                    <div className="font-semibold text-navy">Téléphone</div>
                     <span>+225 07 00 00 00 00</span>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Clock size={16} className="text-[#FF5500] mt-0.5 shrink-0" />
+                  <Clock size={16} className="text-orange mt-0.5 shrink-0" />
                   <div>
-                    <div className="font-semibold text-[#1A2B3C]">Disponibilité</div>
+                    <div className="font-semibold text-navy">Disponibilité</div>
                     <div>Lun–Ven : 08h00–18h00 GMT</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-[#1A2B3C] rounded-2xl p-7 text-white">
+            <div className="bg-navy rounded-2xl p-7 text-white">
               <h3 className="font-bold mb-2">Réponse rapide garantie</h3>
               <p className="text-sm text-white/70 mb-4">
-                Nos experts répondent dans les <strong className="text-[#FF5500]">24h ouvrées</strong>.
+                Nos experts répondent dans les <strong className="text-orange">24h ouvrées</strong>.
                 La consultation initiale est entièrement gratuite.
               </p>
               <div className="flex flex-col gap-2 text-xs text-white/60">
@@ -132,14 +132,14 @@ export default function ContactPage() {
                   >
                     <CheckCircle size={32} className="text-green-500" />
                   </motion.div>
-                  <h2 className="text-2xl font-bold text-[#1A2B3C]">Email préparé</h2>
-                  <p className="text-[#374151] max-w-sm">
+                  <h2 className="text-2xl font-bold text-navy">Email préparé</h2>
+                  <p className="text-ink max-w-sm">
                     Votre messagerie s&apos;ouvre avec un message prérempli. Vérifiez-le puis envoyez-le
                     à contact@akililabs.io.
                   </p>
                   <button
                     onClick={() => { setSent(false); setForm({ name: "", company: "", email: "", phone: "", subject: "", message: "" }); }}
-                    className="px-5 py-2.5 bg-[#FF5500] text-white rounded-lg font-medium hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
+                    className="px-5 py-2.5 bg-orange text-white rounded-lg font-medium hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
                   >
                     Préparer un autre message
                   </button>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                   onSubmit={handleSubmit}
                   className="space-y-5"
                 >
-                <h2 className="text-xl font-bold text-[#1A2B3C] mb-6">Parlez-nous de votre projet</h2>
+                <h2 className="text-xl font-bold text-navy mb-6">Parlez-nous de votre projet</h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {[
@@ -164,7 +164,7 @@ export default function ContactPage() {
                     { name: "phone", label: "Téléphone", type: "tel", required: false, autoComplete: "tel", inputMode: "tel" as const, maxLength: 30 },
                   ].map((f) => (
                     <div key={f.name}>
-                      <label htmlFor={f.name} className="block text-sm font-medium text-[#374151] mb-1.5">{f.label}</label>
+                      <label htmlFor={f.name} className="block text-sm font-medium text-ink mb-1.5">{f.label}</label>
                       <input
                         id={f.name}
                         type={f.type}
@@ -175,21 +175,21 @@ export default function ContactPage() {
                         maxLength={f.maxLength}
                         value={form[f.name as keyof typeof form]}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-[#D9E2EC] rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-[box-shadow,border-color] bg-white"
+                        className="w-full px-4 py-3 border border-line rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-orange focus:border-transparent transition-[box-shadow,border-color] bg-white"
                       />
                     </div>
                   ))}
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-[#374151] mb-1.5">Objet *</label>
+                  <label htmlFor="subject" className="block text-sm font-medium text-ink mb-1.5">Objet *</label>
                   <select
                     id="subject"
                     name="subject"
                     required
                     value={form.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-[#D9E2EC] rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-[box-shadow,border-color] bg-white"
+                    className="w-full px-4 py-3 border border-line rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-orange focus:border-transparent transition-[box-shadow,border-color] bg-white"
                   >
                     <option value="">Sélectionnez un objet</option>
                     <option>Projet ERP / Odoo</option>
@@ -204,7 +204,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-[#374151] mb-1.5">Votre message *</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-ink mb-1.5">Votre message *</label>
                   <textarea
                     id="message"
                     name="message"
@@ -214,7 +214,7 @@ export default function ContactPage() {
                     value={form.message}
                     onChange={handleChange}
                     placeholder="Décrivez brièvement votre besoin, votre secteur d'activité et vos enjeux..."
-                    className="w-full px-4 py-3 border border-[#D9E2EC] rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-[box-shadow,border-color] resize-none bg-white"
+                    className="w-full px-4 py-3 border border-line rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-orange focus:border-transparent transition-[box-shadow,border-color] resize-none bg-white"
                   />
                   <p className="mt-1 text-xs text-gray-500 text-right tabular-nums">{form.message.length} / 2000</p>
                 </div>
@@ -222,7 +222,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="flex items-center gap-2 px-7 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] disabled:opacity-60 transition-[background-color,box-shadow,transform] duration-200 ease-out shadow-md hover:shadow-lg active:scale-[0.97] disabled:active:scale-100"
+                  className="flex items-center gap-2 px-7 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover disabled:opacity-60 transition-[background-color,box-shadow,transform] duration-200 ease-out shadow-md hover:shadow-lg active:scale-[0.97] disabled:active:scale-100"
                 >
                   {loading ? (
                     <>

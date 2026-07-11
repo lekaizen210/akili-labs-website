@@ -8,7 +8,7 @@ const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function NotFoundContent() {
   return (
-    <div className="min-h-screen bg-[#1A2B3C] flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-navy flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
       {/* Gradient de fond */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -21,7 +21,7 @@ export default function NotFoundContent() {
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{ opacity: 0.15, scale: 1 }}
         transition={{ duration: 0.6, ease }}
-        className="text-[#FF5500] font-black text-[10rem] leading-none select-none mb-0"
+        className="text-orange font-black text-[10rem] leading-none select-none mb-0"
         aria-hidden="true"
       >
         404
@@ -50,7 +50,7 @@ export default function NotFoundContent() {
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
             <Link
               href="/"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-colors shadow-lg"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-colors shadow-lg"
             >
               <Home size={16} />
               Retour à l&apos;accueil

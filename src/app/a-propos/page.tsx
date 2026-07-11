@@ -45,12 +45,12 @@ export default function AboutPage() {
           delay={0.1}
         >
           <StaggerItem>
-            <div className="bg-[#E8F0FE] rounded-2xl p-8 border-l-4 border-[#1A2B3C] h-full">
-              <div className="text-[#c94200] font-bold text-sm uppercase tracking-wider mb-3">Notre vision</div>
-              <h2 className="text-xl font-black text-[#1A2B3C] mb-4">
+            <div className="bg-blue-light rounded-2xl p-8 border-l-4 border-navy h-full">
+              <div className="text-orange-dark font-bold text-sm uppercase tracking-wider mb-3">Notre vision</div>
+              <h2 className="text-xl font-black text-navy mb-4">
                 Acteur de référence de la transformation digitale en Afrique
               </h2>
-              <p className="text-[#374151] leading-relaxed">
+              <p className="text-ink leading-relaxed">
                 Être reconnu comme le partenaire de confiance des organisations qui souhaitent
                 moderniser leurs systèmes d&apos;information, en proposant des solutions innovantes,
                 sécurisées et parfaitement adaptées aux enjeux métiers africains.
@@ -58,8 +58,8 @@ export default function AboutPage() {
             </div>
           </StaggerItem>
           <StaggerItem>
-            <div className="bg-[#1A2B3C] rounded-2xl p-8 border-l-4 border-[#FF5500] h-full">
-              <div className="text-[#FF5500] font-bold text-sm uppercase tracking-wider mb-3">Notre mission</div>
+            <div className="bg-navy rounded-2xl p-8 border-l-4 border-orange h-full">
+              <div className="text-orange font-bold text-sm uppercase tracking-wider mb-3">Notre mission</div>
               <h2 className="text-xl font-black text-white mb-4">
                 Accompagner, intégrer, innover
               </h2>
@@ -74,13 +74,13 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-[#E8F0FE]">
+      <section className="py-20 bg-blue-light">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-[#1A2B3C] text-sm font-medium rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-4">
               ■ Nos valeurs
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1A2B3C]">
+            <h2 className="text-3xl sm:text-4xl font-black text-navy">
               Ce qui nous définit
             </h2>
           </FadeUp>
@@ -95,13 +95,13 @@ export default function AboutPage() {
                 <StaggerItem key={v.name}>
                   <motion.div
                     whileHover={{ y: -4, boxShadow: "0 8px 24px rgba(26,43,60,0.1)", transition: { duration: 0.2, ease } }}
-                    className="bg-white rounded-2xl p-6 text-center border border-[#D9E2EC] cursor-default"
+                    className="bg-white rounded-2xl p-6 text-center border border-line cursor-default"
                   >
-                    <div className="w-11 h-11 rounded-xl bg-[#E8F0FE] flex items-center justify-center mx-auto mb-4">
-                      <Icon size={20} className="text-[#FF5500]" />
+                    <div className="w-11 h-11 rounded-xl bg-blue-light flex items-center justify-center mx-auto mb-4">
+                      <Icon size={20} className="text-orange" />
                     </div>
-                    <h3 className="font-bold text-[#1A2B3C] mb-1.5">{v.name}</h3>
-                    <p className="text-xs text-[#374151] leading-relaxed">{v.desc}</p>
+                    <h3 className="font-bold text-navy mb-1.5">{v.name}</h3>
+                    <p className="text-xs text-ink leading-relaxed">{v.desc}</p>
                   </motion.div>
                 </StaggerItem>
               );
@@ -114,13 +114,13 @@ export default function AboutPage() {
       <section className="py-24 bg-white" id="equipe">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-4">
               ■ Notre équipe
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1A2B3C] mb-4">
+            <h2 className="text-3xl sm:text-4xl font-black text-navy mb-4">
               Les experts derrière AKILI Labs
             </h2>
-            <p className="text-[#374151] max-w-xl mx-auto">
+            <p className="text-ink max-w-xl mx-auto">
               Une équipe pluridisciplinaire, passionnée par la technologie et engagée pour
               la transformation digitale de l&apos;Afrique.
             </p>
@@ -134,8 +134,8 @@ export default function AboutPage() {
             {team.map((membre) => (
               <StaggerItem key={membre.nom}>
                 <motion.div
-                  whileHover={{ y: -6, borderColor: "#FF5500", boxShadow: "0 16px 40px rgba(26,43,60,0.12)", transition: { duration: 0.22, ease } }}
-                  className="group bg-white border border-[#D9E2EC] rounded-2xl p-7 flex flex-col h-full"
+                  whileHover={{ y: -6, borderColor: "var(--color-orange)", boxShadow: "0 16px 40px rgba(26,43,60,0.12)", transition: { duration: 0.22, ease } }}
+                  className="group bg-white border border-line rounded-2xl p-7 flex flex-col h-full"
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <motion.div
@@ -147,14 +147,14 @@ export default function AboutPage() {
                       {membre.initiales}
                     </motion.div>
                     <div className="min-w-0">
-                      <h3 className="font-bold text-[#1A2B3C] leading-tight">{membre.nom}</h3>
-                      <p className="text-xs font-semibold text-[#c94200] mt-0.5 leading-tight">
+                      <h3 className="font-bold text-navy leading-tight">{membre.nom}</h3>
+                      <p className="text-xs font-semibold text-orange-dark mt-0.5 leading-tight">
                         {membre.titre}
                       </p>
                     </div>
                   </div>
 
-                  <p className="text-sm text-[#374151] leading-relaxed flex-1 mb-5">
+                  <p className="text-sm text-ink leading-relaxed flex-1 mb-5">
                     {membre.bio}
                   </p>
 
@@ -162,7 +162,7 @@ export default function AboutPage() {
                     {membre.expertises.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 text-xs font-medium bg-[#E8F0FE] text-[#1A2B3C] rounded-lg border border-[#D9E2EC]"
+                        className="px-2.5 py-1 text-xs font-medium bg-blue-light text-navy rounded-lg border border-line"
                       >
                         {tag}
                       </span>
@@ -174,7 +174,7 @@ export default function AboutPage() {
                       href={membre.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-xs font-semibold text-[#374151] hover:text-[#FF5500] transition-colors"
+                      className="inline-flex items-center gap-2 text-xs font-semibold text-ink hover:text-orange transition-colors"
                       aria-label={`LinkedIn de ${membre.nom}`}
                     >
                       <Linkedin size={14} />
@@ -183,7 +183,7 @@ export default function AboutPage() {
                   ) : (
                     <Link
                       href="/contact"
-                      className="inline-flex items-center gap-2 text-xs font-semibold text-[#374151] hover:text-[#FF5500] transition-colors"
+                      className="inline-flex items-center gap-2 text-xs font-semibold text-ink hover:text-orange transition-colors"
                     >
                       Contacter ce pôle →
                     </Link>
@@ -195,19 +195,19 @@ export default function AboutPage() {
 
           {/* Rejoindre CTA */}
           <FadeUp className="mt-14" delay={0.1}>
-            <div className="bg-[#E8F0FE] rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 border border-[#D9E2EC]">
+            <div className="bg-blue-light rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 border border-line">
               <div>
-                <h3 className="text-lg font-black text-[#1A2B3C] mb-1">
+                <h3 className="text-lg font-black text-navy mb-1">
                   Vous souhaitez rejoindre l&apos;équipe ?
                 </h3>
-                <p className="text-sm text-[#374151]">
+                <p className="text-sm text-ink">
                   Nous recrutons des talents passionnés par la tech et l&apos;impact en Afrique.
                 </p>
               </div>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
                 <Link
                   href="/carrieres"
-                  className="shrink-0 px-6 py-3 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-colors shadow-md whitespace-nowrap"
+                  className="shrink-0 px-6 py-3 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-colors shadow-md whitespace-nowrap"
                 >
                   Voir nos offres →
                 </Link>
@@ -249,13 +249,13 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#1A2B3C]">
+      <section className="py-16 bg-navy">
         <FadeUp className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-black text-white mb-3">Rejoignez l&apos;aventure AKILI Labs</h2>
           <p className="text-white/70 mb-7">Nous recrutons des talents passionnés par la tech et l&apos;impact en Afrique.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
-              <Link href="/carrieres" className="px-6 py-3 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-colors">
+              <Link href="/carrieres" className="px-6 py-3 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-colors">
                 Voir les offres →
               </Link>
             </motion.div>

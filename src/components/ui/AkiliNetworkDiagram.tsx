@@ -42,7 +42,7 @@ export default function AkiliNetworkDiagram() {
           y1={hub.y}
           x2={n.x}
           y2={n.y}
-          stroke="#1A2B3C"
+          stroke="var(--color-navy)"
           strokeWidth={1}
           strokeOpacity={0.25}
           initial={{ pathLength: 0, opacity: 0 }}
@@ -56,7 +56,7 @@ export default function AkiliNetworkDiagram() {
         cx={hub.x}
         cy={hub.y}
         r={22}
-        fill="#1A2B3C"
+        fill="var(--color-navy)"
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         viewport={viewportOnce}
@@ -72,7 +72,7 @@ export default function AkiliNetworkDiagram() {
             cx={n.x}
             cy={n.y}
             r={9}
-            fill="#FF5500"
+            fill="var(--color-orange)"
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={viewportOnce}
@@ -83,14 +83,14 @@ export default function AkiliNetworkDiagram() {
             cy={n.y}
             r={9}
             fill="none"
-            stroke="#FF5500"
+            stroke="var(--color-orange)"
             strokeWidth={1.5}
             initial={{ scale: 1, opacity: 0.6 }}
             animate={{ scale: [1, 2.1, 1], opacity: [0.5, 0, 0.5] }}
             transition={{ duration: 2.6, repeat: Infinity, ease: "easeOut", delay: 1 + i * 0.35 }}
           />
           <title>{n.name}</title>
-          <text x={n.x} y={n.y + 20} textAnchor="middle" fontSize={9} fontWeight={600} fill="#374151">
+          <text x={n.x} y={n.y + 20} textAnchor="middle" fontSize={9} fontWeight={600} fill="var(--color-ink)">
             {n.code}
           </text>
         </g>

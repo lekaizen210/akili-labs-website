@@ -170,7 +170,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-[#1A2B3C]">
+      <section className="pt-32 pb-16 bg-navy">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-sm text-white/65 mb-8" aria-label="Fil d'Ariane">
             <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
@@ -179,7 +179,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <ChevronRight size={14} />
             <span className="text-white/80 truncate max-w-xs">{post.title}</span>
           </nav>
-          <span className="px-3 py-1 bg-[#FF5500] text-white text-xs font-semibold rounded-full mb-5 inline-block">
+          <span className="px-3 py-1 bg-orange text-white text-xs font-semibold rounded-full mb-5 inline-block">
             {post.category}
           </span>
           <h1 className="text-3xl sm:text-4xl font-black text-white mb-5 leading-tight">{post.title}</h1>
@@ -199,23 +199,23 @@ export default async function BlogPostPage({ params }: PageProps) {
       {/* Content */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none text-[#374151] leading-relaxed">
-            <p className="text-xl text-[#374151] leading-relaxed mb-8 font-medium">{post.excerpt}</p>
-            <div className="bg-[#E8F0FE] border-l-4 border-[#FF5500] rounded-r-xl p-6 my-8">
-              <p className="font-semibold text-[#1A2B3C] m-0">
+          <div className="prose prose-lg max-w-none text-ink leading-relaxed">
+            <p className="text-xl text-ink leading-relaxed mb-8 font-medium">{post.excerpt}</p>
+            <div className="bg-blue-light border-l-4 border-orange rounded-r-xl p-6 my-8">
+              <p className="font-semibold text-navy m-0">
                 {article?.intro}
               </p>
             </div>
             {article?.sections.map((section) => (
               <section key={section.title} className="mb-8">
-                <h2 className="text-2xl font-black text-[#1A2B3C] mb-3">{section.title}</h2>
+                <h2 className="text-2xl font-black text-navy mb-3">{section.title}</h2>
                 <p>{section.text}</p>
               </section>
             ))}
           </div>
 
           {/* Newsletter CTA */}
-          <div className="mt-12 bg-[#1A2B3C] rounded-2xl p-8 text-center">
+          <div className="mt-12 bg-navy rounded-2xl p-8 text-center">
             <h2 className="text-xl font-black text-white mb-2">Ne ratez pas nos prochains articles</h2>
             <p className="text-white/60 text-sm mb-5">Inscrivez-vous à notre newsletter : 2 articles par mois.</p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto">
@@ -226,16 +226,16 @@ export default async function BlogPostPage({ params }: PageProps) {
                 name="email"
                 autoComplete="email"
                 placeholder="votre@email.com"
-                className="flex-1 px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/40 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent text-sm"
+                className="flex-1 px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/40 border border-white/20 focus:outline-none focus:ring-2 focus:ring-orange focus:border-transparent text-sm"
               />
-              <button type="submit" className="px-5 py-3 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] text-sm">
+              <button type="submit" className="px-5 py-3 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] text-sm">
                 S&apos;abonner
               </button>
             </form>
           </div>
 
           <div className="mt-8">
-            <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-medium text-[#374151] hover:text-[#FF5500] transition-colors">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-medium text-ink hover:text-orange transition-colors">
               <ArrowLeft size={14} />
               Retour au blog
             </Link>

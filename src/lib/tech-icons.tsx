@@ -76,7 +76,7 @@ export const techIcons: Record<string, ElementType> = {
   "On-premise Linux": SiLinux,
 };
 
-const NEUTRAL = "#1A2B3C";
+const NEUTRAL = "var(--color-navy)";
 
 export const techColors: Record<string, string> = {
   Python: "#3776AB",

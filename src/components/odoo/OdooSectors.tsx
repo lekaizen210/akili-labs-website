@@ -33,10 +33,10 @@ export default function OdooSectors() {
     <section className="py-20 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-6">
             ■ Secteurs d&apos;intervention
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C]">
+          <h2 className="text-2xl sm:text-3xl font-black text-navy">
             Odoo pour tous les secteurs
           </h2>
         </div>
@@ -46,17 +46,17 @@ export default function OdooSectors() {
             return (
               <StaggerItem
                 key={s.sector}
-                className="group bg-[#E8F0FE] rounded-xl p-5 border border-[#D9E2EC] transition-colors hover:border-[#FF5500]"
+                className="group bg-blue-light rounded-xl p-5 border border-line transition-colors hover:border-orange"
               >
                 <div className="flex items-center gap-2.5 mb-3">
-                  <Icon size={18} className="text-[#1A2B3C] transition-colors group-hover:text-[#FF5500] shrink-0" aria-hidden="true" />
-                  <h3 className="text-sm font-bold text-[#1A2B3C]">{s.sector}</h3>
+                  <Icon size={18} className="text-navy transition-colors group-hover:text-orange shrink-0" aria-hidden="true" />
+                  <h3 className="text-sm font-bold text-navy">{s.sector}</h3>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   {s.useCases.map((u, ui) => (
                     <div key={u.label} className="flex flex-col items-center gap-1 w-16 text-center">
                       <motion.div
-                        className="w-9 h-9 bg-white rounded-lg border border-[#D9E2EC] flex items-center justify-center shrink-0 transition-colors group-hover:border-[#FF5500]/40"
+                        className="w-9 h-9 bg-white rounded-lg border border-line flex items-center justify-center shrink-0 transition-colors group-hover:border-orange/40"
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
                         viewport={viewportOnce}
@@ -70,7 +70,7 @@ export default function OdooSectors() {
                           loading="lazy"
                         />
                       </motion.div>
-                      <span className="text-[10px] leading-tight text-[#374151] font-medium">{u.label}</span>
+                      <span className="text-[10px] leading-tight text-ink font-medium">{u.label}</span>
                     </div>
                   ))}
                 </div>

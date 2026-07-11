@@ -14,11 +14,11 @@ export default function HeroSection() {
     { label: "Kubernetes",    bg: "#326CE5", text: "#FFFFFF" },
     { label: "Next.js",       bg: "#000000", text: "#FFFFFF" },
     { label: "PostgreSQL",    bg: "#336791", text: "#FFFFFF" },
-    { label: "AWS",           bg: "#FF9900", text: "#1A2B3C" },
+    { label: "AWS",           bg: "#FF9900", text: "var(--color-navy)" },
   ];
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#1A2B3C]">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-navy">
       {/* Canvas particles */}
       <ParticleCanvas count={60} />
 
@@ -39,7 +39,7 @@ export default function HeroSection() {
           transition={{ duration: 0.35, delay: 0.05, ease }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 text-sm text-white/80 mb-10"
         >
-          <span className="text-[#FF5500]" aria-hidden="true">■</span>
+          <span className="text-orange" aria-hidden="true">■</span>
           Acteur de référence de la transformation digitale en Afrique
         </motion.div>
 
@@ -63,7 +63,7 @@ export default function HeroSection() {
             className="block font-black leading-tight tracking-tight text-5xl sm:text-6xl lg:text-7xl"
           >
             <span className="text-white">Transformation</span>{" "}
-            <span className="relative inline-block text-[#FF5500]">
+            <span className="relative inline-block text-orange">
               Digitale
               <svg
                 className="absolute -bottom-2 left-0 w-full"
@@ -75,7 +75,7 @@ export default function HeroSection() {
                 <path
                   d="M0 5 Q25 0 50 4 Q75 8 100 3"
                   fill="none"
-                  stroke="#FF5500"
+                  stroke="var(--color-orange)"
                   strokeWidth="2"
                   opacity="0.6"
                 />
@@ -126,7 +126,7 @@ export default function HeroSection() {
           >
             <Link
               href="/contact"
-              className="group flex items-center gap-2 px-7 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-colors duration-200 shadow-lg shadow-orange-900/30"
+              className="group flex items-center gap-2 px-7 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-colors duration-200 shadow-lg shadow-orange-900/30"
             >
               Demander une consultation gratuite
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

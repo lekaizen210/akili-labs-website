@@ -20,7 +20,7 @@ const testimonials = [
     company: "Groupe industriel",
     location: "Abidjan, Côte d'Ivoire",
     initiales: "KA",
-    couleur: "#1A2B3C",
+    couleur: "var(--color-navy)",
     stars: 5,
   },
   {
@@ -30,7 +30,7 @@ const testimonials = [
     company: "Institution financière UEMOA",
     location: "Dakar, Sénégal",
     initiales: "FD",
-    couleur: "#c94200",
+    couleur: "var(--color-orange-dark)",
     stars: 5,
   },
   {
@@ -40,14 +40,14 @@ const testimonials = [
     company: "Entreprise de services",
     location: "Abidjan, Côte d'Ivoire",
     initiales: "BM",
-    couleur: "#374151",
+    couleur: "var(--color-ink)",
     stars: 5,
   },
 ];
 
 export default function SocialProofSection() {
   return (
-    <section className="py-20 bg-white border-t border-[#D9E2EC]">
+    <section className="py-20 bg-white border-t border-line">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Logos strip */}
@@ -64,9 +64,9 @@ export default function SocialProofSection() {
               <StaggerItem key={logo.name}>
                 <motion.div
                   whileHover={{ scale: 1.06, transition: { duration: 0.18, ease } }}
-                  className="flex items-center px-6 py-3 bg-[#E8F0FE] border border-[#D9E2EC] rounded-xl cursor-default"
+                  className="flex items-center px-6 py-3 bg-blue-light border border-line rounded-xl cursor-default"
                 >
-                  <span className="text-sm font-bold text-[#1A2B3C] tracking-wide">{logo.name}</span>
+                  <span className="text-sm font-bold text-navy tracking-wide">{logo.name}</span>
                 </motion.div>
               </StaggerItem>
             ))}
@@ -75,10 +75,10 @@ export default function SocialProofSection() {
 
         {/* Section header */}
         <FadeUp className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-4">
             ■ Témoignages clients
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C]">
+          <h2 className="text-2xl sm:text-3xl font-black text-navy">
             Ce que disent nos clients
           </h2>
         </FadeUp>
@@ -93,25 +93,25 @@ export default function SocialProofSection() {
             <StaggerItem key={t.name + t.company}>
               <motion.div
                 whileHover={{ y: -4, boxShadow: "0 12px 32px rgba(26,43,60,0.09)", transition: { duration: 0.22, ease } }}
-                className="bg-white border border-[#D9E2EC] rounded-2xl p-7 flex flex-col gap-4 h-full"
+                className="bg-white border border-line rounded-2xl p-7 flex flex-col gap-4 h-full"
               >
                 {/* Stars */}
                 <div className="flex items-center gap-0.5" aria-label={`${t.stars} étoiles sur 5`}>
                   {Array.from({ length: t.stars }).map((_, i) => (
-                    <Star key={i} size={14} className="text-[#FF5500] fill-[#FF5500]" aria-hidden="true" />
+                    <Star key={i} size={14} className="text-orange fill-orange" aria-hidden="true" />
                   ))}
                 </div>
 
                 {/* Quote */}
                 <div className="flex-1">
-                  <Quote size={18} className="text-[#c94200] mb-3 shrink-0" aria-hidden="true" />
-                  <p className="text-sm text-[#374151] leading-relaxed italic">
+                  <Quote size={18} className="text-orange-dark mb-3 shrink-0" aria-hidden="true" />
+                  <p className="text-sm text-ink leading-relaxed italic">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
 
                 {/* Author */}
-                <div className="flex items-center gap-3 pt-4 border-t border-[#D9E2EC]">
+                <div className="flex items-center gap-3 pt-4 border-t border-line">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-sm"
                     style={{ background: t.couleur }}
@@ -120,8 +120,8 @@ export default function SocialProofSection() {
                     {t.initiales}
                   </div>
                   <div className="min-w-0">
-                    <div className="text-sm font-bold text-[#1A2B3C] leading-tight">{t.name}</div>
-                    <div className="text-xs text-[#374151] leading-tight">{t.role}</div>
+                    <div className="text-sm font-bold text-navy leading-tight">{t.name}</div>
+                    <div className="text-xs text-ink leading-tight">{t.role}</div>
                     <div className="text-xs text-gray-500 truncate">{t.company} · {t.location}</div>
                   </div>
                 </div>

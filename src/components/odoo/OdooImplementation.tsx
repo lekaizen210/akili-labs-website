@@ -18,31 +18,31 @@ const cadrageItems = [
 
 export default function OdooImplementation() {
   return (
-    <section className="py-20 bg-[#E8F0FE]">
+    <section className="py-20 bg-blue-light">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-6">
             ■ Conseil & Implémentation
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C] mb-4">Conseil & Cadrage</h2>
-          <p className="text-[#374151] max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-black text-navy mb-4">Conseil & Cadrage</h2>
+          <p className="text-ink max-w-2xl mx-auto">
             Avant d&apos;écrire la moindre ligne de configuration, nous comprenons votre métier.
           </p>
         </div>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16" stagger={0.06}>
           {cadrageItems.map((item) => (
-            <StaggerItem key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-[#D9E2EC]">
-              <CheckCircle size={18} className="text-[#FF5500] mt-0.5 shrink-0" aria-hidden="true" />
-              <span className="text-sm text-[#374151]">{item}</span>
+            <StaggerItem key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-line">
+              <CheckCircle size={18} className="text-orange mt-0.5 shrink-0" aria-hidden="true" />
+              <span className="text-sm text-ink">{item}</span>
             </StaggerItem>
           ))}
         </StaggerContainer>
 
         <div className="text-center mb-10">
-          <h3 className="text-xl sm:text-2xl font-black text-[#1A2B3C] mb-2">
+          <h3 className="text-xl sm:text-2xl font-black text-navy mb-2">
             Notre approche en 5 phases
           </h3>
-          <p className="text-[#374151] max-w-2xl mx-auto">
+          <p className="text-ink max-w-2xl mx-auto">
             Nous déployons Odoo selon une méthodologie structurée et éprouvée, inspirée des meilleures
             pratiques internationales.
           </p>
@@ -51,7 +51,7 @@ export default function OdooImplementation() {
         <div className="relative">
           {/* Ligne : alignée à gauche sur mobile, centrée à partir de sm */}
           <motion.div
-            className="absolute left-5 sm:left-1/2 top-6 bottom-6 w-0.5 bg-[#FF5500]/30 origin-top sm:-translate-x-1/2"
+            className="absolute left-5 sm:left-1/2 top-6 bottom-6 w-0.5 bg-orange/30 origin-top sm:-translate-x-1/2"
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
             viewport={viewportOnce}
@@ -67,7 +67,7 @@ export default function OdooImplementation() {
 
               const circle = (
                 <motion.div
-                  className="relative z-10 shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#1A2B3C] text-white flex items-center justify-center font-black text-sm sm:text-base transition-colors group-hover:bg-[#FF5500]"
+                  className="relative z-10 shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-navy text-white flex items-center justify-center font-black text-sm sm:text-base transition-colors group-hover:bg-orange"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={viewportOnce}
@@ -79,16 +79,16 @@ export default function OdooImplementation() {
 
               const card = (
                 <motion.div
-                  className="bg-white rounded-xl border border-[#D9E2EC] p-5 transition-[box-shadow,border-color] group-hover:-translate-y-0.5 group-hover:border-[#FF5500] group-hover:shadow-md"
+                  className="bg-white rounded-xl border border-line p-5 transition-[box-shadow,border-color] group-hover:-translate-y-0.5 group-hover:border-orange group-hover:shadow-md"
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={viewportOnce}
                   transition={{ duration: 0.5, delay: i * 0.12 + 0.05, ease }}
                 >
-                  <div className="font-bold text-[#1A2B3C] mb-1">{label}</div>
-                  <div className="text-sm text-[#374151] mb-3">{p.content}</div>
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#E8F0FE] text-xs font-semibold text-[#1A2B3C]">
-                    <span className="text-[#FF5500]">▸</span> Livrable : {p.livrable}
+                  <div className="font-bold text-navy mb-1">{label}</div>
+                  <div className="text-sm text-ink mb-3">{p.content}</div>
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-light text-xs font-semibold text-navy">
+                    <span className="text-orange">▸</span> Livrable : {p.livrable}
                   </div>
                 </motion.div>
               );

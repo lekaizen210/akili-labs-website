@@ -16,22 +16,22 @@ const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function BlogSection() {
   return (
-    <section className="py-24 bg-[#E8F0FE]" id="blog">
+    <section className="py-24 bg-blue-light" id="blog">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <FadeUp className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-[#1A2B3C] text-sm font-medium rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-4">
               ■ Veille & Insights
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1A2B3C]">
+            <h2 className="text-3xl sm:text-4xl font-black text-navy">
               Nos insights technologiques
             </h2>
           </div>
           <Link
             href="/blog"
-            className="flex items-center gap-2 text-sm font-semibold text-[#c94200] hover:underline whitespace-nowrap"
+            className="flex items-center gap-2 text-sm font-semibold text-orange-dark hover:underline whitespace-nowrap"
           >
             Accéder au blog <ArrowRight size={14} />
           </Link>
@@ -52,12 +52,12 @@ export default function BlogSection() {
               >
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-[#D9E2EC] hover:shadow-xl hover:border-[#FF5500] transition-[box-shadow,border-color] duration-300"
+                  className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-line hover:shadow-xl hover:border-orange transition-[box-shadow,border-color] duration-300"
                 >
-                  <div className="h-1 bg-gradient-to-r from-[#FF5500] to-[#1A2B3C]" />
-                  <div className="h-44 bg-gradient-to-br from-[#1A2B3C] to-[#243548] flex items-center justify-center overflow-hidden">
+                  <div className="h-1 bg-gradient-to-r from-orange to-navy" />
+                  <div className="h-44 bg-gradient-to-br from-navy to-[#243548] flex items-center justify-center overflow-hidden">
                     <motion.span
-                      className="text-[#FF5500] font-black text-4xl opacity-30"
+                      className="text-orange font-black text-4xl opacity-30"
                       whileHover={{ scale: 1.15, opacity: 0.5, transition: { duration: 0.3 } }}
                     >
                       {post.tag}
@@ -69,10 +69,10 @@ export default function BlogSection() {
                         {post.category}
                       </span>
                     </div>
-                    <h3 className="text-base font-bold text-[#1A2B3C] mb-2 leading-snug group-hover:text-[#FF5500] transition-colors flex-1">
+                    <h3 className="text-base font-bold text-navy mb-2 leading-snug group-hover:text-orange transition-colors flex-1">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-[#374151] leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-sm text-ink leading-relaxed mb-4 line-clamp-2">
                       {post.excerpt}
                     </p>
                     <div className="flex items-center gap-4 text-xs text-gray-500">

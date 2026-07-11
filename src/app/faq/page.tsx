@@ -228,7 +228,7 @@ export default function FaqPage() {
               key={s.label}
               className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/8 border border-white/10 text-white/70 text-xs font-medium"
             >
-              <span className="text-[#FF5500]" aria-hidden="true">{s.icon}</span>
+              <span className="text-orange" aria-hidden="true">{s.icon}</span>
               <span>{s.label}</span>
               <span className="text-white/40">·</span>
               <span className="font-bold text-white">{s.count}</span>
@@ -238,36 +238,36 @@ export default function FaqPage() {
       </PageHero>
 
       {/* ── Contenu FAQ ───────────────────────────────── */}
-      <section className="py-20 bg-[#E8F0FE]">
+      <section className="py-20 bg-blue-light">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <FaqAccordion faqs={faqs} />
         </div>
       </section>
 
       {/* ── CTA — Question sans réponse ? ─────────────── */}
-      <section className="py-20 bg-white border-t border-[#D9E2EC]">
+      <section className="py-20 bg-white border-t border-line">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#E8F0FE] mb-6" aria-hidden="true">
-            <MessageCircle size={24} className="text-[#1A2B3C]" />
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-light mb-6" aria-hidden="true">
+            <MessageCircle size={24} className="text-navy" />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C] mb-3">
+          <h2 className="text-2xl sm:text-3xl font-black text-navy mb-3">
             Votre question n&apos;est pas listée ?
           </h2>
-          <p className="text-[#374151] mb-8 leading-relaxed">
+          <p className="text-ink mb-8 leading-relaxed">
             Nos experts répondent sous <strong>24h ouvrées</strong>.{" "}
             La consultation initiale est entièrement gratuite et sans engagement.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 px-7 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] shadow-lg shadow-orange-900/20"
+              className="group inline-flex items-center gap-2 px-7 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] shadow-lg shadow-orange-900/20"
             >
               Poser une question
               <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </Link>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 px-7 py-4 border border-[#D9E2EC] text-[#374151] font-semibold rounded-xl hover:border-[#1A2B3C] hover:text-[#1A2B3C] transition-colors"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-line text-ink font-semibold rounded-xl hover:border-navy hover:text-navy transition-colors"
             >
               <BookOpen size={17} aria-hidden="true" />
               Lire nos articles
@@ -275,7 +275,7 @@ export default function FaqPage() {
           </div>
 
           {/* Catégories rapides */}
-          <div className="mt-12 pt-8 border-t border-[#D9E2EC]">
+          <div className="mt-12 pt-8 border-t border-line">
             <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">Accès direct par thème</p>
             <div className="flex flex-wrap justify-center gap-2">
               {Object.entries(categoryIcons).map(([label, icon]) => (
@@ -288,9 +288,9 @@ export default function FaqPage() {
                     : label === "Transformation Digitale" ? "transformation-digitale"
                     : "erp"
                   }`}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium text-[#374151] bg-[#E8F0FE] rounded-lg border border-[#D9E2EC] hover:border-[#1A2B3C] hover:text-[#1A2B3C] transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium text-ink bg-blue-light rounded-lg border border-line hover:border-navy hover:text-navy transition-colors"
                 >
-                  <span className="text-[#c94200]" aria-hidden="true">{icon}</span>
+                  <span className="text-orange-dark" aria-hidden="true">{icon}</span>
                   {label}
                 </Link>
               ))}

@@ -27,7 +27,7 @@ export default function OdooHubDiagram() {
           y1={n.y}
           x2={hub.x}
           y2={hub.y}
-          stroke="#FF5500"
+          stroke="var(--color-orange)"
           strokeWidth={1.5}
           strokeOpacity={0.45}
           initial={{ pathLength: 0, opacity: 0 }}
@@ -41,7 +41,7 @@ export default function OdooHubDiagram() {
         cx={hub.x}
         cy={hub.y}
         r={34}
-        fill="#FF5500"
+        fill="var(--color-orange)"
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         viewport={viewportOnce}
@@ -69,7 +69,7 @@ export default function OdooHubDiagram() {
             cy={n.y}
             r={24}
             fill="white"
-            stroke="#D9E2EC"
+            stroke="var(--color-line)"
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={viewportOnce}
@@ -82,7 +82,7 @@ export default function OdooHubDiagram() {
             textAnchor="middle"
             fontSize={11}
             fontWeight={600}
-            fill="#374151"
+            fill="var(--color-ink)"
           >
             {n.label}
           </text>

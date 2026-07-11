@@ -96,7 +96,7 @@ export default async function ExpertisePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-[#1A2B3C] relative overflow-hidden">
+      <section className="pt-32 pb-20 bg-navy relative overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{ background: "radial-gradient(ellipse at 80% 50%, rgba(255,85,0,0.10) 0%, transparent 60%)" }}
@@ -112,7 +112,7 @@ export default async function ExpertisePage({ params }: PageProps) {
             <span className="text-white font-medium">{exp.title}</span>
           </nav>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white text-sm font-semibold rounded-full mb-5 border border-white/20">
-            <span className="text-[#FF5500]">■</span> {exp.subtitle}
+            <span className="text-orange">■</span> {exp.subtitle}
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6">
             {exp.title}
@@ -127,70 +127,70 @@ export default async function ExpertisePage({ params }: PageProps) {
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-6">
               ■ Nos prestations
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C] mb-8">
+            <h2 className="text-2xl sm:text-3xl font-black text-navy mb-8">
               Ce que nous proposons
             </h2>
             <ul className="space-y-4">
               {exp.services.map((service) => (
                 <li key={service} className="flex items-start gap-3">
-                  <CheckCircle size={18} className="text-[#FF5500] mt-0.5 shrink-0" />
-                  <span className="text-[#374151]">{service}</span>
+                  <CheckCircle size={18} className="text-orange mt-0.5 shrink-0" />
+                  <span className="text-ink">{service}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="space-y-5">
             {/* Why us */}
-            <div className="bg-[#E8F0FE] rounded-2xl p-7">
-              <h3 className="font-bold text-[#1A2B3C] mb-3">Pourquoi AKILI Labs ?</h3>
-              <div className="space-y-2 text-sm text-[#374151]">
-                <div className="flex items-center gap-2"><span className="text-[#FF5500] font-bold">→</span> Expertise prouvée sur la zone UEMOA</div>
-                <div className="flex items-center gap-2"><span className="text-[#FF5500] font-bold">→</span> Connaissance des contraintes réglementaires OHADA</div>
-                <div className="flex items-center gap-2"><span className="text-[#FF5500] font-bold">→</span> Équipe certifiée et formée aux dernières technologies</div>
-                <div className="flex items-center gap-2"><span className="text-[#FF5500] font-bold">→</span> Support et accompagnement post-déploiement</div>
-                <div className="flex items-center gap-2"><span className="text-[#FF5500] font-bold">→</span> Méthodologie éprouvée sur 50+ projets</div>
+            <div className="bg-blue-light rounded-2xl p-7">
+              <h3 className="font-bold text-navy mb-3">Pourquoi AKILI Labs ?</h3>
+              <div className="space-y-2 text-sm text-ink">
+                <div className="flex items-center gap-2"><span className="text-orange font-bold">→</span> Expertise prouvée sur la zone UEMOA</div>
+                <div className="flex items-center gap-2"><span className="text-orange font-bold">→</span> Connaissance des contraintes réglementaires OHADA</div>
+                <div className="flex items-center gap-2"><span className="text-orange font-bold">→</span> Équipe certifiée et formée aux dernières technologies</div>
+                <div className="flex items-center gap-2"><span className="text-orange font-bold">→</span> Support et accompagnement post-déploiement</div>
+                <div className="flex items-center gap-2"><span className="text-orange font-bold">→</span> Méthodologie éprouvée sur 50+ projets</div>
               </div>
             </div>
             {exp.slug === "erp" && (
-              <div className="bg-white border border-[#D9E2EC] rounded-2xl p-7 text-center">
-                <h3 className="font-bold text-[#1A2B3C] mb-2">Vous utilisez ou envisagez Odoo ?</h3>
-                <p className="text-sm text-[#374151] mb-5">
+              <div className="bg-white border border-line rounded-2xl p-7 text-center">
+                <h3 className="font-bold text-navy mb-2">Vous utilisez ou envisagez Odoo ?</h3>
+                <p className="text-sm text-ink mb-5">
                   Découvrez notre expertise Odoo en détail : modules, méthodologie, hébergement et support.
                 </p>
                 <Link
                   href="/expertises/odoo"
-                  className="inline-flex items-center gap-2 px-6 py-3 border border-[#1A2B3C] text-[#1A2B3C] font-semibold rounded-xl hover:bg-[#1A2B3C] hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-navy text-navy font-semibold rounded-xl hover:bg-navy hover:text-white transition-colors"
                 >
                   Explorer l&apos;expertise Odoo <ArrowRight size={15} />
                 </Link>
               </div>
             )}
             {exp.slug === "intelligence-artificielle" && (
-              <div className="bg-white border border-[#D9E2EC] rounded-2xl p-7 text-center">
-                <h3 className="font-bold text-[#1A2B3C] mb-2">Un projet d&apos;IA en tête ?</h3>
-                <p className="text-sm text-[#374151] mb-5">
+              <div className="bg-white border border-line rounded-2xl p-7 text-center">
+                <h3 className="font-bold text-navy mb-2">Un projet d&apos;IA en tête ?</h3>
+                <p className="text-sm text-ink mb-5">
                   Découvrez notre expertise IA en détail : domaines, cas d&apos;usage par secteur et méthodologie.
                 </p>
                 <Link
                   href="/expertises/intelligence-artificielle"
-                  className="inline-flex items-center gap-2 px-6 py-3 border border-[#1A2B3C] text-[#1A2B3C] font-semibold rounded-xl hover:bg-[#1A2B3C] hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-navy text-navy font-semibold rounded-xl hover:bg-navy hover:text-white transition-colors"
                 >
                   Explorer l&apos;expertise IA <ArrowRight size={15} />
                 </Link>
               </div>
             )}
             {/* CTA */}
-            <div className="bg-[#1A2B3C] rounded-2xl p-7 text-center">
+            <div className="bg-navy rounded-2xl p-7 text-center">
               <h3 className="font-bold text-white mb-2">Discutons de votre besoin</h3>
               <p className="text-white/60 text-sm mb-5">
                 Consultation initiale gratuite, réponse sous 24h
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
               >
                 Prendre contact <ArrowRight size={15} />
               </Link>
@@ -200,20 +200,20 @@ export default async function ExpertisePage({ params }: PageProps) {
       </section>
 
       {/* Other expertises */}
-      <section className="py-16 bg-[#E8F0FE]">
+      <section className="py-16 bg-blue-light">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#1A2B3C] mb-8">Nos autres expertises</h2>
+          <h2 className="text-xl font-bold text-navy mb-8">Nos autres expertises</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {others.map((e) => (
               <Link
                 key={e.slug}
                 href={`/expertises/${e.slug}`}
-                className="group bg-white rounded-xl p-5 border border-[#D9E2EC] hover:border-[#FF5500] hover:shadow-md transition-[box-shadow,border-color]"
+                className="group bg-white rounded-xl p-5 border border-line hover:border-orange hover:shadow-md transition-[box-shadow,border-color]"
               >
-                <h3 className="font-bold text-[#1A2B3C] group-hover:text-[#FF5500] transition-colors mb-1">
+                <h3 className="font-bold text-navy group-hover:text-orange transition-colors mb-1">
                   {e.title}
                 </h3>
-                <p className="text-xs text-[#374151] line-clamp-2">{e.description}</p>
+                <p className="text-xs text-ink line-clamp-2">{e.description}</p>
               </Link>
             ))}
           </div>

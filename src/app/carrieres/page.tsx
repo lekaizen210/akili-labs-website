@@ -50,19 +50,19 @@ export default function CarrieresPage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-4">
               ■ Pourquoi nous rejoindre
             </div>
-            <h2 className="text-3xl font-black text-[#1A2B3C]">Ce que nous offrons</h2>
+            <h2 className="text-3xl font-black text-navy">Ce que nous offrons</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {avantages.map((a) => (
-              <div key={a.title} className="bg-[#E8F0FE] rounded-2xl p-6 border border-[#D9E2EC]">
+              <div key={a.title} className="bg-blue-light rounded-2xl p-6 border border-line">
                 <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center mb-4">
-                  <a.icon size={20} className="text-[#FF5500]" />
+                  <a.icon size={20} className="text-orange" />
                 </div>
-                <h3 className="font-bold text-[#1A2B3C] mb-2">{a.title}</h3>
-                <p className="text-sm text-[#374151] leading-relaxed">{a.desc}</p>
+                <h3 className="font-bold text-navy mb-2">{a.title}</h3>
+                <p className="text-sm text-ink leading-relaxed">{a.desc}</p>
               </div>
             ))}
           </div>
@@ -70,28 +70,28 @@ export default function CarrieresPage() {
       </section>
 
       {/* Offres + Formulaire */}
-      <section className="py-20 bg-[#E8F0FE]" id="offres">
+      <section className="py-20 bg-blue-light" id="offres">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
 
           {/* Liste des offres */}
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-6">
               ■ Postes ouverts
             </div>
-            <h2 className="text-2xl font-black text-[#1A2B3C] mb-6">Nos offres d&apos;emploi</h2>
+            <h2 className="text-2xl font-black text-navy mb-6">Nos offres d&apos;emploi</h2>
             <div className="space-y-3">
               {offres.map((o) => (
                 <a
                   key={o.titre}
                   href="#formulaire"
-                  className="group flex items-center justify-between gap-4 bg-white rounded-xl p-5 border border-[#D9E2EC] hover:border-[#FF5500] hover:shadow-md transition-[box-shadow,border-color]"
+                  className="group flex items-center justify-between gap-4 bg-white rounded-xl p-5 border border-line hover:border-orange hover:shadow-md transition-[box-shadow,border-color]"
                 >
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-[#E8F0FE] flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-[#1A2B3C] text-xs font-black">AL</span>
+                    <div className="w-9 h-9 rounded-lg bg-blue-light flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="text-navy text-xs font-black">AL</span>
                     </div>
                     <div>
-                      <div className="font-bold text-[#1A2B3C] group-hover:text-[#FF5500] transition-colors text-sm">
+                      <div className="font-bold text-navy group-hover:text-orange transition-colors text-sm">
                         {o.titre}
                       </div>
                       <div className="flex items-center gap-2 mt-1 flex-wrap">
@@ -105,26 +105,26 @@ export default function CarrieresPage() {
                       </div>
                     </div>
                   </div>
-                  <span className="shrink-0 text-xs font-semibold text-[#c94200] group-hover:underline whitespace-nowrap">
+                  <span className="shrink-0 text-xs font-semibold text-orange-dark group-hover:underline whitespace-nowrap">
                     Postuler →
                   </span>
                 </a>
               ))}
             </div>
 
-            <div className="mt-6 p-5 bg-[#1A2B3C] rounded-2xl text-white">
+            <div className="mt-6 p-5 bg-navy rounded-2xl text-white">
               <p className="text-sm font-semibold mb-1">Votre profil ne correspond à aucun poste ?</p>
               <p className="text-xs text-white/60 mb-3">
                 Envoyez une candidature spontanée. Nous constituons en permanence un vivier de talents.
               </p>
-              <a href="#formulaire" className="text-xs font-semibold text-[#FF5500] hover:underline">
+              <a href="#formulaire" className="text-xs font-semibold text-orange hover:underline">
                 Candidature spontanée →
               </a>
             </div>
           </div>
 
           {/* Formulaire */}
-          <div id="formulaire" className="bg-white rounded-2xl p-8 border border-[#D9E2EC] shadow-sm">
+          <div id="formulaire" className="bg-white rounded-2xl p-8 border border-line shadow-sm">
             <CandidatureForm />
           </div>
         </div>

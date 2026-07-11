@@ -30,7 +30,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A2B3C] text-white">
+    <footer className="bg-navy text-white">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
@@ -51,17 +51,17 @@ export default function Footer() {
             </p>
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
-                <MapPin size={14} className="text-[#FF5500] shrink-0" />
+                <MapPin size={14} className="text-orange shrink-0" />
                 <span>Abidjan, Côte d&apos;Ivoire (Zone UEMOA)</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail size={14} className="text-[#FF5500] shrink-0" />
+                <Mail size={14} className="text-orange shrink-0" />
                 <a href="mailto:contact@akililabs.io" className="hover:text-white transition-colors">
                   contact@akililabs.io
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Phone size={14} className="text-[#FF5500] shrink-0" />
+                <Phone size={14} className="text-orange shrink-0" />
                 <span>+225 07 00 00 00 00</span>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-[#FF5500] transition-colors"
+                    className="text-sm text-gray-400 hover:text-orange transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -117,7 +117,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-[#FF5500] transition-colors"
+                    className="text-sm text-gray-400 hover:text-orange transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -136,7 +136,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-[#FF5500] transition-colors"
+                    className="text-sm text-gray-400 hover:text-orange transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -146,7 +146,7 @@ export default function Footer() {
             <div className="mt-6">
               <Link
                 href="/contact"
-                className="inline-block px-4 py-2.5 bg-[#FF5500] text-white text-sm font-semibold rounded-lg hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
+                className="inline-block px-4 py-2.5 bg-orange text-white text-sm font-semibold rounded-lg hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
               >
                 Demander un devis →
               </Link>

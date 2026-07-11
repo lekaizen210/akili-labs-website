@@ -9,7 +9,7 @@ const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function CTABanner() {
   return (
-    <section className="py-20 bg-[#1A2B3C] relative overflow-hidden">
+    <section className="py-20 bg-navy relative overflow-hidden">
       {/* Background accent */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -23,7 +23,7 @@ export default function CTABanner() {
         <FadeUp>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4">
             Prêt à accélérer votre{" "}
-            <span className="text-[#FF5500]">transformation digitale ?</span>
+            <span className="text-orange">transformation digitale ?</span>
           </h2>
         </FadeUp>
 
@@ -53,7 +53,7 @@ export default function CTABanner() {
           >
             <Link
               href="/contact"
-              className="group flex items-center gap-2 px-8 py-4 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-colors duration-200 shadow-lg shadow-orange-900/30"
+              className="group flex items-center gap-2 px-8 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-colors duration-200 shadow-lg shadow-orange-900/30"
             >
               Demander une consultation gratuite
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

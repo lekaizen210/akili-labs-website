@@ -11,31 +11,31 @@ const problems = [
     icon: Puzzle,
     title: "Systèmes fragmentés",
     desc: "Données dispersées entre Excel, logiciels isolés et processus manuels. Chaque décision exige une réconciliation fastidieuse.",
-    accent: "#FF5500",
+    accent: "var(--color-orange)",
   },
   {
     icon: Globe2,
     title: "Normes locales ignorées",
     desc: "Les ERP standards ne couvrent pas OHADA, la fiscalité UEMOA ni le droit du travail ivoirien. Des développements coûteux s'accumulent.",
-    accent: "#FF5500",
+    accent: "var(--color-orange)",
   },
   {
     icon: AlertTriangle,
     title: "Prestataires étrangers inadaptés",
     desc: "Solutions pensées pour d'autres marchés, support décalé, coûts en devises et temps de réponse qui ralentissent votre activité.",
-    accent: "#FF5500",
+    accent: "var(--color-orange)",
   },
   {
     icon: ShieldOff,
     title: "Sécurité sous-estimée",
     desc: "La croissance digitale rapide expose à des risques réels. Sans DevSecOps ni monitoring, la surface d'attaque grandit en silence.",
-    accent: "#FF5500",
+    accent: "var(--color-orange)",
   },
 ];
 
 export default function ProblemSection() {
   return (
-    <section className="py-24 bg-[#1A2B3C]">
+    <section className="py-24 bg-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <FadeUp className="text-center mb-16">
@@ -66,14 +66,14 @@ export default function ProblemSection() {
                     boxShadow: "0 16px 40px rgba(0,0,0,0.25)",
                     transition: { duration: 0.2, ease },
                   }}
-                  className="flex flex-col gap-4 p-6 rounded-2xl bg-white border-l-4 border-[#FF5500] shadow-md h-full cursor-default"
+                  className="flex flex-col gap-4 p-6 rounded-2xl bg-white border-l-4 border-orange shadow-md h-full cursor-default"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-[#FF5500]/10 flex items-center justify-center shrink-0">
-                    <Icon size={20} className="text-[#FF5500]" aria-hidden="true" />
+                  <div className="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center shrink-0">
+                    <Icon size={20} className="text-orange" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#1A2B3C] mb-2 leading-snug">{p.title}</h3>
-                    <p className="text-sm text-[#374151] leading-relaxed">{p.desc}</p>
+                    <h3 className="font-bold text-navy mb-2 leading-snug">{p.title}</h3>
+                    <p className="text-sm text-ink leading-relaxed">{p.desc}</p>
                   </div>
                 </motion.div>
               </StaggerItem>

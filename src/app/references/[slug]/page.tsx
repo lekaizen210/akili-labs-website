@@ -28,7 +28,7 @@ export default async function ReferencePage({ params }: PageProps) {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-[#1A2B3C]">
+      <section className="pt-32 pb-20 bg-navy">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-sm text-white/50 mb-8" aria-label="Fil d'Ariane">
             <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
@@ -38,13 +38,13 @@ export default async function ReferencePage({ params }: PageProps) {
             <span className="text-white/80 truncate max-w-xs">{ref.title}</span>
           </nav>
           <div className="flex items-center gap-3 mb-5">
-            <span className="px-3 py-1 bg-[#FF5500] text-white text-xs font-semibold rounded-full">{ref.expertise}</span>
+            <span className="px-3 py-1 bg-orange text-white text-xs font-semibold rounded-full">{ref.expertise}</span>
             <span className="text-white/50 text-sm">{ref.sector} · {ref.year}</span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">{ref.title}</h1>
           {/* Key result */}
           <div className="inline-flex items-center gap-2 px-5 py-3 bg-white/10 border border-white/20 rounded-xl">
-            <TrendingUp size={16} className="text-[#FF5500]" />
+            <TrendingUp size={16} className="text-orange" />
             <span className="font-bold text-white">{ref.result}</span>
           </div>
         </div>
@@ -55,28 +55,28 @@ export default async function ReferencePage({ params }: PageProps) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-2 space-y-8">
             <div>
-              <h2 className="text-xl font-black text-[#1A2B3C] mb-4">Contexte & Objectifs</h2>
-              <p className="text-[#374151] leading-relaxed">{ref.summary}</p>
+              <h2 className="text-xl font-black text-navy mb-4">Contexte & Objectifs</h2>
+              <p className="text-ink leading-relaxed">{ref.summary}</p>
             </div>
             <div>
-              <h2 className="text-xl font-black text-[#1A2B3C] mb-4">Solution déployée</h2>
+              <h2 className="text-xl font-black text-navy mb-4">Solution déployée</h2>
               <div className="space-y-3">
                 {ref.technologies.map((t) => (
                   <div key={t} className="flex items-center gap-3">
-                    <CheckCircle size={16} className="text-[#FF5500] shrink-0" />
-                    <span className="text-[#374151]">{t}</span>
+                    <CheckCircle size={16} className="text-orange shrink-0" />
+                    <span className="text-ink">{t}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="bg-[#E8F0FE] rounded-2xl p-6 border-l-4 border-[#FF5500]">
-              <div className="text-xs font-semibold text-[#c94200] uppercase tracking-wider mb-1">Résultat clé</div>
-              <div className="text-2xl font-black text-[#1A2B3C]">{ref.result}</div>
+            <div className="bg-blue-light rounded-2xl p-6 border-l-4 border-orange">
+              <div className="text-xs font-semibold text-orange-dark uppercase tracking-wider mb-1">Résultat clé</div>
+              <div className="text-2xl font-black text-navy">{ref.result}</div>
             </div>
           </div>
           <div className="space-y-5">
-            <div className="bg-[#E8F0FE] rounded-2xl p-6">
-              <h3 className="font-bold text-[#1A2B3C] mb-3 text-sm uppercase tracking-wider">Technologies</h3>
+            <div className="bg-blue-light rounded-2xl p-6">
+              <h3 className="font-bold text-navy mb-3 text-sm uppercase tracking-wider">Technologies</h3>
               <div className="flex flex-wrap gap-2">
                 {ref.technologies.map((t) => {
                   const { bg, text } = getTechColor(t);
@@ -86,10 +86,10 @@ export default async function ReferencePage({ params }: PageProps) {
                 })}
               </div>
             </div>
-            <div className="bg-[#1A2B3C] rounded-2xl p-6 text-white">
+            <div className="bg-navy rounded-2xl p-6 text-white">
               <h3 className="font-bold mb-2 text-sm">Un projet similaire ?</h3>
               <p className="text-white/60 text-xs mb-4">Nos experts sont disponibles pour vous accompagner.</p>
-              <Link href="/contact" className="block text-center px-4 py-2.5 bg-[#FF5500] text-white text-sm font-semibold rounded-xl hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]">
+              <Link href="/contact" className="block text-center px-4 py-2.5 bg-orange text-white text-sm font-semibold rounded-xl hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]">
                 Nous contacter →
               </Link>
             </div>
@@ -98,14 +98,14 @@ export default async function ReferencePage({ params }: PageProps) {
       </section>
 
       {/* Other references */}
-      <section className="py-14 bg-[#E8F0FE]">
+      <section className="py-14 bg-blue-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-bold text-[#1A2B3C] mb-6">Autres réalisations</h2>
+          <h2 className="text-lg font-bold text-navy mb-6">Autres réalisations</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {references.filter((r) => r.slug !== slug).slice(0, 2).map((r) => (
-              <Link key={r.slug} href={`/references/${r.slug}`} className="group bg-white rounded-xl p-5 border border-[#D9E2EC] hover:border-[#FF5500] hover:shadow-md transition-[box-shadow,border-color]">
-                <div className="text-xs font-semibold text-[#c94200] mb-1">{r.expertise}</div>
-                <div className="font-bold text-[#1A2B3C] text-sm group-hover:text-[#FF5500] transition-colors">{r.title}</div>
+              <Link key={r.slug} href={`/references/${r.slug}`} className="group bg-white rounded-xl p-5 border border-line hover:border-orange hover:shadow-md transition-[box-shadow,border-color]">
+                <div className="text-xs font-semibold text-orange-dark mb-1">{r.expertise}</div>
+                <div className="font-bold text-navy text-sm group-hover:text-orange transition-colors">{r.title}</div>
               </Link>
             ))}
           </div>

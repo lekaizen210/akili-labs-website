@@ -15,10 +15,10 @@ export default function OdooFaq() {
     <section className="py-20 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-6">
             ■ FAQ
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C]">
+          <h2 className="text-2xl sm:text-3xl font-black text-navy">
             Questions fréquentes sur Odoo
           </h2>
         </div>
@@ -26,7 +26,7 @@ export default function OdooFaq() {
           {odooFaqs.map((item, i) => {
             const open = openIndex === i;
             return (
-              <div key={item.question} className="border border-[#D9E2EC] rounded-2xl overflow-hidden bg-white">
+              <div key={item.question} className="border border-line rounded-2xl overflow-hidden bg-white">
                 <button
                   type="button"
                   onClick={() => setOpenIndex(open ? null : i)}
@@ -34,16 +34,16 @@ export default function OdooFaq() {
                   aria-controls={`odoo-faq-panel-${i}`}
                   className={cn(
                     "w-full flex items-center justify-between gap-4 px-6 py-5 text-left transition-colors duration-200",
-                    open ? "bg-[#1A2B3C]" : "bg-white hover:bg-[#F7F9FF]"
+                    open ? "bg-navy" : "bg-white hover:bg-[#F7F9FF]"
                   )}
                 >
-                  <span className={cn("text-sm sm:text-base font-semibold leading-snug", open ? "text-white" : "text-[#1A2B3C]")}>
+                  <span className={cn("text-sm sm:text-base font-semibold leading-snug", open ? "text-white" : "text-navy")}>
                     {item.question}
                   </span>
                   <motion.span
                     animate={{ rotate: open ? 180 : 0 }}
                     transition={{ duration: 0.22, ease }}
-                    className={cn("shrink-0", open ? "text-white/70" : "text-[#374151]")}
+                    className={cn("shrink-0", open ? "text-white/70" : "text-ink")}
                   >
                     <ChevronDown size={18} aria-hidden="true" />
                   </motion.span>
@@ -62,8 +62,8 @@ export default function OdooFaq() {
                       }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6 pt-4 border-t border-[#D9E2EC]">
-                        <p className="text-[#374151] text-sm leading-relaxed">{item.answer}</p>
+                      <div className="px-6 pb-6 pt-4 border-t border-line">
+                        <p className="text-ink text-sm leading-relaxed">{item.answer}</p>
                       </div>
                     </motion.div>
                   )}

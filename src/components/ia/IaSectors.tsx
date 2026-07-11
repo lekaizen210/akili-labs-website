@@ -11,10 +11,10 @@ export default function IaSectors() {
     <section className="py-20 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8F0FE] text-[#1A2B3C] text-sm font-medium rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-6">
             ■ Cas d&apos;usage par secteur
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-[#1A2B3C]">
+          <h2 className="text-2xl sm:text-3xl font-black text-navy">
             L&apos;IA adaptée à votre secteur d&apos;activité
           </h2>
         </div>
@@ -24,27 +24,27 @@ export default function IaSectors() {
             return (
               <StaggerItem
                 key={s.sector}
-                className="group bg-[#E8F0FE] rounded-xl p-5 border border-[#D9E2EC] transition-colors hover:border-[#FF5500]"
+                className="group bg-blue-light rounded-xl p-5 border border-line transition-colors hover:border-orange"
               >
                 <div className="flex items-center gap-2.5 mb-4">
                   <Icon
                     size={18}
-                    className="text-[#1A2B3C] transition-colors group-hover:text-[#FF5500] shrink-0"
+                    className="text-navy transition-colors group-hover:text-orange shrink-0"
                     aria-hidden="true"
                   />
-                  <h3 className="text-sm font-bold text-[#1A2B3C]">{s.sector}</h3>
+                  <h3 className="text-sm font-bold text-navy">{s.sector}</h3>
                 </div>
                 <div className="mb-3">
-                  <div className="text-[10px] font-bold uppercase tracking-wide text-[#374151]/70 mb-1">
+                  <div className="text-[10px] font-bold uppercase tracking-wide text-ink/70 mb-1">
                     Cas d&apos;usage prioritaires
                   </div>
-                  <p className="text-xs text-[#374151] leading-relaxed">{s.useCases}</p>
+                  <p className="text-xs text-ink leading-relaxed">{s.useCases}</p>
                 </div>
                 <div>
-                  <div className="text-[10px] font-bold uppercase tracking-wide text-[#374151]/70 mb-1">
+                  <div className="text-[10px] font-bold uppercase tracking-wide text-ink/70 mb-1">
                     Bénéfice attendu
                   </div>
-                  <p className="text-xs text-[#1A2B3C] font-medium leading-relaxed">{s.benefit}</p>
+                  <p className="text-xs text-navy font-medium leading-relaxed">{s.benefit}</p>
                 </div>
               </StaggerItem>
             );

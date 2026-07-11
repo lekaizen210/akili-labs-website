@@ -4,8 +4,8 @@ export default function Loading() {
       <div className="flex flex-col items-center gap-4">
         {/* Spinner orange AKILI */}
         <div className="relative w-12 h-12">
-          <div className="w-12 h-12 rounded-full border-4 border-[#E8F0FE]" />
-          <div className="absolute inset-0 w-12 h-12 rounded-full border-4 border-transparent border-t-[#FF5500] animate-spin" />
+          <div className="w-12 h-12 rounded-full border-4 border-blue-light" />
+          <div className="absolute inset-0 w-12 h-12 rounded-full border-4 border-transparent border-t-orange animate-spin" />
         </div>
 
         {/* Dots pulsés */}
@@ -13,7 +13,7 @@ export default function Loading() {
           {[0, 1, 2].map((i) => (
             <span
               key={i}
-              className="w-1.5 h-1.5 rounded-full bg-[#1A2B3C]"
+              className="w-1.5 h-1.5 rounded-full bg-navy"
               style={{
                 animationName: "pulse",
                 animationDuration: "1.2s",

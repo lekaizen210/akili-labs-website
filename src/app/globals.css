@@ -19,13 +19,17 @@
   }
 }
 
-:root {
-  --navy: #1A2B3C;
-  --orange: #FF5500;
-  --blue-light: #E8F0FE;
-  --white: #FFFFFF;
-  --gray-text: #374151;
-  --gray-border: #D9E2EC;
+/* R15 — Charte graphique AKILI Labs : jetons de couleur enregistrés dans
+   Tailwind (bg-navy, text-orange, border-line, etc.) plutôt que des hex
+   arbitraires répétés dans chaque composant. */
+@theme {
+  --color-navy: #1A2B3C;
+  --color-orange: #FF5500;
+  --color-orange-dark: #c94200;
+  --color-orange-hover: #e04d00;
+  --color-blue-light: #E8F0FE;
+  --color-ink: #374151;
+  --color-line: #D9E2EC;
 }
 
 * {
@@ -39,7 +43,7 @@ html {
 
 body {
   font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  color: #374151;
+  color: var(--color-ink);
   background: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,7 +54,7 @@ body {
 @layer base {
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading), sans-serif;
-    color: #1A2B3C;
+    color: var(--color-navy);
     text-wrap: balance;
   }
 }
@@ -58,12 +62,12 @@ body {
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #f1f5f9; }
-::-webkit-scrollbar-thumb { background: #1A2B3C; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #FF5500; }
+::-webkit-scrollbar-thumb { background: var(--color-navy); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-orange); }
 
 /* R3 — Focus visible brand-cohérent avec border-radius */
 *:focus-visible {
-  outline: 2px solid #FF5500;
+  outline: 2px solid var(--color-orange);
   outline-offset: 3px;
   border-radius: 6px;
 }
@@ -73,7 +77,7 @@ body {
   position: absolute;
   top: -40px;
   left: 0;
-  background: #FF5500;
+  background: var(--color-orange);
   color: white;
   padding: 8px 16px;
   z-index: 1000;
@@ -86,12 +90,12 @@ body {
 /* Code font */
 code, pre {
   font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-  color: #FF5500;
+  color: var(--color-orange);
 }
 
 /* Selection */
 ::selection {
-  background: #FF5500;
+  background: var(--color-orange);
   color: white;
 }
 

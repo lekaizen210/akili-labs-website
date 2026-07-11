@@ -50,11 +50,11 @@ function StatItem({ value, label }: { value: string; label: string }) {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className="text-4xl lg:text-5xl font-black text-[#FF5500] mb-1 tabular-nums"
+        className="text-4xl lg:text-5xl font-black text-orange mb-1 tabular-nums"
       >
         {inView ? animated : "0"}
       </motion.div>
-      <div className="text-sm font-medium text-[#374151]">{label}</div>
+      <div className="text-sm font-medium text-ink">{label}</div>
     </div>
   );
 }
