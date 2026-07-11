@@ -110,14 +110,14 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
     <div>
       {/* Search */}
       <div className="relative mb-8">
-        <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" aria-hidden="true" />
+        <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" aria-hidden="true" />
         <input
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Rechercher une question…"
           aria-label="Rechercher dans la FAQ"
-          className="w-full pl-11 pr-10 py-3.5 rounded-xl border border-[#D9E2EC] bg-white text-sm text-[#374151] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-shadow"
+          className="w-full pl-11 pr-10 py-3.5 rounded-xl border border-[#D9E2EC] bg-white text-sm text-[#374151] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-shadow"
         />
         <AnimatePresence>
           {query && (
@@ -129,7 +129,7 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
               type="button"
               onClick={() => setQuery("")}
               aria-label="Effacer la recherche"
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-gray-400 hover:text-[#1A2B3C] transition-colors rounded-lg"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 p-2 text-gray-500 hover:text-[#1A2B3C] transition-colors rounded-lg"
             >
               <X size={15} />
             </motion.button>
@@ -169,7 +169,7 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="text-xs text-gray-400 mb-6"
+          className="text-xs text-gray-500 mb-6"
           aria-live="polite"
           aria-atomic="true"
         >
@@ -192,7 +192,7 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
             >
               <p className="text-4xl mb-4" aria-hidden="true">🔍</p>
               <p className="font-semibold text-[#1A2B3C] mb-1">Aucune question ne correspond</p>
-              <p className="text-sm text-gray-400">Essayez un autre terme ou consultez nos{" "}
+              <p className="text-sm text-gray-500">Essayez un autre terme ou consultez nos{" "}
                 <a href="/contact" className="text-[#c94200] hover:underline">experts directement</a>.
               </p>
             </motion.div>

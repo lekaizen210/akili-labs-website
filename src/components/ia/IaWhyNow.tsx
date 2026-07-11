@@ -32,7 +32,7 @@ export default function IaWhyNow() {
           <FadeUp delay={0.2}>
             <div>
               <AkiliNetworkDiagram />
-              <p className="text-center text-xs text-gray-400 mt-1">8 pays UEMOA/CEDEAO</p>
+              <p className="text-center text-xs text-gray-500 mt-1">8 pays UEMOA/CEDEAO</p>
             </div>
           </FadeUp>
         </div>

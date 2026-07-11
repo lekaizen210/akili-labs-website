@@ -52,7 +52,7 @@ export default function SocialProofSection() {
 
         {/* Logos strip */}
         <FadeUp className="text-center mb-14">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-8">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-8">
             Ils nous font confiance
           </p>
           <StaggerContainer
@@ -122,7 +122,7 @@ export default function SocialProofSection() {
                   <div className="min-w-0">
                     <div className="text-sm font-bold text-[#1A2B3C] leading-tight">{t.name}</div>
                     <div className="text-xs text-[#374151] leading-tight">{t.role}</div>
-                    <div className="text-xs text-gray-400 truncate">{t.company} · {t.location}</div>
+                    <div className="text-xs text-gray-500 truncate">{t.company} · {t.location}</div>
                   </div>
                 </div>
               </motion.div>

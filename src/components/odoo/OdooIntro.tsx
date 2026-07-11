@@ -51,7 +51,7 @@ export default function OdooIntro() {
         <FadeUp delay={0.32}>
           <div>
             <AkiliNetworkDiagram />
-            <p className="text-center text-xs text-gray-400 mt-1">8 pays UEMOA/CEDEAO</p>
+            <p className="text-center text-xs text-gray-500 mt-1">8 pays UEMOA/CEDEAO</p>
           </div>
         </FadeUp>
       </div>

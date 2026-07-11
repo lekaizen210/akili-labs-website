@@ -252,7 +252,7 @@ export default function Navbar() {
                 );
               })()}
               {/* Expertises (sous-menu développé) */}
-              <p className="px-4 pt-2 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+              <p className="px-4 pt-2 pb-1 text-xs font-semibold text-gray-500 uppercase tracking-wider">
                 Expertises
               </p>
               {expertisesMenu.map((item) => (

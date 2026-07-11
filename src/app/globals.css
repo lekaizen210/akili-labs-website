@@ -51,6 +51,7 @@ body {
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading), sans-serif;
     color: #1A2B3C;
+    text-wrap: balance;
   }
 }
 
@@ -86,14 +87,6 @@ body {
 code, pre {
   font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
   color: #FF5500;
-}
-
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #FF5500 0%, #ff8c42 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 /* Selection */

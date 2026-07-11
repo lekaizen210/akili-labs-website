@@ -276,7 +276,7 @@ export default function FaqPage() {
 
           {/* Catégories rapides */}
           <div className="mt-12 pt-8 border-t border-[#D9E2EC]">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">Accès direct par thème</p>
+            <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">Accès direct par thème</p>
             <div className="flex flex-wrap justify-center gap-2">
               {Object.entries(categoryIcons).map(([label, icon]) => (
                 <Link

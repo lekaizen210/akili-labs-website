@@ -219,10 +219,14 @@ export default async function BlogPostPage({ params }: PageProps) {
             <h2 className="text-xl font-black text-white mb-2">Ne ratez pas nos prochains articles</h2>
             <p className="text-white/60 text-sm mb-5">Inscrivez-vous à notre newsletter : 2 articles par mois.</p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto">
+              <label htmlFor="newsletter-email" className="sr-only">Adresse email</label>
               <input
+                id="newsletter-email"
                 type="email"
+                name="email"
+                autoComplete="email"
                 placeholder="votre@email.com"
-                className="flex-1 px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/40 border border-white/20 focus:outline-none focus:border-[#FF5500] text-sm"
+                className="flex-1 px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/40 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent text-sm"
               />
               <button type="submit" className="px-5 py-3 bg-[#FF5500] text-white font-semibold rounded-xl hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] text-sm">
                 S&apos;abonner

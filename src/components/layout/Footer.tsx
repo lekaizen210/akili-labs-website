@@ -72,7 +72,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="AKILI Labs sur LinkedIn"
-                className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/10 text-gray-400 hover:bg-[#0A66C2] hover:text-white transition-[background-color,color,transform] duration-200 ease-out active:scale-[0.94]"
+                className="flex items-center justify-center w-11 h-11 rounded-lg bg-white/10 text-gray-400 hover:bg-[#0A66C2] hover:text-white transition-[background-color,color,transform] duration-200 ease-out active:scale-[0.94]"
               >
                 <Linkedin size={17} />
               </a>
@@ -81,7 +81,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="AKILI Labs sur Facebook"
-                className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/10 text-gray-400 hover:bg-[#1877F2] hover:text-white transition-[background-color,color,transform] duration-200 ease-out active:scale-[0.94]"
+                className="flex items-center justify-center w-11 h-11 rounded-lg bg-white/10 text-gray-400 hover:bg-[#1877F2] hover:text-white transition-[background-color,color,transform] duration-200 ease-out active:scale-[0.94]"
               >
                 <Facebook size={17} />
               </a>

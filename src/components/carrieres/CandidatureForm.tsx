@@ -42,7 +42,7 @@ function ProgressBar({ step }: { step: 1 | 2 }) {
     <div className="mb-8">
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs font-semibold text-[#374151]">Étape {step} sur 2</span>
-        <span className="text-xs text-gray-400">{step === 1 ? "Informations personnelles" : "Votre candidature"}</span>
+        <span className="text-xs text-gray-500">{step === 1 ? "Informations personnelles" : "Votre candidature"}</span>
       </div>
       <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
         <div
@@ -58,11 +58,11 @@ function ProgressBar({ step }: { step: 1 | 2 }) {
           <div key={n} className="flex items-center gap-1.5">
             <div className={cn(
               "w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-colors",
-              step >= n ? "bg-[#FF5500] text-white" : "bg-gray-200 text-gray-400"
+              step >= n ? "bg-[#FF5500] text-white" : "bg-gray-200 text-gray-600"
             )}>
               {step > n ? <CheckCircle size={12} /> : n}
             </div>
-            <span className={cn("text-xs font-medium", step >= n ? "text-[#1A2B3C]" : "text-gray-400")}>
+            <span className={cn("text-xs font-medium", step >= n ? "text-[#1A2B3C]" : "text-gray-500")}>
               {label}
             </span>
           </div>
@@ -387,7 +387,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
               <span aria-live="polite" className={cn(
                 "absolute bottom-2.5 right-3 text-xs tabular-nums",
                 form.motivation.length > MOTIVATION_MAX ? "text-red-500 font-semibold" :
-                form.motivation.length >= MOTIVATION_MIN ? "text-green-600" : "text-gray-400"
+                form.motivation.length >= MOTIVATION_MIN ? "text-green-600" : "text-gray-500"
               )}>
                 {form.motivation.length} / {MOTIVATION_MAX}
               </span>
@@ -413,7 +413,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
                 <button
                   type="button"
                   onClick={(e) => { e.stopPropagation(); set("cv", null); if (fileRef.current) fileRef.current.value = ""; }}
-                  className="text-gray-400 hover:text-red-500 transition-colors"
+                  className="text-gray-500 hover:text-red-500 transition-colors"
                   aria-label="Retirer le fichier sélectionné"
                 >
                   <X size={15} />
@@ -490,7 +490,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
               )}
             </button>
           </div>
-          <p className="text-xs text-gray-400 text-center">
+          <p className="text-xs text-gray-500 text-center">
             Votre messagerie préparera un email à <strong>rh@akililabs.io</strong> · Pensez à joindre votre CV PDF
           </p>
         </div>

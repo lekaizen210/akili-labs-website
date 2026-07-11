@@ -56,7 +56,7 @@ export default function BlogPage() {
                     {blogPosts[0].title}
                   </h2>
                   <p className="text-[#374151] text-sm leading-relaxed mb-5">{blogPosts[0].excerpt}</p>
-                  <div className="flex items-center gap-4 text-xs text-gray-400 mb-5">
+                  <div className="flex items-center gap-4 text-xs text-gray-500 mb-5">
                     <span className="flex items-center gap-1"><Calendar size={11} />
                       {new Date(blogPosts[0].date).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
                     </span>
@@ -91,7 +91,7 @@ export default function BlogPage() {
                     {post.title}
                   </h2>
                   <p className="text-sm text-[#374151] line-clamp-2 mb-4">{post.excerpt}</p>
-                  <div className="flex items-center gap-3 text-xs text-gray-400">
+                  <div className="flex items-center gap-3 text-xs text-gray-500">
                     <span className="flex items-center gap-1"><Calendar size={11} />
                       {new Date(post.date).toLocaleDateString("fr-FR", { day: "numeric", month: "short", year: "numeric" })}
                     </span>
@@ -107,10 +107,14 @@ export default function BlogPage() {
             <h2 className="text-2xl font-black text-white mb-2">Restez à la pointe de la tech</h2>
             <p className="text-white/60 mb-6">Inscrivez-vous à notre newsletter : 2 articles par mois, zéro spam.</p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <label htmlFor="newsletter-email" className="sr-only">Adresse email</label>
               <input
+                id="newsletter-email"
                 type="email"
+                name="email"
+                autoComplete="email"
                 placeholder="votre@email.com"
-                className="flex-1 px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/40 border border-white/20 focus:outline-none focus:border-[#FF5500] text-sm"
+                className="flex-1 px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/40 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent text-sm"
               />
               <button
                 type="submit"

@@ -99,7 +99,7 @@ export default function CarrieresPage() {
                           {o.domain}
                         </span>
                         <span className="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs rounded-md">{o.type}</span>
-                        <span className="flex items-center gap-1 text-xs text-gray-400">
+                        <span className="flex items-center gap-1 text-xs text-gray-500">
                           <MapPin size={10} />{o.lieu}
                         </span>
                       </div>

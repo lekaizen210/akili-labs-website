@@ -221,7 +221,7 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
-            <div className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-8">
+            <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-8">
               Technologies & Partenaires
             </div>
           </FadeUp>

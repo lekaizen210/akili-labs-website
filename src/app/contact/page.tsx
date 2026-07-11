@@ -212,7 +212,7 @@ export default function ContactPage() {
                     </>
                   )}
                 </button>
-                <p className="text-xs text-gray-400">
+                <p className="text-xs text-gray-500">
                   En soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter.
                 </p>
               </form>

@@ -61,7 +61,7 @@ export default function ReferencesSection() {
                       <span className={`px-2.5 py-1 text-xs font-semibold rounded-full ${tagColors[ref.expertise] ?? "bg-gray-100 text-gray-600"}`}>
                         {ref.expertise}
                       </span>
-                      <span className="text-xs text-gray-400">{ref.year}</span>
+                      <span className="text-xs text-gray-500">{ref.year}</span>
                     </div>
                     <div className="text-xs font-semibold text-[#c94200] uppercase tracking-wider mb-2">
                       {ref.sector}
