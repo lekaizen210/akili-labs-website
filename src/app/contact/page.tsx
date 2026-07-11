@@ -134,19 +134,21 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {[
-                    { name: "name", label: "Nom complet *", type: "text", required: true, autoComplete: "name" },
-                    { name: "company", label: "Société", type: "text", required: false, autoComplete: "organization" },
-                    { name: "email", label: "Email professionnel *", type: "email", required: true, autoComplete: "email", inputMode: "email" as const },
-                    { name: "phone", label: "Téléphone", type: "tel", required: false, autoComplete: "tel", inputMode: "tel" as const },
+                    { name: "name", label: "Nom complet *", type: "text", required: true, autoComplete: "name", maxLength: 100 },
+                    { name: "company", label: "Société", type: "text", required: false, autoComplete: "organization", maxLength: 100 },
+                    { name: "email", label: "Email professionnel *", type: "email", required: true, autoComplete: "email", inputMode: "email" as const, maxLength: 254 },
+                    { name: "phone", label: "Téléphone", type: "tel", required: false, autoComplete: "tel", inputMode: "tel" as const, maxLength: 30 },
                   ].map((f) => (
                     <div key={f.name}>
-                      <label className="block text-sm font-medium text-[#374151] mb-1.5">{f.label}</label>
+                      <label htmlFor={f.name} className="block text-sm font-medium text-[#374151] mb-1.5">{f.label}</label>
                       <input
+                        id={f.name}
                         type={f.type}
                         name={f.name}
                         required={f.required}
                         autoComplete={f.autoComplete}
                         inputMode={f.inputMode}
+                        maxLength={f.maxLength}
                         value={form[f.name as keyof typeof form]}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-[#D9E2EC] rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-[box-shadow,border-color] bg-white"
@@ -156,8 +158,9 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-[#374151] mb-1.5">Objet *</label>
+                  <label htmlFor="subject" className="block text-sm font-medium text-[#374151] mb-1.5">Objet *</label>
                   <select
+                    id="subject"
                     name="subject"
                     required
                     value={form.subject}
@@ -177,16 +180,19 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-[#374151] mb-1.5">Votre message *</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-[#374151] mb-1.5">Votre message *</label>
                   <textarea
+                    id="message"
                     name="message"
                     required
                     rows={5}
+                    maxLength={2000}
                     value={form.message}
                     onChange={handleChange}
                     placeholder="Décrivez brièvement votre besoin, votre secteur d'activité et vos enjeux..."
                     className="w-full px-4 py-3 border border-[#D9E2EC] rounded-xl text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#FF5500] focus:border-transparent transition-[box-shadow,border-color] resize-none bg-white"
                   />
+                  <p className="mt-1 text-xs text-gray-500 text-right tabular-nums">{form.message.length} / 2000</p>
                 </div>
 
                 <button

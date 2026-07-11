@@ -72,16 +72,21 @@ function ProgressBar({ step }: { step: 1 | 2 }) {
   );
 }
 
-function Field({ label, required, error, children }: {
-  label: string; required?: boolean; error?: string; children: React.ReactNode;
+function Field({ id, label, required, error, children }: {
+  id: string; label: string; required?: boolean; error?: string; children: React.ReactNode;
 }) {
+  const errorId = `${id}-error`;
   return (
     <div>
-      <label className="block text-sm font-medium text-[#374151] mb-1.5">
+      <label htmlFor={id} className="block text-sm font-medium text-[#374151] mb-1.5">
         {label} {required && <span className="text-[#c94200]">*</span>}
       </label>
       {children}
-      {error && <p className="mt-1 text-xs text-red-500 flex items-center gap-1">{error}</p>}
+      {error && (
+        <p id={errorId} role="alert" className="mt-1 text-xs text-red-500 flex items-center gap-1">
+          {error}
+        </p>
+      )}
     </div>
   );
 }
@@ -173,7 +178,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
         "Merci de joindre votre CV PDF avant l'envoi si le fichier n'est pas déjà attaché.",
       ].join("\n")
     );
-    window.location.href = `mailto:rh@akililabs.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:rh@akililabs.io?subject=${subject}&body=${body}`;
     await new Promise((r) => setTimeout(r, 600));
     setLoading(false);
     setSent(true);
@@ -226,41 +231,53 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
         <div className="space-y-5">
           <h2 className="text-lg font-bold text-[#1A2B3C] mb-1">Vos informations personnelles</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <Field label="Nom complet" required error={errors.nom}>
+            <Field id="nom" label="Nom complet" required error={errors.nom}>
               <input
-                type="text" placeholder="Kouamé Jean-Baptiste"
-                autoComplete="name"
+                id="nom" type="text" placeholder="Kouamé Jean-Baptiste"
+                autoComplete="name" maxLength={100}
+                aria-invalid={errors.nom ? true : undefined}
+                aria-describedby={errors.nom ? "nom-error" : undefined}
                 value={form.nom} onChange={(e) => { set("nom", e.target.value); clearError("nom"); }}
                 className={inputCls(errors.nom)}
               />
             </Field>
-            <Field label="Email professionnel" required error={errors.email}>
+            <Field id="email" label="Email professionnel" required error={errors.email}>
               <input
-                type="email" placeholder="jean@exemple.com"
-                autoComplete="email" inputMode="email"
+                id="email" type="email" placeholder="jean@exemple.com"
+                autoComplete="email" inputMode="email" maxLength={254}
+                aria-invalid={errors.email ? true : undefined}
+                aria-describedby={errors.email ? "email-error" : undefined}
                 value={form.email} onChange={(e) => { set("email", e.target.value); clearError("email"); }}
                 className={inputCls(errors.email)}
               />
             </Field>
-            <Field label="Téléphone" required error={errors.telephone}>
+            <Field id="telephone" label="Téléphone" required error={errors.telephone}>
               <input
-                type="tel" placeholder="+225 07 00 00 00 00"
-                autoComplete="tel" inputMode="tel"
+                id="telephone" type="tel" placeholder="+225 07 00 00 00 00"
+                autoComplete="tel" inputMode="tel" maxLength={30}
+                aria-invalid={errors.telephone ? true : undefined}
+                aria-describedby={errors.telephone ? "telephone-error" : undefined}
                 value={form.telephone} onChange={(e) => { set("telephone", e.target.value); clearError("telephone"); }}
                 className={inputCls(errors.telephone)}
               />
             </Field>
-            <Field label="Ville de résidence" required error={errors.ville}>
+            <Field id="ville" label="Ville de résidence" required error={errors.ville}>
               <input
-                type="text" placeholder="Abidjan"
+                id="ville" type="text" placeholder="Abidjan"
+                maxLength={80}
+                aria-invalid={errors.ville ? true : undefined}
+                aria-describedby={errors.ville ? "ville-error" : undefined}
                 value={form.ville} onChange={(e) => { set("ville", e.target.value); clearError("ville"); }}
                 className={inputCls(errors.ville)}
               />
             </Field>
           </div>
 
-          <Field label="Disponibilité" required error={errors.disponibilite}>
+          <Field id="disponibilite" label="Disponibilité" required error={errors.disponibilite}>
             <select
+              id="disponibilite"
+              aria-invalid={errors.disponibilite ? true : undefined}
+              aria-describedby={errors.disponibilite ? "disponibilite-error" : undefined}
               value={form.disponibilite} onChange={(e) => { set("disponibilite", e.target.value); clearError("disponibilite"); }}
               className={inputCls(errors.disponibilite)}
             >
@@ -272,10 +289,12 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
             </select>
           </Field>
 
-          <Field label="Profil LinkedIn" error={errors.linkedin}>
+          <Field id="linkedin" label="Profil LinkedIn" error={errors.linkedin}>
             <input
-              type="url" placeholder="https://linkedin.com/in/votre-profil"
-              autoComplete="url" inputMode="url"
+              id="linkedin" type="url" placeholder="https://linkedin.com/in/votre-profil"
+              autoComplete="url" inputMode="url" maxLength={200}
+              aria-invalid={errors.linkedin ? true : undefined}
+              aria-describedby={errors.linkedin ? "linkedin-error" : undefined}
               value={form.linkedin} onChange={(e) => { set("linkedin", e.target.value); clearError("linkedin"); }}
               className={inputCls(errors.linkedin)}
             />
@@ -296,8 +315,11 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           <h2 className="text-lg font-bold text-[#1A2B3C] mb-1">Votre candidature</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <Field label="Poste visé" required error={errors.poste}>
+            <Field id="poste" label="Poste visé" required error={errors.poste}>
               <select
+                id="poste"
+                aria-invalid={errors.poste ? true : undefined}
+                aria-describedby={errors.poste ? "poste-error" : undefined}
                 value={form.poste} onChange={(e) => { set("poste", e.target.value); clearError("poste"); }}
                 className={inputCls(errors.poste)}
               >
@@ -306,8 +328,11 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
               </select>
             </Field>
 
-            <Field label="Type de contrat" required error={errors.contrat}>
+            <Field id="contrat" label="Type de contrat" required error={errors.contrat}>
               <select
+                id="contrat"
+                aria-invalid={errors.contrat ? true : undefined}
+                aria-describedby={errors.contrat ? "contrat-error" : undefined}
                 value={form.contrat} onChange={(e) => { set("contrat", e.target.value); clearError("contrat"); }}
                 className={inputCls(errors.contrat)}
               >
@@ -319,8 +344,11 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
               </select>
             </Field>
 
-            <Field label="Années d'expérience" required error={errors.experience}>
+            <Field id="experience" label="Années d'expérience" required error={errors.experience}>
               <select
+                id="experience"
+                aria-invalid={errors.experience ? true : undefined}
+                aria-describedby={errors.experience ? "experience-error" : undefined}
                 value={form.experience} onChange={(e) => { set("experience", e.target.value); clearError("experience"); }}
                 className={inputCls(errors.experience)}
               >
@@ -332,9 +360,10 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
               </select>
             </Field>
 
-            <Field label="Prétentions salariales" error={errors.salaire}>
+            <Field id="salaire" label="Prétentions salariales" error={errors.salaire}>
               <input
-                type="text" placeholder="ex : 800 000 XAF / mois"
+                id="salaire" type="text" placeholder="ex : 800 000 XAF / mois"
+                maxLength={60}
                 value={form.salaire} onChange={(e) => set("salaire", e.target.value)}
                 className={inputCls()}
               />
@@ -342,16 +371,20 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           </div>
 
           {/* Lettre de motivation */}
-          <Field label="Lettre de motivation" required error={errors.motivation}>
+          <Field id="motivation" label="Lettre de motivation" required error={errors.motivation}>
             <div className="relative">
               <textarea
+                id="motivation"
                 rows={6}
+                maxLength={MOTIVATION_MAX}
+                aria-invalid={errors.motivation ? true : undefined}
+                aria-describedby={errors.motivation ? "motivation-error" : undefined}
                 placeholder={`Présentez-vous, expliquez votre intérêt pour AKILI Labs et en quoi votre profil correspond au poste visé.\n\n(${MOTIVATION_MIN} caractères minimum, ${MOTIVATION_MAX} maximum)`}
                 value={form.motivation}
                 onChange={(e) => { set("motivation", e.target.value); clearError("motivation"); }}
                 className={cn(inputCls(errors.motivation), "resize-none")}
               />
-              <span className={cn(
+              <span aria-live="polite" className={cn(
                 "absolute bottom-2.5 right-3 text-xs tabular-nums",
                 form.motivation.length > MOTIVATION_MAX ? "text-red-500 font-semibold" :
                 form.motivation.length >= MOTIVATION_MIN ? "text-green-600" : "text-gray-400"
@@ -362,7 +395,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           </Field>
 
           {/* Upload CV */}
-          <Field label="CV (PDF, max 5 Mo)" error={errors.cv}>
+          <Field id="cv" label="CV (PDF, max 5 Mo)" error={errors.cv}>
             <div
               onClick={() => fileRef.current?.click()}
               className={cn(
@@ -381,29 +414,35 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
                   type="button"
                   onClick={(e) => { e.stopPropagation(); set("cv", null); if (fileRef.current) fileRef.current.value = ""; }}
                   className="text-gray-400 hover:text-red-500 transition-colors"
+                  aria-label="Retirer le fichier sélectionné"
                 >
                   <X size={15} />
                 </button>
               )}
             </div>
             <input
-              ref={fileRef} type="file" accept=".pdf,application/pdf"
+              ref={fileRef} id="cv" type="file" accept=".pdf,application/pdf"
+              aria-invalid={errors.cv ? true : undefined}
+              aria-describedby={errors.cv ? "cv-error" : undefined}
               onChange={handleFileChange} className="hidden"
             />
           </Field>
 
           {/* Portfolio & source */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <Field label="Portfolio / GitHub" error={errors.portfolio}>
+            <Field id="portfolio" label="Portfolio / GitHub" error={errors.portfolio}>
               <input
-                type="url" placeholder="https://github.com/votre-profil"
-                autoComplete="url" inputMode="url"
+                id="portfolio" type="url" placeholder="https://github.com/votre-profil"
+                autoComplete="url" inputMode="url" maxLength={200}
+                aria-invalid={errors.portfolio ? true : undefined}
+                aria-describedby={errors.portfolio ? "portfolio-error" : undefined}
                 value={form.portfolio} onChange={(e) => { set("portfolio", e.target.value); clearError("portfolio"); }}
                 className={inputCls(errors.portfolio)}
               />
             </Field>
-            <Field label="Comment nous avez-vous connu ?">
+            <Field id="source" label="Comment nous avez-vous connu ?">
               <select
+                id="source"
                 value={form.source} onChange={(e) => set("source", e.target.value)}
                 className={inputCls()}
               >
@@ -452,7 +491,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
             </button>
           </div>
           <p className="text-xs text-gray-400 text-center">
-            Votre messagerie préparera un email à <strong>rh@akililabs.com</strong> · Pensez à joindre votre CV PDF
+            Votre messagerie préparera un email à <strong>rh@akililabs.io</strong> · Pensez à joindre votre CV PDF
           </p>
         </div>
       )}
