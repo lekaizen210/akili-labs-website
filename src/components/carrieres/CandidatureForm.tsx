@@ -1,8 +1,11 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, ArrowLeft, CheckCircle, Upload, X, User, Briefcase } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 const POSTES = [
   "Consultant ERP Odoo Senior",
@@ -200,35 +203,60 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
     clearError("cv");
   }
 
-  // ── Écran de succès ──
-  if (sent) {
-    return (
-      <div className="flex flex-col items-center justify-center text-center py-14 gap-5">
-        <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center">
-          <CheckCircle size={32} className="text-green-500" />
-        </div>
-        <h2 className="text-2xl font-bold text-[#1A2B3C]">Email de candidature préparé</h2>
-        <p className="text-[#374151] max-w-sm">
-          Merci <strong>{form.nom.split(" ")[0]}</strong>. Votre messagerie s&apos;ouvre avec les
-          informations préremplies. Joignez votre CV PDF, puis envoyez l&apos;email.
-        </p>
-        <button
-          onClick={() => { setSent(false); setStep(1); setForm({ nom:"",email:"",telephone:"",linkedin:"",ville:"",disponibilite:"",poste:posteInitial??"",contrat:"",experience:"",motivation:"",cv:null,portfolio:"",salaire:"",source:"" }); }}
-          className="px-5 py-2.5 bg-[#FF5500] text-white rounded-xl font-medium hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
-        >
-          Préparer une autre candidature
-        </button>
-      </div>
-    );
-  }
-
   return (
-    <form onSubmit={handleSubmit} noValidate>
+    <AnimatePresence mode="wait">
+      {sent ? (
+        <motion.div
+          key="success"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -8 }}
+          transition={{ duration: 0.3, ease }}
+          className="flex flex-col items-center justify-center text-center py-14 gap-5"
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.35, delay: 0.1, ease }}
+            className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center"
+          >
+            <CheckCircle size={32} className="text-green-500" />
+          </motion.div>
+          <h2 className="text-2xl font-bold text-[#1A2B3C]">Email de candidature préparé</h2>
+          <p className="text-[#374151] max-w-sm">
+            Merci <strong>{form.nom.split(" ")[0]}</strong>. Votre messagerie s&apos;ouvre avec les
+            informations préremplies. Joignez votre CV PDF, puis envoyez l&apos;email.
+          </p>
+          <button
+            onClick={() => { setSent(false); setStep(1); setForm({ nom:"",email:"",telephone:"",linkedin:"",ville:"",disponibilite:"",poste:posteInitial??"",contrat:"",experience:"",motivation:"",cv:null,portfolio:"",salaire:"",source:"" }); }}
+            className="px-5 py-2.5 bg-[#FF5500] text-white rounded-xl font-medium hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
+          >
+            Préparer une autre candidature
+          </button>
+        </motion.div>
+      ) : (
+        <motion.form
+          key="form"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -8 }}
+          transition={{ duration: 0.3, ease }}
+          onSubmit={handleSubmit}
+          noValidate
+        >
       <ProgressBar step={step} />
 
+      <AnimatePresence mode="wait">
       {/* ════════ ÉTAPE 1 ════════ */}
       {step === 1 && (
-        <div className="space-y-5">
+        <motion.div
+          key="step1"
+          initial={{ opacity: 0, x: 16 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -16 }}
+          transition={{ duration: 0.25, ease }}
+          className="space-y-5"
+        >
           <h2 className="text-lg font-bold text-[#1A2B3C] mb-1">Vos informations personnelles</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <Field id="nom" label="Nom complet" required error={errors.nom}>
@@ -306,12 +334,19 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           >
             Continuer <ArrowRight size={16} />
           </button>
-        </div>
+        </motion.div>
       )}
 
       {/* ════════ ÉTAPE 2 ════════ */}
       {step === 2 && (
-        <div className="space-y-5">
+        <motion.div
+          key="step2"
+          initial={{ opacity: 0, x: 16 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -16 }}
+          transition={{ duration: 0.25, ease }}
+          className="space-y-5"
+        >
           <h2 className="text-lg font-bold text-[#1A2B3C] mb-1">Votre candidature</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -493,8 +528,11 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           <p className="text-xs text-gray-500 text-center">
             Votre messagerie préparera un email à <strong>rh@akililabs.io</strong> · Pensez à joindre votre CV PDF
           </p>
-        </div>
+        </motion.div>
       )}
-    </form>
+      </AnimatePresence>
+        </motion.form>
+      )}
+    </AnimatePresence>
   );
 }

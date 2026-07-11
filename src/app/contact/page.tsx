@@ -1,8 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Mail, MapPin, Phone, Clock, Send, CheckCircle } from "lucide-react";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
+
+const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -111,25 +114,46 @@ export default function ContactPage() {
 
           {/* Form */}
           <div className="lg:col-span-2">
-            {sent ? (
-              <div className="flex flex-col items-center justify-center h-full text-center gap-5 py-16">
-                <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center">
-                  <CheckCircle size={32} className="text-green-500" />
-                </div>
-                <h2 className="text-2xl font-bold text-[#1A2B3C]">Email préparé</h2>
-                <p className="text-[#374151] max-w-sm">
-                  Votre messagerie s&apos;ouvre avec un message prérempli. Vérifiez-le puis envoyez-le
-                  à contact@akililabs.io.
-                </p>
-                <button
-                  onClick={() => { setSent(false); setForm({ name: "", company: "", email: "", phone: "", subject: "", message: "" }); }}
-                  className="px-5 py-2.5 bg-[#FF5500] text-white rounded-lg font-medium hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
+            <AnimatePresence mode="wait">
+              {sent ? (
+                <motion.div
+                  key="success"
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.3, ease }}
+                  className="flex flex-col items-center justify-center h-full text-center gap-5 py-16"
                 >
-                  Préparer un autre message
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+                  <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.35, delay: 0.1, ease }}
+                    className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center"
+                  >
+                    <CheckCircle size={32} className="text-green-500" />
+                  </motion.div>
+                  <h2 className="text-2xl font-bold text-[#1A2B3C]">Email préparé</h2>
+                  <p className="text-[#374151] max-w-sm">
+                    Votre messagerie s&apos;ouvre avec un message prérempli. Vérifiez-le puis envoyez-le
+                    à contact@akililabs.io.
+                  </p>
+                  <button
+                    onClick={() => { setSent(false); setForm({ name: "", company: "", email: "", phone: "", subject: "", message: "" }); }}
+                    className="px-5 py-2.5 bg-[#FF5500] text-white rounded-lg font-medium hover:bg-[#e04d00] transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
+                  >
+                    Préparer un autre message
+                  </button>
+                </motion.div>
+              ) : (
+                <motion.form
+                  key="form"
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.3, ease }}
+                  onSubmit={handleSubmit}
+                  className="space-y-5"
+                >
                 <h2 className="text-xl font-bold text-[#1A2B3C] mb-6">Parlez-nous de votre projet</h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -215,8 +239,9 @@ export default function ContactPage() {
                 <p className="text-xs text-gray-500">
                   En soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter.
                 </p>
-              </form>
-            )}
+                </motion.form>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </section>
