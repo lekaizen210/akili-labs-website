@@ -27,6 +27,11 @@ import {
   SiGooglecloud,
   SiOvh,
   SiLinux,
+  SiGitlab,
+  SiGithubactions,
+  SiTerraform,
+  SiAnsible,
+  SiSonarqubeserver,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa6";
 import { Database, Layers, Gauge, Bot, Mic, Library, Cloud, Wrench, ScanEye, ShieldCheck, Languages, BarChart3 } from "lucide-react";
@@ -74,6 +79,12 @@ export const techIcons: Record<string, ElementType> = {
   Azure: Cloud,
   OVH: SiOvh,
   "On-premise Linux": SiLinux,
+  "GitLab CI/CD": SiGitlab,
+  "GitHub Actions": SiGithubactions,
+  Terraform: SiTerraform,
+  Ansible: SiAnsible,
+  SonarQube: SiSonarqubeserver,
+  OWASP: ShieldCheck,
 };
 
 const NEUTRAL = "var(--color-navy)";
@@ -121,4 +132,10 @@ export const techColors: Record<string, string> = {
   Azure: "#0078D4",
   OVH: "#123F6D",
   "On-premise Linux": "#FCC624",
+  "GitLab CI/CD": "#FC6D26",
+  "GitHub Actions": "#2088FF",
+  Terraform: "#844FBA",
+  Ansible: "#EE0000",
+  SonarQube: "#126ED3",
+  OWASP: "#1A2B3C",
 };
