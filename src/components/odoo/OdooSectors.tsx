@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   ShoppingBag,
   HardHat,
@@ -61,8 +62,7 @@ export default function OdooSectors() {
                         viewport={viewportOnce}
                         transition={{ type: "spring", stiffness: 350, damping: 12, delay: ui * 0.05 }}
                       >
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                           src={`/odoo-icons/${u.icon}.png`}
                           alt={u.label}
                           width={22}

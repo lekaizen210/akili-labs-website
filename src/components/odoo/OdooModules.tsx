@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { StaggerContainer, StaggerItem, viewportOnce } from "@/components/ui/motion-primitives";
 import { odooModuleCategories } from "@/lib/odoo-data";
 
@@ -30,8 +31,7 @@ export default function OdooModules() {
                       viewport={viewportOnce}
                       transition={{ type: "spring", stiffness: 350, damping: 12, delay: i * 0.05 }}
                     >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={`/odoo-icons/${m.icon}.png`} alt={m.label} width={30} height={30} loading="lazy" />
+                      <Image src={`/odoo-icons/${m.icon}.png`} alt={m.label} width={30} height={30} loading="lazy" />
                     </motion.div>
                     <span className="text-[10px] leading-tight text-[#374151] font-medium">{m.label}</span>
                   </div>

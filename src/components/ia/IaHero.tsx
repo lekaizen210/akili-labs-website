@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
 
@@ -37,12 +38,14 @@ export default function IaHero() {
         </a>
       </div>
       <div className="mt-14 hidden sm:block">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/ia-images/ia-hero.png"
           alt="Intelligence Artificielle appliquée aux entreprises africaines"
           width={1536}
           height={864}
+          loading="eager"
+          fetchPriority="high"
+          sizes="(max-width: 1024px) 90vw, 768px"
           className="mx-auto rounded-2xl border border-white/10 shadow-2xl shadow-black/40 max-w-3xl w-full h-auto"
         />
       </div>

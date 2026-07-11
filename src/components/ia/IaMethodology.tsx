@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FadeUp, viewportOnce } from "@/components/ui/motion-primitives";
 import { iaPhases } from "@/lib/ia-data";
 
@@ -21,13 +22,13 @@ export default function IaMethodology() {
 
         <FadeUp delay={0.06}>
           <div className="mb-16">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/ia-images/ia-automation.png"
               alt="Pipeline d'automatisation IA AKILI Labs"
               width={1536}
               height={864}
               loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 1024px"
               className="w-full h-auto rounded-2xl border border-[#D9E2EC] shadow-md"
             />
           </div>

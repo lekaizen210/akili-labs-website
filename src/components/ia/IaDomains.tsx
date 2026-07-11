@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { MessagesSquare, TrendingUp, ScanEye, Languages, Database, BarChart3 } from "lucide-react";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import { iaDomains } from "@/lib/ia-data";
@@ -21,13 +22,13 @@ export default function IaDomains() {
 
         <FadeUp delay={0.06}>
           <div className="mb-12">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/ia-images/ia-solutions.png"
               alt="Solutions d'Intelligence Artificielle AKILI Labs"
               width={1536}
               height={864}
               loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 1024px"
               className="w-full h-auto rounded-2xl border border-[#D9E2EC] shadow-md"
             />
           </div>
@@ -78,13 +79,13 @@ export default function IaDomains() {
 
                 {d.id === "bi" && (
                   <div className="mt-6">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/ia-images/ia-data.png"
                       alt="Dashboard de Business Intelligence augmentée AKILI Labs"
                       width={1536}
                       height={864}
                       loading="lazy"
+                      sizes="(max-width: 1024px) 100vw, 1024px"
                       className="w-full h-auto rounded-xl border border-[#D9E2EC]"
                     />
                   </div>
