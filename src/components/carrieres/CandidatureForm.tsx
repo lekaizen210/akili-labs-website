@@ -426,7 +426,8 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
               </button>
             </div>
             <div className="mt-1.5 text-xs text-gray-500 space-y-0.5">
-              <div>{form.nom} — {form.email} — {form.telephone}</div>
+              <div className="font-medium text-[#1A2B3C]">{form.nom}</div>
+              <div>{form.email} · {form.telephone}</div>
               <div>{form.ville} · Disponible : {form.disponibilite}</div>
             </div>
           </div>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
@@ -110,13 +110,7 @@ export default function HeroSection() {
           transition={{ duration: 0.35, delay: 0.05, ease }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 text-sm text-white/80 mb-10"
         >
-          {/* C3 — motion.span remplace animate-pulse CSS (prefers-reduced-motion safe) */}
-          <motion.span
-            className="w-1.5 h-1.5 rounded-full bg-[#FF5500] inline-block"
-            animate={{ scale: [1, 1.35, 1] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", repeatDelay: 0.5 }}
-            aria-hidden="true"
-          />
+          <span className="text-[#FF5500]" aria-hidden="true">■</span>
           Acteur de référence de la transformation digitale en Afrique
         </motion.div>
 
@@ -178,7 +172,7 @@ export default function HeroSection() {
           transition={{ duration: 0.50, delay: 0.50, ease }}
           className="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          ERP · Intelligence Artificielle · DevSecOps · Développement sur mesure
+          ERP, Intelligence Artificielle, DevSecOps, Développement sur mesure
           <br />
           Des solutions qui créent de la valeur réelle pour les organisations de la zone UEMOA.
         </motion.p>
@@ -254,22 +248,6 @@ export default function HeroSection() {
           ))}
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.90 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/65"
-      >
-        <span className="text-xs tracking-widest uppercase">Découvrir</span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut", repeatDelay: 0.3 }}
-        >
-          <ChevronDown size={18} />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

@@ -12,7 +12,7 @@ const principles = [
   {
     n: "2",
     title: "Livrer de la valeur par itération",
-    desc: "Plutôt qu'un déploiement monolithique risqué, nous privilégions des mises en production progressives — par module ou par entité — pour garantir une adoption fluide et un retour sur investissement rapide.",
+    desc: "Plutôt qu'un déploiement monolithique risqué, nous privilégions des mises en production progressives (par module ou par entité) pour garantir une adoption fluide et un retour sur investissement rapide.",
   },
   {
     n: "3",

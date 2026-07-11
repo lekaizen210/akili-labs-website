@@ -52,7 +52,7 @@ export default function Footer() {
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <MapPin size={14} className="text-[#FF5500] shrink-0" />
-                <span>Abidjan, Côte d&apos;Ivoire — Zone UEMOA</span>
+                <span>Abidjan, Côte d&apos;Ivoire (Zone UEMOA)</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-[#FF5500] shrink-0" />
@@ -158,9 +158,12 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-gray-500">
-            Confidentiel — AKILI Labs — www.akililabs.com — © 2026 Tous droits réservés
-          </p>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500 divide-x divide-gray-700">
+            <span>Confidentiel</span>
+            <span className="pl-3">AKILI Labs</span>
+            <span className="pl-3">www.akililabs.io</span>
+            <span className="pl-3">© 2026 Tous droits réservés</span>
+          </div>
           <div className="flex items-center gap-4 text-xs text-gray-500">
             <span className="flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block"></span>

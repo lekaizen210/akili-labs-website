@@ -27,7 +27,7 @@ export default function BlogPage() {
             <span className="text-white"> Technologique</span>
           </>
         }
-        subtitle="Articles techniques, études de cas et bonnes pratiques par les experts AKILI Labs. ERP · Intelligence Artificielle · DevSecOps."
+        subtitle="Articles techniques, études de cas et bonnes pratiques par les experts AKILI Labs, en ERP, Intelligence Artificielle et DevSecOps."
       />
 
       {/* Posts */}
@@ -105,7 +105,7 @@ export default function BlogPage() {
           {/* Newsletter */}
           <div className="mt-14 bg-[#1A2B3C] rounded-2xl p-8 sm:p-10 text-center">
             <h2 className="text-2xl font-black text-white mb-2">Restez à la pointe de la tech</h2>
-            <p className="text-white/60 mb-6">Inscrivez-vous à notre newsletter — 2 articles par mois, zéro spam.</p>
+            <p className="text-white/60 mb-6">Inscrivez-vous à notre newsletter : 2 articles par mois, zéro spam.</p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"

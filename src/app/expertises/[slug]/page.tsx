@@ -186,7 +186,7 @@ export default async function ExpertisePage({ params }: PageProps) {
             <div className="bg-[#1A2B3C] rounded-2xl p-7 text-center">
               <h3 className="font-bold text-white mb-2">Discutons de votre besoin</h3>
               <p className="text-white/60 text-sm mb-5">
-                Consultation initiale gratuite — Réponse sous 24h
+                Consultation initiale gratuite, réponse sous 24h
               </p>
               <Link
                 href="/contact"

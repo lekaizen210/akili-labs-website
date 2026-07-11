@@ -15,7 +15,7 @@ export default function IaHero() {
       }
       subtitle={
         <>
-          AKILI Labs conçoit, déploie et maintient des solutions d&apos;IA concrètes — adaptées à votre
+          AKILI Labs conçoit, déploie et maintient des solutions d&apos;IA concrètes, adaptées à votre
           secteur, à vos données et aux réalités du marché africain. Du chatbot métier au moteur de
           prédiction, nous transformons vos données en avantages compétitifs.
         </>

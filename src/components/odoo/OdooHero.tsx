@@ -17,7 +17,7 @@ export default function OdooHero() {
       subtitle={
         <>
           AKILI Labs accompagne les PME et grandes organisations d&apos;Afrique de l&apos;Ouest dans
-          l&apos;implémentation, la personnalisation et l&apos;optimisation de l&apos;ERP Odoo — du cadrage
+          l&apos;implémentation, la personnalisation et l&apos;optimisation de l&apos;ERP Odoo, du cadrage
           métier jusqu&apos;à la mise en production et au-delà.
         </>
       }

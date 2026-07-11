@@ -10,7 +10,7 @@ const problems = [
   {
     icon: Puzzle,
     title: "Systèmes fragmentés",
-    desc: "Données dispersées entre Excel, logiciels isolés et processus manuels — chaque décision exige une réconciliation fastidieuse.",
+    desc: "Données dispersées entre Excel, logiciels isolés et processus manuels. Chaque décision exige une réconciliation fastidieuse.",
     accent: "#FF5500",
   },
   {
@@ -28,7 +28,7 @@ const problems = [
   {
     icon: ShieldOff,
     title: "Sécurité sous-estimée",
-    desc: "La croissance digitale rapide expose à des risques réels — sans DevSecOps ni monitoring, la surface d'attaque grandit en silence.",
+    desc: "La croissance digitale rapide expose à des risques réels. Sans DevSecOps ni monitoring, la surface d'attaque grandit en silence.",
     accent: "#FF5500",
   },
 ];
@@ -83,7 +83,7 @@ export default function ProblemSection() {
 
         <FadeUp className="mt-14 text-center">
           <p className="text-white/75 text-sm">
-            Chez AKILI Labs, nous transformons ces obstacles en leviers de croissance —
+            Chez AKILI Labs, nous transformons ces obstacles en leviers de croissance,
             avec des solutions calibrées pour le contexte africain.
           </p>
         </FadeUp>

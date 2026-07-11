@@ -217,7 +217,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           {/* Newsletter CTA */}
           <div className="mt-12 bg-[#1A2B3C] rounded-2xl p-8 text-center">
             <h2 className="text-xl font-black text-white mb-2">Ne ratez pas nos prochains articles</h2>
-            <p className="text-white/60 text-sm mb-5">Inscrivez-vous à notre newsletter — 2 articles par mois.</p>
+            <p className="text-white/60 text-sm mb-5">Inscrivez-vous à notre newsletter : 2 articles par mois.</p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto">
               <input
                 type="email"

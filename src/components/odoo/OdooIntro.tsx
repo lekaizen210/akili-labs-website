@@ -21,8 +21,8 @@ export default function OdooIntro() {
         </div>
         <FadeUp delay={0.14}>
           <p className="text-[#374151] leading-relaxed mb-6">
-            Gérer une entreprise en croissance avec des outils dispersés — tableaux Excel, logiciels de
-            comptabilité isolés, CRM sans connexion à la supply chain — coûte du temps, de l&apos;argent et
+            Gérer une entreprise en croissance avec des outils dispersés (tableaux Excel, logiciels de
+            comptabilité isolés, CRM sans connexion à la supply chain) coûte du temps, de l&apos;argent et
             des opportunités manquées.
           </p>
         </FadeUp>

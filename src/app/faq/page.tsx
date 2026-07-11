@@ -77,7 +77,7 @@ const faqs: FaqItem[] = [
     category: "Transformation Digitale",
     question: "Qu'est-ce qu'un BPM et à quoi sert-il ?",
     answer:
-      "Le BPM (Business Process Management) modélise, automatise et optimise les processus métier. Il cartographie les flux de travail, identifie les goulots d'étranglement et implémente des workflows automatisés — approbations, notifications, escalades. Résultat : des processus plus rapides, traçables et moins dépendants des personnes clés.",
+      "Le BPM (Business Process Management) modélise, automatise et optimise les processus métier. Il cartographie les flux de travail, identifie les goulots d'étranglement et implémente des workflows automatisés : approbations, notifications, escalades. Résultat : des processus plus rapides, traçables et moins dépendants des personnes clés.",
   },
 
   // ── Intelligence Artificielle ──────────────────────────────────────
@@ -97,7 +97,7 @@ const faqs: FaqItem[] = [
     category: "Intelligence Artificielle",
     question: "Qu'est-ce que le RAG (Retrieval-Augmented Generation) ?",
     answer:
-      "Le RAG connecte un modèle IA à vos propres données — documents internes, base de connaissance, ERP. L'IA recherche d'abord dans vos sources, puis génère une réponse précise et traçable, sans hallucination. C'est la méthode recommandée pour déployer un assistant documentaire ou un chatbot métier fiable sur des données privées.",
+      "Le RAG connecte un modèle IA à vos propres données : documents internes, base de connaissance, ERP. L'IA recherche d'abord dans vos sources, puis génère une réponse précise et traçable, sans hallucination. C'est la méthode recommandée pour déployer un assistant documentaire ou un chatbot métier fiable sur des données privées.",
   },
   {
     category: "Intelligence Artificielle",
@@ -111,7 +111,7 @@ const faqs: FaqItem[] = [
     category: "DevSecOps",
     question: "Qu'est-ce que le DevSecOps ?",
     answer:
-      "Le DevSecOps intègre la sécurité à chaque étape du cycle de développement logiciel — conception, code, tests, déploiement, production. Contrairement à l'approche traditionnelle où la sécurité intervient en fin de projet, le DevSecOps détecte les vulnérabilités tôt, réduit les coûts de correction et renforce la confiance des clients et partenaires.",
+      "Le DevSecOps intègre la sécurité à chaque étape du cycle de développement logiciel : conception, code, tests, déploiement, production. Contrairement à l'approche traditionnelle où la sécurité intervient en fin de projet, le DevSecOps détecte les vulnérabilités tôt, réduit les coûts de correction et renforce la confiance des clients et partenaires.",
   },
   {
     category: "DevSecOps",
@@ -123,13 +123,13 @@ const faqs: FaqItem[] = [
     category: "DevSecOps",
     question: "Qu'est-ce que l'Infrastructure as Code (IaC) ?",
     answer:
-      "L'IaC consiste à décrire et provisionner votre infrastructure (serveurs, réseaux, bases de données) via des fichiers de code versionné — Terraform, Ansible. Vos environnements deviennent reproductibles, auditables et déployables en minutes. DEV, QA et PROD sont toujours alignés, éliminant les bugs liés aux différences de configuration.",
+      "L'IaC consiste à décrire et provisionner votre infrastructure (serveurs, réseaux, bases de données) via des fichiers de code versionné (Terraform, Ansible). Vos environnements deviennent reproductibles, auditables et déployables en minutes. DEV, QA et PROD sont toujours alignés, éliminant les bugs liés aux différences de configuration.",
   },
   {
     category: "DevSecOps",
     question: "Quelle est la différence entre CI et CD ?",
     answer:
-      "La CI (Intégration Continue) automatise tests et compilation à chaque commit de code — les erreurs sont détectées en moins de 10 minutes. La CD (Déploiement Continu) pousse automatiquement le code validé vers les environnements cibles. Ensemble, CI/CD réduisent les délais de livraison de semaines à heures tout en maintenant la qualité.",
+      "La CI (Intégration Continue) automatise tests et compilation à chaque commit de code : les erreurs sont détectées en moins de 10 minutes. La CD (Déploiement Continu) pousse automatiquement le code validé vers les environnements cibles. Ensemble, CI/CD réduisent les délais de livraison de semaines à heures tout en maintenant la qualité.",
   },
 
   // ── AKILI Labs ────────────────────────────────────────────────────
@@ -143,7 +143,7 @@ const faqs: FaqItem[] = [
     category: "AKILI Labs",
     question: "Comment démarrer un projet avec AKILI Labs ?",
     answer:
-      "Trois étapes : (1) Contact par email ou formulaire en ligne — réponse sous 24h ouvrées. (2) Consultation de cadrage gratuite — nous analysons votre besoin, contexte et contraintes budgétaires. (3) Proposition technique et financière sous 5 jours ouvrés. Aucun engagement de votre côté avant validation de la proposition.",
+      "Trois étapes : (1) Contact par email ou formulaire en ligne, réponse sous 24h ouvrées. (2) Consultation de cadrage gratuite : nous analysons votre besoin, contexte et contraintes budgétaires. (3) Proposition technique et financière sous 5 jours ouvrés. Aucun engagement de votre côté avant validation de la proposition.",
   },
   {
     category: "AKILI Labs",
