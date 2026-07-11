@@ -33,7 +33,7 @@ export default function ConfidentialitePage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#FFF4E5] border-l-4 border-orange rounded-r-xl p-5 mb-12 text-sm text-ink">
+          <div className="bg-orange-pale border-l-4 border-orange rounded-r-xl p-5 mb-12 text-sm text-ink">
             <strong className="text-navy">Document provisoire.</strong> Cette politique décrit les
             traitements réellement mis en œuvre par le site à ce jour. Elle doit être relue par un juriste
             pour confirmer sa conformité à la loi ivoirienne n° 2013-450 relative à la protection des

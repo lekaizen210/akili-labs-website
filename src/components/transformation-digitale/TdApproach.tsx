@@ -1,8 +1,11 @@
 "use client";
 
+import { ClipboardCheck, Target, Compass, GraduationCap } from "lucide-react";
 import { StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import ParticleCanvas from "@/components/ui/ParticleCanvas";
 import { tdApproach } from "@/lib/transformation-digitale-data";
+
+const icons = [ClipboardCheck, Target, Compass, GraduationCap] as const;
 
 export default function TdApproach() {
   return (
@@ -17,14 +20,24 @@ export default function TdApproach() {
             Une approche centrée sur la valeur métier, pas sur la technologie
           </h2>
         </div>
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" stagger={0.08}>
-          {tdApproach.map((a, i) => (
-            <StaggerItem key={a.title} className="text-center">
-              <div className="text-5xl font-black text-orange mb-4">{String(i + 1).padStart(2, "0")}</div>
-              <h3 className="font-bold text-white mb-3">{a.title}</h3>
-              <p className="text-white/70 text-sm leading-relaxed">{a.desc}</p>
-            </StaggerItem>
-          ))}
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-5" stagger={0.08}>
+          {tdApproach.map((a, i) => {
+            const Icon = icons[i];
+            return (
+              <StaggerItem
+                key={a.title}
+                className="flex items-start gap-5 bg-white/5 border border-white/10 rounded-2xl p-6"
+              >
+                <div className="shrink-0 w-12 h-12 rounded-xl bg-orange/15 border border-orange/30 flex items-center justify-center">
+                  <Icon size={22} className="text-orange" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-white mb-2">{a.title}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">{a.desc}</p>
+                </div>
+              </StaggerItem>
+            );
+          })}
         </StaggerContainer>
       </div>
     </section>

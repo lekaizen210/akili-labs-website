@@ -33,7 +33,7 @@ export default function MentionsLegalesPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#FFF4E5] border-l-4 border-orange rounded-r-xl p-5 mb-12 text-sm text-ink">
+          <div className="bg-orange-pale border-l-4 border-orange rounded-r-xl p-5 mb-12 text-sm text-ink">
             <strong className="text-navy">Document provisoire.</strong> Cette page a été rédigée à
             partir des informations disponibles et doit être relue et complétée (raison sociale exacte,
             numéro RCCM, hébergeur) par un juriste avant d&apos;être considérée comme définitive.

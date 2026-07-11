@@ -30,6 +30,10 @@
   --color-blue-light: #E8F0FE;
   --color-ink: #374151;
   --color-line: #D9E2EC;
+  /* Charte : fond des encadrés "Attention" */
+  --color-orange-pale: #FFF4E5;
+  /* Teinte de survol des surfaces blanches (accordéons) */
+  --color-blue-pale: #F7F9FF;
 }
 
 * {

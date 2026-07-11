@@ -39,8 +39,8 @@ function AccordionItem({ item, index }: { item: FaqItem; index: number }) {
         onClick={() => setOpen(!open)}
         aria-expanded={open}
         className={cn(
-          "w-full flex items-start gap-4 px-6 py-5 text-left transition-colors duration-200",
-          open ? "bg-navy" : "bg-white hover:bg-[#F7F9FF]"
+          "w-full flex items-start gap-4 px-6 py-5 text-left transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-inset",
+          open ? "bg-navy" : "bg-white hover:bg-blue-pale"
         )}
       >
         {/* Catégorie pill */}

@@ -21,7 +21,7 @@ export default function IaResources() {
               key={r.title}
               className="relative bg-white rounded-2xl p-6 border border-line opacity-75 cursor-default"
             >
-              <span className="absolute top-4 right-4 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide rounded-full bg-[#FFF4E5] text-orange">
+              <span className="absolute top-4 right-4 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide rounded-full bg-orange-pale text-orange-dark">
                 Bientôt disponible
               </span>
               <span className="inline-block px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full bg-blue-light text-navy mb-3">

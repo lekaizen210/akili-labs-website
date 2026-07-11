@@ -47,7 +47,9 @@ function KpiItem({ value, label }: { value: string; label: string }) {
 
   return (
     <div ref={ref} className="text-center">
+      <span className="sr-only">{value}</span>
       <motion.div
+        aria-hidden="true"
         initial={{ opacity: 0, scale: 0.85 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.6 }}

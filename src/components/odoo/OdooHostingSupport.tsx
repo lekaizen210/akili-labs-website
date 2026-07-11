@@ -11,7 +11,7 @@ const hostingIcons = [Cloud, Server, HardDrive, Boxes] as const;
 
 const supportEmphasis = [
   { badge: "bg-blue-light text-navy", card: "border-line" },
-  { badge: "bg-[#FFF4E5] text-orange-dark", card: "border-line" },
+  { badge: "bg-orange-pale text-orange-dark", card: "border-line" },
   { badge: "bg-orange text-white", card: "border-orange shadow-md" },
 ] as const;
 

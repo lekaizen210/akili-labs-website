@@ -33,8 +33,8 @@ export default function IaFaq() {
                   aria-expanded={open}
                   aria-controls={`ia-faq-panel-${i}`}
                   className={cn(
-                    "w-full flex items-center justify-between gap-4 px-6 py-5 text-left transition-colors duration-200",
-                    open ? "bg-navy" : "bg-white hover:bg-[#F7F9FF]"
+                    "w-full flex items-center justify-between gap-4 px-6 py-5 text-left transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-inset",
+                    open ? "bg-navy" : "bg-white hover:bg-blue-pale"
                   )}
                 >
                   <span className={cn("text-sm sm:text-base font-semibold leading-snug", open ? "text-white" : "text-navy")}>
