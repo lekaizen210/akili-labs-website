@@ -56,7 +56,7 @@ export default function TdIntro() {
           <FadeUp delay={0.2}>
             <Image
               src="/transformation-digitale-images/td-contexte.png"
-              alt="Cartographie de processus métier — du désordre des flux non structurés à une trajectoire ordonnée"
+              alt="Avant-après : circuit papier d'une commande client en 11 jours avec ressaisies et pertes, contre le même processus digitalisé, tracé et bouclé en une journée"
               width={1400}
               height={1000}
               loading="lazy"

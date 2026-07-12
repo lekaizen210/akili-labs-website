@@ -47,7 +47,7 @@ export default function OdooConformite() {
         <FadeUp delay={0.14} className="mb-12 max-w-4xl mx-auto">
           <Image
             src="/odoo-images/odoo-conformite.png"
-            alt="La réconciliation comptable : deux colonnes d&apos;écritures convergeant vers un état équilibré, contrôles à chaque jonction et sceaux de validation"
+            alt="Journal des ventes SYSCOHADA avec écritures lettrées et rapprochées, balance équilibrée, états financiers OHADA générés et TVA de juin calculée automatiquement"
             width={1400}
             height={900}
             loading="lazy"

@@ -58,7 +58,7 @@ export default function OdooIntro() {
           <FadeUp delay={0.2}>
             <Image
               src="/odoo-images/odoo-contexte.png"
-              alt="Des outils dispersés à la plateforme unifiée : tuiles isolées et liens enchevêtrés convergeant vers une grille de modules ordonnés reliés à un nœud central"
+              alt="Avant-après : fichiers Excel, commandes WhatsApp et cahiers de stock dispersés, remplacés par les modules Odoo unifiés (Ventes, CRM, Stocks, Achats, Comptabilité, Paie) sur une base unique"
               width={1400}
               height={1000}
               loading="lazy"
