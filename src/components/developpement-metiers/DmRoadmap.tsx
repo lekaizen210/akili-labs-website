@@ -33,7 +33,7 @@ export default function DmRoadmap() {
           <div className="mb-16">
             <Image
               src="/developpement-metiers-images/dm-cycle.png"
-              alt="Cycle de livraison itératif : des boucles de sprint successives déposent des incréments fonctionnels jusqu'à la mise en production"
+              alt="Tableau de suivi du sprint 3 : cinq fonctionnalités terminées, deux en recette chez le client avec le retour de la trésorière, le sprint suivant planifié, la courbe d’avancement et l’historique des démonstrations toutes les deux semaines"
               width={1400}
               height={900}
               loading="lazy"

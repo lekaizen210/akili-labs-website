@@ -23,7 +23,7 @@ export default function DmServices() {
           <FadeUp>
             <Image
               src="/developpement-metiers-images/dm-architecture.png"
-              alt="Hub d'intégration reliant applications web, mobiles, bases de données et systèmes externes par des interfaces documentées"
+              alt="Documentation de l’API métier : les points d’entrée (fiche adhérent, encaissement, confirmation Mobile Money, rapports), un exemple d’appel avec sa réponse JSON, les droits d’accès par rôle, et la liste des applications qui la consomment (guichet, mobile terrain, portail de direction, logiciel comptable)"
               width={1400}
               height={900}
               loading="lazy"

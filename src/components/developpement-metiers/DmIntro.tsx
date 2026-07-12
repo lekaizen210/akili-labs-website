@@ -62,7 +62,7 @@ export default function DmIntro() {
           <FadeUp delay={0.2}>
             <Image
               src="/developpement-metiers-images/dm-contexte.png"
-              alt="Des fragments documentaires éparpillés et ressaisis à la main, unifiés en une plateforme métier structurée"
+              alt="Avant-après : le classeur Excel d’une mutuelle avec une fiche d’adhérente en doublon et des erreurs #N/A, accompagné du carnet de reçus manuscrits du guichet, face à l’application métier où la même adhérente a une fiche unique, un reçu envoyé par SMS et un historique sans écart"
               width={1400}
               height={1000}
               loading="lazy"
