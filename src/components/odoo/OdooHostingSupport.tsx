@@ -1,30 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Cloud, Server, HardDrive, Boxes, Headset } from "lucide-react";
-import { StaggerContainer, StaggerItem, viewportOnce } from "@/components/ui/motion-primitives";
+import Image from "next/image";
+import { Cloud, Server, HardDrive, Boxes, ChevronDown } from "lucide-react";
+import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import { odooHostingModes, odooSupportTiers } from "@/lib/odoo-data";
-
-const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 const hostingIcons = [Cloud, Server, HardDrive, Boxes] as const;
 
-const supportEmphasis = [
-  { badge: "bg-blue-light text-navy", card: "border-line" },
-  { badge: "bg-orange-pale text-orange-dark", card: "border-line" },
-  { badge: "bg-orange text-white", card: "border-orange shadow-md" },
-] as const;
-
 export default function OdooHostingSupport() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-blue-light">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-6">
             ■ Hébergement & Support
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-navy max-w-2xl mx-auto">
-            Un mode de déploiement et un support adaptés à vos contraintes
+            Votre ERP doit tourner tous les jours : nous nous y engageons contractuellement
           </h2>
         </div>
 
@@ -47,7 +39,7 @@ export default function OdooHostingSupport() {
                     </div>
                     <p className="text-sm text-ink mb-4 leading-relaxed">{h.description}</p>
                     <div className="text-xs font-semibold text-navy">
-                      Idéal pour : <span className="font-normal text-ink">{h.fit}</span>
+                      Idéal pour : <span className="font-normal text-ink">{h.fit}</span>
                     </div>
                   </StaggerItem>
                 );
@@ -57,55 +49,56 @@ export default function OdooHostingSupport() {
 
           <div>
             <h3 className="font-bold text-navy mb-5">Support & Maintenance</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-5">
-              {odooSupportTiers.map((s, i) => {
-                const emphasis = supportEmphasis[i];
-                const isPremium = i === 2;
-                return (
-                  <motion.div
-                    key={s.level}
-                    initial={{ opacity: 0, y: 20, boxShadow: "0 0 0px rgba(255,85,0,0)" }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                      boxShadow: isPremium
-                        ? [
-                            "0 0 0px rgba(255,85,0,0)",
-                            "0 0 0px rgba(255,85,0,0)",
-                            "0 0 28px rgba(255,85,0,0.4)",
-                            "0 0 10px rgba(255,85,0,0.15)",
-                          ]
-                        : "0 0 0px rgba(255,85,0,0)",
-                    }}
-                    viewport={viewportOnce}
-                    transition={{
-                      opacity: { duration: 0.5, delay: i * 0.1, ease },
-                      y: { duration: 0.5, delay: i * 0.1, ease },
-                      boxShadow: isPremium
-                        ? { duration: 1.4, delay: i * 0.1 + 0.3, times: [0, 0.3, 0.7, 1] }
-                        : { duration: 0.3 },
-                    }}
-                    className={`rounded-2xl border p-6 bg-white transition-transform hover:-translate-y-0.5 ${emphasis.card}`}
-                  >
-                    <div className="flex items-center gap-2 mb-3">
-                      <Headset size={16} className="text-ink" aria-hidden="true" />
-                      <h4 className="font-bold text-navy">{s.level}</h4>
-                    </div>
-                    <p className="text-sm text-ink mb-5 leading-relaxed">{s.content}</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className={`inline-flex px-3 py-1.5 rounded-lg text-xs font-bold ${emphasis.badge}`}>
-                        Bloquant : {s.slaBlocking}
+            <FadeUp>
+              <p className="text-ink leading-relaxed mb-6">
+                Après le go-live, votre ERP est couvert par un contrat de maintenance avec des
+                engagements de service contractuels :{" "}
+                <strong className="text-navy">
+                  incidents bloquants pris en charge sous 2 à 24h selon le niveau souscrit
+                </strong>
+                , mises à jour réglementaires de paie incluses, TMA applicative mensuelle et revues
+                de suivi. Trois niveaux s&apos;adaptent à la criticité de votre activité.
+              </p>
+            </FadeUp>
+            <StaggerContainer className="space-y-3" stagger={0.07}>
+              {odooSupportTiers.map((s) => (
+                <StaggerItem key={s.level}>
+                  <details className="group bg-white rounded-2xl border border-line open:border-orange transition-colors">
+                    <summary className="flex items-center justify-between gap-3 cursor-pointer list-none p-5 select-none">
+                      <span className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                        <span className="font-bold text-navy">{s.level}</span>
+                        <span className="inline-flex px-2.5 py-1 rounded-lg text-xs font-bold bg-orange-pale text-orange-dark">
+                          Bloquant : {s.slaBlocking}
+                        </span>
+                        <span className="inline-flex px-2.5 py-1 rounded-lg text-xs font-semibold bg-blue-light text-navy">
+                          {s.slaSecondaryLabel} : {s.slaSecondary}
+                        </span>
                       </span>
-                      <span className="inline-flex px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-light text-navy">
-                        {s.slaSecondaryLabel} : {s.slaSecondary}
-                      </span>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+                      <ChevronDown
+                        size={18}
+                        className="text-ink shrink-0 transition-transform duration-200 ease-out group-open:rotate-180"
+                        aria-hidden="true"
+                      />
+                    </summary>
+                    <p className="px-5 pb-5 text-sm text-ink leading-relaxed">{s.content}</p>
+                  </details>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
         </div>
+
+        <FadeUp delay={0.1} className="mt-14 max-w-4xl mx-auto">
+          <Image
+            src="/odoo-images/odoo-continuite.png"
+            alt="Le maintien en condition opérationnelle : poste de veille avec courbe de disponibilité stable et journaux d'intervention, au-dessus d'une frise temporelle où chaque incident est détecté puis résolu"
+            width={1400}
+            height={900}
+            loading="lazy"
+            sizes="(max-width: 1024px) 100vw, 896px"
+            className="w-full h-auto rounded-2xl border border-line shadow-md bg-white"
+          />
+        </FadeUp>
       </div>
     </section>
   );

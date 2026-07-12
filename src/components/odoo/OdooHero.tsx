@@ -9,23 +9,23 @@ export default function OdooHero() {
       badge="Expertise Odoo ERP"
       title={
         <>
-          <span className="text-white">Déployez </span>
-          <HeroHighlight>Odoo</HeroHighlight>
-          <span className="text-white">. Transformez votre entreprise.</span>
+          <span className="text-white">Un projet ERP ne devrait jamais échouer </span>
+          <HeroHighlight>à cause du contexte local.</HeroHighlight>
         </>
       }
       subtitle={
         <>
-          AKILI Labs accompagne les PME et grandes organisations d&apos;Afrique de l&apos;Ouest dans
-          l&apos;implémentation, la personnalisation et l&apos;optimisation de l&apos;ERP Odoo, du cadrage
-          métier jusqu&apos;à la mise en production et au-delà.
+          Paie CNPS, états SYSCOHADA, paiements Mobile Money, connectivité variable : c&apos;est là
+          que la plupart des déploiements ERP déraillent en Afrique de l&apos;Ouest, pas dans le
+          logiciel. AKILI Labs implémente Odoo en partant de cette réalité, du cadrage métier
+          jusqu&apos;à la mise en production et au-delà.
         </>
       }
     >
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
         <Link
           href="/contact"
-          className="group inline-flex items-center gap-2 px-7 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] shadow-lg shadow-orange-900/20"
+          className="group inline-flex items-center gap-2 px-7 py-4 bg-orange-cta text-white font-semibold rounded-xl hover:bg-orange-cta-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] shadow-lg shadow-orange-900/20"
         >
           Consultation gratuite
           <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />

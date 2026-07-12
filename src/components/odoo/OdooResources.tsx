@@ -12,7 +12,7 @@ export default function OdooResources() {
             ■ Ressources & Contenus
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-navy">
-            Approfondissez votre connaissance d&apos;Odoo
+            Approfondissez votre projet Odoo
           </h2>
         </div>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-5" stagger={0.08}>

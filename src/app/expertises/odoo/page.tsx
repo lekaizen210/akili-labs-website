@@ -3,6 +3,7 @@ import OdooHero from "@/components/odoo/OdooHero";
 import OdooIntro from "@/components/odoo/OdooIntro";
 import OdooImplementation from "@/components/odoo/OdooImplementation";
 import OdooModules from "@/components/odoo/OdooModules";
+import OdooConformite from "@/components/odoo/OdooConformite";
 import OdooServices from "@/components/odoo/OdooServices";
 import OdooHostingSupport from "@/components/odoo/OdooHostingSupport";
 import OdooApproach from "@/components/odoo/OdooApproach";
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     url,
     title: "Expertise Odoo ERP — AKILI Labs Côte d'Ivoire",
     description:
-      "Déployez Odoo. Transformez votre entreprise. Expertise Odoo complète pour la zone UEMOA/OHADA.",
+      "Un projet ERP ne devrait jamais échouer à cause du contexte local. Expertise Odoo complète pour la zone UEMOA/OHADA.",
     images: [{ url: "/logo-akili.png", width: 1600, height: 893, alt: "AKILI Labs — Expertise Odoo" }],
   },
   twitter: {
@@ -99,6 +100,7 @@ export default function OdooExpertisePage() {
       <OdooIntro />
       <OdooImplementation />
       <OdooModules />
+      <OdooConformite />
       <OdooServices />
       <OdooHostingSupport />
       <OdooApproach />

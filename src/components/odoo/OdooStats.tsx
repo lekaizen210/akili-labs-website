@@ -68,11 +68,14 @@ export default function OdooStats() {
     <section className="py-16 bg-white border-y border-line">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-2xl sm:text-3xl font-black text-navy mb-12">
-          AKILI Labs en chiffres
+          La practice Odoo en chiffres
         </h2>
         <StaggerContainer className="grid grid-cols-2 lg:grid-cols-5 gap-8" stagger={0.12} delay={0.05}>
-          {odooKpis.map((k) => (
-            <StaggerItem key={k.label}>
+          {odooKpis.map((k, i) => (
+            <StaggerItem
+              key={k.label}
+              className={i === odooKpis.length - 1 ? "col-span-2 lg:col-span-1" : undefined}
+            >
               <KpiItem value={k.value} label={k.label} />
             </StaggerItem>
           ))}

@@ -27,13 +27,14 @@ export default function OdooCtaFinal() {
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeUp>
           <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">
-            Prêt à transformer votre gestion avec <span className="text-orange">Odoo ?</span>
+            Votre prochain ERP mérite de réussir <span className="text-orange">dans votre réalité.</span>
           </h2>
         </FadeUp>
         <FadeUp delay={0.1}>
           <p className="text-white/70 mb-10 max-w-xl mx-auto">
-            Nos experts sont disponibles pour analyser votre contexte et vous proposer la feuille de
-            route Odoo la mieux adaptée à votre organisation.
+            Commençons par une consultation gratuite : nos experts analysent vos processus et vous
+            proposent une feuille de route Odoo adaptée à votre contexte, votre budget et vos
+            délais.
           </p>
         </FadeUp>
         <FadeUp delay={0.18}>
@@ -56,9 +57,9 @@ export default function OdooCtaFinal() {
         >
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-colors shadow-lg shadow-orange-900/30"
+            className="group inline-flex items-center gap-2 px-8 py-4 bg-orange-cta text-white font-semibold rounded-xl hover:bg-orange-cta-hover transition-colors shadow-lg shadow-orange-900/30"
           >
-            Planifier un échange gratuit
+            Consultation gratuite
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
           </Link>
         </motion.div>
