@@ -54,7 +54,7 @@ export default function DsIntro() {
           <FadeUp delay={0.2}>
             <Image
               src="/devsecops-images/ds-contexte.png"
-              alt="Du déploiement manuel au pipeline industrialisé : étapes éparses et enchevêtrées se résolvant en chaîne de livraison ordonnée et contrôlée"
+              alt="Avant-après : un terminal où le déploiement manuel du vendredi soir échoue (permission refusée, module Python manquant, correctif installé en direct sur la production) et un fil de discussion d’incident, face au même changement livré par un pipeline en cinq étapes vertes, sans coupure et réversible"
               width={1400}
               height={1000}
               loading="lazy"

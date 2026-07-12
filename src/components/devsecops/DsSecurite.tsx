@@ -49,7 +49,7 @@ export default function DsSecurite() {
           <FadeUp delay={0.16}>
             <Image
               src="/devsecops-images/ds-observabilite.png"
-              alt="Poste d'observabilité : métriques, journaux centralisés et alerte mise en évidence sur un tableau de bord de supervision"
+              alt="Écran de supervision de production : disponibilité, latence et taux d’erreurs, pic d’erreurs 502 détecté à 09:41 puis résolu en 11 minutes, journaux centralisés horodatés et journal d’audit des déploiements indiquant qui a déployé quoi et quand"
               width={1400}
               height={900}
               loading="lazy"

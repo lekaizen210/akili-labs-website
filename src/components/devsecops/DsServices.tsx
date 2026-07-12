@@ -21,7 +21,7 @@ export default function DsServices() {
           <FadeUp>
             <Image
               src="/devsecops-images/ds-pipeline.png"
-              alt="Pipeline de livraison continue : étapes connectées de la modification au déploiement, avec contrôles automatisés et boucle de retour en cas d'échec"
+              alt="Écran d’un pipeline d’intégration continue : les étapes build, tests (214 passés, couverture 78 %), sécurité (image, dépendances, secrets), préproduction, puis un déploiement en production soumis à approbation humaine, avec le journal d’exécution et le rapport de sécurité"
               width={1400}
               height={900}
               loading="lazy"
