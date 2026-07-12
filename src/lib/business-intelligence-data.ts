@@ -132,11 +132,26 @@ export const biWhyUs = [
 ];
 
 export const biStack = [
-  { category: "Entrepôt & bases", items: ["PostgreSQL", "Data Warehouse", "Data Lake"] },
-  { category: "Flux & transformation", items: ["Airflow", "dbt", "Airbyte", "Connecteurs Odoo & Mobile Money"] },
-  { category: "Restitution", items: ["Metabase", "Apache Superset", "Power BI", "Grafana"] },
-  { category: "Qualité & supervision", items: ["Tests dbt", "Alerting e-mail & mobile", "Journalisation des flux"] },
-  { category: "Hébergement", items: ["On-premise", "Cloud UEMOA", "Cloud européen"] },
+  {
+    category: "Entrepôt & bases",
+    items: ["PostgreSQL", "Data Warehouse", "Data Lake"],
+  },
+  {
+    category: "Flux & transformation",
+    items: ["Airflow", "dbt", "Airbyte", "Connecteurs Odoo", "Connecteurs Mobile Money"],
+  },
+  {
+    category: "Restitution",
+    items: ["Metabase", "Apache Superset", "Power BI", "Grafana"],
+  },
+  {
+    category: "Qualité & supervision",
+    items: ["Tests dbt", "Alerting e-mail & mobile", "Journalisation des flux"],
+  },
+  {
+    category: "Hébergement",
+    items: ["On-premise", "Cloud UEMOA", "Cloud européen"],
+  },
 ];
 
 export const biFaqs = [

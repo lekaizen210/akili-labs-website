@@ -32,9 +32,33 @@ import {
   SiTerraform,
   SiAnsible,
   SiSonarqubeserver,
+  SiPostgresql,
+  SiDuckdb,
+  SiGrafana,
+  SiOdoo,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa6";
-import { Database, Layers, Gauge, Bot, Mic, Library, Cloud, Wrench, ScanEye, ShieldCheck, Languages, BarChart3 } from "lucide-react";
+import {
+  Database,
+  Layers,
+  Gauge,
+  Bot,
+  Mic,
+  Library,
+  Cloud,
+  Wrench,
+  ScanEye,
+  ShieldCheck,
+  Languages,
+  BarChart3,
+  Warehouse,
+  Waves,
+  BellRing,
+  ScrollText,
+  Smartphone,
+  Server,
+  Globe,
+} from "lucide-react";
 
 export const techIcons: Record<string, ElementType> = {
   Python: SiPython,
@@ -85,6 +109,21 @@ export const techIcons: Record<string, ElementType> = {
   Ansible: SiAnsible,
   SonarQube: SiSonarqubeserver,
   OWASP: ShieldCheck,
+
+  // Business Intelligence
+  PostgreSQL: SiPostgresql,
+  DuckDB: SiDuckdb,
+  "Data Warehouse": Warehouse,
+  "Data Lake": Waves,
+  Grafana: SiGrafana,
+  "Connecteurs Odoo": SiOdoo,
+  "Connecteurs Mobile Money": Smartphone,
+  "Tests dbt": Wrench,
+  "Alerting e-mail & mobile": BellRing,
+  "Journalisation des flux": ScrollText,
+  "On-premise": Server,
+  "Cloud UEMOA": Cloud,
+  "Cloud européen": Globe,
 };
 
 const NEUTRAL = "var(--color-navy)";
@@ -138,4 +177,19 @@ export const techColors: Record<string, string> = {
   Ansible: "#EE0000",
   SonarQube: "#126ED3",
   OWASP: "#1A2B3C",
+
+  // Business Intelligence
+  PostgreSQL: "#4169E1",
+  DuckDB: NEUTRAL,
+  "Data Warehouse": NEUTRAL,
+  "Data Lake": NEUTRAL,
+  Grafana: "#F46800",
+  "Connecteurs Odoo": "#714B67",
+  "Connecteurs Mobile Money": NEUTRAL,
+  "Tests dbt": "#FF694B",
+  "Alerting e-mail & mobile": NEUTRAL,
+  "Journalisation des flux": NEUTRAL,
+  "On-premise": NEUTRAL,
+  "Cloud UEMOA": NEUTRAL,
+  "Cloud européen": NEUTRAL,
 };

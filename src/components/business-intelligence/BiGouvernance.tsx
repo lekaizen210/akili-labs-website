@@ -11,7 +11,7 @@ export default function BiGouvernance() {
           <FadeUp className="order-2 lg:order-1">
             <Image
               src="/bi-images/bi-qualite.png"
-              alt="Dictionnaire d'indicateurs avec la fiche CA net : définition unique validée par la DAF et rapprochée de la comptabilité, à côté des contrôles qualité de nuit sur doublons, caisses et écritures"
+              alt="Fiche de l'indicateur CA net dans le dictionnaire : définition rédigée en toutes lettres, requête SQL appliquée à tous les écrans, traçabilité de la source jusqu'aux tableaux de bord, propriétaire DAF et résultats des contrôles qualité de la nuit"
               width={1400}
               height={900}
               loading="lazy"

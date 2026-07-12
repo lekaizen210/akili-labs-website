@@ -45,7 +45,7 @@ export default function BiIntro() {
           <FadeUp delay={0.2}>
             <Image
               src="/bi-images/bi-contexte.png"
-              alt="Avant-après : consolidation mensuelle manuelle de fichiers Excel et de chiffres WhatsApp en deux jours, contre un tableau de bord groupe consolidé automatiquement chaque nuit et rapproché de la comptabilité"
+              alt="Avant-après : un classeur Excel de consolidation criblé d'erreurs #REF! et une conversation WhatsApp où les agences envoient leurs chiffres en retard, contre un tableau de bord groupe consolidé automatiquement chaque nuit, rapproché de la comptabilité, avec le détail par agence"
               width={1400}
               height={1000}
               loading="lazy"

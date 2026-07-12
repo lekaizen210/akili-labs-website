@@ -32,7 +32,7 @@ export default function BiArchitecture() {
           >
             <Image
               src="/bi-images/bi-entrepot.png"
-              alt="Architecture décisionnelle : ERP Odoo, caisses d'agences, Mobile Money et fichiers Excel alimentant chaque nuit un entrepôt de données contrôlé, qui alimente tableaux de bord, exports comité et alertes"
+              alt="Écran d'orchestration des flux de nuit : les tâches d'extraction (ERP Odoo, caisses d'agences, Mobile Money, fichiers Excel) alimentent les contrôles qualité puis le chargement de l'entrepôt PostgreSQL, qui déclenche le rafraîchissement des tableaux de bord, les exports et les alertes"
               width={1400}
               height={900}
               loading="lazy"
