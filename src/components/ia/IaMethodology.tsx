@@ -72,7 +72,7 @@ export default function IaMethodology() {
                 >
                   <div className="flex items-baseline justify-between gap-2 mb-1">
                     <div className="font-bold text-navy">{label}</div>
-                    <div className="text-xs font-semibold text-ink/70 shrink-0">{p.duration}</div>
+                    <div className="text-xs font-semibold text-ink/80 shrink-0">{p.duration}</div>
                   </div>
                   <div className="text-sm text-ink mb-3">{p.content}</div>
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-light text-xs font-semibold text-navy">

@@ -38,6 +38,8 @@
      L'orange charte #FF5500 (3.21:1 sur blanc) reste réservé aux accents décoratifs. */
   --color-orange-cta: #D54400;
   --color-orange-cta-hover: #C94200;
+  /* Texte lisible sur fond orange-pale (encadrés "Attention") : 6.72:1 sur #FFF4E5 */
+  --color-orange-ink: #9A3412;
 }
 
 * {
