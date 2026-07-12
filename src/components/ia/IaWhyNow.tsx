@@ -39,9 +39,12 @@ export default function IaWhyNow() {
         <FadeUp delay={0.2}>
           <div className="bg-blue-light border-l-4 border-navy rounded-r-xl p-6 mb-12">
             <p className="text-navy font-bold text-lg mb-1">
-              Les entreprises africaines qui adoptent l&apos;IA aujourd&apos;hui ne rattrapent pas un retard.
+              La question n&apos;est plus &laquo; faut-il y aller ? &raquo;. C&apos;est &laquo; par quel
+              cas d&apos;usage commencer ? &raquo;
             </p>
-            <p className="text-ink leading-relaxed">Elles construisent une avance.</p>
+            <p className="text-ink leading-relaxed">
+              Et c&apos;est précisément l&apos;objet de notre phase de cadrage.
+            </p>
           </div>
         </FadeUp>
 
@@ -50,7 +53,7 @@ export default function IaWhyNow() {
             Ce que l&apos;IA change concrètement pour une organisation africaine
           </h3>
         </div>
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-10" stagger={0.08}>
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10" stagger={0.08}>
           {iaValueProps.map((v) => (
             <StaggerItem key={v.title} className="bg-white rounded-xl p-5 border border-line text-center">
               <h4 className="font-bold text-navy mb-2">{v.title}</h4>

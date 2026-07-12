@@ -23,10 +23,10 @@ export default function IaMethodology() {
         <FadeUp delay={0.06}>
           <div className="mb-16">
             <Image
-              src="/ia-images/ia-automation.png"
-              alt="Pipeline d'automatisation IA AKILI Labs"
-              width={1536}
-              height={864}
+              src="/ia-images/ia-apprentissage.png"
+              alt="Les cinq étapes, de vos données brutes à la décision quotidienne : nettoyage et structuration, entraînement du modèle, validation métier, mise en production"
+              width={1400}
+              height={900}
               loading="lazy"
               sizes="(max-width: 1024px) 100vw, 1024px"
               className="w-full h-auto rounded-2xl border border-line shadow-md"

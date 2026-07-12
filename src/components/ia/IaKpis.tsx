@@ -68,7 +68,7 @@ export default function IaKpis() {
     <section className="py-16 bg-white border-y border-line">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-2xl sm:text-3xl font-black text-navy mb-12">
-          AKILI Labs en chiffres
+          La practice IA en chiffres
         </h2>
         <StaggerContainer className="grid grid-cols-2 lg:grid-cols-5 gap-8" stagger={0.12} delay={0.05}>
           {iaKpis.map((k) => (

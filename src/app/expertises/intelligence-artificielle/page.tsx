@@ -5,6 +5,7 @@ import IaWhyNow from "@/components/ia/IaWhyNow";
 import IaDomains from "@/components/ia/IaDomains";
 import IaSectors from "@/components/ia/IaSectors";
 import IaMethodology from "@/components/ia/IaMethodology";
+import IaResponsable from "@/components/ia/IaResponsable";
 import IaWhyUs from "@/components/ia/IaWhyUs";
 import IaKpis from "@/components/ia/IaKpis";
 import IaStack from "@/components/ia/IaStack";
@@ -26,14 +27,14 @@ export const metadata: Metadata = {
     url,
     title: "Expertise Intelligence Artificielle — AKILI Labs Côte d'Ivoire",
     description:
-      "Du chatbot métier au moteur de prédiction, nous transformons vos données en avantages compétitifs pour la zone UEMOA/CEDEAO.",
-    images: [{ url: "/ia-images/ia-hero.png", width: 1536, height: 864, alt: "AKILI Labs — Expertise Intelligence Artificielle" }],
+      "Adopter l'IA, ce n'est pas rattraper un retard, c'est construire une avance. Solutions IA concrètes pour la zone UEMOA/CEDEAO.",
+    images: [{ url: "/ia-images/ia-hero.jpg", width: 2304, height: 1728, alt: "AKILI Labs — Expertise Intelligence Artificielle" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Expertise Intelligence Artificielle — AKILI Labs",
     description: "Solutions d'IA concrètes pour les entreprises d'Afrique de l'Ouest.",
-    images: ["/ia-images/ia-hero.png"],
+    images: ["/ia-images/ia-hero.jpg"],
   },
 };
 
@@ -99,6 +100,7 @@ export default function IntelligenceArtificiellePage() {
       <IaDomains />
       <IaSectors />
       <IaMethodology />
+      <IaResponsable />
       <IaWhyUs />
       <IaKpis />
       <IaStack />

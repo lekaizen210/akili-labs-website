@@ -9,16 +9,16 @@ export default function IaHero() {
       badge="Expertise Intelligence Artificielle"
       title={
         <>
-          <span className="text-white">L&apos;</span>
-          <HeroHighlight>Intelligence Artificielle</HeroHighlight>
-          <span className="text-white"> au service de votre croissance en Afrique</span>
+          <span className="text-white">Adopter l&apos;IA, ce n&apos;est pas rattraper un retard. </span>
+          <HeroHighlight>C&apos;est construire une avance.</HeroHighlight>
         </>
       }
       subtitle={
         <>
-          AKILI Labs conçoit, déploie et maintient des solutions d&apos;IA concrètes, adaptées à votre
-          secteur, à vos données et aux réalités du marché africain. Du chatbot métier au moteur de
-          prédiction, nous transformons vos données en avantages compétitifs.
+          Population jeune hyper-connectée, Mobile Money sans équivalent, marchés en construction
+          rapide : le terrain africain est unique pour l&apos;IA. AKILI Labs conçoit, déploie et
+          maintient des solutions concrètes, du chatbot métier au moteur de prédiction, adaptées à
+          votre secteur, à vos données et à vos langues.
         </>
       }
     >
@@ -27,7 +27,7 @@ export default function IaHero() {
           href="/contact"
           className="group inline-flex items-center gap-2 px-7 py-4 bg-orange-cta text-white font-semibold rounded-xl hover:bg-orange-cta-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] shadow-lg shadow-orange-900/20"
         >
-          Planifier un échange gratuit
+          Consultation gratuite
           <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
         </Link>
         <a
@@ -39,10 +39,10 @@ export default function IaHero() {
       </div>
       <div className="mt-14 hidden sm:block">
         <Image
-          src="/ia-images/ia-hero.png"
-          alt="Intelligence Artificielle appliquée aux entreprises africaines"
-          width={1536}
-          height={864}
+          src="/ia-images/ia-hero.jpg"
+          alt="Tableau de bord de pilotage commercial zone UEMOA avec prévision de la demande, ventes par ville et alertes, accompagné d'un assistant métier qui répond en français sur les stocks"
+          width={2304}
+          height={1728}
           loading="eager"
           fetchPriority="high"
           sizes="(max-width: 1024px) 90vw, 768px"

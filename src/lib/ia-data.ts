@@ -6,10 +6,9 @@ export const iaProofStats = [
 ];
 
 export const iaValueProps = [
-  { title: "Productivité", desc: "Automatiser les tâches répétitives libère du temps pour la création de valeur." },
-  { title: "Précision", desc: "Des décisions basées sur les données plutôt que sur l'intuition seule." },
-  { title: "Scalabilité", desc: "Servir 100 clients ou 100 000 avec la même infrastructure." },
-  { title: "Compétitivité", desc: "Anticiper les tendances du marché avant vos concurrents." },
+  { title: "Productivité", desc: "Les tâches répétitives (saisie, tri, reporting) absorbées par la machine ; vos équipes sur la relation client et la décision." },
+  { title: "Précision", desc: "Des décisions fondées sur vos données réelles — transactions, Mobile Money, historique terrain — plutôt que sur l'intuition seule." },
+  { title: "Scalabilité", desc: "Servir 100 ou 100 000 clients avec la même infrastructure : le levier des marchés en croissance rapide." },
   { title: "Inclusion", desc: "Des solutions qui fonctionnent en français, dioula, hausa, twi, wolof — pas uniquement en anglais." },
 ];
 
@@ -113,7 +112,7 @@ export const iaPhases = [
 export const iaWhyUs = [
   {
     title: "Souveraineté des données",
-    desc: "Vos données ne servent jamais à entraîner un modèle tiers. Architectures on-premise, cloud privé ou hybride : vos données sensibles ne quittent pas votre périmètre de contrôle.",
+    desc: "Vos données restent chez vous et n'entraînent jamais un modèle tiers.",
   },
   {
     title: "Ancrage africain, expertise globale",
@@ -138,7 +137,7 @@ export const iaKpis = [
   { value: "30+", label: "projets data & IA livrés" },
   { value: "9", label: "secteurs d'activité couverts" },
   { value: "6", label: "pays d'intervention (UEMOA/CEDEAO)" },
-  { value: "4", label: "langues africaines intégrées dans nos modèles NLP" },
+  { value: "4", label: "langues africaines dans nos modèles NLP (dioula, hausa, twi, wolof)" },
 ];
 
 export const iaStack = [

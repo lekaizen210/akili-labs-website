@@ -23,10 +23,10 @@ export default function IaDomains() {
         <FadeUp delay={0.06}>
           <div className="mb-12">
             <Image
-              src="/ia-images/ia-solutions.png"
-              alt="Solutions d'Intelligence Artificielle AKILI Labs"
-              width={1536}
-              height={864}
+              src="/ia-images/ia-dialogue.png"
+              alt="Assistant métier connecté aux documents internes : question sur l'encours client, réponse chiffrée citant ses sources, projet de relance soumis à validation humaine"
+              width={1400}
+              height={900}
               loading="lazy"
               sizes="(max-width: 1024px) 100vw, 1024px"
               className="w-full h-auto rounded-2xl border border-line shadow-md"
@@ -80,10 +80,10 @@ export default function IaDomains() {
                 {d.id === "bi" && (
                   <div className="mt-6">
                     <Image
-                      src="/ia-images/ia-data.png"
-                      alt="Dashboard de Business Intelligence augmentée AKILI Labs"
-                      width={1536}
-                      height={864}
+                      src="/ia-images/ia-decision.png"
+                      alt="Tableau de bord de pilotage commercial : ventes du mois, prévision de la demande à 30 jours avec intervalle de confiance, alertes de stock et d'encours, ventes par ville"
+                      width={1400}
+                      height={900}
                       loading="lazy"
                       sizes="(max-width: 1024px) 100vw, 1024px"
                       className="w-full h-auto rounded-xl border border-line"
