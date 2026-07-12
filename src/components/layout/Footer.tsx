@@ -56,7 +56,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-orange shrink-0" />
-                <a href="mailto:contact@akililabs.io" className="hover:text-white transition-colors">
+                <a href="mailto:contact@akililabs.io" className="inline-block py-1.5 hover:text-white transition-colors">
                   contact@akililabs.io
                 </a>
               </div>
@@ -93,12 +93,12 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
               Expertises
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-0.5">
               {footerLinks.expertises.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-orange transition-colors"
+                    className="inline-block py-1.5 text-sm text-gray-400 hover:text-orange transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -112,12 +112,12 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
               Secteurs
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-0.5">
               {footerLinks.secteurs.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-orange transition-colors"
+                    className="inline-block py-1.5 text-sm text-gray-400 hover:text-orange transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -131,12 +131,12 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
               Entreprise
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-0.5">
               {footerLinks.entreprise.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-orange transition-colors"
+                    className="inline-block py-1.5 text-sm text-gray-400 hover:text-orange transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -146,7 +146,7 @@ export default function Footer() {
             <div className="mt-6">
               <Link
                 href="/contact"
-                className="inline-block px-4 py-2.5 bg-orange text-white text-sm font-semibold rounded-lg hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
+                className="inline-block px-4 py-2.5 bg-orange-cta text-white text-sm font-semibold rounded-lg hover:bg-orange-cta-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
               >
                 Demander un devis →
               </Link>
@@ -171,8 +171,8 @@ export default function Footer() {
             </span>
             <span>RGPD</span>
             <span>OHADA</span>
-            <Link href="/mentions-legales" className="hover:text-gray-300 transition-colors">Mentions légales</Link>
-            <Link href="/confidentialite" className="hover:text-gray-300 transition-colors">Confidentialité</Link>
+            <Link href="/mentions-legales" className="inline-block py-2 hover:text-gray-300 transition-colors">Mentions légales</Link>
+            <Link href="/confidentialite" className="inline-block py-2 hover:text-gray-300 transition-colors">Confidentialité</Link>
           </div>
         </div>
       </div>

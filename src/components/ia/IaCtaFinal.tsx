@@ -60,7 +60,7 @@ export default function IaCtaFinal() {
         >
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-colors shadow-lg shadow-orange-900/30"
+            className="group inline-flex items-center gap-2 px-8 py-4 bg-orange-cta text-white font-semibold rounded-xl hover:bg-orange-cta-hover transition-colors shadow-lg shadow-orange-900/30"
           >
             Planifier un échange gratuit
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />

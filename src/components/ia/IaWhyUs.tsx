@@ -1,8 +1,11 @@
 "use client";
 
+import { ShieldCheck, Map, Target, Layers, Combine } from "lucide-react";
 import { StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import ParticleCanvas from "@/components/ui/ParticleCanvas";
 import { iaWhyUs } from "@/lib/ia-data";
+
+const iaWhyUsIcons = [ShieldCheck, Map, Target, Layers, Combine] as const;
 
 export default function IaWhyUs() {
   return (
@@ -18,13 +21,18 @@ export default function IaWhyUs() {
           </h2>
         </div>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" stagger={0.08}>
-          {iaWhyUs.map((w, i) => (
+          {iaWhyUs.map((w, i) => {
+            const Icon = iaWhyUsIcons[i];
+            return (
             <StaggerItem key={w.title} className="text-center">
-              <div className="text-5xl font-black text-orange mb-4">{String(i + 1).padStart(2, "0")}</div>
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-orange mb-4">
+                <Icon size={26} className="text-white" aria-hidden="true" />
+              </div>
               <h3 className="font-bold text-white mb-3">{w.title}</h3>
               <p className="text-white/70 text-sm leading-relaxed">{w.desc}</p>
             </StaggerItem>
-          ))}
+            );
+          })}
         </StaggerContainer>
       </div>
     </section>

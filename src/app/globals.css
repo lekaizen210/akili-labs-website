@@ -34,6 +34,10 @@
   --color-orange-pale: #FFF4E5;
   /* Teinte de survol des surfaces blanches (accordéons) */
   --color-blue-pale: #F7F9FF;
+  /* Orange accessible pour fonds de boutons : blanc sur #D54400 = 4.51:1 (AA).
+     L'orange charte #FF5500 (3.21:1 sur blanc) reste réservé aux accents décoratifs. */
+  --color-orange-cta: #D54400;
+  --color-orange-cta-hover: #C94200;
 }
 
 * {

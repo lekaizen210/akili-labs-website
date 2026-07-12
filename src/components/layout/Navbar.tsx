@@ -171,7 +171,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/contact"
-              className="px-5 py-2.5 bg-orange text-white text-sm font-semibold rounded-lg hover:bg-orange-hover transition-[background-color,box-shadow,transform] duration-200 ease-out shadow-md hover:shadow-lg hover:-translate-y-px active:scale-[0.97] active:translate-y-0"
+              className="px-5 py-2.5 bg-orange-cta text-white text-sm font-semibold rounded-lg hover:bg-orange-cta-hover transition-[background-color,box-shadow,transform] duration-200 ease-out shadow-md hover:shadow-lg hover:-translate-y-px active:scale-[0.97] active:translate-y-0"
             >
               Discutons de votre projet →
             </Link>
@@ -294,7 +294,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="block w-full text-center px-5 py-3 bg-orange text-white text-sm font-semibold rounded-lg transition-transform duration-150 ease-out active:scale-[0.97]"
+                  className="block w-full text-center px-5 py-3 bg-orange-cta text-white text-sm font-semibold rounded-lg transition-transform duration-150 ease-out active:scale-[0.97]"
                 >
                   Discutons de votre projet →
                 </Link>

@@ -47,7 +47,7 @@ export default function TdCtaFinal() {
           >
             <Link
               href="/contact"
-              className="group flex items-center gap-2 px-8 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-colors duration-200 shadow-lg shadow-orange-900/30"
+              className="group flex items-center gap-2 px-8 py-4 bg-orange-cta text-white font-semibold rounded-xl hover:bg-orange-cta-hover transition-colors duration-200 shadow-lg shadow-orange-900/30"
             >
               Consultation gratuite
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
