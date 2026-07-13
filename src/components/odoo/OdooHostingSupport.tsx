@@ -91,7 +91,7 @@ export default function OdooHostingSupport() {
         <FadeUp delay={0.1} className="mt-14 max-w-4xl mx-auto">
           <Image
             src="/odoo-images/odoo-continuite.png"
-            alt="Supervision de l’instance Odoo : disponibilité de 99,95 % sur 12 mois, incident détecté et résolu en 31 minutes, tickets TMA P1 à P3 traités dans les délais contractuels"
+            alt="Écran de supervision du contrat de maintenance : disponibilité de 99,95 % sur douze mois contre un engagement de 99,5 %, historique hebdomadaire avec un seul incident résolu en 31 minutes, déroulé de cet incident et tickets P1 à P3 avec le respect des délais contractuels"
             width={1400}
             height={900}
             loading="lazy"

@@ -47,7 +47,7 @@ export default function OdooConformite() {
         <FadeUp delay={0.14} className="mb-12 max-w-4xl mx-auto">
           <Image
             src="/odoo-images/odoo-conformite.png"
-            alt="Journal des ventes SYSCOHADA avec écritures lettrées et rapprochées, balance équilibrée, états financiers OHADA générés et TVA de juin calculée automatiquement"
+            alt="Facture client dans la comptabilité Odoo : écritures aux comptes SYSCOHADA 411, 701 et 4431 avec TVA à 18 %, balance équilibrée, lettrage du règlement rapproché du relevé bancaire, états financiers OHADA générés et liasse DSF prête pour la DGI"
             width={1400}
             height={900}
             loading="lazy"

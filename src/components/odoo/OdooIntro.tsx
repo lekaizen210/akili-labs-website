@@ -58,7 +58,7 @@ export default function OdooIntro() {
           <FadeUp delay={0.2}>
             <Image
               src="/odoo-images/odoo-contexte.png"
-              alt="Avant-après : fichiers Excel, commandes WhatsApp et cahiers de stock dispersés, remplacés par les modules Odoo unifiés (Ventes, CRM, Stocks, Achats, Comptabilité, Paie) sur une base unique"
+              alt="Avant-après : un classeur Excel de suivi des ventes avec une commande en doublon et des erreurs #N/A, doublé d’un fil WhatsApp où le dépôt annonce que le stock n’était pas à jour, face au menu des applications Odoo (Ventes, CRM, Inventaire, Achats, Comptabilité, Paie) et à la commande CDE-2026-341 qui réserve le stock, génère la facture et l’écriture comptable"
               width={1400}
               height={1000}
               loading="lazy"

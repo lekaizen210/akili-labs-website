@@ -45,7 +45,7 @@ export default function OdooServices() {
                     </div>
                     <Image
                       src="/odoo-images/odoo-integrations.png"
-                      alt="L'ERP comme place d'échange : module central relié par des flux bidirectionnels à des systèmes bancaires, plateformes e-commerce et services Mobile Money, avec un point de contrôle sur chaque connexion"
+                      alt="Écran des intégrations Odoo : connecteurs Mobile Money (Orange, MTN, Wave), banques SGBCI et BICICI, boutique en ligne et facture normalisée DGI, tous actifs, avec le journal des flux du jour montrant un paiement rapproché, une commande web et une reprise automatique après indisponibilité d’une passerelle"
                       width={1400}
                       height={900}
                       loading="lazy"
