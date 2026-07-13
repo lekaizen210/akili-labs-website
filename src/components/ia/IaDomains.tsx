@@ -24,7 +24,7 @@ export default function IaDomains() {
           <div className="mb-12">
             <Image
               src="/ia-images/ia-dialogue.png"
-              alt="Assistant métier connecté aux documents internes : question sur l'encours client, réponse chiffrée citant ses sources, projet de relance soumis à validation humaine"
+              alt="Assistant métier dans le navigateur : à la question sur l’encours de l’agence de Cocody, il répond 4 850 000 FCFA en citant la balance clients et le journal des ventes, puis prépare un courrier de relance qui reste en brouillon tant que l’utilisateur ne l’a pas validé"
               width={1400}
               height={900}
               loading="lazy"
@@ -81,7 +81,7 @@ export default function IaDomains() {
                   <div className="mt-6">
                     <Image
                       src="/ia-images/ia-decision.png"
-                      alt="Tableau de bord de pilotage commercial : ventes du mois, prévision de la demande à 30 jours avec intervalle de confiance, alertes de stock et d'encours, ventes par ville"
+                      alt="Tableau de bord de prévision : demande hebdomadaire réalisée et prévue avec intervalle de confiance, précision du modèle de 92,4 %, alertes du matin sur le stock critique de Yopougon et les encours clients, ventes par ville et répartition des encaissements par canal"
                       width={1400}
                       height={900}
                       loading="lazy"

@@ -40,7 +40,7 @@ export default function IaHero() {
       <div className="mt-14 hidden sm:block">
         <Image
           src="/ia-images/ia-hero.jpg"
-          alt="Tableau de bord de pilotage commercial zone UEMOA avec prévision de la demande, ventes par ville et alertes, accompagné d'un assistant métier qui répond en français sur les stocks"
+          alt="Écran de pilotage prédictif zone UEMOA : prévision de la demande à 30 jours avec intervalle de confiance et pic de la Tabaski anticipé, à côté de l’assistant métier qui indique le stock restant à Yopougon et prépare un réapprovisionnement soumis à validation"
           width={2304}
           height={1728}
           loading="eager"

@@ -24,7 +24,7 @@ export default function IaMethodology() {
           <div className="mb-16">
             <Image
               src="/ia-images/ia-apprentissage.png"
-              alt="Les cinq étapes, de vos données brutes à la décision quotidienne : nettoyage et structuration, entraînement du modèle, validation métier, mise en production"
+              alt="Cycle de vie du modèle : les cinq étapes de vos données brutes à la décision quotidienne, le tableau comparatif des essais d’entraînement où le modèle explicable l’emporte sur le plus précis, et les quatre contrôles validés avant mise en production dont la recette par les équipes commerciales"
               width={1400}
               height={900}
               loading="lazy"
