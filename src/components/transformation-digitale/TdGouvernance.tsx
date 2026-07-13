@@ -46,7 +46,7 @@ export default function TdGouvernance() {
           <FadeUp delay={0.16}>
             <Image
               src="/transformation-digitale-images/td-bpm.png"
-              alt="Workflow BPM : circuit d'approbation modélisé avec étapes, points de décision et étape automatisée mise en évidence"
+              alt="Circuit d’approbation d’une demande d’achat de 750 000 FCFA : la règle de seuil ajoute automatiquement la direction générale au-delà de 500 000 FCFA, les validations successives sont horodatées, et le journal d’audit inaltérable conserve qui a validé quoi, quand et avec quel commentaire"
               width={1400}
               height={900}
               loading="lazy"

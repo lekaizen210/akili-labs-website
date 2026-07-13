@@ -21,7 +21,7 @@ export default function TdServices() {
           <FadeUp>
             <Image
               src="/transformation-digitale-images/td-dematerialisation.png"
-              alt="Transition de l'archive papier vers la gestion électronique des documents : classement, indexation et recherche"
+              alt="Recherche dans la gestion documentaire : la requête « facture globaltrade juin 2026 » retourne trois résultats en 0,4 seconde, avec les extraits du texte reconnu par OCR surlignés dans le contenu des documents, un aperçu de la facture et sa durée de conservation légale OHADA"
               width={1400}
               height={900}
               loading="lazy"
