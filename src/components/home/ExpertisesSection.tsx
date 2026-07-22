@@ -45,7 +45,7 @@ export default function ExpertisesSection() {
                   className="h-full"
                 >
                   <Link
-                    href={`/expertises/${exp.slug}`}
+                    href={exp.href}
                     className="group relative flex flex-col h-full bg-white border border-line rounded-2xl p-8 hover:border-orange hover:shadow-xl transition-[box-shadow,border-color] duration-300"
                   >
                     {exp.featured && (
