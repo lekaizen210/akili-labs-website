@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Search, X } from "lucide-react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
@@ -193,7 +194,7 @@ export default function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
               <p className="text-4xl mb-4" aria-hidden="true">🔍</p>
               <p className="font-semibold text-navy mb-1">Aucune question ne correspond</p>
               <p className="text-sm text-gray-500">Essayez un autre terme ou consultez nos{" "}
-                <a href="/contact" className="text-orange-dark hover:underline">experts directement</a>.
+                <Link href="/contact" className="text-orange-dark hover:underline">experts directement</Link>.
               </p>
             </motion.div>
           ) : (
