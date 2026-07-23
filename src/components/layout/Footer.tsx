@@ -5,7 +5,7 @@ import { Mail, MapPin, Phone, Linkedin, Facebook } from "lucide-react";
 const footerLinks = {
   expertises: [
     { label: "Transformation Digitale", href: "/expertises/transformation-digitale" },
-    { label: "ERP & Odoo", href: "/expertises/erp" },
+    { label: "ERP & Odoo", href: "/expertises/odoo" },
     { label: "Intelligence Artificielle", href: "/expertises/intelligence-artificielle" },
     { label: "DevSecOps", href: "/expertises/devsecops" },
     { label: "Développement Métiers", href: "/expertises/developpement-metiers" },

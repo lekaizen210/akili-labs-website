@@ -19,6 +19,16 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
 
+  async redirects() {
+    return [
+      {
+        source: "/expertises/erp",
+        destination: "/expertises/odoo",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

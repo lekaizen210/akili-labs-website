@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 const expertisesMenu = [
   { label: "Transformation Digitale", href: "/expertises/transformation-digitale" },
-  { label: "ERP", href: "/expertises/erp" },
+  { label: "ERP & Odoo", href: "/expertises/odoo" },
   { label: "Intelligence Artificielle", href: "/expertises/intelligence-artificielle" },
   { label: "DevSecOps", href: "/expertises/devsecops" },
   { label: "Développement Métiers", href: "/expertises/developpement-metiers" },
@@ -20,16 +20,16 @@ const expertisesMenu = [
 const navLinks = [
   { label: "Accueil", href: "/" },
   { label: "Expertises", href: "/expertises", hasDropdown: true },
-  { label: "Secteurs", href: "/#secteurs" },
   { label: "Références", href: "/references" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "À propos", href: "/a-propos" },
 ];
 
+const mobileOnlyLinks = [{ label: "Carrières", href: "/carrieres" }];
+
 function isActive(href: string, pathname: string): boolean {
   if (href === "/") return pathname === "/";
-  if (href === "/#secteurs") return false;
   if (href === "/expertises") return pathname.startsWith("/expertises");
   return pathname.startsWith(href);
 }
@@ -100,7 +100,8 @@ export default function Navbar() {
                     if (!e.currentTarget.contains(e.relatedTarget)) setExpertisesOpen(false);
                   }}
                 >
-                  <button
+                  <Link
+                    href={link.href}
                     className={cn(
                       "flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-[color,background-color] duration-200",
                       scrolled
@@ -117,7 +118,7 @@ export default function Navbar() {
                       size={14}
                       className={cn("transition-transform duration-200", expertisesOpen && "rotate-180")}
                     />
-                  </button>
+                  </Link>
                   <AnimatePresence>
                     {expertisesOpen && (
                       <motion.div
@@ -128,6 +129,12 @@ export default function Navbar() {
                         style={{ transformOrigin: "top left" }}
                         className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50"
                       >
+                        <Link
+                          href="/expertises"
+                          className="block px-4 py-2.5 text-sm font-semibold text-navy hover:bg-blue-light transition-colors border-b border-gray-100 mb-1"
+                        >
+                          Toutes nos expertises →
+                        </Link>
                         {expertisesMenu.map((item) => (
                           <Link
                             key={item.href}
@@ -252,9 +259,13 @@ export default function Navbar() {
                 );
               })()}
               {/* Expertises (sous-menu développé) */}
-              <p className="px-4 pt-2 pb-1 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                Expertises
-              </p>
+              <Link
+                href="/expertises"
+                onClick={() => setMobileOpen(false)}
+                className="block px-4 pt-2 pb-1 text-xs font-semibold text-gray-500 uppercase tracking-wider hover:text-navy transition-colors"
+              >
+                Expertises →
+              </Link>
               {expertisesMenu.map((item) => (
                 <Link
                   key={item.href}
@@ -271,7 +282,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="border-t border-gray-100 my-2 pt-2">
-                {navLinks.slice(2).map((link) => {
+                {[...navLinks.slice(2), ...mobileOnlyLinks].map((link) => {
                   const active = isActive(link.href, pathname);
                   return (
                     <Link

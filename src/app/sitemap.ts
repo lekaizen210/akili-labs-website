@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const expertiseRoutes: MetadataRoute.Sitemap = expertises.map((e) => ({
-    url: `${BASE_URL}/expertises/${e.slug}`,
+    url: `${BASE_URL}${e.href}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.8,

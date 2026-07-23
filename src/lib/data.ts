@@ -1,6 +1,7 @@
 export const expertises = [
   {
     slug: "transformation-digitale",
+    href: "/expertises/transformation-digitale",
     icon: "Layers",
     title: "Transformation Digitale",
     subtitle: "Modernisez vos processus métiers",
@@ -19,6 +20,7 @@ export const expertises = [
   },
   {
     slug: "erp",
+    href: "/expertises/odoo",
     icon: "Database",
     title: "ERP",
     subtitle: "Intégrez les meilleures solutions ERP",
@@ -37,6 +39,7 @@ export const expertises = [
   },
   {
     slug: "intelligence-artificielle",
+    href: "/expertises/intelligence-artificielle",
     icon: "Brain",
     title: "Intelligence Artificielle",
     subtitle: "Exploitez la puissance de l'IA",
@@ -55,6 +58,7 @@ export const expertises = [
   },
   {
     slug: "devsecops",
+    href: "/expertises/devsecops",
     icon: "Shield",
     title: "DevSecOps",
     subtitle: "Industrialisez votre développement",
@@ -71,6 +75,7 @@ export const expertises = [
   },
   {
     slug: "developpement-metiers",
+    href: "/expertises/developpement-metiers",
     icon: "Code2",
     title: "Développement Métiers",
     subtitle: "Des solutions sur mesure",
@@ -86,6 +91,7 @@ export const expertises = [
   },
   {
     slug: "business-intelligence",
+    href: "/expertises/business-intelligence",
     icon: "BarChart3",
     title: "Business Intelligence",
     subtitle: "Transformez vos données en décisions",
