@@ -3,7 +3,7 @@
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, Clock, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { blogPosts } from "@/lib/data";
 import { l } from "@/lib/i18n-content";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
@@ -18,6 +18,7 @@ const tagColors: Record<string, string> = {
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function BlogSection() {
+  const t = useTranslations("Home.blog");
   const locale = useLocale();
   return (
     <section className="py-24 bg-blue-light" id="blog">
@@ -27,17 +28,17 @@ export default function BlogSection() {
         <FadeUp className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-4">
-              ■ Veille & Insights
+              ■ {t("badge")}
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-navy">
-              Nos insights technologiques
+              {t("title")}
             </h2>
           </div>
           <Link
             href="/blog"
             className="flex items-center gap-2 text-sm font-semibold text-orange-dark hover:underline whitespace-nowrap"
           >
-            Accéder au blog <ArrowRight size={14} />
+            {t("blogLink")} <ArrowRight size={14} />
           </Link>
         </FadeUp>
 
@@ -82,7 +83,7 @@ export default function BlogSection() {
                     <div className="flex items-center gap-4 text-xs text-gray-500">
                       <span className="flex items-center gap-1">
                         <Calendar size={11} />
-                        {new Date(post.date).toLocaleDateString("fr-FR", { day: "numeric", month: "short", year: "numeric" })}
+                        {new Date(post.date).toLocaleDateString(locale === "en" ? "en-US" : "fr-FR", { day: "numeric", month: "short", year: "numeric" })}
                       </span>
                       <span className="flex items-center gap-1">
                         <Clock size={11} />

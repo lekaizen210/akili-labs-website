@@ -8,7 +8,23 @@ import ReferencesSection from "@/components/home/ReferencesSection";
 import SectorsSection from "@/components/home/SectorsSection";
 import BlogSection from "@/components/home/BlogSection";
 import CTABanner from "@/components/home/CTABanner";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Home.meta" });
+  return {
+    // `absolute` bypasses the root layout's "%s | AKILI Labs" template so the
+    // homepage title isn't suffixed twice (it already contains "AKILI Labs").
+    title: { absolute: t("title") },
+    description: t("description"),
+  };
+}
 
 export default async function HomePage({
   params,

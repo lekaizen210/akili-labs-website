@@ -3,7 +3,7 @@
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { references } from "@/lib/data";
 import { l } from "@/lib/i18n-content";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
@@ -19,6 +19,7 @@ const tagColors: Record<string, string> = {
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function ReferencesSection() {
+  const t = useTranslations("Home.references");
   const locale = useLocale();
   return (
     <section className="py-24 bg-white" id="references">
@@ -28,17 +29,17 @@ export default function ReferencesSection() {
         <FadeUp className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-4">
-              ■ Nos réalisations
+              ■ {t("badge")}
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-navy">
-              Ils nous ont fait confiance
+              {t("title")}
             </h2>
           </div>
           <Link
             href="/references"
             className="flex items-center gap-2 text-sm font-semibold text-orange-dark hover:underline whitespace-nowrap"
           >
-            Voir toutes nos références <ArrowRight size={14} />
+            {t("viewAllLink")} <ArrowRight size={14} />
           </Link>
         </FadeUp>
 
@@ -98,13 +99,13 @@ export default function ReferencesSection() {
 
         {/* Bottom CTA */}
         <FadeUp className="text-center mt-12" delay={0.1}>
-          <p className="text-ink mb-4">Votre projet sera notre prochaine référence.</p>
+          <p className="text-ink mb-4">{t("bottomText")}</p>
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-colors shadow-md hover:shadow-lg"
             >
-              Démarrer un projet avec nous →
+              {t("bottomCta")}
             </Link>
           </motion.div>
         </FadeUp>

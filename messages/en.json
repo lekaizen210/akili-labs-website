@@ -64,5 +64,100 @@
       "careers": "Careers",
       "contact": "Contact"
     }
+  },
+  "Home": {
+    "meta": {
+      "title": "AKILI Labs — Digital Transformation, ERP, AI & DevSecOps in Africa",
+      "description": "AKILI Labs helps organizations across the UEMOA zone with their digital transformation: Odoo ERP integration, Artificial Intelligence, DevSecOps, and custom development."
+    },
+    "hero": {
+      "badge": "A leading player in Africa's digital transformation",
+      "titleLine1": "Your partner for",
+      "titleWord1": "Digital",
+      "titleWord2": "Transformation",
+      "titleLine3": "in Africa",
+      "subtitleLine1": "ERP, Artificial Intelligence, DevSecOps, Custom Development",
+      "subtitleLine2": "Solutions that create real value for organizations across the UEMOA zone.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "See our case studies",
+      "techGenerativeAI": "Generative AI"
+    },
+    "problem": {
+      "badge": "What we see on the ground",
+      "title": "The challenges holding back your transformation",
+      "subtitle": "In West Africa, digital transformation runs into specific obstacles that generic solutions don't solve.",
+      "problem1Title": "Fragmented systems",
+      "problem1Desc": "Data scattered across Excel, standalone software, and manual processes. Every decision requires tedious reconciliation.",
+      "problem2Title": "Local regulations overlooked",
+      "problem2Desc": "Standard ERPs don't cover OHADA, UEMOA taxation, or Ivorian labor law. Costly custom development keeps piling up.",
+      "problem3Title": "Ill-suited foreign providers",
+      "problem3Desc": "Solutions designed for other markets, misaligned support, foreign-currency costs, and response times that slow your business down.",
+      "problem4Title": "Underestimated security",
+      "problem4Desc": "Rapid digital growth exposes organizations to real risks. Without DevSecOps or monitoring, the attack surface grows silently.",
+      "footerNote": "At AKILI Labs, we turn these obstacles into growth levers, with solutions calibrated for the African context."
+    },
+    "expertises": {
+      "badge": "Our expertise",
+      "title": "What we do",
+      "subtitle": "Six areas of excellence to support your digital transformation end to end.",
+      "featuredBadge": "Featured",
+      "learnMore": "Learn more"
+    },
+    "stats": {},
+    "approach": {
+      "badge": "Proven methodology",
+      "title": "Our approach",
+      "subtitle": "A structured 8-step process to ensure the success of every project, from initial analysis to ongoing support.",
+      "ctaButton": "Tell us about your project →"
+    },
+    "sectors": {
+      "badge": "Sectors we serve",
+      "title": "Our areas of operation",
+      "subtitle": "Our solutions adapt to the realities of every industry in West Africa."
+    },
+    "references": {
+      "badge": "Our work",
+      "title": "Trusted by our clients",
+      "viewAllLink": "See all our case studies",
+      "bottomText": "Your project will be our next case study.",
+      "bottomCta": "Start a project with us →"
+    },
+    "socialProof": {
+      "sectionLabel": "Trusted by",
+      "testimonialsBadge": "Client testimonials",
+      "testimonialsTitle": "What our clients say",
+      "starsAriaLabel": "{stars} out of 5 stars",
+      "testimonial1Quote": "AKILI Labs transformed our OHADA accounting management with Odoo. Our teams' skills improved remarkably, and closing times were cut in half.",
+      "testimonial1Name": "Kouamé A.",
+      "testimonial1Role": "Finance Director",
+      "testimonial1Company": "Industrial group",
+      "testimonial1Location": "Abidjan, Côte d'Ivoire",
+      "testimonial2Quote": "Their DevSecOps approach secured our CI/CD pipeline and sped up our releases. A responsive team that understands the challenges of a modern IT department in Africa.",
+      "testimonial2Name": "Fatou D.",
+      "testimonial2Role": "Information Systems Director",
+      "testimonial2Company": "UEMOA financial institution",
+      "testimonial2Location": "Dakar, Senegal",
+      "testimonial3Quote": "The Odoo HRIS module deployed by AKILI Labs covers all our payroll and leave management needs, with full compliance with Ivorian labor law. A trusted partner.",
+      "testimonial3Name": "Brice M.",
+      "testimonial3Role": "Human Resources Director",
+      "testimonial3Company": "Services company",
+      "testimonial3Location": "Abidjan, Côte d'Ivoire"
+    },
+    "blog": {
+      "badge": "Tech Watch & Insights",
+      "title": "Our technology insights",
+      "blogLink": "Go to the blog"
+    },
+    "ctaBanner": {
+      "titlePart1": "Ready to accelerate your",
+      "titleAccent": "digital transformation?",
+      "subtitle": "Our experts are available to analyze your needs and propose a solution tailored to your business and regulatory context.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "Download our presentation",
+      "trustItem1": "Response within 24 business hours",
+      "trustItem2": "Free initial consultation",
+      "trustItem3": "Confidentiality guaranteed",
+      "trustItem4": "Certified experts"
+    }
   }
 }

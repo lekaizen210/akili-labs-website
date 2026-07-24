@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 import { stats } from "@/lib/data";
+import { l } from "@/lib/i18n-content";
 import { StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 
 function useCountUp(target: string, inView: boolean) {
@@ -62,6 +64,7 @@ function StatItem({ value, label }: { value: string; label: string }) {
 }
 
 export default function StatsSection() {
+  const locale = useLocale();
   return (
     <section className="py-14 bg-white border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,8 +74,8 @@ export default function StatsSection() {
           delay={0.05}
         >
           {stats.map((s) => (
-            <StaggerItem key={s.label}>
-              <StatItem value={s.value} label={s.label} />
+            <StaggerItem key={l(s.label, "fr")}>
+              <StatItem value={s.value} label={l(s.label, locale)} />
             </StaggerItem>
           ))}
         </StaggerContainer>

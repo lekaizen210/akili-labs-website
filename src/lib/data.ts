@@ -140,17 +140,17 @@ export const expertises = [
 ];
 
 export const sectors = [
-  { name: "Administration publique", icon: "Building2" },
-  { name: "Banque & Assurance", icon: "Landmark" },
-  { name: "Agro-industrie", icon: "Wheat" },
-  { name: "Télécommunications", icon: "Radio" },
-  { name: "Santé", icon: "HeartPulse" },
-  { name: "Éducation", icon: "GraduationCap" },
-  { name: "Industrie", icon: "Factory" },
-  { name: "Commerce", icon: "ShoppingBag" },
-  { name: "Énergie", icon: "Zap" },
-  { name: "Logistique", icon: "Truck" },
-];
+  { name: { fr: "Administration publique", en: "Public Administration" }, icon: "Building2" },
+  { name: { fr: "Banque & Assurance", en: "Banking & Insurance" }, icon: "Landmark" },
+  { name: { fr: "Agro-industrie", en: "Agribusiness" }, icon: "Wheat" },
+  { name: { fr: "Télécommunications", en: "Telecommunications" }, icon: "Radio" },
+  { name: { fr: "Santé", en: "Healthcare" }, icon: "HeartPulse" },
+  { name: { fr: "Éducation", en: "Education" }, icon: "GraduationCap" },
+  { name: { fr: "Industrie", en: "Industry" }, icon: "Factory" },
+  { name: { fr: "Commerce", en: "Trade" }, icon: "ShoppingBag" },
+  { name: { fr: "Énergie", en: "Energy" }, icon: "Zap" },
+  { name: { fr: "Logistique", en: "Logistics" }, icon: "Truck" },
+] satisfies { name: Localized; icon: string }[];
 
 export const references = [
   {
@@ -212,22 +212,22 @@ export const references = [
 ];
 
 export const stats = [
-  { value: "50+", label: "Projets livrés" },
-  { value: "10+", label: "Années d'expertise" },
-  { value: "15+", label: "Secteurs couverts" },
-  { value: "8", label: "Pays UEMOA" },
-];
+  { value: "50+", label: { fr: "Projets livrés", en: "Projects delivered" } },
+  { value: "10+", label: { fr: "Années d'expertise", en: "Years of expertise" } },
+  { value: "15+", label: { fr: "Secteurs couverts", en: "Sectors covered" } },
+  { value: "8", label: { fr: "Pays UEMOA", en: "UEMOA countries" } },
+] satisfies { value: string; label: Localized }[];
 
 export const approach = [
-  { step: 1, title: "Analyse des besoins", icon: "Search" },
-  { step: 2, title: "Audit de l'existant", icon: "ClipboardList" },
-  { step: 3, title: "Conception solution", icon: "PenTool" },
-  { step: 4, title: "Développement", icon: "Code2" },
-  { step: 5, title: "Tests & Validation", icon: "CheckCircle" },
-  { step: 6, title: "Déploiement", icon: "Rocket" },
-  { step: 7, title: "Formation", icon: "GraduationCap" },
-  { step: 8, title: "Support continu", icon: "Headphones" },
-];
+  { step: 1, title: { fr: "Analyse des besoins", en: "Needs analysis" }, icon: "Search" },
+  { step: 2, title: { fr: "Audit de l'existant", en: "Existing systems audit" }, icon: "ClipboardList" },
+  { step: 3, title: { fr: "Conception solution", en: "Solution design" }, icon: "PenTool" },
+  { step: 4, title: { fr: "Développement", en: "Development" }, icon: "Code2" },
+  { step: 5, title: { fr: "Tests & Validation", en: "Testing & Validation" }, icon: "CheckCircle" },
+  { step: 6, title: { fr: "Déploiement", en: "Deployment" }, icon: "Rocket" },
+  { step: 7, title: { fr: "Formation", en: "Training" }, icon: "GraduationCap" },
+  { step: 8, title: { fr: "Support continu", en: "Ongoing support" }, icon: "Headphones" },
+] satisfies { step: number; title: Localized; icon: string }[];
 
 export const values = [
   { name: "Excellence", icon: "Star", desc: "Nous visons la perfection dans chaque livrable." },

@@ -64,5 +64,100 @@
       "careers": "Carrières",
       "contact": "Contact"
     }
+  },
+  "Home": {
+    "meta": {
+      "title": "AKILI Labs — Transformation Digitale, ERP, IA & DevSecOps en Afrique",
+      "description": "AKILI Labs accompagne les organisations de la zone UEMOA dans leur transformation digitale : intégration ERP Odoo, Intelligence Artificielle, DevSecOps et développement sur mesure."
+    },
+    "hero": {
+      "badge": "Acteur de référence de la transformation digitale en Afrique",
+      "titleLine1": "Votre partenaire de",
+      "titleWord1": "Transformation",
+      "titleWord2": "Digitale",
+      "titleLine3": "en Afrique",
+      "subtitleLine1": "ERP, Intelligence Artificielle, DevSecOps, Développement sur mesure",
+      "subtitleLine2": "Des solutions qui créent de la valeur réelle pour les organisations de la zone UEMOA.",
+      "ctaPrimary": "Consultation gratuite",
+      "ctaSecondary": "Voir nos réalisations",
+      "techGenerativeAI": "IA Générative"
+    },
+    "problem": {
+      "badge": "Ce que nous observons sur le terrain",
+      "title": "Les défis qui freinent votre transformation",
+      "subtitle": "En Afrique de l'Ouest, la transformation digitale se heurte à des obstacles spécifiques que les solutions génériques ne résolvent pas.",
+      "problem1Title": "Systèmes fragmentés",
+      "problem1Desc": "Données dispersées entre Excel, logiciels isolés et processus manuels. Chaque décision exige une réconciliation fastidieuse.",
+      "problem2Title": "Normes locales ignorées",
+      "problem2Desc": "Les ERP standards ne couvrent pas OHADA, la fiscalité UEMOA ni le droit du travail ivoirien. Des développements coûteux s'accumulent.",
+      "problem3Title": "Prestataires étrangers inadaptés",
+      "problem3Desc": "Solutions pensées pour d'autres marchés, support décalé, coûts en devises et temps de réponse qui ralentissent votre activité.",
+      "problem4Title": "Sécurité sous-estimée",
+      "problem4Desc": "La croissance digitale rapide expose à des risques réels. Sans DevSecOps ni monitoring, la surface d'attaque grandit en silence.",
+      "footerNote": "Chez AKILI Labs, nous transformons ces obstacles en leviers de croissance, avec des solutions calibrées pour le contexte africain."
+    },
+    "expertises": {
+      "badge": "Nos expertises",
+      "title": "Ce que nous faisons",
+      "subtitle": "Six domaines d'excellence pour accompagner votre transformation digitale de bout en bout.",
+      "featuredBadge": "Vedette",
+      "learnMore": "En savoir plus"
+    },
+    "stats": {},
+    "approach": {
+      "badge": "Méthodologie éprouvée",
+      "title": "Notre approche",
+      "subtitle": "Une démarche structurée en 8 étapes pour garantir la réussite de chaque projet, de l'analyse initiale au support continu.",
+      "ctaButton": "Parlez-nous de votre projet →"
+    },
+    "sectors": {
+      "badge": "Secteurs d'intervention",
+      "title": "Nos domaines d'intervention",
+      "subtitle": "Nos solutions s'adaptent aux réalités de chaque secteur d'activité en Afrique de l'Ouest."
+    },
+    "references": {
+      "badge": "Nos réalisations",
+      "title": "Ils nous ont fait confiance",
+      "viewAllLink": "Voir toutes nos références",
+      "bottomText": "Votre projet sera notre prochaine référence.",
+      "bottomCta": "Démarrer un projet avec nous →"
+    },
+    "socialProof": {
+      "sectionLabel": "Ils nous font confiance",
+      "testimonialsBadge": "Témoignages clients",
+      "testimonialsTitle": "Ce que disent nos clients",
+      "starsAriaLabel": "{stars} étoiles sur 5",
+      "testimonial1Quote": "AKILI Labs a transformé notre gestion comptable OHADA avec Odoo. La montée en compétences de nos équipes a été remarquable et les délais de clôture ont été divisés par deux.",
+      "testimonial1Name": "Kouamé A.",
+      "testimonial1Role": "Directeur Général Finance",
+      "testimonial1Company": "Groupe industriel",
+      "testimonial1Location": "Abidjan, Côte d'Ivoire",
+      "testimonial2Quote": "Leur approche DevSecOps a sécurisé notre pipeline CI/CD et accéléré nos livraisons. Une équipe réactive, qui comprend les enjeux d'une DSI moderne en Afrique.",
+      "testimonial2Name": "Fatou D.",
+      "testimonial2Role": "Directrice des Systèmes d'Information",
+      "testimonial2Company": "Institution financière UEMOA",
+      "testimonial2Location": "Dakar, Sénégal",
+      "testimonial3Quote": "Le module SIRH Odoo déployé par AKILI Labs couvre tous nos besoins paie et congés, avec une conformité totale au droit ivoirien. Un partenaire de confiance.",
+      "testimonial3Name": "Brice M.",
+      "testimonial3Role": "Directeur des Ressources Humaines",
+      "testimonial3Company": "Entreprise de services",
+      "testimonial3Location": "Abidjan, Côte d'Ivoire"
+    },
+    "blog": {
+      "badge": "Veille & Insights",
+      "title": "Nos insights technologiques",
+      "blogLink": "Accéder au blog"
+    },
+    "ctaBanner": {
+      "titlePart1": "Prêt à accélérer votre",
+      "titleAccent": "transformation digitale ?",
+      "subtitle": "Nos experts sont disponibles pour analyser vos besoins et vous proposer une solution adaptée à votre contexte métier et réglementaire.",
+      "ctaPrimary": "Consultation gratuite",
+      "ctaSecondary": "Télécharger notre présentation",
+      "trustItem1": "Réponse sous 24h ouvrées",
+      "trustItem2": "Consultation initiale offerte",
+      "trustItem3": "Confidentialité garantie",
+      "trustItem4": "Experts certifiés"
+    }
   }
 }
