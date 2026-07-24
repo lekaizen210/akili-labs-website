@@ -282,5 +282,102 @@
       "benefit4": "Answers to your technical and functional questions",
       "ctaPrimary": "Free consultation"
     }
+  },
+  "Td": {
+    "meta": {
+      "title": "Digital Transformation in West Africa — IS Audit, IT Master Plan, EDM, BPM",
+      "description": "Information systems audits, IT Master Plan, paperless workflows, EDM, BPM, and IT governance for organizations across the UEMOA zone. Free initial consultation.",
+      "ogTitle": "Digital Transformation Expertise — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "From diagnosis to monitoring: we secure your digital transformation before, during, and after the choice of technology.",
+      "ogImageAlt": "AKILI Labs — Digital Transformation Expertise",
+      "twitterTitle": "Digital Transformation Expertise — AKILI Labs",
+      "twitterDescription": "IS audit, IT Master Plan, paperless workflows, EDM, BPM, and IT governance across the UEMOA zone.",
+      "serviceName": "Digital Transformation Expertise",
+      "serviceDescription": "Information systems audits, IT Master Plan, IS architecture planning, paperless workflows, EDM, BPM, and IT governance.",
+      "breadcrumbHome": "Home",
+      "breadcrumbExpertises": "Expertise",
+      "breadcrumbTd": "Digital Transformation",
+      "offerCatalogName": "Digital Transformation Areas of Intervention"
+    },
+    "hero": {
+      "badge": "Digital Transformation Expertise",
+      "titlePart1": "Most digital transformations fail ",
+      "titleHighlight": "before the first tool is even deployed.",
+      "subtitle": "Without proper scoping, projects fragment: tools that don't talk to each other, investments that don't serve the strategy, teams that don't buy in. AKILI Labs secures your transformation where it's actually decided — diagnosis, prioritization, and monitoring — before, during, and after the choice of technology.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "See our resources"
+    },
+    "roadmapDiagram": {
+      "ariaLabel": "Digital transformation roadmap in 5 steps: Audit, IT Master Plan, IS Architecture Planning, Deployment, Monitoring",
+      "stepAudit": "Audit",
+      "stepPlan": "IT Plan",
+      "stepArchitecture": "Architecture",
+      "stepDeployment": "Deployment",
+      "stepMonitoring": "Monitoring",
+      "footerText": "Everything is decided at the scoping stage — that's where we start."
+    },
+    "intro": {
+      "badge": "The reality on the ground",
+      "title": "Digitizing without scoping just automates the chaos",
+      "paragraph1": "Across the UEMOA zone, the pressure to modernize is real: competitiveness, OHADA regulatory requirements, and the expectations of customers and regulators. But organizations that digitize process by process, tool by tool, without an overall vision, end up with the same result: a fragmented information system that is costly to maintain and reproduces the slowness of paper in digital form.",
+      "calloutTitle": "The causes of failure are rarely technological.",
+      "calloutText": "They are organizational: no mapping of the real processes, prioritization driven by technology trends, and underestimating team adoption.",
+      "paragraph2": "That's why AKILI Labs steps in before any tool is chosen: we audit the current state, build an IT Master Plan prioritized by impact and feasibility, then steer the rollout through to adoption — paperless workflows, process automation, IT governance.",
+      "imageAlt": "Before-and-after: a scanned handwritten purchase order stamped 'pending,' with an empty signature box because the signatory is away on assignment, and the follow-up email thread 'Re: Re: Re: approval?', next to the same process digitized, with every step timestamped from 09:02 to 09:15"
+    },
+    "roadmap": {
+      "badge": "Scoping & Roadmap",
+      "title": "In 5 phases, move from a reactive IS to a managed one",
+      "subtitle": "Each phase produces a tangible deliverable that you validate before moving to the next.",
+      "deliverableLabel": "Deliverable"
+    },
+    "domains": {
+      "badge": "Areas we cover",
+      "title": "Seven levers, one goal: faster, more traceable processes",
+      "subtitle": "And less dependent on key individuals — each lever targets a precise source of friction in your organization."
+    },
+    "services": {
+      "badge": "Beyond the diagnosis",
+      "title": "A transformation only succeeds if your teams make it their own",
+      "imageAlt": "Search in the document management system: the query 'globaltrade invoice june 2026' returns three results in 0.4 seconds, with OCR-recognized text highlighted within the document contents, an invoice preview, and its statutory OHADA retention period"
+    },
+    "gouvernance": {
+      "badge": "Data & Compliance",
+      "title": "Your data is an asset — and a legal responsibility",
+      "paragraph1": "Going paperless shifts obligations, it doesn't remove them: customer, HR, and accounting records remain subject to statutory retention requirements, and personal data protection regulations now apply in most countries across the zone.",
+      "paragraph2": "A serious digital transformation builds these requirements in from the design stage: who can access what, where data is hosted, how it is archived and for how long, and how traceability is guaranteed in the event of an audit or dispute.",
+      "imageAlt": "Approval workflow for a purchase request of 750,000 FCFA: the threshold rule automatically adds senior management above 500,000 FCFA, successive approvals are timestamped, and the tamper-proof audit log records who approved what, when, and with what comment"
+    },
+    "approach": {
+      "badge": "Our methodology",
+      "title": "An approach centered on business value, not technology"
+    },
+    "sectors": {
+      "badge": "Sectors we serve",
+      "title": "Every sector has its critical processes — we start from yours"
+    },
+    "whyUs": {
+      "badge": "What sets us apart",
+      "title": "Why choose AKILI Labs"
+    },
+    "stats": {
+      "title": "AKILI Labs by the numbers"
+    },
+    "resources": {
+      "badge": "Resources & Content",
+      "title": "Go deeper on your digital transformation journey",
+      "comingSoon": "Coming soon"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions about digital transformation"
+    },
+    "ctaFinal": {
+      "titlePart1": "Your transformation deserves better than ",
+      "titleHighlight": "a pile of disconnected tools.",
+      "subtitle": "Let's start with a diagnostic: our experts analyze your current state and propose a roadmap tailored to your business and regulatory context.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "Download our presentation"
+    }
   }
 }

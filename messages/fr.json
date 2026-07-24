@@ -282,5 +282,102 @@
       "benefit4": "Réponse à vos questions techniques et fonctionnelles",
       "ctaPrimary": "Consultation gratuite"
     }
+  },
+  "Td": {
+    "meta": {
+      "title": "Transformation Digitale en Afrique de l'Ouest — Audit SI, SDI, GED, BPM",
+      "description": "Audit des systèmes d'information, Schéma Directeur Informatique, dématérialisation, GED, BPM et gouvernance SI pour les organisations de la zone UEMOA. Consultation initiale gratuite.",
+      "ogTitle": "Expertise Transformation Digitale — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "Du diagnostic au pilotage : nous sécurisons votre transformation digitale avant, pendant et après le choix des technologies.",
+      "ogImageAlt": "AKILI Labs — Expertise Transformation Digitale",
+      "twitterTitle": "Expertise Transformation Digitale — AKILI Labs",
+      "twitterDescription": "Audit SI, SDI, dématérialisation, GED, BPM et gouvernance SI en zone UEMOA.",
+      "serviceName": "Expertise Transformation Digitale",
+      "serviceDescription": "Audit des systèmes d'information, Schéma Directeur Informatique, urbanisation du SI, dématérialisation, GED, BPM et gouvernance SI.",
+      "breadcrumbHome": "Accueil",
+      "breadcrumbExpertises": "Expertises",
+      "breadcrumbTd": "Transformation Digitale",
+      "offerCatalogName": "Domaines d'intervention Transformation Digitale"
+    },
+    "hero": {
+      "badge": "Expertise Transformation Digitale",
+      "titlePart1": "La plupart des transformations digitales échouent ",
+      "titleHighlight": "avant le premier outil déployé.",
+      "subtitle": "Faute de cadrage, les projets se fragmentent : des outils qui ne communiquent pas, des investissements qui ne servent pas la stratégie, des équipes qui n'adhèrent pas. AKILI Labs sécurise votre transformation là où elle se joue vraiment — le diagnostic, la priorisation et le pilotage — avant, pendant et après le choix des technologies.",
+      "ctaPrimary": "Consultation gratuite",
+      "ctaSecondary": "Voir nos ressources"
+    },
+    "roadmapDiagram": {
+      "ariaLabel": "Feuille de route de transformation digitale en 5 étapes : Audit, Schéma Directeur Informatique, Urbanisation, Déploiement, Pilotage",
+      "stepAudit": "Audit",
+      "stepPlan": "SDI",
+      "stepArchitecture": "Urbanisation",
+      "stepDeployment": "Déploiement",
+      "stepMonitoring": "Pilotage",
+      "footerText": "Tout se joue au cadrage — c'est là que nous commençons."
+    },
+    "intro": {
+      "badge": "Le constat",
+      "title": "Digitaliser sans cadrer, c'est automatiser le désordre",
+      "paragraph1": "En zone UEMOA, la pression à la modernisation est réelle : compétitivité, exigences réglementaires OHADA, attentes des clients et des tutelles. Mais les organisations qui digitalisent processus par processus, outil par outil, sans vision d'ensemble, aboutissent au même résultat : un système d'information fragmenté, coûteux à maintenir, et qui reproduit en numérique les lenteurs du papier.",
+      "calloutTitle": "Les causes d'échec sont rarement technologiques.",
+      "calloutText": "Elles sont organisationnelles : absence de cartographie des processus réels, priorisation dictée par les effets de mode, sous-estimation de l'adoption par les équipes.",
+      "paragraph2": "C'est pourquoi AKILI Labs intervient en amont de tout choix d'outil : nous auditons l'existant, nous construisons un Schéma Directeur Informatique priorisé par impact et faisabilité, puis nous pilotons le déploiement jusqu'à l'adoption — dématérialisation, automatisation des processus, gouvernance du SI.",
+      "imageAlt": "Avant-après : le scan d’un bon de commande manuscrit tamponné « en attente », avec une case de signature vide parce que le signataire est en mission, et le fil d’e-mails de relance « Re: Re: Re: validation ? », face au même processus digitalisé où chaque étape est horodatée de 09:02 à 09:15"
+    },
+    "roadmap": {
+      "badge": "Cadrage & Feuille de route",
+      "title": "En 5 phases, passez d'un SI subi à un SI piloté",
+      "subtitle": "Chaque phase produit un livrable tangible que vous validez avant de passer à la suivante.",
+      "deliverableLabel": "Livrable"
+    },
+    "domains": {
+      "badge": "Domaines d'intervention",
+      "title": "Sept leviers, un objectif : des processus plus rapides et traçables",
+      "subtitle": "Et moins dépendants des personnes clés — chaque levier s'attaque à une source précise de friction dans votre organisation."
+    },
+    "services": {
+      "badge": "Au-delà du diagnostic",
+      "title": "Une transformation ne réussit que si vos équipes se l'approprient",
+      "imageAlt": "Recherche dans la gestion documentaire : la requête « facture globaltrade juin 2026 » retourne trois résultats en 0,4 seconde, avec les extraits du texte reconnu par OCR surlignés dans le contenu des documents, un aperçu de la facture et sa durée de conservation légale OHADA"
+    },
+    "gouvernance": {
+      "badge": "Données & Conformité",
+      "title": "Vos données sont un actif — et une responsabilité légale",
+      "paragraph1": "Dématérialiser, c'est déplacer des obligations : les dossiers clients, RH et comptables restent soumis à des obligations légales de conservation, et la réglementation sur la protection des données personnelles s'applique désormais dans la plupart des pays de la zone.",
+      "paragraph2": "Une transformation digitale sérieuse intègre ces exigences dès la conception : qui accède à quoi, où les données sont hébergées, comment elles sont archivées et pendant combien de temps, comment la traçabilité est garantie en cas de contrôle ou de litige.",
+      "imageAlt": "Circuit d’approbation d’une demande d’achat de 750 000 FCFA : la règle de seuil ajoute automatiquement la direction générale au-delà de 500 000 FCFA, les validations successives sont horodatées, et le journal d’audit inaltérable conserve qui a validé quoi, quand et avec quel commentaire"
+    },
+    "approach": {
+      "badge": "Notre méthodologie",
+      "title": "Une approche centrée sur la valeur métier, pas sur la technologie"
+    },
+    "sectors": {
+      "badge": "Secteurs d'intervention",
+      "title": "Chaque secteur a ses processus critiques — nous partons des vôtres"
+    },
+    "whyUs": {
+      "badge": "Ce qui nous distingue",
+      "title": "Pourquoi choisir AKILI Labs"
+    },
+    "stats": {
+      "title": "AKILI Labs en chiffres"
+    },
+    "resources": {
+      "badge": "Ressources & Contenus",
+      "title": "Approfondissez votre démarche de transformation digitale",
+      "comingSoon": "Bientôt disponible"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes sur la transformation digitale"
+    },
+    "ctaFinal": {
+      "titlePart1": "Votre transformation mérite mieux qu'un ",
+      "titleHighlight": "empilement d'outils.",
+      "subtitle": "Commençons par un diagnostic : nos experts analysent votre existant et vous proposent une feuille de route adaptée à votre contexte métier et réglementaire.",
+      "ctaPrimary": "Consultation gratuite",
+      "ctaSecondary": "Télécharger notre présentation"
+    }
   }
 }
