@@ -56,14 +56,14 @@ export const dmPhases = [
     },
   },
   {
-    phase: { fr: "5. Mise en production & TMA", en: "5. Go-Live & TMA" },
+    phase: { fr: "5. Mise en production & TMA", en: "5. Go-Live & TMA (application maintenance)" },
     content: {
       fr: "Déploiement, période de stabilisation, bascule en maintenance avec engagements de service.",
       en: "Deployment, stabilization period, transition to maintenance with service commitments.",
     },
     livrable: {
       fr: "Application en production, contrat TMA",
-      en: "Application in production, TMA (application maintenance) contract",
+      en: "Application in production, TMA contract",
     },
   },
 ] satisfies { phase: Localized; content: Localized; livrable: Localized }[];
@@ -176,7 +176,7 @@ export const dmServices = [
 
 export const dmApproach = [
   {
-    title: { fr: "Sur mesure seulement là où ça différencie", en: "Custom-Built Only Where It Differentiates You" },
+    title: { fr: "Sur mesure seulement là où ça différencie", en: "Custom Only Where It Differentiates You" },
     desc: {
       fr: "Si un standard éprouvé couvre le besoin, nous vous le disons — c'est la doctrine qui protège votre budget.",
       en: "If a proven standard covers the need, we tell you so — it's the doctrine that protects your budget.",
@@ -323,7 +323,7 @@ export const dmResources = [
   {
     title: {
       fr: "Sur mesure ou logiciel du marché : la grille de décision",
-      en: "Custom-built or off-the-shelf: the decision framework",
+      en: "Custom development or off-the-shelf: the decision framework",
     },
     type: { fr: "Guide", en: "Guide" },
     desc: { fr: "La doctrine appliquée à votre cas, sans parti pris.", en: "The doctrine applied to your case, without bias." },
@@ -379,7 +379,7 @@ export const dmFaqs = [
   {
     question: {
       fr: "Sur mesure ou logiciel du marché : comment choisir ?",
-      en: "Custom-built or off-the-shelf: how do you choose?",
+      en: "Custom development or off-the-shelf: how do you choose?",
     },
     answer: {
       fr: "La règle simple : si le besoin est standard (comptabilité, paie, CRM), un logiciel éprouvé comme Odoo est plus rapide et moins cher. Si le processus est différenciant — celui qui fait votre spécificité — le sur mesure devient rationnel : l'outil épouse le processus au lieu de le déformer. Lors du cadrage gratuit, nous vous disons honnêtement dans quel cas vous êtes, y compris quand la bonne réponse est un logiciel du marché.",
