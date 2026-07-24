@@ -968,5 +968,374 @@
       "text": "Your mail client will open with a pre-filled message. Review it, then send it to contact@akililabs.io.",
       "resetButton": "Prepare another message"
     }
+  },
+  "Careers": {
+    "meta": {
+      "title": "Careers — AKILI Labs",
+      "description": "Join AKILI Labs and take part in Africa's digital transformation. Discover our job openings."
+    },
+    "hero": {
+      "badge": "Join the adventure",
+      "titleHighlight": "Build",
+      "titleLine1": " Africa's digital future",
+      "titleLine2": "with us",
+      "subtitle": "AKILI Labs is hiring talented people who are passionate about technology and believe in its impact on the African continent."
+    },
+    "avantages": {
+      "badge": "Why join us",
+      "title": "What we offer",
+      "items": [
+        {
+          "title": "Innovative projects",
+          "desc": "Work on high-impact ERP, AI, and DevSecOps projects across Africa."
+        },
+        {
+          "title": "Continuous training",
+          "desc": "Annual training budget plus access to Odoo, AWS, and GitLab certifications."
+        },
+        {
+          "title": "Collaborative culture",
+          "desc": "A close-knit team, flat management, and transparent communication."
+        },
+        {
+          "title": "Flexibility",
+          "desc": "Partial remote work, flexible hours, and mobility across the UEMOA zone."
+        }
+      ]
+    },
+    "offres": {
+      "badge": "Open positions",
+      "title": "Our job openings",
+      "applyLink": "Apply →",
+      "domainLabels": {
+        "erp": "ERP",
+        "devsecops": "DevSecOps",
+        "ia": "AI",
+        "projet": "Project"
+      },
+      "items": [
+        {
+          "titre": "Senior Odoo ERP Consultant",
+          "type": "CDI (permanent contract)",
+          "lieu": "Abidjan, CI",
+          "domainId": "erp"
+        },
+        {
+          "titre": "Python / Odoo Developer",
+          "type": "CDI",
+          "lieu": "Abidjan, CI",
+          "domainId": "erp"
+        },
+        {
+          "titre": "DevSecOps Engineer",
+          "type": "CDI",
+          "lieu": "Abidjan, CI",
+          "domainId": "devsecops"
+        },
+        {
+          "titre": "Data Scientist / AI",
+          "type": "CDI",
+          "lieu": "Abidjan, CI",
+          "domainId": "ia"
+        },
+        {
+          "titre": "ERP Project Manager",
+          "type": "CDI",
+          "lieu": "Abidjan, CI",
+          "domainId": "projet"
+        }
+      ],
+      "spontaneousTitle": "Don't see a role that fits your profile?",
+      "spontaneousText": "Send us a spontaneous application. We continuously build a pool of talent.",
+      "spontaneousLink": "Spontaneous application →"
+    },
+    "form": {
+      "progress": {
+        "stepLabel": "Step {step} of 2",
+        "step1Title": "Personal information",
+        "step2Title": "Your application",
+        "step1Nav": "Profile",
+        "step2Nav": "Application"
+      },
+      "step1": {
+        "heading": "Your personal information",
+        "nomLabel": "Full name",
+        "nomPlaceholder": "Kouamé Jean-Baptiste",
+        "emailLabel": "Business email",
+        "emailPlaceholder": "jean@example.com",
+        "telephoneLabel": "Phone number",
+        "telephonePlaceholder": "+225 07 00 00 00 00",
+        "villeLabel": "City of residence",
+        "villePlaceholder": "Abidjan",
+        "disponibiliteLabel": "Availability",
+        "disponibilitePlaceholder": "Select your availability",
+        "disponibiliteOptions": [
+          "Immediate",
+          "Within 1 month",
+          "Within 3 months",
+          "To be determined"
+        ],
+        "linkedinLabel": "LinkedIn profile",
+        "linkedinPlaceholder": "https://linkedin.com/in/your-profile",
+        "continueButton": "Continue"
+      },
+      "step2": {
+        "heading": "Your application",
+        "posteLabel": "Position applied for",
+        "postePlaceholder": "Select a position",
+        "posteOptions": [
+          "Senior Odoo ERP Consultant",
+          "Python / Odoo Developer",
+          "DevSecOps Engineer",
+          "Data Scientist / AI",
+          "ERP Project Manager",
+          "Spontaneous application"
+        ],
+        "contratLabel": "Contract type",
+        "contratPlaceholder": "Select a type",
+        "contratOptions": [
+          "CDI",
+          "Freelance / Staffing",
+          "Internship",
+          "Work-study program"
+        ],
+        "experienceLabel": "Years of experience",
+        "experiencePlaceholder": "Select your level",
+        "experienceOptions": [
+          "0 – 2 years (Junior)",
+          "3 – 5 years (Mid-level)",
+          "5 – 10 years (Senior)",
+          "10+ years (Expert)"
+        ],
+        "salaireLabel": "Salary expectations",
+        "salairePlaceholder": "e.g., 800,000 XAF / month",
+        "motivationLabel": "Cover letter",
+        "motivationPlaceholder": "Tell us about yourself, explain your interest in AKILI Labs, and how your profile fits the position.\n\n({min} characters minimum, {max} maximum)",
+        "motivationCounter": "{count} / {max}",
+        "cvLabel": "Resume (PDF, max 5 MB)",
+        "cvPlaceholderEmpty": "Select your resume to have its name added to the email",
+        "cvRemoveAriaLabel": "Remove selected file",
+        "portfolioLabel": "Portfolio / GitHub",
+        "portfolioPlaceholder": "https://github.com/your-profile",
+        "sourceLabel": "How did you hear about us?",
+        "sourcePlaceholder": "Select an option",
+        "sourceOptions": [
+          "LinkedIn",
+          "AKILI Labs website",
+          "Word of mouth / Network",
+          "Job fair / Forum",
+          "Other"
+        ],
+        "summaryTitle": "Your information",
+        "summaryEdit": "Edit",
+        "summaryAvailable": "Available:",
+        "backButton": "Back",
+        "submitButton": "Submit my application",
+        "submitLoading": "Sending…",
+        "disclaimerRich": "Your mail client will prepare an email to <strong>rh@akililabs.io</strong> · Remember to attach your CV in PDF format"
+      },
+      "errors": {
+        "nom": "Name required (minimum 3 characters)",
+        "email": "Invalid email address",
+        "telephone": "Phone number required",
+        "ville": "City required",
+        "disponibilite": "Please indicate your availability",
+        "linkedin": "Invalid URL (must start with https://)",
+        "poste": "Please select a position",
+        "contrat": "Contract type required",
+        "experience": "Experience level required",
+        "motivationMin": "Cover letter required ({min} characters minimum)",
+        "motivationMax": "Maximum {max} characters",
+        "portfolio": "Invalid URL",
+        "cvType": "PDF files only",
+        "cvSize": "File too large (max 5 MB)"
+      },
+      "success": {
+        "title": "Application email ready",
+        "textRich": "Thank you, <strong>{name}</strong>. Your mail client will open with the pre-filled information. Attach your CV in PDF format, then send the email.",
+        "resetButton": "Prepare another application"
+      },
+      "mail": {
+        "subjectPrefix": "[Application]",
+        "nom": "Name",
+        "email": "Email",
+        "telephone": "Phone",
+        "ville": "City",
+        "disponibilite": "Availability",
+        "linkedin": "LinkedIn",
+        "linkedinEmpty": "Not provided",
+        "posteVise": "Position applied for",
+        "typeContrat": "Contract type",
+        "experience": "Experience",
+        "pretentions": "Salary expectations",
+        "pretentionsEmpty": "Not provided",
+        "portfolio": "Portfolio / GitHub",
+        "portfolioEmpty": "Not provided",
+        "source": "Source",
+        "sourceEmpty": "Not provided",
+        "cv": "Selected resume",
+        "cvEmpty": "To be attached to this email",
+        "motivation": "Motivation:",
+        "footer": "Please attach your CV in PDF format before sending if the file is not already attached."
+      }
+    }
+  },
+  "Faq": {
+    "meta": {
+      "title": "FAQ — OHADA ERP, AI, DevSecOps & Digital Transformation",
+      "description": "Answers to all your questions on Odoo ERP integration in the UEMOA zone, OHADA compliance, generative AI for African businesses, DevSecOps, and digital transformation.",
+      "ogTitle": "FAQ AKILI Labs — OHADA ERP, AI & DevSecOps in West Africa",
+      "ogDescription": "All our answers on Odoo ERP, OHADA compliance, generative AI, DevSecOps, and digital transformation in the UEMOA zone.",
+      "ogImageAlt": "FAQ AKILI Labs"
+    },
+    "jsonLd": {
+      "name": "FAQ AKILI Labs — OHADA ERP, AI & DevSecOps",
+      "description": "Frequently asked questions about Odoo ERP integration, OHADA compliance, generative AI, and DevSecOps in West Africa."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "faq": "FAQ"
+    },
+    "hero": {
+      "badge": "Knowledge base",
+      "titlePart1": "Frequently asked ",
+      "titleHighlight": "questions",
+      "subtitle": "All your questions on Odoo ERP, OHADA compliance, generative AI, DevSecOps, and digital transformation in West Africa."
+    },
+    "categories": {
+      "all": "All",
+      "erp": "ERP & OHADA",
+      "digitalTransformation": "Digital Transformation",
+      "ai": "Artificial Intelligence",
+      "devsecops": "DevSecOps",
+      "akili": "AKILI Labs"
+    },
+    "accordion": {
+      "searchPlaceholder": "Search a question…",
+      "searchAriaLabel": "Search the FAQ",
+      "clearSearchAriaLabel": "Clear search",
+      "categoryFilterAriaLabel": "Filter by category",
+      "resultsEmpty": "No question found.",
+      "resultsCountSingular": "{count} question",
+      "resultsCountPlural": "{count} questions",
+      "noResults": {
+        "title": "No question matches",
+        "textRich": "Try another term or consult our <link>experts directly</link>."
+      }
+    },
+    "items": [
+      {
+        "categoryId": "erp",
+        "question": "What is an OHADA-compliant ERP?",
+        "answer": "An OHADA-compliant ERP is an integrated management system that follows the OHADA chart of accounts, in force across 17 African countries including Côte d'Ivoire and Senegal. It automates accounting, revised SYSCOHADA financial statements, and local VAT, eliminating manual reprocessing that is often a source of errors."
+      },
+      {
+        "categoryId": "erp",
+        "question": "Why choose Odoo for a business in West Africa?",
+        "answer": "Odoo is the most widely adopted ERP in the UEMOA zone thanks to its modularity, competitive total cost of ownership, and ability to adapt to local specifics (OHADA, Ivorian labor law, UEMOA VAT). With over 28 million users worldwide, its ecosystem of certified local partners guarantees lasting support."
+      },
+      {
+        "categoryId": "erp",
+        "question": "How long does an Odoo ERP integration project take?",
+        "answer": "A first modular rollout (accounting + inventory) takes 3 to 6 months. A full scope covering HR, OHADA payroll, CRM, and purchasing requires 6 to 12 months, including training. Duration depends on source data quality, the availability of business teams, and the level of customization required."
+      },
+      {
+        "categoryId": "erp",
+        "question": "What is the difference between Odoo Community and Odoo Enterprise?",
+        "answer": "Odoo Community is open-source and free. Odoo Enterprise adds advanced modules (payroll, e-signature, multi-company consolidation), official support from Odoo S.A., guaranteed security updates, and native mobile apps. AKILI Labs recommends Enterprise for organizations with more than 20 users or complex HR and OHADA payroll needs."
+      },
+      {
+        "categoryId": "erp",
+        "question": "How does data migration from a legacy system work?",
+        "answer": "Migration follows 4 steps: audit and mapping of source data, cleansing and transformation into Odoo's format, loading into a test environment with business validation, then cutover to production. AKILI Labs favors progressive imports and cross-consistency checks to avoid data loss or duplicates."
+      },
+      {
+        "categoryId": "digitalTransformation",
+        "question": "Where should you start your digital transformation?",
+        "answer": "Digital transformation starts with an audit of the current setup: process mapping, identification of friction points, and potential gains. AKILI Labs produces an IT Master Plan (Schéma Directeur Informatique) that prioritizes initiatives by business impact and feasibility, factoring in UEMOA budget constraints."
+      },
+      {
+        "categoryId": "digitalTransformation",
+        "question": "What is an EDM (Electronic Document Management) system?",
+        "answer": "An EDM system digitizes, classifies, indexes, and controls access to company documents. It eliminates paper archives, speeds up document search, and secures data. In the UEMOA zone, it is especially useful for client, HR, and accounting files subject to legal retention obligations."
+      },
+      {
+        "categoryId": "digitalTransformation",
+        "question": "How do you choose an IT partner in West Africa?",
+        "answer": "A good IT partner in West Africa must master the local context: OHADA regulations, variable connectivity, and budget constraints in XAF. Check references in your industry, post-deployment support capacity, local presence for on-site interventions, and the team's technical certifications."
+      },
+      {
+        "categoryId": "digitalTransformation",
+        "question": "What is BPM and what is it used for?",
+        "answer": "BPM (Business Process Management) models, automates, and optimizes business processes. It maps workflows, identifies bottlenecks, and implements automated workflows: approvals, notifications, escalations. The result: faster, more traceable processes that depend less on key individuals."
+      },
+      {
+        "categoryId": "ai",
+        "question": "How can AI help my business in Africa?",
+        "answer": "AI creates value on concrete use cases: automated credit file analysis (−94% turnaround time observed at a UEMOA client bank), support chatbots in French and local languages, document OCR, inventory forecasting, and accounting anomaly detection. The starting point is always a measurable business problem."
+      },
+      {
+        "categoryId": "ai",
+        "question": "What is a private LLM and why use one?",
+        "answer": "A private LLM (Large Language Model) is an AI model deployed on your own infrastructure or a dedicated cloud, with no data shared with third parties. It guarantees the confidentiality of customer, HR, and financial data. AKILI Labs deploys solutions based on Ollama, LLaMA, or Mistral, hosted in your controlled environment."
+      },
+      {
+        "categoryId": "ai",
+        "question": "What is RAG (Retrieval-Augmented Generation)?",
+        "answer": "RAG connects an AI model to your own data: internal documents, knowledge base, ERP. The AI first searches your sources, then generates an accurate, traceable answer without hallucination. It is the recommended method for deploying a reliable document assistant or business chatbot on private data."
+      },
+      {
+        "categoryId": "ai",
+        "question": "Is generative AI secure for enterprise data?",
+        "answer": "Generative AI is secure when properly architected. AKILI Labs recommends models deployed on-premises or in a dedicated VPC, with per-client isolation, request logging, and granular access control. Third-party cloud APIs (ChatGPT, Gemini) are not recommended for sensitive data without a prior risk analysis."
+      },
+      {
+        "categoryId": "devsecops",
+        "question": "What is DevSecOps?",
+        "answer": "DevSecOps embeds security at every stage of the software development lifecycle: design, code, testing, deployment, production. Unlike the traditional approach where security comes in at the end of a project, DevSecOps detects vulnerabilities early, reduces remediation costs, and strengthens trust with customers and partners."
+      },
+      {
+        "categoryId": "devsecops",
+        "question": "Why containerize my applications with Docker?",
+        "answer": "Docker packages an application with all its dependencies into a portable container. The result: identical environments from development to production, reproducible deployments, service isolation, and easier scaling. Paired with Kubernetes, it lets you manage dozens of services in an automated way, with 10× less deployment time."
+      },
+      {
+        "categoryId": "devsecops",
+        "question": "What is Infrastructure as Code (IaC)?",
+        "answer": "IaC consists of describing and provisioning your infrastructure (servers, networks, databases) through version-controlled code files (Terraform, Ansible). Your environments become reproducible, auditable, and deployable in minutes. DEV, QA, and PROD stay consistently aligned, eliminating bugs caused by configuration drift."
+      },
+      {
+        "categoryId": "devsecops",
+        "question": "What is the difference between CI and CD?",
+        "answer": "CI (Continuous Integration) automates testing and builds on every code commit: errors are detected in under 10 minutes. CD (Continuous Deployment) automatically pushes validated code to target environments. Together, CI/CD reduce delivery times from weeks to hours while maintaining quality."
+      },
+      {
+        "categoryId": "akili",
+        "question": "Which countries does AKILI Labs operate in?",
+        "answer": "AKILI Labs operates in the 8 countries of the UEMOA zone: Côte d'Ivoire, Senegal, Mali, Burkina Faso, Niger, Togo, Benin, and Guinea-Bissau. Our headquarters is in Abidjan. For remote projects, we operate across the entire ECOWAS zone and also support French organizations with subsidiaries in West Africa."
+      },
+      {
+        "categoryId": "akili",
+        "question": "How do I start a project with AKILI Labs?",
+        "answer": "Three steps: (1) Contact us by email or online form, with a response within 24 business hours. (2) A free scoping consultation: we analyze your needs, context, and budget constraints. (3) A technical and financial proposal within 5 business days. No commitment on your part before you approve the proposal."
+      },
+      {
+        "categoryId": "akili",
+        "question": "Do you offer TMA (application maintenance) services?",
+        "answer": "Yes. AKILI Labs provides ongoing TMA for your systems with contractual SLAs: P1 incidents resolved within 4h, P2 within 24h. Our TMA contracts include proactive monitoring, security updates, Odoo patches, minor enhancements, and a dedicated project manager. P1 SLA compliance rate: 100% over the past 12 months."
+      },
+      {
+        "categoryId": "akili",
+        "question": "What is your pricing approach?",
+        "answer": "Our services are offered on a time-and-materials basis (daily rate) or as a fixed-price package. For ERP projects, we offer CAPEX (upfront investment) or OPEX (monthly subscription) plans suited to the cash-flow constraints of UEMOA organizations. The initial consultation is free and non-binding. Quotes within 5 business days."
+      }
+    ],
+    "cta": {
+      "title": "Don't see your question listed?",
+      "textRich": "Our experts respond within <strong>24 business hours</strong>. The initial consultation is entirely free and non-binding.",
+      "askButton": "Ask a question",
+      "readArticles": "Read our articles",
+      "quickAccessLabel": "Quick access by topic"
+    }
   }
 }

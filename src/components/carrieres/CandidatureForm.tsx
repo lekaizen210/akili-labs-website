@@ -3,18 +3,10 @@
 import { useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, ArrowLeft, CheckCircle, Upload, X, User, Briefcase } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
-
-const POSTES = [
-  "Consultant ERP Odoo Senior",
-  "Développeur Python / Odoo",
-  "Ingénieur DevSecOps",
-  "Data Scientist / IA",
-  "Chef de projet ERP",
-  "Candidature spontanée",
-];
 
 type FormData = {
   // Étape 1
@@ -40,12 +32,12 @@ type Errors = Partial<Record<keyof FormData, string>>;
 const MOTIVATION_MAX = 1500;
 const MOTIVATION_MIN = 100;
 
-function ProgressBar({ step }: { step: 1 | 2 }) {
+function ProgressBar({ step, t }: { step: 1 | 2; t: ReturnType<typeof useTranslations> }) {
   return (
     <div className="mb-8">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-xs font-semibold text-ink">Étape {step} sur 2</span>
-        <span className="text-xs text-gray-500">{step === 1 ? "Informations personnelles" : "Votre candidature"}</span>
+        <span className="text-xs font-semibold text-ink">{t("form.progress.stepLabel", { step })}</span>
+        <span className="text-xs text-gray-500">{step === 1 ? t("form.progress.step1Title") : t("form.progress.step2Title")}</span>
       </div>
       <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
         <div
@@ -55,8 +47,8 @@ function ProgressBar({ step }: { step: 1 | 2 }) {
       </div>
       <div className="flex justify-between mt-2">
         {[
-          { n: 1, label: "Profil", Icon: User },
-          { n: 2, label: "Candidature", Icon: Briefcase },
+          { n: 1, label: t("form.progress.step1Nav"), Icon: User },
+          { n: 2, label: t("form.progress.step2Nav"), Icon: Briefcase },
         ].map(({ n, label }) => (
           <div key={n} className="flex items-center gap-1.5">
             <div className={cn(
@@ -100,11 +92,18 @@ const inputCls = (error?: string) => cn(
 );
 
 export default function CandidatureForm({ posteInitial }: { posteInitial?: string }) {
+  const t = useTranslations("Careers");
   const [step, setStep] = useState<1 | 2>(1);
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Errors>({});
   const fileRef = useRef<HTMLInputElement>(null);
+
+  const disponibiliteOptions = t.raw("form.step1.disponibiliteOptions") as string[];
+  const posteOptions = t.raw("form.step2.posteOptions") as string[];
+  const contratOptions = t.raw("form.step2.contratOptions") as string[];
+  const experienceOptions = t.raw("form.step2.experienceOptions") as string[];
+  const sourceOptions = t.raw("form.step2.sourceOptions") as string[];
 
   const [form, setForm] = useState<FormData>({
     nom: "", email: "", telephone: "", linkedin: "", ville: "", disponibilite: "",
@@ -121,26 +120,26 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
   // ── Validation étape 1 ──
   function validateStep1(): Errors {
     const e: Errors = {};
-    if (!form.nom.trim() || form.nom.trim().length < 3) e.nom = "Nom requis (3 caractères minimum)";
-    if (!form.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) e.email = "Adresse email invalide";
-    if (!form.telephone.trim() || form.telephone.trim().length < 8) e.telephone = "Numéro de téléphone requis";
-    if (!form.ville.trim() || form.ville.trim().length < 2) e.ville = "Ville requise";
-    if (!form.disponibilite) e.disponibilite = "Veuillez indiquer votre disponibilité";
-    if (form.linkedin && !form.linkedin.match(/^https?:\/\/.+/)) e.linkedin = "URL invalide (doit commencer par https://)";
+    if (!form.nom.trim() || form.nom.trim().length < 3) e.nom = t("form.errors.nom");
+    if (!form.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) e.email = t("form.errors.email");
+    if (!form.telephone.trim() || form.telephone.trim().length < 8) e.telephone = t("form.errors.telephone");
+    if (!form.ville.trim() || form.ville.trim().length < 2) e.ville = t("form.errors.ville");
+    if (!form.disponibilite) e.disponibilite = t("form.errors.disponibilite");
+    if (form.linkedin && !form.linkedin.match(/^https?:\/\/.+/)) e.linkedin = t("form.errors.linkedin");
     return e;
   }
 
   // ── Validation étape 2 ──
   function validateStep2(): Errors {
     const e: Errors = {};
-    if (!form.poste) e.poste = "Veuillez sélectionner un poste";
-    if (!form.contrat) e.contrat = "Type de contrat requis";
-    if (!form.experience) e.experience = "Niveau d'expérience requis";
+    if (!form.poste) e.poste = t("form.errors.poste");
+    if (!form.contrat) e.contrat = t("form.errors.contrat");
+    if (!form.experience) e.experience = t("form.errors.experience");
     if (!form.motivation.trim() || form.motivation.length < MOTIVATION_MIN)
-      e.motivation = `Lettre de motivation requise (${MOTIVATION_MIN} caractères minimum)`;
+      e.motivation = t("form.errors.motivationMin", { min: MOTIVATION_MIN });
     if (form.motivation.length > MOTIVATION_MAX)
-      e.motivation = `Maximum ${MOTIVATION_MAX} caractères`;
-    if (form.portfolio && !form.portfolio.match(/^https?:\/\/.+/)) e.portfolio = "URL invalide";
+      e.motivation = t("form.errors.motivationMax", { max: MOTIVATION_MAX });
+    if (form.portfolio && !form.portfolio.match(/^https?:\/\/.+/)) e.portfolio = t("form.errors.portfolio");
     return e;
   }
 
@@ -157,28 +156,28 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
     const e = validateStep2();
     if (Object.keys(e).length > 0) { setErrors(e); return; }
     setLoading(true);
-    const subject = encodeURIComponent(`[Candidature] ${form.poste} - ${form.nom}`);
+    const subject = encodeURIComponent(`${t("form.mail.subjectPrefix")} ${form.poste} - ${form.nom}`);
     const body = encodeURIComponent(
       [
-        `Nom : ${form.nom}`,
-        `Email : ${form.email}`,
-        `Téléphone : ${form.telephone}`,
-        `Ville : ${form.ville}`,
-        `Disponibilité : ${form.disponibilite}`,
-        `LinkedIn : ${form.linkedin || "Non renseigné"}`,
+        `${t("form.mail.nom")} : ${form.nom}`,
+        `${t("form.mail.email")} : ${form.email}`,
+        `${t("form.mail.telephone")} : ${form.telephone}`,
+        `${t("form.mail.ville")} : ${form.ville}`,
+        `${t("form.mail.disponibilite")} : ${form.disponibilite}`,
+        `${t("form.mail.linkedin")} : ${form.linkedin || t("form.mail.linkedinEmpty")}`,
         "",
-        `Poste visé : ${form.poste}`,
-        `Type de contrat : ${form.contrat}`,
-        `Expérience : ${form.experience}`,
-        `Prétentions salariales : ${form.salaire || "Non renseignées"}`,
-        `Portfolio / GitHub : ${form.portfolio || "Non renseigné"}`,
-        `Source : ${form.source || "Non renseignée"}`,
-        `CV sélectionné : ${form.cv?.name || "À joindre à cet email"}`,
+        `${t("form.mail.posteVise")} : ${form.poste}`,
+        `${t("form.mail.typeContrat")} : ${form.contrat}`,
+        `${t("form.mail.experience")} : ${form.experience}`,
+        `${t("form.mail.pretentions")} : ${form.salaire || t("form.mail.pretentionsEmpty")}`,
+        `${t("form.mail.portfolio")} : ${form.portfolio || t("form.mail.portfolioEmpty")}`,
+        `${t("form.mail.source")} : ${form.source || t("form.mail.sourceEmpty")}`,
+        `${t("form.mail.cv")} : ${form.cv?.name || t("form.mail.cvEmpty")}`,
         "",
-        "Motivation :",
+        t("form.mail.motivation"),
         form.motivation,
         "",
-        "Merci de joindre votre CV PDF avant l'envoi si le fichier n'est pas déjà attaché.",
+        t("form.mail.footer"),
       ].join("\n")
     );
     window.location.href = `mailto:rh@akililabs.io?subject=${subject}&body=${body}`;
@@ -191,11 +190,11 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
     const file = ev.target.files?.[0] ?? null;
     if (file) {
       if (file.type !== "application/pdf") {
-        setErrors((p) => ({ ...p, cv: "Fichier PDF uniquement" }));
+        setErrors((p) => ({ ...p, cv: t("form.errors.cvType") }));
         return;
       }
       if (file.size > 5 * 1024 * 1024) {
-        setErrors((p) => ({ ...p, cv: "Fichier trop volumineux (max 5 Mo)" }));
+        setErrors((p) => ({ ...p, cv: t("form.errors.cvSize") }));
         return;
       }
     }
@@ -222,16 +221,18 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           >
             <CheckCircle size={32} className="text-green-500" />
           </motion.div>
-          <h2 className="text-2xl font-bold text-navy">Email de candidature préparé</h2>
+          <h2 className="text-2xl font-bold text-navy">{t("form.success.title")}</h2>
           <p className="text-ink max-w-sm">
-            Merci <strong>{form.nom.split(" ")[0]}</strong>. Votre messagerie s&apos;ouvre avec les
-            informations préremplies. Joignez votre CV PDF, puis envoyez l&apos;email.
+            {t.rich("form.success.textRich", {
+              name: form.nom.split(" ")[0],
+              strong: (chunks) => <strong>{chunks}</strong>,
+            })}
           </p>
           <button
             onClick={() => { setSent(false); setStep(1); setForm({ nom:"",email:"",telephone:"",linkedin:"",ville:"",disponibilite:"",poste:posteInitial??"",contrat:"",experience:"",motivation:"",cv:null,portfolio:"",salaire:"",source:"" }); }}
             className="px-5 py-2.5 bg-orange text-white rounded-xl font-medium hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
           >
-            Préparer une autre candidature
+            {t("form.success.resetButton")}
           </button>
         </motion.div>
       ) : (
@@ -244,7 +245,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           onSubmit={handleSubmit}
           noValidate
         >
-      <ProgressBar step={step} />
+      <ProgressBar step={step} t={t} />
 
       <AnimatePresence mode="wait">
       {/* ════════ ÉTAPE 1 ════════ */}
@@ -257,11 +258,11 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           transition={{ duration: 0.25, ease }}
           className="space-y-5"
         >
-          <h2 className="text-lg font-bold text-navy mb-1">Vos informations personnelles</h2>
+          <h2 className="text-lg font-bold text-navy mb-1">{t("form.step1.heading")}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <Field id="nom" label="Nom complet" required error={errors.nom}>
+            <Field id="nom" label={t("form.step1.nomLabel")} required error={errors.nom}>
               <input
-                id="nom" type="text" placeholder="Kouamé Jean-Baptiste"
+                id="nom" type="text" placeholder={t("form.step1.nomPlaceholder")}
                 autoComplete="name" maxLength={100}
                 aria-invalid={errors.nom ? true : undefined}
                 aria-describedby={errors.nom ? "nom-error" : undefined}
@@ -269,9 +270,9 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
                 className={inputCls(errors.nom)}
               />
             </Field>
-            <Field id="email" label="Email professionnel" required error={errors.email}>
+            <Field id="email" label={t("form.step1.emailLabel")} required error={errors.email}>
               <input
-                id="email" type="email" placeholder="jean@exemple.com"
+                id="email" type="email" placeholder={t("form.step1.emailPlaceholder")}
                 autoComplete="email" inputMode="email" maxLength={254}
                 aria-invalid={errors.email ? true : undefined}
                 aria-describedby={errors.email ? "email-error" : undefined}
@@ -279,9 +280,9 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
                 className={inputCls(errors.email)}
               />
             </Field>
-            <Field id="telephone" label="Téléphone" required error={errors.telephone}>
+            <Field id="telephone" label={t("form.step1.telephoneLabel")} required error={errors.telephone}>
               <input
-                id="telephone" type="tel" placeholder="+225 07 00 00 00 00"
+                id="telephone" type="tel" placeholder={t("form.step1.telephonePlaceholder")}
                 autoComplete="tel" inputMode="tel" maxLength={30}
                 aria-invalid={errors.telephone ? true : undefined}
                 aria-describedby={errors.telephone ? "telephone-error" : undefined}
@@ -289,9 +290,9 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
                 className={inputCls(errors.telephone)}
               />
             </Field>
-            <Field id="ville" label="Ville de résidence" required error={errors.ville}>
+            <Field id="ville" label={t("form.step1.villeLabel")} required error={errors.ville}>
               <input
-                id="ville" type="text" placeholder="Abidjan"
+                id="ville" type="text" placeholder={t("form.step1.villePlaceholder")}
                 maxLength={80}
                 aria-invalid={errors.ville ? true : undefined}
                 aria-describedby={errors.ville ? "ville-error" : undefined}
@@ -301,7 +302,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
             </Field>
           </div>
 
-          <Field id="disponibilite" label="Disponibilité" required error={errors.disponibilite}>
+          <Field id="disponibilite" label={t("form.step1.disponibiliteLabel")} required error={errors.disponibilite}>
             <select
               id="disponibilite"
               aria-invalid={errors.disponibilite ? true : undefined}
@@ -309,17 +310,14 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
               value={form.disponibilite} onChange={(e) => { set("disponibilite", e.target.value); clearError("disponibilite"); }}
               className={inputCls(errors.disponibilite)}
             >
-              <option value="">Sélectionnez votre disponibilité</option>
-              <option>Immédiate</option>
-              <option>Sous 1 mois</option>
-              <option>Sous 3 mois</option>
-              <option>À définir</option>
+              <option value="">{t("form.step1.disponibilitePlaceholder")}</option>
+              {disponibiliteOptions.map((o) => <option key={o}>{o}</option>)}
             </select>
           </Field>
 
-          <Field id="linkedin" label="Profil LinkedIn" error={errors.linkedin}>
+          <Field id="linkedin" label={t("form.step1.linkedinLabel")} error={errors.linkedin}>
             <input
-              id="linkedin" type="url" placeholder="https://linkedin.com/in/votre-profil"
+              id="linkedin" type="url" placeholder={t("form.step1.linkedinPlaceholder")}
               autoComplete="url" inputMode="url" maxLength={200}
               aria-invalid={errors.linkedin ? true : undefined}
               aria-describedby={errors.linkedin ? "linkedin-error" : undefined}
@@ -332,7 +330,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
             type="button" onClick={handleNext}
             className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] shadow-md"
           >
-            Continuer <ArrowRight size={16} />
+            {t("form.step1.continueButton")} <ArrowRight size={16} />
           </button>
         </motion.div>
       )}
@@ -347,10 +345,10 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           transition={{ duration: 0.25, ease }}
           className="space-y-5"
         >
-          <h2 className="text-lg font-bold text-navy mb-1">Votre candidature</h2>
+          <h2 className="text-lg font-bold text-navy mb-1">{t("form.step2.heading")}</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <Field id="poste" label="Poste visé" required error={errors.poste}>
+            <Field id="poste" label={t("form.step2.posteLabel")} required error={errors.poste}>
               <select
                 id="poste"
                 aria-invalid={errors.poste ? true : undefined}
@@ -358,12 +356,12 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
                 value={form.poste} onChange={(e) => { set("poste", e.target.value); clearError("poste"); }}
                 className={inputCls(errors.poste)}
               >
-                <option value="">Sélectionnez un poste</option>
-                {POSTES.map((p) => <option key={p}>{p}</option>)}
+                <option value="">{t("form.step2.postePlaceholder")}</option>
+                {posteOptions.map((p) => <option key={p}>{p}</option>)}
               </select>
             </Field>
 
-            <Field id="contrat" label="Type de contrat" required error={errors.contrat}>
+            <Field id="contrat" label={t("form.step2.contratLabel")} required error={errors.contrat}>
               <select
                 id="contrat"
                 aria-invalid={errors.contrat ? true : undefined}
@@ -371,15 +369,12 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
                 value={form.contrat} onChange={(e) => { set("contrat", e.target.value); clearError("contrat"); }}
                 className={inputCls(errors.contrat)}
               >
-                <option value="">Sélectionnez un type</option>
-                <option>CDI</option>
-                <option>Freelance / Régie</option>
-                <option>Stage</option>
-                <option>Alternance</option>
+                <option value="">{t("form.step2.contratPlaceholder")}</option>
+                {contratOptions.map((o) => <option key={o}>{o}</option>)}
               </select>
             </Field>
 
-            <Field id="experience" label="Années d'expérience" required error={errors.experience}>
+            <Field id="experience" label={t("form.step2.experienceLabel")} required error={errors.experience}>
               <select
                 id="experience"
                 aria-invalid={errors.experience ? true : undefined}
@@ -387,17 +382,14 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
                 value={form.experience} onChange={(e) => { set("experience", e.target.value); clearError("experience"); }}
                 className={inputCls(errors.experience)}
               >
-                <option value="">Sélectionnez votre niveau</option>
-                <option>0 – 2 ans (Junior)</option>
-                <option>3 – 5 ans (Confirmé)</option>
-                <option>5 – 10 ans (Senior)</option>
-                <option>10 ans et + (Expert)</option>
+                <option value="">{t("form.step2.experiencePlaceholder")}</option>
+                {experienceOptions.map((o) => <option key={o}>{o}</option>)}
               </select>
             </Field>
 
-            <Field id="salaire" label="Prétentions salariales" error={errors.salaire}>
+            <Field id="salaire" label={t("form.step2.salaireLabel")} error={errors.salaire}>
               <input
-                id="salaire" type="text" placeholder="ex : 800 000 XAF / mois"
+                id="salaire" type="text" placeholder={t("form.step2.salairePlaceholder")}
                 maxLength={60}
                 value={form.salaire} onChange={(e) => set("salaire", e.target.value)}
                 className={inputCls()}
@@ -406,7 +398,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           </div>
 
           {/* Lettre de motivation */}
-          <Field id="motivation" label="Lettre de motivation" required error={errors.motivation}>
+          <Field id="motivation" label={t("form.step2.motivationLabel")} required error={errors.motivation}>
             <div className="relative">
               <textarea
                 id="motivation"
@@ -414,7 +406,7 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
                 maxLength={MOTIVATION_MAX}
                 aria-invalid={errors.motivation ? true : undefined}
                 aria-describedby={errors.motivation ? "motivation-error" : undefined}
-                placeholder={`Présentez-vous, expliquez votre intérêt pour AKILI Labs et en quoi votre profil correspond au poste visé.\n\n(${MOTIVATION_MIN} caractères minimum, ${MOTIVATION_MAX} maximum)`}
+                placeholder={t("form.step2.motivationPlaceholder", { min: MOTIVATION_MIN, max: MOTIVATION_MAX })}
                 value={form.motivation}
                 onChange={(e) => { set("motivation", e.target.value); clearError("motivation"); }}
                 className={cn(inputCls(errors.motivation), "resize-none")}
@@ -424,13 +416,13 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
                 form.motivation.length > MOTIVATION_MAX ? "text-red-500 font-semibold" :
                 form.motivation.length >= MOTIVATION_MIN ? "text-green-600" : "text-gray-500"
               )}>
-                {form.motivation.length} / {MOTIVATION_MAX}
+                {t("form.step2.motivationCounter", { count: form.motivation.length, max: MOTIVATION_MAX })}
               </span>
             </div>
           </Field>
 
           {/* Upload CV */}
-          <Field id="cv" label="CV (PDF, max 5 Mo)" error={errors.cv}>
+          <Field id="cv" label={t("form.step2.cvLabel")} error={errors.cv}>
             <div
               onClick={() => fileRef.current?.click()}
               className={cn(
@@ -442,14 +434,14 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
             >
               <Upload size={18} className={form.cv ? "text-green-600" : "text-orange-dark"} />
               <span className={cn("text-sm flex-1 truncate", form.cv ? "text-green-700 font-medium" : "text-gray-500")}>
-                {form.cv ? form.cv.name : "Sélectionnez votre CV pour reporter son nom dans l'email"}
+                {form.cv ? form.cv.name : t("form.step2.cvPlaceholderEmpty")}
               </span>
               {form.cv && (
                 <button
                   type="button"
                   onClick={(e) => { e.stopPropagation(); set("cv", null); if (fileRef.current) fileRef.current.value = ""; }}
                   className="text-gray-500 hover:text-red-500 transition-colors"
-                  aria-label="Retirer le fichier sélectionné"
+                  aria-label={t("form.step2.cvRemoveAriaLabel")}
                 >
                   <X size={15} />
                 </button>
@@ -465,9 +457,9 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
 
           {/* Portfolio & source */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <Field id="portfolio" label="Portfolio / GitHub" error={errors.portfolio}>
+            <Field id="portfolio" label={t("form.step2.portfolioLabel")} error={errors.portfolio}>
               <input
-                id="portfolio" type="url" placeholder="https://github.com/votre-profil"
+                id="portfolio" type="url" placeholder={t("form.step2.portfolioPlaceholder")}
                 autoComplete="url" inputMode="url" maxLength={200}
                 aria-invalid={errors.portfolio ? true : undefined}
                 aria-describedby={errors.portfolio ? "portfolio-error" : undefined}
@@ -475,18 +467,14 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
                 className={inputCls(errors.portfolio)}
               />
             </Field>
-            <Field id="source" label="Comment nous avez-vous connu ?">
+            <Field id="source" label={t("form.step2.sourceLabel")}>
               <select
                 id="source"
                 value={form.source} onChange={(e) => set("source", e.target.value)}
                 className={inputCls()}
               >
-                <option value="">Sélectionnez une option</option>
-                <option>LinkedIn</option>
-                <option>Site web AKILI Labs</option>
-                <option>Bouche-à-oreille / Réseau</option>
-                <option>Forum / Salon emploi</option>
-                <option>Autre</option>
+                <option value="">{t("form.step2.sourcePlaceholder")}</option>
+                {sourceOptions.map((o) => <option key={o}>{o}</option>)}
               </select>
             </Field>
           </div>
@@ -494,15 +482,15 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
           {/* Résumé de l'étape 1 */}
           <div className="bg-blue-light rounded-xl px-5 py-4 text-sm text-ink">
             <div className="flex items-center justify-between">
-              <span className="font-semibold text-navy">Vos informations</span>
+              <span className="font-semibold text-navy">{t("form.step2.summaryTitle")}</span>
               <button type="button" onClick={() => setStep(1)} className="text-xs text-orange-dark hover:underline font-medium">
-                Modifier
+                {t("form.step2.summaryEdit")}
               </button>
             </div>
             <div className="mt-1.5 text-xs text-gray-500 space-y-0.5">
               <div className="font-medium text-navy">{form.nom}</div>
               <div>{form.email} · {form.telephone}</div>
-              <div>{form.ville} · Disponible : {form.disponibilite}</div>
+              <div>{form.ville} · {t("form.step2.summaryAvailable")} {form.disponibilite}</div>
             </div>
           </div>
 
@@ -512,21 +500,23 @@ export default function CandidatureForm({ posteInitial }: { posteInitial?: strin
               type="button" onClick={() => { setStep(1); setErrors({}); }}
               className="flex items-center gap-2 px-5 py-3.5 border border-line text-ink font-medium rounded-xl hover:border-navy hover:text-navy transition-[color,border-color,transform] duration-150 ease-out active:scale-[0.97]"
             >
-              <ArrowLeft size={15} /> Retour
+              <ArrowLeft size={15} /> {t("form.step2.backButton")}
             </button>
             <button
               type="submit" disabled={loading}
               className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover disabled:opacity-60 transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] disabled:active:scale-100 shadow-md"
             >
               {loading ? (
-                <><span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Envoi en cours…</>
+                <><span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> {t("form.step2.submitLoading")}</>
               ) : (
-                <>Envoyer ma candidature <ArrowRight size={16} /></>
+                <>{t("form.step2.submitButton")} <ArrowRight size={16} /></>
               )}
             </button>
           </div>
           <p className="text-xs text-gray-500 text-center">
-            Votre messagerie préparera un email à <strong>rh@akililabs.io</strong> · Pensez à joindre votre CV PDF
+            {t.rich("form.step2.disclaimerRich", {
+              strong: (chunks) => <strong>{chunks}</strong>,
+            })}
           </p>
         </motion.div>
       )}
