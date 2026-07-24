@@ -4,12 +4,17 @@ import { blogPosts } from "@/lib/data";
 import { l } from "@/lib/i18n-content";
 import type { Metadata } from "next";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Blog & Veille Technologique — AKILI Labs",
-  description: "Insights, études de cas et bonnes pratiques sur l'ERP, l'Intelligence Artificielle et le DevSecOps en Afrique.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Blog.meta" });
+  return { title: t("title"), description: t("description") };
+}
 
 // Keyed on the (stable) French tag value so styling stays consistent across locales.
 const tagColors: Record<string, string> = {
@@ -25,19 +30,20 @@ export default async function BlogPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Blog" });
 
   return (
     <>
       <PageHero
-        badge="Veille & Insights"
+        badge={t("hero.badge")}
         title={
           <>
-            <span className="text-white">Blog & </span>
-            <HeroHighlight>Veille</HeroHighlight>
-            <span className="text-white"> Technologique</span>
+            <span className="text-white">{t("hero.titlePart1")}</span>
+            <HeroHighlight>{t("hero.titleHighlight")}</HeroHighlight>
+            <span className="text-white">{t("hero.titlePart2")}</span>
           </>
         }
-        subtitle="Articles techniques, études de cas et bonnes pratiques par les experts AKILI Labs, en ERP, Intelligence Artificielle et DevSecOps."
+        subtitle={t("hero.subtitle")}
       />
 
       {/* Posts */}
@@ -60,7 +66,7 @@ export default async function BlogPage({
                     <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-full border ${tagColors[l(blogPosts[0].tag, "fr")] ?? "bg-gray-100 text-gray-600"}`}>
                       {l(blogPosts[0].category, locale)}
                     </span>
-                    <span className="text-xs text-orange font-semibold">À la une</span>
+                    <span className="text-xs text-orange font-semibold">{t("featuredBadge")}</span>
                   </div>
                   <h2 className="text-xl sm:text-2xl font-black text-navy mb-3 group-hover:text-orange transition-colors leading-snug">
                     {l(blogPosts[0].title, locale)}
@@ -68,12 +74,12 @@ export default async function BlogPage({
                   <p className="text-ink text-sm leading-relaxed mb-5">{l(blogPosts[0].excerpt, locale)}</p>
                   <div className="flex items-center gap-4 text-xs text-gray-500 mb-5">
                     <span className="flex items-center gap-1"><Calendar size={11} />
-                      {new Date(blogPosts[0].date).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
+                      {new Date(blogPosts[0].date).toLocaleDateString(locale === "en" ? "en-US" : "fr-FR", { day: "numeric", month: "long", year: "numeric" })}
                     </span>
                     <span className="flex items-center gap-1"><Clock size={11} />{blogPosts[0].readTime}</span>
                   </div>
                   <div className="flex items-center gap-1 text-sm font-semibold text-navy group-hover:text-orange transition-colors">
-                    Lire l&apos;article <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                    {t("readArticle")} <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </div>
@@ -103,7 +109,7 @@ export default async function BlogPage({
                   <p className="text-sm text-ink line-clamp-2 mb-4">{l(post.excerpt, locale)}</p>
                   <div className="flex items-center gap-3 text-xs text-gray-500">
                     <span className="flex items-center gap-1"><Calendar size={11} />
-                      {new Date(post.date).toLocaleDateString("fr-FR", { day: "numeric", month: "short", year: "numeric" })}
+                      {new Date(post.date).toLocaleDateString(locale === "en" ? "en-US" : "fr-FR", { day: "numeric", month: "short", year: "numeric" })}
                     </span>
                     <span className="flex items-center gap-1"><Clock size={11} />{post.readTime}</span>
                   </div>
@@ -114,23 +120,23 @@ export default async function BlogPage({
 
           {/* Newsletter */}
           <div className="mt-14 bg-navy rounded-2xl p-8 sm:p-10 text-center">
-            <h2 className="text-2xl font-black text-white mb-2">Restez à la pointe de la tech</h2>
-            <p className="text-white/60 mb-6">Inscrivez-vous à notre newsletter : 2 articles par mois, zéro spam.</p>
+            <h2 className="text-2xl font-black text-white mb-2">{t("newsletter.title")}</h2>
+            <p className="text-white/60 mb-6">{t("newsletter.subtitle")}</p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <label htmlFor="newsletter-email" className="sr-only">Adresse email</label>
+              <label htmlFor="newsletter-email" className="sr-only">{t("newsletter.emailLabel")}</label>
               <input
                 id="newsletter-email"
                 type="email"
                 name="email"
                 autoComplete="email"
-                placeholder="votre@email.com"
+                placeholder={t("newsletter.emailPlaceholder")}
                 className="flex-1 px-4 py-3 rounded-xl bg-white/10 text-white placeholder-white/40 border border-white/20 focus:outline-none focus:ring-2 focus:ring-orange focus:border-transparent text-sm"
               />
               <button
                 type="submit"
                 className="px-6 py-3 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] whitespace-nowrap text-sm"
               >
-                S&apos;abonner →
+                {t("newsletter.subscribeButton")}
               </button>
             </form>
           </div>

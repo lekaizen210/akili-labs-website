@@ -784,5 +784,70 @@
       "benefit4": "Une estimation indicative de démarche et de budget",
       "ctaPrimary": "Consultation gratuite"
     }
+  },
+  "References": {
+    "meta": {
+      "title": "Références — AKILI Labs",
+      "description": "Découvrez nos réalisations : intégration ERP, Intelligence Artificielle, DevSecOps et développement sur mesure en Afrique de l'Ouest."
+    },
+    "hero": {
+      "badge": "Nos réalisations",
+      "titlePart1": "Ils nous ont fait ",
+      "titleHighlight": "confiance",
+      "subtitle": "Des projets concrets, des résultats mesurables. Découvrez comment AKILI Labs transforme les organisations de la zone UEMOA."
+    },
+    "viewDetail": "Voir le détail",
+    "bottomTitle": "Votre projet sera notre prochaine référence.",
+    "bottomSubtitle": "Rejoignez les organisations qui font confiance à AKILI Labs pour leur transformation digitale.",
+    "bottomCta": "Démarrer un projet avec nous →",
+    "detail": {
+      "breadcrumbAriaLabel": "Fil d'Ariane",
+      "breadcrumbHome": "Accueil",
+      "breadcrumbReferences": "Références",
+      "contextTitle": "Contexte & Objectifs",
+      "solutionTitle": "Solution déployée",
+      "keyResultLabel": "Résultat clé",
+      "technologiesTitle": "Technologies",
+      "similarProjectTitle": "Un projet similaire ?",
+      "similarProjectText": "Nos experts sont disponibles pour vous accompagner.",
+      "contactButton": "Nous contacter →",
+      "otherReferencesTitle": "Autres réalisations"
+    }
+  },
+  "Blog": {
+    "meta": {
+      "title": "Blog & Veille Technologique — AKILI Labs",
+      "description": "Insights, études de cas et bonnes pratiques sur l'ERP, l'Intelligence Artificielle et le DevSecOps en Afrique."
+    },
+    "hero": {
+      "badge": "Veille & Insights",
+      "titlePart1": "Blog & ",
+      "titleHighlight": "Veille",
+      "titlePart2": " Technologique",
+      "subtitle": "Articles techniques, études de cas et bonnes pratiques par les experts AKILI Labs, en ERP, Intelligence Artificielle et DevSecOps."
+    },
+    "featuredBadge": "À la une",
+    "readArticle": "Lire l'article",
+    "newsletter": {
+      "title": "Restez à la pointe de la tech",
+      "subtitle": "Inscrivez-vous à notre newsletter : 2 articles par mois, zéro spam.",
+      "emailLabel": "Adresse email",
+      "emailPlaceholder": "votre@email.com",
+      "subscribeButton": "S'abonner →"
+    },
+    "post": {
+      "breadcrumbAriaLabel": "Fil d'Ariane",
+      "breadcrumbHome": "Accueil",
+      "breadcrumbBlog": "Blog",
+      "readTimeSuffix": "de lecture",
+      "newsletterTitle": "Ne ratez pas nos prochains articles",
+      "newsletterSubtitle": "Inscrivez-vous à notre newsletter : 2 articles par mois.",
+      "emailLabel": "Adresse email",
+      "emailPlaceholder": "votre@email.com",
+      "subscribeButton": "S'abonner",
+      "backToBlog": "Retour au blog",
+      "keywordDigitalTransformation": "transformation digitale",
+      "keywordWestAfrica": "Afrique de l'Ouest"
+    }
   }
 }

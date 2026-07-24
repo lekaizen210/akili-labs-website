@@ -5,12 +5,17 @@ import { l } from "@/lib/i18n-content";
 import type { Metadata } from "next";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
 import { getTechColor } from "@/lib/tech-colors";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Références — AKILI Labs",
-  description: "Découvrez nos réalisations : intégration ERP, Intelligence Artificielle, DevSecOps et développement sur mesure en Afrique de l'Ouest.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "References.meta" });
+  return { title: t("title"), description: t("description") };
+}
 
 export default async function ReferencesPage({
   params,
@@ -19,18 +24,19 @@ export default async function ReferencesPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "References" });
 
   return (
     <>
       <PageHero
-        badge="Nos réalisations"
+        badge={t("hero.badge")}
         title={
           <>
-            <span className="text-white">Ils nous ont fait </span>
-            <HeroHighlight>confiance</HeroHighlight>
+            <span className="text-white">{t("hero.titlePart1")}</span>
+            <HeroHighlight>{t("hero.titleHighlight")}</HeroHighlight>
           </>
         }
-        subtitle="Des projets concrets, des résultats mesurables. Découvrez comment AKILI Labs transforme les organisations de la zone UEMOA."
+        subtitle={t("hero.subtitle")}
       />
 
       {/* References grid */}
@@ -63,9 +69,9 @@ export default async function ReferencesPage({
                     <span className="text-sm font-bold text-navy">{l(ref.result, locale)}</span>
                   </div>
                   <div className="flex flex-wrap gap-1.5">
-                    {ref.technologies.map((t) => {
-                      const label = l(t, locale);
-                      const { bg, text } = getTechColor(l(t, "fr"));
+                    {ref.technologies.map((tech) => {
+                      const label = l(tech, locale);
+                      const { bg, text } = getTechColor(l(tech, "fr"));
                       return (
                         <span key={label} className="px-2 py-0.5 text-xs font-semibold rounded-md" style={{ backgroundColor: bg, color: text }}>
                           {label}
@@ -74,7 +80,7 @@ export default async function ReferencesPage({
                     })}
                   </div>
                   <div className="flex items-center gap-1 text-sm font-semibold text-navy group-hover:text-orange transition-colors mt-5">
-                    Voir le détail <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                    {t("viewDetail")} <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </Link>
@@ -83,16 +89,16 @@ export default async function ReferencesPage({
 
           <div className="text-center mt-14">
             <p className="text-lg font-semibold text-navy mb-2">
-              Votre projet sera notre prochaine référence.
+              {t("bottomTitle")}
             </p>
             <p className="text-ink mb-6">
-              Rejoignez les organisations qui font confiance à AKILI Labs pour leur transformation digitale.
+              {t("bottomSubtitle")}
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-7 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97] shadow-md"
             >
-              Démarrer un projet avec nous →
+              {t("bottomCta")}
             </Link>
           </div>
         </div>

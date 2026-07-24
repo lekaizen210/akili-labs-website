@@ -784,5 +784,70 @@
       "benefit4": "An indicative estimate of approach and budget",
       "ctaPrimary": "Free consultation"
     }
+  },
+  "References": {
+    "meta": {
+      "title": "Case Studies — AKILI Labs",
+      "description": "Discover our achievements: ERP integration, Artificial Intelligence, DevSecOps and custom development in West Africa."
+    },
+    "hero": {
+      "badge": "Our achievements",
+      "titlePart1": "They put their ",
+      "titleHighlight": "trust in us",
+      "subtitle": "Real projects, measurable results. Discover how AKILI Labs transforms organizations across the UEMOA zone."
+    },
+    "viewDetail": "View details",
+    "bottomTitle": "Your project will be our next case study.",
+    "bottomSubtitle": "Join the organizations that trust AKILI Labs for their digital transformation.",
+    "bottomCta": "Start a project with us →",
+    "detail": {
+      "breadcrumbAriaLabel": "Breadcrumb",
+      "breadcrumbHome": "Home",
+      "breadcrumbReferences": "Case Studies",
+      "contextTitle": "Context & Objectives",
+      "solutionTitle": "Solution Deployed",
+      "keyResultLabel": "Key Result",
+      "technologiesTitle": "Technologies",
+      "similarProjectTitle": "A similar project?",
+      "similarProjectText": "Our experts are available to support you.",
+      "contactButton": "Contact us →",
+      "otherReferencesTitle": "Other case studies"
+    }
+  },
+  "Blog": {
+    "meta": {
+      "title": "Blog & Tech Watch — AKILI Labs",
+      "description": "Insights, case studies and best practices on ERP, Artificial Intelligence and DevSecOps in Africa."
+    },
+    "hero": {
+      "badge": "Tech Watch & Insights",
+      "titlePart1": "Blog & Tech ",
+      "titleHighlight": "Watch",
+      "titlePart2": "",
+      "subtitle": "Technical articles, case studies and best practices from the AKILI Labs experts, on ERP, Artificial Intelligence and DevSecOps."
+    },
+    "featuredBadge": "Featured",
+    "readArticle": "Read the article",
+    "newsletter": {
+      "title": "Stay ahead of the tech curve",
+      "subtitle": "Sign up for our newsletter: 2 articles a month, zero spam.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "your@email.com",
+      "subscribeButton": "Subscribe →"
+    },
+    "post": {
+      "breadcrumbAriaLabel": "Breadcrumb",
+      "breadcrumbHome": "Home",
+      "breadcrumbBlog": "Blog",
+      "readTimeSuffix": "read",
+      "newsletterTitle": "Don't miss our next articles",
+      "newsletterSubtitle": "Sign up for our newsletter: 2 articles a month.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "your@email.com",
+      "subscribeButton": "Subscribe",
+      "backToBlog": "Back to blog",
+      "keywordDigitalTransformation": "digital transformation",
+      "keywordWestAfrica": "West Africa"
+    }
   }
 }
