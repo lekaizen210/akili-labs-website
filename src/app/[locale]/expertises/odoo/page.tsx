@@ -73,7 +73,7 @@ export default async function OdooExpertisePage({
     serviceType: "Odoo ERP",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Modules Odoo",
+      name: t("offerCatalogName"),
       itemListElement: odooModuleCategories
         .flatMap((cat) => cat.modules)
         .map((m, i) => ({

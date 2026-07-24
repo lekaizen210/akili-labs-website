@@ -173,7 +173,8 @@
       "serviceDescription": "Implementation, customization, and optimization of Odoo ERP, with OHADA/SYSCOHADA compliance.",
       "breadcrumbHome": "Home",
       "breadcrumbExpertises": "Expertise",
-      "breadcrumbOdoo": "Odoo"
+      "breadcrumbOdoo": "Odoo",
+      "offerCatalogName": "Odoo Modules"
     },
     "hero": {
       "badge": "Odoo ERP Expertise",

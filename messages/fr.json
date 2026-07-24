@@ -173,7 +173,8 @@
       "serviceDescription": "Implémentation, personnalisation et optimisation de l'ERP Odoo, avec conformité OHADA/SYSCOHADA.",
       "breadcrumbHome": "Accueil",
       "breadcrumbExpertises": "Expertises",
-      "breadcrumbOdoo": "Odoo"
+      "breadcrumbOdoo": "Odoo",
+      "offerCatalogName": "Modules Odoo"
     },
     "hero": {
       "badge": "Expertise Odoo ERP",
@@ -197,7 +198,7 @@
       "calloutTitle": "Le bon ERP est celui qui s'adapte à votre réalité, pas l'inverse.",
       "calloutText": "Odoo, suite ERP open source la plus adoptée au monde (plus de 28 millions d'utilisateurs dans 180 pays), réunit ventes, achats, stocks, comptabilité, RH et production dans une seule plateforme. Son architecture ouverte permet précisément les adaptations que votre contexte exige.",
       "paragraph2Rich": "Chez AKILI Labs, nous ne nous contentons pas d'installer Odoo. Nous le configurons, l'adaptons et le faisons vivre selon <strong>votre réalité métier africaine</strong> : contextes OHADA/SYSCOHADA, spécificités fiscales locales, multilinguisme et contraintes de connectivité.",
-      "imageAlt": "Avant-après : un classeur Excel de suivi des ventes avec une commande en doublon et des erreurs #N/A, doublé d'un fil WhatsApp où le dépôt annonce que le stock n'était pas à jour, face au menu des applications Odoo (Ventes, CRM, Inventaire, Achats, Comptabilité, Paie) et à la commande CDE-2026-341 qui réserve le stock, génère la facture et l'écriture comptable"
+      "imageAlt": "Avant-après : un classeur Excel de suivi des ventes avec une commande en doublon et des erreurs #N/A, doublé d’un fil WhatsApp où le dépôt annonce que le stock n’était pas à jour, face au menu des applications Odoo (Ventes, CRM, Inventaire, Achats, Comptabilité, Paie) et à la commande CDE-2026-341 qui réserve le stock, génère la facture et l’écriture comptable"
     },
     "implementation": {
       "badge": "Conseil & Implémentation",
@@ -227,7 +228,7 @@
     "services": {
       "badge": "Au-delà de l'implémentation",
       "title": "Un ERP standard ne suffit pas toujours : nous l'adaptons à votre métier",
-      "imageAlt": "Écran des intégrations Odoo : connecteurs Mobile Money (Orange, MTN, Wave), banques SGBCI et BICICI, boutique en ligne et facture normalisée DGI, tous actifs, avec le journal des flux du jour montrant un paiement rapproché, une commande web et une reprise automatique après indisponibilité d'une passerelle"
+      "imageAlt": "Écran des intégrations Odoo : connecteurs Mobile Money (Orange, MTN, Wave), banques SGBCI et BICICI, boutique en ligne et facture normalisée DGI, tous actifs, avec le journal des flux du jour montrant un paiement rapproché, une commande web et une reprise automatique après indisponibilité d’une passerelle"
     },
     "hostingSupport": {
       "badge": "Hébergement & Support",
@@ -237,7 +238,7 @@
       "supportTitle": "Support & Maintenance",
       "supportParagraphRich": "Après le go-live, votre ERP est couvert par un contrat de maintenance avec des engagements de service contractuels : <strong>incidents bloquants pris en charge sous 2 à 24h selon le niveau souscrit</strong>, mises à jour réglementaires de paie incluses, TMA applicative mensuelle et revues de suivi. Trois niveaux s'adaptent à la criticité de votre activité.",
       "blockingLabel": "Bloquant",
-      "imageAlt": "Supervision de l'instance Odoo : disponibilité de 99,95 % sur 12 mois contre un objectif contractuel de 99,5 %, incident détecté et résolu en 31 minutes, et tickets TMA P1 à P3 traités dans les délais contractuels"
+      "imageAlt": "Supervision de l’instance Odoo : disponibilité de 99,95 % sur 12 mois contre un objectif contractuel de 99,5 %, incident détecté et résolu en 31 minutes, et tickets TMA P1 à P3 traités dans les délais contractuels"
     },
     "approach": {
       "badge": "Notre méthodologie",
