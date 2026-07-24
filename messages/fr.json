@@ -480,5 +480,106 @@
       "noCommitment": "Aucun engagement. Aucune pression. Juste de l'expertise.",
       "ctaPrimary": "Consultation gratuite"
     }
+  },
+  "DevSecOps": {
+    "meta": {
+      "title": "DevSecOps en Afrique de l'Ouest — CI/CD, Kubernetes, IaC, Sécurité",
+      "description": "Industrialisation de la livraison logicielle : CI/CD, conteneurisation Docker/Kubernetes, Infrastructure as Code, sécurité intégrée et supervision pour les organisations de la zone UEMOA. Consultation initiale gratuite.",
+      "ogTitle": "Expertise DevSecOps — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "Du diagnostic de maturité à l'exploitation : la sécurité intégrée à chaque étape de votre chaîne de livraison logicielle.",
+      "ogImageAlt": "AKILI Labs — Expertise DevSecOps",
+      "twitterTitle": "Expertise DevSecOps — AKILI Labs",
+      "twitterDescription": "CI/CD, Kubernetes, Infrastructure as Code et sécurité intégrée en zone UEMOA.",
+      "serviceName": "Expertise DevSecOps",
+      "serviceDescription": "Industrialisation de la livraison logicielle : intégration et déploiement continus, conteneurisation, Infrastructure as Code, analyse de sécurité automatisée et supervision.",
+      "breadcrumbHome": "Accueil",
+      "breadcrumbExpertises": "Expertises",
+      "breadcrumbDevSecOps": "DevSecOps",
+      "offerCatalogName": "Domaines d'intervention DevSecOps"
+    },
+    "hero": {
+      "badge": "Expertise DevSecOps",
+      "titlePart1": "Une mise en production ne devrait jamais être ",
+      "titleHighlight": "un pari.",
+      "subtitle": "Livrer vite et livrer sûr ne sont pas des objectifs opposés — c'est l'approche traditionnelle qui les oppose : déploiements manuels, audits en fin de projet, vulnérabilités découvertes en production. AKILI Labs industrialise votre chaîne de livraison logicielle avec la sécurité intégrée à chaque étape, du code à l'exploitation.",
+      "ctaPrimary": "Consultation gratuite",
+      "ctaSecondary": "Voir nos ressources"
+    },
+    "intro": {
+      "badge": "Le constat",
+      "title": "La sécurité ajoutée à la fin est une dette, pas une protection",
+      "paragraph1": "Dans beaucoup d'organisations, livrer une application reste un exercice à haut risque : déploiements manuels, environnements qui divergent entre développement et production, correctifs repoussés parce que « ça marche ». Chaque mise en production devient un événement redouté plutôt qu'un non-événement maîtrisé.",
+      "calloutQuote": "Les vulnérabilités découvertes en production coûtent le plus cher.",
+      "calloutText": "Le DevSecOps les détecte tôt — à la conception, au code, aux tests — réduit les coûts de correction et renforce la confiance des clients et partenaires.",
+      "paragraph2": "AKILI Labs industrialise votre chaîne de livraison de bout en bout : intégration et déploiement continus, conteneurisation, infrastructure décrite en code, analyses de sécurité automatisées et supervision — pour des livraisons fréquentes, reproductibles et auditables.",
+      "imageAlt": "Avant-après : un terminal où le déploiement manuel du vendredi soir échoue (permission refusée, module Python manquant, correctif installé en direct sur la production) et un fil de discussion d’incident, face au même changement livré par un pipeline en cinq étapes vertes, sans coupure et réversible"
+    },
+    "roadmap": {
+      "badge": "Cadrage & Industrialisation",
+      "title": "En 5 phases, passez du déploiement manuel à la livraison continue sécurisée",
+      "subtitle": "Chaque phase produit un livrable tangible que vous validez avant de passer à la suivante.",
+      "deliverableLabel": "Livrable : "
+    },
+    "domains": {
+      "badge": "Domaines d'intervention",
+      "title": "Cinq leviers pour des livraisons fréquentes, reproductibles et auditables",
+      "toolsLabel": "Outils : "
+    },
+    "stack": {
+      "badge": "Stack technique",
+      "title": "Les outils que nous maîtrisons — et que vos équipes maîtriseront"
+    },
+    "services": {
+      "badge": "Au-delà des pipelines",
+      "title": "L'outillage ne suffit pas : vos équipes doivent en garder la maîtrise",
+      "imageAlt": "Écran d’un pipeline d’intégration continue : les étapes build, tests (214 passés, couverture 78 %), sécurité (image, dépendances, secrets), préproduction, puis un déploiement en production soumis à approbation humaine, avec le journal d’exécution et le rapport de sécurité"
+    },
+    "securite": {
+      "badge": "Sécurité & Traçabilité",
+      "title": "La conformité se prouve avec des journaux, pas avec des promesses",
+      "paragraph1": "Conteneuriser des applications, automatiser des déploiements, migrer vers le cloud : chaque étape d'industrialisation déplace des responsabilités de sécurité. Qui accède aux environnements de production ? Où vivent les secrets — mots de passe, clés, certificats ? Que se passe-t-il quand un correctif critique doit partir un vendredi soir ?",
+      "paragraph2": "Une chaîne DevSecOps sérieuse rend ces questions traçables : chaque déploiement est journalisé, chaque accès est contrôlé, chaque environnement peut être reconstruit à l'identique. Pour les organisations régulées de la zone — banques, microfinance, assurance — cette traçabilité n'est pas un confort : les régulateurs régionaux exigent une gestion démontrable du risque informatique et de la continuité d'activité.",
+      "imageAlt": "Écran de supervision de production : disponibilité, latence et taux d’erreurs, pic d’erreurs 502 détecté à 09:41 puis résolu en 11 minutes, journaux centralisés horodatés et journal d’audit des déploiements indiquant qui a déployé quoi et quand"
+    },
+    "approach": {
+      "badge": "Notre méthodologie",
+      "title": "Une approche centrée sur la fiabilité, pas sur les outils à la mode"
+    },
+    "sectors": {
+      "badge": "Secteurs d'intervention",
+      "title": "Chaque secteur a ses contraintes de disponibilité — nous partons des vôtres"
+    },
+    "whyUs": {
+      "badge": "Ce qui nous distingue",
+      "title": "Pourquoi choisir AKILI Labs"
+    },
+    "stats": {
+      "title": "La practice DevSecOps en chiffres"
+    },
+    "resources": {
+      "badge": "Ressources & Contenus",
+      "title": "Approfondissez votre démarche DevSecOps",
+      "comingSoon": "Bientôt disponible"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes sur le DevSecOps"
+    },
+    "ctaFinal": {
+      "titlePart1": "Votre prochaine mise en production mérite d'être ",
+      "titleHighlight": "un non-événement.",
+      "subtitle": "Commençons par un audit de maturité : nos experts analysent votre chaîne de livraison et vous proposent un plan d'industrialisation adapté à votre contexte et à vos contraintes.",
+      "ctaPrimary": "Consultation gratuite",
+      "downloadCta": "Télécharger notre présentation"
+    },
+    "pipelineDiagram": {
+      "step1": "Code",
+      "step2": "Build",
+      "step3": "Tests",
+      "step4": "Déploiement",
+      "step5": "Supervision",
+      "ariaLabel": "Chaîne de livraison continue en 5 étapes — Code, Build, Tests, Déploiement, Supervision — avec un contrôle de sécurité intégré à chaque étape",
+      "caption": "La sécurité à chaque étape — pas une barrière à la fin."
+    }
   }
 }

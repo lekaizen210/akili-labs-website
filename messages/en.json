@@ -480,5 +480,106 @@
       "noCommitment": "No commitment. No pressure. Just expertise.",
       "ctaPrimary": "Free consultation"
     }
+  },
+  "DevSecOps": {
+    "meta": {
+      "title": "DevSecOps in West Africa — CI/CD, Kubernetes, IaC, Security",
+      "description": "Software delivery automation and standardization: CI/CD, Docker/Kubernetes containerization, Infrastructure as Code, integrated security, and monitoring for organizations across the UEMOA zone. Free initial consultation.",
+      "ogTitle": "DevSecOps Expertise — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "From maturity audit to operations: security built into every stage of your CI/CD pipeline.",
+      "ogImageAlt": "AKILI Labs — DevSecOps Expertise",
+      "twitterTitle": "DevSecOps Expertise — AKILI Labs",
+      "twitterDescription": "CI/CD, Kubernetes, Infrastructure as Code, and integrated security across the UEMOA zone.",
+      "serviceName": "DevSecOps Expertise",
+      "serviceDescription": "Software delivery automation and standardization: continuous integration and deployment, containerization, Infrastructure as Code, automated security analysis, and monitoring.",
+      "breadcrumbHome": "Home",
+      "breadcrumbExpertises": "Expertise",
+      "breadcrumbDevSecOps": "DevSecOps",
+      "offerCatalogName": "DevSecOps Areas of Intervention"
+    },
+    "hero": {
+      "badge": "DevSecOps Expertise",
+      "titlePart1": "A production release should never be ",
+      "titleHighlight": "a gamble.",
+      "subtitle": "Shipping fast and shipping safely aren't opposing goals — it's the traditional approach that pits them against each other: manual deployments, end-of-project audits, vulnerabilities discovered in production. AKILI Labs automates and standardizes your CI/CD pipeline with security built into every step, from code to operations.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "See our resources"
+    },
+    "intro": {
+      "badge": "The situation",
+      "title": "Security bolted on at the end is a debt, not a protection",
+      "paragraph1": "In many organizations, shipping an application is still a high-risk exercise: manual deployments, environments that drift between development and production, fixes postponed because \"it works.\" Every release becomes a dreaded event instead of a controlled non-event.",
+      "calloutQuote": "Vulnerabilities discovered in production cost the most.",
+      "calloutText": "DevSecOps catches them early — at design, in code, in tests — reducing remediation costs and strengthening the trust of clients and partners.",
+      "paragraph2": "AKILI Labs automates and standardizes your delivery chain end to end: continuous integration and deployment, containerization, infrastructure described as code, automated security analysis, and monitoring — for frequent, reproducible, auditable releases.",
+      "imageAlt": "Before-and-after: a terminal where the Friday-night manual deployment fails (permission denied, missing Python module, fix applied live on production) and an incident discussion thread, next to the same change delivered through a five-step green pipeline, with no downtime and reversible"
+    },
+    "roadmap": {
+      "badge": "Scoping & Industrialization",
+      "title": "In 5 phases, move from manual deployment to secure continuous delivery",
+      "subtitle": "Each phase produces a tangible deliverable that you validate before moving to the next.",
+      "deliverableLabel": "Deliverable: "
+    },
+    "domains": {
+      "badge": "Areas of Intervention",
+      "title": "Five levers for frequent, reproducible, auditable releases",
+      "toolsLabel": "Tools: "
+    },
+    "stack": {
+      "badge": "Technical Stack",
+      "title": "The tools we master — and your teams will too"
+    },
+    "services": {
+      "badge": "Beyond the pipelines",
+      "title": "Tooling isn't enough: your teams need to stay in control",
+      "imageAlt": "Continuous integration pipeline screen: the build, test (214 passed, 78% coverage), security (image, dependencies, secrets), and staging stages, followed by a production deployment pending human approval, with the execution log and security report"
+    },
+    "securite": {
+      "badge": "Security & Traceability",
+      "title": "Compliance is proven with logs, not with promises",
+      "paragraph1": "Containerizing applications, automating deployments, migrating to the cloud: every step of industrialization shifts security responsibilities. Who accesses production environments? Where do secrets live — passwords, keys, certificates? What happens when a critical fix needs to go out on a Friday night?",
+      "paragraph2": "A serious DevSecOps chain makes these questions traceable: every deployment is logged, every access is controlled, every environment can be rebuilt identically. For regulated organizations in the zone — banks, microfinance, insurance — this traceability isn't a nicety: regional regulators require demonstrable management of IT risk and business continuity.",
+      "imageAlt": "Production monitoring screen: availability, latency, and error rate, a spike of 502 errors detected at 09:41 and resolved 11 minutes later, timestamped centralized logs, and a deployment audit log showing who deployed what and when"
+    },
+    "approach": {
+      "badge": "Our methodology",
+      "title": "An approach centered on reliability, not on trendy tools"
+    },
+    "sectors": {
+      "badge": "Sectors we serve",
+      "title": "Every sector has its own availability constraints — we start from yours"
+    },
+    "whyUs": {
+      "badge": "What sets us apart",
+      "title": "Why choose AKILI Labs"
+    },
+    "stats": {
+      "title": "The DevSecOps practice by the numbers"
+    },
+    "resources": {
+      "badge": "Resources & Content",
+      "title": "Deepen your DevSecOps practice",
+      "comingSoon": "Coming soon"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions about DevSecOps"
+    },
+    "ctaFinal": {
+      "titlePart1": "Your next production release deserves to be ",
+      "titleHighlight": "a non-event.",
+      "subtitle": "Let's start with a maturity audit: our experts analyze your delivery chain and propose an industrialization plan tailored to your context and constraints.",
+      "ctaPrimary": "Free consultation",
+      "downloadCta": "Download our presentation"
+    },
+    "pipelineDiagram": {
+      "step1": "Code",
+      "step2": "Build",
+      "step3": "Tests",
+      "step4": "Deployment",
+      "step5": "Monitoring",
+      "ariaLabel": "5-step continuous delivery pipeline — Code, Build, Tests, Deployment, Monitoring — with a security check built into every step",
+      "caption": "Security at every step — not a gate at the end."
+    }
   }
 }

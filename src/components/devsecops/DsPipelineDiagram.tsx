@@ -1,26 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Code2, Package, FlaskConical, Rocket, Activity, ShieldCheck } from "lucide-react";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
-const steps = [
-  { label: "Code", icon: Code2 },
-  { label: "Build", icon: Package },
-  { label: "Tests", icon: FlaskConical },
-  { label: "Déploiement", icon: Rocket },
-  { label: "Supervision", icon: Activity },
-];
+const stepIcons = [Code2, Package, FlaskConical, Rocket, Activity] as const;
 
 // Signature du hero : un bouclier orange sous chaque étape — la sécurité est
 // intégrée partout, pas une barrière en fin de chaîne.
 export default function DsPipelineDiagram() {
+  const t = useTranslations("DevSecOps.pipelineDiagram");
+  const steps = [1, 2, 3, 4, 5].map((n) => ({
+    label: t(`step${n}`),
+    icon: stepIcons[n - 1],
+  }));
+
   return (
     <div
       className="max-w-3xl mx-auto rounded-2xl border border-white/10 bg-white/5 px-6 sm:px-10 py-8"
       role="img"
-      aria-label="Chaîne de livraison continue en 5 étapes — Code, Build, Tests, Déploiement, Supervision — avec un contrôle de sécurité intégré à chaque étape"
+      aria-label={t("ariaLabel")}
     >
       <div className="relative flex items-start justify-between gap-2">
         <motion.div
@@ -70,7 +71,7 @@ export default function DsPipelineDiagram() {
         transition={{ duration: 0.5, delay: 2.4, ease }}
         className="text-center text-xs text-white/50 mt-6"
       >
-        La sécurité à chaque étape — pas une barrière à la fin.
+        {t("caption")}
       </motion.p>
     </div>
   );

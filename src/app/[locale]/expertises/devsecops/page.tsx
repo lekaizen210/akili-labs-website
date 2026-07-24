@@ -14,88 +14,46 @@ import DsResources from "@/components/devsecops/DsResources";
 import DsFaq from "@/components/devsecops/DsFaq";
 import DsCtaFinal from "@/components/devsecops/DsCtaFinal";
 import { dsDomains, dsFaqs } from "@/lib/devsecops-data";
-import { setRequestLocale } from "next-intl/server";
+import { l } from "@/lib/i18n-content";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 const BASE_URL = "https://akililabs.com";
 const url = `${BASE_URL}/expertises/devsecops`;
 
-export const metadata: Metadata = {
-  title: "DevSecOps en Afrique de l'Ouest — CI/CD, Kubernetes, IaC, Sécurité",
-  description:
-    "Industrialisation de la livraison logicielle : CI/CD, conteneurisation Docker/Kubernetes, Infrastructure as Code, sécurité intégrée et supervision pour les organisations de la zone UEMOA. Consultation initiale gratuite.",
-  alternates: { canonical: url },
-  openGraph: {
-    type: "website",
-    url,
-    title: "Expertise DevSecOps — AKILI Labs Côte d'Ivoire",
-    description:
-      "Du diagnostic de maturité à l'exploitation : la sécurité intégrée à chaque étape de votre chaîne de livraison logicielle.",
-    images: [
-      {
-        url: "/devsecops-images/ds-contexte.png",
-        width: 1400,
-        height: 1000,
-        alt: "AKILI Labs — Expertise DevSecOps",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Expertise DevSecOps — AKILI Labs",
-    description: "CI/CD, Kubernetes, Infrastructure as Code et sécurité intégrée en zone UEMOA.",
-    images: ["/devsecops-images/ds-contexte.png"],
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "DevSecOps.meta" });
 
-const serviceJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": url,
-  name: "Expertise DevSecOps",
-  description:
-    "Industrialisation de la livraison logicielle : intégration et déploiement continus, conteneurisation, Infrastructure as Code, analyse de sécurité automatisée et supervision.",
-  url,
-  provider: {
-    "@type": "Organization",
-    "@id": `${BASE_URL}/#organization`,
-    name: "AKILI Labs",
-  },
-  areaServed: ["Côte d'Ivoire", "Sénégal", "Mali", "Burkina Faso", "Niger", "Togo", "Bénin", "Guinée-Bissau"],
-  serviceType: "DevSecOps",
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Domaines d'intervention DevSecOps",
-    itemListElement: dsDomains.map((d, i) => ({
-      "@type": "Offer",
-      position: i + 1,
-      name: d.title,
-      offeredBy: { "@id": `${BASE_URL}/#organization` },
-    })),
-  },
-  availableLanguage: ["French"],
-  termsOfService: `${BASE_URL}/contact`,
-};
-
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Accueil", item: BASE_URL },
-    { "@type": "ListItem", position: 2, name: "Expertises", item: `${BASE_URL}/expertises` },
-    { "@type": "ListItem", position: 3, name: "DevSecOps", item: url },
-  ],
-};
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `${url}#faq`,
-  mainEntity: dsFaqs.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: { "@type": "Answer", text: f.answer },
-  })),
-};
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      url,
+      title: t("ogTitle"),
+      description: t("ogDescription"),
+      images: [
+        {
+          url: "/devsecops-images/ds-contexte.png",
+          width: 1400,
+          height: 1000,
+          alt: t("ogImageAlt"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("twitterTitle"),
+      description: t("twitterDescription"),
+      images: ["/devsecops-images/ds-contexte.png"],
+    },
+  };
+}
 
 export default async function DevSecOpsPage({
   params,
@@ -104,6 +62,56 @@ export default async function DevSecOpsPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "DevSecOps.meta" });
+
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": url,
+    name: t("serviceName"),
+    description: t("serviceDescription"),
+    url,
+    provider: {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      name: "AKILI Labs",
+    },
+    areaServed: ["Côte d'Ivoire", "Sénégal", "Mali", "Burkina Faso", "Niger", "Togo", "Bénin", "Guinée-Bissau"],
+    serviceType: "DevSecOps",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: t("offerCatalogName"),
+      itemListElement: dsDomains.map((d, i) => ({
+        "@type": "Offer",
+        position: i + 1,
+        name: l(d.title, locale),
+        offeredBy: { "@id": `${BASE_URL}/#organization` },
+      })),
+    },
+    availableLanguage: ["French", "English"],
+    termsOfService: `${BASE_URL}/contact`,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: BASE_URL },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/expertises` },
+      { "@type": "ListItem", position: 3, name: t("breadcrumbDevSecOps"), item: url },
+    ],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: dsFaqs.map((f) => ({
+      "@type": "Question",
+      name: l(f.question, locale),
+      acceptedAnswer: { "@type": "Answer", text: l(f.answer, locale) },
+    })),
+  };
 
   return (
     <>
