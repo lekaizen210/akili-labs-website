@@ -3,16 +3,26 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Mail, MapPin, Phone, Clock, Send, CheckCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function ContactPage() {
+  const t = useTranslations("Contact");
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "", company: "", email: "", phone: "", subject: "", message: "",
   });
+
+  const subjectOptions = t.raw("form.subjectOptions") as string[];
+  const trustItems = [
+    t("sidebar.trust1"),
+    t("sidebar.trust2"),
+    t("sidebar.trust3"),
+    t("sidebar.trust4"),
+  ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -21,16 +31,16 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    const subject = encodeURIComponent(`[Site web] ${form.subject}`);
+    const subject = encodeURIComponent(`${t("form.mailSubjectPrefix")} ${form.subject}`);
     const body = encodeURIComponent(
       [
-        `Nom : ${form.name}`,
-        `Société : ${form.company || "Non renseignée"}`,
-        `Email : ${form.email}`,
-        `Téléphone : ${form.phone || "Non renseigné"}`,
-        `Objet : ${form.subject}`,
+        `${t("form.mailBodyName")} : ${form.name}`,
+        `${t("form.mailBodyCompany")} : ${form.company || t("form.mailBodyCompanyEmpty")}`,
+        `${t("form.mailBodyEmail")} : ${form.email}`,
+        `${t("form.mailBodyPhone")} : ${form.phone || t("form.mailBodyPhoneEmpty")}`,
+        `${t("form.mailBodySubject")} : ${form.subject}`,
         "",
-        "Message :",
+        t("form.mailBodyMessage"),
         form.message,
       ].join("\n")
     );
@@ -43,17 +53,24 @@ export default function ContactPage() {
     window.location.href = `mailto:contact@akililabs.io?subject=${subject}&body=${body}`;
   };
 
+  const fields = [
+    { name: "name", label: t("form.nameLabel"), type: "text", required: true, autoComplete: "name", maxLength: 100 },
+    { name: "company", label: t("form.companyLabel"), type: "text", required: false, autoComplete: "organization", maxLength: 100 },
+    { name: "email", label: t("form.emailLabel"), type: "email", required: true, autoComplete: "email", inputMode: "email" as const, maxLength: 254 },
+    { name: "phone", label: t("form.phoneLabel"), type: "tel", required: false, autoComplete: "tel", inputMode: "tel" as const, maxLength: 30 },
+  ];
+
   return (
     <>
       <PageHero
-        badge="Parlons de votre projet"
+        badge={t("hero.badge")}
         title={
           <>
-            <HeroHighlight>Contactez</HeroHighlight>
-            <span className="text-white">-nous</span>
+            <HeroHighlight>{t("hero.titleHighlight")}</HeroHighlight>
+            <span className="text-white">{t("hero.titleSuffix")}</span>
           </>
         }
-        subtitle="Notre équipe répond dans les 24h ouvrées. La consultation initiale est offerte."
+        subtitle={t("hero.subtitle")}
       />
 
       {/* Main */}
@@ -62,19 +79,19 @@ export default function ContactPage() {
           {/* Sidebar */}
           <div className="lg:col-span-1 space-y-6">
             <div className="bg-blue-light rounded-2xl p-7">
-              <h2 className="text-lg font-bold text-navy mb-5">Nos coordonnées</h2>
+              <h2 className="text-lg font-bold text-navy mb-5">{t("sidebar.title")}</h2>
               <div className="space-y-4 text-sm text-ink">
                 <div className="flex items-start gap-3">
                   <MapPin size={16} className="text-orange mt-0.5 shrink-0" />
                   <div>
-                    <div className="font-semibold text-navy">Siège social</div>
-                    <div>Abidjan, Côte d&apos;Ivoire<br />Zone UEMOA</div>
+                    <div className="font-semibold text-navy">{t("sidebar.addressLabel")}</div>
+                    <div>{t("sidebar.addressCity")}<br />{t("sidebar.addressZone")}</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Mail size={16} className="text-orange mt-0.5 shrink-0" />
                   <div>
-                    <div className="font-semibold text-navy">Email</div>
+                    <div className="font-semibold text-navy">{t("sidebar.emailLabel")}</div>
                     <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
                       contact@akililabs.io
                     </a>
@@ -83,31 +100,31 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <Phone size={16} className="text-orange mt-0.5 shrink-0" />
                   <div>
-                    <div className="font-semibold text-navy">Téléphone</div>
+                    <div className="font-semibold text-navy">{t("sidebar.phoneLabel")}</div>
                     <span>+225 07 00 00 00 00</span>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Clock size={16} className="text-orange mt-0.5 shrink-0" />
                   <div>
-                    <div className="font-semibold text-navy">Disponibilité</div>
-                    <div>Lun–Ven : 08h00–18h00 GMT</div>
+                    <div className="font-semibold text-navy">{t("sidebar.availabilityLabel")}</div>
+                    <div>{t("sidebar.availabilityValue")}</div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="bg-navy rounded-2xl p-7 text-white">
-              <h3 className="font-bold mb-2">Réponse rapide garantie</h3>
+              <h3 className="font-bold mb-2">{t("sidebar.quickReplyTitle")}</h3>
               <p className="text-sm text-white/70 mb-4">
-                Nos experts répondent dans les <strong className="text-orange">24h ouvrées</strong>.
-                La consultation initiale est entièrement gratuite.
+                {t.rich("sidebar.quickReplyTextRich", {
+                  strong: (chunks) => <strong className="text-orange">{chunks}</strong>,
+                })}
               </p>
               <div className="flex flex-col gap-2 text-xs text-white/60">
-                <span>✓ Consultation initiale offerte</span>
-                <span>✓ Confidentialité garantie</span>
-                <span>✓ Experts certifiés</span>
-                <span>✓ Devis sous 48h</span>
+                {trustItems.map((item) => (
+                  <span key={item}>✓ {item}</span>
+                ))}
               </div>
             </div>
           </div>
@@ -132,16 +149,15 @@ export default function ContactPage() {
                   >
                     <CheckCircle size={32} className="text-green-500" />
                   </motion.div>
-                  <h2 className="text-2xl font-bold text-navy">Email préparé</h2>
+                  <h2 className="text-2xl font-bold text-navy">{t("success.title")}</h2>
                   <p className="text-ink max-w-sm">
-                    Votre messagerie s&apos;ouvre avec un message prérempli. Vérifiez-le puis envoyez-le
-                    à contact@akililabs.io.
+                    {t("success.text")}
                   </p>
                   <button
                     onClick={() => { setSent(false); setForm({ name: "", company: "", email: "", phone: "", subject: "", message: "" }); }}
                     className="px-5 py-2.5 bg-orange text-white rounded-lg font-medium hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
                   >
-                    Préparer un autre message
+                    {t("success.resetButton")}
                   </button>
                 </motion.div>
               ) : (
@@ -154,15 +170,10 @@ export default function ContactPage() {
                   onSubmit={handleSubmit}
                   className="space-y-5"
                 >
-                <h2 className="text-xl font-bold text-navy mb-6">Parlez-nous de votre projet</h2>
+                <h2 className="text-xl font-bold text-navy mb-6">{t("form.title")}</h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  {[
-                    { name: "name", label: "Nom complet *", type: "text", required: true, autoComplete: "name", maxLength: 100 },
-                    { name: "company", label: "Société", type: "text", required: false, autoComplete: "organization", maxLength: 100 },
-                    { name: "email", label: "Email professionnel *", type: "email", required: true, autoComplete: "email", inputMode: "email" as const, maxLength: 254 },
-                    { name: "phone", label: "Téléphone", type: "tel", required: false, autoComplete: "tel", inputMode: "tel" as const, maxLength: 30 },
-                  ].map((f) => (
+                  {fields.map((f) => (
                     <div key={f.name}>
                       <label htmlFor={f.name} className="block text-sm font-medium text-ink mb-1.5">{f.label}</label>
                       <input
@@ -182,7 +193,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-ink mb-1.5">Objet *</label>
+                  <label htmlFor="subject" className="block text-sm font-medium text-ink mb-1.5">{t("form.subjectLabel")}</label>
                   <select
                     id="subject"
                     name="subject"
@@ -191,20 +202,15 @@ export default function ContactPage() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-line rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-orange focus:border-transparent transition-[box-shadow,border-color] bg-white"
                   >
-                    <option value="">Sélectionnez un objet</option>
-                    <option>Projet ERP / Odoo</option>
-                    <option>Intelligence Artificielle</option>
-                    <option>DevSecOps / Cloud</option>
-                    <option>Développement sur mesure</option>
-                    <option>Transformation Digitale</option>
-                    <option>Business Intelligence</option>
-                    <option>Demande de partenariat</option>
-                    <option>Autre</option>
+                    <option value="">{t("form.subjectPlaceholder")}</option>
+                    {subjectOptions.map((option) => (
+                      <option key={option}>{option}</option>
+                    ))}
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-ink mb-1.5">Votre message *</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-ink mb-1.5">{t("form.messageLabel")}</label>
                   <textarea
                     id="message"
                     name="message"
@@ -213,10 +219,12 @@ export default function ContactPage() {
                     maxLength={2000}
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="Décrivez brièvement votre besoin, votre secteur d'activité et vos enjeux..."
+                    placeholder={t("form.messagePlaceholder")}
                     className="w-full px-4 py-3 border border-line rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-orange focus:border-transparent transition-[box-shadow,border-color] resize-none bg-white"
                   />
-                  <p className="mt-1 text-xs text-gray-500 text-right tabular-nums">{form.message.length} / 2000</p>
+                  <p className="mt-1 text-xs text-gray-500 text-right tabular-nums">
+                    {t("form.messageCounter", { count: form.message.length, max: 2000 })}
+                  </p>
                 </div>
 
                 <button
@@ -227,17 +235,17 @@ export default function ContactPage() {
                   {loading ? (
                     <>
                       <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Envoi en cours...
+                      {t("form.submitLoading")}
                     </>
                   ) : (
                     <>
                       <Send size={16} />
-                      Envoyer le message
+                      {t("form.submitButton")}
                     </>
                   )}
                 </button>
                 <p className="text-xs text-gray-500">
-                  En soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter.
+                  {t("form.disclaimer")}
                 </p>
                 </motion.form>
               )}

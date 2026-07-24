@@ -849,5 +849,124 @@
       "keywordDigitalTransformation": "transformation digitale",
       "keywordWestAfrica": "Afrique de l'Ouest"
     }
+  },
+  "About": {
+    "meta": {
+      "title": "À propos — Notre mission et notre équipe",
+      "description": "Découvrez AKILI Labs, société de conseil IT et intégrateur Odoo ERP basée à Abidjan, Côte d'Ivoire : notre mission, nos valeurs et notre équipe d'experts en zone UEMOA.",
+      "ogTitle": "À propos — AKILI Labs",
+      "ogDescription": "Notre mission, nos valeurs et notre équipe d'experts en transformation digitale, ERP Odoo, IA et DevSecOps en Afrique de l'Ouest.",
+      "ogImageAlt": "À propos AKILI Labs"
+    },
+    "hero": {
+      "badge": "Notre identité",
+      "titlePart1": "Qui ",
+      "titleHighlight": "sommes-nous ?",
+      "subtitle": "AKILI Labs est une société de conseil et d'ingénierie spécialisée dans la transformation digitale, les ERP, l'Intelligence Artificielle et le DevSecOps. Fondée pour être un acteur de référence en Afrique, nous intervenons sur toute la zone UEMOA/OHADA."
+    },
+    "vision": {
+      "label": "Notre vision",
+      "title": "Acteur de référence de la transformation digitale en Afrique",
+      "text": "Être reconnu comme le partenaire de confiance des organisations qui souhaitent moderniser leurs systèmes d'information, en proposant des solutions innovantes, sécurisées et parfaitement adaptées aux enjeux métiers africains."
+    },
+    "mission": {
+      "label": "Notre mission",
+      "title": "Accompagner, intégrer, innover",
+      "text": "Accompagner les entreprises dans la conception, l'intégration et l'évolution de leurs systèmes d'information en combinant expertise métier, technologies modernes et innovation continue."
+    },
+    "values": {
+      "badge": "Nos valeurs",
+      "title": "Ce qui nous définit"
+    },
+    "team": {
+      "badge": "Notre équipe",
+      "title": "Les experts derrière AKILI Labs",
+      "subtitle": "Une équipe pluridisciplinaire, passionnée par la technologie et engagée pour la transformation digitale de l'Afrique.",
+      "linkedinAriaLabel": "LinkedIn de {name}",
+      "linkedinText": "Voir le profil LinkedIn",
+      "contactPole": "Contacter ce pôle →",
+      "joinTitle": "Vous souhaitez rejoindre l'équipe ?",
+      "joinText": "Nous recrutons des talents passionnés par la tech et l'impact en Afrique.",
+      "viewOffers": "Voir nos offres →"
+    },
+    "partners": {
+      "label": "Technologies & Partenaires"
+    },
+    "cta": {
+      "title": "Rejoignez l'aventure AKILI Labs",
+      "text": "Nous recrutons des talents passionnés par la tech et l'impact en Afrique.",
+      "viewOffers": "Voir les offres →",
+      "contactButton": "Parlons de votre projet"
+    }
+  },
+  "Contact": {
+    "meta": {
+      "title": "Contact — Parlons de votre projet",
+      "description": "Contactez AKILI Labs pour votre projet de transformation digitale, ERP Odoo, Intelligence Artificielle ou DevSecOps en zone UEMOA. Consultation initiale gratuite, réponse sous 24h ouvrées.",
+      "ogTitle": "Contact — AKILI Labs",
+      "ogDescription": "Parlons de votre projet ERP, IA ou DevSecOps en Afrique de l'Ouest. Consultation initiale gratuite.",
+      "ogImageAlt": "Contact AKILI Labs"
+    },
+    "hero": {
+      "badge": "Parlons de votre projet",
+      "titleHighlight": "Contactez",
+      "titleSuffix": "-nous",
+      "subtitle": "Notre équipe répond dans les 24h ouvrées. La consultation initiale est offerte."
+    },
+    "sidebar": {
+      "title": "Nos coordonnées",
+      "addressLabel": "Siège social",
+      "addressCity": "Abidjan, Côte d'Ivoire",
+      "addressZone": "Zone UEMOA",
+      "emailLabel": "Email",
+      "phoneLabel": "Téléphone",
+      "availabilityLabel": "Disponibilité",
+      "availabilityValue": "Lun–Ven : 08h00–18h00 GMT",
+      "quickReplyTitle": "Réponse rapide garantie",
+      "quickReplyTextRich": "Nos experts répondent dans les <strong>24h ouvrées</strong>. La consultation initiale est entièrement gratuite.",
+      "trust1": "Consultation initiale offerte",
+      "trust2": "Confidentialité garantie",
+      "trust3": "Experts certifiés",
+      "trust4": "Devis sous 48h"
+    },
+    "form": {
+      "title": "Parlez-nous de votre projet",
+      "nameLabel": "Nom complet *",
+      "companyLabel": "Société",
+      "emailLabel": "Email professionnel *",
+      "phoneLabel": "Téléphone",
+      "subjectLabel": "Objet *",
+      "subjectPlaceholder": "Sélectionnez un objet",
+      "subjectOptions": [
+        "Projet ERP / Odoo",
+        "Intelligence Artificielle",
+        "DevSecOps / Cloud",
+        "Développement sur mesure",
+        "Transformation Digitale",
+        "Business Intelligence",
+        "Demande de partenariat",
+        "Autre"
+      ],
+      "messageLabel": "Votre message *",
+      "messagePlaceholder": "Décrivez brièvement votre besoin, votre secteur d'activité et vos enjeux...",
+      "messageCounter": "{count} / {max}",
+      "submitButton": "Envoyer le message",
+      "submitLoading": "Envoi en cours...",
+      "disclaimer": "En soumettant ce formulaire, vous acceptez que vos données soient utilisées pour vous recontacter.",
+      "mailSubjectPrefix": "[Site web]",
+      "mailBodyName": "Nom",
+      "mailBodyCompany": "Société",
+      "mailBodyCompanyEmpty": "Non renseignée",
+      "mailBodyEmail": "Email",
+      "mailBodyPhone": "Téléphone",
+      "mailBodyPhoneEmpty": "Non renseigné",
+      "mailBodySubject": "Objet",
+      "mailBodyMessage": "Message :"
+    },
+    "success": {
+      "title": "Email préparé",
+      "text": "Votre messagerie s'ouvre avec un message prérempli. Vérifiez-le puis envoyez-le à contact@akililabs.io.",
+      "resetButton": "Préparer un autre message"
+    }
   }
 }

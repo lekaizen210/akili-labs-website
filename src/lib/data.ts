@@ -230,72 +230,154 @@ export const approach = [
 ] satisfies { step: number; title: Localized; icon: string }[];
 
 export const values = [
-  { name: "Excellence", icon: "Star", desc: "Nous visons la perfection dans chaque livrable." },
-  { name: "Innovation", icon: "Lightbulb", desc: "Nous adoptons les technologies d'avant-garde." },
-  { name: "Confiance", icon: "Shield", desc: "Transparence et honnêteté dans chaque engagement." },
-  { name: "Collaboration", icon: "Users", desc: "Nous travaillons avec vous, pas pour vous." },
-  { name: "Engagement", icon: "Target", desc: "Nos promesses sont tenues, sans exception." },
-  { name: "Sécurité", icon: "Lock", desc: "La cybersécurité est au cœur de nos pratiques." },
-  { name: "Qualité", icon: "Award", desc: "Nos standards dépassent les attentes du marché." },
-  { name: "Performance", icon: "TrendingUp", desc: "Chaque solution est conçue pour performer." },
-];
+  {
+    name: { fr: "Excellence", en: "Excellence" },
+    icon: "Star",
+    desc: { fr: "Nous visons la perfection dans chaque livrable.", en: "We aim for perfection in every deliverable." },
+  },
+  {
+    name: { fr: "Innovation", en: "Innovation" },
+    icon: "Lightbulb",
+    desc: { fr: "Nous adoptons les technologies d'avant-garde.", en: "We embrace cutting-edge technologies." },
+  },
+  {
+    name: { fr: "Confiance", en: "Trust" },
+    icon: "Shield",
+    desc: { fr: "Transparence et honnêteté dans chaque engagement.", en: "Transparency and honesty in every engagement." },
+  },
+  {
+    name: { fr: "Collaboration", en: "Collaboration" },
+    icon: "Users",
+    desc: { fr: "Nous travaillons avec vous, pas pour vous.", en: "We work with you, not just for you." },
+  },
+  {
+    name: { fr: "Engagement", en: "Commitment" },
+    icon: "Target",
+    desc: { fr: "Nos promesses sont tenues, sans exception.", en: "We keep our promises, no exceptions." },
+  },
+  {
+    name: { fr: "Sécurité", en: "Security" },
+    icon: "Lock",
+    desc: { fr: "La cybersécurité est au cœur de nos pratiques.", en: "Cybersecurity is at the core of everything we do." },
+  },
+  {
+    name: { fr: "Qualité", en: "Quality" },
+    icon: "Award",
+    desc: { fr: "Nos standards dépassent les attentes du marché.", en: "Our standards exceed market expectations." },
+  },
+  {
+    name: { fr: "Performance", en: "Performance" },
+    icon: "TrendingUp",
+    desc: { fr: "Chaque solution est conçue pour performer.", en: "Every solution is built to perform." },
+  },
+] satisfies { name: Localized; icon: string; desc: Localized }[];
 
 export const team = [
   {
     initiales: "JA",
     nom: "Jonathan Arra",
-    titre: "Fondateur & Directeur Général",
-    bio: "Expert en transformation digitale et intégration ERP, Jonathan pilote la stratégie d'AKILI Labs avec plus de 10 ans d'expérience sur la zone UEMOA.",
-    expertises: ["ERP Odoo", "Transformation Digitale", "Stratégie SI"],
+    titre: { fr: "Fondateur & Directeur Général", en: "Founder & CEO" },
+    bio: {
+      fr: "Expert en transformation digitale et intégration ERP, Jonathan pilote la stratégie d'AKILI Labs avec plus de 10 ans d'expérience sur la zone UEMOA.",
+      en: "An expert in digital transformation and ERP integration, Jonathan drives AKILI Labs' strategy with over 10 years of experience across the UEMOA zone.",
+    },
+    expertises: [
+      { fr: "ERP Odoo", en: "Odoo ERP" },
+      { fr: "Transformation Digitale", en: "Digital Transformation" },
+      { fr: "Stratégie SI", en: "IT Strategy" },
+    ] satisfies Localized[],
     linkedin: "",
     couleur: "#1A2B3C",
   },
   {
     initiales: "ERP",
-    nom: "Pôle ERP & Odoo",
-    titre: "Intégration, paramétrage et support",
-    bio: "Consultants fonctionnels et développeurs Odoo mobilisés sur l'analyse métier, la configuration, les développements spécifiques, la migration et la formation.",
-    expertises: ["Odoo", "OHADA", "SIRH", "TMA"],
+    nom: { fr: "Pôle ERP & Odoo", en: "ERP & Odoo Division" },
+    titre: { fr: "Intégration, paramétrage et support", en: "Integration, configuration and support" },
+    bio: {
+      fr: "Consultants fonctionnels et développeurs Odoo mobilisés sur l'analyse métier, la configuration, les développements spécifiques, la migration et la formation.",
+      en: "Functional consultants and Odoo developers focused on business analysis, configuration, custom development, migration and training.",
+    },
+    expertises: [
+      "Odoo",
+      "OHADA",
+      { fr: "SIRH", en: "HRIS" },
+      { fr: "TMA", en: "TMA (application maintenance)" },
+    ] satisfies (string | Localized)[],
     linkedin: "",
     couleur: "#FF5500",
   },
   {
     initiales: "IA",
-    nom: "Pôle IA & Data",
-    titre: "Automatisation, OCR et aide à la décision",
-    bio: "Ingénieurs data et IA spécialisés dans les cas d'usage utiles aux métiers : OCR documentaire, agents IA, RAG, tableaux de bord et analyse prédictive.",
-    expertises: ["IA générative", "OCR", "Python", "RAG"],
+    nom: { fr: "Pôle IA & Data", en: "AI & Data Division" },
+    titre: { fr: "Automatisation, OCR et aide à la décision", en: "Automation, OCR and decision support" },
+    bio: {
+      fr: "Ingénieurs data et IA spécialisés dans les cas d'usage utiles aux métiers : OCR documentaire, agents IA, RAG, tableaux de bord et analyse prédictive.",
+      en: "Data and AI engineers focused on business-relevant use cases: document OCR, AI agents, RAG, dashboards and predictive analytics.",
+    },
+    expertises: [
+      { fr: "IA générative", en: "Generative AI" },
+      "OCR",
+      "Python",
+      "RAG",
+    ] satisfies (string | Localized)[],
     linkedin: "",
     couleur: "#1A2B3C",
   },
   {
     initiales: "OPS",
-    nom: "Pôle DevSecOps",
-    titre: "CI/CD, cloud, sécurité et exploitation",
-    bio: "Ingénieurs DevSecOps chargés d'industrialiser les déploiements, sécuriser les pipelines et mettre en place le monitoring des environnements clients.",
-    expertises: ["GitLab CI/CD", "Docker", "Kubernetes", "Monitoring"],
+    nom: { fr: "Pôle DevSecOps", en: "DevSecOps Division" },
+    titre: { fr: "CI/CD, cloud, sécurité et exploitation", en: "CI/CD, cloud, security and operations" },
+    bio: {
+      fr: "Ingénieurs DevSecOps chargés d'industrialiser les déploiements, sécuriser les pipelines et mettre en place le monitoring des environnements clients.",
+      en: "DevSecOps engineers responsible for industrializing deployments, securing pipelines and setting up monitoring for client environments.",
+    },
+    expertises: ["GitLab CI/CD", "Docker", "Kubernetes", "Monitoring"] satisfies (string | Localized)[],
     linkedin: "",
     couleur: "#FF5500",
   },
   {
     initiales: "PM",
-    nom: "Pôle Projets & Qualité",
-    titre: "Pilotage, recette et satisfaction client",
-    bio: "Chefs de projet et analystes QA garants du cadrage, du suivi, de la recette, de la documentation et de la qualité des livraisons.",
-    expertises: ["Gestion projet", "Recette UAT", "Documentation", "Qualité"],
+    nom: { fr: "Pôle Projets & Qualité", en: "Projects & Quality Division" },
+    titre: { fr: "Pilotage, recette et satisfaction client", en: "Project management, testing and client satisfaction" },
+    bio: {
+      fr: "Chefs de projet et analystes QA garants du cadrage, du suivi, de la recette, de la documentation et de la qualité des livraisons.",
+      en: "Project managers and QA analysts responsible for scoping, tracking, acceptance testing, documentation and delivery quality.",
+    },
+    expertises: [
+      { fr: "Gestion projet", en: "Project management" },
+      { fr: "Recette UAT", en: "UAT testing" },
+      { fr: "Documentation", en: "Documentation" },
+      { fr: "Qualité", en: "Quality" },
+    ] satisfies Localized[],
     linkedin: "",
     couleur: "#1A2B3C",
   },
   {
     initiales: "AM",
-    nom: "Pôle Conseil & Avant-vente",
-    titre: "Cadrage, propositions et accompagnement métier",
-    bio: "Consultants avant-vente et experts métier mobilisés pour analyser les besoins, qualifier les opportunités et construire des propositions adaptées.",
-    expertises: ["Audit", "Appels d'offres", "Architecture SI", "Conseil"],
+    nom: { fr: "Pôle Conseil & Avant-vente", en: "Consulting & Pre-sales Division" },
+    titre: { fr: "Cadrage, propositions et accompagnement métier", en: "Scoping, proposals and business support" },
+    bio: {
+      fr: "Consultants avant-vente et experts métier mobilisés pour analyser les besoins, qualifier les opportunités et construire des propositions adaptées.",
+      en: "Pre-sales consultants and business experts focused on analyzing needs, qualifying opportunities and building tailored proposals.",
+    },
+    expertises: [
+      { fr: "Audit", en: "Audit" },
+      { fr: "Appels d'offres", en: "Tenders" },
+      { fr: "Architecture SI", en: "IT Architecture" },
+      { fr: "Conseil", en: "Consulting" },
+    ] satisfies Localized[],
     linkedin: "",
     couleur: "#FF5500",
   },
-];
+] satisfies {
+  initiales: string;
+  nom: string | Localized;
+  titre: Localized;
+  bio: Localized;
+  expertises: (string | Localized)[];
+  linkedin: string;
+  couleur: string;
+}[];
 
 export const blogPosts = [
   {

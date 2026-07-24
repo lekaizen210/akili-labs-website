@@ -2,7 +2,9 @@
 
 import { Star, Lightbulb, Shield, Users, Target, Lock, Award, TrendingUp, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 import { values, team } from "@/lib/data";
+import { l } from "@/lib/i18n-content";
 import { Link } from "@/i18n/navigation";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
@@ -17,24 +19,20 @@ const ease = [0.25, 0.46, 0.45, 0.94] as const;
 const partners = ["Odoo", "AWS", "Microsoft Azure", "GitLab", "Docker", "PostgreSQL", "GitHub"];
 
 export default function AboutPage() {
+  const t = useTranslations("About");
+  const locale = useLocale();
+
   return (
     <>
       <PageHero
-        badge="Notre identité"
+        badge={t("hero.badge")}
         title={
           <>
-            <span className="text-white">Qui </span>
-            <HeroHighlight>sommes-nous&nbsp;?</HeroHighlight>
+            <span className="text-white">{t("hero.titlePart1")}</span>
+            <HeroHighlight>{t("hero.titleHighlight")}</HeroHighlight>
           </>
         }
-        subtitle={
-          <>
-            AKILI Labs est une société de conseil et d&apos;ingénierie spécialisée dans la
-            transformation digitale, les ERP, l&apos;Intelligence Artificielle et le DevSecOps.
-            Fondée pour être un acteur de référence en Afrique, nous intervenons sur toute
-            la zone UEMOA/OHADA.
-          </>
-        }
+        subtitle={t("hero.subtitle")}
       />
 
       {/* Vision & Mission */}
@@ -46,27 +44,23 @@ export default function AboutPage() {
         >
           <StaggerItem>
             <div className="bg-blue-light rounded-2xl p-8 border-l-4 border-navy h-full">
-              <div className="text-orange-dark font-bold text-sm uppercase tracking-wider mb-3">Notre vision</div>
+              <div className="text-orange-dark font-bold text-sm uppercase tracking-wider mb-3">{t("vision.label")}</div>
               <h2 className="text-xl font-black text-navy mb-4">
-                Acteur de référence de la transformation digitale en Afrique
+                {t("vision.title")}
               </h2>
               <p className="text-ink leading-relaxed">
-                Être reconnu comme le partenaire de confiance des organisations qui souhaitent
-                moderniser leurs systèmes d&apos;information, en proposant des solutions innovantes,
-                sécurisées et parfaitement adaptées aux enjeux métiers africains.
+                {t("vision.text")}
               </p>
             </div>
           </StaggerItem>
           <StaggerItem>
             <div className="bg-navy rounded-2xl p-8 border-l-4 border-orange h-full">
-              <div className="text-orange font-bold text-sm uppercase tracking-wider mb-3">Notre mission</div>
+              <div className="text-orange font-bold text-sm uppercase tracking-wider mb-3">{t("mission.label")}</div>
               <h2 className="text-xl font-black text-white mb-4">
-                Accompagner, intégrer, innover
+                {t("mission.title")}
               </h2>
               <p className="text-white/70 leading-relaxed">
-                Accompagner les entreprises dans la conception, l&apos;intégration et l&apos;évolution
-                de leurs systèmes d&apos;information en combinant expertise métier, technologies
-                modernes et innovation continue.
+                {t("mission.text")}
               </p>
             </div>
           </StaggerItem>
@@ -78,10 +72,10 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp className="text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-4">
-              ■ Nos valeurs
+              ■ {t("values.badge")}
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-navy">
-              Ce qui nous définit
+              {t("values.title")}
             </h2>
           </FadeUp>
           <StaggerContainer
@@ -92,7 +86,7 @@ export default function AboutPage() {
             {values.map((v) => {
               const Icon = iconMap[v.icon] ?? Star;
               return (
-                <StaggerItem key={v.name}>
+                <StaggerItem key={v.icon}>
                   <motion.div
                     whileHover={{ y: -4, boxShadow: "0 8px 24px rgba(26,43,60,0.1)", transition: { duration: 0.2, ease } }}
                     className="bg-white rounded-2xl p-6 text-center border border-line cursor-default"
@@ -100,8 +94,8 @@ export default function AboutPage() {
                     <div className="w-11 h-11 rounded-xl bg-blue-light flex items-center justify-center mx-auto mb-4">
                       <Icon size={20} className="text-orange" />
                     </div>
-                    <h3 className="font-bold text-navy mb-1.5">{v.name}</h3>
-                    <p className="text-xs text-ink leading-relaxed">{v.desc}</p>
+                    <h3 className="font-bold text-navy mb-1.5">{l(v.name, locale)}</h3>
+                    <p className="text-xs text-ink leading-relaxed">{l(v.desc, locale)}</p>
                   </motion.div>
                 </StaggerItem>
               );
@@ -115,14 +109,13 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-4">
-              ■ Notre équipe
+              ■ {t("team.badge")}
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-navy mb-4">
-              Les experts derrière AKILI Labs
+              {t("team.title")}
             </h2>
             <p className="text-ink max-w-xl mx-auto">
-              Une équipe pluridisciplinaire, passionnée par la technologie et engagée pour
-              la transformation digitale de l&apos;Afrique.
+              {t("team.subtitle")}
             </p>
           </FadeUp>
 
@@ -131,66 +124,69 @@ export default function AboutPage() {
             stagger={0.1}
             delay={0.05}
           >
-            {team.map((membre) => (
-              <StaggerItem key={membre.nom}>
-                <motion.div
-                  whileHover={{ y: -6, borderColor: "var(--color-orange)", boxShadow: "0 16px 40px rgba(26,43,60,0.12)", transition: { duration: 0.22, ease } }}
-                  className="group bg-white border border-line rounded-2xl p-7 flex flex-col h-full"
-                >
-                  <div className="flex items-start gap-4 mb-4">
-                    <motion.div
-                      className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 text-white font-black text-lg shadow-md"
-                      style={{ background: `linear-gradient(135deg, ${membre.couleur}, ${membre.couleur}cc)` }}
-                      whileHover={{ scale: 1.08, transition: { duration: 0.2 } }}
-                      aria-hidden="true"
-                    >
-                      {membre.initiales}
-                    </motion.div>
-                    <div className="min-w-0">
-                      <h3 className="font-bold text-navy leading-tight">{membre.nom}</h3>
-                      <p className="text-xs font-semibold text-orange-dark mt-0.5 leading-tight">
-                        {membre.titre}
-                      </p>
-                    </div>
-                  </div>
-
-                  <p className="text-sm text-ink leading-relaxed flex-1 mb-5">
-                    {membre.bio}
-                  </p>
-
-                  <div className="flex flex-wrap gap-1.5 mb-5">
-                    {membre.expertises.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-1 text-xs font-medium bg-blue-light text-navy rounded-lg border border-line"
+            {team.map((membre) => {
+              const nom = l(membre.nom, locale);
+              return (
+                <StaggerItem key={l(membre.nom, "fr")}>
+                  <motion.div
+                    whileHover={{ y: -6, borderColor: "var(--color-orange)", boxShadow: "0 16px 40px rgba(26,43,60,0.12)", transition: { duration: 0.22, ease } }}
+                    className="group bg-white border border-line rounded-2xl p-7 flex flex-col h-full"
+                  >
+                    <div className="flex items-start gap-4 mb-4">
+                      <motion.div
+                        className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 text-white font-black text-lg shadow-md"
+                        style={{ background: `linear-gradient(135deg, ${membre.couleur}, ${membre.couleur}cc)` }}
+                        whileHover={{ scale: 1.08, transition: { duration: 0.2 } }}
+                        aria-hidden="true"
                       >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                        {membre.initiales}
+                      </motion.div>
+                      <div className="min-w-0">
+                        <h3 className="font-bold text-navy leading-tight">{nom}</h3>
+                        <p className="text-xs font-semibold text-orange-dark mt-0.5 leading-tight">
+                          {l(membre.titre, locale)}
+                        </p>
+                      </div>
+                    </div>
 
-                  {membre.linkedin ? (
-                    <a
-                      href={membre.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-xs font-semibold text-ink hover:text-orange transition-colors"
-                      aria-label={`LinkedIn de ${membre.nom}`}
-                    >
-                      <Linkedin size={14} />
-                      Voir le profil LinkedIn
-                    </a>
-                  ) : (
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center gap-2 text-xs font-semibold text-ink hover:text-orange transition-colors"
-                    >
-                      Contacter ce pôle →
-                    </Link>
-                  )}
-                </motion.div>
-              </StaggerItem>
-            ))}
+                    <p className="text-sm text-ink leading-relaxed flex-1 mb-5">
+                      {l(membre.bio, locale)}
+                    </p>
+
+                    <div className="flex flex-wrap gap-1.5 mb-5">
+                      {membre.expertises.map((tag) => (
+                        <span
+                          key={l(tag, "fr")}
+                          className="px-2.5 py-1 text-xs font-medium bg-blue-light text-navy rounded-lg border border-line"
+                        >
+                          {l(tag, locale)}
+                        </span>
+                      ))}
+                    </div>
+
+                    {membre.linkedin ? (
+                      <a
+                        href={membre.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-xs font-semibold text-ink hover:text-orange transition-colors"
+                        aria-label={t("team.linkedinAriaLabel", { name: nom })}
+                      >
+                        <Linkedin size={14} />
+                        {t("team.linkedinText")}
+                      </a>
+                    ) : (
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 text-xs font-semibold text-ink hover:text-orange transition-colors"
+                      >
+                        {t("team.contactPole")}
+                      </Link>
+                    )}
+                  </motion.div>
+                </StaggerItem>
+              );
+            })}
           </StaggerContainer>
 
           {/* Rejoindre CTA */}
@@ -198,10 +194,10 @@ export default function AboutPage() {
             <div className="bg-blue-light rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 border border-line">
               <div>
                 <h3 className="text-lg font-black text-navy mb-1">
-                  Vous souhaitez rejoindre l&apos;équipe ?
+                  {t("team.joinTitle")}
                 </h3>
                 <p className="text-sm text-ink">
-                  Nous recrutons des talents passionnés par la tech et l&apos;impact en Afrique.
+                  {t("team.joinText")}
                 </p>
               </div>
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
@@ -209,7 +205,7 @@ export default function AboutPage() {
                   href="/carrieres"
                   className="shrink-0 px-6 py-3 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-colors shadow-md whitespace-nowrap"
                 >
-                  Voir nos offres →
+                  {t("team.viewOffers")}
                 </Link>
               </motion.div>
             </div>
@@ -222,7 +218,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
             <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-8">
-              Technologies & Partenaires
+              {t("partners.label")}
             </div>
           </FadeUp>
           <StaggerContainer
@@ -251,17 +247,17 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16 bg-navy">
         <FadeUp className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-black text-white mb-3">Rejoignez l&apos;aventure AKILI Labs</h2>
-          <p className="text-white/70 mb-7">Nous recrutons des talents passionnés par la tech et l&apos;impact en Afrique.</p>
+          <h2 className="text-2xl font-black text-white mb-3">{t("cta.title")}</h2>
+          <p className="text-white/70 mb-7">{t("cta.text")}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
               <Link href="/carrieres" className="px-6 py-3 bg-orange text-white font-semibold rounded-xl hover:bg-orange-hover transition-colors">
-                Voir les offres →
+                {t("cta.viewOffers")}
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
               <Link href="/contact" className="px-6 py-3 border border-white/20 text-white/80 rounded-xl hover:border-white/40 hover:text-white transition-colors font-medium">
-                Parlons de votre projet
+                {t("cta.contactButton")}
               </Link>
             </motion.div>
           </div>
