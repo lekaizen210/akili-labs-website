@@ -1,6 +1,6 @@
 {
   "NotFound": {
-    "title": "Page introuvable",
+    "title": "Page non trouvée",
     "description": "La page que vous cherchez n'existe pas ou a été déplacée. Revenez à l'accueil pour continuer votre navigation.",
     "backHome": "Retour à l'accueil",
     "previousPage": "Page précédente"
@@ -37,6 +37,7 @@
     "companyTitle": "Entreprise",
     "cta": "Demander un devis →",
     "confidential": "Confidentiel",
+    "gdpr": "RGPD",
     "rights": "© 2026 Tous droits réservés",
     "legalNotice": "Mentions légales",
     "privacy": "Confidentialité",

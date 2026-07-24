@@ -175,7 +175,7 @@ export default function Footer() {
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block"></span>
               HTTPS
             </span>
-            <span>RGPD</span>
+            <span>{t("gdpr")}</span>
             <span>OHADA</span>
             <Link href="/mentions-legales" className="inline-block py-2 hover:text-gray-300 transition-colors">{t("legalNotice")}</Link>
             <Link href="/confidentialite" className="inline-block py-2 hover:text-gray-300 transition-colors">{t("privacy")}</Link>
