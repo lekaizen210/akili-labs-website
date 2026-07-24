@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { ChevronRight, Clock, Calendar, ArrowLeft } from "lucide-react";
 import { blogPosts } from "@/lib/data";
+import { l } from "@/lib/i18n-content";
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 
@@ -82,28 +83,30 @@ export async function generateStaticParams() {
 const BASE_URL = "https://akililabs.com";
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
   const url = `${BASE_URL}/blog/${slug}`;
+  const title = l(post.title, locale);
+  const excerpt = l(post.excerpt, locale);
   return {
-    title: post.title,
-    description: post.excerpt,
+    title,
+    description: excerpt,
     alternates: { canonical: url },
     openGraph: {
       type: "article",
       url,
-      title: post.title,
-      description: post.excerpt,
+      title,
+      description: excerpt,
       publishedTime: post.date,
       authors: ["AKILI Labs"],
-      tags: [post.category, "AKILI Labs", "Afrique de l'Ouest", "UEMOA"],
-      images: [{ url: "/logo-akili.png", width: 1600, height: 893, alt: post.title }],
+      tags: [l(post.category, locale), "AKILI Labs", "Afrique de l'Ouest", "UEMOA"],
+      images: [{ url: "/logo-akili.png", width: 1600, height: 893, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
+      title,
+      description: excerpt,
       images: ["/logo-akili.png"],
     },
   };
@@ -116,13 +119,16 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) notFound();
   const article = articleBodies[slug];
   const url = `${BASE_URL}/blog/${slug}`;
+  const title = l(post.title, locale);
+  const excerpt = l(post.excerpt, locale);
+  const category = l(post.category, locale);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "@id": url,
-    headline: post.title,
-    description: post.excerpt,
+    headline: title,
+    description: excerpt,
     url,
     datePublished: post.date,
     dateModified: post.date,
@@ -138,11 +144,11 @@ export default async function BlogPostPage({ params }: PageProps) {
       name: "AKILI Labs",
     },
     image: `${BASE_URL}/logo-akili.png`,
-    inLanguage: "fr-FR",
-    keywords: [post.category, "AKILI Labs", "transformation digitale", "UEMOA", "Afrique de l'Ouest"],
+    inLanguage: locale === "en" ? "en-US" : "fr-FR",
+    keywords: [category, "AKILI Labs", "transformation digitale", "UEMOA", "Afrique de l'Ouest"],
     about: {
       "@type": "Thing",
-      name: post.category,
+      name: category,
     },
     isPartOf: {
       "@type": "Blog",
@@ -157,7 +163,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: BASE_URL },
       { "@type": "ListItem", position: 2, name: "Blog", item: `${BASE_URL}/blog` },
-      { "@type": "ListItem", position: 3, name: post.title, item: url },
+      { "@type": "ListItem", position: 3, name: title, item: url },
     ],
   };
 
@@ -179,12 +185,12 @@ export default async function BlogPostPage({ params }: PageProps) {
             <ChevronRight size={14} />
             <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
             <ChevronRight size={14} />
-            <span className="text-white/80 truncate max-w-xs">{post.title}</span>
+            <span className="text-white/80 truncate max-w-xs">{title}</span>
           </nav>
           <span className="px-3 py-1 bg-orange text-white text-xs font-semibold rounded-full mb-5 inline-block">
-            {post.category}
+            {category}
           </span>
-          <h1 className="text-3xl sm:text-4xl font-black text-white mb-5 leading-tight">{post.title}</h1>
+          <h1 className="text-3xl sm:text-4xl font-black text-white mb-5 leading-tight">{title}</h1>
           <div className="flex items-center gap-4 text-sm text-white/65">
             <span className="flex items-center gap-1.5">
               <Calendar size={13} />
@@ -202,7 +208,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none text-ink leading-relaxed">
-            <p className="text-xl text-ink leading-relaxed mb-8 font-medium">{post.excerpt}</p>
+            <p className="text-xl text-ink leading-relaxed mb-8 font-medium">{excerpt}</p>
             <div className="bg-blue-light border-l-4 border-orange rounded-r-xl p-6 my-8">
               <p className="font-semibold text-navy m-0">
                 {article?.intro}

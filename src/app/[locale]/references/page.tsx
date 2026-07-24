@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { TrendingUp, ArrowRight } from "lucide-react";
 import { references } from "@/lib/data";
+import { l } from "@/lib/i18n-content";
 import type { Metadata } from "next";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
 import { getTechColor } from "@/lib/tech-colors";
@@ -46,27 +47,28 @@ export default async function ReferencesPage({
                 <div className="p-7">
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-2.5 py-1 text-xs font-semibold bg-blue-light text-navy rounded-full">
-                      {ref.expertise}
+                      {l(ref.expertise, locale)}
                     </span>
                     <span className="text-xs text-gray-500">{ref.year}</span>
                   </div>
                   <div className="text-xs font-semibold text-orange-dark uppercase tracking-wider mb-2">
-                    {ref.sector}
+                    {l(ref.sector, locale)}
                   </div>
                   <h2 className="text-base font-bold text-navy mb-3 leading-snug">
-                    {ref.title}
+                    {l(ref.title, locale)}
                   </h2>
-                  <p className="text-sm text-ink leading-relaxed mb-5">{ref.summary}</p>
+                  <p className="text-sm text-ink leading-relaxed mb-5">{l(ref.summary, locale)}</p>
                   <div className="flex items-center gap-2 px-4 py-2.5 bg-blue-light rounded-xl mb-4">
                     <TrendingUp size={14} className="text-orange" />
-                    <span className="text-sm font-bold text-navy">{ref.result}</span>
+                    <span className="text-sm font-bold text-navy">{l(ref.result, locale)}</span>
                   </div>
                   <div className="flex flex-wrap gap-1.5">
                     {ref.technologies.map((t) => {
-                      const { bg, text } = getTechColor(t);
+                      const label = l(t, locale);
+                      const { bg, text } = getTechColor(l(t, "fr"));
                       return (
-                        <span key={t} className="px-2 py-0.5 text-xs font-semibold rounded-md" style={{ backgroundColor: bg, color: text }}>
-                          {t}
+                        <span key={label} className="px-2 py-0.5 text-xs font-semibold rounded-md" style={{ backgroundColor: bg, color: text }}>
+                          {label}
                         </span>
                       );
                     })}

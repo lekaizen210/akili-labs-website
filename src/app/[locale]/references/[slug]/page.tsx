@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { ChevronRight, TrendingUp, CheckCircle } from "lucide-react";
 import { references } from "@/lib/data";
+import { l } from "@/lib/i18n-content";
 import { getTechColor } from "@/lib/tech-colors";
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
@@ -15,10 +16,10 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const ref = references.find((r) => r.slug === slug);
   if (!ref) return {};
-  return { title: `${ref.title} — AKILI Labs`, description: ref.summary };
+  return { title: `${l(ref.title, locale)} — AKILI Labs`, description: l(ref.summary, locale) };
 }
 
 export default async function ReferencePage({ params }: PageProps) {
@@ -37,17 +38,17 @@ export default async function ReferencePage({ params }: PageProps) {
             <ChevronRight size={14} />
             <Link href="/references" className="hover:text-white transition-colors">Références</Link>
             <ChevronRight size={14} />
-            <span className="text-white/80 truncate max-w-xs">{ref.title}</span>
+            <span className="text-white/80 truncate max-w-xs">{l(ref.title, locale)}</span>
           </nav>
           <div className="flex items-center gap-3 mb-5">
-            <span className="px-3 py-1 bg-orange text-white text-xs font-semibold rounded-full">{ref.expertise}</span>
-            <span className="text-white/50 text-sm">{ref.sector} · {ref.year}</span>
+            <span className="px-3 py-1 bg-orange text-white text-xs font-semibold rounded-full">{l(ref.expertise, locale)}</span>
+            <span className="text-white/50 text-sm">{l(ref.sector, locale)} · {ref.year}</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">{ref.title}</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">{l(ref.title, locale)}</h1>
           {/* Key result */}
           <div className="inline-flex items-center gap-2 px-5 py-3 bg-white/10 border border-white/20 rounded-xl">
             <TrendingUp size={16} className="text-orange" />
-            <span className="font-bold text-white">{ref.result}</span>
+            <span className="font-bold text-white">{l(ref.result, locale)}</span>
           </div>
         </div>
       </section>
@@ -58,22 +59,22 @@ export default async function ReferencePage({ params }: PageProps) {
           <div className="lg:col-span-2 space-y-8">
             <div>
               <h2 className="text-xl font-black text-navy mb-4">Contexte & Objectifs</h2>
-              <p className="text-ink leading-relaxed">{ref.summary}</p>
+              <p className="text-ink leading-relaxed">{l(ref.summary, locale)}</p>
             </div>
             <div>
               <h2 className="text-xl font-black text-navy mb-4">Solution déployée</h2>
               <div className="space-y-3">
                 {ref.technologies.map((t) => (
-                  <div key={t} className="flex items-center gap-3">
+                  <div key={l(t, "fr")} className="flex items-center gap-3">
                     <CheckCircle size={16} className="text-orange shrink-0" />
-                    <span className="text-ink">{t}</span>
+                    <span className="text-ink">{l(t, locale)}</span>
                   </div>
                 ))}
               </div>
             </div>
             <div className="bg-blue-light rounded-2xl p-6 border-l-4 border-orange">
               <div className="text-xs font-semibold text-orange-dark uppercase tracking-wider mb-1">Résultat clé</div>
-              <div className="text-2xl font-black text-navy">{ref.result}</div>
+              <div className="text-2xl font-black text-navy">{l(ref.result, locale)}</div>
             </div>
           </div>
           <div className="space-y-5">
@@ -81,9 +82,10 @@ export default async function ReferencePage({ params }: PageProps) {
               <h3 className="font-bold text-navy mb-3 text-sm uppercase tracking-wider">Technologies</h3>
               <div className="flex flex-wrap gap-2">
                 {ref.technologies.map((t) => {
-                  const { bg, text } = getTechColor(t);
+                  const label = l(t, locale);
+                  const { bg, text } = getTechColor(l(t, "fr"));
                   return (
-                    <span key={t} className="px-3 py-1 text-xs font-semibold rounded-lg" style={{ backgroundColor: bg, color: text }}>{t}</span>
+                    <span key={label} className="px-3 py-1 text-xs font-semibold rounded-lg" style={{ backgroundColor: bg, color: text }}>{label}</span>
                   );
                 })}
               </div>
@@ -106,8 +108,8 @@ export default async function ReferencePage({ params }: PageProps) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {references.filter((r) => r.slug !== slug).slice(0, 2).map((r) => (
               <Link key={r.slug} href={`/references/${r.slug}`} className="group bg-white rounded-xl p-5 border border-line hover:border-orange hover:shadow-md transition-[box-shadow,border-color]">
-                <div className="text-xs font-semibold text-orange-dark mb-1">{r.expertise}</div>
-                <div className="font-bold text-navy text-sm group-hover:text-orange transition-colors">{r.title}</div>
+                <div className="text-xs font-semibold text-orange-dark mb-1">{l(r.expertise, locale)}</div>
+                <div className="font-bold text-navy text-sm group-hover:text-orange transition-colors">{l(r.title, locale)}</div>
               </Link>
             ))}
           </div>

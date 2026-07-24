@@ -3,10 +3,13 @@
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 import { references } from "@/lib/data";
+import { l } from "@/lib/i18n-content";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import { getTechColor } from "@/lib/tech-colors";
 
+// Keyed on the (stable) French expertise value so styling stays consistent across locales.
 const tagColors: Record<string, string> = {
   ERP: "bg-blue-50 text-blue-700",
   "Intelligence Artificielle": "bg-purple-50 text-purple-700",
@@ -16,6 +19,7 @@ const tagColors: Record<string, string> = {
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function ReferencesSection() {
+  const locale = useLocale();
   return (
     <section className="py-24 bg-white" id="references">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,28 +62,29 @@ export default function ReferencesSection() {
                   <div className="h-1.5 bg-gradient-to-r from-navy to-orange" />
                   <div className="p-7 flex flex-col flex-1">
                     <div className="flex items-center justify-between mb-4">
-                      <span className={`px-2.5 py-1 text-xs font-semibold rounded-full ${tagColors[ref.expertise] ?? "bg-gray-100 text-gray-600"}`}>
-                        {ref.expertise}
+                      <span className={`px-2.5 py-1 text-xs font-semibold rounded-full ${tagColors[l(ref.expertise, "fr")] ?? "bg-gray-100 text-gray-600"}`}>
+                        {l(ref.expertise, locale)}
                       </span>
                       <span className="text-xs text-gray-500">{ref.year}</span>
                     </div>
                     <div className="text-xs font-semibold text-orange-dark uppercase tracking-wider mb-2">
-                      {ref.sector}
+                      {l(ref.sector, locale)}
                     </div>
                     <h3 className="text-base font-bold text-navy mb-3 leading-snug">
-                      {ref.title}
+                      {l(ref.title, locale)}
                     </h3>
-                    <p className="text-sm text-ink leading-relaxed mb-5 flex-1">{ref.summary}</p>
+                    <p className="text-sm text-ink leading-relaxed mb-5 flex-1">{l(ref.summary, locale)}</p>
                     <div className="flex items-center gap-2 px-4 py-2.5 bg-blue-light rounded-xl">
                       <TrendingUp size={14} className="text-orange" />
-                      <span className="text-sm font-bold text-navy">{ref.result}</span>
+                      <span className="text-sm font-bold text-navy">{l(ref.result, locale)}</span>
                     </div>
                     <div className="flex flex-wrap gap-1.5 mt-4">
                       {ref.technologies.map((t) => {
-                        const { bg, text } = getTechColor(t);
+                        const label = l(t, locale);
+                        const { bg, text } = getTechColor(l(t, "fr"));
                         return (
-                          <span key={t} className="px-2 py-0.5 text-xs font-semibold rounded-md" style={{ backgroundColor: bg, color: text }}>
-                            {t}
+                          <span key={label} className="px-2 py-0.5 text-xs font-semibold rounded-md" style={{ backgroundColor: bg, color: text }}>
+                            {label}
                           </span>
                         );
                       })}

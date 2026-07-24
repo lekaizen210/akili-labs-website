@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { Clock, Calendar, ArrowRight } from "lucide-react";
 import { blogPosts } from "@/lib/data";
+import { l } from "@/lib/i18n-content";
 import type { Metadata } from "next";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
 import { setRequestLocale } from "next-intl/server";
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   description: "Insights, études de cas et bonnes pratiques sur l'ERP, l'Intelligence Artificielle et le DevSecOps en Afrique.",
 };
 
+// Keyed on the (stable) French tag value so styling stays consistent across locales.
 const tagColors: Record<string, string> = {
   ERP: "bg-blue-50 text-blue-700 border-blue-100",
   IA: "bg-purple-50 text-purple-700 border-purple-100",
@@ -50,20 +52,20 @@ export default async function BlogPage({
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="h-48 lg:h-auto bg-gradient-to-br from-navy to-[#243548] flex items-center justify-center">
                   <span className="text-orange font-black text-6xl opacity-20">
-                    {blogPosts[0].tag}
+                    {l(blogPosts[0].tag, locale)}
                   </span>
                 </div>
                 <div className="p-8 lg:p-10">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-full border ${tagColors[blogPosts[0].tag] ?? "bg-gray-100 text-gray-600"}`}>
-                      {blogPosts[0].category}
+                    <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-full border ${tagColors[l(blogPosts[0].tag, "fr")] ?? "bg-gray-100 text-gray-600"}`}>
+                      {l(blogPosts[0].category, locale)}
                     </span>
                     <span className="text-xs text-orange font-semibold">À la une</span>
                   </div>
                   <h2 className="text-xl sm:text-2xl font-black text-navy mb-3 group-hover:text-orange transition-colors leading-snug">
-                    {blogPosts[0].title}
+                    {l(blogPosts[0].title, locale)}
                   </h2>
-                  <p className="text-ink text-sm leading-relaxed mb-5">{blogPosts[0].excerpt}</p>
+                  <p className="text-ink text-sm leading-relaxed mb-5">{l(blogPosts[0].excerpt, locale)}</p>
                   <div className="flex items-center gap-4 text-xs text-gray-500 mb-5">
                     <span className="flex items-center gap-1"><Calendar size={11} />
                       {new Date(blogPosts[0].date).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
@@ -87,18 +89,18 @@ export default async function BlogPage({
                 className="group bg-white rounded-2xl overflow-hidden border border-line hover:shadow-xl hover:border-orange transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1"
               >
                 <div className="h-36 bg-gradient-to-br from-navy to-[#243548] flex items-center justify-center">
-                  <span className="text-orange font-black text-4xl opacity-20">{post.tag}</span>
+                  <span className="text-orange font-black text-4xl opacity-20">{l(post.tag, locale)}</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-full border ${tagColors[post.tag] ?? "bg-gray-100 text-gray-600"}`}>
-                      {post.category}
+                    <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-full border ${tagColors[l(post.tag, "fr")] ?? "bg-gray-100 text-gray-600"}`}>
+                      {l(post.category, locale)}
                     </span>
                   </div>
                   <h2 className="text-base font-bold text-navy mb-2 group-hover:text-orange transition-colors leading-snug">
-                    {post.title}
+                    {l(post.title, locale)}
                   </h2>
-                  <p className="text-sm text-ink line-clamp-2 mb-4">{post.excerpt}</p>
+                  <p className="text-sm text-ink line-clamp-2 mb-4">{l(post.excerpt, locale)}</p>
                   <div className="flex items-center gap-3 text-xs text-gray-500">
                     <span className="flex items-center gap-1"><Calendar size={11} />
                       {new Date(post.date).toLocaleDateString("fr-FR", { day: "numeric", month: "short", year: "numeric" })}
