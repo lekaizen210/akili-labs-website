@@ -1,5 +1,67 @@
 {
   "NotFound": {
-    "title": "Page not found"
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved. Head back home to continue browsing.",
+    "backHome": "Back to home",
+    "previousPage": "Previous page"
+  },
+  "Navbar": {
+    "home": "Home",
+    "expertises": "Expertise",
+    "allExpertises": "All our expertise →",
+    "expertisesMobileHeader": "Expertise →",
+    "references": "Case Studies",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "about": "About",
+    "careers": "Careers",
+    "cta": "Let's discuss your project →",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "expertisesMenu": {
+      "transformationDigitale": "Digital Transformation",
+      "erpOdoo": "ERP & Odoo",
+      "intelligenceArtificielle": "Artificial Intelligence",
+      "devsecops": "DevSecOps",
+      "developpementMetiers": "Business Application Development",
+      "businessIntelligence": "Business Intelligence"
+    }
+  },
+  "Footer": {
+    "description": "Your trusted partner for digital transformation in Africa. ERP, AI and DevSecOps expertise at the service of your performance.",
+    "address": "Abidjan, Côte d'Ivoire (UEMOA Zone)",
+    "linkedinAria": "AKILI Labs on LinkedIn",
+    "facebookAria": "AKILI Labs on Facebook",
+    "expertisesTitle": "Expertise",
+    "sectorsTitle": "Industries",
+    "companyTitle": "Company",
+    "cta": "Request a quote →",
+    "confidential": "Confidential",
+    "rights": "© 2026 All rights reserved",
+    "legalNotice": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "expertisesMenu": {
+      "transformationDigitale": "Digital Transformation",
+      "erpOdoo": "ERP & Odoo",
+      "intelligenceArtificielle": "Artificial Intelligence",
+      "devsecops": "DevSecOps",
+      "developpementMetiers": "Business Application Development",
+      "businessIntelligence": "Business Intelligence"
+    },
+    "sectors": {
+      "administrationPublique": "Public Administration",
+      "banqueAssurance": "Banking & Insurance",
+      "agroIndustrie": "Agribusiness",
+      "telecommunications": "Telecommunications",
+      "santeEducation": "Healthcare & Education"
+    },
+    "company": {
+      "about": "About",
+      "references": "Case Studies",
+      "blog": "Blog & Insights",
+      "faq": "FAQ",
+      "careers": "Careers",
+      "contact": "Contact"
+    }
   }
 }

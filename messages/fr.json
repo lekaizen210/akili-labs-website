@@ -1,5 +1,67 @@
 {
   "NotFound": {
-    "title": "Page introuvable"
+    "title": "Page introuvable",
+    "description": "La page que vous cherchez n'existe pas ou a été déplacée. Revenez à l'accueil pour continuer votre navigation.",
+    "backHome": "Retour à l'accueil",
+    "previousPage": "Page précédente"
+  },
+  "Navbar": {
+    "home": "Accueil",
+    "expertises": "Expertises",
+    "allExpertises": "Toutes nos expertises →",
+    "expertisesMobileHeader": "Expertises →",
+    "references": "Références",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "about": "À propos",
+    "careers": "Carrières",
+    "cta": "Discutons de votre projet →",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "expertisesMenu": {
+      "transformationDigitale": "Transformation Digitale",
+      "erpOdoo": "ERP & Odoo",
+      "intelligenceArtificielle": "Intelligence Artificielle",
+      "devsecops": "DevSecOps",
+      "developpementMetiers": "Développement Métiers",
+      "businessIntelligence": "Business Intelligence"
+    }
+  },
+  "Footer": {
+    "description": "Votre partenaire de confiance pour la transformation digitale en Afrique. Expertise ERP, IA et DevSecOps au service de votre performance.",
+    "address": "Abidjan, Côte d'Ivoire (Zone UEMOA)",
+    "linkedinAria": "AKILI Labs sur LinkedIn",
+    "facebookAria": "AKILI Labs sur Facebook",
+    "expertisesTitle": "Expertises",
+    "sectorsTitle": "Secteurs",
+    "companyTitle": "Entreprise",
+    "cta": "Demander un devis →",
+    "confidential": "Confidentiel",
+    "rights": "© 2026 Tous droits réservés",
+    "legalNotice": "Mentions légales",
+    "privacy": "Confidentialité",
+    "expertisesMenu": {
+      "transformationDigitale": "Transformation Digitale",
+      "erpOdoo": "ERP & Odoo",
+      "intelligenceArtificielle": "Intelligence Artificielle",
+      "devsecops": "DevSecOps",
+      "developpementMetiers": "Développement Métiers",
+      "businessIntelligence": "Business Intelligence"
+    },
+    "sectors": {
+      "administrationPublique": "Administration publique",
+      "banqueAssurance": "Banque & Assurance",
+      "agroIndustrie": "Agro-industrie",
+      "telecommunications": "Télécommunications",
+      "santeEducation": "Santé & Éducation"
+    },
+    "company": {
+      "about": "À propos",
+      "references": "Références",
+      "blog": "Blog & Veille",
+      "faq": "FAQ",
+      "careers": "Carrières",
+      "contact": "Contact"
+    }
   }
 }
