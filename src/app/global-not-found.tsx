@@ -5,8 +5,15 @@
 // correspond à aucune route générée (catch-all `[locale]/[...rest]` avec
 // `dynamicParams = false`), Next.js ne peut pas déterminer quelle locale
 // utiliser et court-circuite le rendu applicatif habituel. Ce fichier
-// bypasse le rendu normal et doit donc importer lui-même les styles
-// globaux, les polices et fournir le document HTML complet.
+// bypasse le rendu normal (cf. node_modules/next/dist/docs/.../not-found.md
+// §global-not-found.js) et doit donc reproduire lui-même tout ce que le
+// layout `[locale]` fournirait normalement : styles globaux, polices,
+// chrome de site (Navbar, lien d'évitement, Footer).
+//
+// Navbar/Footer n'utilisent à ce jour que next/link et next/navigation
+// (pas les wrappers next-intl de @/i18n/navigation) : ils fonctionnent
+// donc sans NextIntlClientProvider. À réévaluer si une tâche ultérieure
+// les fait dépendre du contexte next-intl.
 //
 // Contrepartie assumée : cette page n'est pas localisée (toujours en
 // français), au même titre que l'ancien site pré-i18n qui n'avait qu'une
@@ -15,6 +22,8 @@
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import { MotionProvider } from "@/components/ui/MotionProvider";
 import NotFoundContent from "./[locale]/not-found-content";
 
@@ -41,8 +50,15 @@ export default function GlobalNotFound() {
   return (
     <html lang="fr" className={`${manrope.variable} ${inter.variable}`}>
       <body>
+        <a href="#main-content" className="skip-to-content">
+          Aller au contenu principal
+        </a>
         <MotionProvider>
-          <NotFoundContent />
+          <Navbar />
+          <main id="main-content">
+            <NotFoundContent />
+          </main>
+          <Footer />
         </MotionProvider>
       </body>
     </html>
