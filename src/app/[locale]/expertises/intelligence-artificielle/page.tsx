@@ -13,81 +13,39 @@ import IaResources from "@/components/ia/IaResources";
 import IaFaq from "@/components/ia/IaFaq";
 import IaCtaFinal from "@/components/ia/IaCtaFinal";
 import { iaDomains, iaFaqs } from "@/lib/ia-data";
-import { setRequestLocale } from "next-intl/server";
+import { l } from "@/lib/i18n-content";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 const BASE_URL = "https://akililabs.com";
 const url = `${BASE_URL}/expertises/intelligence-artificielle`;
 
-export const metadata: Metadata = {
-  title: "Expertise Intelligence Artificielle en Afrique de l'Ouest",
-  description:
-    "IA Générative, Machine Learning, Computer Vision, NLP en langues africaines et Business Intelligence. Solutions IA concrètes pour les entreprises d'Afrique de l'Ouest. Consultation initiale gratuite.",
-  alternates: { canonical: url },
-  openGraph: {
-    type: "website",
-    url,
-    title: "Expertise Intelligence Artificielle — AKILI Labs Côte d'Ivoire",
-    description:
-      "Adopter l'IA, ce n'est pas rattraper un retard, c'est construire une avance. Solutions IA concrètes pour la zone UEMOA/CEDEAO.",
-    images: [{ url: "/ia-images/ia-hero.jpg", width: 2304, height: 1728, alt: "AKILI Labs — Expertise Intelligence Artificielle" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Expertise Intelligence Artificielle — AKILI Labs",
-    description: "Solutions d'IA concrètes pour les entreprises d'Afrique de l'Ouest.",
-    images: ["/ia-images/ia-hero.jpg"],
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Ia.meta" });
 
-const serviceJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": url,
-  name: "Expertise Intelligence Artificielle",
-  description:
-    "Conception, déploiement et maintenance de solutions d'IA : IA Générative, Machine Learning, Computer Vision, NLP en langues africaines et Business Intelligence augmentée.",
-  url,
-  provider: {
-    "@type": "Organization",
-    "@id": `${BASE_URL}/#organization`,
-    name: "AKILI Labs",
-  },
-  areaServed: ["Côte d'Ivoire", "Sénégal", "Mali", "Burkina Faso", "Niger", "Togo", "Bénin", "Guinée-Bissau"],
-  serviceType: "Intelligence Artificielle",
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Domaines d'expertise IA",
-    itemListElement: iaDomains.map((d, i) => ({
-      "@type": "Offer",
-      position: i + 1,
-      name: d.title,
-      offeredBy: { "@id": `${BASE_URL}/#organization` },
-    })),
-  },
-  availableLanguage: ["French"],
-  termsOfService: `${BASE_URL}/contact`,
-};
-
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Accueil", item: BASE_URL },
-    { "@type": "ListItem", position: 2, name: "Expertises", item: `${BASE_URL}/expertises` },
-    { "@type": "ListItem", position: 3, name: "Intelligence Artificielle", item: url },
-  ],
-};
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `${url}#faq`,
-  mainEntity: iaFaqs.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: { "@type": "Answer", text: f.answer },
-  })),
-};
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      url,
+      title: t("ogTitle"),
+      description: t("ogDescription"),
+      images: [{ url: "/ia-images/ia-hero.jpg", width: 2304, height: 1728, alt: t("ogImageAlt") }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("twitterTitle"),
+      description: t("twitterDescription"),
+      images: ["/ia-images/ia-hero.jpg"],
+    },
+  };
+}
 
 export default async function IntelligenceArtificiellePage({
   params,
@@ -96,6 +54,56 @@ export default async function IntelligenceArtificiellePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Ia.meta" });
+
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": url,
+    name: t("serviceName"),
+    description: t("serviceDescription"),
+    url,
+    provider: {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      name: "AKILI Labs",
+    },
+    areaServed: ["Côte d'Ivoire", "Sénégal", "Mali", "Burkina Faso", "Niger", "Togo", "Bénin", "Guinée-Bissau"],
+    serviceType: "Intelligence Artificielle",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: t("offerCatalogName"),
+      itemListElement: iaDomains.map((d, i) => ({
+        "@type": "Offer",
+        position: i + 1,
+        name: l(d.title, locale),
+        offeredBy: { "@id": `${BASE_URL}/#organization` },
+      })),
+    },
+    availableLanguage: ["French", "English"],
+    termsOfService: `${BASE_URL}/contact`,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: BASE_URL },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/expertises` },
+      { "@type": "ListItem", position: 3, name: t("breadcrumbIa"), item: url },
+    ],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: iaFaqs.map((f) => ({
+      "@type": "Question",
+      name: l(f.question, locale),
+      acceptedAnswer: { "@type": "Answer", text: l(f.answer, locale) },
+    })),
+  };
 
   return (
     <>

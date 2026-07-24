@@ -380,5 +380,105 @@
       "ctaPrimary": "Free consultation",
       "ctaSecondary": "Download our presentation"
     }
+  },
+  "Ia": {
+    "meta": {
+      "title": "Artificial Intelligence Expertise in West Africa",
+      "description": "Generative AI, Machine Learning, Computer Vision, NLP in African languages, and Business Intelligence. Practical AI solutions for West African businesses. Free initial consultation.",
+      "ogTitle": "Artificial Intelligence Expertise — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "Adopting AI is not about catching up — it's about building a lead. Practical AI solutions for the UEMOA/ECOWAS zone.",
+      "ogImageAlt": "AKILI Labs — Artificial Intelligence Expertise",
+      "twitterTitle": "Artificial Intelligence Expertise — AKILI Labs",
+      "twitterDescription": "Practical AI solutions for West African businesses.",
+      "serviceName": "Artificial Intelligence Expertise",
+      "serviceDescription": "Design, deployment, and maintenance of AI solutions: Generative AI, Machine Learning, Computer Vision, NLP in African languages, and augmented Business Intelligence.",
+      "breadcrumbHome": "Home",
+      "breadcrumbExpertises": "Expertise",
+      "breadcrumbIa": "Artificial Intelligence",
+      "offerCatalogName": "AI Areas of Expertise"
+    },
+    "hero": {
+      "badge": "Artificial Intelligence Expertise",
+      "titlePart1": "Adopting AI is not about catching up. ",
+      "titleHighlight": "It's about building a lead.",
+      "subtitle": "A young, hyper-connected population, Mobile Money penetration with no equivalent elsewhere, and fast-growing markets: the African terrain is unique for AI. AKILI Labs designs, deploys, and maintains practical solutions, from business chatbots to prediction engines, tailored to your sector, your data, and your languages.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "Discover our use cases",
+      "imageAlt": "Predictive monitoring screen for the UEMOA zone: 30-day demand forecast with confidence interval and the anticipated Tabaski peak, next to the business assistant showing remaining stock in Yopougon and preparing a restock order pending approval"
+    },
+    "whyNow": {
+      "badge": "Why AI now in Africa?",
+      "title": "The opportunity is here. The window is open.",
+      "paragraphRich": "Africa is the next great frontier for Artificial Intelligence. With more than <strong>1.4 billion people</strong>, a young, hyper-connected population, Mobile Money penetration unmatched anywhere in the world, and fast-growing markets, the continent offers unique ground for AI.",
+      "networkAriaLabel": "AKILI Labs operates in 8 countries across the UEMOA/ECOWAS zone",
+      "networkCaption": "8 UEMOA/ECOWAS countries",
+      "calloutQuote": "The question is no longer \"should we go there?\" It's \"which use case should we start with?\"",
+      "calloutText": "And that's precisely the purpose of our scoping phase.",
+      "changesTitle": "What AI concretely changes for an African organization",
+      "closingParagraph": "At AKILI Labs, we don't sell AI to look modern. We deploy solutions that solve real problems and produce measurable results."
+    },
+    "domains": {
+      "badge": "Our AI Areas of Expertise",
+      "title": "Six domains, one promise: measurable results",
+      "imageAlt": "Business assistant in the browser: asked about the outstanding balance for the Cocody branch, it answers 4,850,000 FCFA citing the accounts receivable ledger and the sales journal, then drafts a reminder letter that stays in draft until the user approves it",
+      "decisionImageAlt": "Forecasting dashboard: actual and forecast weekly demand with confidence interval, model accuracy of 92.4%, morning alerts on critical stock in Yopougon and outstanding customer balances, sales by city, and payment collections breakdown by channel",
+      "technologiesLabel": "Technologies"
+    },
+    "sectors": {
+      "badge": "Use cases by sector",
+      "title": "AI adapted to your industry",
+      "useCasesLabel": "Priority use cases",
+      "benefitLabel": "Expected benefit"
+    },
+    "methodology": {
+      "badge": "Our AI Methodology",
+      "title": "A proven methodology, from scoping to monitoring",
+      "imageAlt": "Model lifecycle: the five steps from your raw data to the everyday decision, the comparison table of training runs where the explainable model wins out over the most accurate one, and the four checks validated before production release, including acceptance testing by the sales teams",
+      "deliverableLabel": "Deliverable: "
+    },
+    "responsable": {
+      "badge": "Responsible AI & Sovereignty",
+      "title": "AI under your control: data, models, decisions",
+      "intro": "Adopting AI shifts responsibilities that no decision-maker can delegate: where does your data live? Does it train a third party's models? Who has the final say when the algorithm recommends declining a loan or rejecting a candidate? Serious AI makes these questions traceable — and their answers contractual.",
+      "pillar1Title": "Data Sovereignty",
+      "pillar1Desc": "Your data never trains a third-party model. On-premise, private cloud, or hybrid architectures: your sensitive data never leaves your zone of control.",
+      "pillar2Title": "Regulatory Compliance",
+      "pillar2Desc": "Personal data protection aligned with local and sub-regional regulatory frameworks; financial regulators' requirements factored in for banking use cases (scoring, credit approval).",
+      "pillar3Title": "Human Oversight",
+      "pillar3Desc": "AI proposes, humans decide: validation loops on sensitive decisions (credit, HR, healthcare), recommendations that are traceable and explainable to the business.",
+      "pillar4Title": "Bias & Robustness",
+      "pillar4Desc": "Bias testing and business validation before any production release; drift monitoring and periodic retraining once in operation."
+    },
+    "whyUs": {
+      "badge": "What sets us apart",
+      "title": "Why AKILI Labs for your AI project"
+    },
+    "kpis": {
+      "title": "The AI practice by the numbers"
+    },
+    "stack": {
+      "badge": "Technology Stack",
+      "title": "The technologies we master"
+    },
+    "resources": {
+      "badge": "Resources & Content",
+      "title": "Deepen your understanding of AI",
+      "comingSoon": "Coming soon"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions about AI"
+    },
+    "ctaFinal": {
+      "titlePart1": "Your AI project starts with ",
+      "titleHighlight": "a conversation",
+      "subtitle": "What you get from an initial free conversation:",
+      "benefit1": "An assessment of your data maturity and AI potential",
+      "benefit2": "Identification of 2 to 3 high-impact use cases in your sector",
+      "benefit3": "An indicative feasibility and budget estimate",
+      "benefit4": "Answers to your technical, ethical, and strategic questions",
+      "noCommitment": "No commitment. No pressure. Just expertise.",
+      "ctaPrimary": "Free consultation"
+    }
   }
 }

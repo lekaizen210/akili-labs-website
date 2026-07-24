@@ -380,5 +380,105 @@
       "ctaPrimary": "Consultation gratuite",
       "ctaSecondary": "Télécharger notre présentation"
     }
+  },
+  "Ia": {
+    "meta": {
+      "title": "Expertise Intelligence Artificielle en Afrique de l'Ouest",
+      "description": "IA Générative, Machine Learning, Computer Vision, NLP en langues africaines et Business Intelligence. Solutions IA concrètes pour les entreprises d'Afrique de l'Ouest. Consultation initiale gratuite.",
+      "ogTitle": "Expertise Intelligence Artificielle — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "Adopter l'IA, ce n'est pas rattraper un retard, c'est construire une avance. Solutions IA concrètes pour la zone UEMOA/CEDEAO.",
+      "ogImageAlt": "AKILI Labs — Expertise Intelligence Artificielle",
+      "twitterTitle": "Expertise Intelligence Artificielle — AKILI Labs",
+      "twitterDescription": "Solutions d'IA concrètes pour les entreprises d'Afrique de l'Ouest.",
+      "serviceName": "Expertise Intelligence Artificielle",
+      "serviceDescription": "Conception, déploiement et maintenance de solutions d'IA : IA Générative, Machine Learning, Computer Vision, NLP en langues africaines et Business Intelligence augmentée.",
+      "breadcrumbHome": "Accueil",
+      "breadcrumbExpertises": "Expertises",
+      "breadcrumbIa": "Intelligence Artificielle",
+      "offerCatalogName": "Domaines d'expertise IA"
+    },
+    "hero": {
+      "badge": "Expertise Intelligence Artificielle",
+      "titlePart1": "Adopter l'IA, ce n'est pas rattraper un retard. ",
+      "titleHighlight": "C'est construire une avance.",
+      "subtitle": "Population jeune hyper-connectée, Mobile Money sans équivalent, marchés en construction rapide : le terrain africain est unique pour l'IA. AKILI Labs conçoit, déploie et maintient des solutions concrètes, du chatbot métier au moteur de prédiction, adaptées à votre secteur, à vos données et à vos langues.",
+      "ctaPrimary": "Consultation gratuite",
+      "ctaSecondary": "Découvrir nos cas d'usage",
+      "imageAlt": "Écran de pilotage prédictif zone UEMOA : prévision de la demande à 30 jours avec intervalle de confiance et pic de la Tabaski anticipé, à côté de l’assistant métier qui indique le stock restant à Yopougon et prépare un réapprovisionnement soumis à validation"
+    },
+    "whyNow": {
+      "badge": "Pourquoi l'IA maintenant en Afrique ?",
+      "title": "L'opportunité est là. La fenêtre est ouverte.",
+      "paragraphRich": "L'Afrique est la prochaine grande frontière de l'Intelligence Artificielle. Avec plus de <strong>1,4 milliard d'habitants</strong>, une population jeune hyper-connectée, une pénétration du Mobile Money sans équivalent dans le monde et des marchés en construction rapide, le continent offre un terrain unique pour l'IA.",
+      "networkAriaLabel": "AKILI Labs intervient dans 8 pays de la zone UEMOA/CEDEAO",
+      "networkCaption": "8 pays UEMOA/CEDEAO",
+      "calloutQuote": "La question n'est plus « faut-il y aller ? ». C'est « par quel cas d'usage commencer ? »",
+      "calloutText": "Et c'est précisément l'objet de notre phase de cadrage.",
+      "changesTitle": "Ce que l'IA change concrètement pour une organisation africaine",
+      "closingParagraph": "Chez AKILI Labs, nous ne vendons pas de l'IA pour faire moderne. Nous déployons des solutions qui résolvent des problèmes réels et produisent des résultats mesurables."
+    },
+    "domains": {
+      "badge": "Nos Domaines d'Expertise IA",
+      "title": "Six domaines, une seule promesse : des résultats mesurables",
+      "imageAlt": "Assistant métier dans le navigateur : à la question sur l’encours de l’agence de Cocody, il répond 4 850 000 FCFA en citant la balance clients et le journal des ventes, puis prépare un courrier de relance qui reste en brouillon tant que l’utilisateur ne l’a pas validé",
+      "decisionImageAlt": "Tableau de bord de prévision : demande hebdomadaire réalisée et prévue avec intervalle de confiance, précision du modèle de 92,4 %, alertes du matin sur le stock critique de Yopougon et les encours clients, ventes par ville et répartition des encaissements par canal",
+      "technologiesLabel": "Technologies"
+    },
+    "sectors": {
+      "badge": "Cas d'usage par secteur",
+      "title": "L'IA adaptée à votre secteur d'activité",
+      "useCasesLabel": "Cas d'usage prioritaires",
+      "benefitLabel": "Bénéfice attendu"
+    },
+    "methodology": {
+      "badge": "Notre Méthodologie IA",
+      "title": "Une méthodologie éprouvée, du cadrage au monitoring",
+      "imageAlt": "Cycle de vie du modèle : les cinq étapes de vos données brutes à la décision quotidienne, le tableau comparatif des essais d’entraînement où le modèle explicable l’emporte sur le plus précis, et les quatre contrôles validés avant mise en production dont la recette par les équipes commerciales",
+      "deliverableLabel": "Livrable : "
+    },
+    "responsable": {
+      "badge": "IA responsable & Souveraineté",
+      "title": "Une IA sous votre contrôle : données, modèles, décisions",
+      "intro": "Adopter l'IA déplace des responsabilités qu'aucun décideur ne peut déléguer : où vivent vos données ? Servent-elles à entraîner les modèles d'un tiers ? Qui décide en dernier ressort quand l'algorithme recommande de refuser un crédit ou d'écarter un candidat ? Une IA sérieuse rend ces questions traçables, et leurs réponses contractuelles.",
+      "pillar1Title": "Souveraineté des données",
+      "pillar1Desc": "Vos données ne servent jamais à entraîner un modèle tiers. Architectures on-premise, cloud privé ou hybride : vos données sensibles ne quittent pas votre périmètre de contrôle.",
+      "pillar2Title": "Conformité réglementaire",
+      "pillar2Desc": "Protection des données personnelles selon les cadres réglementaires locaux et sous-régionaux ; prise en compte des exigences des régulateurs financiers pour les cas d'usage bancaires (scoring, octroi de crédit).",
+      "pillar3Title": "Supervision humaine",
+      "pillar3Desc": "L'IA propose, l'humain décide : boucles de validation sur les décisions sensibles (crédit, RH, santé), recommandations traçables et explicables aux métiers.",
+      "pillar4Title": "Biais & robustesse",
+      "pillar4Desc": "Tests de biais et validation métier avant toute mise en production ; monitoring de la dérive des modèles et réentraînement périodique en exploitation."
+    },
+    "whyUs": {
+      "badge": "Ce qui nous distingue",
+      "title": "Pourquoi AKILI Labs pour votre projet IA"
+    },
+    "kpis": {
+      "title": "La practice IA en chiffres"
+    },
+    "stack": {
+      "badge": "Stack Technologique",
+      "title": "Les technologies que nous maîtrisons"
+    },
+    "resources": {
+      "badge": "Ressources & Contenus",
+      "title": "Approfondissez votre connaissance de l'IA",
+      "comingSoon": "Bientôt disponible"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes sur l'IA"
+    },
+    "ctaFinal": {
+      "titlePart1": "Votre projet IA commence par ",
+      "titleHighlight": "une conversation",
+      "subtitle": "Ce que vous obtenez lors d'un premier échange gratuit :",
+      "benefit1": "Évaluation de votre maturité data et de votre potentiel IA",
+      "benefit2": "Identification de 2 à 3 cas d'usage à fort impact dans votre secteur",
+      "benefit3": "Estimation indicative de faisabilité et de budget",
+      "benefit4": "Réponses à vos questions techniques, éthiques et stratégiques",
+      "noCommitment": "Aucun engagement. Aucune pression. Juste de l'expertise.",
+      "ctaPrimary": "Consultation gratuite"
+    }
   }
 }
