@@ -17,6 +17,14 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   output: "standalone",
 
+  // Le layout racine est défini sur un segment dynamique top-level
+  // (app/[locale]/layout.tsx) : suivant la doc Next 16, ce cas nécessite
+  // global-not-found.js pour composer une page 404 cohérente (brandée)
+  // pour les URLs qui ne correspondent à aucune route générée.
+  experimental: {
+    globalNotFound: true,
+  },
+
   images: {
     remotePatterns: [],
     formats: ["image/avif", "image/webp"],
