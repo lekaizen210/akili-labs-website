@@ -680,5 +680,109 @@
       "ctaPrimary": "Free consultation",
       "downloadCta": "Download our presentation"
     }
+  },
+  "Bi": {
+    "meta": {
+      "title": "Business Intelligence in West Africa — Dashboards & Data Warehouse",
+      "description": "AKILI Labs consolidates your data (ERP, cash registers, Mobile Money, Excel) into reliable dashboards, refreshed every morning. Data warehouse, KPI governance, and regulatory reporting across the UEMOA region.",
+      "ogTitle": "Business Intelligence Expertise — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "From manual reporting to daily decision-making: management dashboards, data warehouse, and BCEAO/OHADA regulatory statements.",
+      "ogImageAlt": "AKILI Labs — Business Intelligence Expertise",
+      "twitterTitle": "Business Intelligence Expertise — AKILI Labs",
+      "twitterDescription": "Your data consolidated into reliable dashboards, refreshed every morning.",
+      "serviceName": "Business Intelligence Expertise",
+      "serviceDescription": "Data scoping, data warehouse, management dashboards, and regulatory reporting for companies and institutions in West Africa.",
+      "breadcrumbHome": "Home",
+      "breadcrumbExpertises": "Expertise",
+      "breadcrumbBi": "Business Intelligence",
+      "offerCatalogName": "Business Intelligence Offerings"
+    },
+    "hero": {
+      "badge": "Business Intelligence Expertise",
+      "titlePart1": "Your data already exists. ",
+      "titleHighlight": "What's missing is the decision.",
+      "subtitle": "Sales, cash registers, inventory, Mobile Money: every day of activity produces numbers no one has time to consolidate. AKILI Labs turns this scattered data into reliable dashboards, refreshed every morning, so you decide on what's real — not on last month's report.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "See a sample dashboard",
+      "imageAlt": "Multi-branch management committee dashboard: revenue, cash position, and margin by branch in FCFA, with a manager's mobile view showing the day's sales and a cash discrepancy alert"
+    },
+    "intro": {
+      "badge": "The problem",
+      "title": "The monthly report costs two days. And it's already outdated.",
+      "paragraph1": "In most companies in the region, decision-making relies on an exhausting ritual: at the end of every month, one trusted person collects files from the branches, copies out the ERP figures, reconciles discrepancies by hand, and formats a committee report. Two days of work, numbers that diverge depending on the source, and management discovering on the 5th of the month what happened three weeks earlier.",
+      "paragraph2": "Our approach: yesterday's numbers, available every morning. Consolidation becomes an overnight process, no longer a job.",
+      "calloutText": "The problem is almost never a lack of data. It's that it's asleep across five systems that don't talk to each other, and that the one person who knows how to piece it together will one day go on leave.",
+      "imageAlt": "Before and after: an Excel consolidation workbook riddled with #REF! errors and a WhatsApp conversation where branches send their numbers late, versus a group dashboard consolidated automatically every night, reconciled with accounting, with branch-level detail"
+    },
+    "pilotage": {
+      "badge": "Day-to-day with BI",
+      "title": "A typical morning, at 7:30 AM, on your phone",
+      "subtitle": "No three-week training and no decision-support jargon: screens that answer the questions you're already asking. How much did we sell yesterday? Where's our cash position? Which branch is falling behind? Who needs a follow-up call?",
+      "imageAriaLabel": "Detailed dashboard, horizontal scroll on mobile",
+      "imageAlt": "Consolidated CFO dashboard: cash position of 128.3 M FCFA with a 30-day projection, average collection period, outstanding receivables to follow up, and a margin alert on one branch, refreshed at 2 AM",
+      "mobileHint": "Drag the image to explore the dashboard",
+      "calloutTitle": "From hindsight to foresight",
+      "calloutText": "A dashboard tells you where you stand. The next step is to anticipate: demand forecasting, anomaly detection, scoring. That's the territory of our Artificial Intelligence practice, which builds precisely on the data warehouse constructed here.",
+      "calloutCta": "Discover our AI expertise"
+    },
+    "services": {
+      "badge": "What we do",
+      "title": "From assessment to daily decision-making",
+      "deliverableLabel": "Deliverable: "
+    },
+    "architecture": {
+      "badge": "Under the hood",
+      "title": "One single path for data, from the till to the boardroom",
+      "subtitle": "Every figure displayed can be traced back to its source. The data flows run overnight, monitor themselves, and a failed load is visible before anyone presents a wrong number.",
+      "imageAriaLabel": "Detailed architecture diagram, horizontal scroll on mobile",
+      "imageAlt": "Overnight flow orchestration screen: extraction tasks (Odoo ERP, branch cash registers, Mobile Money, Excel files) feed quality checks and then the PostgreSQL data warehouse load, which triggers dashboard refreshes, exports, and alerts",
+      "mobileHint": "Drag the image to explore the diagram"
+    },
+    "gouvernance": {
+      "badge": "Data Governance",
+      "title": "Why your revenue figure differs depending on who calculates it, and how we end that",
+      "paragraph1": "“Net revenue,” “active customer,” “outstanding balance”: as long as every department has its own formula, meetings serve to reconcile numbers instead of making decisions. We write each definition once, with you, and the system then applies it everywhere: dashboards, exports, alerts.",
+      "paragraph2": "Quality checks run every night with the data flows: duplicates, unclosed cash registers, incomplete entries become visible and fixable, instead of being discovered at year-end close.",
+      "imageAlt": "Net revenue KPI record in the dictionary: definition spelled out in full, SQL query applied across all screens, traceability from source to dashboards, CFO as the owner, and the results of the overnight quality checks"
+    },
+    "reglementaire": {
+      "badge": "Compliance",
+      "title": "The statements that aren't up for debate: on time, accurate, archived",
+      "subtitle": "For banks, MFIs, and regulated institutions, BI isn't just about decision-making: it's the ability to produce the periodic statements required by the regulator without tying up a team for a week.",
+      "calloutText": "Figure-by-figure traceability, right down to the original entry, is at the heart of our architecture, not an option. It's what makes a regulatory statement defensible before both the regulator and the statutory auditor."
+    },
+    "methodology": {
+      "badge": "Our approach",
+      "title": "A first dashboard in production within 6 weeks",
+      "subtitle": "With a defined scope and accessible sources: that's the first thing we verify together during scoping.",
+      "deliverableLabel": "Deliverable: "
+    },
+    "sectors": {
+      "badge": "Sectors",
+      "title": "What BI changes, sector by sector"
+    },
+    "whyUs": {
+      "badge": "Why AKILI Labs",
+      "title": "An integrator who knows your starting point"
+    },
+    "stack": {
+      "badge": "Technology Stack",
+      "title": "Proven tools, chosen to last",
+      "subtitle": "Open source as the default choice, Power BI when your environment is already Microsoft: the tool adapts to your teams, not the other way around."
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions about Business Intelligence"
+    },
+    "ctaFinal": {
+      "titlePart1": "Let's talk about your ",
+      "titleHighlight": "first two KPIs",
+      "subtitle": "45 minutes with a consultant. What you get out of it, with no commitment:",
+      "benefit1": "An honest assessment of your data assets",
+      "benefit2": "The two KPIs to start with",
+      "benefit3": "A read on your sources: ERP, Excel, cash registers, Mobile Money",
+      "benefit4": "An indicative estimate of approach and budget",
+      "ctaPrimary": "Free consultation"
+    }
   }
 }

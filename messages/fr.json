@@ -680,5 +680,109 @@
       "ctaPrimary": "Consultation gratuite",
       "downloadCta": "Télécharger notre présentation"
     }
+  },
+  "Bi": {
+    "meta": {
+      "title": "Business Intelligence en Afrique de l'Ouest — Tableaux de bord & entrepôt de données",
+      "description": "AKILI Labs consolide vos données (ERP, caisses, Mobile Money, Excel) en tableaux de bord fiables, à jour chaque matin. Entrepôt de données, gouvernance des indicateurs et reporting réglementaire en zone UEMOA.",
+      "ogTitle": "Expertise Business Intelligence — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "Du reporting manuel au pilotage quotidien : tableaux de bord direction, entrepôt de données et états réglementaires BCEAO/OHADA.",
+      "ogImageAlt": "AKILI Labs — Expertise Business Intelligence",
+      "twitterTitle": "Expertise Business Intelligence — AKILI Labs",
+      "twitterDescription": "Vos données consolidées en tableaux de bord fiables, à jour chaque matin.",
+      "serviceName": "Expertise Business Intelligence",
+      "serviceDescription": "Cadrage data, entrepôt de données, tableaux de bord direction et reporting réglementaire pour les entreprises et institutions d'Afrique de l'Ouest.",
+      "breadcrumbHome": "Accueil",
+      "breadcrumbExpertises": "Expertises",
+      "breadcrumbBi": "Business Intelligence",
+      "offerCatalogName": "Offres Business Intelligence"
+    },
+    "hero": {
+      "badge": "Expertise Business Intelligence",
+      "titlePart1": "Vos données existent déjà. ",
+      "titleHighlight": "Ce qui manque, c'est la décision.",
+      "subtitle": "Ventes, caisses, stocks, Mobile Money : chaque journée d'activité produit des chiffres que personne n'a le temps de consolider. AKILI Labs transforme ces données dispersées en tableaux de bord fiables, à jour chaque matin, pour décider sur du réel, pas sur le rapport du mois dernier.",
+      "ctaPrimary": "Consultation gratuite",
+      "ctaSecondary": "Voir un tableau de bord type",
+      "imageAlt": "Tableau de bord de comité de direction multi-agences : chiffre d'affaires, trésorerie et marge par agence en FCFA, avec vue mobile du directeur affichant les ventes du jour et une alerte d'écart de caisse"
+    },
+    "intro": {
+      "badge": "Le constat",
+      "title": "Le rapport mensuel coûte deux jours. Et il est déjà périmé.",
+      "paragraph1": "Dans la plupart des entreprises de la région, le pilotage repose sur un rituel épuisant : chaque fin de mois, une personne de confiance collecte les fichiers des agences, recopie les chiffres de l'ERP, réconcilie les écarts à la main et met en forme un support de comité. Deux jours de travail, des chiffres qui divergent selon la source, et une direction qui découvre le 5 du mois ce qui s'est joué trois semaines plus tôt.",
+      "paragraph2": "Notre parti pris : vos chiffres de la veille, disponibles chaque matin. La consolidation devient un traitement de nuit, plus un métier.",
+      "calloutText": "Le problème n'est presque jamais le manque de données. C'est qu'elles dorment dans cinq systèmes qui ne se parlent pas, et que la seule personne qui sait les assembler part un jour en congés.",
+      "imageAlt": "Avant-après : un classeur Excel de consolidation criblé d'erreurs #REF! et une conversation WhatsApp où les agences envoient leurs chiffres en retard, contre un tableau de bord groupe consolidé automatiquement chaque nuit, rapproché de la comptabilité, avec le détail par agence"
+    },
+    "pilotage": {
+      "badge": "Le quotidien avec la BI",
+      "title": "Un matin type, à 7 h 30, sur votre téléphone",
+      "subtitle": "Pas de formation de trois semaines ni de jargon décisionnel : des écrans qui répondent aux questions que vous vous posez déjà. Combien avons-nous vendu hier ? Où est la trésorerie ? Quelle agence décroche ? Qui doit être relancé ?",
+      "imageAriaLabel": "Tableau de bord détaillé, défilement horizontal sur mobile",
+      "imageAlt": "Tableau de bord DAF consolidé : trésorerie de 128,3 M FCFA avec projection à 30 jours, délai moyen d'encaissement, encours clients à relancer et alerte de marge sur une agence, actualisé à 2 h du matin",
+      "mobileHint": "Faites glisser l'image pour explorer le tableau de bord",
+      "calloutTitle": "Du constat à la prévision",
+      "calloutText": "Un tableau de bord vous dit où vous en êtes. L'étape d'après consiste à anticiper : prévision de la demande, détection d'anomalies, scoring. C'est le terrain de notre practice Intelligence Artificielle, qui s'appuie précisément sur l'entrepôt de données construit ici.",
+      "calloutCta": "Découvrir notre expertise IA"
+    },
+    "services": {
+      "badge": "Ce que nous faisons",
+      "title": "De l'état des lieux au pilotage quotidien",
+      "deliverableLabel": "Livrable : "
+    },
+    "architecture": {
+      "badge": "Sous le capot",
+      "title": "Un seul chemin pour la donnée, de la caisse au comité",
+      "subtitle": "Chaque chiffre affiché est traçable jusqu'à sa source. Les flux tournent la nuit, se surveillent tout seuls, et un échec de chargement se voit avant que quelqu'un présente un chiffre faux.",
+      "imageAriaLabel": "Schéma d'architecture détaillé, défilement horizontal sur mobile",
+      "imageAlt": "Écran d'orchestration des flux de nuit : les tâches d'extraction (ERP Odoo, caisses d'agences, Mobile Money, fichiers Excel) alimentent les contrôles qualité puis le chargement de l'entrepôt PostgreSQL, qui déclenche le rafraîchissement des tableaux de bord, les exports et les alertes",
+      "mobileHint": "Faites glisser l'image pour explorer le schéma"
+    },
+    "gouvernance": {
+      "badge": "Gouvernance des données",
+      "title": "Pourquoi votre CA diffère selon qui le calcule, et comment on y met fin",
+      "paragraph1": "« CA net », « client actif », « encours » : tant que chaque service a sa propre formule, les réunions servent à réconcilier au lieu de décider. Nous écrivons chaque définition une fois, avec vous, puis la machine l'applique partout : dashboards, exports, alertes.",
+      "paragraph2": "Les contrôles qualité tournent chaque nuit avec les flux : doublons, caisses non clôturées, écritures incomplètes deviennent visibles et corrigeables, au lieu d'être découverts en clôture annuelle.",
+      "imageAlt": "Fiche de l'indicateur CA net dans le dictionnaire : définition rédigée en toutes lettres, requête SQL appliquée à tous les écrans, traçabilité de la source jusqu'aux tableaux de bord, propriétaire DAF et résultats des contrôles qualité de la nuit"
+    },
+    "reglementaire": {
+      "badge": "Conformité",
+      "title": "Les états qu'on ne discute pas : produits à l'heure, justes, archivés",
+      "subtitle": "Pour les banques, SFD et institutions régulées, la BI n'est pas que du pilotage : c'est la capacité à produire les états périodiques exigés par le régulateur sans mobiliser une équipe pendant une semaine.",
+      "calloutText": "La traçabilité chiffre par chiffre, jusqu'à l'écriture d'origine, est le cœur de notre architecture, pas une option. C'est elle qui rend un état réglementaire défendable face au régulateur comme au commissaire aux comptes."
+    },
+    "methodology": {
+      "badge": "Notre démarche",
+      "title": "Un premier tableau de bord en production en 6 semaines",
+      "subtitle": "À périmètre cadré et sources accessibles : c'est la première chose que nous vérifions ensemble au cadrage.",
+      "deliverableLabel": "Livrable : "
+    },
+    "sectors": {
+      "badge": "Secteurs",
+      "title": "Ce que la BI change, secteur par secteur"
+    },
+    "whyUs": {
+      "badge": "Pourquoi AKILI Labs",
+      "title": "Un intégrateur qui connaît le point de départ"
+    },
+    "stack": {
+      "badge": "Stack technologique",
+      "title": "Des outils éprouvés, choisis pour durer",
+      "subtitle": "Open source en premier choix, Power BI quand votre parc est déjà Microsoft : l'outil s'adapte à vos équipes, pas l'inverse."
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes sur la Business Intelligence"
+    },
+    "ctaFinal": {
+      "titlePart1": "Discutons de vos ",
+      "titleHighlight": "deux premiers indicateurs",
+      "subtitle": "45 minutes avec un consultant. Ce que vous en retirez, sans engagement :",
+      "benefit1": "Un état des lieux honnête de votre patrimoine de données",
+      "benefit2": "Les deux indicateurs par lesquels commencer",
+      "benefit3": "Une lecture de vos sources : ERP, Excel, caisses, Mobile Money",
+      "benefit4": "Une estimation indicative de démarche et de budget",
+      "ctaPrimary": "Consultation gratuite"
+    }
   }
 }
