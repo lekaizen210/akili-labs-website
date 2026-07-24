@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const expertisesMenu = [
   { label: "Transformation Digitale", href: "/expertises/transformation-digitale" },
@@ -175,7 +176,8 @@ export default function Navbar() {
           </div>
 
           {/* CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-4">
+            <LanguageSwitcher inverted={!scrolled} />
             <Link
               href="/contact"
               className="px-5 py-2.5 bg-orange-cta text-white text-sm font-semibold rounded-lg hover:bg-orange-cta-hover transition-[background-color,box-shadow,transform] duration-200 ease-out shadow-md hover:shadow-lg hover:-translate-y-px active:scale-[0.97] active:translate-y-0"
@@ -309,6 +311,12 @@ export default function Navbar() {
                 >
                   Discutons de votre projet →
                 </Link>
+              </div>
+              <div
+                className="flex justify-center pt-3 mt-1 border-t border-gray-100"
+                onClick={() => setMobileOpen(false)}
+              >
+                <LanguageSwitcher />
               </div>
             </motion.div>
           </motion.div>

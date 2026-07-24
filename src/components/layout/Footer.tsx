@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Mail, MapPin, Phone, Linkedin, Facebook } from "lucide-react";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const footerLinks = {
   expertises: [
@@ -163,6 +164,9 @@ export default function Footer() {
             <span className="pl-3">AKILI Labs</span>
             <span className="pl-3">www.akililabs.io</span>
             <span className="pl-3">© 2026 Tous droits réservés</span>
+            <span className="pl-3">
+              <LanguageSwitcher inverted />
+            </span>
           </div>
           <div className="flex items-center gap-4 text-xs text-gray-500">
             <span className="flex items-center gap-1">
