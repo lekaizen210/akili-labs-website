@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ChevronRight, TrendingUp, CheckCircle } from "lucide-react";
 import { references } from "@/lib/data";
 import { getTechColor } from "@/lib/tech-colors";

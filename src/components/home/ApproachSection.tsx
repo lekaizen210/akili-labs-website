@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import {
   Search, ClipboardList, PenTool, Code2, CheckCircle, Rocket, GraduationCap, Headphones,
 } from "lucide-react";

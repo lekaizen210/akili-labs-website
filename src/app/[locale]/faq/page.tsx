@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight, MessageCircle, BookOpen, Cpu, Shield, Building2 } from "lucide-react";
 import FaqAccordion, { type FaqItem, categoryColors } from "@/components/faq/FaqAccordion";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";

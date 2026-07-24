@@ -10,10 +10,14 @@
 // layout `[locale]` fournirait normalement : styles globaux, polices,
 // chrome de site (Navbar, lien d'évitement, Footer).
 //
-// Navbar/Footer n'utilisent à ce jour que next/link et next/navigation
-// (pas les wrappers next-intl de @/i18n/navigation) : ils fonctionnent
-// donc sans NextIntlClientProvider. À réévaluer si une tâche ultérieure
-// les fait dépendre du contexte next-intl.
+// Navbar/Footer/NotFoundContent utilisent désormais le `Link`/`usePathname`
+// next-intl de @/i18n/navigation (Task 2), qui exigent un contexte
+// NextIntlClientProvider (locale + messages) pour résoudre le préfixe de
+// route — sans quoi le build échoue au prerendering de `/_not-found`
+// (`usePathname` lève une erreur hors provider). Cette page étant hors du
+// segment `[locale]`, elle ne peut pas dériver la locale de la requête : on
+// fournit donc explicitement les messages FR ci-dessous, cohérent avec la
+// contrepartie assumée plus bas (page 404 toujours en français).
 //
 // Contrepartie assumée : cette page n'est pas localisée (toujours en
 // français), au même titre que l'ancien site pré-i18n qui n'avait qu'une
@@ -26,6 +30,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { MotionProvider } from "@/components/ui/MotionProvider";
 import NotFoundContent from "./[locale]/not-found-content";
+import { NextIntlClientProvider } from "next-intl";
+import frMessages from "../../messages/fr.json";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -53,13 +59,15 @@ export default function GlobalNotFound() {
         <a href="#main-content" className="skip-to-content">
           Aller au contenu principal
         </a>
-        <MotionProvider>
-          <Navbar />
-          <main id="main-content">
-            <NotFoundContent />
-          </main>
-          <Footer />
-        </MotionProvider>
+        <NextIntlClientProvider locale="fr" messages={frMessages}>
+          <MotionProvider>
+            <Navbar />
+            <main id="main-content">
+              <NotFoundContent />
+            </main>
+            <Footer />
+          </MotionProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

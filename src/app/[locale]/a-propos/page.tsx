@@ -3,7 +3,7 @@
 import { Star, Lightbulb, Shield, Users, Target, Lock, Award, TrendingUp, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import { values, team } from "@/lib/data";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
 import { getTechColor } from "@/lib/tech-colors";

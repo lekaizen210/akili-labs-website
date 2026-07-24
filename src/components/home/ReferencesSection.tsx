@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { references } from "@/lib/data";
