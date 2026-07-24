@@ -2,15 +2,18 @@
 
 import { motion } from "framer-motion";
 import { Monitor, Smartphone, Cable, Database } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
-const blocks = [
-  { label: "Web", icon: Monitor, from: { x: -90, y: -40 } },
-  { label: "Mobile", icon: Smartphone, from: { x: 90, y: -40 } },
-  { label: "API", icon: Cable, from: { x: -90, y: 40 } },
-  { label: "Données", icon: Database, from: { x: 90, y: 40 } },
-];
+const blockIcons = [Monitor, Smartphone, Cable, Database] as const;
+const blockLabelKeys = ["labelWeb", "labelMobile", "labelApi", "labelData"] as const;
+const blockOffsets = [
+  { x: -90, y: -40 },
+  { x: 90, y: -40 },
+  { x: -90, y: 40 },
+  { x: 90, y: 40 },
+] as const;
 
 const sprints = 6;
 
@@ -18,11 +21,18 @@ const sprints = 6;
 // les jalons de sprint s'allument un à un — assemblé pour le métier, livré
 // par étapes visibles.
 export default function DmAssemblyDiagram() {
+  const t = useTranslations("DevMetiers.assemblyDiagram");
+  const blocks = blockLabelKeys.map((key, i) => ({
+    label: t(key),
+    icon: blockIcons[i],
+    from: blockOffsets[i],
+  }));
+
   return (
     <div
       className="max-w-3xl mx-auto rounded-2xl border border-white/10 bg-white/5 px-6 sm:px-10 py-8"
       role="img"
-      aria-label="Blocs applicatifs — Web, Mobile, API, Données — assemblés en une plateforme unique, livrée par sprints successifs"
+      aria-label={t("ariaLabel")}
     >
       {/* Plateforme assemblée */}
       <div className="relative mx-auto max-w-md">
@@ -60,7 +70,7 @@ export default function DmAssemblyDiagram() {
           transition={{ duration: 0.3, delay: 1.9 }}
           className="text-[10px] font-bold uppercase tracking-wider text-white/50 mr-2"
         >
-          Sprints
+          {t("sprintsLabel")}
         </motion.span>
         {Array.from({ length: sprints }).map((_, i) => (
           <motion.span
@@ -79,7 +89,7 @@ export default function DmAssemblyDiagram() {
         transition={{ duration: 0.5, delay: 2.9, ease }}
         className="text-center text-xs text-white/50 mt-4"
       >
-        Assemblé pour votre métier, livré par étapes visibles.
+        {t("caption")}
       </motion.p>
     </div>
   );

@@ -13,88 +13,46 @@ import DmResources from "@/components/developpement-metiers/DmResources";
 import DmFaq from "@/components/developpement-metiers/DmFaq";
 import DmCtaFinal from "@/components/developpement-metiers/DmCtaFinal";
 import { dmDomains, dmFaqs } from "@/lib/developpement-metiers-data";
-import { setRequestLocale } from "next-intl/server";
+import { l } from "@/lib/i18n-content";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 const BASE_URL = "https://akililabs.com";
 const url = `${BASE_URL}/expertises/developpement-metiers`;
 
-export const metadata: Metadata = {
-  title: "Développement d'Applications Métiers en Afrique de l'Ouest — Web, Mobile, APIs",
-  description:
-    "Applications web et mobiles, portails collaboratifs, APIs et plateformes métiers sur mesure pour les organisations de la zone UEMOA. Sprints courts, périmètre contractualisé, code livré. Consultation initiale gratuite.",
-  alternates: { canonical: url },
-  openGraph: {
-    type: "website",
-    url,
-    title: "Expertise Développement Métiers — AKILI Labs Côte d'Ivoire",
-    description:
-      "Le sur mesure sans dérapage : garde-fous vérifiables, qualité mesurée, réversibilité. L'outil épouse votre métier.",
-    images: [
-      {
-        url: "/developpement-metiers-images/dm-contexte.png",
-        width: 1400,
-        height: 1000,
-        alt: "AKILI Labs — Expertise Développement Métiers",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Expertise Développement Métiers — AKILI Labs",
-    description: "Applications web, mobiles et plateformes métiers sur mesure en zone UEMOA.",
-    images: ["/developpement-metiers-images/dm-contexte.png"],
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "DevMetiers.meta" });
 
-const serviceJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": url,
-  name: "Expertise Développement Métiers",
-  description:
-    "Développement sur mesure d'applications web et mobiles, portails collaboratifs, APIs REST et plateformes métiers.",
-  url,
-  provider: {
-    "@type": "Organization",
-    "@id": `${BASE_URL}/#organization`,
-    name: "AKILI Labs",
-  },
-  areaServed: ["Côte d'Ivoire", "Sénégal", "Mali", "Burkina Faso", "Niger", "Togo", "Bénin", "Guinée-Bissau"],
-  serviceType: "Développement logiciel sur mesure",
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Domaines d'intervention Développement Métiers",
-    itemListElement: dmDomains.map((d, i) => ({
-      "@type": "Offer",
-      position: i + 1,
-      name: d.title,
-      offeredBy: { "@id": `${BASE_URL}/#organization` },
-    })),
-  },
-  availableLanguage: ["French"],
-  termsOfService: `${BASE_URL}/contact`,
-};
-
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Accueil", item: BASE_URL },
-    { "@type": "ListItem", position: 2, name: "Expertises", item: `${BASE_URL}/expertises` },
-    { "@type": "ListItem", position: 3, name: "Développement Métiers", item: url },
-  ],
-};
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `${url}#faq`,
-  mainEntity: dmFaqs.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: { "@type": "Answer", text: f.answer },
-  })),
-};
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      url,
+      title: t("ogTitle"),
+      description: t("ogDescription"),
+      images: [
+        {
+          url: "/developpement-metiers-images/dm-contexte.png",
+          width: 1400,
+          height: 1000,
+          alt: t("ogImageAlt"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("twitterTitle"),
+      description: t("twitterDescription"),
+      images: ["/developpement-metiers-images/dm-contexte.png"],
+    },
+  };
+}
 
 export default async function DeveloppementMetiersPage({
   params,
@@ -103,6 +61,56 @@ export default async function DeveloppementMetiersPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "DevMetiers.meta" });
+
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": url,
+    name: t("serviceName"),
+    description: t("serviceDescription"),
+    url,
+    provider: {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      name: "AKILI Labs",
+    },
+    areaServed: ["Côte d'Ivoire", "Sénégal", "Mali", "Burkina Faso", "Niger", "Togo", "Bénin", "Guinée-Bissau"],
+    serviceType: "Développement logiciel sur mesure",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: t("offerCatalogName"),
+      itemListElement: dmDomains.map((d, i) => ({
+        "@type": "Offer",
+        position: i + 1,
+        name: l(d.title, locale),
+        offeredBy: { "@id": `${BASE_URL}/#organization` },
+      })),
+    },
+    availableLanguage: ["French", "English"],
+    termsOfService: `${BASE_URL}/contact`,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: BASE_URL },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/expertises` },
+      { "@type": "ListItem", position: 3, name: t("breadcrumbDevMetiers"), item: url },
+    ],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: dmFaqs.map((f) => ({
+      "@type": "Question",
+      name: l(f.question, locale),
+      acceptedAnswer: { "@type": "Answer", text: l(f.answer, locale) },
+    })),
+  };
 
   return (
     <>

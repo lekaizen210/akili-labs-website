@@ -2,29 +2,34 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 import { FadeUp, viewportOnce } from "@/components/ui/motion-primitives";
 import { dmPhases } from "@/lib/developpement-metiers-data";
+import { l } from "@/lib/i18n-content";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function DmRoadmap() {
+  const t = useTranslations("DevMetiers.roadmap");
+  const locale = useLocale();
+
   return (
     <section className="py-20 bg-blue-light">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <FadeUp>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-6">
-              ■ Cadrage &amp; Réalisation
+              ■ {t("badge")}
             </div>
           </FadeUp>
           <FadeUp delay={0.08}>
             <h2 className="text-2xl sm:text-3xl font-black text-navy mb-3">
-              En 5 phases, du processus métier à la plateforme en production — sans effet tunnel
+              {t("title")}
             </h2>
           </FadeUp>
           <FadeUp delay={0.14}>
             <p className="text-ink max-w-2xl mx-auto">
-              Chaque phase produit un livrable tangible que vous validez avant de passer à la suivante.
+              {t("subtitle")}
             </p>
           </FadeUp>
         </div>
@@ -33,7 +38,7 @@ export default function DmRoadmap() {
           <div className="mb-16">
             <Image
               src="/developpement-metiers-images/dm-cycle.png"
-              alt="Tableau de suivi du sprint 3 : cinq fonctionnalités terminées, deux en recette chez le client avec le retour de la trésorière, le sprint suivant planifié, la courbe d’avancement et l’historique des démonstrations toutes les deux semaines"
+              alt={t("imageAlt")}
               width={1400}
               height={900}
               loading="lazy"
@@ -54,9 +59,10 @@ export default function DmRoadmap() {
           />
           <div className="space-y-6 sm:space-y-4">
             {dmPhases.map((p, i) => {
-              const separatorIndex = p.phase.indexOf(". ");
-              const number = p.phase.slice(0, separatorIndex);
-              const label = p.phase.slice(separatorIndex + 2);
+              const phase = l(p.phase, locale);
+              const separatorIndex = phase.indexOf(". ");
+              const number = phase.slice(0, separatorIndex);
+              const label = phase.slice(separatorIndex + 2);
               const isLeft = i % 2 === 0;
 
               const circle = (
@@ -80,15 +86,15 @@ export default function DmRoadmap() {
                   transition={{ duration: 0.5, delay: i * 0.12 + 0.05, ease }}
                 >
                   <div className="font-bold text-navy mb-1">{label}</div>
-                  <div className="text-sm text-ink mb-3">{p.content}</div>
+                  <div className="text-sm text-ink mb-3">{l(p.content, locale)}</div>
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-light text-xs font-semibold text-navy">
-                    <span className="text-orange">▸</span> Livrable : {p.livrable}
+                    <span className="text-orange">▸</span> {t("deliverableLabel")}{l(p.livrable, locale)}
                   </div>
                 </motion.div>
               );
 
               return (
-                <div key={p.phase} className="group relative">
+                <div key={l(p.phase, "fr")} className="group relative">
                   <div className="flex gap-5 sm:hidden">
                     {circle}
                     <div className="flex-1">{card}</div>

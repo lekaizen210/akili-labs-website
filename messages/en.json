@@ -581,5 +581,104 @@
       "ariaLabel": "5-step continuous delivery pipeline — Code, Build, Tests, Deployment, Monitoring — with a security check built into every step",
       "caption": "Security at every step — not a gate at the end."
     }
+  },
+  "DevMetiers": {
+    "meta": {
+      "title": "Business Application Development in West Africa — Web, Mobile, APIs",
+      "description": "Custom-built web and mobile applications, collaborative portals, APIs, and business platforms for organizations across the UEMOA zone. Short sprints, contractually defined scope, code delivered to you. Free initial consultation.",
+      "ogTitle": "Business Application Development Expertise — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "Custom development without the derailment: verifiable safeguards, measured quality, reversibility. The tool fits your business.",
+      "ogImageAlt": "AKILI Labs — Business Application Development Expertise",
+      "twitterTitle": "Business Application Development Expertise — AKILI Labs",
+      "twitterDescription": "Custom-built web, mobile, and business platform applications across the UEMOA zone.",
+      "serviceName": "Business Application Development Expertise",
+      "serviceDescription": "Custom development of web and mobile applications, collaborative portals, REST APIs, and business platforms.",
+      "breadcrumbHome": "Home",
+      "breadcrumbExpertises": "Expertise",
+      "breadcrumbDevMetiers": "Business Application Development",
+      "offerCatalogName": "Business Application Development Areas of Intervention"
+    },
+    "hero": {
+      "badge": "Business Application Development Expertise",
+      "titlePart1": "Custom development has a bad reputation. It's ",
+      "titleHighlight": "avoidable.",
+      "subtitle": "Budget overruns, the tunnel effect, vendor dependency: custom projects almost always fail for the same reasons — and none of them is inevitable. AKILI Labs builds your web and mobile applications and business platforms with verifiable safeguards: short sprints, contractually defined scope, measured quality, code delivered to you. The tool fits your business — and the project stays under your control.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "See our resources"
+    },
+    "assemblyDiagram": {
+      "labelWeb": "Web",
+      "labelMobile": "Mobile",
+      "labelApi": "API",
+      "labelData": "Data",
+      "ariaLabel": "Application building blocks — Web, Mobile, API, Data — assembled into a single platform, delivered through successive sprints",
+      "sprintsLabel": "Sprints",
+      "caption": "Assembled around your business, delivered in visible stages."
+    },
+    "intro": {
+      "badge": "The situation",
+      "title": "Your processes deserve better than a spreadsheet — and better than a project that derails",
+      "paragraph1": "On one side, the need is real: case approvals, production tracking, member management, route planning… when no off-the-shelf software covers your specific workflows, teams compensate — shared spreadsheets, re-keyed data, paper tracking. Data scatters and no one has the full picture.",
+      "paragraph2": "On the other, the wariness is legitimate: too many organizations in the region have experienced the custom project whose budget doubles, the application delivered late and never formally accepted, or the provider who walked away with the code.",
+      "calloutQuote": "Custom projects almost always derail for the same three reasons.",
+      "calloutText": "Scope that's never locked down, a tunnel effect with no intermediate deliveries, and code the client doesn't own. Our standards exist precisely to neutralize these three causes — and they're verifiable.",
+      "paragraph3Rich": "<strong>Our doctrine</strong>: standard wherever your need is standard — a proven ERP like Odoo will be faster and cheaper there — and custom only where your process sets you apart. During the free scoping session, we tell you honestly which case you're in.",
+      "imageAlt": "Before-and-after: a mutual insurance provider's Excel workbook with a duplicate member record and #N/A errors, alongside the counter's handwritten receipt book, compared with the business application where the same member has a single record, a receipt sent by SMS, and a discrepancy-free history"
+    },
+    "roadmap": {
+      "badge": "Scoping & Delivery",
+      "title": "In 5 phases, from business process to production platform — with no tunnel effect",
+      "subtitle": "Each phase produces a tangible deliverable that you validate before moving to the next.",
+      "imageAlt": "Sprint 3 tracking board: five features completed, two in client acceptance testing with feedback from the treasurer, the next sprint planned, the progress curve, and the history of bi-weekly demos",
+      "deliverableLabel": "Deliverable: "
+    },
+    "domains": {
+      "badge": "Areas of Intervention",
+      "title": "Four ways to put software to work for your business"
+    },
+    "standards": {
+      "badge": "Verifiable Safeguards",
+      "title": "Every cause of failure has its answer — written into our procedures",
+      "subtitle": "These aren't marketing promises: they are our internal procedures, applied to every project, including our own.",
+      "causeLabel": "Cause:"
+    },
+    "services": {
+      "badge": "Beyond delivery",
+      "title": "An application has a life after go-live",
+      "imageAlt": "Business API documentation: the endpoints (member record, payment, Mobile Money confirmation, reports), a sample call with its JSON response, role-based access rights, and the list of applications consuming it (counter, field mobile app, management portal, accounting software)",
+      "footerText": "Our completed projects, with measured results, are presented on the",
+      "referencesLabel": "References"
+    },
+    "approach": {
+      "badge": "Our methodology",
+      "title": "The business first, the technology second"
+    },
+    "sectors": {
+      "badge": "Sectors we serve",
+      "title": "Every business has its critical processes — we build for yours"
+    },
+    "whyUs": {
+      "badge": "What sets us apart",
+      "title": "Why choose AKILI Labs"
+    },
+    "stats": {
+      "title": "The business application development practice by the numbers"
+    },
+    "resources": {
+      "badge": "Resources & Content",
+      "title": "Go deeper on your business application project",
+      "comingSoon": "Coming soon"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions about custom development"
+    },
+    "ctaFinal": {
+      "titlePart1": "Your next custom project can be ",
+      "titleHighlight": "the one that goes well.",
+      "subtitle": "Let's start with a scoping session: our experts analyze your processes, tell you honestly what genuinely needs custom development — and lock down the scope, budget, and safeguards with you before the first line of code.",
+      "ctaPrimary": "Free consultation",
+      "downloadCta": "Download our presentation"
+    }
   }
 }

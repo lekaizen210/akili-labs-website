@@ -581,5 +581,104 @@
       "ariaLabel": "Chaîne de livraison continue en 5 étapes — Code, Build, Tests, Déploiement, Supervision — avec un contrôle de sécurité intégré à chaque étape",
       "caption": "La sécurité à chaque étape — pas une barrière à la fin."
     }
+  },
+  "DevMetiers": {
+    "meta": {
+      "title": "Développement d'Applications Métiers en Afrique de l'Ouest — Web, Mobile, APIs",
+      "description": "Applications web et mobiles, portails collaboratifs, APIs et plateformes métiers sur mesure pour les organisations de la zone UEMOA. Sprints courts, périmètre contractualisé, code livré. Consultation initiale gratuite.",
+      "ogTitle": "Expertise Développement Métiers — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "Le sur mesure sans dérapage : garde-fous vérifiables, qualité mesurée, réversibilité. L'outil épouse votre métier.",
+      "ogImageAlt": "AKILI Labs — Expertise Développement Métiers",
+      "twitterTitle": "Expertise Développement Métiers — AKILI Labs",
+      "twitterDescription": "Applications web, mobiles et plateformes métiers sur mesure en zone UEMOA.",
+      "serviceName": "Expertise Développement Métiers",
+      "serviceDescription": "Développement sur mesure d'applications web et mobiles, portails collaboratifs, APIs REST et plateformes métiers.",
+      "breadcrumbHome": "Accueil",
+      "breadcrumbExpertises": "Expertises",
+      "breadcrumbDevMetiers": "Développement Métiers",
+      "offerCatalogName": "Domaines d'intervention Développement Métiers"
+    },
+    "hero": {
+      "badge": "Expertise Développement Métiers",
+      "titlePart1": "Le sur mesure a mauvaise réputation. Elle est ",
+      "titleHighlight": "évitable.",
+      "subtitle": "Budgets qui dérapent, effet tunnel, dépendance au prestataire : les projets sur mesure échouent presque toujours pour les mêmes raisons — et aucune n'est une fatalité. AKILI Labs développe vos applications web, mobiles et plateformes métiers avec des garde-fous vérifiables : sprints courts, périmètre contractualisé, qualité mesurée, code livré. L'outil épouse votre métier — et le projet reste sous votre contrôle.",
+      "ctaPrimary": "Consultation gratuite",
+      "ctaSecondary": "Voir nos ressources"
+    },
+    "assemblyDiagram": {
+      "labelWeb": "Web",
+      "labelMobile": "Mobile",
+      "labelApi": "API",
+      "labelData": "Données",
+      "ariaLabel": "Blocs applicatifs — Web, Mobile, API, Données — assemblés en une plateforme unique, livrée par sprints successifs",
+      "sprintsLabel": "Sprints",
+      "caption": "Assemblé pour votre métier, livré par étapes visibles."
+    },
+    "intro": {
+      "badge": "Le constat",
+      "title": "Vos processus méritent mieux qu'un tableur — et mieux qu'un projet qui dérape",
+      "paragraph1": "D'un côté, le besoin est réel : validation de dossiers, suivi de production, gestion d'adhérents, tournées… quand aucun logiciel du marché ne couvre vos circuits propres, les équipes compensent — tableurs partagés, ressaisies, suivis papier. Les données s'éparpillent et personne n'a la vision d'ensemble.",
+      "paragraph2": "De l'autre, la méfiance est légitime : trop d'organisations de la région ont connu le projet sur mesure qui double de budget, l'application livrée en retard et jamais recettée, ou le prestataire parti avec le code.",
+      "calloutQuote": "Les projets sur mesure dérapent presque toujours pour trois raisons.",
+      "calloutText": "Un périmètre jamais figé, un effet tunnel sans livraisons intermédiaires, et un code que le client ne possède pas. Nos standards existent précisément pour neutraliser ces trois causes — et ils sont vérifiables.",
+      "paragraph3Rich": "<strong>Notre doctrine</strong> : standard partout où votre besoin est standard — un ERP éprouvé comme Odoo y sera plus rapide et moins cher — et sur mesure uniquement là où votre processus vous différencie. Lors du cadrage gratuit, nous vous disons honnêtement dans quel cas vous êtes.",
+      "imageAlt": "Avant-après : le classeur Excel d’une mutuelle avec une fiche d’adhérente en doublon et des erreurs #N/A, accompagné du carnet de reçus manuscrits du guichet, face à l’application métier où la même adhérente a une fiche unique, un reçu envoyé par SMS et un historique sans écart"
+    },
+    "roadmap": {
+      "badge": "Cadrage & Réalisation",
+      "title": "En 5 phases, du processus métier à la plateforme en production — sans effet tunnel",
+      "subtitle": "Chaque phase produit un livrable tangible que vous validez avant de passer à la suivante.",
+      "imageAlt": "Tableau de suivi du sprint 3 : cinq fonctionnalités terminées, deux en recette chez le client avec le retour de la trésorière, le sprint suivant planifié, la courbe d’avancement et l’historique des démonstrations toutes les deux semaines",
+      "deliverableLabel": "Livrable : "
+    },
+    "domains": {
+      "badge": "Domaines d'intervention",
+      "title": "Quatre façons de mettre le logiciel au service de votre métier"
+    },
+    "standards": {
+      "badge": "Garde-fous vérifiables",
+      "title": "Chaque cause de dérapage a sa réponse — écrite dans nos procédures",
+      "subtitle": "Ces règles ne sont pas des promesses commerciales : ce sont nos procédures internes, appliquées à chaque projet, y compris les nôtres.",
+      "causeLabel": "Cause :"
+    },
+    "services": {
+      "badge": "Au-delà de la livraison",
+      "title": "Une application vit après sa mise en production",
+      "imageAlt": "Documentation de l’API métier : les points d’entrée (fiche adhérent, encaissement, confirmation Mobile Money, rapports), un exemple d’appel avec sa réponse JSON, les droits d’accès par rôle, et la liste des applications qui la consomment (guichet, mobile terrain, portail de direction, logiciel comptable)",
+      "footerText": "Nos réalisations, avec résultats mesurés, sont présentées sur la page",
+      "referencesLabel": "Références"
+    },
+    "approach": {
+      "badge": "Notre méthodologie",
+      "title": "Le métier d'abord, la technologie ensuite"
+    },
+    "sectors": {
+      "badge": "Secteurs d'intervention",
+      "title": "Chaque métier a ses processus critiques — nous développons pour les vôtres"
+    },
+    "whyUs": {
+      "badge": "Ce qui nous distingue",
+      "title": "Pourquoi choisir AKILI Labs"
+    },
+    "stats": {
+      "title": "La practice Développement en chiffres"
+    },
+    "resources": {
+      "badge": "Ressources & Contenus",
+      "title": "Approfondissez votre projet d'application métier",
+      "comingSoon": "Bientôt disponible"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes sur le développement sur mesure"
+    },
+    "ctaFinal": {
+      "titlePart1": "Votre prochain projet sur mesure peut être ",
+      "titleHighlight": "celui qui se passe bien.",
+      "subtitle": "Commençons par un cadrage : nos experts analysent vos processus, vous disent honnêtement ce qui relève du sur mesure — et verrouillent avec vous le périmètre, le budget et les garde-fous avant la première ligne de code.",
+      "ctaPrimary": "Consultation gratuite",
+      "downloadCta": "Télécharger notre présentation"
+    }
   }
 }
