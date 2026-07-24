@@ -159,5 +159,128 @@
       "trustItem3": "Confidentialité garantie",
       "trustItem4": "Experts certifiés"
     }
+  },
+  "Odoo": {
+    "meta": {
+      "title": "Expertise Odoo ERP en Afrique de l'Ouest",
+      "description": "Implémentation, personnalisation et optimisation de l'ERP Odoo pour les entreprises d'Afrique de l'Ouest. Conformité OHADA/SYSCOHADA. Consultation initiale gratuite.",
+      "ogTitle": "Expertise Odoo ERP — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "Un projet ERP ne devrait jamais échouer à cause du contexte local. Expertise Odoo complète pour la zone UEMOA/OHADA.",
+      "ogImageAlt": "AKILI Labs — Expertise Odoo",
+      "twitterTitle": "Expertise Odoo ERP — AKILI Labs",
+      "twitterDescription": "Implémentation et personnalisation Odoo pour l'Afrique de l'Ouest.",
+      "serviceName": "Expertise Odoo ERP",
+      "serviceDescription": "Implémentation, personnalisation et optimisation de l'ERP Odoo, avec conformité OHADA/SYSCOHADA.",
+      "breadcrumbHome": "Accueil",
+      "breadcrumbExpertises": "Expertises",
+      "breadcrumbOdoo": "Odoo"
+    },
+    "hero": {
+      "badge": "Expertise Odoo ERP",
+      "titlePart1": "Un projet ERP ne devrait jamais échouer ",
+      "titleHighlight": "à cause du contexte local.",
+      "subtitle": "Paie CNPS, états SYSCOHADA, paiements Mobile Money, connectivité variable : c'est là que la plupart des déploiements ERP déraillent en Afrique de l'Ouest, pas dans le logiciel. AKILI Labs implémente Odoo en partant de cette réalité, du cadrage métier jusqu'à la mise en production et au-delà.",
+      "ctaPrimary": "Consultation gratuite",
+      "ctaSecondary": "Voir nos ressources Odoo"
+    },
+    "hubDiagram": {
+      "ariaLabel": "Odoo réunit CRM, Stock, Comptabilité et RH dans une seule plateforme",
+      "nodeCrm": "CRM",
+      "nodeStock": "Stock",
+      "nodeAccounting": "Comptabilité",
+      "nodeHr": "RH"
+    },
+    "intro": {
+      "badge": "Le constat",
+      "title": "Des outils dispersés coûtent plus cher qu'un système unifié",
+      "paragraph1": "Gérer une entreprise en croissance avec des outils dispersés (tableaux Excel, logiciel de comptabilité isolé, CRM sans connexion à la supply chain) coûte du temps, de l'argent et des opportunités manquées. Et le premier réflexe, adopter un ERP générique, échoue souvent sur les mêmes écueils : un plan comptable qui ignore le SYSCOHADA, une paie qui ne connaît ni la CNPS ni la CGRAE, des paiements qui s'arrêtent là où commence le Mobile Money.",
+      "calloutTitle": "Le bon ERP est celui qui s'adapte à votre réalité, pas l'inverse.",
+      "calloutText": "Odoo, suite ERP open source la plus adoptée au monde (plus de 28 millions d'utilisateurs dans 180 pays), réunit ventes, achats, stocks, comptabilité, RH et production dans une seule plateforme. Son architecture ouverte permet précisément les adaptations que votre contexte exige.",
+      "paragraph2Rich": "Chez AKILI Labs, nous ne nous contentons pas d'installer Odoo. Nous le configurons, l'adaptons et le faisons vivre selon <strong>votre réalité métier africaine</strong> : contextes OHADA/SYSCOHADA, spécificités fiscales locales, multilinguisme et contraintes de connectivité.",
+      "imageAlt": "Avant-après : un classeur Excel de suivi des ventes avec une commande en doublon et des erreurs #N/A, doublé d'un fil WhatsApp où le dépôt annonce que le stock n'était pas à jour, face au menu des applications Odoo (Ventes, CRM, Inventaire, Achats, Comptabilité, Paie) et à la commande CDE-2026-341 qui réserve le stock, génère la facture et l'écriture comptable"
+    },
+    "implementation": {
+      "badge": "Conseil & Implémentation",
+      "title": "Conseil & Cadrage",
+      "subtitle": "Avant d'écrire la moindre ligne de configuration, nous comprenons votre métier.",
+      "cadrageItem1": "Audit de l'existant et cartographie des processus (as-is / to-be)",
+      "cadrageItem2": "Analyse des besoins fonctionnels et techniques",
+      "cadrageItem3": "Définition du périmètre et priorisation des modules",
+      "cadrageItem4": "Rédaction du cahier des charges et des spécifications fonctionnelles",
+      "cadrageItem5": "Estimation de charge et planification du projet (plan de charge détaillé)",
+      "cadrageItem6": "Accompagnement à la décision : Odoo Community vs Enterprise",
+      "phasesTitle": "Notre approche en 5 phases",
+      "phasesSubtitle": "Nous déployons Odoo selon une méthodologie structurée et éprouvée, inspirée des meilleures pratiques internationales.",
+      "deliverableLabel": "Livrable"
+    },
+    "modules": {
+      "badge": "Modules Odoo maîtrisés",
+      "title": "Nous intervenons sur l'ensemble des modules de la suite Odoo"
+    },
+    "conformite": {
+      "badge": "Conformité & Réalités locales",
+      "title": "Un ERP conforme se prouve dans les états financiers, pas dans la plaquette",
+      "paragraph1": "Tout intégrateur peut installer Odoo. La différence se joue dans les milliers de détails que le contexte impose : un Bilan et un Compte de résultat au format SYSCOHADA révisé, un TAFIRE que votre commissaire aux comptes accepte, des bulletins de paie qui calculent juste les cotisations CNPS et CGRAE, une TVA paramétrée selon la fiscalité de chaque pays d'implantation, des encaissements Wave, Orange Money ou MTN MoMo réconciliés automatiquement en comptabilité.",
+      "paragraph2": "AKILI Labs a développé une expertise spécifique sur la configuration d'Odoo pour le référentiel OHADA : c'est le cœur de notre practice, pas une option du devis.",
+      "imageAlt": "Facture client dans la comptabilité Odoo : écritures aux comptes SYSCOHADA 411, 701 et 4431 avec TVA à 18 %, balance équilibrée, lettrage du règlement rapproché du relevé bancaire, états financiers OHADA générés et liasse DSF prête pour la DGI"
+    },
+    "services": {
+      "badge": "Au-delà de l'implémentation",
+      "title": "Un ERP standard ne suffit pas toujours : nous l'adaptons à votre métier",
+      "imageAlt": "Écran des intégrations Odoo : connecteurs Mobile Money (Orange, MTN, Wave), banques SGBCI et BICICI, boutique en ligne et facture normalisée DGI, tous actifs, avec le journal des flux du jour montrant un paiement rapproché, une commande web et une reprise automatique après indisponibilité d'une passerelle"
+    },
+    "hostingSupport": {
+      "badge": "Hébergement & Support",
+      "title": "Votre ERP doit tourner tous les jours : nous nous y engageons contractuellement",
+      "hostingTitle": "Hébergement & Infrastructure",
+      "fitLabel": "Idéal pour",
+      "supportTitle": "Support & Maintenance",
+      "supportParagraphRich": "Après le go-live, votre ERP est couvert par un contrat de maintenance avec des engagements de service contractuels : <strong>incidents bloquants pris en charge sous 2 à 24h selon le niveau souscrit</strong>, mises à jour réglementaires de paie incluses, TMA applicative mensuelle et revues de suivi. Trois niveaux s'adaptent à la criticité de votre activité.",
+      "blockingLabel": "Bloquant",
+      "imageAlt": "Supervision de l'instance Odoo : disponibilité de 99,95 % sur 12 mois contre un objectif contractuel de 99,5 %, incident détecté et résolu en 31 minutes, et tickets TMA P1 à P3 traités dans les délais contractuels"
+    },
+    "approach": {
+      "badge": "Notre méthodologie",
+      "title": "Une approche centrée sur votre métier, pas sur l'outil",
+      "subtitle": "Chez AKILI Labs, nous refusons le modèle « installer et partir ».",
+      "principle1Title": "Le métier d'abord",
+      "principle1Desc": "Les ateliers de cadrage partent de vos processus réels, pas des écrans d'Odoo : l'outil s'adapte à l'organisation, jamais l'inverse.",
+      "principle2Title": "Standard avant spécifique",
+      "principle2Desc": "Chaque développement sur mesure se justifie : le standard Odoo couvre l'essentiel des besoins et garantit des migrations futures sereines.",
+      "principle3Title": "Réalisme UEMOA",
+      "principle3Desc": "Connectivité variable, paiements Mobile Money, exigences OHADA : nos déploiements fonctionnent dans votre contexte, pas seulement en démonstration.",
+      "principle4Title": "Transfert de compétences",
+      "principle4Desc": "Vos équipes administrent et font évoluer leur ERP en autonomie après notre accompagnement."
+    },
+    "sectors": {
+      "badge": "Secteurs d'intervention",
+      "title": "Chaque secteur a ses processus critiques : nous partons des vôtres"
+    },
+    "whyUs": {
+      "badge": "Ce qui nous distingue",
+      "title": "Pourquoi choisir AKILI Labs"
+    },
+    "stats": {
+      "title": "La practice Odoo en chiffres"
+    },
+    "resources": {
+      "badge": "Ressources & Contenus",
+      "title": "Approfondissez votre projet Odoo",
+      "comingSoon": "Bientôt disponible"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes sur Odoo"
+    },
+    "ctaFinal": {
+      "titlePart1": "Votre prochain ERP mérite de réussir ",
+      "titleHighlight": "dans votre réalité.",
+      "subtitle": "Commençons par une consultation gratuite : nos experts analysent vos processus et vous proposent une feuille de route Odoo adaptée à votre contexte, votre budget et vos délais.",
+      "benefit1": "Analyse rapide de votre maturité digitale",
+      "benefit2": "Recommandation des modules Odoo prioritaires pour votre secteur",
+      "benefit3": "Estimation indicative de délais et de budget",
+      "benefit4": "Réponse à vos questions techniques et fonctionnelles",
+      "ctaPrimary": "Consultation gratuite"
+    }
   }
 }
