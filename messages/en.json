@@ -863,7 +863,7 @@
   "About": {
     "meta": {
       "title": "About — Our Mission and Team",
-      "description": "Discover AKILI Labs, an IT consulting firm and Odoo ERP integrator based in Abidjan, Côte d'Ivoire: our mission, our values, and our team of experts across the UEMOA zone.",
+      "description": "Discover AKILI Labs, an IT consulting firm and Odoo ERP integrator based in Abidjan and active across the 8 countries of the UEMOA zone: our mission, our values, and our team of experts.",
       "ogTitle": "About — AKILI Labs",
       "ogDescription": "Our mission, our values, and our team of experts in digital transformation, Odoo ERP, AI, and DevSecOps in West Africa.",
       "ogImageAlt": "About AKILI Labs"
@@ -872,11 +872,22 @@
       "badge": "Our identity",
       "titlePart1": "Who ",
       "titleHighlight": "are we?",
-      "subtitle": "AKILI Labs is a consulting and engineering firm specializing in digital transformation, ERP, Artificial Intelligence, and DevSecOps. Founded to become a benchmark player in Africa, we operate across the entire UEMOA/OHADA zone."
+      "subtitle": "AKILI Labs is a consulting and engineering firm born from one conviction: organizations across the UEMOA zone deserve a technology partner who understands their realities — OHADA regulation, XOF budget constraints, variable connectivity — without compromising on international standards."
+    },
+    "manifesto": {
+      "eyebrow": "Our manifesto",
+      "title": "A young company. Experience that isn't.",
+      "text": "The company may be young, but its founders are not. Our leadership team brings together more than 30 years of experience in digital transformation, ERP integration, artificial intelligence and DevSecOps, built on landmark projects across the entire UEMOA zone: public administrations, banks and insurers, agribusiness, telecommunications. We've put that experience to work behind a single conviction: a lean structure, free of legacy systems and organizational weight, built entirely around today's methods and tools — Odoo, generative AI, CI/CD, cloud — delivers faster, better, and at a fairer price.",
+      "card1Title": "The experience of major accounts, the agility of a young structure",
+      "card1Text": "Our leaders have designed, deployed and operated mission-critical information systems for more than three decades combined. AKILI Labs distills the best of that practice, without the overhead.",
+      "card2Title": "Born in the West African context, not adapted to it after the fact",
+      "card2Text": "SYSCOHADA accounting, local payroll, mobile-first usage: our field expertise isn't an optional add-on, it's our starting point.",
+      "card3Title": "Accountable for results, not rhetoric",
+      "card3Text": "A young company has one asset: the success of its first clients. Every project is led by a member of the leadership team, from scoping through acceptance testing."
     },
     "vision": {
       "label": "Our vision",
-      "title": "A benchmark player in Africa's digital transformation",
+      "title": "Become the benchmark for digital transformation in West Africa",
       "text": "To be recognized as the trusted partner of organizations seeking to modernize their information systems, offering innovative, secure solutions perfectly suited to Africa's business challenges."
     },
     "mission": {
@@ -891,7 +902,7 @@
     "team": {
       "badge": "Our team",
       "title": "The experts behind AKILI Labs",
-      "subtitle": "A multidisciplinary team, passionate about technology and committed to Africa's digital transformation.",
+      "subtitle": "An experienced leadership team, dedicated centers of expertise — and one principle: every project is led by a founding member.",
       "linkedinAriaLabel": "LinkedIn profile of {name}",
       "linkedinText": "View LinkedIn profile",
       "contactPole": "Contact this division →",

@@ -863,7 +863,7 @@
   "About": {
     "meta": {
       "title": "À propos — Notre mission et notre équipe",
-      "description": "Découvrez AKILI Labs, société de conseil IT et intégrateur Odoo ERP basée à Abidjan, Côte d'Ivoire : notre mission, nos valeurs et notre équipe d'experts en zone UEMOA.",
+      "description": "Découvrez AKILI Labs, société de conseil IT et intégrateur Odoo ERP basée à Abidjan et active dans les 8 pays de la zone UEMOA : notre mission, nos valeurs et notre équipe d'experts.",
       "ogTitle": "À propos — AKILI Labs",
       "ogDescription": "Notre mission, nos valeurs et notre équipe d'experts en transformation digitale, ERP Odoo, IA et DevSecOps en Afrique de l'Ouest.",
       "ogImageAlt": "À propos AKILI Labs"
@@ -872,11 +872,22 @@
       "badge": "Notre identité",
       "titlePart1": "Qui ",
       "titleHighlight": "sommes-nous ?",
-      "subtitle": "AKILI Labs est une société de conseil et d'ingénierie spécialisée dans la transformation digitale, les ERP, l'Intelligence Artificielle et le DevSecOps. Fondée pour être un acteur de référence en Afrique, nous intervenons sur toute la zone UEMOA/OHADA."
+      "subtitle": "AKILI Labs est une société de conseil et d'ingénierie née d'une conviction : les organisations de la zone UEMOA méritent un partenaire technologique qui comprend leurs réalités — réglementation OHADA, contraintes budgétaires en XOF, connectivité variable — sans transiger sur les standards internationaux."
+    },
+    "manifesto": {
+      "eyebrow": "Notre manifeste",
+      "title": "Une société nouvelle. Une expérience qui ne l'est pas.",
+      "text": "Si la société est jeune, ses fondateurs ne le sont pas. L'équipe dirigeante cumule plus de 30 ans d'expérience en transformation digitale, intégration ERP, intelligence artificielle et DevSecOps, acquise sur des projets structurants dans toute la zone UEMOA : administrations publiques, banques et assurances, agro-industrie, télécommunications. Cette expérience, nous l'avons mise au service d'une conviction : une structure légère, sans héritage ni lourdeur, entièrement construite autour des méthodes et des outils d'aujourd'hui — Odoo, IA générative, CI/CD, cloud — livre plus vite, mieux, et au juste prix.",
+      "card1Title": "L'expérience des grands comptes, l'agilité d'une jeune structure",
+      "card1Text": "Nos dirigeants ont conçu, déployé et exploité des systèmes d'information critiques pendant plus de trois décennies cumulées. AKILI Labs en distille les meilleures pratiques, sans les lourdeurs.",
+      "card2Title": "Nés dans le contexte ouest-africain, pas adaptés à lui",
+      "card2Text": "Comptabilité SYSCOHADA, paie locale, usages mobile-first : notre expertise du terrain n'est pas une option au catalogue, c'est notre point de départ.",
+      "card3Title": "Une obligation de résultat, pas de discours",
+      "card3Text": "Une jeune société n'a qu'un capital : la réussite de ses premiers clients. Chaque projet est piloté par un membre de la direction, du cadrage à la recette."
     },
     "vision": {
       "label": "Notre vision",
-      "title": "Acteur de référence de la transformation digitale en Afrique",
+      "title": "Devenir l'acteur de référence de la transformation digitale en Afrique de l'Ouest",
       "text": "Être reconnu comme le partenaire de confiance des organisations qui souhaitent moderniser leurs systèmes d'information, en proposant des solutions innovantes, sécurisées et parfaitement adaptées aux enjeux métiers africains."
     },
     "mission": {
@@ -891,7 +902,7 @@
     "team": {
       "badge": "Notre équipe",
       "title": "Les experts derrière AKILI Labs",
-      "subtitle": "Une équipe pluridisciplinaire, passionnée par la technologie et engagée pour la transformation digitale de l'Afrique.",
+      "subtitle": "Une direction expérimentée, des pôles d'expertise dédiés — et un principe : chaque projet est piloté par un membre fondateur.",
       "linkedinAriaLabel": "LinkedIn de {name}",
       "linkedinText": "Voir le profil LinkedIn",
       "contactPole": "Contacter ce pôle →",
