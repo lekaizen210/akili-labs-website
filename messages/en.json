@@ -59,6 +59,18 @@
   },
   "Layout": {
     "skipToContent": "Skip to main content",
+    "keywords": [
+      "digital transformation Africa",
+      "Odoo integrator Côte d'Ivoire",
+      "OHADA ERP",
+      "ERP consultant West Africa",
+      "Artificial Intelligence Abidjan",
+      "DevSecOps UEMOA",
+      "IT consulting Côte d'Ivoire",
+      "AKILI Labs",
+      "Odoo UEMOA",
+      "information systems Africa"
+    ],
     "organization": {
       "description": "AKILI Labs is an IT consulting firm and Odoo ERP integrator based in Abidjan, Côte d'Ivoire. We help organizations across the UEMOA zone with their digital transformation: ERP, Artificial Intelligence, DevSecOps, and custom development."
     },
@@ -790,10 +802,10 @@
   "References": {
     "meta": {
       "title": "Case Studies — AKILI Labs",
-      "description": "Discover our achievements: ERP integration, Artificial Intelligence, DevSecOps and custom development in West Africa."
+      "description": "Discover our case studies: ERP integration, Artificial Intelligence, DevSecOps and custom development in West Africa."
     },
     "hero": {
-      "badge": "Our achievements",
+      "badge": "Our case studies",
       "titlePart1": "They put their ",
       "titleHighlight": "trust in us",
       "subtitle": "Real projects, measurable results. Discover how AKILI Labs transforms organizations across the UEMOA zone."
@@ -956,13 +968,13 @@
       "submitLoading": "Sending...",
       "disclaimer": "By submitting this form, you agree that your data may be used to contact you back.",
       "mailSubjectPrefix": "[Website]",
-      "mailBodyName": "Name",
-      "mailBodyCompany": "Company",
+      "mailBodyName": "Name: ",
+      "mailBodyCompany": "Company: ",
       "mailBodyCompanyEmpty": "Not provided",
-      "mailBodyEmail": "Email",
-      "mailBodyPhone": "Phone",
+      "mailBodyEmail": "Email: ",
+      "mailBodyPhone": "Phone: ",
       "mailBodyPhoneEmpty": "Not provided",
-      "mailBodySubject": "Subject",
+      "mailBodySubject": "Subject: ",
       "mailBodyMessage": "Message:"
     },
     "success": {
@@ -1159,23 +1171,23 @@
       },
       "mail": {
         "subjectPrefix": "[Application]",
-        "nom": "Name",
-        "email": "Email",
-        "telephone": "Phone",
-        "ville": "City",
-        "disponibilite": "Availability",
-        "linkedin": "LinkedIn",
+        "nom": "Name: ",
+        "email": "Email: ",
+        "telephone": "Phone: ",
+        "ville": "City: ",
+        "disponibilite": "Availability: ",
+        "linkedin": "LinkedIn: ",
         "linkedinEmpty": "Not provided",
-        "posteVise": "Position applied for",
-        "typeContrat": "Contract type",
-        "experience": "Experience",
-        "pretentions": "Salary expectations",
+        "posteVise": "Position applied for: ",
+        "typeContrat": "Contract type: ",
+        "experience": "Experience: ",
+        "pretentions": "Salary expectations: ",
         "pretentionsEmpty": "Not provided",
-        "portfolio": "Portfolio / GitHub",
+        "portfolio": "Portfolio / GitHub: ",
         "portfolioEmpty": "Not provided",
-        "source": "Source",
+        "source": "Source: ",
         "sourceEmpty": "Not provided",
-        "cv": "Selected resume",
+        "cv": "Selected resume: ",
         "cvEmpty": "To be attached to this email",
         "motivation": "Motivation:",
         "footer": "Please attach your CV in PDF format before sending if the file is not already attached."

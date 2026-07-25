@@ -34,11 +34,11 @@ export default function ContactPage() {
     const subject = encodeURIComponent(`${t("form.mailSubjectPrefix")} ${form.subject}`);
     const body = encodeURIComponent(
       [
-        `${t("form.mailBodyName")} : ${form.name}`,
-        `${t("form.mailBodyCompany")} : ${form.company || t("form.mailBodyCompanyEmpty")}`,
-        `${t("form.mailBodyEmail")} : ${form.email}`,
-        `${t("form.mailBodyPhone")} : ${form.phone || t("form.mailBodyPhoneEmpty")}`,
-        `${t("form.mailBodySubject")} : ${form.subject}`,
+        `${t("form.mailBodyName")}${form.name}`,
+        `${t("form.mailBodyCompany")}${form.company || t("form.mailBodyCompanyEmpty")}`,
+        `${t("form.mailBodyEmail")}${form.email}`,
+        `${t("form.mailBodyPhone")}${form.phone || t("form.mailBodyPhoneEmpty")}`,
+        `${t("form.mailBodySubject")}${form.subject}`,
         "",
         t("form.mailBodyMessage"),
         form.message,

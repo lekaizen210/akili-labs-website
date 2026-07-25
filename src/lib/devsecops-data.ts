@@ -383,7 +383,7 @@ export const dsFaqs = [
     question: { fr: "Pourquoi conteneuriser mes applications avec Docker ?", en: "Why containerize my applications with Docker?" },
     answer: {
       fr: "Docker encapsule une application avec toutes ses dépendances dans un conteneur portable. Résultat : environnements identiques du développement à la production, déploiements reproductibles, isolation des services et montée en charge facilitée. Associé à Kubernetes, il permet de gérer des dizaines de services de façon automatisée, avec 10× moins de temps de déploiement.",
-      en: "Docker packages an application with all its dependencies into a portable container. The result: identical environments from development to production, reproducible deployments, service isolation, and easier scaling. Paired with Kubernetes, it lets you manage dozens of services in an automated way, with 10x less deployment time.",
+      en: "Docker packages an application with all its dependencies into a portable container. The result: identical environments from development to production, reproducible deployments, service isolation, and easier scaling. Paired with Kubernetes, it lets you manage dozens of services in an automated way, with 10× less deployment time.",
     },
   },
   {
