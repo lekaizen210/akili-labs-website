@@ -115,6 +115,7 @@ function buildOrganizationJsonLd(description: string, availableLanguage: string[
     contactPoint: {
       "@type": "ContactPoint",
       email: "contact@akililabs.io",
+      telephone: "+225 07 77 70 02 74",
       contactType: "customer service",
       availableLanguage,
       areaServed: "UEMOA",

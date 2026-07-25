@@ -67,7 +67,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={14} className="text-orange shrink-0" />
-                <span>+225 07 00 00 00 00</span>
+                <span>+225 07 77 70 02 74 · +225 01 03 28 88 97</span>
               </div>
             </div>
             {/* Réseaux sociaux */}
