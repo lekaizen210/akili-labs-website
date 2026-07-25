@@ -1337,5 +1337,84 @@
       "readArticles": "Read our articles",
       "quickAccessLabel": "Quick access by topic"
     }
+  },
+  "Legal": {
+    "meta": {
+      "title": "Legal Notice",
+      "description": "Legal notice for the AKILI Labs website — publisher, hosting, intellectual property."
+    },
+    "hero": {
+      "badge": "Legal information",
+      "title": "Legal Notice",
+      "subtitle": "Website publisher, hosting, and intellectual property."
+    },
+    "notice": {
+      "strong": "Draft document.",
+      "text": "This page was drafted from the information currently available and must be reviewed and completed (exact company name, RCCM number, hosting provider) by a lawyer before being considered final."
+    },
+    "publisher": {
+      "title": "Website publisher",
+      "introRich": "The website <strong>akililabs.com</strong> is published by <strong>AKILI Labs</strong>, an IT consulting firm and Odoo ERP integrator, whose registered office is located in Abidjan, Côte d'Ivoire (UEMOA Zone).",
+      "rccmLabel": "RCCM number:",
+      "toComplete": "to be completed",
+      "directorLabel": "Publication director:",
+      "contactLabel": "Contact:"
+    },
+    "hosting": {
+      "title": "Hosting",
+      "textRich": "The website is hosted by: <em>to be completed (name, address, and contact details of the hosting provider)</em>."
+    },
+    "ip": {
+      "title": "Intellectual property",
+      "text": "All content on this website (text, logos, graphics, icons) is the exclusive property of AKILI Labs, unless otherwise stated, and may not be reproduced, distributed, or modified without prior written authorization."
+    },
+    "personalData": {
+      "title": "Personal data",
+      "textRich": "The processing of data collected through this website (in particular the contact form) is detailed in our <link>privacy policy</link>."
+    },
+    "contact": {
+      "title": "Contact",
+      "text": "For any question regarding this legal notice:"
+    }
+  },
+  "Privacy": {
+    "meta": {
+      "title": "Privacy Policy",
+      "description": "Privacy policy for the AKILI Labs website — data collected, purposes, and individual rights."
+    },
+    "hero": {
+      "badge": "Privacy",
+      "title": "Privacy Policy",
+      "subtitle": "How we collect, use, and protect your personal data."
+    },
+    "notice": {
+      "strong": "Draft document.",
+      "text": "This policy describes the processing actually carried out by the website to date. It must be reviewed by a lawyer to confirm its compliance with Ivorian law no. 2013-450 on the protection of personal data and, where applicable, with the GDPR, before final publication."
+    },
+    "controller": {
+      "title": "Data controller",
+      "text": "AKILI Labs, Abidjan, Côte d'Ivoire (UEMOA Zone), is the controller responsible for processing data collected on this website. Contact:"
+    },
+    "dataCollected": {
+      "title": "Data collected",
+      "introRich": "The form on the <link>Contact</link> page collects: full name, professional email address, company (optional), phone number (optional), subject, and message.",
+      "outro": "No other personal data is actively collected on the rest of the website."
+    },
+    "purpose": {
+      "title": "Purpose and legal basis",
+      "text": "This data is used exclusively to respond to your contact or quote request. The processing is based on your consent, given at the time the form is submitted."
+    },
+    "retention": {
+      "title": "Retention period",
+      "text": "Data submitted through the contact form is retained for as long as necessary to process your request, then archived or deleted in accordance with our commercial and legal obligations."
+    },
+    "rights": {
+      "title": "Your rights",
+      "text": "In accordance with applicable regulations, you have the right to access, rectify, object to, and delete your personal data. To exercise these rights, contact us at"
+    },
+    "cookies": {
+      "title": "Cookies",
+      "text": "This website does not use advertising tracking or third-party analytics cookies at this time. This section will be updated if an audience measurement tool is added."
+    }
   }
 }

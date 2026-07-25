@@ -1337,5 +1337,84 @@
       "readArticles": "Lire nos articles",
       "quickAccessLabel": "Accès direct par thème"
     }
+  },
+  "Legal": {
+    "meta": {
+      "title": "Mentions légales",
+      "description": "Mentions légales du site AKILI Labs — éditeur, hébergement, propriété intellectuelle."
+    },
+    "hero": {
+      "badge": "Informations légales",
+      "title": "Mentions légales",
+      "subtitle": "Éditeur du site, hébergement et propriété intellectuelle."
+    },
+    "notice": {
+      "strong": "Document provisoire.",
+      "text": "Cette page a été rédigée à partir des informations disponibles et doit être relue et complétée (raison sociale exacte, numéro RCCM, hébergeur) par un juriste avant d'être considérée comme définitive."
+    },
+    "publisher": {
+      "title": "Éditeur du site",
+      "introRich": "Le site <strong>akililabs.com</strong> est édité par <strong>AKILI Labs</strong>, société de conseil IT et intégrateur Odoo ERP, dont le siège social est situé à Abidjan, Côte d'Ivoire (Zone UEMOA).",
+      "rccmLabel": "Numéro RCCM :",
+      "toComplete": "à compléter",
+      "directorLabel": "Directeur de la publication :",
+      "contactLabel": "Contact :"
+    },
+    "hosting": {
+      "title": "Hébergement",
+      "textRich": "Le site est hébergé par : <em>à compléter (nom, adresse et contact de l'hébergeur)</em>."
+    },
+    "ip": {
+      "title": "Propriété intellectuelle",
+      "text": "L'ensemble des contenus présents sur ce site (textes, logos, graphismes, icônes) est la propriété exclusive d'AKILI Labs, sauf mention contraire, et ne peut être reproduit, distribué ou modifié sans autorisation écrite préalable."
+    },
+    "personalData": {
+      "title": "Données personnelles",
+      "textRich": "Le traitement des données collectées via ce site (notamment le formulaire de contact) est détaillé dans notre <link>politique de confidentialité</link>."
+    },
+    "contact": {
+      "title": "Contact",
+      "text": "Pour toute question relative à ces mentions légales :"
+    }
+  },
+  "Privacy": {
+    "meta": {
+      "title": "Politique de confidentialité",
+      "description": "Politique de confidentialité du site AKILI Labs — données collectées, finalités, droits des personnes."
+    },
+    "hero": {
+      "badge": "Vie privée",
+      "title": "Politique de confidentialité",
+      "subtitle": "Comment nous collectons, utilisons et protégeons vos données personnelles."
+    },
+    "notice": {
+      "strong": "Document provisoire.",
+      "text": "Cette politique décrit les traitements réellement mis en œuvre par le site à ce jour. Elle doit être relue par un juriste pour confirmer sa conformité à la loi ivoirienne n° 2013-450 relative à la protection des données à caractère personnel et, le cas échéant, au RGPD, avant publication définitive."
+    },
+    "controller": {
+      "title": "Responsable du traitement",
+      "text": "AKILI Labs, Abidjan, Côte d'Ivoire (Zone UEMOA), est responsable du traitement des données collectées sur ce site. Contact :"
+    },
+    "dataCollected": {
+      "title": "Données collectées",
+      "introRich": "Le formulaire de la page <link>Contact</link> collecte : nom complet, adresse email professionnelle, société (facultatif), téléphone (facultatif), objet et message.",
+      "outro": "Aucune autre donnée personnelle n'est collectée activement sur le reste du site."
+    },
+    "purpose": {
+      "title": "Finalité et base légale",
+      "text": "Ces données sont utilisées exclusivement pour répondre à votre demande de contact ou de devis. Le traitement repose sur votre consentement, donné au moment de la soumission du formulaire."
+    },
+    "retention": {
+      "title": "Durée de conservation",
+      "text": "Les données transmises via le formulaire de contact sont conservées le temps nécessaire au traitement de votre demande, puis archivées ou supprimées conformément à nos obligations commerciales et légales."
+    },
+    "rights": {
+      "title": "Vos droits",
+      "text": "Conformément à la réglementation applicable, vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression de vos données personnelles. Pour exercer ces droits, contactez-nous à"
+    },
+    "cookies": {
+      "title": "Cookies",
+      "text": "Ce site n'utilise pas de cookies de suivi publicitaire ou d'analyse tiers à ce jour. Cette section sera mise à jour si un outil de mesure d'audience est ajouté."
+    }
   }
 }

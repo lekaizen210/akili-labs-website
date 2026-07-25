@@ -1,16 +1,25 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import PageHero from "@/components/ui/PageHero";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 const BASE_URL = "https://akililabs.com";
 
-export const metadata: Metadata = {
-  title: "Mentions légales",
-  description: "Mentions légales du site AKILI Labs — éditeur, hébergement, propriété intellectuelle.",
-  alternates: { canonical: `${BASE_URL}/mentions-legales` },
-  robots: { index: false, follow: true },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Legal.meta" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: { canonical: `${BASE_URL}/mentions-legales` },
+    robots: { index: false, follow: true },
+  };
+}
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -31,66 +40,68 @@ export default async function MentionsLegalesPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Legal" });
 
   return (
     <>
       <PageHero
-        badge="Informations légales"
-        title="Mentions légales"
-        subtitle="Éditeur du site, hébergement et propriété intellectuelle."
+        badge={t("hero.badge")}
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
       />
 
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-orange-pale border-l-4 border-orange rounded-r-xl p-5 mb-12 text-sm text-ink">
-            <strong className="text-navy">Document provisoire.</strong> Cette page a été rédigée à
-            partir des informations disponibles et doit être relue et complétée (raison sociale exacte,
-            numéro RCCM, hébergeur) par un juriste avant d&apos;être considérée comme définitive.
+            <strong className="text-navy">{t("notice.strong")}</strong> {t("notice.text")}
           </div>
 
-          <Section title="Éditeur du site">
+          <Section title={t("publisher.title")}>
             <p>
-              Le site <strong>akililabs.com</strong> est édité par <strong>AKILI Labs</strong>, société de
-              conseil IT et intégrateur Odoo ERP, dont le siège social est situé à Abidjan, Côte d&apos;Ivoire
-              (Zone UEMOA).
+              {t.rich("publisher.introRich", {
+                strong: (chunks) => <strong>{chunks}</strong>,
+              })}
             </p>
             <p>
-              Numéro RCCM : <em>à compléter</em><br />
-              Directeur de la publication : <em>à compléter</em>
+              {t("publisher.rccmLabel")} <em>{t("publisher.toComplete")}</em>
+              <br />
+              {t("publisher.directorLabel")} <em>{t("publisher.toComplete")}</em>
             </p>
             <p>
-              Contact : <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">contact@akililabs.io</a>
-            </p>
-          </Section>
-
-          <Section title="Hébergement">
-            <p>
-              Le site est hébergé par : <em>à compléter (nom, adresse et contact de l&apos;hébergeur)</em>.
+              {t("publisher.contactLabel")}{" "}
+              <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
+                contact@akililabs.io
+              </a>
             </p>
           </Section>
 
-          <Section title="Propriété intellectuelle">
+          <Section title={t("hosting.title")}>
             <p>
-              L&apos;ensemble des contenus présents sur ce site (textes, logos, graphismes, icônes) est la
-              propriété exclusive d&apos;AKILI Labs, sauf mention contraire, et ne peut être reproduit,
-              distribué ou modifié sans autorisation écrite préalable.
+              {t.rich("hosting.textRich", {
+                em: (chunks) => <em>{chunks}</em>,
+              })}
             </p>
           </Section>
 
-          <Section title="Données personnelles">
+          <Section title={t("ip.title")}>
+            <p>{t("ip.text")}</p>
+          </Section>
+
+          <Section title={t("personalData.title")}>
             <p>
-              Le traitement des données collectées via ce site (notamment le formulaire de contact) est
-              détaillé dans notre{" "}
-              <Link href="/confidentialite" className="text-orange-dark hover:underline">
-                politique de confidentialité
-              </Link>
-              .
+              {t.rich("personalData.textRich", {
+                link: (chunks) => (
+                  <Link href="/confidentialite" className="text-orange-dark hover:underline">
+                    {chunks}
+                  </Link>
+                ),
+              })}
             </p>
           </Section>
 
-          <Section title="Contact">
+          <Section title={t("contact.title")}>
             <p>
-              Pour toute question relative à ces mentions légales :{" "}
+              {t("contact.text")}{" "}
               <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
                 contact@akililabs.io
               </a>

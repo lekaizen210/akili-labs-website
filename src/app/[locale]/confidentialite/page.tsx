@@ -1,16 +1,25 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import PageHero from "@/components/ui/PageHero";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 const BASE_URL = "https://akililabs.com";
 
-export const metadata: Metadata = {
-  title: "Politique de confidentialité",
-  description: "Politique de confidentialité du site AKILI Labs — données collectées, finalités, droits des personnes.",
-  alternates: { canonical: `${BASE_URL}/confidentialite` },
-  robots: { index: false, follow: true },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Privacy.meta" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: { canonical: `${BASE_URL}/confidentialite` },
+    robots: { index: false, follow: true },
+  };
+}
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -31,63 +40,55 @@ export default async function ConfidentialitePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Privacy" });
 
   return (
     <>
       <PageHero
-        badge="Vie privée"
-        title="Politique de confidentialité"
-        subtitle="Comment nous collectons, utilisons et protégeons vos données personnelles."
+        badge={t("hero.badge")}
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
       />
 
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-orange-pale border-l-4 border-orange rounded-r-xl p-5 mb-12 text-sm text-ink">
-            <strong className="text-navy">Document provisoire.</strong> Cette politique décrit les
-            traitements réellement mis en œuvre par le site à ce jour. Elle doit être relue par un juriste
-            pour confirmer sa conformité à la loi ivoirienne n° 2013-450 relative à la protection des
-            données à caractère personnel et, le cas échéant, au RGPD, avant publication définitive.
+            <strong className="text-navy">{t("notice.strong")}</strong> {t("notice.text")}
           </div>
 
-          <Section title="Responsable du traitement">
+          <Section title={t("controller.title")}>
             <p>
-              AKILI Labs, Abidjan, Côte d&apos;Ivoire (Zone UEMOA), est responsable du traitement des données
-              collectées sur ce site. Contact :{" "}
+              {t("controller.text")}{" "}
               <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
                 contact@akililabs.io
               </a>
             </p>
           </Section>
 
-          <Section title="Données collectées">
+          <Section title={t("dataCollected.title")}>
             <p>
-              Le formulaire de la page{" "}
-              <Link href="/contact" className="text-orange-dark hover:underline">Contact</Link> collecte : nom
-              complet, adresse email professionnelle, société (facultatif), téléphone (facultatif), objet et
-              message. Aucune autre donnée personnelle n&apos;est collectée activement sur le reste du site.
+              {t.rich("dataCollected.introRich", {
+                link: (chunks) => (
+                  <Link href="/contact" className="text-orange-dark hover:underline">
+                    {chunks}
+                  </Link>
+                ),
+              })}{" "}
+              {t("dataCollected.outro")}
             </p>
           </Section>
 
-          <Section title="Finalité et base légale">
-            <p>
-              Ces données sont utilisées exclusivement pour répondre à votre demande de contact ou de devis.
-              Le traitement repose sur votre consentement, donné au moment de la soumission du formulaire.
-            </p>
+          <Section title={t("purpose.title")}>
+            <p>{t("purpose.text")}</p>
           </Section>
 
-          <Section title="Durée de conservation">
-            <p>
-              Les données transmises via le formulaire de contact sont conservées le temps nécessaire au
-              traitement de votre demande, puis archivées ou supprimées conformément à nos obligations
-              commerciales et légales.
-            </p>
+          <Section title={t("retention.title")}>
+            <p>{t("retention.text")}</p>
           </Section>
 
-          <Section title="Vos droits">
+          <Section title={t("rights.title")}>
             <p>
-              Conformément à la réglementation applicable, vous disposez d&apos;un droit d&apos;accès, de
-              rectification, d&apos;opposition et de suppression de vos données personnelles. Pour exercer
-              ces droits, contactez-nous à{" "}
+              {t("rights.text")}{" "}
               <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
                 contact@akililabs.io
               </a>
@@ -95,11 +96,8 @@ export default async function ConfidentialitePage({
             </p>
           </Section>
 
-          <Section title="Cookies">
-            <p>
-              Ce site n&apos;utilise pas de cookies de suivi publicitaire ou d&apos;analyse tiers à ce jour.
-              Cette section sera mise à jour si un outil de mesure d&apos;audience est ajouté.
-            </p>
+          <Section title={t("cookies.title")}>
+            <p>{t("cookies.text")}</p>
           </Section>
         </div>
       </section>
