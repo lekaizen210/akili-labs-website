@@ -41,14 +41,6 @@
     "rights": "© 2026 Tous droits réservés",
     "legalNotice": "Mentions légales",
     "privacy": "Confidentialité",
-    "expertisesMenu": {
-      "transformationDigitale": "Transformation Digitale",
-      "erpOdoo": "ERP & Odoo",
-      "intelligenceArtificielle": "Intelligence Artificielle",
-      "devsecops": "DevSecOps",
-      "developpementMetiers": "Développement Métiers",
-      "businessIntelligence": "Business Intelligence"
-    },
     "sectors": {
       "administrationPublique": "Administration publique",
       "banqueAssurance": "Banque & Assurance",

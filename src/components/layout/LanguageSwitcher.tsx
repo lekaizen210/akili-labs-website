@@ -10,18 +10,19 @@ const locales = [
 ] as const;
 
 interface LanguageSwitcherProps {
-  className?: string;
   /** Fond sombre (navbar non scrollée, footer) : texte inactif clair plutôt que gris/navy. */
   inverted?: boolean;
+  /** Taille du texte : "sm" (défaut, navbar) ou "xs" (footer, aligné sur les voisins text-xs de la bottom bar). */
+  size?: "sm" | "xs";
 }
 
-export default function LanguageSwitcher({ className, inverted = false }: LanguageSwitcherProps) {
+export default function LanguageSwitcher({ inverted = false, size = "sm" }: LanguageSwitcherProps) {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
 
   return (
-    <div className={cn("flex items-center gap-1 text-sm font-semibold", className)}>
+    <div className={cn("flex items-center gap-1 font-semibold", size === "xs" ? "text-xs" : "text-sm")}>
       {locales.map(({ code, label, name }, i) => (
         <span key={code} className="flex items-center gap-1">
           {i > 0 && (
@@ -35,7 +36,7 @@ export default function LanguageSwitcher({ className, inverted = false }: Langua
             aria-current={locale === code ? "true" : undefined}
             aria-label={name}
             className={cn(
-              "px-1 transition-colors",
+              "px-1 py-1 transition-colors",
               locale === code
                 ? inverted
                   ? "text-white border-b-2 border-orange"
