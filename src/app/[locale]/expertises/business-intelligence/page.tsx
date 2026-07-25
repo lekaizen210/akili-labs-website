@@ -16,9 +16,7 @@ import BiCtaFinal from "@/components/business-intelligence/BiCtaFinal";
 import { biServices, biFaqs } from "@/lib/business-intelligence-data";
 import { l } from "@/lib/i18n-content";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-
-const BASE_URL = "https://akililabs.com";
-const url = `${BASE_URL}/expertises/business-intelligence`;
+import { BASE_URL, buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -27,14 +25,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Bi.meta" });
+  const alternates = buildAlternates("/expertises/business-intelligence", locale as "fr" | "en");
 
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: url },
+    alternates,
     openGraph: {
       type: "website",
-      url,
+      url: alternates.canonical,
       title: t("ogTitle"),
       description: t("ogDescription"),
       images: [{ url: "/bi-images/bi-contexte.png", width: 1400, height: 1000, alt: t("ogImageAlt") }],
@@ -56,6 +55,7 @@ export default async function BusinessIntelligencePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Bi.meta" });
+  const url = buildAlternates("/expertises/business-intelligence", locale as "fr" | "en").canonical;
 
   const serviceJsonLd = {
     "@context": "https://schema.org",

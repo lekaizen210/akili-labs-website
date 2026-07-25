@@ -65,6 +65,11 @@
       "contact": "Contact"
     }
   },
+  "Layout": {
+    "organization": {
+      "description": "AKILI Labs est une société de conseil IT et intégrateur Odoo ERP basée à Abidjan, Côte d'Ivoire. Nous accompagnons les organisations de la zone UEMOA dans leur transformation digitale : ERP, Intelligence Artificielle, DevSecOps et développement sur mesure."
+    }
+  },
   "Home": {
     "meta": {
       "title": "AKILI Labs — Transformation Digitale, ERP, IA & DevSecOps en Afrique",
@@ -1354,7 +1359,7 @@
     },
     "publisher": {
       "title": "Éditeur du site",
-      "introRich": "Le site <strong>akililabs.com</strong> est édité par <strong>AKILI Labs</strong>, société de conseil IT et intégrateur Odoo ERP, dont le siège social est situé à Abidjan, Côte d'Ivoire (Zone UEMOA).",
+      "introRich": "Le site <strong>akililabs.io</strong> est édité par <strong>AKILI Labs</strong>, société de conseil IT et intégrateur Odoo ERP, dont le siège social est situé à Abidjan, Côte d'Ivoire (Zone UEMOA).",
       "rccmLabel": "Numéro RCCM :",
       "toComplete": "à compléter",
       "directorLabel": "Directeur de la publication :",

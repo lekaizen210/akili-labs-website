@@ -1,39 +1,43 @@
 import { MetadataRoute } from "next";
 import { expertises, references, blogPosts } from "@/lib/data";
+import { BASE_URL } from "@/lib/seo";
 
-const BASE_URL = "https://akililabs.com";
+function entry(
+  path: string,
+  opts: Partial<MetadataRoute.Sitemap[number]> = {}
+): MetadataRoute.Sitemap[number] {
+  const fr = path === "" ? BASE_URL : `${BASE_URL}${path}`;
+  const en = `${BASE_URL}/en${path}`;
+  return {
+    url: fr,
+    lastModified: new Date(),
+    alternates: { languages: { fr, en } },
+    ...opts,
+  };
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: BASE_URL, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
-    { url: `${BASE_URL}/a-propos`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/references`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
-    { url: `${BASE_URL}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE_URL}/faq`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/carrieres`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
+    entry("", { changeFrequency: "weekly", priority: 1 }),
+    entry("/a-propos", { changeFrequency: "monthly", priority: 0.8 }),
+    entry("/references", { changeFrequency: "weekly", priority: 0.9 }),
+    entry("/blog", { changeFrequency: "daily", priority: 0.8 }),
+    entry("/contact", { changeFrequency: "monthly", priority: 0.9 }),
+    entry("/faq", { changeFrequency: "monthly", priority: 0.8 }),
+    entry("/carrieres", { changeFrequency: "weekly", priority: 0.7 }),
   ];
 
-  const expertiseRoutes: MetadataRoute.Sitemap = expertises.map((e) => ({
-    url: `${BASE_URL}${e.href}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.8,
-  }));
+  const expertiseRoutes: MetadataRoute.Sitemap = expertises.map((e) =>
+    entry(e.href, { changeFrequency: "monthly", priority: 0.8 })
+  );
 
-  const referenceRoutes: MetadataRoute.Sitemap = references.map((r) => ({
-    url: `${BASE_URL}/references/${r.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
+  const referenceRoutes: MetadataRoute.Sitemap = references.map((r) =>
+    entry(`/references/${r.slug}`, { changeFrequency: "monthly", priority: 0.7 })
+  );
 
-  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((p) => ({
-    url: `${BASE_URL}/blog/${p.slug}`,
-    lastModified: new Date(p.date),
-    changeFrequency: "monthly",
-    priority: 0.6,
-  }));
+  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((p) =>
+    entry(`/blog/${p.slug}`, { lastModified: new Date(p.date), changeFrequency: "monthly", priority: 0.6 })
+  );
 
   return [...staticRoutes, ...expertiseRoutes, ...referenceRoutes, ...blogRoutes];
 }

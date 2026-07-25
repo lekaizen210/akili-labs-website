@@ -15,9 +15,7 @@ import IaCtaFinal from "@/components/ia/IaCtaFinal";
 import { iaDomains, iaFaqs } from "@/lib/ia-data";
 import { l } from "@/lib/i18n-content";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-
-const BASE_URL = "https://akililabs.com";
-const url = `${BASE_URL}/expertises/intelligence-artificielle`;
+import { BASE_URL, buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -26,14 +24,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Ia.meta" });
+  const alternates = buildAlternates("/expertises/intelligence-artificielle", locale as "fr" | "en");
 
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: url },
+    alternates,
     openGraph: {
       type: "website",
-      url,
+      url: alternates.canonical,
       title: t("ogTitle"),
       description: t("ogDescription"),
       images: [{ url: "/ia-images/ia-hero.jpg", width: 2304, height: 1728, alt: t("ogImageAlt") }],
@@ -55,6 +54,7 @@ export default async function IntelligenceArtificiellePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Ia.meta" });
+  const url = buildAlternates("/expertises/intelligence-artificielle", locale as "fr" | "en").canonical;
 
   const serviceJsonLd = {
     "@context": "https://schema.org",

@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { BASE_URL } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -24,6 +25,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "omgili", disallow: "/" },
       { userAgent: "omgilibot", disallow: "/" },
     ],
-    sitemap: "https://akililabs.com/sitemap.xml",
+    sitemap: `${BASE_URL}/sitemap.xml`,
   };
 }

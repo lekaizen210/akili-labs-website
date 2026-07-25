@@ -6,6 +6,7 @@ import { l } from "@/lib/i18n-content";
 import { getTechColor } from "@/lib/tech-colors";
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { buildAlternates } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -19,7 +20,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug, locale } = await params;
   const ref = references.find((r) => r.slug === slug);
   if (!ref) return {};
-  return { title: `${l(ref.title, locale)} — AKILI Labs`, description: l(ref.summary, locale) };
+  return {
+    title: `${l(ref.title, locale)} — AKILI Labs`,
+    description: l(ref.summary, locale),
+    alternates: buildAlternates(`/references/${slug}`, locale as "fr" | "en"),
+  };
 }
 
 export default async function ReferencePage({ params }: PageProps) {

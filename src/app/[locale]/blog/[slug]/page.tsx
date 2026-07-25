@@ -5,6 +5,7 @@ import { blogPosts } from "@/lib/data";
 import { l, type Localized } from "@/lib/i18n-content";
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { BASE_URL, buildAlternates } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -128,20 +129,19 @@ export async function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
 }
 
-const BASE_URL = "https://akililabs.com";
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug, locale } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
   const t = await getTranslations({ locale, namespace: "Blog.post" });
-  const url = `${BASE_URL}/blog/${slug}`;
+  const alternates = buildAlternates(`/blog/${slug}`, locale as "fr" | "en");
+  const url = alternates.canonical;
   const title = l(post.title, locale);
   const excerpt = l(post.excerpt, locale);
   return {
     title,
     description: excerpt,
-    alternates: { canonical: url },
+    alternates,
     openGraph: {
       type: "article",
       url,
@@ -168,7 +168,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) notFound();
   const article = articleBodies[slug];
   const t = await getTranslations({ locale, namespace: "Blog.post" });
-  const url = `${BASE_URL}/blog/${slug}`;
+  const url = buildAlternates(`/blog/${slug}`, locale as "fr" | "en").canonical;
   const title = l(post.title, locale);
   const excerpt = l(post.excerpt, locale);
   const category = l(post.category, locale);

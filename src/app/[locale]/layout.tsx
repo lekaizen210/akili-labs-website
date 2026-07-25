@@ -5,9 +5,10 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { MotionProvider } from "@/components/ui/MotionProvider";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { BASE_URL, buildAlternates } from "@/lib/seo";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -23,135 +24,143 @@ const inter = Inter({
   display: "swap",
 });
 
-const BASE_URL = "https://akililabs.io";
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Home.meta" });
+  const alternates = buildAlternates("/", locale as "fr" | "en");
 
-export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
-  title: {
-    default: "AKILI Labs — Transformation Digitale, ERP, IA & DevSecOps en Afrique",
-    template: "%s | AKILI Labs",
-  },
-  description:
-    "AKILI Labs accompagne les organisations de la zone UEMOA dans leur transformation digitale : intégration ERP Odoo, Intelligence Artificielle, DevSecOps et développement sur mesure.",
-  keywords: [
-    "transformation digitale Afrique",
-    "intégrateur Odoo Côte d'Ivoire",
-    "ERP OHADA",
-    "consultant ERP Afrique de l'Ouest",
-    "Intelligence Artificielle Abidjan",
-    "DevSecOps UEMOA",
-    "conseil IT Côte d'Ivoire",
-    "AKILI Labs",
-    "Odoo UEMOA",
-    "système d'information Afrique",
-  ],
-  authors: [{ name: "AKILI Labs", url: BASE_URL }],
-  creator: "AKILI Labs",
-  publisher: "AKILI Labs",
-  alternates: { canonical: BASE_URL },
-  icons: {
-    icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.ico", sizes: "48x48" },
+  return {
+    metadataBase: new URL(BASE_URL),
+    title: {
+      default: t("title"),
+      template: "%s | AKILI Labs",
+    },
+    description: t("description"),
+    keywords: [
+      "transformation digitale Afrique",
+      "intégrateur Odoo Côte d'Ivoire",
+      "ERP OHADA",
+      "consultant ERP Afrique de l'Ouest",
+      "Intelligence Artificielle Abidjan",
+      "DevSecOps UEMOA",
+      "conseil IT Côte d'Ivoire",
+      "AKILI Labs",
+      "Odoo UEMOA",
+      "système d'information Afrique",
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
-    other: [
-      { rel: "icon", url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { rel: "icon", url: "/icon-512.png", sizes: "512x512", type: "image/png" },
-    ],
-  },
-  openGraph: {
-    type: "website",
-    locale: "fr_FR",
+    authors: [{ name: "AKILI Labs", url: BASE_URL }],
+    creator: "AKILI Labs",
+    publisher: "AKILI Labs",
+    alternates,
+    icons: {
+      icon: [
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon.ico", sizes: "48x48" },
+      ],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+      other: [
+        { rel: "icon", url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+        { rel: "icon", url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      ],
+    },
+    openGraph: {
+      type: "website",
+      locale: locale === "en" ? "en_US" : "fr_FR",
+      url: alternates.canonical,
+      siteName: "AKILI Labs",
+      title: t("title"),
+      description: t("description"),
+      images: [
+        {
+          url: "/logo-akili.png",
+          width: 1600,
+          height: 893,
+          alt: "AKILI Labs — ERP • AI • DevSecOps en Afrique de l'Ouest",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["/logo-akili.png"],
+      creator: "@akililabs",
+      site: "@akililabs",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, "max-image-preview": "large" },
+    },
+  };
+}
+
+function buildOrganizationJsonLd(description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${BASE_URL}/#organization`,
+    name: "AKILI Labs",
     url: BASE_URL,
-    siteName: "AKILI Labs",
-    title: "AKILI Labs — Transformation Digitale en Afrique",
-    description:
-      "Votre partenaire de confiance pour la transformation digitale en Afrique : ERP Odoo, IA, DevSecOps et développement sur mesure. Zone UEMOA / OHADA.",
-    images: [
-      {
-        url: "/logo-akili.png",
-        width: 1600,
-        height: 893,
-        alt: "AKILI Labs — ERP • AI • DevSecOps en Afrique de l'Ouest",
-      },
+    logo: {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/logo-akili.png`,
+      width: 1600,
+      height: 893,
+    },
+    description,
+    foundingDate: "2020",
+    areaServed: ["Côte d'Ivoire", "Sénégal", "Mali", "Burkina Faso", "Niger", "Togo", "Bénin", "Guinée-Bissau"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Abidjan",
+      addressCountry: "CI",
+      addressRegion: "Abidjan",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "contact@akililabs.io",
+      contactType: "customer service",
+      availableLanguage: ["French"],
+      areaServed: "UEMOA",
+    },
+    sameAs: [
+      "https://www.linkedin.com/company/akili-labs",
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "AKILI Labs — Transformation Digitale en Afrique",
-    description:
-      "Intégrateur ERP Odoo, IA et DevSecOps en Afrique de l'Ouest. Expertise OHADA / UEMOA.",
-    images: ["/logo-akili.png"],
-    creator: "@akililabs",
-    site: "@akililabs",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large" },
-  },
-};
+    knowsAbout: [
+      "Odoo ERP",
+      "OHADA accounting",
+      "Digital transformation",
+      "Artificial Intelligence",
+      "DevSecOps",
+      "UEMOA",
+      "West Africa IT consulting",
+    ],
+  };
+}
 
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": `${BASE_URL}/#organization`,
-  name: "AKILI Labs",
-  url: BASE_URL,
-  logo: {
-    "@type": "ImageObject",
-    url: `${BASE_URL}/logo-akili.png`,
-    width: 1600,
-    height: 893,
-  },
-  description:
-    "AKILI Labs est une société de conseil IT et intégrateur Odoo ERP basée à Abidjan, Côte d'Ivoire. Nous accompagnons les organisations de la zone UEMOA dans leur transformation digitale : ERP, Intelligence Artificielle, DevSecOps et développement sur mesure.",
-  foundingDate: "2020",
-  areaServed: ["Côte d'Ivoire", "Sénégal", "Mali", "Burkina Faso", "Niger", "Togo", "Bénin", "Guinée-Bissau"],
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Abidjan",
-    addressCountry: "CI",
-    addressRegion: "Abidjan",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    email: "contact@akililabs.io",
-    contactType: "customer service",
-    availableLanguage: ["French"],
-    areaServed: "UEMOA",
-  },
-  sameAs: [
-    "https://www.linkedin.com/company/akili-labs",
-  ],
-  knowsAbout: [
-    "Odoo ERP",
-    "OHADA accounting",
-    "Digital transformation",
-    "Artificial Intelligence",
-    "DevSecOps",
-    "UEMOA",
-    "West Africa IT consulting",
-  ],
-};
-
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": `${BASE_URL}/#website`,
-  url: BASE_URL,
-  name: "AKILI Labs",
-  description: "Conseil IT, ERP Odoo, Intelligence Artificielle & DevSecOps en Afrique de l'Ouest",
-  publisher: { "@id": `${BASE_URL}/#organization` },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: { "@type": "EntryPoint", urlTemplate: `${BASE_URL}/blog?q={search_term_string}` },
-    "query-input": "required name=search_term_string",
-  },
-  inLanguage: "fr-FR",
-};
+function buildWebsiteJsonLd(locale: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${BASE_URL}/#website`,
+    url: BASE_URL,
+    name: "AKILI Labs",
+    description: "Conseil IT, ERP Odoo, Intelligence Artificielle & DevSecOps en Afrique de l'Ouest",
+    publisher: { "@id": `${BASE_URL}/#organization` },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: { "@type": "EntryPoint", urlTemplate: `${BASE_URL}/blog?q={search_term_string}` },
+      "query-input": "required name=search_term_string",
+    },
+    inLanguage: locale === "en" ? "en-US" : "fr-FR",
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -167,6 +176,10 @@ export default async function RootLayout({
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "Layout.organization" });
+  const organizationJsonLd = buildOrganizationJsonLd(t("description"));
+  const websiteJsonLd = buildWebsiteJsonLd(locale);
 
   return (
     <html lang={locale} className={`${manrope.variable} ${inter.variable}`}>

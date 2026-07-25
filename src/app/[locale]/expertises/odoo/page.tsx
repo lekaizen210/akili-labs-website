@@ -16,9 +16,7 @@ import OdooCtaFinal from "@/components/odoo/OdooCtaFinal";
 import { odooModuleCategories, odooFaqs } from "@/lib/odoo-data";
 import { l } from "@/lib/i18n-content";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-
-const BASE_URL = "https://akililabs.com";
-const url = `${BASE_URL}/expertises/odoo`;
+import { BASE_URL, buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -27,14 +25,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Odoo.meta" });
+  const alternates = buildAlternates("/expertises/odoo", locale as "fr" | "en");
 
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: url },
+    alternates,
     openGraph: {
       type: "website",
-      url,
+      url: alternates.canonical,
       title: t("ogTitle"),
       description: t("ogDescription"),
       images: [{ url: "/logo-akili.png", width: 1600, height: 893, alt: t("ogImageAlt") }],
@@ -56,6 +55,7 @@ export default async function OdooExpertisePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Odoo.meta" });
+  const url = buildAlternates("/expertises/odoo", locale as "fr" | "en").canonical;
 
   const serviceJsonLd = {
     "@context": "https://schema.org",

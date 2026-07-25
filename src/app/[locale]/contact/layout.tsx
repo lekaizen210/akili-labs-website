@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-
-const BASE_URL = "https://akililabs.com";
+import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -10,14 +9,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Contact.meta" });
+  const alternates = buildAlternates("/contact", locale as "fr" | "en");
 
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: `${BASE_URL}/contact` },
+    alternates,
     openGraph: {
       type: "website",
-      url: `${BASE_URL}/contact`,
+      url: alternates.canonical,
       title: t("ogTitle"),
       description: t("ogDescription"),
       images: [{ url: "/logo-akili.png", width: 1600, height: 893, alt: t("ogImageAlt") }],

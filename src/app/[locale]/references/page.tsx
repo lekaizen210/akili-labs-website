@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
 import { getTechColor } from "@/lib/tech-colors";
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "References.meta" });
-  return { title: t("title"), description: t("description") };
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: buildAlternates("/references", locale as "fr" | "en"),
+  };
 }
 
 export default async function ReferencesPage({

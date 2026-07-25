@@ -15,9 +15,7 @@ import DmCtaFinal from "@/components/developpement-metiers/DmCtaFinal";
 import { dmDomains, dmFaqs } from "@/lib/developpement-metiers-data";
 import { l } from "@/lib/i18n-content";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-
-const BASE_URL = "https://akililabs.com";
-const url = `${BASE_URL}/expertises/developpement-metiers`;
+import { BASE_URL, buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -26,14 +24,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "DevMetiers.meta" });
+  const alternates = buildAlternates("/expertises/developpement-metiers", locale as "fr" | "en");
 
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: url },
+    alternates,
     openGraph: {
       type: "website",
-      url,
+      url: alternates.canonical,
       title: t("ogTitle"),
       description: t("ogDescription"),
       images: [
@@ -62,6 +61,7 @@ export default async function DeveloppementMetiersPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "DevMetiers.meta" });
+  const url = buildAlternates("/expertises/developpement-metiers", locale as "fr" | "en").canonical;
 
   const serviceJsonLd = {
     "@context": "https://schema.org",

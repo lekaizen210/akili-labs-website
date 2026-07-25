@@ -5,6 +5,7 @@ import { l } from "@/lib/i18n-content";
 import type { Metadata } from "next";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -13,7 +14,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Blog.meta" });
-  return { title: t("title"), description: t("description") };
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: buildAlternates("/blog", locale as "fr" | "en"),
+  };
 }
 
 // Keyed on the (stable) French tag value so styling stays consistent across locales.

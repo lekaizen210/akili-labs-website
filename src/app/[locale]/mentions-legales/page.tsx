@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import PageHero from "@/components/ui/PageHero";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-
-const BASE_URL = "https://akililabs.com";
+import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -16,7 +15,7 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
-    alternates: { canonical: `${BASE_URL}/mentions-legales` },
+    alternates: buildAlternates("/mentions-legales", locale as "fr" | "en"),
     robots: { index: false, follow: true },
   };
 }

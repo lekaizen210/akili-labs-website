@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import CandidatureForm from "@/components/carrieres/CandidatureForm";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { buildAlternates } from "@/lib/seo";
 
 const icons = [Rocket, GraduationCap, Users, MapPin];
 
@@ -20,7 +21,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Careers.meta" });
-  return { title: t("title"), description: t("description") };
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: buildAlternates("/carrieres", locale as "fr" | "en"),
+  };
 }
 
 type Offre = { titre: string; type: string; lieu: string; domainId: string };

@@ -10,6 +10,7 @@ import BlogSection from "@/components/home/BlogSection";
 import CTABanner from "@/components/home/CTABanner";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
+import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -23,6 +24,7 @@ export async function generateMetadata({
     // homepage title isn't suffixed twice (it already contains "AKILI Labs").
     title: { absolute: t("title") },
     description: t("description"),
+    alternates: buildAlternates("/", locale as "fr" | "en"),
   };
 }
 
