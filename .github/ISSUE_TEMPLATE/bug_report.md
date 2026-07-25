@@ -26,7 +26,7 @@ assignees: ""
 
 ## Environnement
 
-- **URL :** [ ] Production https://akililabs.com  [ ] Preprod https://preprod.akililabs.com
+- **URL :** [ ] Production https://akililabs.io  [ ] Preprod https://test.akililabs.io
 - **Navigateur :** (ex: Chrome 126, Firefox 127, Safari 17)
 - **Appareil :** (ex: Desktop Windows 11, iPhone 15, Samsung Galaxy S24)
 - **Résolution :** (ex: 1920x1080, 390x844)
