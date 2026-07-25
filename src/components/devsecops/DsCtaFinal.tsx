@@ -1,13 +1,16 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight, Download } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { FadeUp } from "@/components/ui/motion-primitives";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function DsCtaFinal() {
+  const t = useTranslations("DevSecOps.ctaFinal");
+
   return (
     <section className="py-20 bg-navy relative overflow-hidden">
       <motion.div
@@ -20,15 +23,13 @@ export default function DsCtaFinal() {
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeUp>
           <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">
-            Votre prochaine mise en production mérite d&apos;être{" "}
-            <span className="text-orange">un non-événement.</span>
+            {t("titlePart1")}
+            <span className="text-orange">{t("titleHighlight")}</span>
           </h2>
         </FadeUp>
         <FadeUp delay={0.1}>
           <p className="text-white/70 mb-10 max-w-xl mx-auto">
-            Commençons par un audit de maturité : nos experts analysent votre chaîne de livraison
-            et vous proposent un plan d&apos;industrialisation adapté à votre contexte et à vos
-            contraintes.
+            {t("subtitle")}
           </p>
         </FadeUp>
         <motion.div
@@ -50,7 +51,7 @@ export default function DsCtaFinal() {
               href="/contact"
               className="group flex items-center gap-2 px-8 py-4 bg-orange-cta text-white font-semibold rounded-xl hover:bg-orange-cta-hover transition-colors duration-200 shadow-lg shadow-orange-900/30"
             >
-              Consultation gratuite
+              {t("ctaPrimary")}
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </Link>
           </motion.div>
@@ -64,7 +65,7 @@ export default function DsCtaFinal() {
               className="flex items-center gap-2 px-8 py-4 text-white/80 hover:text-white border border-white/20 rounded-xl font-medium transition-[color,border-color] duration-200 hover:border-white/40"
             >
               <Download size={16} aria-hidden="true" />
-              Télécharger notre présentation
+              {t("downloadCta")}
             </a>
           </motion.div>
         </motion.div>

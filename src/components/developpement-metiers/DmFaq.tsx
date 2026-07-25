@@ -3,12 +3,16 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { dmFaqs } from "@/lib/developpement-metiers-data";
+import { l } from "@/lib/i18n-content";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function DmFaq() {
+  const t = useTranslations("DevMetiers.faq");
+  const locale = useLocale();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -16,17 +20,17 @@ export default function DmFaq() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-6">
-            ■ FAQ
+            ■ {t("badge")}
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-navy">
-            Questions fréquentes sur le développement sur mesure
+            {t("title")}
           </h2>
         </div>
         <div className="space-y-3">
           {dmFaqs.map((item, i) => {
             const open = openIndex === i;
             return (
-              <div key={item.question} className="border border-line rounded-2xl overflow-hidden bg-white">
+              <div key={l(item.question, "fr")} className="border border-line rounded-2xl overflow-hidden bg-white">
                 <button
                   type="button"
                   onClick={() => setOpenIndex(open ? null : i)}
@@ -38,7 +42,7 @@ export default function DmFaq() {
                   )}
                 >
                   <span className={cn("text-sm sm:text-base font-semibold leading-snug", open ? "text-white" : "text-navy")}>
-                    {item.question}
+                    {l(item.question, locale)}
                   </span>
                   <motion.span
                     animate={{ rotate: open ? 180 : 0 }}
@@ -63,7 +67,7 @@ export default function DmFaq() {
                       className="overflow-hidden"
                     >
                       <div className="px-6 pb-6 pt-4 border-t border-line">
-                        <p className="text-ink text-sm leading-relaxed">{item.answer}</p>
+                        <p className="text-ink text-sm leading-relaxed">{l(item.answer, locale)}</p>
                       </div>
                     </motion.div>
                   )}

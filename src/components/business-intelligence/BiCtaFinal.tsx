@@ -1,20 +1,17 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { FadeUp } from "@/components/ui/motion-primitives";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
-const benefits = [
-  "Un état des lieux honnête de votre patrimoine de données",
-  "Les deux indicateurs par lesquels commencer",
-  "Une lecture de vos sources : ERP, Excel, caisses, Mobile Money",
-  "Une estimation indicative de démarche et de budget",
-];
-
 export default function BiCtaFinal() {
+  const t = useTranslations("Bi.ctaFinal");
+  const benefits = [1, 2, 3, 4].map((n) => t(`benefit${n}`));
+
   return (
     <section className="py-20 bg-navy relative overflow-hidden">
       <motion.div
@@ -27,12 +24,12 @@ export default function BiCtaFinal() {
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeUp>
           <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">
-            Discutons de vos <span className="text-orange">deux premiers indicateurs</span>
+            {t("titlePart1")}<span className="text-orange">{t("titleHighlight")}</span>
           </h2>
         </FadeUp>
         <FadeUp delay={0.1}>
           <p className="text-white/70 mb-10 max-w-xl mx-auto">
-            45 minutes avec un consultant. Ce que vous en retirez, sans engagement :
+            {t("subtitle")}
           </p>
         </FadeUp>
         <FadeUp delay={0.18}>
@@ -57,7 +54,7 @@ export default function BiCtaFinal() {
             href="/contact"
             className="group inline-flex items-center gap-2 px-8 py-4 bg-orange-cta text-white font-semibold rounded-xl hover:bg-orange-cta-hover transition-colors shadow-lg shadow-orange-900/30"
           >
-            Consultation gratuite
+            {t("ctaPrimary")}
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
           </Link>
         </motion.div>

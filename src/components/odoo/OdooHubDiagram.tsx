@@ -1,28 +1,31 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { viewportOnce } from "@/components/ui/motion-primitives";
 
 const hub = { x: 300, y: 95 };
 
 const nodes = [
-  { x: 70, y: 32, icon: "crm", label: "CRM" },
-  { x: 70, y: 158, icon: "stock", label: "Stock" },
-  { x: 530, y: 32, icon: "account_accountant", label: "Comptabilité" },
-  { x: 530, y: 158, icon: "hr", label: "RH" },
-];
+  { x: 70, y: 32, icon: "crm", labelKey: "nodeCrm" },
+  { x: 70, y: 158, icon: "stock", labelKey: "nodeStock" },
+  { x: 530, y: 32, icon: "account_accountant", labelKey: "nodeAccounting" },
+  { x: 530, y: 158, icon: "hr", labelKey: "nodeHr" },
+] as const;
 
 export default function OdooHubDiagram() {
+  const t = useTranslations("Odoo.hubDiagram");
+
   return (
     <svg
       viewBox="0 0 600 190"
       className="w-full max-w-xl mx-auto h-auto"
       role="img"
-      aria-label="Odoo réunit CRM, Stock, Comptabilité et RH dans une seule plateforme"
+      aria-label={t("ariaLabel")}
     >
       {nodes.map((n, i) => (
         <motion.line
-          key={`line-${n.label}`}
+          key={`line-${n.labelKey}`}
           x1={n.x}
           y1={n.y}
           x2={hub.x}
@@ -63,7 +66,7 @@ export default function OdooHubDiagram() {
       </motion.text>
 
       {nodes.map((n, i) => (
-        <g key={n.label}>
+        <g key={n.labelKey}>
           <motion.circle
             cx={n.x}
             cy={n.y}
@@ -84,7 +87,7 @@ export default function OdooHubDiagram() {
             fontWeight={600}
             fill="var(--color-ink)"
           >
-            {n.label}
+            {t(n.labelKey)}
           </text>
         </g>
       ))}

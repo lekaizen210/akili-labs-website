@@ -1,55 +1,38 @@
 "use client";
 
 import { ShieldCheck, Scale, UserCheck, Activity } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 
-const piliers = [
-  {
-    icon: ShieldCheck,
-    title: "Souveraineté des données",
-    desc: "Vos données ne servent jamais à entraîner un modèle tiers. Architectures on-premise, cloud privé ou hybride : vos données sensibles ne quittent pas votre périmètre de contrôle.",
-  },
-  {
-    icon: Scale,
-    title: "Conformité réglementaire",
-    desc: "Protection des données personnelles selon les cadres réglementaires locaux et sous-régionaux ; prise en compte des exigences des régulateurs financiers pour les cas d'usage bancaires (scoring, octroi de crédit).",
-  },
-  {
-    icon: UserCheck,
-    title: "Supervision humaine",
-    desc: "L'IA propose, l'humain décide : boucles de validation sur les décisions sensibles (crédit, RH, santé), recommandations traçables et explicables aux métiers.",
-  },
-  {
-    icon: Activity,
-    title: "Biais & robustesse",
-    desc: "Tests de biais et validation métier avant toute mise en production ; monitoring de la dérive des modèles et réentraînement périodique en exploitation.",
-  },
-];
+const pilierIcons = [ShieldCheck, Scale, UserCheck, Activity] as const;
 
 export default function IaResponsable() {
+  const t = useTranslations("Ia.responsable");
+  const piliers = [1, 2, 3, 4].map((n) => ({
+    icon: pilierIcons[n - 1],
+    title: t(`pillar${n}Title`),
+    desc: t(`pillar${n}Desc`),
+  }));
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <FadeUp>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-6">
-              ■ IA responsable & Souveraineté
+              ■ {t("badge")}
             </div>
           </FadeUp>
           <FadeUp delay={0.08}>
             <h2 className="text-2xl sm:text-3xl font-black text-navy max-w-3xl mx-auto">
-              Une IA sous votre contrôle : données, modèles, décisions
+              {t("title")}
             </h2>
           </FadeUp>
         </div>
 
         <FadeUp delay={0.12}>
           <p className="text-ink leading-relaxed text-center max-w-3xl mx-auto mb-12">
-            Adopter l&apos;IA déplace des responsabilités qu&apos;aucun décideur ne peut déléguer :
-            où vivent vos données ? Servent-elles à entraîner les modèles d&apos;un tiers ? Qui
-            décide en dernier ressort quand l&apos;algorithme recommande de refuser un crédit ou
-            d&apos;écarter un candidat ? Une IA sérieuse rend ces questions traçables, et leurs
-            réponses contractuelles.
+            {t("intro")}
           </p>
         </FadeUp>
 

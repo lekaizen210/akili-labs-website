@@ -2,52 +2,34 @@
 
 import { AlertTriangle, Puzzle, Globe2, ShieldOff } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
-const problems = [
-  {
-    icon: Puzzle,
-    title: "Systèmes fragmentés",
-    desc: "Données dispersées entre Excel, logiciels isolés et processus manuels. Chaque décision exige une réconciliation fastidieuse.",
-    accent: "var(--color-orange)",
-  },
-  {
-    icon: Globe2,
-    title: "Normes locales ignorées",
-    desc: "Les ERP standards ne couvrent pas OHADA, la fiscalité UEMOA ni le droit du travail ivoirien. Des développements coûteux s'accumulent.",
-    accent: "var(--color-orange)",
-  },
-  {
-    icon: AlertTriangle,
-    title: "Prestataires étrangers inadaptés",
-    desc: "Solutions pensées pour d'autres marchés, support décalé, coûts en devises et temps de réponse qui ralentissent votre activité.",
-    accent: "var(--color-orange)",
-  },
-  {
-    icon: ShieldOff,
-    title: "Sécurité sous-estimée",
-    desc: "La croissance digitale rapide expose à des risques réels. Sans DevSecOps ni monitoring, la surface d'attaque grandit en silence.",
-    accent: "var(--color-orange)",
-  },
-];
+const problemIcons = [Puzzle, Globe2, AlertTriangle, ShieldOff];
 
 export default function ProblemSection() {
+  const t = useTranslations("Home.problem");
+  const problems = [1, 2, 3, 4].map((n, i) => ({
+    icon: problemIcons[i],
+    title: t(`problem${n}Title`),
+    desc: t(`problem${n}Desc`),
+  }));
+
   return (
     <section className="py-24 bg-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <FadeUp className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white/90 text-sm font-medium rounded-full mb-5">
-            ■ Ce que nous observons sur le terrain
+            ■ {t("badge")}
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">
-            Les défis qui freinent votre transformation
+            {t("title")}
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
-            En Afrique de l&apos;Ouest, la transformation digitale se heurte à des obstacles
-            spécifiques que les solutions génériques ne résolvent pas.
+            {t("subtitle")}
           </p>
         </FadeUp>
 
@@ -83,8 +65,7 @@ export default function ProblemSection() {
 
         <FadeUp className="mt-14 text-center">
           <p className="text-white/75 text-sm">
-            Chez AKILI Labs, nous transformons ces obstacles en leviers de croissance,
-            avec des solutions calibrées pour le contexte africain.
+            {t("footerNote")}
           </p>
         </FadeUp>
 

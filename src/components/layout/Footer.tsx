@@ -1,34 +1,38 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Mail, MapPin, Phone, Linkedin, Facebook } from "lucide-react";
-
-const footerLinks = {
-  expertises: [
-    { label: "Transformation Digitale", href: "/expertises/transformation-digitale" },
-    { label: "ERP & Odoo", href: "/expertises/odoo" },
-    { label: "Intelligence Artificielle", href: "/expertises/intelligence-artificielle" },
-    { label: "DevSecOps", href: "/expertises/devsecops" },
-    { label: "Développement Métiers", href: "/expertises/developpement-metiers" },
-    { label: "Business Intelligence", href: "/expertises/business-intelligence" },
-  ],
-  secteurs: [
-    { label: "Administration publique", href: "/#secteurs" },
-    { label: "Banque & Assurance", href: "/#secteurs" },
-    { label: "Agro-industrie", href: "/#secteurs" },
-    { label: "Télécommunications", href: "/#secteurs" },
-    { label: "Santé & Éducation", href: "/#secteurs" },
-  ],
-  entreprise: [
-    { label: "À propos", href: "/a-propos" },
-    { label: "Références", href: "/references" },
-    { label: "Blog & Veille", href: "/blog" },
-    { label: "FAQ", href: "/faq" },
-    { label: "Carrières", href: "/carrieres" },
-    { label: "Contact", href: "/contact" },
-  ],
-};
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
+  const footerLinks = {
+    expertises: [
+      { label: t("expertisesMenu.transformationDigitale"), href: "/expertises/transformation-digitale" },
+      { label: t("expertisesMenu.erpOdoo"), href: "/expertises/odoo" },
+      { label: t("expertisesMenu.intelligenceArtificielle"), href: "/expertises/intelligence-artificielle" },
+      { label: t("expertisesMenu.devsecops"), href: "/expertises/devsecops" },
+      { label: t("expertisesMenu.developpementMetiers"), href: "/expertises/developpement-metiers" },
+      { label: t("expertisesMenu.businessIntelligence"), href: "/expertises/business-intelligence" },
+    ],
+    secteurs: [
+      { label: t("sectors.administrationPublique"), href: "/#secteurs" },
+      { label: t("sectors.banqueAssurance"), href: "/#secteurs" },
+      { label: t("sectors.agroIndustrie"), href: "/#secteurs" },
+      { label: t("sectors.telecommunications"), href: "/#secteurs" },
+      { label: t("sectors.santeEducation"), href: "/#secteurs" },
+    ],
+    entreprise: [
+      { label: t("company.about"), href: "/a-propos" },
+      { label: t("company.references"), href: "/references" },
+      { label: t("company.blog"), href: "/blog" },
+      { label: t("company.faq"), href: "/faq" },
+      { label: t("company.careers"), href: "/carrieres" },
+      { label: t("company.contact"), href: "/contact" },
+    ],
+  };
+
   return (
     <footer className="bg-navy text-white">
       {/* Main footer */}
@@ -46,13 +50,12 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">
-              Votre partenaire de confiance pour la transformation digitale en Afrique.
-              Expertise ERP, IA et DevSecOps au service de votre performance.
+              {t("description")}
             </p>
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <MapPin size={14} className="text-orange shrink-0" />
-                <span>Abidjan, Côte d&apos;Ivoire (Zone UEMOA)</span>
+                <span>{t("address")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-orange shrink-0" />
@@ -71,7 +74,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/akili-labs"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="AKILI Labs sur LinkedIn"
+                aria-label={t("linkedinAria")}
                 className="flex items-center justify-center w-11 h-11 rounded-lg bg-white/10 text-gray-400 hover:bg-[#0A66C2] hover:text-white transition-[background-color,color,transform] duration-200 ease-out active:scale-[0.94]"
               >
                 <Linkedin size={17} />
@@ -80,7 +83,7 @@ export default function Footer() {
                 href="https://www.facebook.com/akililabs"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="AKILI Labs sur Facebook"
+                aria-label={t("facebookAria")}
                 className="flex items-center justify-center w-11 h-11 rounded-lg bg-white/10 text-gray-400 hover:bg-[#1877F2] hover:text-white transition-[background-color,color,transform] duration-200 ease-out active:scale-[0.94]"
               >
                 <Facebook size={17} />
@@ -91,7 +94,7 @@ export default function Footer() {
           {/* Expertises */}
           <div>
             <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
-              Expertises
+              {t("expertisesTitle")}
             </h3>
             <ul className="space-y-0.5">
               {footerLinks.expertises.map((link) => (
@@ -110,7 +113,7 @@ export default function Footer() {
           {/* Secteurs */}
           <div>
             <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
-              Secteurs
+              {t("sectorsTitle")}
             </h3>
             <ul className="space-y-0.5">
               {footerLinks.secteurs.map((link) => (
@@ -129,7 +132,7 @@ export default function Footer() {
           {/* Entreprise */}
           <div>
             <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
-              Entreprise
+              {t("companyTitle")}
             </h3>
             <ul className="space-y-0.5">
               {footerLinks.entreprise.map((link) => (
@@ -148,7 +151,7 @@ export default function Footer() {
                 href="/contact"
                 className="inline-block px-4 py-2.5 bg-orange-cta text-white text-sm font-semibold rounded-lg hover:bg-orange-cta-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]"
               >
-                Demander un devis →
+                {t("cta")}
               </Link>
             </div>
           </div>
@@ -159,20 +162,23 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500 divide-x divide-gray-700">
-            <span>Confidentiel</span>
+            <span>{t("confidential")}</span>
             <span className="pl-3">AKILI Labs</span>
             <span className="pl-3">www.akililabs.io</span>
-            <span className="pl-3">© 2026 Tous droits réservés</span>
+            <span className="pl-3">{t("rights")}</span>
+            <span className="pl-3">
+              <LanguageSwitcher inverted />
+            </span>
           </div>
           <div className="flex items-center gap-4 text-xs text-gray-500">
             <span className="flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block"></span>
               HTTPS
             </span>
-            <span>RGPD</span>
+            <span>{t("gdpr")}</span>
             <span>OHADA</span>
-            <Link href="/mentions-legales" className="inline-block py-2 hover:text-gray-300 transition-colors">Mentions légales</Link>
-            <Link href="/confidentialite" className="inline-block py-2 hover:text-gray-300 transition-colors">Confidentialité</Link>
+            <Link href="/mentions-legales" className="inline-block py-2 hover:text-gray-300 transition-colors">{t("legalNotice")}</Link>
+            <Link href="/confidentialite" className="inline-block py-2 hover:text-gray-300 transition-colors">{t("privacy")}</Link>
           </div>
         </div>
       </div>

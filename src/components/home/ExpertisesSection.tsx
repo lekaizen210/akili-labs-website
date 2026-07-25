@@ -1,9 +1,11 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Layers, Database, Brain, Shield, Code2, BarChart3, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 import { expertises } from "@/lib/data";
+import { l } from "@/lib/i18n-content";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -11,6 +13,8 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function ExpertisesSection() {
+  const t = useTranslations("Home.expertises");
+  const locale = useLocale();
   return (
     <section className="py-24 bg-white" id="expertises">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,14 +22,13 @@ export default function ExpertisesSection() {
         {/* Header */}
         <FadeUp className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-4">
-            ■ Nos expertises
+            ■ {t("badge")}
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy mb-4">
-            Ce que nous faisons
+            {t("title")}
           </h2>
           <p className="text-lg text-ink max-w-2xl mx-auto">
-            Six domaines d&apos;excellence pour accompagner votre transformation digitale
-            de bout en bout.
+            {t("subtitle")}
           </p>
         </FadeUp>
 
@@ -50,19 +53,19 @@ export default function ExpertisesSection() {
                   >
                     {exp.featured && (
                       <span className="absolute top-4 right-4 px-2 py-0.5 bg-orange text-white text-[10px] font-bold rounded-full uppercase tracking-wider">
-                        Vedette
+                        {t("featuredBadge")}
                       </span>
                     )}
                     <div className="w-12 h-12 rounded-xl bg-blue-light flex items-center justify-center mb-5 group-hover:bg-navy transition-colors duration-300">
                       <Icon size={22} className="text-navy group-hover:text-orange transition-colors duration-300" />
                     </div>
-                    <h3 className="text-lg font-bold text-navy mb-1">{exp.title}</h3>
+                    <h3 className="text-lg font-bold text-navy mb-1">{l(exp.title, locale)}</h3>
                     <p className="text-xs font-semibold text-orange-dark uppercase tracking-wider mb-3">
-                      {exp.subtitle}
+                      {l(exp.subtitle, locale)}
                     </p>
-                    <p className="text-sm text-ink leading-relaxed mb-5 flex-1">{exp.description}</p>
+                    <p className="text-sm text-ink leading-relaxed mb-5 flex-1">{l(exp.description, locale)}</p>
                     <div className="flex items-center gap-1 text-sm font-semibold text-navy group-hover:text-orange-dark transition-colors">
-                      En savoir plus
+                      {t("learnMore")}
                       <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </div>
                   </Link>

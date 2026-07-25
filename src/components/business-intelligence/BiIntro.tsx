@@ -1,9 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { FadeUp } from "@/components/ui/motion-primitives";
 
 export default function BiIntro() {
+  const t = useTranslations("Bi.intro");
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,32 +14,24 @@ export default function BiIntro() {
           <div>
             <FadeUp>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-6">
-                ■ Le constat
+                ■ {t("badge")}
               </div>
               <h2 className="text-2xl sm:text-3xl font-black text-navy mb-6">
-                Le rapport mensuel coûte deux jours. Et il est déjà périmé.
+                {t("title")}
               </h2>
             </FadeUp>
             <FadeUp delay={0.08}>
               <p className="text-ink leading-relaxed mb-5">
-                Dans la plupart des entreprises de la région, le pilotage repose sur un rituel
-                épuisant : chaque fin de mois, une personne de confiance collecte les fichiers des
-                agences, recopie les chiffres de l&apos;ERP, réconcilie les écarts à la main et met
-                en forme un support de comité. Deux jours de travail, des chiffres qui divergent
-                selon la source, et une direction qui découvre le 5 du mois ce qui s&apos;est joué
-                trois semaines plus tôt.
+                {t("paragraph1")}
               </p>
               <p className="text-ink leading-relaxed mb-6">
-                Notre parti pris : vos chiffres de la veille, disponibles chaque matin. La
-                consolidation devient un traitement de nuit, plus un métier.
+                {t("paragraph2")}
               </p>
             </FadeUp>
             <FadeUp delay={0.14}>
               <div className="bg-blue-light border-l-4 border-navy rounded-r-xl p-5">
                 <p className="text-navy font-semibold leading-relaxed text-sm">
-                  Le problème n&apos;est presque jamais le manque de données. C&apos;est
-                  qu&apos;elles dorment dans cinq systèmes qui ne se parlent pas, et que la seule
-                  personne qui sait les assembler part un jour en congés.
+                  {t("calloutText")}
                 </p>
               </div>
             </FadeUp>
@@ -45,7 +40,7 @@ export default function BiIntro() {
           <FadeUp delay={0.2}>
             <Image
               src="/bi-images/bi-contexte.png"
-              alt="Avant-après : un classeur Excel de consolidation criblé d'erreurs #REF! et une conversation WhatsApp où les agences envoient leurs chiffres en retard, contre un tableau de bord groupe consolidé automatiquement chaque nuit, rapproché de la comptabilité, avec le détail par agence"
+              alt={t("imageAlt")}
               width={1400}
               height={1000}
               loading="lazy"

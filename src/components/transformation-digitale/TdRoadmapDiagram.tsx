@@ -1,26 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { SearchCheck, Map, Network, Cog, LineChart } from "lucide-react";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 const steps = [
-  { label: "Audit", icon: SearchCheck, highlight: true },
-  { label: "SDI", icon: Map, highlight: false },
-  { label: "Urbanisation", icon: Network, highlight: false },
-  { label: "Déploiement", icon: Cog, highlight: false },
-  { label: "Pilotage", icon: LineChart, highlight: false },
-];
+  { labelKey: "stepAudit", icon: SearchCheck, highlight: true },
+  { labelKey: "stepPlan", icon: Map, highlight: false },
+  { labelKey: "stepArchitecture", icon: Network, highlight: false },
+  { labelKey: "stepDeployment", icon: Cog, highlight: false },
+  { labelKey: "stepMonitoring", icon: LineChart, highlight: false },
+] as const;
 
 // Feuille de route signature du hero : le premier jalon (Audit) est mis en
 // avant — « tout se joue au cadrage », la conviction portée par le H1.
 export default function TdRoadmapDiagram() {
+  const t = useTranslations("Td.roadmapDiagram");
+
   return (
     <div
       className="max-w-3xl mx-auto rounded-2xl border border-white/10 bg-white/5 px-6 sm:px-10 py-8"
       role="img"
-      aria-label="Feuille de route de transformation digitale en 5 étapes : Audit, Schéma Directeur Informatique, Urbanisation, Déploiement, Pilotage"
+      aria-label={t("ariaLabel")}
     >
       <div className="relative flex items-start justify-between gap-2">
         {/* Ligne de progression */}
@@ -42,7 +45,7 @@ export default function TdRoadmapDiagram() {
         {steps.map((s, i) => {
           const Icon = s.icon;
           return (
-            <div key={s.label} className="relative z-10 flex flex-col items-center gap-3 flex-1 min-w-0">
+            <div key={s.labelKey} className="relative z-10 flex flex-col items-center gap-3 flex-1 min-w-0">
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -73,7 +76,7 @@ export default function TdRoadmapDiagram() {
                     : "text-xs sm:text-sm font-medium text-white/60 text-center"
                 }
               >
-                {s.label}
+                {t(s.labelKey)}
               </motion.span>
             </div>
           );
@@ -86,7 +89,7 @@ export default function TdRoadmapDiagram() {
         transition={{ duration: 0.5, delay: 1.9, ease }}
         className="text-center text-xs text-white/50 mt-6"
       >
-        Tout se joue au cadrage — c&apos;est là que nous commençons.
+        {t("footerText")}
       </motion.p>
     </div>
   );

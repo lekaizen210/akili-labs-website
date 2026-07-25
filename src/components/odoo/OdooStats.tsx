@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 import { odooKpis } from "@/lib/odoo-data";
+import { l } from "@/lib/i18n-content";
 import { StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
@@ -64,19 +66,22 @@ function KpiItem({ value, label }: { value: string; label: string }) {
 }
 
 export default function OdooStats() {
+  const t = useTranslations("Odoo.stats");
+  const locale = useLocale();
+
   return (
     <section className="py-16 bg-white border-y border-line">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-2xl sm:text-3xl font-black text-navy mb-12">
-          La practice Odoo en chiffres
+          {t("title")}
         </h2>
         <StaggerContainer className="grid grid-cols-2 lg:grid-cols-5 gap-8" stagger={0.12} delay={0.05}>
           {odooKpis.map((k, i) => (
             <StaggerItem
-              key={k.label}
+              key={l(k.label, "fr")}
               className={i === odooKpis.length - 1 ? "col-span-2 lg:col-span-1" : undefined}
             >
-              <KpiItem value={k.value} label={k.label} />
+              <KpiItem value={k.value} label={l(k.label, locale)} />
             </StaggerItem>
           ))}
         </StaggerContainer>

@@ -1,0 +1,1430 @@
+{
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved. Head back home to continue browsing.",
+    "backHome": "Back to home",
+    "previousPage": "Previous page"
+  },
+  "Navbar": {
+    "home": "Home",
+    "expertises": "Expertise",
+    "allExpertises": "All our expertise →",
+    "expertisesMobileHeader": "Expertise →",
+    "references": "Case Studies",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "about": "About",
+    "careers": "Careers",
+    "cta": "Let's discuss your project →",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "expertisesMenu": {
+      "transformationDigitale": "Digital Transformation",
+      "erpOdoo": "ERP & Odoo",
+      "intelligenceArtificielle": "Artificial Intelligence",
+      "devsecops": "DevSecOps",
+      "developpementMetiers": "Business Application Development",
+      "businessIntelligence": "Business Intelligence"
+    }
+  },
+  "Footer": {
+    "description": "Your trusted partner for digital transformation in Africa. ERP, AI and DevSecOps expertise at the service of your performance.",
+    "address": "Abidjan, Côte d'Ivoire (UEMOA Zone)",
+    "linkedinAria": "AKILI Labs on LinkedIn",
+    "facebookAria": "AKILI Labs on Facebook",
+    "expertisesTitle": "Expertise",
+    "sectorsTitle": "Industries",
+    "companyTitle": "Company",
+    "cta": "Request a quote →",
+    "confidential": "Confidential",
+    "gdpr": "GDPR",
+    "rights": "© 2026 All rights reserved",
+    "legalNotice": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "expertisesMenu": {
+      "transformationDigitale": "Digital Transformation",
+      "erpOdoo": "ERP & Odoo",
+      "intelligenceArtificielle": "Artificial Intelligence",
+      "devsecops": "DevSecOps",
+      "developpementMetiers": "Business Application Development",
+      "businessIntelligence": "Business Intelligence"
+    },
+    "sectors": {
+      "administrationPublique": "Public Administration",
+      "banqueAssurance": "Banking & Insurance",
+      "agroIndustrie": "Agribusiness",
+      "telecommunications": "Telecommunications",
+      "santeEducation": "Healthcare & Education"
+    },
+    "company": {
+      "about": "About",
+      "references": "Case Studies",
+      "blog": "Blog & Insights",
+      "faq": "FAQ",
+      "careers": "Careers",
+      "contact": "Contact"
+    }
+  },
+  "Layout": {
+    "skipToContent": "Skip to main content",
+    "organization": {
+      "description": "AKILI Labs is an IT consulting firm and Odoo ERP integrator based in Abidjan, Côte d'Ivoire. We help organizations across the UEMOA zone with their digital transformation: ERP, Artificial Intelligence, DevSecOps, and custom development."
+    },
+    "website": {
+      "description": "IT consulting, Odoo ERP, Artificial Intelligence & DevSecOps in West Africa"
+    },
+    "ogImageAlt": "AKILI Labs — ERP • AI • DevSecOps in West Africa"
+  },
+  "Home": {
+    "meta": {
+      "title": "AKILI Labs — Digital Transformation, ERP, AI & DevSecOps in Africa",
+      "description": "AKILI Labs helps organizations across the UEMOA zone with their digital transformation: Odoo ERP integration, Artificial Intelligence, DevSecOps, and custom development."
+    },
+    "hero": {
+      "badge": "A leading player in Africa's digital transformation",
+      "titleLine1": "Your partner for",
+      "titleWord1": "Digital",
+      "titleWord2": "Transformation",
+      "titleLine3": "in Africa",
+      "subtitleLine1": "ERP, Artificial Intelligence, DevSecOps, Custom Development",
+      "subtitleLine2": "Solutions that create real value for organizations across the UEMOA zone.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "See our case studies",
+      "techGenerativeAI": "Generative AI"
+    },
+    "problem": {
+      "badge": "What we see on the ground",
+      "title": "The challenges holding back your transformation",
+      "subtitle": "In West Africa, digital transformation runs into specific obstacles that generic solutions don't solve.",
+      "problem1Title": "Fragmented systems",
+      "problem1Desc": "Data scattered across Excel, standalone software, and manual processes. Every decision requires tedious reconciliation.",
+      "problem2Title": "Local regulations overlooked",
+      "problem2Desc": "Standard ERPs don't cover OHADA, UEMOA taxation, or Ivorian labor law. Costly custom development keeps piling up.",
+      "problem3Title": "Ill-suited foreign providers",
+      "problem3Desc": "Solutions designed for other markets, misaligned support, foreign-currency costs, and response times that slow your business down.",
+      "problem4Title": "Underestimated security",
+      "problem4Desc": "Rapid digital growth exposes organizations to real risks. Without DevSecOps or monitoring, the attack surface grows silently.",
+      "footerNote": "At AKILI Labs, we turn these obstacles into growth levers, with solutions calibrated for the African context."
+    },
+    "expertises": {
+      "badge": "Our expertise",
+      "title": "What we do",
+      "subtitle": "Six areas of excellence to support your digital transformation end to end.",
+      "featuredBadge": "Featured",
+      "learnMore": "Learn more"
+    },
+    "stats": {},
+    "approach": {
+      "badge": "Proven methodology",
+      "title": "Our approach",
+      "subtitle": "A structured 8-step process to ensure the success of every project, from initial analysis to ongoing support.",
+      "ctaButton": "Tell us about your project →"
+    },
+    "sectors": {
+      "badge": "Sectors we serve",
+      "title": "Our areas of operation",
+      "subtitle": "Our solutions adapt to the realities of every industry in West Africa."
+    },
+    "references": {
+      "badge": "Our work",
+      "title": "Trusted by our clients",
+      "viewAllLink": "See all our case studies",
+      "bottomText": "Your project will be our next case study.",
+      "bottomCta": "Start a project with us →"
+    },
+    "socialProof": {
+      "sectionLabel": "Trusted by",
+      "testimonialsBadge": "Client testimonials",
+      "testimonialsTitle": "What our clients say",
+      "starsAriaLabel": "{stars} out of 5 stars",
+      "testimonial1Quote": "AKILI Labs transformed our OHADA accounting management with Odoo. Our teams' skills improved remarkably, and closing times were cut in half.",
+      "testimonial1Name": "Kouamé A.",
+      "testimonial1Role": "Finance Director",
+      "testimonial1Company": "Industrial group",
+      "testimonial1Location": "Abidjan, Côte d'Ivoire",
+      "testimonial2Quote": "Their DevSecOps approach secured our CI/CD pipeline and sped up our releases. A responsive team that understands the challenges of a modern IT department in Africa.",
+      "testimonial2Name": "Fatou D.",
+      "testimonial2Role": "Information Systems Director",
+      "testimonial2Company": "UEMOA financial institution",
+      "testimonial2Location": "Dakar, Senegal",
+      "testimonial3Quote": "The Odoo HRIS module deployed by AKILI Labs covers all our payroll and leave management needs, with full compliance with Ivorian labor law. A trusted partner.",
+      "testimonial3Name": "Brice M.",
+      "testimonial3Role": "Human Resources Director",
+      "testimonial3Company": "Services company",
+      "testimonial3Location": "Abidjan, Côte d'Ivoire"
+    },
+    "blog": {
+      "badge": "Tech Watch & Insights",
+      "title": "Our technology insights",
+      "blogLink": "Go to the blog"
+    },
+    "ctaBanner": {
+      "titlePart1": "Ready to accelerate your",
+      "titleAccent": "digital transformation?",
+      "subtitle": "Our experts are available to analyze your needs and propose a solution tailored to your business and regulatory context.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "Download our presentation",
+      "trustItem1": "Response within 24 business hours",
+      "trustItem2": "Free initial consultation",
+      "trustItem3": "Confidentiality guaranteed",
+      "trustItem4": "Certified experts"
+    }
+  },
+  "Odoo": {
+    "meta": {
+      "title": "Odoo ERP Expertise in West Africa",
+      "description": "Implementation, customization, and optimization of Odoo ERP for West African businesses. OHADA/SYSCOHADA compliance. Free initial consultation.",
+      "ogTitle": "Odoo ERP Expertise — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "An ERP project should never fail because of local context. Full Odoo expertise for the UEMOA/OHADA zone.",
+      "ogImageAlt": "AKILI Labs — Odoo Expertise",
+      "twitterTitle": "Odoo ERP Expertise — AKILI Labs",
+      "twitterDescription": "Odoo implementation and customization for West Africa.",
+      "serviceName": "Odoo ERP Expertise",
+      "serviceDescription": "Implementation, customization, and optimization of Odoo ERP, with OHADA/SYSCOHADA compliance.",
+      "breadcrumbHome": "Home",
+      "breadcrumbExpertises": "Expertise",
+      "breadcrumbOdoo": "Odoo",
+      "offerCatalogName": "Odoo Modules"
+    },
+    "hero": {
+      "badge": "Odoo ERP Expertise",
+      "titlePart1": "An ERP project should never fail ",
+      "titleHighlight": "because of local context.",
+      "subtitle": "CNPS payroll, SYSCOHADA financial statements, Mobile Money payments, patchy connectivity: that's where most ERP rollouts derail in West Africa, not in the software. AKILI Labs implements Odoo starting from that reality, from business scoping through go-live and beyond.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "See our Odoo resources"
+    },
+    "hubDiagram": {
+      "ariaLabel": "Odoo brings together CRM, Inventory, Accounting, and HR on a single platform",
+      "nodeCrm": "CRM",
+      "nodeStock": "Inventory",
+      "nodeAccounting": "Accounting",
+      "nodeHr": "HR"
+    },
+    "intro": {
+      "badge": "The reality on the ground",
+      "title": "Scattered tools cost more than a unified system",
+      "paragraph1": "Running a growing business with scattered tools (spreadsheets, a standalone accounting package, a CRM disconnected from the supply chain) costs time, money, and missed opportunities. And the first instinct — adopting a generic ERP — often fails on the same issues: a chart of accounts that ignores SYSCOHADA, payroll that knows neither CNPS nor CGRAE, payments that stop where Mobile Money begins.",
+      "calloutTitle": "The right ERP is the one that adapts to your reality, not the other way around.",
+      "calloutText": "Odoo, the world's most widely adopted open-source ERP suite (28+ million users in 180 countries), brings sales, purchasing, inventory, accounting, HR, and manufacturing together on a single platform. Its open architecture enables exactly the adaptations your context requires.",
+      "paragraph2Rich": "At AKILI Labs, we don't just install Odoo. We configure it, adapt it, and keep it running true to <strong>your African business reality</strong>: OHADA/SYSCOHADA context, local tax specifics, multilingual environments, and connectivity constraints.",
+      "imageAlt": "Before-and-after: an Excel sales-tracking sheet with a duplicate order and #N/A errors, alongside a WhatsApp thread where the warehouse reports the stock count is out of date, next to the Odoo apps menu (Sales, CRM, Inventory, Purchase, Accounting, Payroll) and order CDE-2026-341 reserving stock, generating the invoice, and posting the accounting entry"
+    },
+    "implementation": {
+      "badge": "Consulting & Implementation",
+      "title": "Consulting & Scoping",
+      "subtitle": "Before writing a single line of configuration, we understand your business.",
+      "cadrageItem1": "As-is/to-be audit and process mapping",
+      "cadrageItem2": "Functional and technical needs analysis",
+      "cadrageItem3": "Scope definition and module prioritization",
+      "cadrageItem4": "Requirements specification and functional specifications",
+      "cadrageItem5": "Effort estimation and project planning (detailed workload plan)",
+      "cadrageItem6": "Decision support: Odoo Community vs. Enterprise",
+      "phasesTitle": "Our 5-phase approach",
+      "phasesSubtitle": "We deploy Odoo using a structured, proven methodology inspired by international best practices.",
+      "deliverableLabel": "Deliverable: "
+    },
+    "modules": {
+      "badge": "Odoo modules we master",
+      "title": "We work across the full range of Odoo suite modules"
+    },
+    "conformite": {
+      "badge": "Compliance & Local Realities",
+      "title": "A compliant ERP proves itself in the financial statements, not in the brochure",
+      "paragraph1": "Any integrator can install Odoo. The difference lies in the thousands of details that local context demands: a Balance Sheet and Income Statement in revised SYSCOHADA format, a TAFIRE your statutory auditor accepts, payslips that get CNPS and CGRAE contributions exactly right, VAT configured for the tax rules of each country of operation, Wave, Orange Money, or MTN MoMo receipts reconciled automatically in the accounts.",
+      "paragraph2": "AKILI Labs has built specific expertise in configuring Odoo for the OHADA framework: it's the core of our practice, not a line item on the quote.",
+      "imageAlt": "Customer invoice in Odoo accounting: entries posted to SYSCOHADA accounts 411, 701, and 4431 with 18% VAT, a balanced trial balance, payment matching reconciled against the bank statement, OHADA financial statements generated, and the DSF reporting package ready for the DGI"
+    },
+    "services": {
+      "badge": "Beyond implementation",
+      "title": "A standard ERP isn't always enough: we adapt it to your business",
+      "imageAlt": "Odoo integrations screen: Mobile Money connectors (Orange, MTN, Wave), SGBCI and BICICI bank connections, online store and DGI-compliant invoicing, all active, with the day's transaction log showing a reconciled payment, a web order, and an automatic recovery after a gateway outage"
+    },
+    "hostingSupport": {
+      "badge": "Hosting & Support",
+      "title": "Your ERP has to run every single day: we commit to it contractually",
+      "hostingTitle": "Hosting & Infrastructure",
+      "fitLabel": "Best fit for: ",
+      "supportTitle": "Support & Maintenance",
+      "supportParagraphRich": "After go-live, your ERP is covered by a maintenance contract with contractual service commitments: <strong>blocking incidents handled within 2 to 24 hours depending on the tier</strong>, statutory payroll updates included, monthly TMA (application maintenance), and follow-up reviews. Three tiers adapt to how critical your operations are.",
+      "blockingLabel": "Blocking: ",
+      "imageAlt": "Odoo instance monitoring: 99.95% uptime over 12 months against a contractual target of 99.5%, an incident detected and resolved in 31 minutes, and P1-to-P3 TMA tickets handled within contractual deadlines"
+    },
+    "approach": {
+      "badge": "Our methodology",
+      "title": "An approach centered on your business, not the tool",
+      "subtitle": "At AKILI Labs, we reject the \"install and leave\" model.",
+      "principle1Title": "Business first",
+      "principle1Desc": "Scoping workshops start from your actual processes, not Odoo's screens: the tool adapts to the organization, never the other way around.",
+      "principle2Title": "Standard before custom",
+      "principle2Desc": "Every custom development has to earn its place: the Odoo standard covers most needs and keeps future upgrades painless.",
+      "principle3Title": "UEMOA realism",
+      "principle3Desc": "Patchy connectivity, Mobile Money payments, OHADA requirements: our rollouts work in your context, not just in a demo.",
+      "principle4Title": "Knowledge transfer",
+      "principle4Desc": "Your teams administer and evolve their ERP independently once our engagement ends."
+    },
+    "sectors": {
+      "badge": "Sectors we serve",
+      "title": "Every sector has its critical processes: we start from yours"
+    },
+    "whyUs": {
+      "badge": "What sets us apart",
+      "title": "Why choose AKILI Labs"
+    },
+    "stats": {
+      "title": "Our Odoo practice, by the numbers"
+    },
+    "resources": {
+      "badge": "Resources & Content",
+      "title": "Go deeper on your Odoo project",
+      "comingSoon": "Coming soon"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions about Odoo"
+    },
+    "ctaFinal": {
+      "titlePart1": "Your next ERP deserves to succeed ",
+      "titleHighlight": "in your reality.",
+      "subtitle": "Let's start with a free consultation: our experts analyze your processes and propose an Odoo roadmap tailored to your context, budget, and timeline.",
+      "benefit1": "Quick assessment of your digital maturity",
+      "benefit2": "Recommended priority Odoo modules for your sector",
+      "benefit3": "Indicative timeline and budget estimate",
+      "benefit4": "Answers to your technical and functional questions",
+      "ctaPrimary": "Free consultation"
+    }
+  },
+  "Td": {
+    "meta": {
+      "title": "Digital Transformation in West Africa — IS Audit, IT Master Plan, EDM, BPM",
+      "description": "Information systems audits, IT Master Plan, paperless workflows, EDM, BPM, and IT governance for organizations across the UEMOA zone. Free initial consultation.",
+      "ogTitle": "Digital Transformation Expertise — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "From diagnosis to monitoring: we secure your digital transformation before, during, and after the choice of technology.",
+      "ogImageAlt": "AKILI Labs — Digital Transformation Expertise",
+      "twitterTitle": "Digital Transformation Expertise — AKILI Labs",
+      "twitterDescription": "IS audit, IT Master Plan, paperless workflows, EDM, BPM, and IT governance across the UEMOA zone.",
+      "serviceName": "Digital Transformation Expertise",
+      "serviceDescription": "Information systems audits, IT Master Plan, IS architecture planning, paperless workflows, EDM, BPM, and IT governance.",
+      "breadcrumbHome": "Home",
+      "breadcrumbExpertises": "Expertise",
+      "breadcrumbTd": "Digital Transformation",
+      "offerCatalogName": "Digital Transformation Areas of Intervention"
+    },
+    "hero": {
+      "badge": "Digital Transformation Expertise",
+      "titlePart1": "Most digital transformations fail ",
+      "titleHighlight": "before the first tool is even deployed.",
+      "subtitle": "Without proper scoping, projects fragment: tools that don't talk to each other, investments that don't serve the strategy, teams that don't buy in. AKILI Labs secures your transformation where it's actually decided — diagnosis, prioritization, and monitoring — before, during, and after the choice of technology.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "See our resources"
+    },
+    "roadmapDiagram": {
+      "ariaLabel": "Digital transformation roadmap in 5 steps: Audit, IT Master Plan, IS Architecture Planning, Deployment, Monitoring",
+      "stepAudit": "Audit",
+      "stepPlan": "IT Plan",
+      "stepArchitecture": "Architecture",
+      "stepDeployment": "Deployment",
+      "stepMonitoring": "Monitoring",
+      "footerText": "Everything is decided at the scoping stage — that's where we start."
+    },
+    "intro": {
+      "badge": "The reality on the ground",
+      "title": "Digitizing without scoping just automates the chaos",
+      "paragraph1": "Across the UEMOA zone, the pressure to modernize is real: competitiveness, OHADA regulatory requirements, and the expectations of customers and regulators. But organizations that digitize process by process, tool by tool, without an overall vision, end up with the same result: a fragmented information system that is costly to maintain and reproduces the slowness of paper in digital form.",
+      "calloutTitle": "The causes of failure are rarely technological.",
+      "calloutText": "They are organizational: no mapping of the real processes, prioritization driven by technology trends, and underestimating team adoption.",
+      "paragraph2": "That's why AKILI Labs steps in before any tool is chosen: we audit the current state, build an IT Master Plan prioritized by impact and feasibility, then steer the rollout through to adoption — paperless workflows, process automation, IT governance.",
+      "imageAlt": "Before-and-after: a scanned handwritten purchase order stamped 'pending,' with an empty signature box because the signatory is away on assignment, and the follow-up email thread 'Re: Re: Re: approval?', next to the same process digitized, with every step timestamped from 09:02 to 09:15"
+    },
+    "roadmap": {
+      "badge": "Scoping & Roadmap",
+      "title": "In 5 phases, move from a reactive IS to a managed one",
+      "subtitle": "Each phase produces a tangible deliverable that you validate before moving to the next.",
+      "deliverableLabel": "Deliverable: "
+    },
+    "domains": {
+      "badge": "Areas we cover",
+      "title": "Seven levers, one goal: faster, more traceable processes",
+      "subtitle": "And less dependent on key individuals — each lever targets a precise source of friction in your organization."
+    },
+    "services": {
+      "badge": "Beyond the diagnosis",
+      "title": "A transformation only succeeds if your teams make it their own",
+      "imageAlt": "Search in the document management system: the query 'globaltrade invoice june 2026' returns three results in 0.4 seconds, with OCR-recognized text highlighted within the document contents, an invoice preview, and its statutory OHADA retention period"
+    },
+    "gouvernance": {
+      "badge": "Data & Compliance",
+      "title": "Your data is an asset — and a legal responsibility",
+      "paragraph1": "Going paperless shifts obligations, it doesn't remove them: customer, HR, and accounting records remain subject to statutory retention requirements, and personal data protection regulations now apply in most countries across the zone.",
+      "paragraph2": "A serious digital transformation builds these requirements in from the design stage: who can access what, where data is hosted, how it is archived and for how long, and how traceability is guaranteed in the event of an audit or dispute.",
+      "imageAlt": "Approval workflow for a purchase request of 750,000 FCFA: the threshold rule automatically adds senior management above 500,000 FCFA, successive approvals are timestamped, and the tamper-proof audit log records who approved what, when, and with what comment"
+    },
+    "approach": {
+      "badge": "Our methodology",
+      "title": "An approach centered on business value, not technology"
+    },
+    "sectors": {
+      "badge": "Sectors we serve",
+      "title": "Every sector has its critical processes — we start from yours"
+    },
+    "whyUs": {
+      "badge": "What sets us apart",
+      "title": "Why choose AKILI Labs"
+    },
+    "stats": {
+      "title": "AKILI Labs by the numbers"
+    },
+    "resources": {
+      "badge": "Resources & Content",
+      "title": "Go deeper on your digital transformation journey",
+      "comingSoon": "Coming soon"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions about digital transformation"
+    },
+    "ctaFinal": {
+      "titlePart1": "Your transformation deserves better than ",
+      "titleHighlight": "a pile of disconnected tools.",
+      "subtitle": "Let's start with a diagnostic: our experts analyze your current state and propose a roadmap tailored to your business and regulatory context.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "Download our presentation"
+    }
+  },
+  "Ia": {
+    "meta": {
+      "title": "Artificial Intelligence Expertise in West Africa",
+      "description": "Generative AI, Machine Learning, Computer Vision, NLP in African languages, and Business Intelligence. Practical AI solutions for West African businesses. Free initial consultation.",
+      "ogTitle": "Artificial Intelligence Expertise — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "Adopting AI is not about catching up — it's about building a lead. Practical AI solutions for the UEMOA/ECOWAS zone.",
+      "ogImageAlt": "AKILI Labs — Artificial Intelligence Expertise",
+      "twitterTitle": "Artificial Intelligence Expertise — AKILI Labs",
+      "twitterDescription": "Practical AI solutions for West African businesses.",
+      "serviceName": "Artificial Intelligence Expertise",
+      "serviceDescription": "Design, deployment, and maintenance of AI solutions: Generative AI, Machine Learning, Computer Vision, NLP in African languages, and augmented Business Intelligence.",
+      "breadcrumbHome": "Home",
+      "breadcrumbExpertises": "Expertise",
+      "breadcrumbIa": "Artificial Intelligence",
+      "offerCatalogName": "AI Areas of Expertise"
+    },
+    "hero": {
+      "badge": "Artificial Intelligence Expertise",
+      "titlePart1": "Adopting AI is not about catching up. ",
+      "titleHighlight": "It's about building a lead.",
+      "subtitle": "A young, hyper-connected population, Mobile Money penetration with no equivalent elsewhere, and fast-growing markets: the African terrain is unique for AI. AKILI Labs designs, deploys, and maintains practical solutions, from business chatbots to prediction engines, tailored to your sector, your data, and your languages.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "Discover our use cases",
+      "imageAlt": "Predictive monitoring screen for the UEMOA zone: 30-day demand forecast with confidence interval and the anticipated Tabaski peak, next to the business assistant showing remaining stock in Yopougon and preparing a restock order pending approval"
+    },
+    "whyNow": {
+      "badge": "Why AI now in Africa?",
+      "title": "The opportunity is here. The window is open.",
+      "paragraphRich": "Africa is the next great frontier for Artificial Intelligence. With more than <strong>1.4 billion people</strong>, a young, hyper-connected population, Mobile Money penetration unmatched anywhere in the world, and fast-growing markets, the continent offers unique ground for AI.",
+      "networkAriaLabel": "AKILI Labs operates in 8 countries across the UEMOA/ECOWAS zone",
+      "networkCaption": "8 UEMOA/ECOWAS countries",
+      "calloutQuote": "The question is no longer \"should we go there?\" It's \"which use case should we start with?\"",
+      "calloutText": "And that's precisely the purpose of our scoping phase.",
+      "changesTitle": "What AI concretely changes for an African organization",
+      "closingParagraph": "At AKILI Labs, we don't sell AI to look modern. We deploy solutions that solve real problems and produce measurable results."
+    },
+    "domains": {
+      "badge": "Our AI Areas of Expertise",
+      "title": "Six domains, one promise: measurable results",
+      "imageAlt": "Business assistant in the browser: asked about the outstanding balance for the Cocody branch, it answers 4,850,000 FCFA citing the accounts receivable ledger and the sales journal, then drafts a reminder letter that stays in draft until the user approves it",
+      "decisionImageAlt": "Forecasting dashboard: actual and forecast weekly demand with confidence interval, model accuracy of 92.4%, morning alerts on critical stock in Yopougon and outstanding customer balances, sales by city, and payment collections breakdown by channel",
+      "technologiesLabel": "Technologies"
+    },
+    "sectors": {
+      "badge": "Use cases by sector",
+      "title": "AI adapted to your industry",
+      "useCasesLabel": "Priority use cases",
+      "benefitLabel": "Expected benefit"
+    },
+    "methodology": {
+      "badge": "Our AI Methodology",
+      "title": "A proven methodology, from scoping to monitoring",
+      "imageAlt": "Model lifecycle: the five steps from your raw data to the everyday decision, the comparison table of training runs where the explainable model wins out over the most accurate one, and the four checks validated before production release, including acceptance testing by the sales teams",
+      "deliverableLabel": "Deliverable: "
+    },
+    "responsable": {
+      "badge": "Responsible AI & Sovereignty",
+      "title": "AI under your control: data, models, decisions",
+      "intro": "Adopting AI shifts responsibilities that no decision-maker can delegate: where does your data live? Does it train a third party's models? Who has the final say when the algorithm recommends declining a loan or rejecting a candidate? Serious AI makes these questions traceable — and their answers contractual.",
+      "pillar1Title": "Data Sovereignty",
+      "pillar1Desc": "Your data never trains a third-party model. On-premise, private cloud, or hybrid architectures: your sensitive data never leaves your zone of control.",
+      "pillar2Title": "Regulatory Compliance",
+      "pillar2Desc": "Personal data protection aligned with local and sub-regional regulatory frameworks; financial regulators' requirements factored in for banking use cases (scoring, credit approval).",
+      "pillar3Title": "Human Oversight",
+      "pillar3Desc": "AI proposes, humans decide: validation loops on sensitive decisions (credit, HR, healthcare), recommendations that are traceable and explainable to the business.",
+      "pillar4Title": "Bias & Robustness",
+      "pillar4Desc": "Bias testing and business validation before any production release; drift monitoring and periodic retraining once in operation."
+    },
+    "whyUs": {
+      "badge": "What sets us apart",
+      "title": "Why AKILI Labs for your AI project"
+    },
+    "kpis": {
+      "title": "The AI practice by the numbers"
+    },
+    "stack": {
+      "badge": "Technology Stack",
+      "title": "The technologies we master"
+    },
+    "resources": {
+      "badge": "Resources & Content",
+      "title": "Deepen your understanding of AI",
+      "comingSoon": "Coming soon"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions about AI"
+    },
+    "ctaFinal": {
+      "titlePart1": "Your AI project starts with ",
+      "titleHighlight": "a conversation",
+      "subtitle": "What you get from an initial free conversation:",
+      "benefit1": "An assessment of your data maturity and AI potential",
+      "benefit2": "Identification of 2 to 3 high-impact use cases in your sector",
+      "benefit3": "An indicative feasibility and budget estimate",
+      "benefit4": "Answers to your technical, ethical, and strategic questions",
+      "noCommitment": "No commitment. No pressure. Just expertise.",
+      "ctaPrimary": "Free consultation"
+    }
+  },
+  "DevSecOps": {
+    "meta": {
+      "title": "DevSecOps in West Africa — CI/CD, Kubernetes, IaC, Security",
+      "description": "Software delivery automation and standardization: CI/CD, Docker/Kubernetes containerization, Infrastructure as Code, integrated security, and monitoring for organizations across the UEMOA zone. Free initial consultation.",
+      "ogTitle": "DevSecOps Expertise — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "From maturity audit to operations: security built into every stage of your CI/CD pipeline.",
+      "ogImageAlt": "AKILI Labs — DevSecOps Expertise",
+      "twitterTitle": "DevSecOps Expertise — AKILI Labs",
+      "twitterDescription": "CI/CD, Kubernetes, Infrastructure as Code, and integrated security across the UEMOA zone.",
+      "serviceName": "DevSecOps Expertise",
+      "serviceDescription": "Software delivery automation and standardization: continuous integration and deployment, containerization, Infrastructure as Code, automated security analysis, and monitoring.",
+      "breadcrumbHome": "Home",
+      "breadcrumbExpertises": "Expertise",
+      "breadcrumbDevSecOps": "DevSecOps",
+      "offerCatalogName": "DevSecOps Areas of Intervention"
+    },
+    "hero": {
+      "badge": "DevSecOps Expertise",
+      "titlePart1": "A production release should never be ",
+      "titleHighlight": "a gamble.",
+      "subtitle": "Shipping fast and shipping safely aren't opposing goals — it's the traditional approach that pits them against each other: manual deployments, end-of-project audits, vulnerabilities discovered in production. AKILI Labs automates and standardizes your CI/CD pipeline with security built into every step, from code to operations.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "See our resources"
+    },
+    "intro": {
+      "badge": "The situation",
+      "title": "Security bolted on at the end is a debt, not a protection",
+      "paragraph1": "In many organizations, shipping an application is still a high-risk exercise: manual deployments, environments that drift between development and production, fixes postponed because \"it works.\" Every release becomes a dreaded event instead of a controlled non-event.",
+      "calloutQuote": "Vulnerabilities discovered in production cost the most.",
+      "calloutText": "DevSecOps catches them early — at design, in code, in tests — reducing remediation costs and strengthening the trust of clients and partners.",
+      "paragraph2": "AKILI Labs automates and standardizes your delivery chain end to end: continuous integration and deployment, containerization, infrastructure described as code, automated security analysis, and monitoring — for frequent, reproducible, auditable releases.",
+      "imageAlt": "Before-and-after: a terminal where the Friday-night manual deployment fails (permission denied, missing Python module, fix applied live on production) and an incident discussion thread, next to the same change delivered through a five-step green pipeline, with no downtime and reversible"
+    },
+    "roadmap": {
+      "badge": "Scoping & Industrialization",
+      "title": "In 5 phases, move from manual deployment to secure continuous delivery",
+      "subtitle": "Each phase produces a tangible deliverable that you validate before moving to the next.",
+      "deliverableLabel": "Deliverable: "
+    },
+    "domains": {
+      "badge": "Areas of Intervention",
+      "title": "Five levers for frequent, reproducible, auditable releases",
+      "toolsLabel": "Tools: "
+    },
+    "stack": {
+      "badge": "Technical Stack",
+      "title": "The tools we master — and your teams will too"
+    },
+    "services": {
+      "badge": "Beyond the pipelines",
+      "title": "Tooling isn't enough: your teams need to stay in control",
+      "imageAlt": "Continuous integration pipeline screen: the build, test (214 passed, 78% coverage), security (image, dependencies, secrets), and staging stages, followed by a production deployment pending human approval, with the execution log and security report"
+    },
+    "securite": {
+      "badge": "Security & Traceability",
+      "title": "Compliance is proven with logs, not with promises",
+      "paragraph1": "Containerizing applications, automating deployments, migrating to the cloud: every step of industrialization shifts security responsibilities. Who accesses production environments? Where do secrets live — passwords, keys, certificates? What happens when a critical fix needs to go out on a Friday night?",
+      "paragraph2": "A serious DevSecOps chain makes these questions traceable: every deployment is logged, every access is controlled, every environment can be rebuilt identically. For regulated organizations in the zone — banks, microfinance, insurance — this traceability isn't a nicety: regional regulators require demonstrable management of IT risk and business continuity.",
+      "imageAlt": "Production monitoring screen: availability, latency, and error rate, a spike of 502 errors detected at 09:41 and resolved 11 minutes later, timestamped centralized logs, and a deployment audit log showing who deployed what and when"
+    },
+    "approach": {
+      "badge": "Our methodology",
+      "title": "An approach centered on reliability, not on trendy tools"
+    },
+    "sectors": {
+      "badge": "Sectors we serve",
+      "title": "Every sector has its own availability constraints — we start from yours"
+    },
+    "whyUs": {
+      "badge": "What sets us apart",
+      "title": "Why choose AKILI Labs"
+    },
+    "stats": {
+      "title": "The DevSecOps practice by the numbers"
+    },
+    "resources": {
+      "badge": "Resources & Content",
+      "title": "Deepen your DevSecOps practice",
+      "comingSoon": "Coming soon"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions about DevSecOps"
+    },
+    "ctaFinal": {
+      "titlePart1": "Your next production release deserves to be ",
+      "titleHighlight": "a non-event.",
+      "subtitle": "Let's start with a maturity audit: our experts analyze your delivery chain and propose an industrialization plan tailored to your context and constraints.",
+      "ctaPrimary": "Free consultation",
+      "downloadCta": "Download our presentation"
+    },
+    "pipelineDiagram": {
+      "step1": "Code",
+      "step2": "Build",
+      "step3": "Tests",
+      "step4": "Deployment",
+      "step5": "Monitoring",
+      "ariaLabel": "5-step continuous delivery pipeline — Code, Build, Tests, Deployment, Monitoring — with a security check built into every step",
+      "caption": "Security at every step — not a gate at the end."
+    }
+  },
+  "DevMetiers": {
+    "meta": {
+      "title": "Business Application Development in West Africa — Web, Mobile, APIs",
+      "description": "Custom web and mobile applications, collaborative portals, APIs, and business platforms for organizations across the UEMOA zone. Short sprints, contractually defined scope, code delivered to you. Free initial consultation.",
+      "ogTitle": "Business Application Development Expertise — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "Custom development without the derailment: verifiable safeguards, measured quality, reversibility. The tool fits your business.",
+      "ogImageAlt": "AKILI Labs — Business Application Development Expertise",
+      "twitterTitle": "Business Application Development Expertise — AKILI Labs",
+      "twitterDescription": "Custom web, mobile, and business platform applications across the UEMOA zone.",
+      "serviceName": "Business Application Development Expertise",
+      "serviceDescription": "Custom development of web and mobile applications, collaborative portals, REST APIs, and business platforms.",
+      "breadcrumbHome": "Home",
+      "breadcrumbExpertises": "Expertise",
+      "breadcrumbDevMetiers": "Business Application Development",
+      "offerCatalogName": "Business Application Development Areas of Intervention"
+    },
+    "hero": {
+      "badge": "Business Application Development Expertise",
+      "titlePart1": "Custom development has a bad reputation. It's ",
+      "titleHighlight": "avoidable.",
+      "subtitle": "Budget overruns, the tunnel effect, vendor dependency: custom projects almost always fail for the same reasons — and none of them is inevitable. AKILI Labs builds your web and mobile applications and business platforms with verifiable safeguards: short sprints, contractually defined scope, measured quality, code delivered to you. The tool fits your business — and the project stays under your control.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "See our resources"
+    },
+    "assemblyDiagram": {
+      "labelWeb": "Web",
+      "labelMobile": "Mobile",
+      "labelApi": "API",
+      "labelData": "Data",
+      "ariaLabel": "Application building blocks — Web, Mobile, API, Data — assembled into a single platform, delivered through successive sprints",
+      "sprintsLabel": "Sprints",
+      "caption": "Assembled around your business, delivered in visible stages."
+    },
+    "intro": {
+      "badge": "The situation",
+      "title": "Your processes deserve better than a spreadsheet — and better than a project that derails",
+      "paragraph1": "On one side, the need is real: case approvals, production tracking, member management, route planning… when no off-the-shelf software covers your specific workflows, teams compensate — shared spreadsheets, re-keyed data, paper tracking. Data scatters and no one has the full picture.",
+      "paragraph2": "On the other, the wariness is legitimate: too many organizations in the region have experienced the custom project whose budget doubles, the application delivered late and never formally accepted, or the provider who walked away with the code.",
+      "calloutQuote": "Custom projects almost always derail for the same three reasons.",
+      "calloutText": "Scope that's never locked down, a tunnel effect with no intermediate deliveries, and code the client doesn't own. Our standards exist precisely to neutralize these three causes — and they're verifiable.",
+      "paragraph3Rich": "<strong>Our doctrine</strong>: standard wherever your need is standard — a proven ERP like Odoo will be faster and cheaper there — and custom only where your process sets you apart. During the free scoping session, we tell you honestly which case you're in.",
+      "imageAlt": "Before-and-after: a mutual insurance provider's Excel workbook with a duplicate member record and #N/A errors, alongside the counter's handwritten receipt book, compared with the business application where the same member has a single record, a receipt sent by SMS, and a discrepancy-free history"
+    },
+    "roadmap": {
+      "badge": "Scoping & Delivery",
+      "title": "In 5 phases, from business process to production platform — with no tunnel effect",
+      "subtitle": "Each phase produces a tangible deliverable that you validate before moving to the next.",
+      "imageAlt": "Sprint 3 tracking board: five features completed, two in client acceptance testing with feedback from the treasurer, the next sprint planned, the progress curve, and the history of bi-weekly demos",
+      "deliverableLabel": "Deliverable: "
+    },
+    "domains": {
+      "badge": "Areas of Intervention",
+      "title": "Four ways to put software to work for your business"
+    },
+    "standards": {
+      "badge": "Verifiable Safeguards",
+      "title": "Every cause of failure has its answer — written into our procedures",
+      "subtitle": "These aren't marketing promises: they are our internal procedures, applied to every project, including our own.",
+      "causeLabel": "Cause:"
+    },
+    "services": {
+      "badge": "Beyond delivery",
+      "title": "An application has a life after go-live",
+      "imageAlt": "Business API documentation: the endpoints (member record, payment, Mobile Money confirmation, reports), a sample call with its JSON response, role-based access rights, and the list of applications consuming it (counter, field mobile app, management portal, accounting software)",
+      "footerText": "Our completed projects, with measured results, are presented on the",
+      "referencesLabel": "References"
+    },
+    "approach": {
+      "badge": "Our methodology",
+      "title": "The business first, the technology second"
+    },
+    "sectors": {
+      "badge": "Sectors we serve",
+      "title": "Every business has its critical processes — we build for yours"
+    },
+    "whyUs": {
+      "badge": "What sets us apart",
+      "title": "Why choose AKILI Labs"
+    },
+    "stats": {
+      "title": "The business application development practice by the numbers"
+    },
+    "resources": {
+      "badge": "Resources & Content",
+      "title": "Go deeper on your business application project",
+      "comingSoon": "Coming soon"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions about custom development"
+    },
+    "ctaFinal": {
+      "titlePart1": "Your next custom project can be ",
+      "titleHighlight": "the one that goes well.",
+      "subtitle": "Let's start with a scoping session: our experts analyze your processes, tell you honestly what genuinely needs custom development — and lock down the scope, budget, and safeguards with you before the first line of code.",
+      "ctaPrimary": "Free consultation",
+      "downloadCta": "Download our presentation"
+    }
+  },
+  "Bi": {
+    "meta": {
+      "title": "Business Intelligence in West Africa — Dashboards & Data Warehouse",
+      "description": "AKILI Labs consolidates your data (ERP, cash registers, Mobile Money, Excel) into reliable dashboards, refreshed every morning. Data warehouse, KPI governance, and regulatory reporting across the UEMOA region.",
+      "ogTitle": "Business Intelligence Expertise — AKILI Labs Côte d'Ivoire",
+      "ogDescription": "From manual reporting to daily decision-making: management dashboards, data warehouse, and BCEAO/OHADA regulatory statements.",
+      "ogImageAlt": "AKILI Labs — Business Intelligence Expertise",
+      "twitterTitle": "Business Intelligence Expertise — AKILI Labs",
+      "twitterDescription": "Your data consolidated into reliable dashboards, refreshed every morning.",
+      "serviceName": "Business Intelligence Expertise",
+      "serviceDescription": "Data scoping, data warehouse, management dashboards, and regulatory reporting for companies and institutions in West Africa.",
+      "breadcrumbHome": "Home",
+      "breadcrumbExpertises": "Expertise",
+      "breadcrumbBi": "Business Intelligence",
+      "offerCatalogName": "Business Intelligence Offerings"
+    },
+    "hero": {
+      "badge": "Business Intelligence Expertise",
+      "titlePart1": "Your data already exists. ",
+      "titleHighlight": "What's missing is the decision.",
+      "subtitle": "Sales, cash registers, inventory, Mobile Money: every day of activity produces numbers no one has time to consolidate. AKILI Labs turns this scattered data into reliable dashboards, refreshed every morning, so you decide on what's real — not on last month's report.",
+      "ctaPrimary": "Free consultation",
+      "ctaSecondary": "See a sample dashboard",
+      "imageAlt": "Multi-branch management committee dashboard: revenue, cash position, and margin by branch in FCFA, with a manager's mobile view showing the day's sales and a cash discrepancy alert"
+    },
+    "intro": {
+      "badge": "The problem",
+      "title": "The monthly report costs two days. And it's already outdated.",
+      "paragraph1": "In most companies in the region, decision-making relies on an exhausting ritual: at the end of every month, one trusted person collects files from the branches, copies out the ERP figures, reconciles discrepancies by hand, and formats a committee report. Two days of work, numbers that diverge depending on the source, and management discovering on the 5th of the month what happened three weeks earlier.",
+      "paragraph2": "Our approach: yesterday's numbers, available every morning. Consolidation becomes an overnight process, no longer a job.",
+      "calloutText": "The problem is almost never a lack of data. It's that it's asleep across five systems that don't talk to each other, and that the one person who knows how to piece it together will one day go on leave.",
+      "imageAlt": "Before and after: an Excel consolidation workbook riddled with #REF! errors and a WhatsApp conversation where branches send their numbers late, versus a group dashboard consolidated automatically every night, reconciled with accounting, with branch-level detail"
+    },
+    "pilotage": {
+      "badge": "Day-to-day with BI",
+      "title": "A typical morning, at 7:30 AM, on your phone",
+      "subtitle": "No three-week training and no decision-support jargon: screens that answer the questions you're already asking. How much did we sell yesterday? Where's our cash position? Which branch is falling behind? Who needs a follow-up call?",
+      "imageAriaLabel": "Detailed dashboard, horizontal scroll on mobile",
+      "imageAlt": "Consolidated CFO dashboard: cash position of 128.3 M FCFA with a 30-day projection, average collection period, outstanding receivables to follow up, and a margin alert on one branch, refreshed at 2 AM",
+      "mobileHint": "Drag the image to explore the dashboard",
+      "calloutTitle": "From hindsight to foresight",
+      "calloutText": "A dashboard tells you where you stand. The next step is to anticipate: demand forecasting, anomaly detection, scoring. That's the territory of our Artificial Intelligence practice, which builds precisely on the data warehouse constructed here.",
+      "calloutCta": "Discover our AI expertise"
+    },
+    "services": {
+      "badge": "What we do",
+      "title": "From assessment to daily decision-making",
+      "deliverableLabel": "Deliverable: "
+    },
+    "architecture": {
+      "badge": "Under the hood",
+      "title": "One single path for data, from the till to the boardroom",
+      "subtitle": "Every figure displayed can be traced back to its source. The data flows run overnight, monitor themselves, and a failed load is visible before anyone presents a wrong number.",
+      "imageAriaLabel": "Detailed architecture diagram, horizontal scroll on mobile",
+      "imageAlt": "Overnight flow orchestration screen: extraction tasks (Odoo ERP, branch cash registers, Mobile Money, Excel files) feed quality checks and then the PostgreSQL data warehouse load, which triggers dashboard refreshes, exports, and alerts",
+      "mobileHint": "Drag the image to explore the diagram"
+    },
+    "gouvernance": {
+      "badge": "Data Governance",
+      "title": "Why your revenue figure differs depending on who calculates it, and how we end that",
+      "paragraph1": "“Net revenue,” “active customer,” “outstanding balance”: as long as every department has its own formula, meetings serve to reconcile numbers instead of making decisions. We write each definition once, with you, and the system then applies it everywhere: dashboards, exports, alerts.",
+      "paragraph2": "Quality checks run every night with the data flows: duplicates, unclosed cash registers, incomplete entries become visible and fixable, instead of being discovered at year-end close.",
+      "imageAlt": "Net revenue KPI record in the dictionary: definition spelled out in full, SQL query applied across all screens, traceability from source to dashboards, CFO as the owner, and the results of the overnight quality checks"
+    },
+    "reglementaire": {
+      "badge": "Compliance",
+      "title": "The statements that aren't up for debate: on time, accurate, archived",
+      "subtitle": "For banks, MFIs, and regulated institutions, BI isn't just about decision-making: it's the ability to produce the periodic statements required by the regulator without tying up a team for a week.",
+      "calloutText": "Figure-by-figure traceability, right down to the original entry, is at the heart of our architecture, not an option. It's what makes a regulatory statement defensible before both the regulator and the statutory auditor."
+    },
+    "methodology": {
+      "badge": "Our approach",
+      "title": "A first dashboard in production within 6 weeks",
+      "subtitle": "With a defined scope and accessible sources: that's the first thing we verify together during scoping.",
+      "deliverableLabel": "Deliverable: "
+    },
+    "sectors": {
+      "badge": "Sectors",
+      "title": "What BI changes, sector by sector"
+    },
+    "whyUs": {
+      "badge": "Why AKILI Labs",
+      "title": "An integrator who knows your starting point"
+    },
+    "stack": {
+      "badge": "Technology Stack",
+      "title": "Proven tools, chosen to last",
+      "subtitle": "Open source as the default choice, Power BI when your environment is already Microsoft: the tool adapts to your teams, not the other way around."
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions about Business Intelligence"
+    },
+    "ctaFinal": {
+      "titlePart1": "Let's talk about your ",
+      "titleHighlight": "first two KPIs",
+      "subtitle": "45 minutes with a consultant. What you get out of it, with no commitment:",
+      "benefit1": "An honest assessment of your data assets",
+      "benefit2": "The two KPIs to start with",
+      "benefit3": "A read on your sources: ERP, Excel, cash registers, Mobile Money",
+      "benefit4": "An indicative estimate of approach and budget",
+      "ctaPrimary": "Free consultation"
+    }
+  },
+  "References": {
+    "meta": {
+      "title": "Case Studies — AKILI Labs",
+      "description": "Discover our achievements: ERP integration, Artificial Intelligence, DevSecOps and custom development in West Africa."
+    },
+    "hero": {
+      "badge": "Our achievements",
+      "titlePart1": "They put their ",
+      "titleHighlight": "trust in us",
+      "subtitle": "Real projects, measurable results. Discover how AKILI Labs transforms organizations across the UEMOA zone."
+    },
+    "viewDetail": "View details",
+    "bottomTitle": "Your project will be our next case study.",
+    "bottomSubtitle": "Join the organizations that trust AKILI Labs for their digital transformation.",
+    "bottomCta": "Start a project with us →",
+    "detail": {
+      "breadcrumbAriaLabel": "Breadcrumb",
+      "breadcrumbHome": "Home",
+      "breadcrumbReferences": "Case Studies",
+      "contextTitle": "Context & Objectives",
+      "solutionTitle": "Solution Deployed",
+      "keyResultLabel": "Key Result",
+      "technologiesTitle": "Technologies",
+      "similarProjectTitle": "A similar project?",
+      "similarProjectText": "Our experts are available to support you.",
+      "contactButton": "Contact us →",
+      "otherReferencesTitle": "Other case studies"
+    }
+  },
+  "Blog": {
+    "meta": {
+      "title": "Blog & Tech Watch — AKILI Labs",
+      "description": "Insights, case studies and best practices on ERP, Artificial Intelligence and DevSecOps in Africa."
+    },
+    "hero": {
+      "badge": "Tech Watch & Insights",
+      "titlePart1": "Blog & Tech ",
+      "titleHighlight": "Watch",
+      "titlePart2": "",
+      "subtitle": "Technical articles, case studies and best practices from the AKILI Labs experts, on ERP, Artificial Intelligence and DevSecOps."
+    },
+    "featuredBadge": "Featured",
+    "readArticle": "Read the article",
+    "newsletter": {
+      "title": "Stay ahead of the tech curve",
+      "subtitle": "Sign up for our newsletter: 2 articles a month, zero spam.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "your@email.com",
+      "subscribeButton": "Subscribe →"
+    },
+    "post": {
+      "breadcrumbAriaLabel": "Breadcrumb",
+      "breadcrumbHome": "Home",
+      "breadcrumbBlog": "Blog",
+      "readTimeSuffix": "read",
+      "newsletterTitle": "Don't miss our next articles",
+      "newsletterSubtitle": "Sign up for our newsletter: 2 articles a month.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "your@email.com",
+      "subscribeButton": "Subscribe",
+      "backToBlog": "Back to blog",
+      "keywordDigitalTransformation": "digital transformation",
+      "keywordWestAfrica": "West Africa"
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "About — Our Mission and Team",
+      "description": "Discover AKILI Labs, an IT consulting firm and Odoo ERP integrator based in Abidjan, Côte d'Ivoire: our mission, our values, and our team of experts across the UEMOA zone.",
+      "ogTitle": "About — AKILI Labs",
+      "ogDescription": "Our mission, our values, and our team of experts in digital transformation, Odoo ERP, AI, and DevSecOps in West Africa.",
+      "ogImageAlt": "About AKILI Labs"
+    },
+    "hero": {
+      "badge": "Our identity",
+      "titlePart1": "Who ",
+      "titleHighlight": "are we?",
+      "subtitle": "AKILI Labs is a consulting and engineering firm specializing in digital transformation, ERP, Artificial Intelligence, and DevSecOps. Founded to become a benchmark player in Africa, we operate across the entire UEMOA/OHADA zone."
+    },
+    "vision": {
+      "label": "Our vision",
+      "title": "A benchmark player in Africa's digital transformation",
+      "text": "To be recognized as the trusted partner of organizations seeking to modernize their information systems, offering innovative, secure solutions perfectly suited to Africa's business challenges."
+    },
+    "mission": {
+      "label": "Our mission",
+      "title": "Support, integrate, innovate",
+      "text": "We help businesses design, integrate, and evolve their information systems by combining business expertise, modern technology, and continuous innovation."
+    },
+    "values": {
+      "badge": "Our values",
+      "title": "What defines us"
+    },
+    "team": {
+      "badge": "Our team",
+      "title": "The experts behind AKILI Labs",
+      "subtitle": "A multidisciplinary team, passionate about technology and committed to Africa's digital transformation.",
+      "linkedinAriaLabel": "LinkedIn profile of {name}",
+      "linkedinText": "View LinkedIn profile",
+      "contactPole": "Contact this division →",
+      "joinTitle": "Want to join the team?",
+      "joinText": "We're hiring talented people passionate about tech and impact in Africa.",
+      "viewOffers": "View our openings →"
+    },
+    "partners": {
+      "label": "Technologies & Partners"
+    },
+    "cta": {
+      "title": "Join the AKILI Labs adventure",
+      "text": "We're hiring talented people passionate about tech and impact in Africa.",
+      "viewOffers": "View openings →",
+      "contactButton": "Let's talk about your project"
+    }
+  },
+  "Contact": {
+    "meta": {
+      "title": "Contact — Let's Talk About Your Project",
+      "description": "Contact AKILI Labs for your digital transformation, Odoo ERP, Artificial Intelligence, or DevSecOps project in the UEMOA zone. Free initial consultation, response within 24 business hours.",
+      "ogTitle": "Contact — AKILI Labs",
+      "ogDescription": "Let's talk about your ERP, AI, or DevSecOps project in West Africa. Free initial consultation.",
+      "ogImageAlt": "Contact AKILI Labs"
+    },
+    "hero": {
+      "badge": "Let's talk about your project",
+      "titleHighlight": "Contact",
+      "titleSuffix": " us",
+      "subtitle": "Our team responds within 24 business hours. The initial consultation is free."
+    },
+    "sidebar": {
+      "title": "Our contact details",
+      "addressLabel": "Head office",
+      "addressCity": "Abidjan, Côte d'Ivoire",
+      "addressZone": "UEMOA Zone",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "availabilityLabel": "Availability",
+      "availabilityValue": "Mon–Fri: 8am–6pm GMT",
+      "quickReplyTitle": "Fast response guaranteed",
+      "quickReplyTextRich": "Our experts respond within <strong>24 business hours</strong>. The initial consultation is entirely free.",
+      "trust1": "Free initial consultation",
+      "trust2": "Confidentiality guaranteed",
+      "trust3": "Certified experts",
+      "trust4": "Quote within 48h"
+    },
+    "form": {
+      "title": "Tell us about your project",
+      "nameLabel": "Full name *",
+      "companyLabel": "Company",
+      "emailLabel": "Business email *",
+      "phoneLabel": "Phone",
+      "subjectLabel": "Subject *",
+      "subjectPlaceholder": "Select a subject",
+      "subjectOptions": [
+        "ERP / Odoo Project",
+        "Artificial Intelligence",
+        "DevSecOps / Cloud",
+        "Custom Development",
+        "Digital Transformation",
+        "Business Intelligence",
+        "Partnership Request",
+        "Other"
+      ],
+      "messageLabel": "Your message *",
+      "messagePlaceholder": "Briefly describe your need, your industry, and your challenges...",
+      "messageCounter": "{count} / {max}",
+      "submitButton": "Send message",
+      "submitLoading": "Sending...",
+      "disclaimer": "By submitting this form, you agree that your data may be used to contact you back.",
+      "mailSubjectPrefix": "[Website]",
+      "mailBodyName": "Name",
+      "mailBodyCompany": "Company",
+      "mailBodyCompanyEmpty": "Not provided",
+      "mailBodyEmail": "Email",
+      "mailBodyPhone": "Phone",
+      "mailBodyPhoneEmpty": "Not provided",
+      "mailBodySubject": "Subject",
+      "mailBodyMessage": "Message:"
+    },
+    "success": {
+      "title": "Email ready",
+      "text": "Your mail client will open with a pre-filled message. Review it, then send it to contact@akililabs.io.",
+      "resetButton": "Prepare another message"
+    }
+  },
+  "Careers": {
+    "meta": {
+      "title": "Careers — AKILI Labs",
+      "description": "Join AKILI Labs and take part in Africa's digital transformation. Discover our job openings."
+    },
+    "hero": {
+      "badge": "Join the adventure",
+      "titleHighlight": "Build",
+      "titleLine1": " Africa's digital future",
+      "titleLine2": "with us",
+      "subtitle": "AKILI Labs is hiring talented people who are passionate about technology and believe in its impact on the African continent."
+    },
+    "avantages": {
+      "badge": "Why join us",
+      "title": "What we offer",
+      "items": [
+        {
+          "title": "Innovative projects",
+          "desc": "Work on high-impact ERP, AI, and DevSecOps projects across Africa."
+        },
+        {
+          "title": "Continuous training",
+          "desc": "Annual training budget plus access to Odoo, AWS, and GitLab certifications."
+        },
+        {
+          "title": "Collaborative culture",
+          "desc": "A close-knit team, flat management, and transparent communication."
+        },
+        {
+          "title": "Flexibility",
+          "desc": "Partial remote work, flexible hours, and mobility across the UEMOA zone."
+        }
+      ]
+    },
+    "offres": {
+      "badge": "Open positions",
+      "title": "Our job openings",
+      "applyLink": "Apply →",
+      "domainLabels": {
+        "erp": "ERP",
+        "devsecops": "DevSecOps",
+        "ia": "AI",
+        "projet": "Project"
+      },
+      "items": [
+        {
+          "titre": "Senior Odoo ERP Consultant",
+          "type": "CDI (permanent contract)",
+          "lieu": "Abidjan, CI",
+          "domainId": "erp"
+        },
+        {
+          "titre": "Python / Odoo Developer",
+          "type": "CDI",
+          "lieu": "Abidjan, CI",
+          "domainId": "erp"
+        },
+        {
+          "titre": "DevSecOps Engineer",
+          "type": "CDI",
+          "lieu": "Abidjan, CI",
+          "domainId": "devsecops"
+        },
+        {
+          "titre": "Data Scientist / AI",
+          "type": "CDI",
+          "lieu": "Abidjan, CI",
+          "domainId": "ia"
+        },
+        {
+          "titre": "ERP Project Manager",
+          "type": "CDI",
+          "lieu": "Abidjan, CI",
+          "domainId": "projet"
+        }
+      ],
+      "spontaneousTitle": "Don't see a role that fits your profile?",
+      "spontaneousText": "Send us a spontaneous application. We continuously build a pool of talent.",
+      "spontaneousLink": "Spontaneous application →"
+    },
+    "form": {
+      "progress": {
+        "stepLabel": "Step {step} of 2",
+        "step1Title": "Personal information",
+        "step2Title": "Your application",
+        "step1Nav": "Profile",
+        "step2Nav": "Application"
+      },
+      "step1": {
+        "heading": "Your personal information",
+        "nomLabel": "Full name",
+        "nomPlaceholder": "Kouamé Jean-Baptiste",
+        "emailLabel": "Business email",
+        "emailPlaceholder": "jean@example.com",
+        "telephoneLabel": "Phone number",
+        "telephonePlaceholder": "+225 07 00 00 00 00",
+        "villeLabel": "City of residence",
+        "villePlaceholder": "Abidjan",
+        "disponibiliteLabel": "Availability",
+        "disponibilitePlaceholder": "Select your availability",
+        "disponibiliteOptions": [
+          "Immediate",
+          "Within 1 month",
+          "Within 3 months",
+          "To be determined"
+        ],
+        "linkedinLabel": "LinkedIn profile",
+        "linkedinPlaceholder": "https://linkedin.com/in/your-profile",
+        "continueButton": "Continue"
+      },
+      "step2": {
+        "heading": "Your application",
+        "posteLabel": "Position applied for",
+        "postePlaceholder": "Select a position",
+        "posteOptions": [
+          "Senior Odoo ERP Consultant",
+          "Python / Odoo Developer",
+          "DevSecOps Engineer",
+          "Data Scientist / AI",
+          "ERP Project Manager",
+          "Spontaneous application"
+        ],
+        "contratLabel": "Contract type",
+        "contratPlaceholder": "Select a type",
+        "contratOptions": [
+          "CDI",
+          "Freelance / Staffing",
+          "Internship",
+          "Work-study program"
+        ],
+        "experienceLabel": "Years of experience",
+        "experiencePlaceholder": "Select your level",
+        "experienceOptions": [
+          "0 – 2 years (Junior)",
+          "3 – 5 years (Mid-level)",
+          "5 – 10 years (Senior)",
+          "10+ years (Expert)"
+        ],
+        "salaireLabel": "Salary expectations",
+        "salairePlaceholder": "e.g., 800,000 XOF / month",
+        "motivationLabel": "Cover letter",
+        "motivationPlaceholder": "Tell us about yourself, explain your interest in AKILI Labs, and how your profile fits the position.\n\n({min} characters minimum, {max} maximum)",
+        "motivationCounter": "{count} / {max}",
+        "cvLabel": "Resume (PDF, max 5 MB)",
+        "cvPlaceholderEmpty": "Select your resume to have its name added to the email",
+        "cvRemoveAriaLabel": "Remove selected file",
+        "portfolioLabel": "Portfolio / GitHub",
+        "portfolioPlaceholder": "https://github.com/your-profile",
+        "sourceLabel": "How did you hear about us?",
+        "sourcePlaceholder": "Select an option",
+        "sourceOptions": [
+          "LinkedIn",
+          "AKILI Labs website",
+          "Word of mouth / Network",
+          "Job fair / Forum",
+          "Other"
+        ],
+        "summaryTitle": "Your information",
+        "summaryEdit": "Edit",
+        "summaryAvailable": "Available:",
+        "backButton": "Back",
+        "submitButton": "Submit my application",
+        "submitLoading": "Sending…",
+        "disclaimerRich": "Your mail client will prepare an email to <strong>rh@akililabs.io</strong> · Remember to attach your CV in PDF format"
+      },
+      "errors": {
+        "nom": "Name required (minimum 3 characters)",
+        "email": "Invalid email address",
+        "telephone": "Phone number required",
+        "ville": "City required",
+        "disponibilite": "Please indicate your availability",
+        "linkedin": "Invalid URL (must start with https://)",
+        "poste": "Please select a position",
+        "contrat": "Contract type required",
+        "experience": "Experience level required",
+        "motivationMin": "Cover letter required ({min} characters minimum)",
+        "motivationMax": "Maximum {max} characters",
+        "portfolio": "Invalid URL",
+        "cvType": "PDF files only",
+        "cvSize": "File too large (max 5 MB)"
+      },
+      "success": {
+        "title": "Application email ready",
+        "textRich": "Thank you, <strong>{name}</strong>. Your mail client will open with the pre-filled information. Attach your CV in PDF format, then send the email.",
+        "resetButton": "Prepare another application"
+      },
+      "mail": {
+        "subjectPrefix": "[Application]",
+        "nom": "Name",
+        "email": "Email",
+        "telephone": "Phone",
+        "ville": "City",
+        "disponibilite": "Availability",
+        "linkedin": "LinkedIn",
+        "linkedinEmpty": "Not provided",
+        "posteVise": "Position applied for",
+        "typeContrat": "Contract type",
+        "experience": "Experience",
+        "pretentions": "Salary expectations",
+        "pretentionsEmpty": "Not provided",
+        "portfolio": "Portfolio / GitHub",
+        "portfolioEmpty": "Not provided",
+        "source": "Source",
+        "sourceEmpty": "Not provided",
+        "cv": "Selected resume",
+        "cvEmpty": "To be attached to this email",
+        "motivation": "Motivation:",
+        "footer": "Please attach your CV in PDF format before sending if the file is not already attached."
+      }
+    }
+  },
+  "Faq": {
+    "meta": {
+      "title": "FAQ — OHADA ERP, AI, DevSecOps & Digital Transformation",
+      "description": "Answers to all your questions on Odoo ERP integration in the UEMOA zone, OHADA compliance, generative AI for African businesses, DevSecOps, and digital transformation.",
+      "ogTitle": "FAQ AKILI Labs — OHADA ERP, AI & DevSecOps in West Africa",
+      "ogDescription": "All our answers on Odoo ERP, OHADA compliance, generative AI, DevSecOps, and digital transformation in the UEMOA zone.",
+      "ogImageAlt": "FAQ AKILI Labs"
+    },
+    "jsonLd": {
+      "name": "FAQ AKILI Labs — OHADA ERP, AI & DevSecOps",
+      "description": "Frequently asked questions about Odoo ERP integration, OHADA compliance, generative AI, and DevSecOps in West Africa."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "faq": "FAQ"
+    },
+    "hero": {
+      "badge": "Knowledge base",
+      "titlePart1": "Frequently asked ",
+      "titleHighlight": "questions",
+      "subtitle": "All your questions on Odoo ERP, OHADA compliance, generative AI, DevSecOps, and digital transformation in West Africa."
+    },
+    "categories": {
+      "all": "All",
+      "erp": "ERP & OHADA",
+      "digitalTransformation": "Digital Transformation",
+      "ai": "Artificial Intelligence",
+      "devsecops": "DevSecOps",
+      "akili": "AKILI Labs"
+    },
+    "accordion": {
+      "searchPlaceholder": "Search a question…",
+      "searchAriaLabel": "Search the FAQ",
+      "clearSearchAriaLabel": "Clear search",
+      "categoryFilterAriaLabel": "Filter by category",
+      "resultsEmpty": "No question found.",
+      "resultsCountSingular": "{count} question",
+      "resultsCountPlural": "{count} questions",
+      "noResults": {
+        "title": "No question matches",
+        "textRich": "Try another term or consult our <link>experts directly</link>."
+      }
+    },
+    "items": [
+      {
+        "categoryId": "erp",
+        "question": "What is an OHADA-compliant ERP?",
+        "answer": "An OHADA-compliant ERP is an integrated management system that follows the OHADA chart of accounts, in force across 17 African countries including Côte d'Ivoire and Senegal. It automates accounting, revised SYSCOHADA financial statements, and local VAT, eliminating manual reprocessing that is often a source of errors."
+      },
+      {
+        "categoryId": "erp",
+        "question": "Why choose Odoo for a business in West Africa?",
+        "answer": "Odoo is the most widely adopted ERP in the UEMOA zone thanks to its modularity, competitive total cost of ownership, and ability to adapt to local specifics (OHADA, Ivorian labor law, UEMOA VAT). With over 28 million users worldwide, its ecosystem of certified local partners guarantees lasting support."
+      },
+      {
+        "categoryId": "erp",
+        "question": "How long does an Odoo ERP integration project take?",
+        "answer": "A first modular rollout (accounting + inventory) takes 3 to 6 months. A full scope covering HR, OHADA payroll, CRM, and purchasing requires 6 to 12 months, including training. Duration depends on source data quality, the availability of business teams, and the level of customization required."
+      },
+      {
+        "categoryId": "erp",
+        "question": "What is the difference between Odoo Community and Odoo Enterprise?",
+        "answer": "Odoo Community is open-source and free. Odoo Enterprise adds advanced modules (payroll, e-signature, multi-company consolidation), official support from Odoo S.A., guaranteed security updates, and native mobile apps. AKILI Labs recommends Enterprise for organizations with more than 20 users or complex HR and OHADA payroll needs."
+      },
+      {
+        "categoryId": "erp",
+        "question": "How does data migration from a legacy system work?",
+        "answer": "Migration follows 4 steps: audit and mapping of source data, cleansing and transformation into Odoo's format, loading into a test environment with business validation, then cutover to production. AKILI Labs favors progressive imports and cross-consistency checks to avoid data loss or duplicates."
+      },
+      {
+        "categoryId": "digitalTransformation",
+        "question": "Where should you start your digital transformation?",
+        "answer": "Digital transformation starts with an audit of the current setup: process mapping, identification of friction points, and potential gains. AKILI Labs produces an IT Master Plan (Schéma Directeur Informatique) that prioritizes initiatives by business impact and feasibility, factoring in UEMOA budget constraints."
+      },
+      {
+        "categoryId": "digitalTransformation",
+        "question": "What is an EDM (Electronic Document Management) system?",
+        "answer": "An EDM system digitizes, classifies, indexes, and controls access to company documents. It eliminates paper archives, speeds up document search, and secures data. In the UEMOA zone, it is especially useful for client, HR, and accounting files subject to legal retention obligations."
+      },
+      {
+        "categoryId": "digitalTransformation",
+        "question": "How do you choose an IT partner in West Africa?",
+        "answer": "A good IT partner in West Africa must master the local context: OHADA regulations, variable connectivity, and budget constraints in XOF. Check references in your industry, post-deployment support capacity, local presence for on-site interventions, and the team's technical certifications."
+      },
+      {
+        "categoryId": "digitalTransformation",
+        "question": "What is BPM and what is it used for?",
+        "answer": "BPM (Business Process Management) models, automates, and optimizes business processes. It maps workflows, identifies bottlenecks, and implements automated workflows: approvals, notifications, escalations. The result: faster, more traceable processes that depend less on key individuals."
+      },
+      {
+        "categoryId": "ai",
+        "question": "How can AI help my business in Africa?",
+        "answer": "AI creates value on concrete use cases: automated credit file analysis (−94% turnaround time observed at a UEMOA client bank), support chatbots in French and local languages, document OCR, inventory forecasting, and accounting anomaly detection. The starting point is always a measurable business problem."
+      },
+      {
+        "categoryId": "ai",
+        "question": "What is a private LLM and why use one?",
+        "answer": "A private LLM (Large Language Model) is an AI model deployed on your own infrastructure or a dedicated cloud, with no data shared with third parties. It guarantees the confidentiality of customer, HR, and financial data. AKILI Labs deploys solutions based on Ollama, LLaMA, or Mistral, hosted in your controlled environment."
+      },
+      {
+        "categoryId": "ai",
+        "question": "What is RAG (Retrieval-Augmented Generation)?",
+        "answer": "RAG connects an AI model to your own data: internal documents, knowledge base, ERP. The AI first searches your sources, then generates an accurate, traceable answer without hallucination. It is the recommended method for deploying a reliable document assistant or business chatbot on private data."
+      },
+      {
+        "categoryId": "ai",
+        "question": "Is generative AI secure for enterprise data?",
+        "answer": "Generative AI is secure when properly architected. AKILI Labs recommends models deployed on-premises or in a dedicated VPC, with per-client isolation, request logging, and granular access control. Third-party cloud APIs (ChatGPT, Gemini) are not recommended for sensitive data without a prior risk analysis."
+      },
+      {
+        "categoryId": "devsecops",
+        "question": "What is DevSecOps?",
+        "answer": "DevSecOps embeds security at every stage of the software development lifecycle: design, code, testing, deployment, production. Unlike the traditional approach where security comes in at the end of a project, DevSecOps detects vulnerabilities early, reduces remediation costs, and strengthens trust with customers and partners."
+      },
+      {
+        "categoryId": "devsecops",
+        "question": "Why containerize my applications with Docker?",
+        "answer": "Docker packages an application with all its dependencies into a portable container. The result: identical environments from development to production, reproducible deployments, service isolation, and easier scaling. Paired with Kubernetes, it lets you manage dozens of services in an automated way, with 10× less deployment time."
+      },
+      {
+        "categoryId": "devsecops",
+        "question": "What is Infrastructure as Code (IaC)?",
+        "answer": "IaC consists of describing and provisioning your infrastructure (servers, networks, databases) through version-controlled code files (Terraform, Ansible). Your environments become reproducible, auditable, and deployable in minutes. DEV, QA, and PROD stay consistently aligned, eliminating bugs caused by configuration drift."
+      },
+      {
+        "categoryId": "devsecops",
+        "question": "What is the difference between CI and CD?",
+        "answer": "CI (Continuous Integration) automates testing and builds on every code commit: errors are detected in under 10 minutes. CD (Continuous Deployment) automatically pushes validated code to target environments. Together, CI/CD reduce delivery times from weeks to hours while maintaining quality."
+      },
+      {
+        "categoryId": "akili",
+        "question": "Which countries does AKILI Labs operate in?",
+        "answer": "AKILI Labs operates in the 8 countries of the UEMOA zone: Côte d'Ivoire, Senegal, Mali, Burkina Faso, Niger, Togo, Benin, and Guinea-Bissau. Our headquarters is in Abidjan. For remote projects, we operate across the entire ECOWAS zone and also support French organizations with subsidiaries in West Africa."
+      },
+      {
+        "categoryId": "akili",
+        "question": "How do I start a project with AKILI Labs?",
+        "answer": "Three steps: (1) Contact us by email or online form, with a response within 24 business hours. (2) A free scoping consultation: we analyze your needs, context, and budget constraints. (3) A technical and financial proposal within 5 business days. No commitment on your part before you approve the proposal."
+      },
+      {
+        "categoryId": "akili",
+        "question": "Do you offer TMA (application maintenance) services?",
+        "answer": "Yes. AKILI Labs provides ongoing TMA for your systems with contractual SLAs: P1 incidents resolved within 4h, P2 within 24h. Our TMA contracts include proactive monitoring, security updates, Odoo patches, minor enhancements, and a dedicated project manager. P1 SLA compliance rate: 100% over the past 12 months."
+      },
+      {
+        "categoryId": "akili",
+        "question": "What is your pricing approach?",
+        "answer": "Our services are offered on a time-and-materials basis (daily rate) or as a fixed-price package. For ERP projects, we offer CAPEX (upfront investment) or OPEX (monthly subscription) plans suited to the cash-flow constraints of UEMOA organizations. The initial consultation is free and non-binding. Quotes within 5 business days."
+      }
+    ],
+    "cta": {
+      "title": "Don't see your question listed?",
+      "textRich": "Our experts respond within <strong>24 business hours</strong>. The initial consultation is entirely free and non-binding.",
+      "askButton": "Ask a question",
+      "readArticles": "Read our articles",
+      "quickAccessLabel": "Quick access by topic"
+    }
+  },
+  "Legal": {
+    "meta": {
+      "title": "Legal Notice",
+      "description": "Legal notice for the AKILI Labs website — publisher, hosting, intellectual property."
+    },
+    "hero": {
+      "badge": "Legal information",
+      "title": "Legal Notice",
+      "subtitle": "Website publisher, hosting, and intellectual property."
+    },
+    "notice": {
+      "strong": "Draft document.",
+      "text": "This page was drafted from the information currently available and must be reviewed and completed (exact company name, RCCM number, hosting provider) by a lawyer before being considered final."
+    },
+    "publisher": {
+      "title": "Website publisher",
+      "introRich": "The website <strong>akililabs.io</strong> is published by <strong>AKILI Labs</strong>, an IT consulting firm and Odoo ERP integrator, whose registered office is located in Abidjan, Côte d'Ivoire (UEMOA Zone).",
+      "rccmLabel": "RCCM number:",
+      "toComplete": "to be completed",
+      "directorLabel": "Publication director:",
+      "contactLabel": "Contact:"
+    },
+    "hosting": {
+      "title": "Hosting",
+      "textRich": "The website is hosted by: <em>to be completed (name, address, and contact details of the hosting provider)</em>."
+    },
+    "ip": {
+      "title": "Intellectual property",
+      "text": "All content on this website (text, logos, graphics, icons) is the exclusive property of AKILI Labs, unless otherwise stated, and may not be reproduced, distributed, or modified without prior written authorization."
+    },
+    "personalData": {
+      "title": "Personal data",
+      "textRich": "The processing of data collected through this website (in particular the contact form) is detailed in our <link>privacy policy</link>."
+    },
+    "contact": {
+      "title": "Contact",
+      "text": "For any question regarding this legal notice:"
+    }
+  },
+  "Privacy": {
+    "meta": {
+      "title": "Privacy Policy",
+      "description": "Privacy policy for the AKILI Labs website — data collected, purposes, and individual rights."
+    },
+    "hero": {
+      "badge": "Privacy",
+      "title": "Privacy Policy",
+      "subtitle": "How we collect, use, and protect your personal data."
+    },
+    "notice": {
+      "strong": "Draft document.",
+      "text": "This policy describes the processing actually carried out by the website to date. It must be reviewed by a lawyer to confirm its compliance with Ivorian law no. 2013-450 on the protection of personal data and, where applicable, with the GDPR, before final publication."
+    },
+    "controller": {
+      "title": "Data controller",
+      "text": "AKILI Labs, Abidjan, Côte d'Ivoire (UEMOA Zone), is the controller responsible for processing data collected on this website. Contact:"
+    },
+    "dataCollected": {
+      "title": "Data collected",
+      "introRich": "The form on the <link>Contact</link> page collects: full name, professional email address, company (optional), phone number (optional), subject, and message.",
+      "outro": "No other personal data is actively collected on the rest of the website."
+    },
+    "purpose": {
+      "title": "Purpose and legal basis",
+      "text": "This data is used exclusively to respond to your contact or quote request. The processing is based on your consent, given at the time the form is submitted."
+    },
+    "retention": {
+      "title": "Retention period",
+      "text": "Data submitted through the contact form is retained for as long as necessary to process your request, then archived or deleted in accordance with our commercial and legal obligations."
+    },
+    "rights": {
+      "title": "Your rights",
+      "text": "In accordance with applicable regulations, you have the right to access, rectify, object to, and delete your personal data. To exercise these rights, contact us at"
+    },
+    "cookies": {
+      "title": "Cookies",
+      "text": "This website does not use advertising tracking or third-party analytics cookies at this time. This section will be updated if an audience measurement tool is added."
+    }
+  }
+}

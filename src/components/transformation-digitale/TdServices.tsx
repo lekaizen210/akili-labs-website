@@ -1,19 +1,24 @@
 "use client";
 
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import { tdServices } from "@/lib/transformation-digitale-data";
+import { l } from "@/lib/i18n-content";
 
 export default function TdServices() {
+  const t = useTranslations("Td.services");
+  const locale = useLocale();
+
   return (
     <section className="py-20 bg-blue-light">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-6">
-            ■ Au-delà du diagnostic
+            ■ {t("badge")}
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-navy">
-            Une transformation ne réussit que si vos équipes se l&apos;approprient
+            {t("title")}
           </h2>
         </div>
 
@@ -21,7 +26,7 @@ export default function TdServices() {
           <FadeUp>
             <Image
               src="/transformation-digitale-images/td-dematerialisation.png"
-              alt="Recherche dans la gestion documentaire : la requête « facture globaltrade juin 2026 » retourne trois résultats en 0,4 seconde, avec les extraits du texte reconnu par OCR surlignés dans le contenu des documents, un aperçu de la facture et sa durée de conservation légale OHADA"
+              alt={t("imageAlt")}
               width={1400}
               height={900}
               loading="lazy"
@@ -32,9 +37,9 @@ export default function TdServices() {
 
           <StaggerContainer className="space-y-5" stagger={0.09}>
             {tdServices.map((s) => (
-              <StaggerItem key={s.title} className="bg-white rounded-xl p-5 border border-line">
-                <h3 className="font-bold text-navy mb-1.5">{s.title}</h3>
-                <p className="text-sm text-ink leading-relaxed">{s.desc}</p>
+              <StaggerItem key={l(s.title, "fr")} className="bg-white rounded-xl p-5 border border-line">
+                <h3 className="font-bold text-navy mb-1.5">{l(s.title, locale)}</h3>
+                <p className="text-sm text-ink leading-relaxed">{l(s.desc, locale)}</p>
               </StaggerItem>
             ))}
           </StaggerContainer>

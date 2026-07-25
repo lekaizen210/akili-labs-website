@@ -2,21 +2,26 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 import { FadeUp, viewportOnce } from "@/components/ui/motion-primitives";
 import { iaPhases } from "@/lib/ia-data";
+import { l } from "@/lib/i18n-content";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function IaMethodology() {
+  const t = useTranslations("Ia.methodology");
+  const locale = useLocale();
+
   return (
     <section className="py-20 bg-blue-light">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-6">
-            ■ Notre Méthodologie IA
+            ■ {t("badge")}
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-navy mb-4">
-            Une méthodologie éprouvée, du cadrage au monitoring
+            {t("title")}
           </h2>
         </div>
 
@@ -24,7 +29,7 @@ export default function IaMethodology() {
           <div className="mb-16">
             <Image
               src="/ia-images/ia-apprentissage.png"
-              alt="Cycle de vie du modèle : les cinq étapes de vos données brutes à la décision quotidienne, le tableau comparatif des essais d’entraînement où le modèle explicable l’emporte sur le plus précis, et les quatre contrôles validés avant mise en production dont la recette par les équipes commerciales"
+              alt={t("imageAlt")}
               width={1400}
               height={900}
               loading="lazy"
@@ -45,9 +50,10 @@ export default function IaMethodology() {
           />
           <div className="space-y-6 sm:space-y-4">
             {iaPhases.map((p, i) => {
-              const separatorIndex = p.phase.indexOf(". ");
-              const number = p.phase.slice(0, separatorIndex);
-              const label = p.phase.slice(separatorIndex + 2);
+              const phase = l(p.phase, locale);
+              const separatorIndex = phase.indexOf(". ");
+              const number = phase.slice(0, separatorIndex);
+              const label = phase.slice(separatorIndex + 2);
               const isLeft = i % 2 === 0;
 
               const circle = (
@@ -72,17 +78,17 @@ export default function IaMethodology() {
                 >
                   <div className="flex items-baseline justify-between gap-2 mb-1">
                     <div className="font-bold text-navy">{label}</div>
-                    <div className="text-xs font-semibold text-ink/80 shrink-0">{p.duration}</div>
+                    <div className="text-xs font-semibold text-ink/80 shrink-0">{l(p.duration, locale)}</div>
                   </div>
-                  <div className="text-sm text-ink mb-3">{p.content}</div>
+                  <div className="text-sm text-ink mb-3">{l(p.content, locale)}</div>
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-light text-xs font-semibold text-navy">
-                    <span className="text-orange">▸</span> Livrable : {p.livrable}
+                    <span className="text-orange">▸</span> {t("deliverableLabel")}{l(p.livrable, locale)}
                   </div>
                 </motion.div>
               );
 
               return (
-                <div key={p.phase} className="group relative">
+                <div key={l(p.phase, "fr")} className="group relative">
                   <div className="flex gap-5 sm:hidden">
                     {circle}
                     <div className="flex-1">{card}</div>

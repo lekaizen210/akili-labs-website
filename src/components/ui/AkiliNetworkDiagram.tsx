@@ -27,13 +27,17 @@ const nodes = countries.map(({ name, code }, i) => {
   };
 });
 
-export default function AkiliNetworkDiagram() {
+export default function AkiliNetworkDiagram({
+  ariaLabel = "AKILI Labs intervient dans 8 pays de la zone UEMOA/CEDEAO",
+}: {
+  ariaLabel?: string;
+}) {
   return (
     <svg
       viewBox="0 0 320 320"
       className="w-full max-w-xs mx-auto h-auto"
       role="img"
-      aria-label="AKILI Labs intervient dans 8 pays de la zone UEMOA/CEDEAO"
+      aria-label={ariaLabel}
     >
       {nodes.map((n, i) => (
         <motion.line

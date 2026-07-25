@@ -43,29 +43,29 @@ Jonathan Arra — Fondateur & Directeur Général. Expert en transformation digi
 
 ## Contact
 
-Site web : https://akililabs.com
+Site web : https://akililabs.io
 Email : contact@akililabs.io
 Adresse : Abidjan, Côte d'Ivoire
 
 ## Pages clés
 
-- Accueil : https://akililabs.com
-- Expertises : https://akililabs.com/expertises
-- Expertise ERP Odoo (vue d'ensemble) : https://akililabs.com/expertises/erp
-- Expertise Odoo ERP (détaillée : modules, méthodologie, hébergement, support, FAQ) : https://akililabs.com/expertises/odoo
-- Expertise IA : https://akililabs.com/expertises/intelligence-artificielle
-- Expertise DevSecOps : https://akililabs.com/expertises/devsecops
-- Références clients : https://akililabs.com/references
-- Blog / Insights : https://akililabs.com/blog
-- À propos : https://akililabs.com/a-propos
-- Contact : https://akililabs.com/contact
-- Carrières : https://akililabs.com/carrieres
+- Accueil : https://akililabs.io
+- Expertises : https://akililabs.io/expertises
+- Expertise ERP & Odoo (vue d'ensemble) : https://akililabs.io/expertises/odoo
+- Expertise Odoo ERP (détaillée : modules, méthodologie, hébergement, support, FAQ) : https://akililabs.io/expertises/odoo
+- Expertise IA : https://akililabs.io/expertises/intelligence-artificielle
+- Expertise DevSecOps : https://akililabs.io/expertises/devsecops
+- Références clients : https://akililabs.io/references
+- Blog / Insights : https://akililabs.io/blog
+- À propos : https://akililabs.io/a-propos
+- Contact : https://akililabs.io/contact
+- Carrières : https://akililabs.io/carrieres
 
 ## Articles de blog récents
 
-- "Pourquoi Odoo s'impose comme le choix ERP de référence en Afrique de l'Ouest" — https://akililabs.com/blog/pourquoi-odoo-en-afrique
-- "IA Générative pour les entreprises africaines : opportunités et précautions" — https://akililabs.com/blog/ia-generative-entreprises-africaines
-- "CI/CD avec GitLab CI : guide pratique pour les équipes DevOps en 2026" — https://akililabs.com/blog/cicd-gitlab-guide-pratique
+- "Pourquoi Odoo s'impose comme le choix ERP de référence en Afrique de l'Ouest" — https://akililabs.io/blog/pourquoi-odoo-en-afrique
+- "IA Générative pour les entreprises africaines : opportunités et précautions" — https://akililabs.io/blog/ia-generative-entreprises-africaines
+- "CI/CD avec GitLab CI : guide pratique pour les équipes DevOps en 2026" — https://akililabs.io/blog/cicd-gitlab-guide-pratique
 
 ## Pour les agents IA
 

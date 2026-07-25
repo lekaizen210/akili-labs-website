@@ -1,32 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
-
-const expertisesMenu = [
-  { label: "Transformation Digitale", href: "/expertises/transformation-digitale" },
-  { label: "ERP & Odoo", href: "/expertises/odoo" },
-  { label: "Intelligence Artificielle", href: "/expertises/intelligence-artificielle" },
-  { label: "DevSecOps", href: "/expertises/devsecops" },
-  { label: "Développement Métiers", href: "/expertises/developpement-metiers" },
-  { label: "Business Intelligence", href: "/expertises/business-intelligence" },
-];
-
-const navLinks = [
-  { label: "Accueil", href: "/" },
-  { label: "Expertises", href: "/expertises", hasDropdown: true },
-  { label: "Références", href: "/references" },
-  { label: "Blog", href: "/blog" },
-  { label: "FAQ", href: "/faq" },
-  { label: "À propos", href: "/a-propos" },
-];
-
-const mobileOnlyLinks = [{ label: "Carrières", href: "/carrieres" }];
+import LanguageSwitcher from "./LanguageSwitcher";
 
 function isActive(href: string, pathname: string): boolean {
   if (href === "/") return pathname === "/";
@@ -35,10 +17,31 @@ function isActive(href: string, pathname: string): boolean {
 }
 
 export default function Navbar() {
+  const t = useTranslations("Navbar");
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [expertisesOpen, setExpertisesOpen] = useState(false);
   const pathname = usePathname();
+
+  const expertisesMenu = [
+    { label: t("expertisesMenu.transformationDigitale"), href: "/expertises/transformation-digitale" },
+    { label: t("expertisesMenu.erpOdoo"), href: "/expertises/odoo" },
+    { label: t("expertisesMenu.intelligenceArtificielle"), href: "/expertises/intelligence-artificielle" },
+    { label: t("expertisesMenu.devsecops"), href: "/expertises/devsecops" },
+    { label: t("expertisesMenu.developpementMetiers"), href: "/expertises/developpement-metiers" },
+    { label: t("expertisesMenu.businessIntelligence"), href: "/expertises/business-intelligence" },
+  ];
+
+  const navLinks = [
+    { label: t("home"), href: "/" },
+    { label: t("expertises"), href: "/expertises", hasDropdown: true },
+    { label: t("references"), href: "/references" },
+    { label: t("blog"), href: "/blog" },
+    { label: t("faq"), href: "/faq" },
+    { label: t("about"), href: "/a-propos" },
+  ];
+
+  const mobileOnlyLinks = [{ label: t("careers"), href: "/carrieres" }];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -133,7 +136,7 @@ export default function Navbar() {
                           href="/expertises"
                           className="block px-4 py-2.5 text-sm font-semibold text-navy hover:bg-blue-light transition-colors border-b border-gray-100 mb-1"
                         >
-                          Toutes nos expertises →
+                          {t("allExpertises")}
                         </Link>
                         {expertisesMenu.map((item) => (
                           <Link
@@ -175,12 +178,13 @@ export default function Navbar() {
           </div>
 
           {/* CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-4">
+            <LanguageSwitcher inverted={!scrolled} />
             <Link
               href="/contact"
               className="px-5 py-2.5 bg-orange-cta text-white text-sm font-semibold rounded-lg hover:bg-orange-cta-hover transition-[background-color,box-shadow,transform] duration-200 ease-out shadow-md hover:shadow-lg hover:-translate-y-px active:scale-[0.97] active:translate-y-0"
             >
-              Discutons de votre projet →
+              {t("cta")}
             </Link>
           </div>
 
@@ -191,7 +195,7 @@ export default function Navbar() {
               "lg:hidden p-2 rounded-lg transition-colors",
               scrolled ? "text-navy" : "text-white"
             )}
-            aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
             aria-expanded={mobileOpen}
           >
             <AnimatePresence mode="wait" initial={false}>
@@ -264,7 +268,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="block px-4 pt-2 pb-1 text-xs font-semibold text-gray-500 uppercase tracking-wider hover:text-navy transition-colors"
               >
-                Expertises →
+                {t("expertisesMobileHeader")}
               </Link>
               {expertisesMenu.map((item) => (
                 <Link
@@ -307,8 +311,14 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className="block w-full text-center px-5 py-3 bg-orange-cta text-white text-sm font-semibold rounded-lg transition-transform duration-150 ease-out active:scale-[0.97]"
                 >
-                  Discutons de votre projet →
+                  {t("cta")}
                 </Link>
+              </div>
+              <div
+                className="flex justify-center pt-3 mt-1 border-t border-gray-100"
+                onClick={() => setMobileOpen(false)}
+              >
+                <LanguageSwitcher />
               </div>
             </motion.div>
           </motion.div>

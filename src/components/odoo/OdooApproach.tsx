@@ -1,47 +1,32 @@
 "use client";
 
 import { Compass, Layers, Globe, GraduationCap } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import ParticleCanvas from "@/components/ui/ParticleCanvas";
 
-const principles = [
-  {
-    icon: Compass,
-    title: "Le métier d'abord",
-    desc: "Les ateliers de cadrage partent de vos processus réels, pas des écrans d'Odoo : l'outil s'adapte à l'organisation, jamais l'inverse.",
-  },
-  {
-    icon: Layers,
-    title: "Standard avant spécifique",
-    desc: "Chaque développement sur mesure se justifie : le standard Odoo couvre l'essentiel des besoins et garantit des migrations futures sereines.",
-  },
-  {
-    icon: Globe,
-    title: "Réalisme UEMOA",
-    desc: "Connectivité variable, paiements Mobile Money, exigences OHADA : nos déploiements fonctionnent dans votre contexte, pas seulement en démonstration.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Transfert de compétences",
-    desc: "Vos équipes administrent et font évoluer leur ERP en autonomie après notre accompagnement.",
-  },
-];
+const principleIcons = [Compass, Layers, Globe, GraduationCap] as const;
 
 export default function OdooApproach() {
+  const t = useTranslations("Odoo.approach");
+  const principles = [1, 2, 3, 4].map((n, i) => ({
+    icon: principleIcons[i],
+    title: t(`principle${n}Title`),
+    desc: t(`principle${n}Desc`),
+  }));
+
   return (
     <section className="py-20 bg-navy relative overflow-hidden">
       <ParticleCanvas count={22} />
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white text-sm font-medium rounded-full mb-6 border border-white/20">
-            <span className="text-orange">■</span> Notre méthodologie
+            <span className="text-orange">■</span> {t("badge")}
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">
-            Une approche centrée sur votre métier, pas sur l&apos;outil
+            {t("title")}
           </h2>
-          <p className="text-white/70 max-w-2xl mx-auto">
-            Chez AKILI Labs, nous refusons le modèle &laquo; installer et partir &raquo;.
-          </p>
+          <p className="text-white/70 max-w-2xl mx-auto">{t("subtitle")}</p>
         </div>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto" stagger={0.1}>
           {principles.map((p) => (

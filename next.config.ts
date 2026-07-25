@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
 
 const securityHeaders = [
   { key: "X-Frame-Options", value: "DENY" },
@@ -13,6 +16,14 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   output: "standalone",
+
+  // Le layout racine est défini sur un segment dynamique top-level
+  // (app/[locale]/layout.tsx) : suivant la doc Next 16, ce cas nécessite
+  // global-not-found.js pour composer une page 404 cohérente (brandée)
+  // pour les URLs qui ne correspondent à aucune route générée.
+  experimental: {
+    globalNotFound: true,
+  },
 
   images: {
     remotePatterns: [],
@@ -45,4 +56,4 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

@@ -1,11 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import {
   Search, ClipboardList, PenTool, Code2, CheckCircle, Rocket, GraduationCap, Headphones,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 import { approach } from "@/lib/data";
+import { l } from "@/lib/i18n-content";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -15,6 +17,8 @@ const iconMap: Record<string, React.ElementType> = {
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function ApproachSection() {
+  const t = useTranslations("Home.approach");
+  const locale = useLocale();
   return (
     <section className="py-24 bg-blue-light" id="approche">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,14 +26,13 @@ export default function ApproachSection() {
         {/* Header */}
         <FadeUp className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-4">
-            ■ Méthodologie éprouvée
+            ■ {t("badge")}
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-navy mb-4">
-            Notre approche
+            {t("title")}
           </h2>
           <p className="text-lg text-ink max-w-2xl mx-auto">
-            Une démarche structurée en 8 étapes pour garantir la réussite de chaque projet,
-            de l&apos;analyse initiale au support continu.
+            {t("subtitle")}
           </p>
         </FadeUp>
 
@@ -57,7 +60,7 @@ export default function ApproachSection() {
                       <Icon size={20} className="text-navy" />
                     </div>
                   </div>
-                  <h3 className="text-sm font-bold text-navy">{step.title}</h3>
+                  <h3 className="text-sm font-bold text-navy">{l(step.title, locale)}</h3>
                 </motion.div>
               </StaggerItem>
             );
@@ -71,7 +74,7 @@ export default function ApproachSection() {
               href="/contact"
               className="inline-flex items-center gap-2 px-7 py-4 bg-navy text-white font-semibold rounded-xl hover:bg-[#243548] transition-colors duration-200 shadow-lg"
             >
-              Parlez-nous de votre projet →
+              {t("ctaButton")}
             </Link>
           </motion.div>
         </FadeUp>
