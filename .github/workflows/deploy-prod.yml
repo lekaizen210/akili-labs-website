@@ -80,7 +80,7 @@ jobs:
     needs: build
     environment:
       name: production
-      url: https://akililabs.com
+      url: https://akililabs.io
 
     steps:
       - uses: actions/checkout@v4
@@ -110,7 +110,7 @@ jobs:
 
             export VERSION=${{ needs.build.outputs.version }}
             export GHCR_OWNER=${{ github.repository_owner }}
-            export DOMAIN=akililabs.com
+            export DOMAIN=akililabs.io
 
             docker pull ${{ needs.build.outputs.image }}:${VERSION}
             docker compose -f docker-compose.prod.yml pull --ignore-pull-failures nginx
@@ -122,7 +122,7 @@ jobs:
         run: |
           sleep 20
           HTTP=$(curl -s -o /dev/null -w "%{http_code}" \
-            https://akililabs.com/ --max-time 15 || echo "000")
+            https://akililabs.io/ --max-time 15 || echo "000")
           echo "HTTP: $HTTP"
           [ "$HTTP" = "200" ] || (echo "❌ Healthcheck échoué" && exit 1)
           echo "✅ Production opérationnelle."
@@ -136,4 +136,4 @@ jobs:
             ## Déploiement AKILI Labs Website
 
             **Image Docker :** `${{ needs.build.outputs.image }}:${{ needs.build.outputs.version }}`
-            **Déployé sur :** https://akililabs.com
+            **Déployé sur :** https://akililabs.io
