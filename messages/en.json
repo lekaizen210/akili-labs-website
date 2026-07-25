@@ -85,13 +85,13 @@
       "description": "AKILI Labs helps organizations across the UEMOA zone with their digital transformation: Odoo ERP integration, Artificial Intelligence, DevSecOps, and custom development."
     },
     "hero": {
-      "badge": "A leading player in Africa's digital transformation",
+      "badge": "Based in Abidjan · Active across all 8 UEMOA countries",
       "titleLine1": "Your partner for",
       "titleWord1": "Digital",
       "titleWord2": "Transformation",
-      "titleLine3": "in Africa",
+      "titleLine3": "in West Africa",
       "subtitleLine1": "ERP, Artificial Intelligence, DevSecOps, Custom Development",
-      "subtitleLine2": "Solutions that create real value for organizations across the UEMOA zone.",
+      "subtitleLine2": "A founding team with over 30 years of combined IT project experience across the UEMOA zone, delivering solutions that create real value.",
       "ctaPrimary": "Free consultation",
       "ctaSecondary": "See our case studies",
       "techGenerativeAI": "Generative AI"
@@ -118,10 +118,15 @@
       "learnMore": "Learn more"
     },
     "stats": {},
+    "uemoa": {
+      "eyebrow": "Where we operate",
+      "countries": "Bénin · Burkina Faso · Côte d'Ivoire · Guinée-Bissau · Mali · Niger · Sénégal · Togo",
+      "text": "Expertise built on the ground, across all eight countries of the Union — OHADA regulations, UEMOA tax regimes, and local operational realities."
+    },
     "approach": {
-      "badge": "Proven methodology",
+      "badge": "A method forged in the field",
       "title": "Our approach",
-      "subtitle": "A structured 8-step process to ensure the success of every project, from initial analysis to ongoing support.",
+      "subtitle": "Eight steps distilled from over thirty combined years of projects our leadership has run across the UEMOA zone — from initial analysis to ongoing support.",
       "ctaButton": "Tell us about your project →"
     },
     "sectors": {
@@ -130,32 +135,23 @@
       "subtitle": "Our solutions adapt to the realities of every industry in West Africa."
     },
     "references": {
-      "badge": "Our work",
-      "title": "Trusted by our clients",
+      "badge": "Track record",
+      "title": "Projects our leadership team has delivered",
+      "subtitle": "Before founding AKILI Labs, our leadership team led major transformation projects across several UEMOA countries. Here are three that represent what we can deliver for you.",
       "viewAllLink": "See all our case studies",
-      "bottomText": "Your project will be our next case study.",
+      "transparencyNote": "Transparency: these projects were delivered by our founding members in their previous roles. Your project will be our next case study.",
       "bottomCta": "Start a project with us →"
     },
     "socialProof": {
-      "sectionLabel": "Trusted by",
-      "testimonialsBadge": "Client testimonials",
-      "testimonialsTitle": "What our clients say",
-      "starsAriaLabel": "{stars} out of 5 stars",
-      "testimonial1Quote": "AKILI Labs transformed our OHADA accounting management with Odoo. Our teams' skills improved remarkably, and closing times were cut in half.",
-      "testimonial1Name": "Kouamé A.",
-      "testimonial1Role": "Finance Director",
-      "testimonial1Company": "Industrial group",
-      "testimonial1Location": "Abidjan, Côte d'Ivoire",
-      "testimonial2Quote": "Their DevSecOps approach secured our CI/CD pipeline and sped up our releases. A responsive team that understands the challenges of a modern IT department in Africa.",
-      "testimonial2Name": "Fatou D.",
-      "testimonial2Role": "Information Systems Director",
-      "testimonial2Company": "UEMOA financial institution",
-      "testimonial2Location": "Dakar, Senegal",
-      "testimonial3Quote": "The Odoo HRIS module deployed by AKILI Labs covers all our payroll and leave management needs, with full compliance with Ivorian labor law. A trusted partner.",
-      "testimonial3Name": "Brice M.",
-      "testimonial3Role": "Human Resources Director",
-      "testimonial3Company": "Services company",
-      "testimonial3Location": "Abidjan, Côte d'Ivoire"
+      "eyebrow": "Our commitments as a young company",
+      "title": "What you can count on",
+      "lead": "A young company has only one real asset: the success of its first clients. Here's what we build into every contract.",
+      "card1Title": "Committed leadership",
+      "card1Desc": "Every project is led by a member of our founding team, from scoping to final acceptance.",
+      "card2Title": "Contractual commitments",
+      "card2Desc": "Milestones, support SLAs (P1 100%, P2 ≥95%), and reversibility — written into the contract.",
+      "card3Title": "Full transparency",
+      "card3Desc": "Direct access to progress, environments, and code: nothing is a surprise at delivery."
     },
     "blog": {
       "badge": "Tech Watch & Insights",
@@ -171,7 +167,7 @@
       "trustItem1": "Response within 24 business hours",
       "trustItem2": "Free initial consultation",
       "trustItem3": "Confidentiality guaranteed",
-      "trustItem4": "Certified experts"
+      "trustItem4": "Odoo-certified leadership (in progress) — 30+ years of combined IT experience"
     }
   },
   "Odoo": {
@@ -805,9 +801,9 @@
       "description": "Discover our case studies: ERP integration, Artificial Intelligence, DevSecOps and custom development in West Africa."
     },
     "hero": {
-      "badge": "Our case studies",
-      "titlePart1": "They put their ",
-      "titleHighlight": "trust in us",
+      "badge": "Track record",
+      "titlePart1": "Projects our leadership team ",
+      "titleHighlight": "has delivered",
       "subtitle": "Real projects, measurable results. Discover how AKILI Labs transforms organizations across the UEMOA zone."
     },
     "viewDetail": "View details",

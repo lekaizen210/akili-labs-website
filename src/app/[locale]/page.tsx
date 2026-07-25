@@ -2,6 +2,7 @@ import HeroSection from "@/components/home/HeroSection";
 import ProblemSection from "@/components/home/ProblemSection";
 import SocialProofSection from "@/components/home/SocialProofSection";
 import StatsSection from "@/components/home/StatsSection";
+import UemoaBand from "@/components/home/UemoaBand";
 import ExpertisesSection from "@/components/home/ExpertisesSection";
 import ApproachSection from "@/components/home/ApproachSection";
 import ReferencesSection from "@/components/home/ReferencesSection";
@@ -42,6 +43,7 @@ export default async function HomePage({
       <ProblemSection />
       <SocialProofSection />
       <StatsSection />
+      <UemoaBand />
       <ExpertisesSection />
       <ApproachSection />
       <ReferencesSection />

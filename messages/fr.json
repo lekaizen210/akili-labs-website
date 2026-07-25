@@ -85,13 +85,13 @@
       "description": "AKILI Labs accompagne les organisations de la zone UEMOA dans leur transformation digitale : intégration ERP Odoo, Intelligence Artificielle, DevSecOps et développement sur mesure."
     },
     "hero": {
-      "badge": "Acteur de référence de la transformation digitale en Afrique",
+      "badge": "Basés à Abidjan · Actifs dans les 8 pays de l'UEMOA",
       "titleLine1": "Votre partenaire de",
       "titleWord1": "Transformation",
       "titleWord2": "Digitale",
-      "titleLine3": "en Afrique",
+      "titleLine3": "en Afrique de l'Ouest",
       "subtitleLine1": "ERP, Intelligence Artificielle, DevSecOps, Développement sur mesure",
-      "subtitleLine2": "Des solutions qui créent de la valeur réelle pour les organisations de la zone UEMOA.",
+      "subtitleLine2": "Une équipe fondatrice cumulant plus de 30 ans de projets SI à travers toute la zone UEMOA, au service de solutions qui créent de la valeur réelle.",
       "ctaPrimary": "Consultation gratuite",
       "ctaSecondary": "Voir nos réalisations",
       "techGenerativeAI": "IA Générative"
@@ -118,10 +118,15 @@
       "learnMore": "En savoir plus"
     },
     "stats": {},
+    "uemoa": {
+      "eyebrow": "Notre zone d'intervention",
+      "countries": "Bénin · Burkina Faso · Côte d'Ivoire · Guinée-Bissau · Mali · Niger · Sénégal · Togo",
+      "text": "Une expertise construite sur le terrain, dans les huit pays de l'Union — réglementations OHADA, fiscalités UEMOA et réalités opérationnelles locales."
+    },
     "approach": {
-      "badge": "Méthodologie éprouvée",
+      "badge": "Une méthode forgée sur le terrain",
       "title": "Notre approche",
-      "subtitle": "Une démarche structurée en 8 étapes pour garantir la réussite de chaque projet, de l'analyse initiale au support continu.",
+      "subtitle": "Huit étapes distillées de plus de trente années cumulées de projets menés par nos dirigeants à travers la zone UEMOA — de l'analyse initiale au support continu.",
       "ctaButton": "Parlez-nous de votre projet →"
     },
     "sectors": {
@@ -130,32 +135,23 @@
       "subtitle": "Nos solutions s'adaptent aux réalités de chaque secteur d'activité en Afrique de l'Ouest."
     },
     "references": {
-      "badge": "Nos réalisations",
-      "title": "Ils nous ont fait confiance",
+      "badge": "Retours d'expérience",
+      "title": "Des projets que nos dirigeants ont menés",
+      "subtitle": "Avant de fonder AKILI Labs, notre équipe dirigeante a piloté des transformations structurantes dans plusieurs pays de la zone UEMOA. En voici trois, représentatives de ce que nous savons livrer.",
       "viewAllLink": "Voir toutes nos références",
-      "bottomText": "Votre projet sera notre prochaine référence.",
+      "transparencyNote": "Transparence : ces projets ont été réalisés par les membres fondateurs dans leurs fonctions antérieures. Votre projet sera notre prochaine référence.",
       "bottomCta": "Démarrer un projet avec nous →"
     },
     "socialProof": {
-      "sectionLabel": "Ils nous font confiance",
-      "testimonialsBadge": "Témoignages clients",
-      "testimonialsTitle": "Ce que disent nos clients",
-      "starsAriaLabel": "{stars} étoiles sur 5",
-      "testimonial1Quote": "AKILI Labs a transformé notre gestion comptable OHADA avec Odoo. La montée en compétences de nos équipes a été remarquable et les délais de clôture ont été divisés par deux.",
-      "testimonial1Name": "Kouamé A.",
-      "testimonial1Role": "Directeur Général Finance",
-      "testimonial1Company": "Groupe industriel",
-      "testimonial1Location": "Abidjan, Côte d'Ivoire",
-      "testimonial2Quote": "Leur approche DevSecOps a sécurisé notre pipeline CI/CD et accéléré nos livraisons. Une équipe réactive, qui comprend les enjeux d'une DSI moderne en Afrique.",
-      "testimonial2Name": "Fatou D.",
-      "testimonial2Role": "Directrice des Systèmes d'Information",
-      "testimonial2Company": "Institution financière UEMOA",
-      "testimonial2Location": "Dakar, Sénégal",
-      "testimonial3Quote": "Le module SIRH Odoo déployé par AKILI Labs couvre tous nos besoins paie et congés, avec une conformité totale au droit ivoirien. Un partenaire de confiance.",
-      "testimonial3Name": "Brice M.",
-      "testimonial3Role": "Directeur des Ressources Humaines",
-      "testimonial3Company": "Entreprise de services",
-      "testimonial3Location": "Abidjan, Côte d'Ivoire"
+      "eyebrow": "Nos engagements de jeune société",
+      "title": "Ce sur quoi vous pouvez compter",
+      "lead": "Une société nouvelle n'a qu'un capital : la réussite de ses premiers clients. Voici ce que nous mettons dans chaque contrat.",
+      "card1Title": "Direction impliquée",
+      "card1Desc": "Chaque projet est piloté par un membre de l'équipe fondatrice, du cadrage à la recette.",
+      "card2Title": "Engagements contractuels",
+      "card2Desc": "Jalons, SLA de support (P1 100 %, P2 ≥ 95 %) et réversibilité inscrits noir sur blanc.",
+      "card3Title": "Transparence totale",
+      "card3Desc": "Accès direct à l'avancement, aux environnements et au code : vous ne découvrez rien à la livraison."
     },
     "blog": {
       "badge": "Veille & Insights",
@@ -171,7 +167,7 @@
       "trustItem1": "Réponse sous 24h ouvrées",
       "trustItem2": "Consultation initiale offerte",
       "trustItem3": "Confidentialité garantie",
-      "trustItem4": "Experts certifiés"
+      "trustItem4": "Direction certifiée Odoo (en cours) — 30+ ans d'expérience SI cumulée"
     }
   },
   "Odoo": {
@@ -805,9 +801,9 @@
       "description": "Découvrez nos réalisations : intégration ERP, Intelligence Artificielle, DevSecOps et développement sur mesure en Afrique de l'Ouest."
     },
     "hero": {
-      "badge": "Nos réalisations",
-      "titlePart1": "Ils nous ont fait ",
-      "titleHighlight": "confiance",
+      "badge": "Retours d'expérience",
+      "titlePart1": "Des projets que nos dirigeants ",
+      "titleHighlight": "ont menés",
       "subtitle": "Des projets concrets, des résultats mesurables. Découvrez comment AKILI Labs transforme les organisations de la zone UEMOA."
     },
     "viewDetail": "Voir le détail",
