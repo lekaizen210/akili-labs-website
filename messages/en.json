@@ -1349,6 +1349,11 @@
         "categoryId": "akili",
         "question": "What is your pricing approach?",
         "answer": "Our services are offered on a time-and-materials basis (daily rate) or as a fixed-price package. For ERP projects, we offer CAPEX (upfront investment) or OPEX (monthly subscription) plans suited to the cash-flow constraints of UEMOA organizations. The initial consultation is free and non-binding. Quotes within 5 business days."
+      },
+      {
+        "categoryId": "akili",
+        "question": "AKILI Labs is a young company: is that a risk?",
+        "answer": "It's a fair question — and our best answer is structural. You are not entrusting your project to a brand, but to people: at AKILI Labs, every engagement is led by a member of the founding team — a team with over 30 years of combined IT project experience across the UEMOA zone. You get the experience of an established firm, with the full commitment of a team that stakes its reputation on your success. Our contractual commitments (milestones, SLAs, reversibility) are designed to protect you, not to cover us."
       }
     ],
     "cta": {
