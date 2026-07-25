@@ -8,11 +8,11 @@ import { blogPosts } from "@/lib/data";
 import { l } from "@/lib/i18n-content";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 
-// Keyed on the (stable) French tag value so styling stays consistent across locales.
+// Keyed on the stable tagKey so styling stays consistent across locales.
 const tagColors: Record<string, string> = {
-  ERP: "bg-blue-50 text-blue-700 border border-blue-100",
-  IA: "bg-purple-50 text-purple-700 border border-purple-100",
-  DevSecOps: "bg-green-50 text-green-700 border border-green-100",
+  erp: "bg-blue-50 text-blue-700 border border-blue-100",
+  ia: "bg-purple-50 text-purple-700 border border-purple-100",
+  devsecops: "bg-green-50 text-green-700 border border-green-100",
 };
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
@@ -70,7 +70,7 @@ export default function BlogSection() {
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-center gap-3 mb-3">
-                      <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-full ${tagColors[l(post.tag, "fr")] ?? "bg-gray-100 text-gray-600"}`}>
+                      <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-full ${tagColors[post.tagKey] ?? "bg-gray-100 text-gray-600"}`}>
                         {l(post.category, locale)}
                       </span>
                     </div>

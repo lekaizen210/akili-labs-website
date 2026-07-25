@@ -9,11 +9,11 @@ import { l } from "@/lib/i18n-content";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-primitives";
 import { getTechColor } from "@/lib/tech-colors";
 
-// Keyed on the (stable) French expertise value so styling stays consistent across locales.
+// Keyed on the stable expertiseKey so styling stays consistent across locales.
 const tagColors: Record<string, string> = {
-  ERP: "bg-blue-50 text-blue-700",
-  "Intelligence Artificielle": "bg-purple-50 text-purple-700",
-  DevSecOps: "bg-green-50 text-green-700",
+  erp: "bg-blue-50 text-blue-700",
+  ia: "bg-purple-50 text-purple-700",
+  devsecops: "bg-green-50 text-green-700",
 };
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
@@ -63,7 +63,7 @@ export default function ReferencesSection() {
                   <div className="h-1.5 bg-gradient-to-r from-navy to-orange" />
                   <div className="p-7 flex flex-col flex-1">
                     <div className="flex items-center justify-between mb-4">
-                      <span className={`px-2.5 py-1 text-xs font-semibold rounded-full ${tagColors[l(ref.expertise, "fr")] ?? "bg-gray-100 text-gray-600"}`}>
+                      <span className={`px-2.5 py-1 text-xs font-semibold rounded-full ${tagColors[ref.expertiseKey] ?? "bg-gray-100 text-gray-600"}`}>
                         {l(ref.expertise, locale)}
                       </span>
                       <span className="text-xs text-gray-500">{ref.year}</span>

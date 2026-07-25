@@ -21,11 +21,11 @@ export async function generateMetadata({
   };
 }
 
-// Keyed on the (stable) French tag value so styling stays consistent across locales.
+// Keyed on the stable tagKey so styling stays consistent across locales.
 const tagColors: Record<string, string> = {
-  ERP: "bg-blue-50 text-blue-700 border-blue-100",
-  IA: "bg-purple-50 text-purple-700 border-purple-100",
-  DevSecOps: "bg-green-50 text-green-700 border-green-100",
+  erp: "bg-blue-50 text-blue-700 border-blue-100",
+  ia: "bg-purple-50 text-purple-700 border-purple-100",
+  devsecops: "bg-green-50 text-green-700 border-green-100",
 };
 
 export default async function BlogPage({
@@ -68,7 +68,7 @@ export default async function BlogPage({
                 </div>
                 <div className="p-8 lg:p-10">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-full border ${tagColors[l(blogPosts[0].tag, "fr")] ?? "bg-gray-100 text-gray-600"}`}>
+                    <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-full border ${tagColors[blogPosts[0].tagKey] ?? "bg-gray-100 text-gray-600"}`}>
                       {l(blogPosts[0].category, locale)}
                     </span>
                     <span className="text-xs text-orange font-semibold">{t("featuredBadge")}</span>
@@ -104,7 +104,7 @@ export default async function BlogPage({
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-full border ${tagColors[l(post.tag, "fr")] ?? "bg-gray-100 text-gray-600"}`}>
+                    <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-full border ${tagColors[post.tagKey] ?? "bg-gray-100 text-gray-600"}`}>
                       {l(post.category, locale)}
                     </span>
                   </div>

@@ -169,6 +169,7 @@ export const references = [
     result: { fr: "ROI atteint en 14 mois", en: "ROI achieved in 14 months" },
     technologies: ["Odoo Enterprise", "PostgreSQL", "Docker"] satisfies (string | Localized)[],
     year: "2024",
+    expertiseKey: "erp",
   },
   {
     slug: "plateforme-ia-banque",
@@ -191,6 +192,7 @@ export const references = [
       "FastAPI",
     ] satisfies (string | Localized)[],
     year: "2025",
+    expertiseKey: "ia",
   },
   {
     slug: "devsecops-telecom",
@@ -208,6 +210,7 @@ export const references = [
     result: { fr: "Déploiements 10× plus rapides", en: "10× faster deployments" },
     technologies: ["GitLab CI/CD", "Kubernetes", "AWS", "SonarQube"] satisfies (string | Localized)[],
     year: "2025",
+    expertiseKey: "devsecops",
   },
 ];
 
@@ -394,6 +397,7 @@ export const blogPosts = [
     date: "2026-06-15",
     readTime: "8 min",
     tag: { fr: "ERP", en: "ERP" },
+    tagKey: "erp",
   },
   {
     slug: "ia-generative-entreprises-africaines",
@@ -409,6 +413,7 @@ export const blogPosts = [
     date: "2026-06-05",
     readTime: "12 min",
     tag: { fr: "IA", en: "AI" },
+    tagKey: "ia",
   },
   {
     slug: "cicd-gitlab-guide-pratique",
@@ -424,5 +429,6 @@ export const blogPosts = [
     date: "2026-05-20",
     readTime: "15 min",
     tag: { fr: "DevSecOps", en: "DevSecOps" },
+    tagKey: "devsecops",
   },
 ];
