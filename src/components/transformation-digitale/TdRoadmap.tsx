@@ -73,7 +73,7 @@ export default function TdRoadmap() {
                   <div className="font-bold text-navy mb-1">{label}</div>
                   <div className="text-sm text-ink mb-3">{l(p.content, locale)}</div>
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-light text-xs font-semibold text-navy">
-                    <span className="text-orange">▸</span> {t("deliverableLabel")} : {l(p.livrable, locale)}
+                    <span className="text-orange">▸</span> {t("deliverableLabel")}{l(p.livrable, locale)}
                   </div>
                 </motion.div>
               );

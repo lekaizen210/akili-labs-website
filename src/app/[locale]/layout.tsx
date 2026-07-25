@@ -197,7 +197,7 @@ export default async function RootLayout({
       <body>
         <NextIntlClientProvider>
           <a href="#main-content" className="skip-to-content">
-            Aller au contenu principal
+            {t("skipToContent")}
           </a>
           <MotionProvider>
             <Navbar />

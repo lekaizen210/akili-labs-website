@@ -66,6 +66,7 @@
     }
   },
   "Layout": {
+    "skipToContent": "Aller au contenu principal",
     "organization": {
       "description": "AKILI Labs est une société de conseil IT et intégrateur Odoo ERP basée à Abidjan, Côte d'Ivoire. Nous accompagnons les organisations de la zone UEMOA dans leur transformation digitale : ERP, Intelligence Artificielle, DevSecOps et développement sur mesure."
     },
@@ -221,7 +222,7 @@
       "cadrageItem6": "Accompagnement à la décision : Odoo Community vs Enterprise",
       "phasesTitle": "Notre approche en 5 phases",
       "phasesSubtitle": "Nous déployons Odoo selon une méthodologie structurée et éprouvée, inspirée des meilleures pratiques internationales.",
-      "deliverableLabel": "Livrable"
+      "deliverableLabel": "Livrable : "
     },
     "modules": {
       "badge": "Modules Odoo maîtrisés",
@@ -243,10 +244,10 @@
       "badge": "Hébergement & Support",
       "title": "Votre ERP doit tourner tous les jours : nous nous y engageons contractuellement",
       "hostingTitle": "Hébergement & Infrastructure",
-      "fitLabel": "Idéal pour",
+      "fitLabel": "Idéal pour : ",
       "supportTitle": "Support & Maintenance",
       "supportParagraphRich": "Après le go-live, votre ERP est couvert par un contrat de maintenance avec des engagements de service contractuels : <strong>incidents bloquants pris en charge sous 2 à 24h selon le niveau souscrit</strong>, mises à jour réglementaires de paie incluses, TMA applicative mensuelle et revues de suivi. Trois niveaux s'adaptent à la criticité de votre activité.",
-      "blockingLabel": "Bloquant",
+      "blockingLabel": "Bloquant : ",
       "imageAlt": "Supervision de l’instance Odoo : disponibilité de 99,95 % sur 12 mois contre un objectif contractuel de 99,5 %, incident détecté et résolu en 31 minutes, et tickets TMA P1 à P3 traités dans les délais contractuels"
     },
     "approach": {
@@ -339,7 +340,7 @@
       "badge": "Cadrage & Feuille de route",
       "title": "En 5 phases, passez d'un SI subi à un SI piloté",
       "subtitle": "Chaque phase produit un livrable tangible que vous validez avant de passer à la suivante.",
-      "deliverableLabel": "Livrable"
+      "deliverableLabel": "Livrable : "
     },
     "domains": {
       "badge": "Domaines d'intervention",

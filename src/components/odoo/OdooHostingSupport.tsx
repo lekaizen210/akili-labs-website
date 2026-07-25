@@ -44,7 +44,7 @@ export default function OdooHostingSupport() {
                     </div>
                     <p className="text-sm text-ink mb-4 leading-relaxed">{l(h.description, locale)}</p>
                     <div className="text-xs font-semibold text-navy">
-                      {t("fitLabel")} : <span className="font-normal text-ink">{l(h.fit, locale)}</span>
+                      {t("fitLabel")}<span className="font-normal text-ink">{l(h.fit, locale)}</span>
                     </div>
                   </StaggerItem>
                 );
@@ -69,10 +69,10 @@ export default function OdooHostingSupport() {
                       <span className="flex flex-wrap items-center gap-x-3 gap-y-2">
                         <span className="font-bold text-navy">{l(s.level, locale)}</span>
                         <span className="inline-flex px-2.5 py-1 rounded-lg text-xs font-bold bg-orange-pale text-orange-dark">
-                          {t("blockingLabel")} : {s.slaBlocking}
+                          {t("blockingLabel")}{s.slaBlocking}
                         </span>
                         <span className="inline-flex px-2.5 py-1 rounded-lg text-xs font-semibold bg-blue-light text-navy">
-                          {l(s.slaSecondaryLabel, locale)} : {l(s.slaSecondary, locale)}
+                          {l(s.slaSecondaryLabel, locale)}{l(s.slaSecondary, locale)}
                         </span>
                       </span>
                       <ChevronDown

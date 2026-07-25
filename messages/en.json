@@ -66,6 +66,7 @@
     }
   },
   "Layout": {
+    "skipToContent": "Skip to main content",
     "organization": {
       "description": "AKILI Labs is an IT consulting firm and Odoo ERP integrator based in Abidjan, Côte d'Ivoire. We help organizations across the UEMOA zone with their digital transformation: ERP, Artificial Intelligence, DevSecOps, and custom development."
     },
@@ -221,7 +222,7 @@
       "cadrageItem6": "Decision support: Odoo Community vs. Enterprise",
       "phasesTitle": "Our 5-phase approach",
       "phasesSubtitle": "We deploy Odoo using a structured, proven methodology inspired by international best practices.",
-      "deliverableLabel": "Deliverable"
+      "deliverableLabel": "Deliverable: "
     },
     "modules": {
       "badge": "Odoo modules we master",
@@ -243,10 +244,10 @@
       "badge": "Hosting & Support",
       "title": "Your ERP has to run every single day: we commit to it contractually",
       "hostingTitle": "Hosting & Infrastructure",
-      "fitLabel": "Best fit for",
+      "fitLabel": "Best fit for: ",
       "supportTitle": "Support & Maintenance",
       "supportParagraphRich": "After go-live, your ERP is covered by a maintenance contract with contractual service commitments: <strong>blocking incidents handled within 2 to 24 hours depending on the tier</strong>, statutory payroll updates included, monthly TMA (application maintenance), and follow-up reviews. Three tiers adapt to how critical your operations are.",
-      "blockingLabel": "Blocking",
+      "blockingLabel": "Blocking: ",
       "imageAlt": "Odoo instance monitoring: 99.95% uptime over 12 months against a contractual target of 99.5%, an incident detected and resolved in 31 minutes, and P1-to-P3 TMA tickets handled within contractual deadlines"
     },
     "approach": {
@@ -339,7 +340,7 @@
       "badge": "Scoping & Roadmap",
       "title": "In 5 phases, move from a reactive IS to a managed one",
       "subtitle": "Each phase produces a tangible deliverable that you validate before moving to the next.",
-      "deliverableLabel": "Deliverable"
+      "deliverableLabel": "Deliverable: "
     },
     "domains": {
       "badge": "Areas we cover",

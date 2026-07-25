@@ -157,7 +157,7 @@ export const odooSupportTiers = [
       en: "Blocking issue fixes, statutory payroll updates for 5 countries, email support, 4h/month of TMA.",
     },
     slaBlocking: "24h",
-    slaSecondaryLabel: { fr: "Mineur", en: "Minor" },
+    slaSecondaryLabel: { fr: "Mineur : ", en: "Minor: " },
     slaSecondary: { fr: "5 jours ouvrés", en: "5 business days" },
   },
   {
@@ -167,7 +167,7 @@ export const odooSupportTiers = [
       en: "Includes Essential + major issue fixes, 8h/month of TMA, quarterly follow-up report, and on-site resource availability (1 day/month).",
     },
     slaBlocking: "4h",
-    slaSecondaryLabel: { fr: "Majeur", en: "Major" },
+    slaSecondaryLabel: { fr: "Majeur : ", en: "Major: " },
     slaSecondary: { fr: "24h", en: "24h" },
   },
   {
@@ -177,7 +177,7 @@ export const odooSupportTiers = [
       en: "Includes Standard + minor enhancements, 16h/month of TMA, semi-annual security review, priority support, and on-site resource availability (4 days/month).",
     },
     slaBlocking: "2h",
-    slaSecondaryLabel: { fr: "Majeur", en: "Major" },
+    slaSecondaryLabel: { fr: "Majeur : ", en: "Major: " },
     slaSecondary: { fr: "8h", en: "8h" },
   },
 ] satisfies {
