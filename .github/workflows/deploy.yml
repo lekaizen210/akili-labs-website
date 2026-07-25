@@ -122,8 +122,9 @@ jobs:
         run: |
           sleep 15
           HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
-            https://${{ secrets.VPS_HOST }}/ \
-            --max-time 15 --insecure 2>/dev/null || echo "000")
+            --resolve akililabs.io:443:${{ secrets.VPS_HOST }} \
+            https://akililabs.io/ \
+            --max-time 15 2>/dev/null || echo "000")
           echo "HTTP Status: $HTTP_CODE"
           if [ "$HTTP_CODE" != "200" ]; then
             echo "❌ Healthcheck échoué (HTTP $HTTP_CODE)"
