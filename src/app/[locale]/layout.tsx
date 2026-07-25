@@ -31,6 +31,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Home.meta" });
+  const tLayout = await getTranslations({ locale, namespace: "Layout" });
   const alternates = buildAlternates("/", locale as "fr" | "en");
 
   return {
@@ -80,7 +81,7 @@ export async function generateMetadata({
           url: "/logo-akili.png",
           width: 1600,
           height: 893,
-          alt: "AKILI Labs — ERP • AI • DevSecOps en Afrique de l'Ouest",
+          alt: tLayout("ogImageAlt"),
         },
       ],
     },
@@ -100,7 +101,7 @@ export async function generateMetadata({
   };
 }
 
-function buildOrganizationJsonLd(description: string) {
+function buildOrganizationJsonLd(description: string, availableLanguage: string[]) {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -126,7 +127,7 @@ function buildOrganizationJsonLd(description: string) {
       "@type": "ContactPoint",
       email: "contact@akililabs.io",
       contactType: "customer service",
-      availableLanguage: ["French"],
+      availableLanguage,
       areaServed: "UEMOA",
     },
     sameAs: [
@@ -144,14 +145,14 @@ function buildOrganizationJsonLd(description: string) {
   };
 }
 
-function buildWebsiteJsonLd(locale: string) {
+function buildWebsiteJsonLd(locale: string, description: string) {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${BASE_URL}/#website`,
     url: BASE_URL,
     name: "AKILI Labs",
-    description: "Conseil IT, ERP Odoo, Intelligence Artificielle & DevSecOps en Afrique de l'Ouest",
+    description,
     publisher: { "@id": `${BASE_URL}/#organization` },
     potentialAction: {
       "@type": "SearchAction",
@@ -177,9 +178,9 @@ export default async function RootLayout({
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: "Layout.organization" });
-  const organizationJsonLd = buildOrganizationJsonLd(t("description"));
-  const websiteJsonLd = buildWebsiteJsonLd(locale);
+  const t = await getTranslations({ locale, namespace: "Layout" });
+  const organizationJsonLd = buildOrganizationJsonLd(t("organization.description"), ["French", "English"]);
+  const websiteJsonLd = buildWebsiteJsonLd(locale, t("website.description"));
 
   return (
     <html lang={locale} className={`${manrope.variable} ${inter.variable}`}>
