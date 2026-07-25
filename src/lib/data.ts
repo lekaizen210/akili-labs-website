@@ -215,10 +215,10 @@ export const references = [
 ];
 
 export const stats = [
-  { value: "50+", label: { fr: "Projets livrés", en: "Projects delivered" } },
-  { value: "10+", label: { fr: "Années d'expertise", en: "Years of expertise" } },
-  { value: "15+", label: { fr: "Secteurs couverts", en: "Sectors covered" } },
-  { value: "8", label: { fr: "Pays UEMOA", en: "UEMOA countries" } },
+  { value: "30+", label: { fr: "Années d'expérience cumulée de l'équipe dirigeante", en: "Years of combined leadership experience" } },
+  { value: "8", label: { fr: "Pays de la zone UEMOA couverts", en: "UEMOA countries covered" } },
+  { value: "10", label: { fr: "Secteurs d'expertise", en: "Sectors of expertise" } },
+  { value: "100 %", label: { fr: "des projets pilotés par un membre fondateur", en: "of projects led by a founding member" } },
 ] satisfies { value: string; label: Localized }[];
 
 export const approach = [

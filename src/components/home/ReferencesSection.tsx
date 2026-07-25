@@ -31,9 +31,12 @@ export default function ReferencesSection() {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-light text-navy text-sm font-medium rounded-full mb-4">
               ■ {t("badge")}
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-navy">
+            <h2 className="text-3xl sm:text-4xl font-black text-navy mb-4">
               {t("title")}
             </h2>
+            <p className="text-ink max-w-2xl">
+              {t("subtitle")}
+            </p>
           </div>
           <Link
             href="/references"
@@ -97,9 +100,17 @@ export default function ReferencesSection() {
           ))}
         </StaggerContainer>
 
+        {/* Transparency callout */}
+        <FadeUp className="mt-12" delay={0.1}>
+          <div className="bg-blue-light border-l-4 border-navy rounded-xl px-6 py-5 max-w-3xl mx-auto mb-8">
+            <p className="text-sm text-ink leading-relaxed text-center">
+              {t("transparencyNote")}
+            </p>
+          </div>
+        </FadeUp>
+
         {/* Bottom CTA */}
-        <FadeUp className="text-center mt-12" delay={0.1}>
-          <p className="text-ink mb-4">{t("bottomText")}</p>
+        <FadeUp className="text-center" delay={0.15}>
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block">
             <Link
               href="/contact"
