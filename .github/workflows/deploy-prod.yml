@@ -78,6 +78,8 @@ jobs:
     name: Deploy to Production VPS
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      contents: write
     environment:
       name: production
       url: https://akililabs.io
