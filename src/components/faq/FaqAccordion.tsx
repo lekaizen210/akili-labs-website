@@ -16,8 +16,6 @@ export interface FaqItem {
   answer: string;
 }
 
-export { CATEGORY_IDS, categoryColors };
-
 function AccordionItem({ item, index, t }: { item: FaqItem; index: number; t: ReturnType<typeof useTranslations> }) {
   const [open, setOpen] = useState(false);
 

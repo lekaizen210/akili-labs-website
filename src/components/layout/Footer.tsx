@@ -6,15 +6,17 @@ import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Footer() {
   const t = useTranslations("Footer");
+  // Source unique du menu expertises : Navbar.expertisesMenu (évite la duplication de libellés).
+  const tNav = useTranslations("Navbar");
 
   const footerLinks = {
     expertises: [
-      { label: t("expertisesMenu.transformationDigitale"), href: "/expertises/transformation-digitale" },
-      { label: t("expertisesMenu.erpOdoo"), href: "/expertises/odoo" },
-      { label: t("expertisesMenu.intelligenceArtificielle"), href: "/expertises/intelligence-artificielle" },
-      { label: t("expertisesMenu.devsecops"), href: "/expertises/devsecops" },
-      { label: t("expertisesMenu.developpementMetiers"), href: "/expertises/developpement-metiers" },
-      { label: t("expertisesMenu.businessIntelligence"), href: "/expertises/business-intelligence" },
+      { label: tNav("expertisesMenu.transformationDigitale"), href: "/expertises/transformation-digitale" },
+      { label: tNav("expertisesMenu.erpOdoo"), href: "/expertises/odoo" },
+      { label: tNav("expertisesMenu.intelligenceArtificielle"), href: "/expertises/intelligence-artificielle" },
+      { label: tNav("expertisesMenu.devsecops"), href: "/expertises/devsecops" },
+      { label: tNav("expertisesMenu.developpementMetiers"), href: "/expertises/developpement-metiers" },
+      { label: tNav("expertisesMenu.businessIntelligence"), href: "/expertises/business-intelligence" },
     ],
     secteurs: [
       { label: t("sectors.administrationPublique"), href: "/#secteurs" },
@@ -167,7 +169,7 @@ export default function Footer() {
             <span className="pl-3">www.akililabs.io</span>
             <span className="pl-3">{t("rights")}</span>
             <span className="pl-3">
-              <LanguageSwitcher inverted />
+              <LanguageSwitcher inverted size="xs" />
             </span>
           </div>
           <div className="flex items-center gap-4 text-xs text-gray-500">
