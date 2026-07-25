@@ -260,8 +260,8 @@ export const dmWhyUs = [
   {
     title: { fr: "Expertise terrain africaine", en: "On-the-Ground African Expertise" },
     desc: {
-      fr: "Connectivité variable, usages mobiles d'abord, contraintes budgétaires en XAF : nos applications sont conçues pour ce contexte, pas malgré lui.",
-      en: "Variable connectivity, mobile-first usage, budget constraints in XAF: our applications are designed for this context, not despite it.",
+      fr: "Connectivité variable, usages mobiles d'abord, contraintes budgétaires en XOF : nos applications sont conçues pour ce contexte, pas malgré lui.",
+      en: "Variable connectivity, mobile-first usage, budget constraints in XOF: our applications are designed for this context, not despite it.",
     },
   },
   {

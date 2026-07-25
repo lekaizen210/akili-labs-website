@@ -181,8 +181,8 @@ export const tdApproach = [
   {
     title: { fr: "Réalisme UEMOA", en: "UEMOA Realism" },
     desc: {
-      fr: "Connectivité variable, budgets en XAF, cadre OHADA : la feuille de route est exécutable dans votre contexte, pas théorique.",
-      en: "Variable connectivity, budgets in XAF, the OHADA framework: the roadmap is executable in your context, not theoretical.",
+      fr: "Connectivité variable, budgets en XOF, cadre OHADA : la feuille de route est exécutable dans votre contexte, pas théorique.",
+      en: "Variable connectivity, budgets in XOF, the OHADA framework: the roadmap is executable in your context, not theoretical.",
     },
   },
   {
@@ -348,8 +348,8 @@ export const tdFaqs = [
   {
     question: { fr: "Comment choisir un partenaire IT en Afrique de l'Ouest ?", en: "How do you choose an IT partner in West Africa?" },
     answer: {
-      fr: "Un bon partenaire IT en Afrique de l'Ouest doit maîtriser le contexte local : réglementations OHADA, connectivité variable, contraintes budgétaires en XAF. Vérifiez les références dans votre secteur, la capacité de support post-déploiement, la présence locale pour les interventions sur site et les certifications techniques de l'équipe.",
-      en: "A good IT partner in West Africa must master the local context: OHADA regulations, variable connectivity, budget constraints in XAF. Check references in your sector, post-deployment support capacity, local presence for on-site interventions, and the team's technical certifications.",
+      fr: "Un bon partenaire IT en Afrique de l'Ouest doit maîtriser le contexte local : réglementations OHADA, connectivité variable, contraintes budgétaires en XOF. Vérifiez les références dans votre secteur, la capacité de support post-déploiement, la présence locale pour les interventions sur site et les certifications techniques de l'équipe.",
+      en: "A good IT partner in West Africa must master the local context: OHADA regulations, variable connectivity, budget constraints in XOF. Check references in your sector, post-deployment support capacity, local presence for on-site interventions, and the team's technical certifications.",
     },
   },
   {

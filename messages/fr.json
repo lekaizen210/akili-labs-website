@@ -1118,7 +1118,7 @@
           "10 ans et + (Expert)"
         ],
         "salaireLabel": "Prétentions salariales",
-        "salairePlaceholder": "ex : 800 000 XAF / mois",
+        "salairePlaceholder": "ex : 800 000 XOF / mois",
         "motivationLabel": "Lettre de motivation",
         "motivationPlaceholder": "Présentez-vous, expliquez votre intérêt pour AKILI Labs et en quoi votre profil correspond au poste visé.\n\n({min} caractères minimum, {max} maximum)",
         "motivationCounter": "{count} / {max}",
@@ -1272,7 +1272,7 @@
       {
         "categoryId": "digitalTransformation",
         "question": "Comment choisir un partenaire IT en Afrique de l'Ouest ?",
-        "answer": "Un bon partenaire IT en Afrique de l'Ouest doit maîtriser le contexte local : réglementations OHADA, connectivité variable, contraintes budgétaires en XAF. Vérifiez les références dans votre secteur, la capacité de support post-déploiement, la présence locale pour les interventions sur site et les certifications techniques de l'équipe."
+        "answer": "Un bon partenaire IT en Afrique de l'Ouest doit maîtriser le contexte local : réglementations OHADA, connectivité variable, contraintes budgétaires en XOF. Vérifiez les références dans votre secteur, la capacité de support post-déploiement, la présence locale pour les interventions sur site et les certifications techniques de l'équipe."
       },
       {
         "categoryId": "digitalTransformation",

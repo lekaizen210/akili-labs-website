@@ -1118,7 +1118,7 @@
           "10+ years (Expert)"
         ],
         "salaireLabel": "Salary expectations",
-        "salairePlaceholder": "e.g., 800,000 XAF / month",
+        "salairePlaceholder": "e.g., 800,000 XOF / month",
         "motivationLabel": "Cover letter",
         "motivationPlaceholder": "Tell us about yourself, explain your interest in AKILI Labs, and how your profile fits the position.\n\n({min} characters minimum, {max} maximum)",
         "motivationCounter": "{count} / {max}",
@@ -1272,7 +1272,7 @@
       {
         "categoryId": "digitalTransformation",
         "question": "How do you choose an IT partner in West Africa?",
-        "answer": "A good IT partner in West Africa must master the local context: OHADA regulations, variable connectivity, and budget constraints in XAF. Check references in your industry, post-deployment support capacity, local presence for on-site interventions, and the team's technical certifications."
+        "answer": "A good IT partner in West Africa must master the local context: OHADA regulations, variable connectivity, and budget constraints in XOF. Check references in your industry, post-deployment support capacity, local presence for on-site interventions, and the team's technical certifications."
       },
       {
         "categoryId": "digitalTransformation",
