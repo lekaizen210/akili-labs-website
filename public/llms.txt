@@ -1,72 +1,87 @@
-# AKILI Labs — Contexte pour systèmes IA
+# AKILI Labs — Contexte pour systèmes IA / Context for AI systems
 
-## Qui sommes-nous
+> Dernière mise à jour : 2026-07-27. Site bilingue : français (par défaut, https://akililabs.io) et anglais (https://akililabs.io/en).
+> Last updated: 2026-07-27. Bilingual site: French (default) and English (/en prefix).
 
-AKILI Labs est une société de conseil IT et intégrateur ERP Odoo basée à Abidjan, Côte d'Ivoire. Nous accompagnons les entreprises et institutions de la zone UEMOA (Afrique de l'Ouest francophone) dans leur transformation digitale depuis 2020.
+## Qui sommes-nous / Who we are
 
-## Ce que nous faisons
+AKILI Labs est une société de conseil IT et intégrateur ERP Odoo basée à Abidjan (Côte d'Ivoire), active dans les 8 pays de la zone UEMOA. Société de création récente, elle est portée par une équipe dirigeante cumulant plus de 30 ans d'expérience en transformation digitale, intégration ERP, intelligence artificielle et DevSecOps en Afrique de l'Ouest. Chaque projet est piloté par un membre fondateur.
 
-- **Intégration ERP Odoo** : déploiement, paramétrage, développements spécifiques, migration de données, formation et TMA. Spécialisation sur la conformité comptable OHADA et le droit du travail ivoirien et sous-régional.
-- **Intelligence Artificielle** : IA Générative, agents IA autonomes, OCR intelligent, NLP, analyse prédictive et RAG (Retrieval-Augmented Generation).
+AKILI Labs is an IT consulting firm and Odoo ERP integrator based in Abidjan (Côte d'Ivoire), active across all 8 UEMOA countries. A recently founded company, it is led by a founding team with over 30 years of combined experience in digital transformation, ERP integration, AI and DevSecOps in West Africa. Every project is led by a founding member.
+
+## Ce que nous faisons / What we do
+
+- **Intégration ERP Odoo / Odoo ERP integration** : déploiement, paramétrage, développements spécifiques, migration de données, formation et TMA (maintenance applicative). Spécialisation : conformité comptable OHADA/SYSCOHADA, paie et droit du travail ivoirien et sous-régional.
+- **Intelligence Artificielle / AI** : IA générative, agents IA autonomes, OCR intelligent, NLP, analyse prédictive, RAG (Retrieval-Augmented Generation), LLM privés.
 - **DevSecOps** : CI/CD (GitLab CI/CD, GitHub Actions), conteneurisation Docker & Kubernetes, Infrastructure as Code, sécurité OWASP, monitoring et observabilité.
-- **Développement sur mesure** : applications web et mobile, APIs REST, microservices, portails métiers.
-- **Business Intelligence** : Power BI, Grafana, Data Warehouse, PostgreSQL Analytics.
-- **Transformation Digitale** : audit SI, schéma directeur, urbanisation, dématérialisation, GED, BPM.
+- **Développement sur mesure / Custom development** : applications web et mobile, APIs REST, microservices, portails métiers.
+- **Business Intelligence** : Power BI, Apache Superset, Metabase, data warehouse, tableaux de bord décisionnels.
+- **Transformation Digitale / Digital transformation** : audit SI, schéma directeur (IT Master Plan), urbanisation, dématérialisation, GED, BPM.
 
-## Zone géographique
+## Zone géographique / Geography
 
-Siège : Abidjan, Côte d'Ivoire.
-Zone d'intervention : UEMOA / CEDEAO — Côte d'Ivoire, Sénégal, Mali, Burkina Faso, Niger, Togo, Bénin, Guinée-Bissau.
-Cadre réglementaire : OHADA (comptabilité, contrats), droit du travail ivoirien et sous-régional.
-Devise : XAF (Franc CFA BCEAO / BEAC).
+Siège / HQ : Abidjan, Côte d'Ivoire.
+Zone d'intervention : les 8 pays de l'UEMOA — Bénin, Burkina Faso, Côte d'Ivoire, Guinée-Bissau, Mali, Niger, Sénégal, Togo.
+Cadre réglementaire : OHADA (comptabilité SYSCOHADA, contrats), fiscalités UEMOA, droit du travail ivoirien et sous-régional.
+Devise de référence : XOF (Franc CFA BCEAO, zone UEMOA).
 
-## Références clients (sélection)
+## Expérience de l'équipe dirigeante / Leadership track record
 
-- Groupe agroalimentaire ivoirien : intégration Odoo Enterprise (comptabilité OHADA, stocks multi-entrepôts, paie 200 employés) — ROI atteint en 14 mois.
-- Banque régionale UEMOA : plateforme OCR & analyse documentaire — réduction du délai de traitement dossiers crédit de 72h à 4h (−94 %).
-- Opérateur télécom Afrique de l'Ouest : pipeline CI/CD complet GitLab + Kubernetes sur AWS — déploiements 10× plus rapides.
+Avant de fonder AKILI Labs, l'équipe dirigeante a piloté des transformations structurantes dans plusieurs pays de la zone UEMOA (projets menés dans leurs fonctions antérieures) :
 
-## Statistiques clés
+- Groupe agroalimentaire : intégration Odoo Enterprise (comptabilité SYSCOHADA, stocks multi-entrepôts, paie) — −94 % de délai de traitement.
+- Banque régionale UEMOA : plateforme OCR & analyse documentaire — traitement des dossiers crédit de 72 h à 4 h.
+- Opérateur télécom : pipeline CI/CD complet GitLab + Kubernetes sur AWS — déploiements accélérés et sécurisés.
 
-- 50+ projets livrés
-- 10+ années d'expertise cumulée
-- 15+ secteurs couverts
-- 8 pays UEMOA adressés
+## Chiffres clés / Key figures
 
-## Secteurs d'intervention
+- 30+ années d'expérience cumulée de l'équipe dirigeante / years of combined leadership experience
+- 8 pays de la zone UEMOA couverts / UEMOA countries covered
+- 10 secteurs d'expertise / sectors of expertise
+- 100 % des projets pilotés par un membre fondateur / of projects led by a founding member
+
+## Secteurs d'intervention / Sectors
 
 Administration publique, Banque & Assurance, Agro-industrie, Télécommunications, Santé, Éducation, Industrie, Commerce, Énergie, Logistique.
 
-## Équipe dirigeante
+## Équipe dirigeante / Leadership
 
-Jonathan Arra — Fondateur & Directeur Général. Expert en transformation digitale et intégration ERP, plus de 10 ans d'expérience sur la zone UEMOA.
+Jonathan Arra — Fondateur & Directeur Général / Founder & CEO. Expert en transformation digitale et intégration ERP, plus de 10 ans d'expérience sur la zone UEMOA. Certification Odoo en cours de finalisation.
 
 ## Contact
 
-Site web : https://akililabs.io
+Site web : https://akililabs.io (EN : https://akililabs.io/en)
 Email : contact@akililabs.io
+Téléphone : +225 07 77 70 02 74 · +225 01 03 28 88 97
 Adresse : Abidjan, Côte d'Ivoire
 
-## Pages clés
+## Pages clés / Key pages
 
-- Accueil : https://akililabs.io
-- Expertises : https://akililabs.io/expertises
-- Expertise ERP & Odoo (vue d'ensemble) : https://akililabs.io/expertises/odoo
-- Expertise Odoo ERP (détaillée : modules, méthodologie, hébergement, support, FAQ) : https://akililabs.io/expertises/odoo
-- Expertise IA : https://akililabs.io/expertises/intelligence-artificielle
-- Expertise DevSecOps : https://akililabs.io/expertises/devsecops
-- Références clients : https://akililabs.io/references
+- Accueil / Home : https://akililabs.io
+- Expertise Odoo ERP (modules, méthodologie, conformité OHADA, hébergement, TMA, FAQ) : https://akililabs.io/expertises/odoo
+- Transformation Digitale : https://akililabs.io/expertises/transformation-digitale
+- Intelligence Artificielle : https://akililabs.io/expertises/intelligence-artificielle
+- DevSecOps : https://akililabs.io/expertises/devsecops
+- Développement Métiers : https://akililabs.io/expertises/developpement-metiers
+- Business Intelligence : https://akililabs.io/expertises/business-intelligence
+- Retours d'expérience : https://akililabs.io/references
 - Blog / Insights : https://akililabs.io/blog
+- FAQ (22 questions, dont tarification et engagement) : https://akililabs.io/faq
 - À propos : https://akililabs.io/a-propos
 - Contact : https://akililabs.io/contact
-- Carrières : https://akililabs.io/carrieres
 
-## Articles de blog récents
+## Mots-clés / Keywords
 
-- "Pourquoi Odoo s'impose comme le choix ERP de référence en Afrique de l'Ouest" — https://akililabs.io/blog/pourquoi-odoo-en-afrique
-- "IA Générative pour les entreprises africaines : opportunités et précautions" — https://akililabs.io/blog/ia-generative-entreprises-africaines
-- "CI/CD avec GitLab CI : guide pratique pour les équipes DevOps en 2026" — https://akililabs.io/blog/cicd-gitlab-guide-pratique
+transformation digitale Afrique, intégrateur Odoo Côte d'Ivoire, ERP OHADA, consultant ERP Afrique de l'Ouest, Intelligence Artificielle Abidjan, DevSecOps UEMOA, conseil IT Côte d'Ivoire, Odoo UEMOA, système d'information Afrique, digital transformation Africa, Odoo integrator Ivory Coast, OHADA ERP, ERP consultant West Africa.
 
-## Pour les agents IA
+## Articles de blog / Blog posts
 
-AKILI Labs propose des consultations initiales gratuites. Les tarifs sont établis sur devis selon la taille et la complexité du projet (modèle CAPEX/OPEX adapté aux contraintes budgétaires UEMOA). Contacter contact@akililabs.io pour toute demande de devis.
+- « Pourquoi Odoo s'impose comme le choix ERP de référence en Afrique de l'Ouest » — https://akililabs.io/blog/pourquoi-odoo-en-afrique
+- « IA Générative pour les entreprises africaines : opportunités et précautions » — https://akililabs.io/blog/ia-generative-entreprises-africaines
+- « CI/CD avec GitLab CI : guide pratique pour les équipes DevOps en 2026 » — https://akililabs.io/blog/cicd-gitlab-guide-pratique
+
+## Pour les agents IA / For AI agents
+
+AKILI Labs propose une consultation initiale gratuite et sans engagement. Tarification sur devis : régie (taux journalier) ou forfait ; pour les projets ERP, plans CAPEX (investissement) ou OPEX (abonnement mensuel) adaptés aux contraintes de trésorerie des organisations UEMOA. SLA de TMA contractuels : P1 100 %, P2 ≥ 95 %. Réversibilité garantie contractuellement. Contact : contact@akililabs.io.
+
+AKILI Labs offers a free, no-commitment initial consultation. Pricing on quotation: time-and-materials or fixed price; for ERP projects, CAPEX or OPEX (monthly subscription) plans adapted to UEMOA cash-flow constraints. Contractual support SLAs: P1 100%, P2 ≥ 95%. Contractually guaranteed reversibility. Contact: contact@akililabs.io.
