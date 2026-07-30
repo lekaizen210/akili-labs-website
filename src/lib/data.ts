@@ -277,12 +277,28 @@ export const values = [
 
 export const team = [
   {
-    initiales: "JA",
-    nom: "Jonathan Arra",
-    titre: { fr: "Fondateur & Directeur Général", en: "Founder & CEO" },
+    initiales: "IB",
+    nom: "Ibrahima Djibrill Ba",
+    titre: { fr: "Co-fondateur & Gérant", en: "Co-founder & Managing Director" },
     bio: {
-      fr: "Expert en transformation digitale et intégration ERP, Jonathan pilote la stratégie d'AKILI Labs avec plus de 10 ans d'expérience sur la zone UEMOA.",
-      en: "An expert in digital transformation and ERP integration, Jonathan drives AKILI Labs' strategy with over 10 years of experience across the UEMOA zone.",
+      fr: "Co-fondateur et Gérant d'AKILI Labs, Ibrahima pilote la gouvernance, le développement commercial et la relation client.",
+      en: "Co-founder and Managing Director of AKILI Labs, Ibrahima leads governance, business development and client relationships.",
+    },
+    expertises: [
+      { fr: "Gouvernance", en: "Governance" },
+      { fr: "Développement commercial", en: "Business Development" },
+      { fr: "Gestion de projets", en: "Project Management" },
+    ] satisfies Localized[],
+    linkedin: "",
+    couleur: "#FF5500",
+  },
+  {
+    initiales: "JA",
+    nom: "Jean-Jonathan Arra",
+    titre: { fr: "Co-fondateur & CTO", en: "Co-founder & CTO" },
+    bio: {
+      fr: "Expert en transformation digitale et intégration ERP, Jean-Jonathan pilote la stratégie technologique d'AKILI Labs avec plus de 10 ans d'expérience sur la zone UEMOA.",
+      en: "An expert in digital transformation and ERP integration, Jean-Jonathan drives AKILI Labs' technology strategy with over 10 years of experience across the UEMOA zone.",
     },
     expertises: [
       { fr: "ERP Odoo", en: "Odoo ERP" },
