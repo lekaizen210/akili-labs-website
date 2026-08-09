@@ -4,6 +4,7 @@ import "../globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { MotionProvider } from "@/components/ui/MotionProvider";
+import ChatWidget from "@/components/chat/ChatWidget";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -193,6 +194,7 @@ export default async function RootLayout({
             <Navbar />
             <main id="main-content">{children}</main>
             <Footer />
+            <ChatWidget />
           </MotionProvider>
         </NextIntlClientProvider>
       </body>
