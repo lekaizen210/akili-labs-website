@@ -1442,5 +1442,15 @@
       "title": "Cookies",
       "text": "This website does not use advertising tracking or third-party analytics cookies at this time. This section will be updated if an audience measurement tool is added."
     }
+  },
+  "Chat": {
+    "openButtonLabel": "Open the AKILI Labs assistant",
+    "closeButtonLabel": "Close the assistant",
+    "title": "AKILI Labs assistant",
+    "welcome": "Hello! This assistant is under construction — ask a question to test intent classification.",
+    "placeholder": "Ask your question…",
+    "send": "Send",
+    "thinking": "Analyzing…",
+    "error": "Something went wrong. Please try again or contact sales@akililabs.io."
   }
 }
