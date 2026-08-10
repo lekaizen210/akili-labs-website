@@ -45,6 +45,12 @@ services:
       - SPECIALIST_MODEL_FAQ=${SPECIALIST_MODEL_FAQ:-claude-sonnet-5}
       - SPECIALIST_MODEL_QUALIFICATION=${SPECIALIST_MODEL_QUALIFICATION:-claude-sonnet-5}
       - SPECIALIST_MODEL_SUPPORT=${SPECIALIST_MODEL_SUPPORT:-claude-haiku-4-5-20251001}
+      # Qualification de lead (Lot 3) — webhook Odoo + fallback email
+      - ODOO_WEBHOOK_URL=${ODOO_WEBHOOK_URL:-}
+      - ODOO_WEBHOOK_TOKEN=${ODOO_WEBHOOK_TOKEN:-}
+      - RESEND_API_KEY=${RESEND_API_KEY:-}
+      - RESEND_FROM_EMAIL=${RESEND_FROM_EMAIL:-}
+      - SALES_FALLBACK_EMAIL=${SALES_FALLBACK_EMAIL:-contact@akililabs.io}
     restart: unless-stopped
     security_opt: [no-new-privileges:true]
     cap_drop: [ALL]

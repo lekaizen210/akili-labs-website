@@ -103,6 +103,10 @@ jobs:
             export DOMAIN=${{ env.PREPROD_DOMAIN }}
             export GHCR_OWNER=${{ github.repository_owner }}
             export ANTHROPIC_API_KEY="${{ secrets.ANTHROPIC_API_KEY }}"
+            export ODOO_WEBHOOK_URL="${{ secrets.ODOO_WEBHOOK_URL }}"
+            export ODOO_WEBHOOK_TOKEN="${{ secrets.ODOO_WEBHOOK_TOKEN }}"
+            export RESEND_API_KEY="${{ secrets.RESEND_API_KEY }}"
+            export RESEND_FROM_EMAIL="${{ secrets.RESEND_FROM_EMAIL }}"
 
             # Copier la config preprod (HTTPS + test.akililabs.io)
             cp nginx/nginx.preprod.conf nginx/nginx.conf

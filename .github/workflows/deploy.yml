@@ -107,6 +107,10 @@ jobs:
             export VERSION=${{ needs.build.outputs.version }}
             export GHCR_OWNER=${{ github.repository_owner }}
             export ANTHROPIC_API_KEY="${{ secrets.ANTHROPIC_API_KEY }}"
+            export ODOO_WEBHOOK_URL="${{ secrets.ODOO_WEBHOOK_URL }}"
+            export ODOO_WEBHOOK_TOKEN="${{ secrets.ODOO_WEBHOOK_TOKEN }}"
+            export RESEND_API_KEY="${{ secrets.RESEND_API_KEY }}"
+            export RESEND_FROM_EMAIL="${{ secrets.RESEND_FROM_EMAIL }}"
 
             # Pull de la nouvelle image
             docker pull ${{ needs.build.outputs.image }}:${VERSION}

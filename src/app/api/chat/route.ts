@@ -2,6 +2,7 @@ import type { NextRequest } from "next/server";
 import { getAnthropicClient } from "@/lib/chat/anthropic-client";
 import { classifyIntent, DEFAULT_FALLBACK_RESULT } from "@/lib/chat/orchestrator";
 import { streamSpecialistResponse } from "@/lib/chat/specialist-agent";
+import { runQualificationTurn } from "@/lib/chat/qualification-flow";
 import { getGuardrailResponse } from "@/lib/chat/guardrail";
 import type { ChatRequestBody } from "@/lib/chat/types";
 import { BASE_URL } from "@/lib/seo";
@@ -45,7 +46,8 @@ const GENERIC_ERROR: Record<"fr" | "en", string> = {
  * 2a. classification d'intention (Orchestrateur, non streamé)
  * 2b. réponse de l'agent spécialisé routé (FAQ / Qualification / Support), streamée —
  *     ou réponse de garde-fou directe pour les cas hors-périmètre (Lot 2).
- * Le tool capture_lead (agent Qualification → webhook Odoo) arrive au Lot 3.
+ * L'agent Qualification peut déclencher le tool capture_lead → webhook Odoo CRM,
+ * avec fallback email si le webhook échoue (Lot 3).
  */
 export async function POST(request: NextRequest) {
   const origin = request.headers.get("origin");
@@ -83,6 +85,10 @@ export async function POST(request: NextRequest) {
       try {
         if (result.intent === "guardrail") {
           controller.enqueue(sseEvent("delta", { text: getGuardrailResponse(result.language) }));
+        } else if (result.intent === "qualification") {
+          await runQualificationTurn(getAnthropicClient(), messages, result.language, body.conversation_id, (chunk) =>
+            controller.enqueue(sseEvent("delta", { text: chunk }))
+          );
         } else {
           for await (const chunk of streamSpecialistResponse(
             getAnthropicClient(),
