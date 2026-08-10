@@ -4,6 +4,8 @@ import { classifyIntent, DEFAULT_FALLBACK_RESULT } from "@/lib/chat/orchestrator
 import { streamSpecialistResponse } from "@/lib/chat/specialist-agent";
 import { runQualificationTurn } from "@/lib/chat/qualification-flow";
 import { getGuardrailResponse } from "@/lib/chat/guardrail";
+import { MAX_ATTACHMENTS_PER_MESSAGE } from "@/lib/chat/attachment-limits";
+import { validateAttachment } from "@/lib/chat/attachment-validation";
 import type { ChatRequestBody } from "@/lib/chat/types";
 import { BASE_URL } from "@/lib/seo";
 
@@ -18,6 +20,17 @@ function sseEvent(event: string, data: unknown): Uint8Array {
   return encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
 }
 
+function isValidAttachment(a: unknown): boolean {
+  if (!a || typeof a !== "object") return false;
+  const attachment = a as Record<string, unknown>;
+  return (
+    (attachment.kind === "image" || attachment.kind === "document") &&
+    typeof attachment.mediaType === "string" &&
+    typeof attachment.data === "string" &&
+    typeof attachment.name === "string"
+  );
+}
+
 function isValidBody(body: unknown): body is ChatRequestBody {
   if (!body || typeof body !== "object") return false;
   const b = body as Record<string, unknown>;
@@ -26,13 +39,17 @@ function isValidBody(body: unknown): body is ChatRequestBody {
     typeof b.conversation_id === "string" &&
     Array.isArray(b.messages) &&
     b.messages.length > 0 &&
-    b.messages.every(
-      (m) =>
-        m &&
-        typeof m === "object" &&
-        (m as Record<string, unknown>).role &&
-        typeof (m as Record<string, unknown>).content === "string"
-    )
+    b.messages.every((m) => {
+      if (!m || typeof m !== "object") return false;
+      const msg = m as Record<string, unknown>;
+      if (!msg.role || typeof msg.content !== "string") return false;
+      if (msg.attachments === undefined) return true;
+      return (
+        Array.isArray(msg.attachments) &&
+        msg.attachments.length <= MAX_ATTACHMENTS_PER_MESSAGE &&
+        msg.attachments.every(isValidAttachment)
+      );
+    })
   );
 }
 
@@ -70,6 +87,15 @@ export async function POST(request: NextRequest) {
   }
 
   const { messages } = body;
+
+  for (const message of messages) {
+    for (const attachment of message.attachments ?? []) {
+      const validation = validateAttachment(attachment);
+      if (!validation.valid) {
+        return Response.json({ error: `Pièce jointe invalide : ${validation.reason}` }, { status: 400 });
+      }
+    }
+  }
 
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {

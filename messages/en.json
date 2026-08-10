@@ -1451,6 +1451,11 @@
     "placeholder": "Ask your question…",
     "send": "Send",
     "thinking": "Analyzing…",
-    "error": "Something went wrong. Please try again or contact contact@akililabs.io."
+    "error": "Something went wrong. Please try again or contact contact@akililabs.io.",
+    "attachmentAddLabel": "Attach a file (image or PDF, max 4 MB)",
+    "attachmentRemoveLabel": "Remove attachment",
+    "attachmentInvalidType": "File type not accepted. Accepted formats: PNG, JPEG, WEBP, PDF.",
+    "attachmentTooLarge": "File too large (4 MB maximum).",
+    "attachmentReadError": "Could not read this file. Please try again."
   }
 }

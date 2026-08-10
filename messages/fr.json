@@ -1451,6 +1451,11 @@
     "placeholder": "Posez votre question…",
     "send": "Envoyer",
     "thinking": "Analyse en cours…",
-    "error": "Une erreur est survenue. Merci de réessayer ou de contacter contact@akililabs.io."
+    "error": "Une erreur est survenue. Merci de réessayer ou de contacter contact@akililabs.io.",
+    "attachmentAddLabel": "Joindre un fichier (image ou PDF, 4 Mo max)",
+    "attachmentRemoveLabel": "Retirer la pièce jointe",
+    "attachmentInvalidType": "Type de fichier non accepté. Formats acceptés : PNG, JPEG, WEBP, PDF.",
+    "attachmentTooLarge": "Fichier trop volumineux (4 Mo maximum).",
+    "attachmentReadError": "Impossible de lire ce fichier. Merci de réessayer."
   }
 }

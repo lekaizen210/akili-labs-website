@@ -1,5 +1,6 @@
 import type Anthropic from "@anthropic-ai/sdk";
 import { ORCHESTRATOR_SYSTEM_PROMPT, CLASSIFY_INTENT_TOOL } from "./orchestrator-prompt";
+import { toAnthropicMessagesForClassification } from "./anthropic-messages";
 import type { ChatIntent, ChatMessage, OrchestratorResult } from "./types";
 
 const VALID_INTENTS: readonly ChatIntent[] = ["faq", "qualification", "support", "guardrail"];
@@ -28,7 +29,7 @@ export async function classifyIntent(
     model: ORCHESTRATOR_MODEL,
     max_tokens: 200,
     system: ORCHESTRATOR_SYSTEM_PROMPT,
-    messages: messages.map((m) => ({ role: m.role, content: m.content })),
+    messages: toAnthropicMessagesForClassification(messages),
     tools: [CLASSIFY_INTENT_TOOL],
     tool_choice: { type: "tool", name: "classify_intent" },
   });
