@@ -106,6 +106,7 @@ jobs:
             # Mise à jour de la variable VERSION
             export VERSION=${{ needs.build.outputs.version }}
             export GHCR_OWNER=${{ github.repository_owner }}
+            export ANTHROPIC_API_KEY="${{ secrets.ANTHROPIC_API_KEY }}"
 
             # Pull de la nouvelle image
             docker pull ${{ needs.build.outputs.image }}:${VERSION}
