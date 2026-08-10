@@ -21,7 +21,7 @@ const VALID_LEAD_INPUT = {
   besoin: "Comptabilité OHADA + Paie",
 };
 
-function textEvent(index: number, text: string) {
+function textEvent(index: number) {
   return { type: "content_block_start", index, content_block: { type: "text" } } satisfies Record<string, unknown>;
 }
 
@@ -38,7 +38,7 @@ function mockClient(opts: { firstToolInput?: unknown; firstText?: string; second
         async function* gen() {
           if (callIndex === 1 && opts.firstToolInput !== undefined) {
             if (opts.firstText) {
-              yield textEvent(0, opts.firstText) as unknown as Anthropic.RawMessageStreamEvent;
+              yield textEvent(0) as unknown as Anthropic.RawMessageStreamEvent;
               yield {
                 type: "content_block_delta",
                 index: 0,
