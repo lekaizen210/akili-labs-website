@@ -118,6 +118,11 @@ jobs:
             # Rechargement sans coupure (rolling restart)
             docker compose -f docker-compose.prod.yml up -d --no-build --pull never
 
+            # docker compose up ne détecte pas les changements de CONTENU d'un fichier
+            # monté en volume (seulement les changements de définition du service) —
+            # sans ce reload explicite, nginx continue de servir l'ancienne config.
+            docker exec akili-nginx nginx -s reload
+
             # Nettoyage des images obsolètes
             docker image prune -f
 
