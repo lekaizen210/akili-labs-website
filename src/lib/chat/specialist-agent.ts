@@ -2,6 +2,7 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { FAQ_SYSTEM_PROMPT } from "./faq-prompt";
 import { QUALIFICATION_SYSTEM_PROMPT } from "./qualification-prompt";
 import { SUPPORT_SYSTEM_PROMPT } from "./support-prompt";
+import { toAnthropicMessagesWithAttachments } from "./anthropic-messages";
 import type { ChatIntent, ChatMessage } from "./types";
 
 const SPECIALIST_MODEL_FAQ = process.env.SPECIALIST_MODEL_FAQ ?? "claude-sonnet-5";
@@ -57,7 +58,7 @@ export async function* streamSpecialistResponse(
     model,
     max_tokens: 1024,
     system: prompt,
-    messages: messages.map((m) => ({ role: m.role, content: m.content })),
+    messages: toAnthropicMessagesWithAttachments(messages),
     stream: true,
   });
 

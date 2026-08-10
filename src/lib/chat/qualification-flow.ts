@@ -3,6 +3,7 @@ import { QUALIFICATION_SYSTEM_PROMPT } from "./qualification-prompt";
 import { CAPTURE_LEAD_TOOL, validateLeadInput } from "./capture-lead-tool";
 import { submitLeadToOdoo } from "./odoo-webhook";
 import { sendFallbackLeadEmail } from "./email-fallback";
+import { toAnthropicMessagesWithAttachments } from "./anthropic-messages";
 import type { ChatMessage } from "./types";
 
 const SPECIALIST_MODEL_QUALIFICATION = process.env.SPECIALIST_MODEL_QUALIFICATION ?? "claude-sonnet-5";
@@ -92,7 +93,7 @@ export async function runQualificationTurn(
   onText: (chunk: string) => void
 ): Promise<void> {
   const system = `${QUALIFICATION_SYSTEM_PROMPT}\n\n## Langue de réponse\nRéponds impérativement en ${LANGUAGE_LABEL[language]}.`;
-  const baseMessages: Anthropic.MessageParam[] = messages.map((m) => ({ role: m.role, content: m.content }));
+  const baseMessages: Anthropic.MessageParam[] = toAnthropicMessagesWithAttachments(messages);
 
   const first = await consumeStream(
     client,
