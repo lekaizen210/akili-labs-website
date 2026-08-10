@@ -123,10 +123,11 @@ jobs:
             docker compose -f docker-compose.prod.yml pull --ignore-pull-failures nginx
             docker compose -f docker-compose.prod.yml up -d --no-build --pull missing
 
-            # docker compose up ne détecte pas les changements de CONTENU d'un fichier
-            # monté en volume (seulement les changements de définition du service) —
-            # sans ce reload explicite, nginx continue de servir l'ancienne config.
-            docker exec akili-nginx nginx -s reload
+            # Recréation forcée du conteneur nginx : un simple `nginx -s reload` s'est
+            # révélé peu fiable ici (bind mount de fichier potentiellement périmé après
+            # un `cp` qui écrase le fichier source). --force-recreate garantit un mount
+            # frais sur la config actuelle à chaque déploiement.
+            docker compose -f docker-compose.prod.yml up -d --force-recreate nginx
 
             docker image prune -f
             echo "✅ Production déployée : v${VERSION}"
