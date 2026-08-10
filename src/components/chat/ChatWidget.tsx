@@ -104,7 +104,19 @@ export default function ChatWidget() {
       });
 
       if (!response.ok || !response.body) {
-        throw new Error(`Réponse API invalide (${response.status})`);
+        let detail = "";
+        try {
+          const errorBody = await response.json();
+          if (errorBody && typeof errorBody.error === "string") detail = errorBody.error;
+        } catch {
+          // corps de réponse non-JSON — pas de détail supplémentaire disponible
+        }
+        setMessages((prev) => {
+          const updated = [...prev];
+          updated[updated.length - 1] = { role: "assistant", content: detail || t("error") };
+          return updated;
+        });
+        return;
       }
 
       let assistantText = "";
