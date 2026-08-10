@@ -1,0 +1,32 @@
+name: Debug — Fetch container logs
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environnement (preprod ou production)"
+        required: true
+        default: "preprod"
+        type: choice
+        options: [preprod, production]
+      lines:
+        description: "Nombre de lignes de log à récupérer"
+        required: false
+        default: "200"
+
+jobs:
+  fetch-logs:
+    name: Fetch logs (${{ inputs.environment }})
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.environment }}
+    steps:
+      - name: SSH — docker logs
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ inputs.environment == 'production' && secrets.VPS_HOST || secrets.PREPROD_HOST }}
+          username: ${{ inputs.environment == 'production' && secrets.VPS_USER || secrets.PREPROD_USER }}
+          key: ${{ inputs.environment == 'production' && secrets.VPS_SSH_KEY || secrets.PREPROD_SSH_KEY }}
+          script: |
+            echo "── docker logs akili-labs-website (dernières ${{ inputs.lines }} lignes) ──"
+            docker logs akili-labs-website --tail ${{ inputs.lines }} 2>&1
