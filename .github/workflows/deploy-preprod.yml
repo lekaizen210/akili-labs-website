@@ -111,22 +111,18 @@ jobs:
             # Copier la config preprod (HTTPS + test.akililabs.io)
             cp nginx/nginx.preprod.conf nginx/nginx.conf
 
-            echo "── DEBUG : fichier sur disque (VPS) ──"
-            grep -n "client_max_body_size" nginx/nginx.conf || echo "  (directive absente du fichier copié !)"
-            echo "── DEBUG : fichier vu depuis le conteneur (avant reload) ──"
-            docker exec akili-nginx cat /etc/nginx/nginx.conf 2>/dev/null | grep -n "client_max_body_size" || echo "  (absent ou conteneur injoignable)"
-
             docker pull ghcr.io/${{ env.IMAGE_NAME }}:${VERSION}
             docker compose -f docker-compose.prod.yml pull --ignore-pull-failures nginx
             docker compose -f docker-compose.prod.yml up -d --no-build --pull missing
 
-            # docker compose up ne détecte pas les changements de CONTENU d'un fichier
-            # monté en volume (seulement les changements de définition du service) —
-            # sans ce reload explicite, nginx continue de servir l'ancienne config.
-            docker exec akili-nginx nginx -s reload
+            # Recréation forcée du conteneur nginx : un simple `nginx -s reload` s'est
+            # révélé peu fiable ici (bind mount de fichier potentiellement périmé après
+            # un `cp` qui écrase le fichier source). --force-recreate garantit un mount
+            # frais sur la config actuelle à chaque déploiement.
+            docker compose -f docker-compose.prod.yml up -d --force-recreate nginx
 
-            echo "── DEBUG : config EFFECTIVEMENT chargée par nginx (après reload) ──"
-            docker exec akili-nginx nginx -T 2>/dev/null | grep -n "client_max_body_size" || echo "  (absent de la config effective)"
+            echo "── DEBUG : config EFFECTIVEMENT chargée par nginx ──"
+            docker exec akili-nginx nginx -T 2>&1 | grep -n "client_max_body_size" || echo "  (absent de la config effective)"
 
             docker image prune -f
             echo "✅ Preprod déployée : ${VERSION} sur https://${{ env.PREPROD_DOMAIN }}"
