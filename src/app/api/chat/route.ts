@@ -128,18 +128,6 @@ export async function POST(request: NextRequest) {
       } catch (error) {
         console.error("[api/chat] échec de l'agent spécialisé, message générique renvoyé", error);
         controller.enqueue(sseEvent("delta", { text: GENERIC_ERROR[result.language] }));
-        // TODO(debug temporaire — à retirer) : événement de diagnostic ignoré par le
-        // widget (seuls "intent"/"delta"/"done" sont traités côté client), utile pour
-        // inspecter l'erreur réelle via curl direct sans accès SSH aux logs serveur.
-        const e = error as { status?: unknown; message?: unknown; error?: unknown; type?: unknown };
-        controller.enqueue(
-          sseEvent("error-detail", {
-            status: e?.status,
-            message: e?.message,
-            body: e?.error,
-            type: e?.type,
-          })
-        );
       }
 
       controller.enqueue(sseEvent("done", {}));
