@@ -1,6 +1,8 @@
 import type { NextRequest } from "next/server";
 import { getAnthropicClient } from "@/lib/chat/anthropic-client";
 import { classifyIntent, DEFAULT_FALLBACK_RESULT } from "@/lib/chat/orchestrator";
+import { streamSpecialistResponse } from "@/lib/chat/specialist-agent";
+import { getGuardrailResponse } from "@/lib/chat/guardrail";
 import type { ChatRequestBody } from "@/lib/chat/types";
 import { BASE_URL } from "@/lib/seo";
 
@@ -33,10 +35,17 @@ function isValidBody(body: unknown): body is ChatRequestBody {
   );
 }
 
+const GENERIC_ERROR: Record<"fr" | "en", string> = {
+  fr: "Une erreur est survenue. Merci de réessayer ou de contacter contact@akililabs.io.",
+  en: "Something went wrong. Please try again or contact contact@akililabs.io.",
+};
+
 /**
- * Route API du chat (Lot 1 — infrastructure). À ce stade, seul l'agent Orchestrateur
- * est branché : la réponse streamée est une trace brute de la classification
- * d'intention, pas encore la réponse d'un agent spécialisé (Lot 2).
+ * Route API du chat. Orchestration multi-agents (Architecture §3.1) :
+ * 2a. classification d'intention (Orchestrateur, non streamé)
+ * 2b. réponse de l'agent spécialisé routé (FAQ / Qualification / Support), streamée —
+ *     ou réponse de garde-fou directe pour les cas hors-périmètre (Lot 2).
+ * Le tool capture_lead (agent Qualification → webhook Odoo) arrive au Lot 3.
  */
 export async function POST(request: NextRequest) {
   const origin = request.headers.get("origin");
@@ -71,13 +80,22 @@ export async function POST(request: NextRequest) {
 
       controller.enqueue(sseEvent("intent", result));
 
-      const raw =
-        `Intention détectée : ${result.intent} (langue : ${result.language}). ` +
-        "L'agent spécialisé correspondant sera branché au Lot 2.";
-
-      for (const word of raw.split(" ")) {
-        controller.enqueue(sseEvent("delta", { text: `${word} ` }));
-        await new Promise((resolve) => setTimeout(resolve, 20));
+      try {
+        if (result.intent === "guardrail") {
+          controller.enqueue(sseEvent("delta", { text: getGuardrailResponse(result.language) }));
+        } else {
+          for await (const chunk of streamSpecialistResponse(
+            getAnthropicClient(),
+            result.intent,
+            messages,
+            result.language
+          )) {
+            controller.enqueue(sseEvent("delta", { text: chunk }));
+          }
+        }
+      } catch (error) {
+        console.error("[api/chat] échec de l'agent spécialisé, message générique renvoyé", error);
+        controller.enqueue(sseEvent("delta", { text: GENERIC_ERROR[result.language] }));
       }
 
       controller.enqueue(sseEvent("done", {}));
