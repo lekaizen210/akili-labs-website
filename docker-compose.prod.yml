@@ -39,6 +39,12 @@ services:
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
+      # Chat IA multi-agents — cf. Stack technique §9
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - ORCHESTRATOR_MODEL=${ORCHESTRATOR_MODEL:-claude-haiku-4-5-20251001}
+      - SPECIALIST_MODEL_FAQ=${SPECIALIST_MODEL_FAQ:-claude-sonnet-5}
+      - SPECIALIST_MODEL_QUALIFICATION=${SPECIALIST_MODEL_QUALIFICATION:-claude-sonnet-5}
+      - SPECIALIST_MODEL_SUPPORT=${SPECIALIST_MODEL_SUPPORT:-claude-haiku-4-5-20251001}
     restart: unless-stopped
     security_opt: [no-new-privileges:true]
     cap_drop: [ALL]

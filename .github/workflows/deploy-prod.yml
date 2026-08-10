@@ -113,6 +113,7 @@ jobs:
             export VERSION=${{ needs.build.outputs.version }}
             export GHCR_OWNER=${{ github.repository_owner }}
             export DOMAIN=akililabs.io
+            export ANTHROPIC_API_KEY="${{ secrets.ANTHROPIC_API_KEY }}"
 
             docker pull ${{ needs.build.outputs.image }}:${VERSION}
             docker compose -f docker-compose.prod.yml pull --ignore-pull-failures nginx

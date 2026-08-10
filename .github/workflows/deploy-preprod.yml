@@ -102,6 +102,7 @@ jobs:
             export VERSION=preprod-${{ github.sha }}
             export DOMAIN=${{ env.PREPROD_DOMAIN }}
             export GHCR_OWNER=${{ github.repository_owner }}
+            export ANTHROPIC_API_KEY="${{ secrets.ANTHROPIC_API_KEY }}"
 
             # Copier la config preprod (HTTPS + test.akililabs.io)
             cp nginx/nginx.preprod.conf nginx/nginx.conf
