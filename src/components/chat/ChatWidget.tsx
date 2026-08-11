@@ -26,14 +26,15 @@ function readFileAsBase64(file: File): Promise<string> {
 }
 
 /**
- * Widget chat flottant (Lot 1 — infrastructure minimale).
- * Affiche la trace brute de la classification d'intention de l'Orchestrateur ;
- * le contenu produit par un agent spécialisé arrive au Lot 2.
+ * Widget chat flottant. Position bas-droite, plein écran sur mobile,
+ * badge de message non lu si une réponse arrive pendant que le widget
+ * est fermé (SFD §5.2).
  */
 export default function ChatWidget() {
   const t = useTranslations("Chat");
   const locale = useLocale();
   const [open, setOpen] = useState(false);
+  const [hasUnread, setHasUnread] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [pending, setPending] = useState(false);
@@ -42,10 +43,16 @@ export default function ChatWidget() {
   const conversationIdRef = useRef<string>("");
   const scrollRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const openRef = useRef(open);
 
   useEffect(() => {
     conversationIdRef.current = getOrCreateConversationId();
   }, []);
+
+  useEffect(() => {
+    openRef.current = open;
+    if (open) setHasUnread(false);
+  }, [open]);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -139,6 +146,7 @@ export default function ChatWidget() {
       });
     } finally {
       setPending(false);
+      if (!openRef.current) setHasUnread(true);
     }
   }
 
@@ -149,9 +157,15 @@ export default function ChatWidget() {
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? t("closeButtonLabel") : t("openButtonLabel")}
         aria-expanded={open}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-navy text-white shadow-lg flex items-center justify-center hover:bg-orange-cta transition-colors duration-150"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-navy text-white shadow-lg flex items-center justify-center hover:bg-orange-cta transition-colors duration-150 relative"
       >
         {open ? <X size={22} /> : <MessageCircle size={22} />}
+        {hasUnread && !open && (
+          <span
+            aria-hidden="true"
+            className="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-orange-cta border-2 border-white"
+          />
+        )}
       </button>
 
       <AnimatePresence>
@@ -163,11 +177,21 @@ export default function ChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.2, ease }}
-            className="fixed bottom-24 right-6 z-50 w-[min(380px,calc(100vw-2rem))] h-[min(560px,calc(100vh-8rem))] bg-white rounded-2xl shadow-2xl border border-line flex flex-col overflow-hidden"
+            className={cn(
+              "fixed z-50 bg-white flex flex-col overflow-hidden",
+              // Mobile : plein écran (SFD §5.2). Desktop (sm+) : carte flottante bas-droite.
+              "inset-0",
+              "sm:inset-auto sm:bottom-24 sm:right-6 sm:w-[380px] sm:h-[560px] sm:rounded-2xl sm:shadow-2xl sm:border sm:border-line"
+            )}
           >
-            <div className="bg-navy text-white px-4 py-3 flex items-center justify-between">
+            <div className="bg-navy text-white px-4 py-3 flex items-center justify-between shrink-0">
               <span className="font-semibold text-sm">{t("title")}</span>
-              <button type="button" onClick={() => setOpen(false)} aria-label={t("closeButtonLabel")}>
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                aria-label={t("closeButtonLabel")}
+                className="p-1.5 -mr-1.5 rounded-lg hover:bg-white/10 transition-colors"
+              >
                 <X size={18} />
               </button>
             </div>
@@ -195,7 +219,7 @@ export default function ChatWidget() {
               ))}
             </div>
 
-            <div className="border-t border-line">
+            <div className="border-t border-line shrink-0">
               {attachmentError && (
                 <p className="px-3 pt-2 text-xs text-red-500">{attachmentError}</p>
               )}
