@@ -51,8 +51,15 @@ export default function ChatWidget() {
 
   useEffect(() => {
     openRef.current = open;
-    if (open) setHasUnread(false);
   }, [open]);
+
+  function toggleOpen() {
+    setOpen((v) => {
+      const next = !v;
+      if (next) setHasUnread(false);
+      return next;
+    });
+  }
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -154,7 +161,7 @@ export default function ChatWidget() {
     <>
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        onClick={toggleOpen}
         aria-label={open ? t("closeButtonLabel") : t("openButtonLabel")}
         aria-expanded={open}
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-navy text-white shadow-lg flex items-center justify-center hover:bg-orange-cta transition-colors duration-150 relative"
