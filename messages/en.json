@@ -1447,7 +1447,7 @@
     "openButtonLabel": "Open the AKILI Labs assistant",
     "closeButtonLabel": "Close the assistant",
     "title": "AKILI Labs assistant",
-    "welcome": "Hello! This assistant is under construction — ask a question to test intent classification.",
+    "welcome": "Hello! I'm Aki, the AKILI Labs assistant. Ask me about our services (Odoo ERP, AI, DevSecOps, Business Intelligence...) or tell me about your project.",
     "placeholder": "Ask your question…",
     "send": "Send",
     "thinking": "Analyzing…",

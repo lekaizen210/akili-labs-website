@@ -1447,7 +1447,7 @@
     "openButtonLabel": "Ouvrir l'assistant AKILI Labs",
     "closeButtonLabel": "Fermer l'assistant",
     "title": "Assistant AKILI Labs",
-    "welcome": "Bonjour ! Cet assistant est en cours de construction — posez une question pour tester la classification d'intention.",
+    "welcome": "Bonjour ! Je suis Aki, l'assistant AKILI Labs. Posez-moi une question sur nos offres (ERP Odoo, IA, DevSecOps, Business Intelligence...) ou parlez-moi de votre projet.",
     "placeholder": "Posez votre question…",
     "send": "Envoyer",
     "thinking": "Analyse en cours…",

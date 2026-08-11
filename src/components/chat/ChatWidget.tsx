@@ -164,15 +164,20 @@ export default function ChatWidget() {
         onClick={toggleOpen}
         aria-label={open ? t("closeButtonLabel") : t("openButtonLabel")}
         aria-expanded={open}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-navy text-white shadow-lg flex items-center justify-center hover:bg-orange-cta transition-colors duration-150 relative"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-navy text-white shadow-lg flex items-center justify-center hover:bg-orange-cta transition-colors duration-150"
       >
-        {open ? <X size={22} /> : <MessageCircle size={22} />}
-        {hasUnread && !open && (
-          <span
-            aria-hidden="true"
-            className="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-orange-cta border-2 border-white"
-          />
-        )}
+        {/* Wrapper interne pour ancrer le badge sans jamais entrer en conflit avec le
+            `position: fixed` du bouton — Tailwind résout `fixed`/`relative` selon
+            l'ordre des classes dans sa feuille générée, pas l'ordre dans `class=`. */}
+        <span className="relative w-full h-full flex items-center justify-center">
+          {open ? <X size={22} /> : <MessageCircle size={22} />}
+          {hasUnread && !open && (
+            <span
+              aria-hidden="true"
+              className="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-orange-cta border-2 border-white"
+            />
+          )}
+        </span>
       </button>
 
       <AnimatePresence>
