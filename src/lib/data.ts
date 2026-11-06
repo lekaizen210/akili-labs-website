@@ -293,22 +293,6 @@ export const team = [
     couleur: "#FF5500",
   },
   {
-    initiales: "JA",
-    nom: "Jean-Jonathan Arra",
-    titre: { fr: "Co-fondateur & CTO", en: "Co-founder & CTO" },
-    bio: {
-      fr: "Expert en transformation digitale et intégration ERP, Jean-Jonathan pilote la stratégie technologique d'AKILI Labs avec plus de 10 ans d'expérience sur la zone UEMOA.",
-      en: "An expert in digital transformation and ERP integration, Jean-Jonathan drives AKILI Labs' technology strategy with over 10 years of experience across the UEMOA zone.",
-    },
-    expertises: [
-      { fr: "ERP Odoo", en: "Odoo ERP" },
-      { fr: "Transformation Digitale", en: "Digital Transformation" },
-      { fr: "Stratégie SI", en: "IT Strategy" },
-    ] satisfies Localized[],
-    linkedin: "",
-    couleur: "#1A2B3C",
-  },
-  {
     initiales: "ERP",
     nom: { fr: "Pôle ERP & Odoo", en: "ERP & Odoo Division" },
     titre: { fr: "Intégration, paramétrage et support", en: "Integration, configuration and support" },
