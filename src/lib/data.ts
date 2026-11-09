@@ -218,10 +218,10 @@ export const references = [
 ];
 
 export const stats = [
-  { value: "30+", label: { fr: "Années d'expérience cumulée de l'équipe dirigeante", en: "Years of combined leadership experience" } },
+  { value: "6", label: { fr: "Domaines d'expertise", en: "Areas of expertise" } },
   { value: "8", label: { fr: "Pays de la zone UEMOA couverts", en: "UEMOA countries covered" } },
   { value: "10", label: { fr: "Secteurs d'expertise", en: "Sectors of expertise" } },
-  { value: "100 %", label: { fr: "des projets pilotés par un membre fondateur", en: "of projects led by a founding member" } },
+  { value: "100 %", label: { fr: "des projets pilotés par un membre de la direction", en: "of projects led by a member of the leadership team" } },
 ] satisfies { value: string; label: Localized }[];
 
 export const approach = [

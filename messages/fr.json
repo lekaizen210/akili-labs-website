@@ -91,7 +91,7 @@
       "titleWord2": "Digitale",
       "titleLine3": "en Afrique de l'Ouest",
       "subtitleLine1": "ERP, Intelligence Artificielle, DevSecOps, Développement sur mesure",
-      "subtitleLine2": "Une équipe fondatrice cumulant plus de 30 ans de projets SI à travers toute la zone UEMOA, au service de solutions qui créent de la valeur réelle.",
+      "subtitleLine2": "Une direction expérimentée, forte de projets SI menés à travers toute la zone UEMOA, au service de solutions qui créent de la valeur réelle.",
       "ctaPrimary": "Consultation gratuite",
       "ctaSecondary": "Voir nos réalisations",
       "techGenerativeAI": "IA Générative"
@@ -126,7 +126,7 @@
     "approach": {
       "badge": "Une méthode forgée sur le terrain",
       "title": "Notre approche",
-      "subtitle": "Huit étapes distillées de plus de trente années cumulées de projets menés par nos dirigeants à travers la zone UEMOA — de l'analyse initiale au support continu.",
+      "subtitle": "Huit étapes issues des projets menés par nos dirigeants à travers la zone UEMOA — de l'analyse initiale au support continu.",
       "ctaButton": "Parlez-nous de votre projet →"
     },
     "sectors": {
@@ -139,7 +139,7 @@
       "title": "Des projets que nos dirigeants ont menés",
       "subtitle": "Avant de fonder AKILI Labs, notre équipe dirigeante a piloté des transformations structurantes dans plusieurs pays de la zone UEMOA. En voici trois, représentatives de ce que nous savons livrer.",
       "viewAllLink": "Voir toutes nos références",
-      "transparencyNote": "Transparence : ces projets ont été réalisés par les membres fondateurs dans leurs fonctions antérieures. Votre projet sera notre prochaine référence.",
+      "transparencyNote": "Transparence : ces projets ont été réalisés par les membres de notre direction dans leurs fonctions antérieures. Votre projet sera notre prochaine référence.",
       "bottomCta": "Démarrer un projet avec nous →"
     },
     "socialProof": {
@@ -147,7 +147,7 @@
       "title": "Ce sur quoi vous pouvez compter",
       "lead": "Une société nouvelle n'a qu'un capital : la réussite de ses premiers clients. Voici ce que nous mettons dans chaque contrat.",
       "card1Title": "Direction impliquée",
-      "card1Desc": "Chaque projet est piloté par un membre de l'équipe fondatrice, du cadrage à la recette.",
+      "card1Desc": "Chaque projet est piloté par un membre de la direction, du cadrage à la recette.",
       "card2Title": "Engagements contractuels",
       "card2Desc": "Jalons, SLA de support (P1 100 %, P2 ≥ 95 %) et réversibilité inscrits noir sur blanc.",
       "card3Title": "Transparence totale",
@@ -167,7 +167,7 @@
       "trustItem1": "Réponse sous 24h ouvrées",
       "trustItem2": "Consultation initiale offerte",
       "trustItem3": "Confidentialité garantie",
-      "trustItem4": "Direction certifiée Odoo (en cours) — 30+ ans d'expérience SI cumulée"
+      "trustItem4": "Conformité OHADA et SYSCOHADA intégrée"
     }
   },
   "Odoo": {
@@ -877,9 +877,9 @@
     "manifesto": {
       "eyebrow": "Notre manifeste",
       "title": "Une société nouvelle. Une expérience qui ne l'est pas.",
-      "text": "Si la société est jeune, ses fondateurs ne le sont pas. L'équipe dirigeante cumule plus de 30 ans d'expérience en transformation digitale, intégration ERP, intelligence artificielle et DevSecOps, acquise sur des projets structurants dans toute la zone UEMOA : administrations publiques, banques et assurances, agro-industrie, télécommunications. Cette expérience, nous l'avons mise au service d'une conviction : une structure légère, sans héritage ni lourdeur, entièrement construite autour des méthodes et des outils d'aujourd'hui — Odoo, IA générative, CI/CD, cloud — livre plus vite, mieux, et au juste prix.",
+      "text": "Si la société est jeune, sa direction ne l'est pas. Elle s'appuie sur une longue expérience en transformation digitale, intégration ERP, intelligence artificielle et DevSecOps, acquise sur des projets structurants dans toute la zone UEMOA : administrations publiques, banques et assurances, agro-industrie, télécommunications. Cette expérience, nous l'avons mise au service d'une conviction : une structure légère, sans héritage ni lourdeur, entièrement construite autour des méthodes et des outils d'aujourd'hui — Odoo, IA générative, CI/CD, cloud — livre plus vite, mieux, et au juste prix.",
       "card1Title": "L'expérience des grands comptes, l'agilité d'une jeune structure",
-      "card1Text": "Nos dirigeants ont conçu, déployé et exploité des systèmes d'information critiques pendant plus de trois décennies cumulées. AKILI Labs en distille les meilleures pratiques, sans les lourdeurs.",
+      "card1Text": "Nos dirigeants ont conçu, déployé et exploité des systèmes d'information critiques tout au long de leur carrière. AKILI Labs en distille les meilleures pratiques, sans les lourdeurs.",
       "card2Title": "Nés dans le contexte ouest-africain, pas adaptés à lui",
       "card2Text": "Comptabilité SYSCOHADA, paie locale, usages mobile-first : notre expertise du terrain n'est pas une option au catalogue, c'est notre point de départ.",
       "card3Title": "Une obligation de résultat, pas de discours",
@@ -902,7 +902,7 @@
     "team": {
       "badge": "Notre équipe",
       "title": "Les experts derrière AKILI Labs",
-      "subtitle": "Une direction expérimentée, des pôles d'expertise dédiés — et un principe : chaque projet est piloté par un membre fondateur.",
+      "subtitle": "Une direction expérimentée, des pôles d'expertise dédiés — et un principe : chaque projet est piloté par un membre de la direction.",
       "linkedinAriaLabel": "LinkedIn de {name}",
       "linkedinText": "Voir le profil LinkedIn",
       "contactPole": "Contacter ce pôle →",
@@ -947,8 +947,8 @@
       "quickReplyTextRich": "Nos experts répondent dans les <strong>24h ouvrées</strong>. La consultation initiale est entièrement gratuite.",
       "trust1": "Consultation initiale offerte",
       "trust2": "Confidentialité garantie",
-      "trust3": "Experts certifiés",
-      "trust4": "Devis sous 48h"
+      "trust3": "Projet piloté par la direction",
+      "trust4": "Devis sous 5 jours ouvrés"
     },
     "form": {
       "title": "Parlez-nous de votre projet",
@@ -1353,7 +1353,7 @@
       {
         "categoryId": "akili",
         "question": "AKILI Labs est une société récente : est-ce un risque ?",
-        "answer": "C'est une question légitime — et notre meilleure réponse est structurelle. Vous ne confiez pas votre projet à une marque, mais à des personnes : chez AKILI Labs, chaque mission est dirigée par un membre de l'équipe fondatrice — une équipe qui cumule plus de 30 ans de projets SI dans la zone UEMOA. Vous bénéficiez de l'expérience d'un cabinet établi, avec l'implication totale d'une équipe qui joue sa réputation sur votre réussite. Nos engagements contractuels (jalons, SLA, réversibilité) sont pensés pour vous protéger, pas pour nous couvrir."
+        "answer": "C'est une question légitime — et notre meilleure réponse est structurelle. Vous ne confiez pas votre projet à une marque, mais à des personnes : chez AKILI Labs, chaque mission est dirigée par un membre de la direction, qui a mené des projets SI structurants dans la zone UEMOA. Vous bénéficiez de l'expérience d'un cabinet établi, avec l'implication totale d'une équipe qui joue sa réputation sur votre réussite. Nos engagements contractuels (jalons, SLA, réversibilité) sont pensés pour vous protéger, pas pour nous couvrir."
       }
     ],
     "cta": {

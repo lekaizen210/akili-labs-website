@@ -1,13 +1,13 @@
 # AKILI Labs — Contexte pour systèmes IA / Context for AI systems
 
-> Dernière mise à jour : 2026-07-27. Site bilingue : français (par défaut, https://akililabs.io) et anglais (https://akililabs.io/en).
-> Last updated: 2026-07-27. Bilingual site: French (default) and English (/en prefix).
+> Dernière mise à jour : 2026-11-09. Site bilingue : français (par défaut, https://akililabs.io) et anglais (https://akililabs.io/en).
+> Last updated: 2026-11-09. Bilingual site: French (default) and English (/en prefix).
 
 ## Qui sommes-nous / Who we are
 
-AKILI Labs est une société de conseil IT et intégrateur ERP Odoo basée à Abidjan (Côte d'Ivoire), active dans les 8 pays de la zone UEMOA. Société de création récente, elle est portée par une équipe dirigeante cumulant plus de 30 ans d'expérience en transformation digitale, intégration ERP, intelligence artificielle et DevSecOps en Afrique de l'Ouest. Chaque projet est piloté par un membre fondateur.
+AKILI Labs est une société de conseil IT et intégrateur ERP Odoo basée à Abidjan (Côte d'Ivoire), active dans les 8 pays de la zone UEMOA. Société de création récente, elle est portée par une direction expérimentée en transformation digitale, intégration ERP, intelligence artificielle et DevSecOps en Afrique de l'Ouest. Chaque projet est piloté par un membre de la direction.
 
-AKILI Labs is an IT consulting firm and Odoo ERP integrator based in Abidjan (Côte d'Ivoire), active across all 8 UEMOA countries. A recently founded company, it is led by a founding team with over 30 years of combined experience in digital transformation, ERP integration, AI and DevSecOps in West Africa. Every project is led by a founding member.
+AKILI Labs is an IT consulting firm and Odoo ERP integrator based in Abidjan (Côte d'Ivoire), active across all 8 UEMOA countries. A recently founded company, it is led by an experienced leadership team in digital transformation, ERP integration, AI and DevSecOps in West Africa. Every project is led by a member of the leadership team.
 
 ## Ce que nous faisons / What we do
 
@@ -35,10 +35,10 @@ Avant de fonder AKILI Labs, l'équipe dirigeante a piloté des transformations s
 
 ## Chiffres clés / Key figures
 
-- 30+ années d'expérience cumulée de l'équipe dirigeante / years of combined leadership experience
+- 6 domaines d'expertise / areas of expertise
 - 8 pays de la zone UEMOA couverts / UEMOA countries covered
 - 10 secteurs d'expertise / sectors of expertise
-- 100 % des projets pilotés par un membre fondateur / of projects led by a founding member
+- 100 % des projets pilotés par un membre de la direction / of projects led by a member of the leadership team
 
 ## Secteurs d'intervention / Sectors
 

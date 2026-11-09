@@ -91,7 +91,7 @@
       "titleWord2": "Transformation",
       "titleLine3": "in West Africa",
       "subtitleLine1": "ERP, Artificial Intelligence, DevSecOps, Custom Development",
-      "subtitleLine2": "A founding team with over 30 years of combined IT project experience across the UEMOA zone, delivering solutions that create real value.",
+      "subtitleLine2": "An experienced leadership team, with IT projects delivered across the UEMOA zone, building solutions that create real value.",
       "ctaPrimary": "Free consultation",
       "ctaSecondary": "See our case studies",
       "techGenerativeAI": "Generative AI"
@@ -126,7 +126,7 @@
     "approach": {
       "badge": "A method forged in the field",
       "title": "Our approach",
-      "subtitle": "Eight steps distilled from over thirty combined years of projects our leadership has run across the UEMOA zone — from initial analysis to ongoing support.",
+      "subtitle": "Eight steps drawn from the projects our leadership has run across the UEMOA zone — from initial analysis to ongoing support.",
       "ctaButton": "Tell us about your project →"
     },
     "sectors": {
@@ -139,7 +139,7 @@
       "title": "Projects our leadership team has delivered",
       "subtitle": "Before founding AKILI Labs, our leadership team led major transformation projects across several UEMOA countries. Here are three that represent what we can deliver for you.",
       "viewAllLink": "See all our case studies",
-      "transparencyNote": "Transparency: these projects were delivered by our founding members in their previous roles. Your project will be our next case study.",
+      "transparencyNote": "Transparency: these projects were delivered by members of our leadership team in their previous roles. Your project will be our next case study.",
       "bottomCta": "Start a project with us →"
     },
     "socialProof": {
@@ -147,7 +147,7 @@
       "title": "What you can count on",
       "lead": "A young company has only one real asset: the success of its first clients. Here's what we build into every contract.",
       "card1Title": "Committed leadership",
-      "card1Desc": "Every project is led by a member of our founding team, from scoping to final acceptance.",
+      "card1Desc": "Every project is led by a member of our leadership team, from scoping to final acceptance.",
       "card2Title": "Contractual commitments",
       "card2Desc": "Milestones, support SLAs (P1 100%, P2 ≥95%), and reversibility — written into the contract.",
       "card3Title": "Full transparency",
@@ -167,7 +167,7 @@
       "trustItem1": "Response within 24 business hours",
       "trustItem2": "Free initial consultation",
       "trustItem3": "Confidentiality guaranteed",
-      "trustItem4": "Odoo-certified leadership (in progress) — 30+ years of combined IT experience"
+      "trustItem4": "Built-in OHADA and SYSCOHADA compliance"
     }
   },
   "Odoo": {
@@ -877,9 +877,9 @@
     "manifesto": {
       "eyebrow": "Our manifesto",
       "title": "A young company. Experience that isn't.",
-      "text": "The company may be young, but its founders are not. Our leadership team brings together more than 30 years of experience in digital transformation, ERP integration, artificial intelligence and DevSecOps, built on landmark projects across the entire UEMOA zone: public administrations, banks and insurers, agribusiness, telecommunications. We've put that experience to work behind a single conviction: a lean structure, free of legacy systems and organizational weight, built entirely around today's methods and tools — Odoo, generative AI, CI/CD, cloud — delivers faster, better, and at a fairer price.",
+      "text": "The company may be young, but its leadership is not. It draws on long experience in digital transformation, ERP integration, artificial intelligence and DevSecOps, built on landmark projects across the entire UEMOA zone: public administrations, banks and insurers, agribusiness, telecommunications. We've put that experience to work behind a single conviction: a lean structure, free of legacy systems and organizational weight, built entirely around today's methods and tools — Odoo, generative AI, CI/CD, cloud — delivers faster, better, and at a fairer price.",
       "card1Title": "The experience of major accounts, the agility of a young structure",
-      "card1Text": "Our leaders have designed, deployed and operated mission-critical information systems for more than three decades combined. AKILI Labs distills the best of that practice, without the overhead.",
+      "card1Text": "Our leaders have designed, deployed and operated mission-critical information systems throughout their careers. AKILI Labs distills the best of that practice, without the overhead.",
       "card2Title": "Born in the West African context, not adapted to it after the fact",
       "card2Text": "SYSCOHADA accounting, local payroll, mobile-first usage: our field expertise isn't an optional add-on, it's our starting point.",
       "card3Title": "Accountable for results, not rhetoric",
@@ -902,7 +902,7 @@
     "team": {
       "badge": "Our team",
       "title": "The experts behind AKILI Labs",
-      "subtitle": "An experienced leadership team, dedicated centers of expertise — and one principle: every project is led by a founding member.",
+      "subtitle": "An experienced leadership team, dedicated centers of expertise — and one principle: every project is led by a member of the leadership team.",
       "linkedinAriaLabel": "LinkedIn profile of {name}",
       "linkedinText": "View LinkedIn profile",
       "contactPole": "Contact this division →",
@@ -947,8 +947,8 @@
       "quickReplyTextRich": "Our experts respond within <strong>24 business hours</strong>. The initial consultation is entirely free.",
       "trust1": "Free initial consultation",
       "trust2": "Confidentiality guaranteed",
-      "trust3": "Certified experts",
-      "trust4": "Quote within 48h"
+      "trust3": "Projects led by senior management",
+      "trust4": "Quote within 5 business days"
     },
     "form": {
       "title": "Tell us about your project",
@@ -1353,7 +1353,7 @@
       {
         "categoryId": "akili",
         "question": "AKILI Labs is a young company: is that a risk?",
-        "answer": "It's a fair question — and our best answer is structural. You are not entrusting your project to a brand, but to people: at AKILI Labs, every engagement is led by a member of the founding team — a team with over 30 years of combined IT project experience across the UEMOA zone. You get the experience of an established firm, with the full commitment of a team that stakes its reputation on your success. Our contractual commitments (milestones, SLAs, reversibility) are designed to protect you, not to cover us."
+        "answer": "It's a fair question — and our best answer is structural. You are not entrusting your project to a brand, but to people: at AKILI Labs, every engagement is led by a member of the leadership team, who has delivered major IT projects across the UEMOA zone. You get the experience of an established firm, with the full commitment of a team that stakes its reputation on your success. Our contractual commitments (milestones, SLAs, reversibility) are designed to protect you, not to cover us."
       }
     ],
     "cta": {
