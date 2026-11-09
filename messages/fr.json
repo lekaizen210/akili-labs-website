@@ -173,7 +173,7 @@
   "Odoo": {
     "meta": {
       "title": "Expertise Odoo ERP en Afrique de l'Ouest",
-      "description": "Implémentation, personnalisation et optimisation de l'ERP Odoo pour les entreprises d'Afrique de l'Ouest. Conformité OHADA/SYSCOHADA. Consultation initiale gratuite.",
+      "description": "Implémentation, personnalisation et optimisation d'Odoo ERP en Afrique de l'Ouest. Conformité OHADA/SYSCOHADA. Consultation initiale gratuite.",
       "ogTitle": "Expertise Odoo ERP — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Un projet ERP ne devrait jamais échouer à cause du contexte local. Expertise Odoo complète pour la zone UEMOA/OHADA.",
       "ogImageAlt": "AKILI Labs — Expertise Odoo",
@@ -192,7 +192,7 @@
       "titleHighlight": "à cause du contexte local.",
       "subtitle": "Paie CNPS, états SYSCOHADA, paiements Mobile Money, connectivité variable : c'est là que la plupart des déploiements ERP déraillent en Afrique de l'Ouest, pas dans le logiciel. AKILI Labs implémente Odoo en partant de cette réalité, du cadrage métier jusqu'à la mise en production et au-delà.",
       "ctaPrimary": "Consultation gratuite",
-      "ctaSecondary": "Voir nos ressources Odoo"
+      "ctaSecondary": "Voir les niveaux de support"
     },
     "hubDiagram": {
       "ariaLabel": "Odoo réunit CRM, Stock, Comptabilité et RH dans une seule plateforme",
@@ -296,8 +296,8 @@
   },
   "Td": {
     "meta": {
-      "title": "Transformation Digitale en Afrique de l'Ouest — Audit SI, SDI, GED, BPM",
-      "description": "Audit des systèmes d'information, Schéma Directeur Informatique, dématérialisation, GED, BPM et gouvernance SI pour les organisations de la zone UEMOA. Consultation initiale gratuite.",
+      "title": "Transformation digitale — Audit SI, SDI, GED",
+      "description": "Audit SI, Schéma Directeur Informatique, dématérialisation, GED, BPM et gouvernance SI pour la zone UEMOA. Consultation initiale gratuite.",
       "ogTitle": "Expertise Transformation Digitale — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Du diagnostic au pilotage : nous sécurisons votre transformation digitale avant, pendant et après le choix des technologies.",
       "ogImageAlt": "AKILI Labs — Expertise Transformation Digitale",
@@ -316,7 +316,7 @@
       "titleHighlight": "avant le premier outil déployé.",
       "subtitle": "Faute de cadrage, les projets se fragmentent : des outils qui ne communiquent pas, des investissements qui ne servent pas la stratégie, des équipes qui n'adhèrent pas. AKILI Labs sécurise votre transformation là où elle se joue vraiment — le diagnostic, la priorisation et le pilotage — avant, pendant et après le choix des technologies.",
       "ctaPrimary": "Consultation gratuite",
-      "ctaSecondary": "Voir nos ressources"
+      "ctaSecondary": "Voir nos domaines d'intervention"
     },
     "roadmapDiagram": {
       "ariaLabel": "Feuille de route de transformation digitale en 5 étapes : Audit, Schéma Directeur Informatique, Urbanisation, Déploiement, Pilotage",
@@ -393,8 +393,8 @@
   },
   "Ia": {
     "meta": {
-      "title": "Expertise Intelligence Artificielle en Afrique de l'Ouest",
-      "description": "IA Générative, Machine Learning, Computer Vision, NLP en langues africaines et Business Intelligence. Solutions IA concrètes pour les entreprises d'Afrique de l'Ouest. Consultation initiale gratuite.",
+      "title": "Intelligence artificielle en Afrique de l'Ouest",
+      "description": "IA générative, machine learning, vision par ordinateur et NLP en langues africaines : des solutions IA concrètes pour l'Afrique de l'Ouest.",
       "ogTitle": "Expertise Intelligence Artificielle — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Adopter l'IA, ce n'est pas rattraper un retard, c'est construire une avance. Solutions IA concrètes pour la zone UEMOA/CEDEAO.",
       "ogImageAlt": "AKILI Labs — Expertise Intelligence Artificielle",
@@ -493,8 +493,8 @@
   },
   "DevSecOps": {
     "meta": {
-      "title": "DevSecOps en Afrique de l'Ouest — CI/CD, Kubernetes, IaC, Sécurité",
-      "description": "Industrialisation de la livraison logicielle : CI/CD, conteneurisation Docker/Kubernetes, Infrastructure as Code, sécurité intégrée et supervision pour les organisations de la zone UEMOA. Consultation initiale gratuite.",
+      "title": "DevSecOps — CI/CD, Kubernetes, IaC, sécurité",
+      "description": "CI/CD, conteneurisation Docker/Kubernetes, Infrastructure as Code, sécurité intégrée et supervision pour la zone UEMOA. Consultation gratuite.",
       "ogTitle": "Expertise DevSecOps — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Du diagnostic de maturité à l'exploitation : la sécurité intégrée à chaque étape de votre chaîne de livraison logicielle.",
       "ogImageAlt": "AKILI Labs — Expertise DevSecOps",
@@ -513,7 +513,7 @@
       "titleHighlight": "un pari.",
       "subtitle": "Livrer vite et livrer sûr ne sont pas des objectifs opposés — c'est l'approche traditionnelle qui les oppose : déploiements manuels, audits en fin de projet, vulnérabilités découvertes en production. AKILI Labs industrialise votre chaîne de livraison logicielle avec la sécurité intégrée à chaque étape, du code à l'exploitation.",
       "ctaPrimary": "Consultation gratuite",
-      "ctaSecondary": "Voir nos ressources"
+      "ctaSecondary": "Voir nos domaines d'intervention"
     },
     "intro": {
       "badge": "Le constat",
@@ -594,8 +594,8 @@
   },
   "DevMetiers": {
     "meta": {
-      "title": "Développement d'Applications Métiers en Afrique de l'Ouest — Web, Mobile, APIs",
-      "description": "Applications web et mobiles, portails collaboratifs, APIs et plateformes métiers sur mesure pour les organisations de la zone UEMOA. Sprints courts, périmètre contractualisé, code livré. Consultation initiale gratuite.",
+      "title": "Applications métiers — Web, mobile, APIs",
+      "description": "Applications web et mobiles, portails, APIs et plateformes métiers sur mesure en zone UEMOA. Sprints courts, périmètre contractualisé, code livré.",
       "ogTitle": "Expertise Développement Métiers — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Le sur mesure sans dérapage : garde-fous vérifiables, qualité mesurée, réversibilité. L'outil épouse votre métier.",
       "ogImageAlt": "AKILI Labs — Expertise Développement Métiers",
@@ -614,7 +614,7 @@
       "titleHighlight": "évitable.",
       "subtitle": "Budgets qui dérapent, effet tunnel, dépendance au prestataire : les projets sur mesure échouent presque toujours pour les mêmes raisons — et aucune n'est une fatalité. AKILI Labs développe vos applications web, mobiles et plateformes métiers avec des garde-fous vérifiables : sprints courts, périmètre contractualisé, qualité mesurée, code livré. L'outil épouse votre métier — et le projet reste sous votre contrôle.",
       "ctaPrimary": "Consultation gratuite",
-      "ctaSecondary": "Voir nos ressources"
+      "ctaSecondary": "Voir nos domaines d'intervention"
     },
     "assemblyDiagram": {
       "labelWeb": "Web",
@@ -693,8 +693,8 @@
   },
   "Bi": {
     "meta": {
-      "title": "Business Intelligence en Afrique de l'Ouest — Tableaux de bord & entrepôt de données",
-      "description": "AKILI Labs consolide vos données (ERP, caisses, Mobile Money, Excel) en tableaux de bord fiables, à jour chaque matin. Entrepôt de données, gouvernance des indicateurs et reporting réglementaire en zone UEMOA.",
+      "title": "Business Intelligence — Tableaux de bord",
+      "description": "Vos données ERP, caisses, Mobile Money et Excel réunies dans des tableaux de bord fiables, à jour chaque matin. Entrepôt de données et reporting UEMOA.",
       "ogTitle": "Expertise Business Intelligence — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Du reporting manuel au pilotage quotidien : tableaux de bord direction, entrepôt de données et états réglementaires BCEAO/OHADA.",
       "ogImageAlt": "AKILI Labs — Expertise Business Intelligence",
@@ -797,7 +797,7 @@
   },
   "References": {
     "meta": {
-      "title": "Références — AKILI Labs",
+      "title": "Références",
       "description": "Découvrez nos réalisations : intégration ERP, Intelligence Artificielle, DevSecOps et développement sur mesure en Afrique de l'Ouest."
     },
     "hero": {
@@ -826,7 +826,7 @@
   },
   "Blog": {
     "meta": {
-      "title": "Blog & Veille Technologique — AKILI Labs",
+      "title": "Blog & veille technologique",
       "description": "Insights, études de cas et bonnes pratiques sur l'ERP, l'Intelligence Artificielle et le DevSecOps en Afrique."
     },
     "hero": {
@@ -863,7 +863,7 @@
   "About": {
     "meta": {
       "title": "À propos — Notre mission et notre équipe",
-      "description": "Découvrez AKILI Labs, société de conseil IT et intégrateur Odoo ERP basée à Abidjan et active dans les 8 pays de la zone UEMOA : notre mission, nos valeurs et notre équipe d'experts.",
+      "description": "AKILI Labs, conseil IT et intégrateur Odoo ERP basé à Abidjan, actif dans les 8 pays de l'UEMOA : notre mission, nos valeurs et notre équipe.",
       "ogTitle": "À propos — AKILI Labs",
       "ogDescription": "Notre mission, nos valeurs et notre équipe d'experts en transformation digitale, ERP Odoo, IA et DevSecOps en Afrique de l'Ouest.",
       "ogImageAlt": "À propos AKILI Labs"
@@ -923,7 +923,7 @@
   "Contact": {
     "meta": {
       "title": "Contact — Parlons de votre projet",
-      "description": "Contactez AKILI Labs pour votre projet de transformation digitale, ERP Odoo, Intelligence Artificielle ou DevSecOps en zone UEMOA. Consultation initiale gratuite, réponse sous 24h ouvrées.",
+      "description": "Un projet ERP Odoo, IA, DevSecOps ou de transformation digitale en zone UEMOA ? Consultation initiale gratuite, réponse sous 24h ouvrées.",
       "ogTitle": "Contact — AKILI Labs",
       "ogDescription": "Parlons de votre projet ERP, IA ou DevSecOps en Afrique de l'Ouest. Consultation initiale gratuite.",
       "ogImageAlt": "Contact AKILI Labs"
@@ -992,7 +992,7 @@
   },
   "Careers": {
     "meta": {
-      "title": "Carrières — AKILI Labs",
+      "title": "Carrières",
       "description": "Rejoignez AKILI Labs et participez à la transformation digitale de l'Afrique. Découvrez nos offres d'emploi."
     },
     "hero": {
@@ -1203,8 +1203,8 @@
   },
   "Faq": {
     "meta": {
-      "title": "FAQ — ERP OHADA, IA, DevSecOps & Transformation Digitale",
-      "description": "Réponses à toutes vos questions sur l'intégration ERP Odoo en zone UEMOA, la conformité OHADA, l'IA générative pour entreprises africaines, le DevSecOps et la transformation digitale.",
+      "title": "FAQ — Odoo, OHADA, IA et DevSecOps",
+      "description": "Vos questions sur l'intégration Odoo en zone UEMOA, la conformité OHADA, l'IA générative, le DevSecOps et la transformation digitale.",
       "ogTitle": "FAQ AKILI Labs — ERP OHADA, IA & DevSecOps en Afrique de l'Ouest",
       "ogDescription": "Toutes nos réponses sur l'ERP Odoo, la conformité OHADA, l'IA générative, le DevSecOps et la transformation digitale en zone UEMOA.",
       "ogImageAlt": "FAQ AKILI Labs"

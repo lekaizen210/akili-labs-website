@@ -9,7 +9,6 @@ import TdApproach from "@/components/transformation-digitale/TdApproach";
 import TdSectors from "@/components/transformation-digitale/TdSectors";
 import TdWhyUs from "@/components/transformation-digitale/TdWhyUs";
 import TdStats from "@/components/transformation-digitale/TdStats";
-import TdResources from "@/components/transformation-digitale/TdResources";
 import TdFaq from "@/components/transformation-digitale/TdFaq";
 import TdCtaFinal from "@/components/transformation-digitale/TdCtaFinal";
 import { tdDomains, tdFaqs } from "@/lib/transformation-digitale-data";
@@ -96,7 +95,7 @@ export default async function TransformationDigitalePage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: BASE_URL },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/expertises` },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/#expertises` },
       { "@type": "ListItem", position: 3, name: t("breadcrumbTd"), item: url },
     ],
   };
@@ -127,7 +126,6 @@ export default async function TransformationDigitalePage({
       <TdSectors />
       <TdWhyUs />
       <TdStats />
-      <TdResources />
       <TdFaq />
       <TdCtaFinal />
     </>

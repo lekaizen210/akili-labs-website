@@ -1,6 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
+import { readingTime } from "@/lib/blog-articles";
 import { ArrowRight, Clock, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
@@ -87,7 +88,7 @@ export default function BlogSection() {
                       </span>
                       <span className="flex items-center gap-1">
                         <Clock size={11} />
-                        {post.readTime}
+                        {readingTime(post.slug, locale)}
                       </span>
                     </div>
                   </div>

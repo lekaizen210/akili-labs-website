@@ -12,7 +12,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 
 function isActive(href: string, pathname: string): boolean {
   if (href === "/") return pathname === "/";
-  if (href === "/expertises") return pathname.startsWith("/expertises");
+  if (href === "/#expertises") return pathname.startsWith("/expertises");
   return pathname.startsWith(href);
 }
 
@@ -34,7 +34,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: t("home"), href: "/" },
-    { label: t("expertises"), href: "/expertises", hasDropdown: true },
+    { label: t("expertises"), href: "/#expertises", hasDropdown: true },
     { label: t("references"), href: "/references" },
     { label: t("blog"), href: "/blog" },
     { label: t("faq"), href: "/faq" },
@@ -133,7 +133,7 @@ export default function Navbar() {
                         className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50"
                       >
                         <Link
-                          href="/expertises"
+                          href="/#expertises"
                           className="block px-4 py-2.5 text-sm font-semibold text-navy hover:bg-blue-light transition-colors border-b border-gray-100 mb-1"
                         >
                           {t("allExpertises")}
@@ -264,7 +264,7 @@ export default function Navbar() {
               })()}
               {/* Expertises (sous-menu développé) */}
               <Link
-                href="/expertises"
+                href="/#expertises"
                 onClick={() => setMobileOpen(false)}
                 className="block px-4 pt-2 pb-1 text-xs font-semibold text-gray-500 uppercase tracking-wider hover:text-navy transition-colors"
               >

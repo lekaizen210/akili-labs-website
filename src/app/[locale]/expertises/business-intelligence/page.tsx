@@ -90,7 +90,7 @@ export default async function BusinessIntelligencePage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: BASE_URL },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/expertises` },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/#expertises` },
       { "@type": "ListItem", position: 3, name: t("breadcrumbBi"), item: url },
     ],
   };

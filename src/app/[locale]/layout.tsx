@@ -104,7 +104,6 @@ function buildOrganizationJsonLd(description: string, availableLanguage: string[
       height: 893,
     },
     description,
-    foundingDate: "2020",
     areaServed: ["Côte d'Ivoire", "Sénégal", "Mali", "Burkina Faso", "Niger", "Togo", "Bénin", "Guinée-Bissau"],
     address: {
       "@type": "PostalAddress",

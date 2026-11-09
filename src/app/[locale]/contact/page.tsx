@@ -101,7 +101,11 @@ export default function ContactPage() {
                   <Phone size={16} className="text-orange mt-0.5 shrink-0" />
                   <div>
                     <div className="font-semibold text-navy">{t("sidebar.phoneLabel")}</div>
-                    <span>+225 07 77 70 02 74 · +225 01 03 28 88 97</span>
+                    <span>
+                      <a href="tel:+2250777700274" className="hover:text-orange transition-colors">+225 07 77 70 02 74</a>
+                      {" · "}
+                      <a href="tel:+2250103288897" className="hover:text-orange transition-colors">+225 01 03 28 88 97</a>
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

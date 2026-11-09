@@ -27,7 +27,7 @@ export default async function TdHero() {
           <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
         </Link>
         <a
-          href="#ressources"
+          href="#domaines"
           className="inline-flex items-center gap-2 px-7 py-4 text-white/80 hover:text-white border border-white/20 rounded-xl font-medium transition-[color,border-color,transform] duration-150 ease-out hover:border-white/40 active:scale-[0.97]"
         >
           {t("ctaSecondary")}

@@ -10,7 +10,6 @@ import OdooApproach from "@/components/odoo/OdooApproach";
 import OdooSectors from "@/components/odoo/OdooSectors";
 import OdooWhyUs from "@/components/odoo/OdooWhyUs";
 import OdooStats from "@/components/odoo/OdooStats";
-import OdooResources from "@/components/odoo/OdooResources";
 import OdooFaq from "@/components/odoo/OdooFaq";
 import OdooCtaFinal from "@/components/odoo/OdooCtaFinal";
 import { odooModuleCategories, odooFaqs } from "@/lib/odoo-data";
@@ -92,7 +91,7 @@ export default async function OdooExpertisePage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: BASE_URL },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/expertises` },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/#expertises` },
       { "@type": "ListItem", position: 3, name: t("breadcrumbOdoo"), item: url },
     ],
   };
@@ -124,7 +123,6 @@ export default async function OdooExpertisePage({
       <OdooSectors />
       <OdooWhyUs />
       <OdooStats />
-      <OdooResources />
       <OdooFaq />
       <OdooCtaFinal />
     </>

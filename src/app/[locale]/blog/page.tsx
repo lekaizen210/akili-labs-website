@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { Clock, Calendar, ArrowRight } from "lucide-react";
 import { blogPosts } from "@/lib/data";
+import { readingTime } from "@/lib/blog-articles";
 import { l } from "@/lib/i18n-content";
 import type { Metadata } from "next";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
@@ -81,7 +82,7 @@ export default async function BlogPage({
                     <span className="flex items-center gap-1"><Calendar size={11} />
                       {new Date(blogPosts[0].date).toLocaleDateString(locale === "en" ? "en-US" : "fr-FR", { day: "numeric", month: "long", year: "numeric" })}
                     </span>
-                    <span className="flex items-center gap-1"><Clock size={11} />{blogPosts[0].readTime}</span>
+                    <span className="flex items-center gap-1"><Clock size={11} />{readingTime(blogPosts[0].slug, locale)}</span>
                   </div>
                   <div className="flex items-center gap-1 text-sm font-semibold text-navy group-hover:text-orange transition-colors">
                     {t("readArticle")} <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
@@ -116,7 +117,7 @@ export default async function BlogPage({
                     <span className="flex items-center gap-1"><Calendar size={11} />
                       {new Date(post.date).toLocaleDateString(locale === "en" ? "en-US" : "fr-FR", { day: "numeric", month: "short", year: "numeric" })}
                     </span>
-                    <span className="flex items-center gap-1"><Clock size={11} />{post.readTime}</span>
+                    <span className="flex items-center gap-1"><Clock size={11} />{readingTime(post.slug, locale)}</span>
                   </div>
                 </div>
               </Link>

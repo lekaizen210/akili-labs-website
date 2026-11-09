@@ -10,7 +10,6 @@ import DsApproach from "@/components/devsecops/DsApproach";
 import DsSectors from "@/components/devsecops/DsSectors";
 import DsWhyUs from "@/components/devsecops/DsWhyUs";
 import DsStats from "@/components/devsecops/DsStats";
-import DsResources from "@/components/devsecops/DsResources";
 import DsFaq from "@/components/devsecops/DsFaq";
 import DsCtaFinal from "@/components/devsecops/DsCtaFinal";
 import { dsDomains, dsFaqs } from "@/lib/devsecops-data";
@@ -97,7 +96,7 @@ export default async function DevSecOpsPage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: BASE_URL },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/expertises` },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/#expertises` },
       { "@type": "ListItem", position: 3, name: t("breadcrumbDevSecOps"), item: url },
     ],
   };
@@ -129,7 +128,6 @@ export default async function DevSecOpsPage({
       <DsSectors />
       <DsWhyUs />
       <DsStats />
-      <DsResources />
       <DsFaq />
       <DsCtaFinal />
     </>

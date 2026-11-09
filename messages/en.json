@@ -192,7 +192,7 @@
       "titleHighlight": "because of local context.",
       "subtitle": "CNPS payroll, SYSCOHADA financial statements, Mobile Money payments, patchy connectivity: that's where most ERP rollouts derail in West Africa, not in the software. AKILI Labs implements Odoo starting from that reality, from business scoping through go-live and beyond.",
       "ctaPrimary": "Free consultation",
-      "ctaSecondary": "See our Odoo resources"
+      "ctaSecondary": "See our support plans"
     },
     "hubDiagram": {
       "ariaLabel": "Odoo brings together CRM, Inventory, Accounting, and HR on a single platform",
@@ -296,8 +296,8 @@
   },
   "Td": {
     "meta": {
-      "title": "Digital Transformation in West Africa — IS Audit, IT Master Plan, EDM, BPM",
-      "description": "Information systems audits, IT Master Plan, paperless workflows, EDM, BPM, and IT governance for organizations across the UEMOA zone. Free initial consultation.",
+      "title": "Digital Transformation — IS Audit, EDM, BPM",
+      "description": "IS audits, IT master plans, paperless workflows, EDM, BPM and IT governance for organizations across the UEMOA zone. Free initial consultation.",
       "ogTitle": "Digital Transformation Expertise — AKILI Labs Côte d'Ivoire",
       "ogDescription": "From diagnosis to monitoring: we secure your digital transformation before, during, and after the choice of technology.",
       "ogImageAlt": "AKILI Labs — Digital Transformation Expertise",
@@ -316,7 +316,7 @@
       "titleHighlight": "before the first tool is even deployed.",
       "subtitle": "Without proper scoping, projects fragment: tools that don't talk to each other, investments that don't serve the strategy, teams that don't buy in. AKILI Labs secures your transformation where it's actually decided — diagnosis, prioritization, and monitoring — before, during, and after the choice of technology.",
       "ctaPrimary": "Free consultation",
-      "ctaSecondary": "See our resources"
+      "ctaSecondary": "See our areas of expertise"
     },
     "roadmapDiagram": {
       "ariaLabel": "Digital transformation roadmap in 5 steps: Audit, IT Master Plan, IS Architecture Planning, Deployment, Monitoring",
@@ -393,8 +393,8 @@
   },
   "Ia": {
     "meta": {
-      "title": "Artificial Intelligence Expertise in West Africa",
-      "description": "Generative AI, Machine Learning, Computer Vision, NLP in African languages, and Business Intelligence. Practical AI solutions for West African businesses. Free initial consultation.",
+      "title": "AI Expertise in West Africa",
+      "description": "Generative AI, machine learning, computer vision and NLP in African languages: practical AI solutions for West African businesses.",
       "ogTitle": "Artificial Intelligence Expertise — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Adopting AI is not about catching up — it's about building a lead. Practical AI solutions for the UEMOA/ECOWAS zone.",
       "ogImageAlt": "AKILI Labs — Artificial Intelligence Expertise",
@@ -493,8 +493,8 @@
   },
   "DevSecOps": {
     "meta": {
-      "title": "DevSecOps in West Africa — CI/CD, Kubernetes, IaC, Security",
-      "description": "Software delivery automation and standardization: CI/CD, Docker/Kubernetes containerization, Infrastructure as Code, integrated security, and monitoring for organizations across the UEMOA zone. Free initial consultation.",
+      "title": "DevSecOps — CI/CD, Kubernetes, IaC, Security",
+      "description": "CI/CD, Docker/Kubernetes, Infrastructure as Code, built-in security and monitoring for organizations across the UEMOA zone. Free initial consultation.",
       "ogTitle": "DevSecOps Expertise — AKILI Labs Côte d'Ivoire",
       "ogDescription": "From maturity audit to operations: security built into every stage of your CI/CD pipeline.",
       "ogImageAlt": "AKILI Labs — DevSecOps Expertise",
@@ -513,7 +513,7 @@
       "titleHighlight": "a gamble.",
       "subtitle": "Shipping fast and shipping safely aren't opposing goals — it's the traditional approach that pits them against each other: manual deployments, end-of-project audits, vulnerabilities discovered in production. AKILI Labs automates and standardizes your CI/CD pipeline with security built into every step, from code to operations.",
       "ctaPrimary": "Free consultation",
-      "ctaSecondary": "See our resources"
+      "ctaSecondary": "See our areas of expertise"
     },
     "intro": {
       "badge": "The situation",
@@ -594,8 +594,8 @@
   },
   "DevMetiers": {
     "meta": {
-      "title": "Business Application Development in West Africa — Web, Mobile, APIs",
-      "description": "Custom web and mobile applications, collaborative portals, APIs, and business platforms for organizations across the UEMOA zone. Short sprints, contractually defined scope, code delivered to you. Free initial consultation.",
+      "title": "Business Applications — Web, Mobile, APIs",
+      "description": "Custom web and mobile apps, portals, APIs and business platforms across the UEMOA zone. Short sprints, contractual scope, code delivered to you.",
       "ogTitle": "Business Application Development Expertise — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Custom development without the derailment: verifiable safeguards, measured quality, reversibility. The tool fits your business.",
       "ogImageAlt": "AKILI Labs — Business Application Development Expertise",
@@ -614,7 +614,7 @@
       "titleHighlight": "avoidable.",
       "subtitle": "Budget overruns, the tunnel effect, vendor dependency: custom projects almost always fail for the same reasons — and none of them is inevitable. AKILI Labs builds your web and mobile applications and business platforms with verifiable safeguards: short sprints, contractually defined scope, measured quality, code delivered to you. The tool fits your business — and the project stays under your control.",
       "ctaPrimary": "Free consultation",
-      "ctaSecondary": "See our resources"
+      "ctaSecondary": "See our areas of expertise"
     },
     "assemblyDiagram": {
       "labelWeb": "Web",
@@ -693,8 +693,8 @@
   },
   "Bi": {
     "meta": {
-      "title": "Business Intelligence in West Africa — Dashboards & Data Warehouse",
-      "description": "AKILI Labs consolidates your data (ERP, cash registers, Mobile Money, Excel) into reliable dashboards, refreshed every morning. Data warehouse, KPI governance, and regulatory reporting across the UEMOA region.",
+      "title": "Business Intelligence — Dashboards",
+      "description": "Your ERP, cash register, Mobile Money and Excel data in reliable dashboards, refreshed every morning. Data warehouse and regulatory reporting in UEMOA.",
       "ogTitle": "Business Intelligence Expertise — AKILI Labs Côte d'Ivoire",
       "ogDescription": "From manual reporting to daily decision-making: management dashboards, data warehouse, and BCEAO/OHADA regulatory statements.",
       "ogImageAlt": "AKILI Labs — Business Intelligence Expertise",
@@ -797,7 +797,7 @@
   },
   "References": {
     "meta": {
-      "title": "Case Studies — AKILI Labs",
+      "title": "Case Studies",
       "description": "Discover our case studies: ERP integration, Artificial Intelligence, DevSecOps and custom development in West Africa."
     },
     "hero": {
@@ -826,7 +826,7 @@
   },
   "Blog": {
     "meta": {
-      "title": "Blog & Tech Watch — AKILI Labs",
+      "title": "Blog & Tech Watch",
       "description": "Insights, case studies and best practices on ERP, Artificial Intelligence and DevSecOps in Africa."
     },
     "hero": {
@@ -863,7 +863,7 @@
   "About": {
     "meta": {
       "title": "About — Our Mission and Team",
-      "description": "Discover AKILI Labs, an IT consulting firm and Odoo ERP integrator based in Abidjan and active across the 8 countries of the UEMOA zone: our mission, our values, and our team of experts.",
+      "description": "AKILI Labs, an IT consulting firm and Odoo ERP integrator based in Abidjan, active across the 8 UEMOA countries: our mission, values and team.",
       "ogTitle": "About — AKILI Labs",
       "ogDescription": "Our mission, our values, and our team of experts in digital transformation, Odoo ERP, AI, and DevSecOps in West Africa.",
       "ogImageAlt": "About AKILI Labs"
@@ -923,7 +923,7 @@
   "Contact": {
     "meta": {
       "title": "Contact — Let's Talk About Your Project",
-      "description": "Contact AKILI Labs for your digital transformation, Odoo ERP, Artificial Intelligence, or DevSecOps project in the UEMOA zone. Free initial consultation, response within 24 business hours.",
+      "description": "An Odoo ERP, AI, DevSecOps or digital transformation project in the UEMOA zone? Free initial consultation, response within 24 business hours.",
       "ogTitle": "Contact — AKILI Labs",
       "ogDescription": "Let's talk about your ERP, AI, or DevSecOps project in West Africa. Free initial consultation.",
       "ogImageAlt": "Contact AKILI Labs"
@@ -992,7 +992,7 @@
   },
   "Careers": {
     "meta": {
-      "title": "Careers — AKILI Labs",
+      "title": "Careers",
       "description": "Join AKILI Labs and take part in Africa's digital transformation. Discover our job openings."
     },
     "hero": {
@@ -1203,8 +1203,8 @@
   },
   "Faq": {
     "meta": {
-      "title": "FAQ — OHADA ERP, AI, DevSecOps & Digital Transformation",
-      "description": "Answers to all your questions on Odoo ERP integration in the UEMOA zone, OHADA compliance, generative AI for African businesses, DevSecOps, and digital transformation.",
+      "title": "FAQ — Odoo, OHADA, AI and DevSecOps",
+      "description": "Your questions on Odoo integration in the UEMOA zone, OHADA compliance, generative AI, DevSecOps and digital transformation.",
       "ogTitle": "FAQ AKILI Labs — OHADA ERP, AI & DevSecOps in West Africa",
       "ogDescription": "All our answers on Odoo ERP, OHADA compliance, generative AI, DevSecOps, and digital transformation in the UEMOA zone.",
       "ogImageAlt": "FAQ AKILI Labs"

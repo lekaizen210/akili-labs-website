@@ -40,11 +40,11 @@ const categoryIcons: Record<string, React.ReactNode> = {
 };
 
 const expertiseSlugs: Record<string, string> = {
-  erp: "erp",
+  erp: "odoo",
   ai: "intelligence-artificielle",
   devsecops: "devsecops",
   digitalTransformation: "transformation-digitale",
-  akili: "erp",
+  akili: "odoo",
 };
 
 export default async function FaqPage({
@@ -167,7 +167,7 @@ export default async function FaqPage({
               {categoryStats.map(({ id, label, icon }) => (
                 <Link
                   key={id}
-                  href={`/expertises/${expertiseSlugs[id] ?? "erp"}`}
+                  href={`/expertises/${expertiseSlugs[id] ?? "odoo"}`}
                   className={cn(
                     "inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium rounded-lg border transition-opacity hover:opacity-75",
                     categoryColors[id] ?? "bg-blue-light text-ink border-line"

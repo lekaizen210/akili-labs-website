@@ -34,7 +34,7 @@ export default function LanguageSwitcher({ inverted = false, size = "sm" }: Lang
             type="button"
             onClick={() => router.replace(pathname, { locale: code })}
             aria-current={locale === code ? "true" : undefined}
-            aria-label={name}
+            aria-label={`${label} – ${name}`}
             className={cn(
               "px-1 py-1 transition-colors",
               locale === code
