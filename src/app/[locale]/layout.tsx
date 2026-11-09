@@ -96,6 +96,7 @@ function buildOrganizationJsonLd(description: string, availableLanguage: string[
     "@type": "Organization",
     "@id": `${BASE_URL}/#organization`,
     name: "AKILI Labs",
+    legalName: "AKILI LABS SARL",
     url: BASE_URL,
     logo: {
       "@type": "ImageObject",
@@ -107,6 +108,7 @@ function buildOrganizationJsonLd(description: string, availableLanguage: string[
     areaServed: ["Côte d'Ivoire", "Sénégal", "Mali", "Burkina Faso", "Niger", "Togo", "Bénin", "Guinée-Bissau"],
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Cocody Bonoumin, Résidence Guaiman, Lot 56B, Îlot 7",
       addressLocality: "Abidjan",
       addressCountry: "CI",
       addressRegion: "Abidjan",

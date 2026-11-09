@@ -1367,28 +1367,35 @@
   "Legal": {
     "meta": {
       "title": "Legal Notice",
-      "description": "Legal notice for the AKILI Labs website — publisher, hosting, intellectual property."
+      "description": "Legal notice for the AKILI Labs website — AKILI LABS SARL, trade register, registered office, hosting, intellectual property."
     },
     "hero": {
       "badge": "Legal information",
       "title": "Legal Notice",
       "subtitle": "Website publisher, hosting, and intellectual property."
     },
-    "notice": {
-      "strong": "Draft document.",
-      "text": "This page was drafted from the information currently available and must be reviewed and completed (exact company name, RCCM number, hosting provider) by a lawyer before being considered final."
-    },
     "publisher": {
       "title": "Website publisher",
-      "introRich": "The website <strong>akililabs.io</strong> is published by <strong>AKILI Labs</strong>, an IT consulting firm and Odoo ERP integrator, whose registered office is located in Abidjan, Côte d'Ivoire (UEMOA Zone).",
-      "rccmLabel": "RCCM number:",
-      "toComplete": "to be completed",
+      "introRich": "The website <strong>akililabs.io</strong> is published by <strong>AKILI LABS SARL</strong>, a limited liability company (SARL) with share capital of XOF 5,000,000, an IT consulting firm and Odoo ERP integrator.",
+      "companyLabel": "Company name:",
+      "companyValue": "AKILI LABS SARL",
+      "capitalLabel": "Share capital:",
+      "capitalValue": "XOF 5,000,000",
+      "rccmLabel": "RCCM (trade register):",
+      "rccmValue": "CI-ABJ-03-2026-B12-05165",
+      "taxLabel": "Taxpayer account number:",
+      "taxValue": "2605142 R",
+      "officeLabel": "Registered office:",
+      "officeValue": "Abidjan, Cocody Bonoumin, Résidence Guaiman, Lot 56B, Îlot 7 — Côte d'Ivoire",
+      "managementLabel": "Statutory management:",
+      "managementValue": "Mr. BA Ibrahima Djibrill",
       "directorLabel": "Publication director:",
+      "directorValue": "Mr. BA Ibrahima Djibrill, Managing Director",
       "contactLabel": "Contact:"
     },
     "hosting": {
       "title": "Hosting",
-      "textRich": "The website is hosted by: <em>to be completed (name, address, and contact details of the hosting provider)</em>."
+      "textRich": "The website is hosted by <strong>OVH SAS</strong>, 2 rue Kellermann, 59100 Roubaix, France — RCS Lille Métropole 424 761 419 — www.ovhcloud.com. Server located in France (Strasbourg)."
     },
     "ip": {
       "title": "Intellectual property",

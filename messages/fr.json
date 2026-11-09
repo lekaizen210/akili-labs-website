@@ -1367,28 +1367,35 @@
   "Legal": {
     "meta": {
       "title": "Mentions légales",
-      "description": "Mentions légales du site AKILI Labs — éditeur, hébergement, propriété intellectuelle."
+      "description": "Mentions légales du site AKILI Labs — AKILI LABS SARL, RCCM, siège, hébergement, propriété intellectuelle."
     },
     "hero": {
       "badge": "Informations légales",
       "title": "Mentions légales",
       "subtitle": "Éditeur du site, hébergement et propriété intellectuelle."
     },
-    "notice": {
-      "strong": "Document provisoire.",
-      "text": "Cette page a été rédigée à partir des informations disponibles et doit être relue et complétée (raison sociale exacte, numéro RCCM, hébergeur) par un juriste avant d'être considérée comme définitive."
-    },
     "publisher": {
       "title": "Éditeur du site",
-      "introRich": "Le site <strong>akililabs.io</strong> est édité par <strong>AKILI Labs</strong>, société de conseil IT et intégrateur Odoo ERP, dont le siège social est situé à Abidjan, Côte d'Ivoire (Zone UEMOA).",
-      "rccmLabel": "Numéro RCCM :",
-      "toComplete": "à compléter",
+      "introRich": "Le site <strong>akililabs.io</strong> est édité par <strong>AKILI LABS SARL</strong>, société à responsabilité limitée au capital de 5 000 000 F CFA, société de conseil IT et intégrateur Odoo ERP.",
+      "companyLabel": "Dénomination :",
+      "companyValue": "AKILI LABS SARL",
+      "capitalLabel": "Capital social :",
+      "capitalValue": "5 000 000 F CFA",
+      "rccmLabel": "RCCM :",
+      "rccmValue": "CI-ABJ-03-2026-B12-05165",
+      "taxLabel": "Compte contribuable :",
+      "taxValue": "2605142 R",
+      "officeLabel": "Siège social :",
+      "officeValue": "Abidjan, Cocody Bonoumin, Résidence Guaiman, Lot 56B, Îlot 7 — Côte d'Ivoire",
+      "managementLabel": "Gérance statutaire :",
+      "managementValue": "M. BA Ibrahima Djibrill",
       "directorLabel": "Directeur de la publication :",
+      "directorValue": "M. BA Ibrahima Djibrill, Gérant",
       "contactLabel": "Contact :"
     },
     "hosting": {
       "title": "Hébergement",
-      "textRich": "Le site est hébergé par : <em>à compléter (nom, adresse et contact de l'hébergeur)</em>."
+      "textRich": "Le site est hébergé par <strong>OVH SAS</strong>, 2 rue Kellermann, 59100 Roubaix, France — RCS Lille Métropole 424 761 419 — www.ovhcloud.com. Serveur situé en France (Strasbourg)."
     },
     "ip": {
       "title": "Propriété intellectuelle",

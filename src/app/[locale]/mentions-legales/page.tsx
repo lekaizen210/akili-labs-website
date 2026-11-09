@@ -51,21 +51,20 @@ export default async function MentionsLegalesPage({
 
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-orange-pale border-l-4 border-orange rounded-r-xl p-5 mb-12 text-sm text-ink">
-            <strong className="text-navy">{t("notice.strong")}</strong> {t("notice.text")}
-          </div>
-
           <Section title={t("publisher.title")}>
             <p>
               {t.rich("publisher.introRich", {
                 strong: (chunks) => <strong>{chunks}</strong>,
               })}
             </p>
-            <p>
-              {t("publisher.rccmLabel")} <em>{t("publisher.toComplete")}</em>
-              <br />
-              {t("publisher.directorLabel")} <em>{t("publisher.toComplete")}</em>
-            </p>
+            <dl className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-x-6 gap-y-1.5">
+              {(["company", "capital", "rccm", "tax", "office", "management", "director"] as const).map((key) => (
+                <div key={key} className="contents">
+                  <dt className="font-semibold text-navy">{t(`publisher.${key}Label`)}</dt>
+                  <dd className="mb-2 sm:mb-0">{t(`publisher.${key}Value`)}</dd>
+                </div>
+              ))}
+            </dl>
             <p>
               {t("publisher.contactLabel")}{" "}
               <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
@@ -77,7 +76,7 @@ export default async function MentionsLegalesPage({
           <Section title={t("hosting.title")}>
             <p>
               {t.rich("hosting.textRich", {
-                em: (chunks) => <em>{chunks}</em>,
+                strong: (chunks) => <strong>{chunks}</strong>,
               })}
             </p>
           </Section>
