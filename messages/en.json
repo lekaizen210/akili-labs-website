@@ -986,7 +986,7 @@
     },
     "success": {
       "title": "Email ready",
-      "text": "Your mail client will open with a pre-filled message. Review it, then send it to contact@akililabs.io.",
+      "text": "Your mail client will open with a pre-filled message. Review it, then send it to contacts@akililabs.io.",
       "resetButton": "Prepare another message"
     }
   },

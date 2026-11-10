@@ -986,7 +986,7 @@
     },
     "success": {
       "title": "Email préparé",
-      "text": "Votre messagerie s'ouvre avec un message prérempli. Vérifiez-le puis envoyez-le à contact@akililabs.io.",
+      "text": "Votre messagerie s'ouvre avec un message prérempli. Vérifiez-le puis envoyez-le à contacts@akililabs.io.",
       "resetButton": "Préparer un autre message"
     }
   },

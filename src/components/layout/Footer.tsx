@@ -61,8 +61,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-orange shrink-0" />
-                <a href="mailto:contact@akililabs.io" className="inline-block py-1.5 hover:text-white transition-colors">
-                  contact@akililabs.io
+                <a href="mailto:contacts@akililabs.io" className="inline-block py-1.5 hover:text-white transition-colors">
+                  contacts@akililabs.io
                 </a>
               </div>
               <div className="flex items-center gap-2">

@@ -50,7 +50,7 @@ export default function ContactPage() {
     // Ouvre le client mail après avoir affiché la confirmation : si l'environnement
     // n'a pas de gestionnaire mailto: configuré, l'utilisateur voit quand même le
     // message de confirmation avec l'adresse à contacter manuellement.
-    window.location.href = `mailto:contact@akililabs.io?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:contacts@akililabs.io?subject=${subject}&body=${body}`;
   };
 
   const fields = [
@@ -92,8 +92,8 @@ export default function ContactPage() {
                   <Mail size={16} className="text-orange mt-0.5 shrink-0" />
                   <div>
                     <div className="font-semibold text-navy">{t("sidebar.emailLabel")}</div>
-                    <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
-                      contact@akililabs.io
+                    <a href="mailto:contacts@akililabs.io" className="text-orange-dark hover:underline">
+                      contacts@akililabs.io
                     </a>
                   </div>
                 </div>

@@ -58,8 +58,8 @@ export default async function ConfidentialitePage({
           <Section title={t("controller.title")}>
             <p>
               {t("controller.text")}{" "}
-              <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
-                contact@akililabs.io
+              <a href="mailto:contacts@akililabs.io" className="text-orange-dark hover:underline">
+                contacts@akililabs.io
               </a>
             </p>
           </Section>
@@ -88,8 +88,8 @@ export default async function ConfidentialitePage({
           <Section title={t("rights.title")}>
             <p>
               {t("rights.text")}{" "}
-              <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
-                contact@akililabs.io
+              <a href="mailto:contacts@akililabs.io" className="text-orange-dark hover:underline">
+                contacts@akililabs.io
               </a>
               .
             </p>

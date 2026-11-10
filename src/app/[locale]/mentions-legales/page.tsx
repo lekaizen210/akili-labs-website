@@ -67,8 +67,8 @@ export default async function MentionsLegalesPage({
             </dl>
             <p>
               {t("publisher.contactLabel")}{" "}
-              <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
-                contact@akililabs.io
+              <a href="mailto:contacts@akililabs.io" className="text-orange-dark hover:underline">
+                contacts@akililabs.io
               </a>
             </p>
           </Section>
@@ -100,8 +100,8 @@ export default async function MentionsLegalesPage({
           <Section title={t("contact.title")}>
             <p>
               {t("contact.text")}{" "}
-              <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
-                contact@akililabs.io
+              <a href="mailto:contacts@akililabs.io" className="text-orange-dark hover:underline">
+                contacts@akililabs.io
               </a>
             </p>
           </Section>
