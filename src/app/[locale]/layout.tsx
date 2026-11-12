@@ -121,6 +121,7 @@ function buildOrganizationJsonLd(description: string, availableLanguage: string[
       availableLanguage,
       areaServed: "UEMOA",
     },
+    ethicsPolicy: `${BASE_URL}/ethique-conformite`,
     sameAs: [
       "https://www.linkedin.com/company/akili-labs",
     ],

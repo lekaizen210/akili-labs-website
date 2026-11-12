@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Mail, MapPin, Phone, Clock, Send, CheckCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
+import { Link } from "@/i18n/navigation";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
@@ -130,6 +131,9 @@ export default function ContactPage() {
                   <span key={item}>✓ {item}</span>
                 ))}
               </div>
+              <Link href="/ethique-conformite" className="inline-block mt-5 text-xs font-semibold text-orange hover:underline">
+                {t("sidebar.ethicsLink")} →
+              </Link>
             </div>
           </div>
 

@@ -185,6 +185,7 @@ export default function Footer() {
             <span>OHADA</span>
             <Link href="/mentions-legales" className="inline-block py-2 hover:text-gray-300 transition-colors">{t("legalNotice")}</Link>
             <Link href="/confidentialite" className="inline-block py-2 hover:text-gray-300 transition-colors">{t("privacy")}</Link>
+            <Link href="/ethique-conformite" className="inline-block py-2 hover:text-gray-300 transition-colors">{t("ethics")}</Link>
           </div>
         </div>
       </div>

@@ -289,6 +289,24 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Éthique et conformité */}
+      <section className="pb-16 bg-white">
+        <FadeUp className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-center gap-6 rounded-2xl border border-line bg-blue-pale p-7">
+            <div className="w-12 h-12 rounded-xl bg-orange-pale text-orange-dark flex items-center justify-center shrink-0" aria-hidden="true">
+              <Shield size={24} />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-lg font-bold text-navy mb-1">{t("ethics.title")}</h2>
+              <p className="text-sm text-ink leading-relaxed">{t("ethics.text")}</p>
+            </div>
+            <Link href="/ethique-conformite" className="shrink-0 px-5 py-3 border border-navy text-navy font-semibold rounded-xl hover:bg-navy hover:text-white transition-colors text-sm">
+              {t("ethics.link")}
+            </Link>
+          </div>
+        </FadeUp>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-navy">
         <FadeUp className="max-w-3xl mx-auto px-4 text-center">

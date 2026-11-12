@@ -55,7 +55,8 @@
       "faq": "FAQ",
       "careers": "Careers",
       "contact": "Contact"
-    }
+    },
+    "ethics": "Ethics & Compliance"
   },
   "Layout": {
     "skipToContent": "Skip to main content",
@@ -918,6 +919,11 @@
       "text": "We're hiring talented people passionate about tech and impact in Africa.",
       "viewOffers": "View openings →",
       "contactButton": "Let's talk about your project"
+    },
+    "ethics": {
+      "title": "Conduct governed by a code of ethics",
+      "text": "Anti-corruption, conflicts of interest, data protection, cybersecurity and responsible AI: our commitments are set out in a code approved by management and reviewed every year.",
+      "link": "Read our code"
     }
   },
   "Contact": {
@@ -948,7 +954,8 @@
       "trust1": "Free initial consultation",
       "trust2": "Confidentiality guaranteed",
       "trust3": "Projects led by senior management",
-      "trust4": "Quote within 5 business days"
+      "trust4": "Quote within 5 business days",
+      "ethicsLink": "Read our code of ethics"
     },
     "form": {
       "title": "Tell us about your project",
@@ -1354,6 +1361,11 @@
         "categoryId": "akili",
         "question": "AKILI Labs is a young company: is that a risk?",
         "answer": "It's a fair question — and our best answer is structural. You are not entrusting your project to a brand, but to people: at AKILI Labs, every engagement is led by a member of the leadership team, who has delivered major IT projects across the UEMOA zone. You get the experience of an established firm, with the full commitment of a team that stakes its reputation on your success. Our contractual commitments (milestones, SLAs, reversibility) are designed to protect you, not to cover us."
+      },
+      {
+        "categoryId": "akili",
+        "question": "Does AKILI Labs have a code of ethics and compliance?",
+        "answer": "Yes. The AKILI LABS SARL Code of Ethics, Compliance and Professional Conduct (ref. CHA-ETH-2026-V3) covers corruption prevention, gifts and conflicts of interest, data protection, cybersecurity and responsible use of AI. It can be downloaded from the Ethics & Compliance page of the website, and the signed copy is provided on request at conformite@akililabs.io, in particular for tender files."
       }
     ],
     "cta": {
@@ -1448,6 +1460,141 @@
     "cookies": {
       "title": "Cookies",
       "text": "This website does not use advertising tracking or third-party analytics cookies at this time. This section will be updated if an audience measurement tool is added."
+    }
+  },
+  "Ethics": {
+    "meta": {
+      "title": "Ethics & Compliance: Code of Ethics",
+      "description": "AKILI LABS SARL code of ethics and compliance: anti-corruption, conflicts of interest, data protection, cybersecurity, responsible AI and a confidential reporting channel."
+    },
+    "hero": {
+      "badge": "Governance",
+      "titleStart": "Ethics &",
+      "titleHighlight": "compliance",
+      "subtitle": "The rules of conduct that govern our engagements: business integrity, corruption prevention, data protection and responsible use of AI."
+    },
+    "breadcrumbHome": "Home",
+    "engagement": {
+      "title": "Our commitment",
+      "p1": "AKILI LABS SARL builds its business on integrity, respect for people, transparency, competence and accountability.",
+      "p2": "The trust of our clients, employees, suppliers and partners depends as much on the quality of our services as on how they are designed, sold and delivered.",
+      "quote": "“No commercial, financial or operational objective justifies a practice that is illegal, misleading or contrary to this code.”",
+      "scope": "The code applies to AKILI LABS executives, employees and interns. Our consultants, subcontractors and partners commit to it contractually, according to the nature of their work."
+    },
+    "document": {
+      "eyebrow": "Reference document",
+      "title": "Code of Ethics, Compliance and Professional Conduct",
+      "refLabel": "Reference",
+      "refValue": "CHA-ETH-2026-V3",
+      "versionLabel": "Version",
+      "versionValue": "3.0, November 2026",
+      "approvalLabel": "Approved by",
+      "approvalValue": "Statutory management",
+      "reviewLabel": "Review",
+      "reviewValue": "Annual",
+      "formatLabel": "Format",
+      "formatValue": "PDF, 9 pages (in French)",
+      "download": "Download the code (PDF)",
+      "signedCopy": "Signed copy available on request at"
+    },
+    "pillars": {
+      "title": "What the code covers",
+      "subtitle": "Eighteen articles, grouped here into six concrete commitments.",
+      "items": [
+        {
+          "title": "Anti-corruption",
+          "text": "No undue advantage, kickback or facilitation payment, whether to public or private parties. Any suspicious request is refused and reported.",
+          "ref": "Art. 5"
+        },
+        {
+          "title": "Gifts and conflicts of interest",
+          "text": "Gifts and hospitality are limited, declared and recorded in a register. Any conflict of interest is declared before the decision concerned.",
+          "ref": "Art. 6 & 7"
+        },
+        {
+          "title": "Honest business practices",
+          "text": "References, CVs, certifications and billed time are presented accurately. Suppliers are selected on objective, documented criteria.",
+          "ref": "Art. 8 & 9"
+        },
+        {
+          "title": "Data and confidentiality",
+          "text": "Compliance with Ivorian Law No. 2013-450 and with the GDPR where it applies. Source code, technical secrets and client data are protected, including after the engagement.",
+          "ref": "Art. 10 & 11"
+        },
+        {
+          "title": "Cybersecurity",
+          "text": "Least privilege, strong authentication, prior authorisation for any access to client environments, and prompt incident reporting.",
+          "ref": "Art. 12"
+        },
+        {
+          "title": "Responsible AI",
+          "text": "No confidential data is sent to an unauthorised AI service. Generated outputs are checked before delivery, and accountability remains human.",
+          "ref": "Art. 13"
+        }
+      ]
+    },
+    "reporting": {
+      "title": "Report a breach",
+      "intro": "Employee, consultant, client, supplier or partner: you can report in good faith any breach you have observed or reasonably suspect. Complete evidence is not required.",
+      "channelLabel": "Confidential channel",
+      "guarantees": [
+        {
+          "label": "Confidentiality:",
+          "text": "access is restricted to authorised people only; a person implicated has no access to the file."
+        },
+        {
+          "label": "No retaliation:",
+          "text": "every good-faith report is protected, as are the people who assist with it."
+        },
+        {
+          "label": "Impartiality:",
+          "text": "an independent external party takes over if senior management is involved."
+        }
+      ],
+      "processTitle": "How your report is handled",
+      "steps": [
+        {
+          "title": "Acknowledgement",
+          "text": "Within 7 business days"
+        },
+        {
+          "title": "Conflict-of-interest check",
+          "text": "Anyone involved is excluded"
+        },
+        {
+          "title": "Proportionate review",
+          "text": "First update on follow-up within 30 days"
+        },
+        {
+          "title": "Decision and corrective action",
+          "text": "The reporter is informed of the outcomes that can be shared"
+        }
+      ],
+      "disclaimer": "These timeframes are internal targets. The process does not limit recourse to the competent authorities."
+    },
+    "governance": {
+      "title": "Governance",
+      "roles": [
+        {
+          "label": "Management",
+          "text": "Approves the code, organises its distribution and acts as compliance officer."
+        },
+        {
+          "label": "Technical management",
+          "text": "Implements the commitments on software quality, cybersecurity, data and AI within its scope."
+        },
+        {
+          "label": "Every team member",
+          "text": "Acknowledges the code in writing and receives awareness training suited to their role."
+        }
+      ],
+      "review": "The code is reviewed every year and after any significant regulatory or organisational change or incident."
+    },
+    "cta": {
+      "title": "A tender or a supplier audit?",
+      "text": "We provide the signed code and the compliance documents your file requires.",
+      "contact": "Contact us",
+      "download": "Download the code"
     }
   }
 }

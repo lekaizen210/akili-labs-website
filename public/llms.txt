@@ -69,6 +69,13 @@ Adresse : Abidjan, Côte d'Ivoire
 - FAQ (22 questions, dont tarification et engagement) : https://akililabs.io/faq
 - À propos : https://akililabs.io/a-propos
 - Contact : https://akililabs.io/contact
+- Éthique et conformité / Ethics & Compliance : https://akililabs.io/ethique-conformite (charte PDF : https://akililabs.io/documents/AKILI_Charte_Ethique_Conformite_v3.pdf)
+
+## Éthique et conformité / Ethics & Compliance
+
+AKILI LABS SARL applique une Charte d'Éthique, de Conformité et de Conduite Professionnelle (réf. CHA-ETH-2026-V3, version 3.0, novembre 2026), approuvée par la Gérance et revue chaque année : anticorruption, cadeaux et conflits d'intérêts, sincérité commerciale, protection des données (loi ivoirienne n° 2013-450, RGPD le cas échéant), cybersécurité et IA responsable. Canal de signalement confidentiel : conformite@akililabs.io. Exemplaire signé transmis sur demande pour les appels d'offres.
+
+AKILI LABS SARL applies a Code of Ethics, Compliance and Professional Conduct (ref. CHA-ETH-2026-V3, version 3.0, November 2026), approved by management and reviewed annually. Confidential reporting channel: conformite@akililabs.io.
 
 ## Mots-clés / Keywords
 

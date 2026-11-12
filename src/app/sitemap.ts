@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/contact", { changeFrequency: "monthly", priority: 0.9 }),
     entry("/faq", { changeFrequency: "monthly", priority: 0.8 }),
     entry("/carrieres", { changeFrequency: "weekly", priority: 0.7 }),
+    entry("/ethique-conformite", { changeFrequency: "yearly", priority: 0.5 }),
   ];
 
   const expertiseRoutes: MetadataRoute.Sitemap = expertises.map((e) =>
