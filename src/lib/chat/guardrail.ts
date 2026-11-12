@@ -5,8 +5,8 @@
  * (SFD US-4, US-5, US-6 ; Architecture §2.3).
  */
 const GUARDRAIL_MESSAGE: Record<"fr" | "en", string> = {
-  fr: "Je ne peux pas vous aider sur ce sujet ici. Pour toute question, notre équipe est joignable à contact@akililabs.io.",
-  en: "I can't help with that here. For any question, our team can be reached at contact@akililabs.io.",
+  fr: "Je ne peux pas vous aider sur ce sujet ici. Pour toute question, notre équipe est joignable à contacts@akililabs.io.",
+  en: "I can't help with that here. For any question, our team can be reached at contacts@akililabs.io.",
 };
 
 export function getGuardrailResponse(language: "fr" | "en"): string {

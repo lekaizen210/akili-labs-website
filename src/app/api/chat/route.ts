@@ -54,8 +54,8 @@ function isValidBody(body: unknown): body is ChatRequestBody {
 }
 
 const GENERIC_ERROR: Record<"fr" | "en", string> = {
-  fr: "Une erreur est survenue. Merci de réessayer ou de contacter contact@akililabs.io.",
-  en: "Something went wrong. Please try again or contact contact@akililabs.io.",
+  fr: "Une erreur est survenue. Merci de réessayer ou de contacter contacts@akililabs.io.",
+  en: "Something went wrong. Please try again or contact contacts@akililabs.io.",
 };
 
 /**

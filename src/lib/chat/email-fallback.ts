@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 import type { LeadInput } from "./capture-lead-tool";
 
-const FALLBACK_EMAIL = process.env.SALES_FALLBACK_EMAIL ?? "contact@akililabs.io";
+const FALLBACK_EMAIL = process.env.SALES_FALLBACK_EMAIL ?? "contacts@akililabs.io";
 // Adresse d'expédition par défaut : bac à sable Resend, fonctionne sans domaine
 // vérifié. À remplacer par une adresse sur le domaine akililabs.io une fois
 // celui-ci vérifié dans Resend (RESEND_FROM_EMAIL).
