@@ -12,6 +12,26 @@ const securityHeaders = [
     value: "camera=(), microphone=(), geolocation=(), payment=()",
   },
   { key: "X-XSS-Protection", value: "1; mode=block" },
+  {
+    key: "Strict-Transport-Security",
+    value: "max-age=63072000; includeSubDomains; preload",
+  },
+  {
+    key: "Content-Security-Policy",
+    value: [
+      "default-src 'self'",
+      // 'unsafe-eval' uniquement en dev (React Refresh) ; scripts inline requis par Next (hydratation, JSON-LD)
+      `script-src 'self' 'unsafe-inline'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""}`,
+      "style-src 'self' 'unsafe-inline'",
+      "img-src 'self' data: blob:",
+      "font-src 'self' data:",
+      "connect-src 'self'",
+      "object-src 'none'",
+      "frame-ancestors 'none'",
+      "base-uri 'self'",
+      "form-action 'self' mailto:",
+    ].join("; "),
+  },
 ];
 
 const nextConfig: NextConfig = {
@@ -35,6 +55,22 @@ const nextConfig: NextConfig = {
       {
         source: "/expertises/erp",
         destination: "/expertises/odoo",
+        permanent: true,
+      },
+      {
+        source: "/en/expertises/erp",
+        destination: "/en/expertises/odoo",
+        permanent: true,
+      },
+      // Pas de page d'index des expertises : redirection serveur (308) vers la section de l'accueil
+      {
+        source: "/expertises",
+        destination: "/#expertises",
+        permanent: true,
+      },
+      {
+        source: "/en/expertises",
+        destination: "/en#expertises",
         permanent: true,
       },
     ];

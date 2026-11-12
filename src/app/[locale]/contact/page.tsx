@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Mail, MapPin, Phone, Clock, Send, CheckCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
 import PageHero, { HeroHighlight } from "@/components/ui/PageHero";
+import { Link } from "@/i18n/navigation";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
@@ -50,7 +51,7 @@ export default function ContactPage() {
     // Ouvre le client mail après avoir affiché la confirmation : si l'environnement
     // n'a pas de gestionnaire mailto: configuré, l'utilisateur voit quand même le
     // message de confirmation avec l'adresse à contacter manuellement.
-    window.location.href = `mailto:contact@akililabs.io?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:contacts@akililabs.io?subject=${subject}&body=${body}`;
   };
 
   const fields = [
@@ -92,8 +93,8 @@ export default function ContactPage() {
                   <Mail size={16} className="text-orange mt-0.5 shrink-0" />
                   <div>
                     <div className="font-semibold text-navy">{t("sidebar.emailLabel")}</div>
-                    <a href="mailto:contact@akililabs.io" className="text-orange-dark hover:underline">
-                      contact@akililabs.io
+                    <a href="mailto:contacts@akililabs.io" className="text-orange-dark hover:underline">
+                      contacts@akililabs.io
                     </a>
                   </div>
                 </div>
@@ -101,7 +102,11 @@ export default function ContactPage() {
                   <Phone size={16} className="text-orange mt-0.5 shrink-0" />
                   <div>
                     <div className="font-semibold text-navy">{t("sidebar.phoneLabel")}</div>
-                    <span>+225 07 77 70 02 74 · +225 01 03 28 88 97</span>
+                    <span>
+                      <a href="tel:+2250777700274" className="hover:text-orange transition-colors">+225 07 77 70 02 74</a>
+                      {" · "}
+                      <a href="tel:+2250103288897" className="hover:text-orange transition-colors">+225 01 03 28 88 97</a>
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -126,6 +131,9 @@ export default function ContactPage() {
                   <span key={item}>✓ {item}</span>
                 ))}
               </div>
+              <Link href="/ethique-conformite" className="inline-block mt-5 text-xs font-semibold text-orange hover:underline">
+                {t("sidebar.ethicsLink")} →
+              </Link>
             </div>
           </div>
 

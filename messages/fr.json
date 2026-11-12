@@ -55,7 +55,8 @@
       "faq": "FAQ",
       "careers": "Carrières",
       "contact": "Contact"
-    }
+    },
+    "ethics": "Éthique et conformité"
   },
   "Layout": {
     "skipToContent": "Aller au contenu principal",
@@ -91,7 +92,7 @@
       "titleWord2": "Digitale",
       "titleLine3": "en Afrique de l'Ouest",
       "subtitleLine1": "ERP, Intelligence Artificielle, DevSecOps, Développement sur mesure",
-      "subtitleLine2": "Une équipe fondatrice cumulant plus de 30 ans de projets SI à travers toute la zone UEMOA, au service de solutions qui créent de la valeur réelle.",
+      "subtitleLine2": "Une direction expérimentée, forte de projets SI menés à travers toute la zone UEMOA, au service de solutions qui créent de la valeur réelle.",
       "ctaPrimary": "Consultation gratuite",
       "ctaSecondary": "Voir nos réalisations",
       "techGenerativeAI": "IA Générative"
@@ -126,7 +127,7 @@
     "approach": {
       "badge": "Une méthode forgée sur le terrain",
       "title": "Notre approche",
-      "subtitle": "Huit étapes distillées de plus de trente années cumulées de projets menés par nos dirigeants à travers la zone UEMOA — de l'analyse initiale au support continu.",
+      "subtitle": "Huit étapes issues des projets menés par nos dirigeants à travers la zone UEMOA — de l'analyse initiale au support continu.",
       "ctaButton": "Parlez-nous de votre projet →"
     },
     "sectors": {
@@ -139,7 +140,7 @@
       "title": "Des projets que nos dirigeants ont menés",
       "subtitle": "Avant de fonder AKILI Labs, notre équipe dirigeante a piloté des transformations structurantes dans plusieurs pays de la zone UEMOA. En voici trois, représentatives de ce que nous savons livrer.",
       "viewAllLink": "Voir toutes nos références",
-      "transparencyNote": "Transparence : ces projets ont été réalisés par les membres fondateurs dans leurs fonctions antérieures. Votre projet sera notre prochaine référence.",
+      "transparencyNote": "Transparence : ces projets ont été réalisés par les membres de notre direction dans leurs fonctions antérieures. Votre projet sera notre prochaine référence.",
       "bottomCta": "Démarrer un projet avec nous →"
     },
     "socialProof": {
@@ -147,7 +148,7 @@
       "title": "Ce sur quoi vous pouvez compter",
       "lead": "Une société nouvelle n'a qu'un capital : la réussite de ses premiers clients. Voici ce que nous mettons dans chaque contrat.",
       "card1Title": "Direction impliquée",
-      "card1Desc": "Chaque projet est piloté par un membre de l'équipe fondatrice, du cadrage à la recette.",
+      "card1Desc": "Chaque projet est piloté par un membre de la direction, du cadrage à la recette.",
       "card2Title": "Engagements contractuels",
       "card2Desc": "Jalons, SLA de support (P1 100 %, P2 ≥ 95 %) et réversibilité inscrits noir sur blanc.",
       "card3Title": "Transparence totale",
@@ -167,13 +168,13 @@
       "trustItem1": "Réponse sous 24h ouvrées",
       "trustItem2": "Consultation initiale offerte",
       "trustItem3": "Confidentialité garantie",
-      "trustItem4": "Direction certifiée Odoo (en cours) — 30+ ans d'expérience SI cumulée"
+      "trustItem4": "Conformité OHADA et SYSCOHADA intégrée"
     }
   },
   "Odoo": {
     "meta": {
       "title": "Expertise Odoo ERP en Afrique de l'Ouest",
-      "description": "Implémentation, personnalisation et optimisation de l'ERP Odoo pour les entreprises d'Afrique de l'Ouest. Conformité OHADA/SYSCOHADA. Consultation initiale gratuite.",
+      "description": "Implémentation, personnalisation et optimisation d'Odoo ERP en Afrique de l'Ouest. Conformité OHADA/SYSCOHADA. Consultation initiale gratuite.",
       "ogTitle": "Expertise Odoo ERP — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Un projet ERP ne devrait jamais échouer à cause du contexte local. Expertise Odoo complète pour la zone UEMOA/OHADA.",
       "ogImageAlt": "AKILI Labs — Expertise Odoo",
@@ -192,7 +193,7 @@
       "titleHighlight": "à cause du contexte local.",
       "subtitle": "Paie CNPS, états SYSCOHADA, paiements Mobile Money, connectivité variable : c'est là que la plupart des déploiements ERP déraillent en Afrique de l'Ouest, pas dans le logiciel. AKILI Labs implémente Odoo en partant de cette réalité, du cadrage métier jusqu'à la mise en production et au-delà.",
       "ctaPrimary": "Consultation gratuite",
-      "ctaSecondary": "Voir nos ressources Odoo"
+      "ctaSecondary": "Voir les niveaux de support"
     },
     "hubDiagram": {
       "ariaLabel": "Odoo réunit CRM, Stock, Comptabilité et RH dans une seule plateforme",
@@ -296,8 +297,8 @@
   },
   "Td": {
     "meta": {
-      "title": "Transformation Digitale en Afrique de l'Ouest — Audit SI, SDI, GED, BPM",
-      "description": "Audit des systèmes d'information, Schéma Directeur Informatique, dématérialisation, GED, BPM et gouvernance SI pour les organisations de la zone UEMOA. Consultation initiale gratuite.",
+      "title": "Transformation digitale — Audit SI, SDI, GED",
+      "description": "Audit SI, Schéma Directeur Informatique, dématérialisation, GED, BPM et gouvernance SI pour la zone UEMOA. Consultation initiale gratuite.",
       "ogTitle": "Expertise Transformation Digitale — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Du diagnostic au pilotage : nous sécurisons votre transformation digitale avant, pendant et après le choix des technologies.",
       "ogImageAlt": "AKILI Labs — Expertise Transformation Digitale",
@@ -316,7 +317,7 @@
       "titleHighlight": "avant le premier outil déployé.",
       "subtitle": "Faute de cadrage, les projets se fragmentent : des outils qui ne communiquent pas, des investissements qui ne servent pas la stratégie, des équipes qui n'adhèrent pas. AKILI Labs sécurise votre transformation là où elle se joue vraiment — le diagnostic, la priorisation et le pilotage — avant, pendant et après le choix des technologies.",
       "ctaPrimary": "Consultation gratuite",
-      "ctaSecondary": "Voir nos ressources"
+      "ctaSecondary": "Voir nos domaines d'intervention"
     },
     "roadmapDiagram": {
       "ariaLabel": "Feuille de route de transformation digitale en 5 étapes : Audit, Schéma Directeur Informatique, Urbanisation, Déploiement, Pilotage",
@@ -393,8 +394,8 @@
   },
   "Ia": {
     "meta": {
-      "title": "Expertise Intelligence Artificielle en Afrique de l'Ouest",
-      "description": "IA Générative, Machine Learning, Computer Vision, NLP en langues africaines et Business Intelligence. Solutions IA concrètes pour les entreprises d'Afrique de l'Ouest. Consultation initiale gratuite.",
+      "title": "Intelligence artificielle en Afrique de l'Ouest",
+      "description": "IA générative, machine learning, vision par ordinateur et NLP en langues africaines : des solutions IA concrètes pour l'Afrique de l'Ouest.",
       "ogTitle": "Expertise Intelligence Artificielle — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Adopter l'IA, ce n'est pas rattraper un retard, c'est construire une avance. Solutions IA concrètes pour la zone UEMOA/CEDEAO.",
       "ogImageAlt": "AKILI Labs — Expertise Intelligence Artificielle",
@@ -493,8 +494,8 @@
   },
   "DevSecOps": {
     "meta": {
-      "title": "DevSecOps en Afrique de l'Ouest — CI/CD, Kubernetes, IaC, Sécurité",
-      "description": "Industrialisation de la livraison logicielle : CI/CD, conteneurisation Docker/Kubernetes, Infrastructure as Code, sécurité intégrée et supervision pour les organisations de la zone UEMOA. Consultation initiale gratuite.",
+      "title": "DevSecOps — CI/CD, Kubernetes, IaC, sécurité",
+      "description": "CI/CD, conteneurisation Docker/Kubernetes, Infrastructure as Code, sécurité intégrée et supervision pour la zone UEMOA. Consultation gratuite.",
       "ogTitle": "Expertise DevSecOps — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Du diagnostic de maturité à l'exploitation : la sécurité intégrée à chaque étape de votre chaîne de livraison logicielle.",
       "ogImageAlt": "AKILI Labs — Expertise DevSecOps",
@@ -513,7 +514,7 @@
       "titleHighlight": "un pari.",
       "subtitle": "Livrer vite et livrer sûr ne sont pas des objectifs opposés — c'est l'approche traditionnelle qui les oppose : déploiements manuels, audits en fin de projet, vulnérabilités découvertes en production. AKILI Labs industrialise votre chaîne de livraison logicielle avec la sécurité intégrée à chaque étape, du code à l'exploitation.",
       "ctaPrimary": "Consultation gratuite",
-      "ctaSecondary": "Voir nos ressources"
+      "ctaSecondary": "Voir nos domaines d'intervention"
     },
     "intro": {
       "badge": "Le constat",
@@ -594,8 +595,8 @@
   },
   "DevMetiers": {
     "meta": {
-      "title": "Développement d'Applications Métiers en Afrique de l'Ouest — Web, Mobile, APIs",
-      "description": "Applications web et mobiles, portails collaboratifs, APIs et plateformes métiers sur mesure pour les organisations de la zone UEMOA. Sprints courts, périmètre contractualisé, code livré. Consultation initiale gratuite.",
+      "title": "Applications métiers — Web, mobile, APIs",
+      "description": "Applications web et mobiles, portails, APIs et plateformes métiers sur mesure en zone UEMOA. Sprints courts, périmètre contractualisé, code livré.",
       "ogTitle": "Expertise Développement Métiers — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Le sur mesure sans dérapage : garde-fous vérifiables, qualité mesurée, réversibilité. L'outil épouse votre métier.",
       "ogImageAlt": "AKILI Labs — Expertise Développement Métiers",
@@ -614,7 +615,7 @@
       "titleHighlight": "évitable.",
       "subtitle": "Budgets qui dérapent, effet tunnel, dépendance au prestataire : les projets sur mesure échouent presque toujours pour les mêmes raisons — et aucune n'est une fatalité. AKILI Labs développe vos applications web, mobiles et plateformes métiers avec des garde-fous vérifiables : sprints courts, périmètre contractualisé, qualité mesurée, code livré. L'outil épouse votre métier — et le projet reste sous votre contrôle.",
       "ctaPrimary": "Consultation gratuite",
-      "ctaSecondary": "Voir nos ressources"
+      "ctaSecondary": "Voir nos domaines d'intervention"
     },
     "assemblyDiagram": {
       "labelWeb": "Web",
@@ -693,8 +694,8 @@
   },
   "Bi": {
     "meta": {
-      "title": "Business Intelligence en Afrique de l'Ouest — Tableaux de bord & entrepôt de données",
-      "description": "AKILI Labs consolide vos données (ERP, caisses, Mobile Money, Excel) en tableaux de bord fiables, à jour chaque matin. Entrepôt de données, gouvernance des indicateurs et reporting réglementaire en zone UEMOA.",
+      "title": "Business Intelligence — Tableaux de bord",
+      "description": "Vos données ERP, caisses, Mobile Money et Excel réunies dans des tableaux de bord fiables, à jour chaque matin. Entrepôt de données et reporting UEMOA.",
       "ogTitle": "Expertise Business Intelligence — AKILI Labs Côte d'Ivoire",
       "ogDescription": "Du reporting manuel au pilotage quotidien : tableaux de bord direction, entrepôt de données et états réglementaires BCEAO/OHADA.",
       "ogImageAlt": "AKILI Labs — Expertise Business Intelligence",
@@ -797,7 +798,7 @@
   },
   "References": {
     "meta": {
-      "title": "Références — AKILI Labs",
+      "title": "Références",
       "description": "Découvrez nos réalisations : intégration ERP, Intelligence Artificielle, DevSecOps et développement sur mesure en Afrique de l'Ouest."
     },
     "hero": {
@@ -826,7 +827,7 @@
   },
   "Blog": {
     "meta": {
-      "title": "Blog & Veille Technologique — AKILI Labs",
+      "title": "Blog & veille technologique",
       "description": "Insights, études de cas et bonnes pratiques sur l'ERP, l'Intelligence Artificielle et le DevSecOps en Afrique."
     },
     "hero": {
@@ -863,7 +864,7 @@
   "About": {
     "meta": {
       "title": "À propos — Notre mission et notre équipe",
-      "description": "Découvrez AKILI Labs, société de conseil IT et intégrateur Odoo ERP basée à Abidjan et active dans les 8 pays de la zone UEMOA : notre mission, nos valeurs et notre équipe d'experts.",
+      "description": "AKILI Labs, conseil IT et intégrateur Odoo ERP basé à Abidjan, actif dans les 8 pays de l'UEMOA : notre mission, nos valeurs et notre équipe.",
       "ogTitle": "À propos — AKILI Labs",
       "ogDescription": "Notre mission, nos valeurs et notre équipe d'experts en transformation digitale, ERP Odoo, IA et DevSecOps en Afrique de l'Ouest.",
       "ogImageAlt": "À propos AKILI Labs"
@@ -877,9 +878,9 @@
     "manifesto": {
       "eyebrow": "Notre manifeste",
       "title": "Une société nouvelle. Une expérience qui ne l'est pas.",
-      "text": "Si la société est jeune, ses fondateurs ne le sont pas. L'équipe dirigeante cumule plus de 30 ans d'expérience en transformation digitale, intégration ERP, intelligence artificielle et DevSecOps, acquise sur des projets structurants dans toute la zone UEMOA : administrations publiques, banques et assurances, agro-industrie, télécommunications. Cette expérience, nous l'avons mise au service d'une conviction : une structure légère, sans héritage ni lourdeur, entièrement construite autour des méthodes et des outils d'aujourd'hui — Odoo, IA générative, CI/CD, cloud — livre plus vite, mieux, et au juste prix.",
+      "text": "Si la société est jeune, sa direction ne l'est pas. Elle s'appuie sur une longue expérience en transformation digitale, intégration ERP, intelligence artificielle et DevSecOps, acquise sur des projets structurants dans toute la zone UEMOA : administrations publiques, banques et assurances, agro-industrie, télécommunications. Cette expérience, nous l'avons mise au service d'une conviction : une structure légère, sans héritage ni lourdeur, entièrement construite autour des méthodes et des outils d'aujourd'hui — Odoo, IA générative, CI/CD, cloud — livre plus vite, mieux, et au juste prix.",
       "card1Title": "L'expérience des grands comptes, l'agilité d'une jeune structure",
-      "card1Text": "Nos dirigeants ont conçu, déployé et exploité des systèmes d'information critiques pendant plus de trois décennies cumulées. AKILI Labs en distille les meilleures pratiques, sans les lourdeurs.",
+      "card1Text": "Nos dirigeants ont conçu, déployé et exploité des systèmes d'information critiques tout au long de leur carrière. AKILI Labs en distille les meilleures pratiques, sans les lourdeurs.",
       "card2Title": "Nés dans le contexte ouest-africain, pas adaptés à lui",
       "card2Text": "Comptabilité SYSCOHADA, paie locale, usages mobile-first : notre expertise du terrain n'est pas une option au catalogue, c'est notre point de départ.",
       "card3Title": "Une obligation de résultat, pas de discours",
@@ -902,7 +903,7 @@
     "team": {
       "badge": "Notre équipe",
       "title": "Les experts derrière AKILI Labs",
-      "subtitle": "Une direction expérimentée, des pôles d'expertise dédiés — et un principe : chaque projet est piloté par un membre fondateur.",
+      "subtitle": "Une direction expérimentée, des pôles d'expertise dédiés — et un principe : chaque projet est piloté par un membre de la direction.",
       "linkedinAriaLabel": "LinkedIn de {name}",
       "linkedinText": "Voir le profil LinkedIn",
       "contactPole": "Contacter ce pôle →",
@@ -918,12 +919,17 @@
       "text": "Nous recrutons des talents passionnés par la tech et l'impact en Afrique.",
       "viewOffers": "Voir les offres →",
       "contactButton": "Parlons de votre projet"
+    },
+    "ethics": {
+      "title": "Une conduite encadrée par une charte d'éthique",
+      "text": "Anticorruption, conflits d'intérêts, protection des données, cybersécurité et IA responsable : nos engagements sont formalisés dans une charte approuvée par la Gérance et revue chaque année.",
+      "link": "Découvrir notre charte"
     }
   },
   "Contact": {
     "meta": {
       "title": "Contact — Parlons de votre projet",
-      "description": "Contactez AKILI Labs pour votre projet de transformation digitale, ERP Odoo, Intelligence Artificielle ou DevSecOps en zone UEMOA. Consultation initiale gratuite, réponse sous 24h ouvrées.",
+      "description": "Un projet ERP Odoo, IA, DevSecOps ou de transformation digitale en zone UEMOA ? Consultation initiale gratuite, réponse sous 24h ouvrées.",
       "ogTitle": "Contact — AKILI Labs",
       "ogDescription": "Parlons de votre projet ERP, IA ou DevSecOps en Afrique de l'Ouest. Consultation initiale gratuite.",
       "ogImageAlt": "Contact AKILI Labs"
@@ -947,8 +953,9 @@
       "quickReplyTextRich": "Nos experts répondent dans les <strong>24h ouvrées</strong>. La consultation initiale est entièrement gratuite.",
       "trust1": "Consultation initiale offerte",
       "trust2": "Confidentialité garantie",
-      "trust3": "Experts certifiés",
-      "trust4": "Devis sous 48h"
+      "trust3": "Projet piloté par la direction",
+      "trust4": "Devis sous 5 jours ouvrés",
+      "ethicsLink": "Consulter notre charte d'éthique"
     },
     "form": {
       "title": "Parlez-nous de votre projet",
@@ -986,13 +993,13 @@
     },
     "success": {
       "title": "Email préparé",
-      "text": "Votre messagerie s'ouvre avec un message prérempli. Vérifiez-le puis envoyez-le à contact@akililabs.io.",
+      "text": "Votre messagerie s'ouvre avec un message prérempli. Vérifiez-le puis envoyez-le à contacts@akililabs.io.",
       "resetButton": "Préparer un autre message"
     }
   },
   "Careers": {
     "meta": {
-      "title": "Carrières — AKILI Labs",
+      "title": "Carrières",
       "description": "Rejoignez AKILI Labs et participez à la transformation digitale de l'Afrique. Découvrez nos offres d'emploi."
     },
     "hero": {
@@ -1203,8 +1210,8 @@
   },
   "Faq": {
     "meta": {
-      "title": "FAQ — ERP OHADA, IA, DevSecOps & Transformation Digitale",
-      "description": "Réponses à toutes vos questions sur l'intégration ERP Odoo en zone UEMOA, la conformité OHADA, l'IA générative pour entreprises africaines, le DevSecOps et la transformation digitale.",
+      "title": "FAQ — Odoo, OHADA, IA et DevSecOps",
+      "description": "Vos questions sur l'intégration Odoo en zone UEMOA, la conformité OHADA, l'IA générative, le DevSecOps et la transformation digitale.",
       "ogTitle": "FAQ AKILI Labs — ERP OHADA, IA & DevSecOps en Afrique de l'Ouest",
       "ogDescription": "Toutes nos réponses sur l'ERP Odoo, la conformité OHADA, l'IA générative, le DevSecOps et la transformation digitale en zone UEMOA.",
       "ogImageAlt": "FAQ AKILI Labs"
@@ -1353,7 +1360,12 @@
       {
         "categoryId": "akili",
         "question": "AKILI Labs est une société récente : est-ce un risque ?",
-        "answer": "C'est une question légitime — et notre meilleure réponse est structurelle. Vous ne confiez pas votre projet à une marque, mais à des personnes : chez AKILI Labs, chaque mission est dirigée par un membre de l'équipe fondatrice — une équipe qui cumule plus de 30 ans de projets SI dans la zone UEMOA. Vous bénéficiez de l'expérience d'un cabinet établi, avec l'implication totale d'une équipe qui joue sa réputation sur votre réussite. Nos engagements contractuels (jalons, SLA, réversibilité) sont pensés pour vous protéger, pas pour nous couvrir."
+        "answer": "C'est une question légitime — et notre meilleure réponse est structurelle. Vous ne confiez pas votre projet à une marque, mais à des personnes : chez AKILI Labs, chaque mission est dirigée par un membre de la direction, qui a mené des projets SI structurants dans la zone UEMOA. Vous bénéficiez de l'expérience d'un cabinet établi, avec l'implication totale d'une équipe qui joue sa réputation sur votre réussite. Nos engagements contractuels (jalons, SLA, réversibilité) sont pensés pour vous protéger, pas pour nous couvrir."
+      },
+      {
+        "categoryId": "akili",
+        "question": "AKILI Labs dispose-t-elle d'une charte d'éthique et de conformité ?",
+        "answer": "Oui. La Charte d'Éthique, de Conformité et de Conduite Professionnelle d'AKILI LABS SARL (réf. CHA-ETH-2026-V3) encadre la prévention de la corruption, les cadeaux et conflits d'intérêts, la protection des données, la cybersécurité et l'usage responsable de l'IA. Elle est téléchargeable sur la page Éthique et conformité du site, et l'exemplaire signé est transmis sur demande à conformite@akililabs.io, notamment pour les dossiers d'appel d'offres."
       }
     ],
     "cta": {
@@ -1367,28 +1379,35 @@
   "Legal": {
     "meta": {
       "title": "Mentions légales",
-      "description": "Mentions légales du site AKILI Labs — éditeur, hébergement, propriété intellectuelle."
+      "description": "Mentions légales du site AKILI Labs — AKILI LABS SARL, RCCM, siège, hébergement, propriété intellectuelle."
     },
     "hero": {
       "badge": "Informations légales",
       "title": "Mentions légales",
       "subtitle": "Éditeur du site, hébergement et propriété intellectuelle."
     },
-    "notice": {
-      "strong": "Document provisoire.",
-      "text": "Cette page a été rédigée à partir des informations disponibles et doit être relue et complétée (raison sociale exacte, numéro RCCM, hébergeur) par un juriste avant d'être considérée comme définitive."
-    },
     "publisher": {
       "title": "Éditeur du site",
-      "introRich": "Le site <strong>akililabs.io</strong> est édité par <strong>AKILI Labs</strong>, société de conseil IT et intégrateur Odoo ERP, dont le siège social est situé à Abidjan, Côte d'Ivoire (Zone UEMOA).",
-      "rccmLabel": "Numéro RCCM :",
-      "toComplete": "à compléter",
+      "introRich": "Le site <strong>akililabs.io</strong> est édité par <strong>AKILI LABS SARL</strong>, société à responsabilité limitée au capital de 5 000 000 F CFA, société de conseil IT et intégrateur Odoo ERP.",
+      "companyLabel": "Dénomination :",
+      "companyValue": "AKILI LABS SARL",
+      "capitalLabel": "Capital social :",
+      "capitalValue": "5 000 000 F CFA",
+      "rccmLabel": "RCCM :",
+      "rccmValue": "CI-ABJ-03-2026-B12-05165",
+      "taxLabel": "Compte contribuable :",
+      "taxValue": "2605142 R",
+      "officeLabel": "Siège social :",
+      "officeValue": "Abidjan, Cocody Bonoumin, Résidence Guaiman, Lot 56B, Îlot 7 — Côte d'Ivoire",
+      "managementLabel": "Gérance statutaire :",
+      "managementValue": "M. BA Ibrahima Djibrill",
       "directorLabel": "Directeur de la publication :",
+      "directorValue": "M. BA Ibrahima Djibrill, Gérant",
       "contactLabel": "Contact :"
     },
     "hosting": {
       "title": "Hébergement",
-      "textRich": "Le site est hébergé par : <em>à compléter (nom, adresse et contact de l'hébergeur)</em>."
+      "textRich": "Le site est hébergé par <strong>OVH SAS</strong>, 2 rue Kellermann, 59100 Roubaix, France — RCS Lille Métropole 424 761 419 — www.ovhcloud.com. Serveur situé en France (Strasbourg)."
     },
     "ip": {
       "title": "Propriété intellectuelle",
@@ -1457,5 +1476,140 @@
     "attachmentInvalidType": "Type de fichier non accepté. Formats acceptés : PNG, JPEG, WEBP, PDF.",
     "attachmentTooLarge": "Fichier trop volumineux (4 Mo maximum).",
     "attachmentReadError": "Impossible de lire ce fichier. Merci de réessayer."
+  },
+  "Ethics": {
+    "meta": {
+      "title": "Éthique et conformité : charte d'éthique",
+      "description": "Charte d'éthique et de conformité d'AKILI LABS SARL : anticorruption, conflits d'intérêts, protection des données, cybersécurité, IA responsable et canal de signalement confidentiel."
+    },
+    "hero": {
+      "badge": "Gouvernance",
+      "titleStart": "Éthique et",
+      "titleHighlight": "conformité",
+      "subtitle": "Les règles de conduite qui encadrent nos missions : intégrité commerciale, prévention de la corruption, protection des données et usage responsable de l'IA."
+    },
+    "breadcrumbHome": "Accueil",
+    "engagement": {
+      "title": "Notre engagement",
+      "p1": "AKILI LABS SARL fonde le développement de ses activités sur l'intégrité, le respect des personnes, la transparence, la compétence et la responsabilité.",
+      "p2": "La confiance de nos clients, collaborateurs, fournisseurs et partenaires repose autant sur la qualité de nos prestations que sur la manière dont elles sont conçues, commercialisées et exécutées.",
+      "quote": "« Aucun objectif commercial, financier ou opérationnel ne justifie une pratique illégale, trompeuse ou contraire à la présente charte. »",
+      "scope": "La charte s'applique aux dirigeants, salariés et stagiaires d'AKILI LABS. Nos consultants, sous-traitants et partenaires s'y engagent contractuellement selon la nature de leur intervention."
+    },
+    "document": {
+      "eyebrow": "Document de référence",
+      "title": "Charte d'Éthique, de Conformité et de Conduite Professionnelle",
+      "refLabel": "Référence",
+      "refValue": "CHA-ETH-2026-V3",
+      "versionLabel": "Version",
+      "versionValue": "3.0, novembre 2026",
+      "approvalLabel": "Approbation",
+      "approvalValue": "Gérance statutaire",
+      "reviewLabel": "Révision",
+      "reviewValue": "Annuelle",
+      "formatLabel": "Format",
+      "formatValue": "PDF, 9 pages",
+      "download": "Télécharger la charte (PDF)",
+      "signedCopy": "Exemplaire signé disponible sur demande à"
+    },
+    "pillars": {
+      "title": "Ce que la charte encadre",
+      "subtitle": "Dix-huit articles, regroupés ici en six engagements concrets.",
+      "items": [
+        {
+          "title": "Anticorruption",
+          "text": "Aucun avantage indu, commission occulte ou paiement de facilitation, envers des acteurs publics comme privés. Toute sollicitation suspecte est refusée et signalée.",
+          "ref": "Art. 5"
+        },
+        {
+          "title": "Cadeaux et conflits d'intérêts",
+          "text": "Cadeaux et invitations limités, déclarés et tracés dans un registre. Tout conflit d'intérêts est déclaré avant la décision concernée.",
+          "ref": "Art. 6 et 7"
+        },
+        {
+          "title": "Sincérité commerciale",
+          "text": "Références, CV, certifications et temps facturés présentés de manière exacte. Fournisseurs choisis sur des critères objectifs et documentés.",
+          "ref": "Art. 8 et 9"
+        },
+        {
+          "title": "Données et confidentialité",
+          "text": "Respect de la loi ivoirienne n° 2013-450 et du RGPD lorsqu'il s'applique. Codes sources, secrets techniques et données clients protégés, y compris après la mission.",
+          "ref": "Art. 10 et 11"
+        },
+        {
+          "title": "Cybersécurité",
+          "text": "Moindre privilège, authentification renforcée, autorisation préalable pour tout accès aux environnements clients, et signalement rapide des incidents.",
+          "ref": "Art. 12"
+        },
+        {
+          "title": "IA responsable",
+          "text": "Aucune donnée confidentielle transmise à un service d'IA non autorisé. Les résultats générés sont contrôlés avant livraison, et la responsabilité reste humaine.",
+          "ref": "Art. 13"
+        }
+      ]
+    },
+    "reporting": {
+      "title": "Signaler un manquement",
+      "intro": "Salarié, consultant, client, fournisseur ou partenaire : vous pouvez signaler de bonne foi un manquement constaté ou raisonnablement suspecté. Des preuves complètes ne sont pas nécessaires.",
+      "channelLabel": "Canal confidentiel",
+      "guarantees": [
+        {
+          "label": "Confidentialité :",
+          "text": "accès restreint aux seules personnes habilitées ; une personne mise en cause n'a pas accès au dossier."
+        },
+        {
+          "label": "Aucune représailles :",
+          "text": "tout signalement de bonne foi est protégé, de même que les personnes qui y contribuent."
+        },
+        {
+          "label": "Impartialité :",
+          "text": "un intervenant externe indépendant prend le relais si les dirigeants sont concernés."
+        }
+      ],
+      "processTitle": "Traitement de votre signalement",
+      "steps": [
+        {
+          "title": "Accusé de réception",
+          "text": "Sous 7 jours ouvrés"
+        },
+        {
+          "title": "Vérification des conflits d'intérêts",
+          "text": "Toute personne impliquée est écartée"
+        },
+        {
+          "title": "Examen proportionné",
+          "text": "Première information sur le suivi sous 30 jours"
+        },
+        {
+          "title": "Décision et actions correctives",
+          "text": "Le déclarant est informé des suites communicables"
+        }
+      ],
+      "disclaimer": "Ces délais sont des objectifs internes. Le dispositif ne limite pas le recours aux autorités compétentes."
+    },
+    "governance": {
+      "title": "Gouvernance du dispositif",
+      "roles": [
+        {
+          "label": "Gérance",
+          "text": "Approuve la charte, organise sa diffusion et assure la fonction de responsable conformité."
+        },
+        {
+          "label": "Direction technique",
+          "text": "Met en œuvre les engagements de qualité logicielle, cybersécurité, données et IA dans son périmètre."
+        },
+        {
+          "label": "Chaque collaborateur",
+          "text": "Atteste avoir pris connaissance de la charte et suit une sensibilisation adaptée à ses fonctions."
+        }
+      ],
+      "review": "La charte est revue chaque année et après tout changement réglementaire, organisationnel ou incident significatif."
+    },
+    "cta": {
+      "title": "Un appel d'offres ou un audit fournisseur ?",
+      "text": "Nous transmettons la charte signée et les pièces de conformité demandées dans votre dossier.",
+      "contact": "Nous contacter",
+      "download": "Télécharger la charte"
+    }
   }
 }

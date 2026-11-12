@@ -97,6 +97,7 @@ function buildOrganizationJsonLd(description: string, availableLanguage: string[
     "@type": "Organization",
     "@id": `${BASE_URL}/#organization`,
     name: "AKILI Labs",
+    legalName: "AKILI LABS SARL",
     url: BASE_URL,
     logo: {
       "@type": "ImageObject",
@@ -105,22 +106,23 @@ function buildOrganizationJsonLd(description: string, availableLanguage: string[
       height: 893,
     },
     description,
-    foundingDate: "2020",
     areaServed: ["Côte d'Ivoire", "Sénégal", "Mali", "Burkina Faso", "Niger", "Togo", "Bénin", "Guinée-Bissau"],
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Cocody Bonoumin, Résidence Guaiman, Lot 56B, Îlot 7",
       addressLocality: "Abidjan",
       addressCountry: "CI",
       addressRegion: "Abidjan",
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "contact@akililabs.io",
+      email: "contacts@akililabs.io",
       telephone: "+225 07 77 70 02 74",
       contactType: "customer service",
       availableLanguage,
       areaServed: "UEMOA",
     },
+    ethicsPolicy: `${BASE_URL}/ethique-conformite`,
     sameAs: [
       "https://www.linkedin.com/company/akili-labs",
     ],

@@ -9,7 +9,6 @@ import DmApproach from "@/components/developpement-metiers/DmApproach";
 import DmSectors from "@/components/developpement-metiers/DmSectors";
 import DmWhyUs from "@/components/developpement-metiers/DmWhyUs";
 import DmStats from "@/components/developpement-metiers/DmStats";
-import DmResources from "@/components/developpement-metiers/DmResources";
 import DmFaq from "@/components/developpement-metiers/DmFaq";
 import DmCtaFinal from "@/components/developpement-metiers/DmCtaFinal";
 import { dmDomains, dmFaqs } from "@/lib/developpement-metiers-data";
@@ -96,7 +95,7 @@ export default async function DeveloppementMetiersPage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: BASE_URL },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/expertises` },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/#expertises` },
       { "@type": "ListItem", position: 3, name: t("breadcrumbDevMetiers"), item: url },
     ],
   };
@@ -127,7 +126,6 @@ export default async function DeveloppementMetiersPage({
       <DmSectors />
       <DmWhyUs />
       <DmStats />
-      <DmResources />
       <DmFaq />
       <DmCtaFinal />
     </>

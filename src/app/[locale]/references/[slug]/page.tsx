@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const ref = references.find((r) => r.slug === slug);
   if (!ref) return {};
   return {
-    title: `${l(ref.title, locale)} — AKILI Labs`,
+    title: l(ref.seoTitle, locale),
     description: l(ref.summary, locale),
     alternates: buildAlternates(`/references/${slug}`, locale as "fr" | "en"),
   };
@@ -97,7 +97,7 @@ export default async function ReferencePage({ params }: PageProps) {
               </div>
             </div>
             <div className="bg-navy rounded-2xl p-6 text-white">
-              <h3 className="font-bold mb-2 text-sm">{t("similarProjectTitle")}</h3>
+              <h3 className="font-bold mb-2 text-sm text-white">{t("similarProjectTitle")}</h3>
               <p className="text-white/60 text-xs mb-4">{t("similarProjectText")}</p>
               <Link href="/contact" className="block text-center px-4 py-2.5 bg-orange text-white text-sm font-semibold rounded-xl hover:bg-orange-hover transition-[background-color,transform] duration-150 ease-out active:scale-[0.97]">
                 {t("contactButton")}

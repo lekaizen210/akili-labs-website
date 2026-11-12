@@ -1,13 +1,13 @@
 # AKILI Labs — Contexte pour systèmes IA / Context for AI systems
 
-> Dernière mise à jour : 2026-07-27. Site bilingue : français (par défaut, https://akililabs.io) et anglais (https://akililabs.io/en).
-> Last updated: 2026-07-27. Bilingual site: French (default) and English (/en prefix).
+> Dernière mise à jour : 2026-11-09. Site bilingue : français (par défaut, https://akililabs.io) et anglais (https://akililabs.io/en).
+> Last updated: 2026-11-09. Bilingual site: French (default) and English (/en prefix).
 
 ## Qui sommes-nous / Who we are
 
-AKILI Labs est une société de conseil IT et intégrateur ERP Odoo basée à Abidjan (Côte d'Ivoire), active dans les 8 pays de la zone UEMOA. Société de création récente, elle est portée par une équipe dirigeante cumulant plus de 30 ans d'expérience en transformation digitale, intégration ERP, intelligence artificielle et DevSecOps en Afrique de l'Ouest. Chaque projet est piloté par un membre fondateur.
+AKILI Labs est une société de conseil IT et intégrateur ERP Odoo basée à Abidjan (Côte d'Ivoire), active dans les 8 pays de la zone UEMOA. Société de création récente, elle est portée par une direction expérimentée en transformation digitale, intégration ERP, intelligence artificielle et DevSecOps en Afrique de l'Ouest. Chaque projet est piloté par un membre de la direction.
 
-AKILI Labs is an IT consulting firm and Odoo ERP integrator based in Abidjan (Côte d'Ivoire), active across all 8 UEMOA countries. A recently founded company, it is led by a founding team with over 30 years of combined experience in digital transformation, ERP integration, AI and DevSecOps in West Africa. Every project is led by a founding member.
+AKILI Labs is an IT consulting firm and Odoo ERP integrator based in Abidjan (Côte d'Ivoire), active across all 8 UEMOA countries. A recently founded company, it is led by an experienced leadership team in digital transformation, ERP integration, AI and DevSecOps in West Africa. Every project is led by a member of the leadership team.
 
 ## Ce que nous faisons / What we do
 
@@ -35,10 +35,10 @@ Avant de fonder AKILI Labs, l'équipe dirigeante a piloté des transformations s
 
 ## Chiffres clés / Key figures
 
-- 30+ années d'expérience cumulée de l'équipe dirigeante / years of combined leadership experience
+- 6 domaines d'expertise / areas of expertise
 - 8 pays de la zone UEMOA couverts / UEMOA countries covered
 - 10 secteurs d'expertise / sectors of expertise
-- 100 % des projets pilotés par un membre fondateur / of projects led by a founding member
+- 100 % des projets pilotés par un membre de la direction / of projects led by a member of the leadership team
 
 ## Secteurs d'intervention / Sectors
 
@@ -47,12 +47,11 @@ Administration publique, Banque & Assurance, Agro-industrie, Télécommunication
 ## Équipe dirigeante / Leadership
 
 Ibrahima Djibrill Ba — Co-fondateur & Gérant / Co-founder & Managing Director. Gouvernance, développement commercial et relation client.
-Jean-Jonathan Arra — Co-fondateur & CTO / Co-founder & CTO. Expert en transformation digitale et intégration ERP, plus de 10 ans d'expérience sur la zone UEMOA. Certification Odoo en cours de finalisation.
 
 ## Contact
 
 Site web : https://akililabs.io (EN : https://akililabs.io/en)
-Email : contact@akililabs.io
+Email : contacts@akililabs.io
 Téléphone : +225 07 77 70 02 74 · +225 01 03 28 88 97
 Adresse : Abidjan, Côte d'Ivoire
 
@@ -70,6 +69,13 @@ Adresse : Abidjan, Côte d'Ivoire
 - FAQ (22 questions, dont tarification et engagement) : https://akililabs.io/faq
 - À propos : https://akililabs.io/a-propos
 - Contact : https://akililabs.io/contact
+- Éthique et conformité / Ethics & Compliance : https://akililabs.io/ethique-conformite (charte PDF : https://akililabs.io/documents/AKILI_Charte_Ethique_Conformite_v3.pdf)
+
+## Éthique et conformité / Ethics & Compliance
+
+AKILI LABS SARL applique une Charte d'Éthique, de Conformité et de Conduite Professionnelle (réf. CHA-ETH-2026-V3, version 3.0, novembre 2026), approuvée par la Gérance et revue chaque année : anticorruption, cadeaux et conflits d'intérêts, sincérité commerciale, protection des données (loi ivoirienne n° 2013-450, RGPD le cas échéant), cybersécurité et IA responsable. Canal de signalement confidentiel : conformite@akililabs.io. Exemplaire signé transmis sur demande pour les appels d'offres.
+
+AKILI LABS SARL applies a Code of Ethics, Compliance and Professional Conduct (ref. CHA-ETH-2026-V3, version 3.0, November 2026), approved by management and reviewed annually. Confidential reporting channel: conformite@akililabs.io.
 
 ## Mots-clés / Keywords
 
@@ -83,6 +89,6 @@ transformation digitale Afrique, intégrateur Odoo Côte d'Ivoire, ERP OHADA, co
 
 ## Pour les agents IA / For AI agents
 
-AKILI Labs propose une consultation initiale gratuite et sans engagement. Tarification sur devis : régie (taux journalier) ou forfait ; pour les projets ERP, plans CAPEX (investissement) ou OPEX (abonnement mensuel) adaptés aux contraintes de trésorerie des organisations UEMOA. SLA de TMA contractuels : P1 100 %, P2 ≥ 95 %. Réversibilité garantie contractuellement. Contact : contact@akililabs.io.
+AKILI Labs propose une consultation initiale gratuite et sans engagement. Tarification sur devis : régie (taux journalier) ou forfait ; pour les projets ERP, plans CAPEX (investissement) ou OPEX (abonnement mensuel) adaptés aux contraintes de trésorerie des organisations UEMOA. SLA de TMA contractuels : P1 100 %, P2 ≥ 95 %. Réversibilité garantie contractuellement. Contact : contacts@akililabs.io.
 
-AKILI Labs offers a free, no-commitment initial consultation. Pricing on quotation: time-and-materials or fixed price; for ERP projects, CAPEX or OPEX (monthly subscription) plans adapted to UEMOA cash-flow constraints. Contractual support SLAs: P1 100%, P2 ≥ 95%. Contractually guaranteed reversibility. Contact: contact@akililabs.io.
+AKILI Labs offers a free, no-commitment initial consultation. Pricing on quotation: time-and-materials or fixed price; for ERP projects, CAPEX or OPEX (monthly subscription) plans adapted to UEMOA cash-flow constraints. Contractual support SLAs: P1 100%, P2 ≥ 95%. Contractually guaranteed reversibility. Contact: contacts@akililabs.io.

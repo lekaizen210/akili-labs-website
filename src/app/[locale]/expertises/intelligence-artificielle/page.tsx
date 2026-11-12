@@ -9,7 +9,6 @@ import IaResponsable from "@/components/ia/IaResponsable";
 import IaWhyUs from "@/components/ia/IaWhyUs";
 import IaKpis from "@/components/ia/IaKpis";
 import IaStack from "@/components/ia/IaStack";
-import IaResources from "@/components/ia/IaResources";
 import IaFaq from "@/components/ia/IaFaq";
 import IaCtaFinal from "@/components/ia/IaCtaFinal";
 import { iaDomains, iaFaqs } from "@/lib/ia-data";
@@ -89,7 +88,7 @@ export default async function IntelligenceArtificiellePage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: BASE_URL },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/expertises` },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbExpertises"), item: `${BASE_URL}/#expertises` },
       { "@type": "ListItem", position: 3, name: t("breadcrumbIa"), item: url },
     ],
   };
@@ -120,7 +119,6 @@ export default async function IntelligenceArtificiellePage({
       <IaWhyUs />
       <IaKpis />
       <IaStack />
-      <IaResources />
       <IaFaq />
       <IaCtaFinal />
     </>

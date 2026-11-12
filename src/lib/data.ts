@@ -162,6 +162,7 @@ export const references = [
       fr: "Intégration Odoo Enterprise — Gestion comptable & stocks",
       en: "Odoo Enterprise Integration — Accounting & Inventory Management",
     },
+    seoTitle: { fr: "Intégration Odoo Enterprise — Compta & stocks", en: "Odoo Enterprise — Accounting & Inventory" },
     summary: {
       fr: "Déploiement d'Odoo Enterprise pour la gestion comptable OHADA, la gestion des stocks multi-entrepôts et la paie de 200 employés.",
       en: "Deployment of Odoo Enterprise for OHADA-compliant accounting, multi-warehouse inventory management, and payroll for 200 employees.",
@@ -180,6 +181,7 @@ export const references = [
       fr: "Plateforme OCR & analyse documentaire",
       en: "OCR & Document Analysis Platform",
     },
+    seoTitle: { fr: "Plateforme OCR & analyse documentaire", en: "OCR & Document Analysis Platform" },
     summary: {
       fr: "Développement d'une solution OCR intelligente pour l'analyse automatique des dossiers de crédit, réduisant le délai de traitement de 72h à 4h.",
       en: "Development of an intelligent OCR solution for automated credit file analysis, reducing processing time from 72 hours to 4 hours.",
@@ -203,6 +205,7 @@ export const references = [
       fr: "Pipeline CI/CD & infrastructure cloud",
       en: "CI/CD Pipeline & Cloud Infrastructure",
     },
+    seoTitle: { fr: "Pipeline CI/CD & infrastructure cloud", en: "CI/CD Pipeline & Cloud Infrastructure" },
     summary: {
       fr: "Mise en place d'un pipeline CI/CD complet avec GitLab, Docker, Kubernetes sur AWS, avec intégration SonarQube et scans OWASP automatisés.",
       en: "Implementation of a complete CI/CD pipeline with GitLab, Docker, and Kubernetes on AWS, including SonarQube integration and automated OWASP scans.",
@@ -215,10 +218,10 @@ export const references = [
 ];
 
 export const stats = [
-  { value: "30+", label: { fr: "Années d'expérience cumulée de l'équipe dirigeante", en: "Years of combined leadership experience" } },
+  { value: "6", label: { fr: "Domaines d'expertise", en: "Areas of expertise" } },
   { value: "8", label: { fr: "Pays de la zone UEMOA couverts", en: "UEMOA countries covered" } },
   { value: "10", label: { fr: "Secteurs d'expertise", en: "Sectors of expertise" } },
-  { value: "100 %", label: { fr: "des projets pilotés par un membre fondateur", en: "of projects led by a founding member" } },
+  { value: "100 %", label: { fr: "des projets pilotés par un membre de la direction", en: "of projects led by a member of the leadership team" } },
 ] satisfies { value: string; label: Localized }[];
 
 export const approach = [
@@ -291,22 +294,6 @@ export const team = [
     ] satisfies Localized[],
     linkedin: "",
     couleur: "#FF5500",
-  },
-  {
-    initiales: "JA",
-    nom: "Jean-Jonathan Arra",
-    titre: { fr: "Co-fondateur & CTO", en: "Co-founder & CTO" },
-    bio: {
-      fr: "Expert en transformation digitale et intégration ERP, Jean-Jonathan pilote la stratégie technologique d'AKILI Labs avec plus de 10 ans d'expérience sur la zone UEMOA.",
-      en: "An expert in digital transformation and ERP integration, Jean-Jonathan drives AKILI Labs' technology strategy with over 10 years of experience across the UEMOA zone.",
-    },
-    expertises: [
-      { fr: "ERP Odoo", en: "Odoo ERP" },
-      { fr: "Transformation Digitale", en: "Digital Transformation" },
-      { fr: "Stratégie SI", en: "IT Strategy" },
-    ] satisfies Localized[],
-    linkedin: "",
-    couleur: "#1A2B3C",
   },
   {
     initiales: "ERP",
@@ -405,13 +392,14 @@ export const blogPosts = [
       fr: "Pourquoi Odoo s'impose comme le choix ERP de référence en Afrique de l'Ouest",
       en: "Why Odoo Is Becoming the Go-To ERP Choice in West Africa",
     },
+    // Titre court pour la balise <title> (≈ 60 caractères avec la marque)
+    seoTitle: { fr: "Pourquoi Odoo s'impose en Afrique de l'Ouest", en: "Why Odoo Leads ERP Choices in West Africa" },
     excerpt: {
       fr: "Flexibilité, coût total de possession, conformité OHADA — les raisons qui font d'Odoo l'ERP le plus adopté par les entreprises de la zone UEMOA.",
       en: "Flexibility, total cost of ownership, OHADA compliance — the reasons why Odoo has become the most widely adopted ERP among businesses in the UEMOA zone.",
     },
     category: { fr: "ERP", en: "ERP" },
     date: "2026-06-15",
-    readTime: "8 min",
     tag: { fr: "ERP", en: "ERP" },
     tagKey: "erp",
   },
@@ -421,13 +409,13 @@ export const blogPosts = [
       fr: "IA Générative pour les entreprises africaines : opportunités et précautions",
       en: "Generative AI for African Businesses: Opportunities and Precautions",
     },
+    seoTitle: { fr: "IA générative : opportunités et précautions", en: "Generative AI: Opportunities and Precautions" },
     excerpt: {
       fr: "GPT-4, Claude, Mistral — comment choisir et déployer un LLM privé sécurisé pour votre organisation sans exposer vos données métier.",
       en: "GPT-4, Claude, Mistral — how to choose and deploy a secure private LLM for your organization without exposing your business data.",
     },
     category: { fr: "Intelligence Artificielle", en: "Artificial Intelligence" },
     date: "2026-06-05",
-    readTime: "12 min",
     tag: { fr: "IA", en: "AI" },
     tagKey: "ia",
   },
@@ -437,13 +425,13 @@ export const blogPosts = [
       fr: "CI/CD avec GitLab CI : guide pratique pour les équipes DevOps en 2026",
       en: "CI/CD with GitLab CI: A Practical Guide for DevOps Teams in 2026",
     },
+    seoTitle: { fr: "CI/CD avec GitLab CI : guide pratique 2026", en: "CI/CD with GitLab CI: A Practical 2026 Guide" },
     excerpt: {
       fr: "Pipeline complet, tests automatisés, déploiement continu sur Kubernetes — un guide pas à pas pour industrialiser vos livraisons logicielles.",
       en: "Full pipeline, automated testing, continuous deployment on Kubernetes — a step-by-step guide to industrializing your software delivery.",
     },
     category: { fr: "DevSecOps", en: "DevSecOps" },
     date: "2026-05-20",
-    readTime: "15 min",
     tag: { fr: "DevSecOps", en: "DevSecOps" },
     tagKey: "devsecops",
   },

@@ -61,13 +61,17 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-orange shrink-0" />
-                <a href="mailto:contact@akililabs.io" className="inline-block py-1.5 hover:text-white transition-colors">
-                  contact@akililabs.io
+                <a href="mailto:contacts@akililabs.io" className="inline-block py-1.5 hover:text-white transition-colors">
+                  contacts@akililabs.io
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={14} className="text-orange shrink-0" />
-                <span>+225 07 77 70 02 74 · +225 01 03 28 88 97</span>
+                <span>
+                  <a href="tel:+2250777700274" className="hover:text-white transition-colors">+225 07 77 70 02 74</a>
+                  {" · "}
+                  <a href="tel:+2250103288897" className="hover:text-white transition-colors">+225 01 03 28 88 97</a>
+                </span>
               </div>
             </div>
             {/* Réseaux sociaux */}
@@ -181,6 +185,7 @@ export default function Footer() {
             <span>OHADA</span>
             <Link href="/mentions-legales" className="inline-block py-2 hover:text-gray-300 transition-colors">{t("legalNotice")}</Link>
             <Link href="/confidentialite" className="inline-block py-2 hover:text-gray-300 transition-colors">{t("privacy")}</Link>
+            <Link href="/ethique-conformite" className="inline-block py-2 hover:text-gray-300 transition-colors">{t("ethics")}</Link>
           </div>
         </div>
       </div>

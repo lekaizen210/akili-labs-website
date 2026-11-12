@@ -14,7 +14,7 @@ export default function OdooHostingSupport() {
   const locale = useLocale();
 
   return (
-    <section className="py-20 bg-blue-light">
+    <section id="support" className="py-20 bg-blue-light scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-navy text-sm font-medium rounded-full mb-6">
