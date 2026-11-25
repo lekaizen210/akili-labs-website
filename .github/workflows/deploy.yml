@@ -113,6 +113,13 @@ jobs:
             # Rechargement sans coupure (rolling restart)
             docker compose -f docker-compose.prod.yml up -d --no-build --pull never
 
+            # nginx : la config est un fichier monté ; quand le déploiement le remplace, le conteneur
+            # en cours garde l'ancienne version et `up -d` ne le recrée pas. On valide donc la nouvelle
+            # config dans un conteneur jetable (en cas d'erreur, `set -e` arrête tout et l'ancien nginx
+            # continue de servir), puis on recrée le conteneur pour qu'il la charge.
+            docker compose -f docker-compose.prod.yml run --rm --no-deps -T nginx nginx -t
+            docker compose -f docker-compose.prod.yml up -d --no-deps --force-recreate nginx
+
             # Nettoyage des images obsolètes
             docker image prune -f
 
