@@ -19,6 +19,7 @@ services:
     security_opt: [no-new-privileges:true]
     networks:
       - public
+      - proxy   # joint les applications d'autres stacks (ex. Odoo ERP, alias akili-odoo)
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost/healthz"]
       interval: 30s
@@ -75,6 +76,11 @@ services:
 
 networks:
   public:
+    driver: bridge
+  # Réseau partagé avec les autres stacks du serveur (Odoo ERP : dépôt akili-odoo-interne).
+  # Créé par cette stack ; les autres le déclarent en « external ».
+  proxy:
+    name: akili-proxy
     driver: bridge
   internal:
     driver: bridge
